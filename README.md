@@ -32,3 +32,5 @@ docker run -ti --rm --name json2xlsx \
   hmctspublic.azurecr.io/cmc/ccd-definition-importer:dev \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -o /tmp/sscs-ccd.xlsx"
 ```
+
+This will output the XLSX file to the 'releases' directory.
