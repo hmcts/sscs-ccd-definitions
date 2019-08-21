@@ -29,7 +29,7 @@ Extract the XLSX file.
 ```
 docker run -ti --rm --name json2xlsx \
   -v $(pwd)/releases:/tmp \
-  hmctspublic.azurecr.io/cmc/ccd-definition-importer:dev \
+  hmctspublic.azurecr.io/sscs/ccd-definition-importer:dev \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -o /tmp/sscs-ccd.xlsx"
 ```
 
