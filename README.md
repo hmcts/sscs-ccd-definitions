@@ -14,6 +14,12 @@ Then, copy your CCD definition to a file called sscs-ccd.xlsx and run:
 docker run -v `pwd`:/data xlsx2json
 ```
 
+Remove the Change History JSON file, if it exists:
+
+```
+sudo rm sheets/Change\ History.json
+```
+
 The JSON files will be output to a directory called 'sheets'.
 
 # Converting JSON to Excel
