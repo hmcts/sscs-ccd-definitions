@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 docker build --no-cache -t hmctspublic.azurecr.io/sscs/ccd-definition-importer:dev -f importer.Dockerfile .
 docker run -ti --rm --name json2xlsx \
   -v $(pwd)/releases:/tmp \
