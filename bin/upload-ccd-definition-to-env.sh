@@ -53,16 +53,22 @@ BULK_SCAN_API_URL="http://sscs-bulk-scan-${ENV}.service.core-compute-${ENV}.inte
 
 MICROSERVICE=ccd_gw
 
+# Good for Mac and Windows for Linux, you'll need to find it first - jump into a container and run
+# netstat -nr | grep '^0\.0\.0\.0' | awk '{print $2}')
+# It's probably 172.17.0.1
+#DOCKER_HOST_IP="host.docker.internal"
+DOCKER_HOST_IP=172.17.0.1
+
 case ${ENV} in
   local)
     PROXY=""
-    IDAM_URI=http://sidam-api:5000
-    IMPORTER_USERNAME=ccd-importer@server.net
-    IMPORTER_PASSWORD=Password12
-    CLIENT_SECRET=12345678
+    IDAM_URI='http://'${DOCKER_HOST_IP}':5000'
+    IMPORTER_USERNAME=ccd.docker.default@hmcts.net
+    IMPORTER_PASSWORD=Pa55word11
+    CLIENT_SECRET=ccd_gateway_secret
     REDIRECT_URI=http://localhost:3451/oauth2redirect
-    CCD_STORE_BASE_URL=http://host.docker.internal:4451
-    AUTH_PROVIDER_BASE_URL=http://host.docker.internal:4552
+    CCD_STORE_BASE_URL='http://'${DOCKER_HOST_IP}':4451'
+    AUTH_PROVIDER_BASE_URL='http://'${DOCKER_HOST_IP}':4502'
     EM_CCD_ORCHESTRATOR_URL="http://rpa-em-ccd-orchestrator:8060"
     SSCS_CCD_ORCHESTRATOR_URL="http://dockerhost:8070"
     TRIBUNALS_API_URL="http://dockerhost:8080"
@@ -79,12 +85,12 @@ echo "Importing: ${VERSION}"
 
 docker run \
   --name sscs-ccd-importer-to-env \
-  --rm `# cleanup after` \
+  --rm \
   -e "http_proxy=${PROXY}" \
   -e "https_proxy=${PROXY}" \
   -e "VERBOSE=${VERBOSE:-true}" \
   -e "AUTH_PROVIDER_BASE_URL=${AUTH_PROVIDER_BASE_URL}" \
-  -e "MICROSERVICE=${MICROSERVICE}" `# s2s` \
+  -e "MICROSERVICE=${MICROSERVICE}" \
   -e "IDAM_URI=${IDAM_URI}" \
   -e "IMPORTER_USERNAME=${IMPORTER_USERNAME}" \
   -e "IMPORTER_PASSWORD=${IMPORTER_PASSWORD}" \
