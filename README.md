@@ -1,5 +1,8 @@
 # SSCS CCD Definitions
 
+# Process for developing locally using XLSX files
+
+
 # Converting Excel to Json
 
 Copy your CCD definition to a file called sscs-ccd.xlsx and run:

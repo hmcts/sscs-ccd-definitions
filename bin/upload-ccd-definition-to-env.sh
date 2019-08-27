@@ -74,7 +74,7 @@ case ${ENV} in
     TRIBUNALS_API_URL="http://dockerhost:8080"
     TYA_NOTIFICATIONS_API_URL="http://dockerhost:8081"
     BULK_SCAN_API_URL="http://dockerhost:8090"
-    MICROSERVICE=ccd_gateway
+    MICROSERVICE=ccd_gw
   ;;
   *)
     echo "$env not recognised"
