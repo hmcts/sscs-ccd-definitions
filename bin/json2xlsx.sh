@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DEFINITION_VERSION="dev-1.0"
+DEFINITION_VERSION="dev"
 
 # Create the importer image with a version number
 docker build --no-cache -t hmctspublic.azurecr.io/sscs/ccd-definition-importer:$DEFINITION_VERSION -f importer.Dockerfile .
