@@ -4,7 +4,15 @@
 
 ### Modify the JSON data
 
-The JSON files are in the directory /data/sheets. There is a JSON file for each CCD definition spreadsheet tab.
+There are two SSCS CCD definition case types. Move into the directory of the one you need.
+
+    sscs-ccd-definitions
+    |- benefit
+    |- bulk-scan
+    
+Everything in this README file now assumes that you are in your chosen directory.
+        
+The JSON files are in the directory data/sheets. There is a JSON file for each CCD definition spreadsheet tab.
 
 ### Update the definition version
 
@@ -24,7 +32,7 @@ When the JSON file changes are ready to be imported, modify the version of the d
 This command will build a local Docker image that will container the JSON files plus some scripts to convert the JSON to XLSX.
 
 ```
-docker build --no-cache -t hmctspublic.azurecr.io/sscs/ccd-definition-importer:dev -f importer.Dockerfile .
+docker build --no-cache -t hmctspublic.azurecr.io/sscs/ccd-definition-importer:dev -f ../docker/importer.Dockerfile .
 ```
 
 ### Import definition to local environment
@@ -39,7 +47,7 @@ There are two parameters:
 The 'dev' in the command below refers to the 'dev' tag added to the image in the previous command.
 
 ```
-bin/upload-ccd-definition-to-env.sh local dev
+../bin/upload-ccd-definition-to-env.sh local dev
 ```
 
 ## Making edits using XLSX rather than JSON
@@ -49,10 +57,10 @@ If you don't enjoy working with JSON defintions, you can make spreadsheet change
 ### Generate the spreadsheet from the current JSON
 
 ```
-bin/json2xlsx.sh
+../bin/json2xlsx.sh
 ```
 
-This will create a file called sscs-ccd.xlsx in the /releases directory, which will be created if it doesn't exist.
+This will create a file called sscs-ccd.xlsx in the ./releases directory, which will be created if it doesn't exist.
 
 ### Make changes to the spreadsheet
 
@@ -61,5 +69,8 @@ Make changes to the definition as you would normally.
 ### Convert the spreadsheet back to JSON
 
 ```
-bin\xlsx2json.sh
+../bin/xlsx2json.sh
 ```
+
+This will then regenerate the file in the data/sheets directory.
+
