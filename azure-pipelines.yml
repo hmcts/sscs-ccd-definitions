@@ -1,0 +1,48 @@
+name: sscs-ccd-definitions pipeline
+
+variables:
+  serviceConnection: 'azurerm-prod'
+  repository: sscs/ccd-definition-importer
+  acrName: hmctspublic
+  acrResourceGroup: rpe-acr-prod-rg
+
+trigger:
+  branches:
+    include:
+      - refs/tags/*
+
+pr:
+  branches:
+    include:
+      - master
+
+jobs:
+  - job: Test
+    displayName: 'Test the JSON will build successfully into an Excel definitions file'
+    pool:
+      vmImage: 'Ubuntu 16.04'
+    steps:
+      - script: |
+          docker build -f definition/Dockerfile -t test-image .
+          docker run --rm test-image sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -o /sscs-ccd.xlsx"
+
+  - job: Release
+    displayName: 'Build and Push Docker Image to ACR'
+    condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/')) # TAGS ONLY
+    dependsOn: Test
+    pool:
+      vmImage: 'Ubuntu 16.04'
+    steps:
+      - powershell: |
+          Write-Host ("##vso[task.setvariable variable=imageTag;]$((Get-Content VERSION.yaml -Raw) -replace 'TAG: ','')")
+      - task: AzureCLI@1
+        inputs:
+          failOnStandardError: false  # does not work with AzureCLI task
+          azureSubscription: $(serviceConnection)
+          scriptLocation: 'inlineScript'
+          inlineScript: |
+            set -e
+            echo "Building $(repository):$(imageTag) ..."
+            az acr build -r $(acrName) -t $(repository):$(imageTag) -g $(acrResourceGroup) -f definition/Dockerfile .
+            az acr repository update --name $(acrName) --image $(repository):$(imageTag) --delete-enabled false --write-enabled false
+            echo "Finished"
