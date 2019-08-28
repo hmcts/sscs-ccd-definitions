@@ -2,7 +2,7 @@
 
 ## Process for developing locally using XLSX files
 
-### Modify the JSON data
+### 1. Modify the JSON data
 
 There are two SSCS CCD definition case types. Move into the directory of the one you need.
 
@@ -27,7 +27,7 @@ When the JSON file changes are ready to be imported, modify the version of the d
     ...
 ```
 
-### Build the importer image
+### 2. Build the importer image
 
 This command will build a local Docker image that will container the JSON files plus some scripts to convert the JSON to XLSX.
 
@@ -35,14 +35,14 @@ This command will build a local Docker image that will container the JSON files 
 docker build --no-cache -t hmctspublic.azurecr.io/sscs/ccd-definition-importer:dev -f ../docker/importer.Dockerfile .
 ```
 
-### Import definition to local environment
+### 3. Import definition to local environment
 
 The following command will load the definition to your local environment.
 
 There are two parameters:
 
-* Environment - use local for development
-* Image tag   - the tag given to the Docker image to be used to create the spreadsheet
+* Environment: Use local for development
+* Image tag: The tag given to the Docker image to be used to create the spreadsheet
 
 The 'dev' in the command below refers to the 'dev' tag added to the image in the previous command.
 
@@ -74,3 +74,4 @@ Make changes to the definition as you would normally.
 
 This will then regenerate the file in the data/sheets directory.
 
+Then, use steps 2 and 3 above.
