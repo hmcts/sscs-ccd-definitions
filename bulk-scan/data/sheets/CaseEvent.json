@@ -1,0 +1,34 @@
+[
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "SSCS_ExceptionRecord", "ID": "createException", "Name": "Create an exception record", "Description": "Create an exception record", "DisplayOrder": 1, "PostConditionState": "ScannedRecordReceived", "SecurityClassification": "Public"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "SSCS_ExceptionRecord",
+    "ID": "attachToExistingCase",
+    "Name": "Attach record to existing case",
+    "Description": "Attach record to existing case",
+    "DisplayOrder": 2,
+    "PreConditionState(s)": "ScannedRecordReceived",
+    "PostConditionState": "ScannedRecordAttachedToCase",
+    "CallBackURLAboutToSubmitEvent": "${BULK_SCAN_ORCHESTRATOR_URL}/callback/attach_case",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "CanSaveDraft": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "SSCS_ExceptionRecord",
+    "ID": "createNewCase",
+    "Name": "Create new case from exception",
+    "Description": "Create a new case from exception",
+    "DisplayOrder": 3,
+    "PreConditionState(s)": "ScannedRecordReceived",
+    "PostConditionState": "ScannedRecordReceived",
+    "CallBackURLAboutToSubmitEvent": "${BULK_SCAN_API_URL}/exception-record",
+    "RetriesTimeoutURLAboutToSubmitEvent": 10,
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N",
+    "CanSaveDraft": "N"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "SSCS_ExceptionRecord", "ID": "rejectRecord", "Name": "Reject record", "Description": "Reject record", "DisplayOrder": 4, "PreConditionState(s)": "ScannedRecordReceived", "PostConditionState": "ScannedRecordRejected", "SecurityClassification": "Public", "ShowEventNotes": "N", "CanSaveDraft": "N"},
+  {"LiveFrom": "01/01/2019", "CaseTypeID": "SSCS_ExceptionRecord", "ID": "updateManually", "Name": "Manually handle record", "Description": "Manually handle record", "DisplayOrder": 5, "PreConditionState(s)": "ScannedRecordReceived", "PostConditionState": "ScannedRecordManuallyHandled", "SecurityClassification": "Public", "ShowEventNotes": "N", "CanSaveDraft": "N"}
+]

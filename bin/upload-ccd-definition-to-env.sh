@@ -50,14 +50,16 @@ SSCS_CCD_ORCHESTRATOR_URL="http://sscs-ccd-callback-orchestrator-${ENV}.service.
 TRIBUNALS_API_URL="http://sscs-tribunals-api-${ENV}.service.core-compute-${ENV}.internal"
 TYA_NOTIFICATIONS_API_URL="http://sscs-tya-notif-${ENV}.service.core-compute-${ENV}.internal"
 BULK_SCAN_API_URL="http://sscs-bulk-scan-${ENV}.service.core-compute-${ENV}.internal"
+BULK_SCAN_ORCHESTRATOR_URL="http://sscs-bulk-scan-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
+
 
 MICROSERVICE=ccd_gw
 
 # Good for Mac and Windows for Linux, you'll need to find it first - jump into a container and run
 # netstat -nr | grep '^0\.0\.0\.0' | awk '{print $2}')
 # It's probably 172.17.0.1
-#DOCKER_HOST_IP="host.docker.internal"
-DOCKER_HOST_IP=172.17.0.1
+DOCKER_HOST_IP="host.docker.internal"
+#DOCKER_HOST_IP=172.17.0.1
 
 case ${ENV} in
   local)
@@ -74,6 +76,7 @@ case ${ENV} in
     TRIBUNALS_API_URL="http://dockerhost:8080"
     TYA_NOTIFICATIONS_API_URL="http://dockerhost:8081"
     BULK_SCAN_API_URL="http://dockerhost:8090"
+    BULK_SCAN_ORCHESTRATOR_URL="http://dockerhost:8582"
     MICROSERVICE=ccd_gw
   ;;
   *)
