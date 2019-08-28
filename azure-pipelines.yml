@@ -2,7 +2,8 @@ name: sscs-ccd-definitions pipeline
 
 variables:
   serviceConnection: 'azurerm-prod'
-  repository: sscs/ccd-definition-importer
+  repositoryBenefit: sscs/ccd-definition-importer-benefit
+  repositoryBulkscan: sscs/ccd-definition-importer-bulkscan
   acrName: hmctspublic
   acrResourceGroup: rpe-acr-prod-rg
 
@@ -23,18 +24,23 @@ jobs:
       vmImage: 'Ubuntu 16.04'
     steps:
       - script: |
-          docker build -f definition/Dockerfile -t test-image .
+          cd benefit
+          docker build -f ../docker/importer.Dockerfile -t test-image .
           docker run --rm test-image sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -o /sscs-ccd.xlsx"
-
+          cd ../bulk-scan
+          docker build -f ../docker/importer.Dockerfile -t test-image .
+          docker run --rm test-image sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -o /sscs-ccd.xlsx"
+          cd ..
   - job: Release
-    displayName: 'Build and Push Docker Image to ACR'
+    displayName: 'Build and Push Docker Images to ACR'
     condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/')) # TAGS ONLY
     dependsOn: Test
     pool:
       vmImage: 'Ubuntu 16.04'
     steps:
       - powershell: |
-          Write-Host ("##vso[task.setvariable variable=imageTag;]$((Get-Content VERSION.yaml -Raw) -replace 'TAG: ','')")
+          Write-Host ("##vso[task.setvariable variable=imageTagBenefit;]$((Get-Content benefit/VERSION.yaml -Raw) -replace 'TAG: ','')")
+          Write-Host ("##vso[task.setvariable variable=imageTagBulkscan;]$((Get-Content bulk-scan/VERSION.yaml -Raw) -replace 'TAG: ','')")
       - task: AzureCLI@1
         inputs:
           failOnStandardError: false  # does not work with AzureCLI task
@@ -42,7 +48,12 @@ jobs:
           scriptLocation: 'inlineScript'
           inlineScript: |
             set -e
-            echo "Building $(repository):$(imageTag) ..."
-            az acr build -r $(acrName) -t $(repository):$(imageTag) -g $(acrResourceGroup) -f definition/Dockerfile .
-            az acr repository update --name $(acrName) --image $(repository):$(imageTag) --delete-enabled false --write-enabled false
+            echo "Building $(repositoryBenefit):$(imageTagBenefit) ..."
+            cd benefit
+            az acr build -r $(acrName) -t $(repositoryBenefit):$(imageTagBenefit) -g $(acrResourceGroup) -f ../docker/importer.Dockerfile .
+            az acr repository update --name $(acrName) --image $(repositoryBenefit):$(imageTagBenefit) --delete-enabled false --write-enabled false
+            cd ../bulk-scan
+            cd benefit
+            az acr build -r $(acrName) -t $(repositoryBulkscan):$(imageTagBulkscan) -g $(acrResourceGroup) -f ../docker/importer.Dockerfile .
+            az acr repository update --name $(acrName) --image $(repositoryBulkscan):$(imageTagBulkscan) --delete-enabled false --write-enabled false
             echo "Finished"
