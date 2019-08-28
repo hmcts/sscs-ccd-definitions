@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-docker build --no-cache -f xlsx2json.Dockerfile -t xlsx2json .
-docker run -v `pwd`:/data xlsx2json
-sudo rm sheets/Change\ History.json
-ME=$(whoami)
-sudo chown $ME:$ME sheets/*
-bin/template-urls.sh
+docker build --no-cache -f ../docker/xlsx2json.Dockerfile -t xlsx2json .
+echo `pwd`
+docker run -v `pwd`/data:/data xlsx2json
+../bin/template-urls.sh
