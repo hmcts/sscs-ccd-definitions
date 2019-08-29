@@ -5,7 +5,7 @@ variables:
   repositoryBenefit: sscs/ccd-definition-importer-benefit
   repositoryBulkscan: sscs/ccd-definition-importer-bulkscan
   acrName: hmctspublic
-  acrResourceGroup: rpe-acr-prod-rg
+  acrResourceGroup:
 
 trigger:
   branches:
@@ -48,12 +48,22 @@ jobs:
           scriptLocation: 'inlineScript'
           inlineScript: |
             set -e
-            echo "Building $(repositoryBenefit):$(imageTagBenefit) ..."
             cd benefit
-            az acr build -r $(acrName) -t $(repositoryBenefit):$(imageTagBenefit) -g $(acrResourceGroup) -f ../docker/importer.Dockerfile .
-            az acr repository update --name $(acrName) --image $(repositoryBenefit):$(imageTagBenefit) --delete-enabled false --write-enabled false
-            echo "Building $(repositoryBulkscan):$(imageTagBulkscan) ..."
+            response=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definition-importer-benefit | grep $imageTagBenefit)
+            if [[ $response == "" ]]; then
+              echo "Building $(repositoryBenefit):$(imageTagBenefit) ..."
+              az acr build -r $(acrName) -t $(repositoryBenefit):$(imageTagBenefit) -g $(acrResourceGroup) -f ../docker/importer.Dockerfile .
+              az acr repository update --name $(acrName) --image $(repositoryBenefit):$(imageTagBenefit) --delete-enabled false --write-enabled false
+            else
+              echo "$(repositoryBenefit):$(imageTagBenefit) already exists"
+            fi
             cd ../bulk-scan
-            az acr build -r $(acrName) -t $(repositoryBulkscan):$(imageTagBulkscan) -g $(acrResourceGroup) -f ../docker/importer.Dockerfile .
-            az acr repository update --name $(acrName) --image $(repositoryBulkscan):$(imageTagBulkscan) --delete-enabled false --write-enabled false
+            response=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definition-importer-bulkscan | grep $imageTagBulkscan)
+            if [[ $response == "" ]]; then
+              echo "Building $(repositoryBulkscan):$(imageTagBulkscan) ..."
+              az acr build -r $(acrName) -t $(repositoryBulkscan):$(imageTagBulkscan) -g $(acrResourceGroup) -f ../docker/importer.Dockerfile .
+              az acr repository update --name $(acrName) --image $(repositoryBulkscan):$(imageTagBulkscan) --delete-enabled false --write-enabled false
+            else
+              echo "$(repositoryBulkscan):$(imageTagBulkscan) already exists"
+            fi
             echo "Finished"
