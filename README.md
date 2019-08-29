@@ -2,27 +2,35 @@
 
 ## Release process - quick reference
 
-### Modify the benefit and/or bulk-scan definition(s)
+### 1. Modify the benefit and/or bulk-scan definition(s)
 
 You can do this either by modifying JSON files directly, or converting to XLSX and then back again. See below for details.
 
-### Bump the definition version
+### 2. Bump the definition version
 
-Each definition (benefit and bulk-scan) have a VERSION.yaml file. Update the definition version in this file. Make sure this version is also bumped
+Each definition (benefit and bulk-scan) has a VERSION.yaml file. Update the definition version in this file. Make sure this version is also bumped
 in the CaseType.json file for the definition you are changing.
 
-### Create a pull request
+### 3. Create a pull request
 
 Create a pull request with your changes.
 
-### Get approval and merge
+### 4. Get approval and merge
 
 Reviewers should check that the definition as stated in the CaseType.json file matches the one in the VERSION.yaml file for each definition.
 
-### Tag and release
+### 5. Tag and release
 
 Find the latest tag for this repository. Create a new tag based of the old one, and push the tag. This will now trigger the Azure Pipeline which will
 create the new docker definition import images for whichever definitions have a new version in the VERSION.yaml file.
+
+### 6. Apply to AAT
+
+@TODO
+
+### 7. Create XLSX file for production
+
+@TODO
 
 ## Process for developing locally using XLSX files
 
