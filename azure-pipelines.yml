@@ -49,15 +49,15 @@ jobs:
           inlineScript: |
             set -e
             cd benefit
-            # || true because we don't want script to exit here when return code from az acr is "1"
-            response=$(az acr repository show-tags -n $(acrName) --repository $(repositoryBenefit) | grep ($imageTagBenefit)) || true
-            if [ -z "$response" ]; then
-              echo "Building $(repositoryBenefit):$(imageTagBenefit) ..."
-              az acr build -r $(acrName) -t $(repositoryBenefit):$(imageTagBenefit) -g $(acrResourceGroup) -f ../docker/importer.Dockerfile .
-              az acr repository update --name $(acrName) --image $(repositoryBenefit):$(imageTagBenefit) --delete-enabled false --write-enabled false
-            else
-              echo "$(repositoryBenefit):$(imageTagBenefit) already exists"
-            fi
+            # "|| true" because we don't want script to exit here when return code from az acr is "1"
+            #response=$(az acr repository show-tags -n $(acrName) --repository $(repositoryBenefit) | grep ($imageTagBenefit)) || true
+            #if [ -z "$response" ]; then
+            #  echo "Building $(repositoryBenefit):$(imageTagBenefit) ..."
+            #  az acr build -r $(acrName) -t $(repositoryBenefit):$(imageTagBenefit) -g $(acrResourceGroup) -f ../docker/importer.Dockerfile .
+            #  az acr repository update --name $(acrName) --image $(repositoryBenefit):$(imageTagBenefit) --delete-enabled false --write-enabled false
+            #else
+            #  echo "$(repositoryBenefit):$(imageTagBenefit) already exists"
+            #fi
             cd ../bulk-scan
             response=$(az acr repository show-tags -n $(acrName) --repository $(repositoryBulkscan) | grep $(imageTagBulkscan)) || true
             if [ -z "$response" ]; then
