@@ -53,7 +53,6 @@ jobs:
             az acr build -r $(acrName) -t $(repositoryBenefit):$(imageTagBenefit) -g $(acrResourceGroup) -f ../docker/importer.Dockerfile .
             az acr repository update --name $(acrName) --image $(repositoryBenefit):$(imageTagBenefit) --delete-enabled false --write-enabled false
             cd ../bulk-scan
-            cd benefit
             az acr build -r $(acrName) -t $(repositoryBulkscan):$(imageTagBulkscan) -g $(acrResourceGroup) -f ../docker/importer.Dockerfile .
             az acr repository update --name $(acrName) --image $(repositoryBulkscan):$(imageTagBulkscan) --delete-enabled false --write-enabled false
             echo "Finished"
