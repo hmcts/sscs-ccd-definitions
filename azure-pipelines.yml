@@ -5,7 +5,7 @@ variables:
   repositoryBenefit: sscs/ccd-definition-importer-benefit
   repositoryBulkscan: sscs/ccd-definition-importer-bulkscan
   acrName: hmctspublic
-  acrResourceGroup:
+  acrResourceGroup: rpe-acr-prod-rg
 
 trigger:
   branches:
