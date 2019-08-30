@@ -83,22 +83,9 @@ Everything in this README file now assumes that you are in your chosen directory
         
 The JSON files are in the directory data/sheets. There is a JSON file for each CCD definition spreadsheet tab.
 
-### Update the definition version
-
-When the JSON file changes are ready to be imported, modify the version of the definition by editing the value in CaseType.json.
-
-```
-[
-    {
-        "LiveFrom": "01/01/2018", 
-        "ID": "Benefit", 
-        "Name": "SSCS Case v5.1.12_AAT", 
-    ...
-```
-
 ### 2. Build the importer image
 
-This command will build a local Docker image that will container the JSON files plus some scripts to convert the JSON to XLSX.
+When the JSON file changes are ready to be tested locally, run the following command to build a local Docker image that will contain the JSON files plus some scripts to convert the JSON to XLSX.
 
 ```
 docker build --no-cache -t hmctspublic.azurecr.io/sscs/ccd-definition-importer:dev -f ../docker/importer.Dockerfile .
@@ -108,12 +95,11 @@ docker build --no-cache -t hmctspublic.azurecr.io/sscs/ccd-definition-importer:d
 
 The following command will load the definition to your local environment.
 
-There are two parameters:
+```
+../bin/upload-ccd-definition-to-env.sh [env] [tag]
+```
 
-* Environment: Use local for development
-* Image tag: The tag given to the Docker image to be used to create the spreadsheet
-
-The 'dev' in the command below refers to the 'dev' tag added to the image in the previous command.
+To load the definition we created above into the local environment, run:
 
 ```
 ../bin/upload-ccd-definition-to-env.sh local dev
@@ -123,7 +109,7 @@ The 'dev' in the command below refers to the 'dev' tag added to the image in the
 
 If you don't enjoy working with JSON defintions, you can make spreadsheet changes in the old-school way using the following process.
 
-### Generate the spreadsheet from the current JSON
+#### 1. Generate the spreadsheet from the current JSON
 
 ```
 ../bin/json2xlsx.sh
@@ -131,18 +117,17 @@ If you don't enjoy working with JSON defintions, you can make spreadsheet change
 
 This will create a file called sscs-ccd.xlsx in the ./releases directory, which will be created if it doesn't exist.
 
-### Make changes to the spreadsheet
+#### 2. Make changes to the spreadsheet
 
 Make changes to the definition as you would normally.
 
-### Convert the spreadsheet back to JSON
+#### 3. Convert the spreadsheet back to JSON
 
-Put the spreadsheet, named sscs-ccd.xlsx into the data directory.
+Put the spreadsheet, named sscs-ccd.xlsx into the ./data directory and run the xlsx2json.sh script, i.e.
 
 ```
+cp ./releases/sscs-ccd.xlsx ./data/sscs-ccd.xlsx
 ../bin/xlsx2json.sh
 ```
 
-This will then regenerate the file in the data/sheets directory.
-
-Then, use steps 2 and 3 above.
+This will then regenerate the files in the data/sheets directory.
