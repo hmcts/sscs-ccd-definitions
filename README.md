@@ -1,30 +1,30 @@
 # SSCS CCD Definitions
 
-## Release process - quick reference
+## Modify and Release Process
 
-### 1. Modify the benefit and/or bulk-scan definition(s)
+#### 1. Modify the benefit and/or bulk-scan definition(s)
 
-You can do this either by modifying JSON files directly, or converting to XLSX and then back again. See below for details.
+You can do this either by modifying JSON files directly, or converting to XLSX and then back again. See [Updating the Definitions](#udpating) for details.
 
-### 2. Bump the definition version
+#### 2. Bump the definition version
 
 Each definition (benefit and bulk-scan) has a VERSION.yaml file. Update the definition version in this file. Make sure this version is also bumped
 in the CaseType.json file for the definition you are changing.
 
-### 3. Create a pull request
+#### 3. Create a pull request
 
 Create a pull request with your changes.
 
-### 4. Get approval and merge
+#### 4. Get approval and merge
 
 Reviewers should check that the definition as stated in the CaseType.json file matches the one in the VERSION.yaml file for each definition.
 
-### 5. Tag and release
+#### 5. Tag and release
 
 Find the latest tag for this repository. Create a new tag based of the old one, and push the tag. This will now trigger the Azure Pipeline which will
 create the new docker definition import images for whichever definitions have a new version in the VERSION.yaml file.
 
-### 6. Apply to AAT and Production
+#### 6. Apply to AAT and Production
 
 Once the ACR images have been created, a designated QA team member can create the spreadsheets for AAT and PROD.
 
@@ -41,7 +41,15 @@ This will create two files in the ./output directory, one for AAT and one for PR
 ```
 cd benefit
 ../bin/create-xlsx-definitions.sh 5.1.15
-...
+
+Import...
+ loading workbook: ./data/ccd-template.xlsx
+  importing sheet data from AuthorisationCaseEvent.json file
+  importing sheet data from AuthorisationCaseField.json file
+  importing sheet data from AuthorisationCaseState.json file
+  ...
+  ...
+
 cd output
 ls -la
 
@@ -60,7 +68,8 @@ drwxrwxr-x 5 chrismoreton chrismoreton   4096 Aug 30 11:42 ..
 
 5. Follow the regular process for uploading the definitions to the respective environments.
 
-## Developing locally using XLSX files
+<a name="udpating"></a>
+## Updating the Definitions
 
 ### 1. Modify the JSON data
 
