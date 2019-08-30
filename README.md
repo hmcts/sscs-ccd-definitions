@@ -24,15 +24,29 @@ Reviewers should check that the definition as stated in the CaseType.json file m
 Find the latest tag for this repository. Create a new tag based of the old one, and push the tag. This will now trigger the Azure Pipeline which will
 create the new docker definition import images for whichever definitions have a new version in the VERSION.yaml file.
 
-### 6. Apply to AAT
+### 6. Apply to AAT and Production
 
-@TODO
+Once the ACR images have been created, a designated QA team member can create the spreadsheets for AAT and PROD.
 
-### 7. Create XLSX file for production
+1. Move into the directory of the definition in question (./benefit or ./bulk-scan) and run:
 
-@TODO
+```
+    ../bin/json2xlsx.sh
+```
 
-## Process for developing locally using XLSX files
+This will create a file named sscs-ccd.xlsx in the ./releases directory.
+
+2. Copy this file to a working directory somewhere, and clone it so that you have one for AAT and one for PROD.
+
+3. Edit the CaseType tab to have the correct version number for each environment.
+
+4. Edit the UserProfile tab to add a list of users for each environment.
+
+5. Upload the spreadsheets to the [SSCS CCD Definitions](https://tools.hmcts.net/confluence/display/SSCS/SSCS+Case+Definitions+Page+2) Confluence page.
+
+6. Follow the regular process for uploading the definitions to the respective environments.
+
+## Developing locally using XLSX files
 
 ### 1. Modify the JSON data
 
@@ -99,6 +113,8 @@ This will create a file called sscs-ccd.xlsx in the ./releases directory, which 
 Make changes to the definition as you would normally.
 
 ### Convert the spreadsheet back to JSON
+
+Put the spreadsheet, named sscs-ccd.xlsx into the data directory.
 
 ```
 ../bin/xlsx2json.sh
