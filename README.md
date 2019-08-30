@@ -31,20 +31,34 @@ Once the ACR images have been created, a designated QA team member can create th
 1. Move into the directory of the definition in question (./benefit or ./bulk-scan) and run:
 
 ```
-    ../bin/json2xlsx.sh
+    ../bin/create-xlsx-definitions.sh [version]
 ```
 
-This will create a file named sscs-ccd.xlsx in the ./releases directory.
+This will create two files in the ./output directory, one for AAT and one for PROD.
 
-2. Copy this file to a working directory somewhere, and clone it so that you have one for AAT and one for PROD.
+#### Example:
 
-3. Edit the CaseType tab to have the correct version number for each environment.
+```
+cd benefit
+../bin/create-xlsx-definitions.sh 5.1.15
+...
+cd output
+ls -la
 
-4. Edit the UserProfile tab to add a list of users for each environment.
+drwxrwxr-x 2 chrismoreton chrismoreton   4096 Aug 30 11:42 .
+drwxrwxr-x 5 chrismoreton chrismoreton   4096 Aug 30 11:42 ..
+-rw-r--r-- 1 chrismoreton chrismoreton 182634 Aug 30 11:42 CCD_SSCSDefinition_v5.1.15_AAT.xlsx
+-rw-r--r-- 1 chrismoreton chrismoreton 182634 Aug 30 11:42 CCD_SSCSDefinition_v5.1.15_PROD.xlsx
 
-5. Upload the spreadsheets to the [SSCS CCD Definitions](https://tools.hmcts.net/confluence/display/SSCS/SSCS+Case+Definitions+Page+2) Confluence page.
+```
 
-6. Follow the regular process for uploading the definitions to the respective environments.
+2. Edit the CaseType tab to have the correct version number for each environment.
+
+3. Edit the UserProfile tab to add a list of users for each environment.
+
+4. Upload the spreadsheets to the [SSCS CCD Definitions](https://tools.hmcts.net/confluence/display/SSCS/SSCS+Case+Definitions+Page+2) Confluence page.
+
+5. Follow the regular process for uploading the definitions to the respective environments.
 
 ## Developing locally using XLSX files
 
