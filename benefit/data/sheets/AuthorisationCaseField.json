@@ -75,6 +75,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "clerkConfirmationOfMRN", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "clerkOtherReason", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "clerkConfirmationOther", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "07/07/2019", "CaseTypeID": "Benefit", "CaseFieldID": "reissueFurtherEvidenceDocument", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "subscriptions", "UserRole": "caseworker-sscs-anonymouscitizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "subscriptions", "UserRole": "caseworker-sscs-callagent", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "generatedNino", "UserRole": "caseworker-sscs-callagent", "CRUD": "CRU"},
