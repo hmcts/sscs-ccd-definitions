@@ -86,6 +86,19 @@ esac
 
 echo "Importing: ${VERSION}"
 
+CURRENT_DIR=${PWD##*/}
+
+case $CURRENT_DIR in
+    "benefit" )
+        CASE_TYPE_IMAGE_NAME="benefit" ;;
+    "bulk-scan" )
+        CASE_TYPE_IMAGE_NAME="bulkscan" ;;
+    * )
+        echo "Please run from the ./benefit or ./bulk-scan directory"
+        exit 1
+esac
+
+
 docker run \
   --name sscs-ccd-importer-to-env \
   --rm \
@@ -108,6 +121,6 @@ docker run \
   -e "TYA_NOTIFICATIONS_API_URL=${TYA_NOTIFICATIONS_API_URL}" \
   -e "BULK_SCAN_API_URL=${BULK_SCAN_API_URL}" \
   -e "USER_ROLES=citizen, caseworker-sscs, caseworker-sscs-systemupdate, caseworker-sscs-anonymouscitizen, caseworker-sscs-callagent, caseworker-sscs-judge, caseworker-sscs-clerk, caseworker-sscs-dwpresponsewriter, caseworker-sscs-registrar, caseworker-sscs-superuser, caseworker-sscs-teamleader, caseworker-sscs-panelmember, caseworker-sscs-bulkscan" \
-  hmctspublic.azurecr.io/sscs/ccd-definition-importer:${VERSION}
+  hmctspublic.azurecr.io/sscs/ccd-definition-importer-${CASE_TYPE_IMAGE_NAME}:${VERSION}
 
 echo Finished
