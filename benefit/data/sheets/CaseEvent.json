@@ -235,6 +235,20 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reinstateVoidAppeal", "Name": "Reinstate case", "Description": "Resinstates a Void case to valid", "DisplayOrder": 68, "PreConditionState(s)": "voidState", "PostConditionState": "appealCreated", "SecurityClassification": "Public"},
   {
+    "LiveFrom": "11/01/2019",
+    "CaseTypeID": "Benefit",
+    "ID": "reissueFurtherEvidence",
+    "Name": "Reisssue further evidence",
+    "Description": "Reissue further evidence",
+    "DisplayOrder": 69,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
     "ID": "requestInfoIncompleteApplication",
@@ -397,5 +411,20 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "voidCase", "Name": "Void case", "Description": "Voids the case", "DisplayOrder": 103, "PreConditionState(s)": "*", "PostConditionState": "voidState", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "voidIncompleteApplication", "Name": "Void incomplete appeal", "Description": "Void non-valid appeal", "DisplayOrder": 104, "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted", "PostConditionState": "incompleteApplicationVoidState", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "interlocVoidAppeal", "Name": "Void non-valid case", "Description": "Voids the case", "DisplayOrder": 105, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "voidState", "SecurityClassification": "Public"},
-  {"LiveFrom": "20/07/2019", "CaseTypeID": "Benefit", "ID": "sendToAdmin", "Name": "Send to admin", "Description": "Return the case to an admin with a note", "DisplayOrder": 78, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "interlocutoryReviewState", "SecurityClassification": "Public"}
+  {"LiveFrom": "20/07/2019", "CaseTypeID": "Benefit", "ID": "sendToAdmin", "Name": "Send to admin", "Description": "Return the case to an admin with a note", "DisplayOrder": 78, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "interlocutoryReviewState", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendToAppealCreated", "Name": "Admin - send to Appeal Created", "DisplayOrder": 1001, "PreConditionState(s)": "*", "PostConditionState": "appealCreated", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendToDormantAppealState", "Name": "Admin - send to Dormant", "DisplayOrder": 1002, "PreConditionState(s)": "*", "PostConditionState": "dormantAppealState", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendToDraft", "Name": "Admin - send to Draft", "DisplayOrder": 1003, "PreConditionState(s)": "*", "PostConditionState": "draft", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendToDraftArchived", "Name": "Admin - send to Draft Archived", "DisplayOrder": 1004, "PreConditionState(s)": "*", "PostConditionState": "draftArchived", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendToHearing", "Name": "Admin- send to Hearing", "DisplayOrder": 1005, "PreConditionState(s)": "*", "PostConditionState": "hearing", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendToIncompleteApplication", "Name": "Admin - send to Incomplete App", "DisplayOrder": 1006, "PreConditionState(s)": "*", "PostConditionState": "incompleteApplication", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendToIncompleteApplicationInformationReqsted", "Name": "Admin - send to Info Req'd", "DisplayOrder": 1007, "PreConditionState(s)": "*", "PostConditionState": "incompleteApplicationInformationReqsted", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendToInterlocutoryReviewState", "Name": "Admin - send to Interloc", "DisplayOrder": 1008, "PreConditionState(s)": "*", "PostConditionState": "interlocutoryReviewState", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendToOutcome", "Name": "Admin - send to Outcome", "DisplayOrder": 1009, "PreConditionState(s)": "*", "PostConditionState": "outcome", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendToPendingAppeal", "Name": "Admin - send to Pending Appeal", "DisplayOrder": 1010, "PreConditionState(s)": "*", "PostConditionState": "pendingAppeal", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendToReadyForHearing", "Name": "Admin - send to Ready to List", "DisplayOrder": 1011, "PreConditionState(s)": "*", "PostConditionState": "readyForHearing", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendTorRsponseReceived", "Name": "Admin - send to Response Rec'd", "DisplayOrder": 1012, "PreConditionState(s)": "*", "PostConditionState": "responseReceived", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendToValidAppeal", "Name": "Admin - send to Valid", "DisplayOrder": 1013, "PreConditionState(s)": "*", "PostConditionState": "validAppeal", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendToVoidState", "Name": "Admin - send to Void", "DisplayOrder": 1014, "PreConditionState(s)": "*", "PostConditionState": "voidState", "SecurityClassification": "Public"},
+  {"LiveFrom": "03/09/2019", "CaseTypeID": "Benefit", "ID": "adminSendToWithDwp", "Name": "Admin - send to With DWP", "DisplayOrder": 1015, "PreConditionState(s)": "*", "PostConditionState": "withDwp", "SecurityClassification": "Public"}
 ]

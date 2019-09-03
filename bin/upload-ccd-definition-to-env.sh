@@ -98,7 +98,6 @@ case $CURRENT_DIR in
         exit 1
 esac
 
-
 docker run \
   --name sscs-ccd-importer-to-env \
   --rm \
