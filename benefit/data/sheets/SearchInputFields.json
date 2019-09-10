@@ -10,6 +10,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "[CASE_REFERENCE]", "Label": "Case Ref", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "isCorDecision", "Label": "Is COR decision ", "DisplayOrder": 10},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "documentSentToDwp", "Label": "Documents sent to DWP?", "DisplayOrder": 11},
-  {"LiveFrom": "16/07/2019", "CaseTypeID": "Benefit", "CaseFieldID": "evidenceHandled", "Label": "Further Evidence Actioned", "DisplayOrder": 12},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "evidenceHandled", "Label": "Further Evidence Actioned", "DisplayOrder": 12},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "hmctsDwpState", "Label": "Send to DWP error", "DisplayOrder": 13}
 ]
