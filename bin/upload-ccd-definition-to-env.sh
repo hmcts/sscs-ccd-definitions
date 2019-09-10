@@ -25,7 +25,7 @@ fi
 
 if [ -z "${1}" ]
   then
-    echo "Usage: ./upload-definition-to-env.docker.sh [env] [version]\n"
+    echo "Usage: ./upload-definition-to-env.docker.sh [local|aat] [benefit|bulkscan] [version]\n"
     exit 1
 fi
 
@@ -39,7 +39,8 @@ az account show &> /dev/null || {
 }
 
 ENV=${1}
-VERSION=${2}
+TYPE=${2}
+VERSION=${3}
 
 PROXY=http://proxyout.reform.hmcts.net:8080
 IDAM_URI="http://idam-api-idam-${ENV}.service.core-compute-idam-${ENV}.internal"
@@ -58,8 +59,11 @@ MICROSERVICE=ccd_gw
 # Good for Mac and Windows for Linux, you'll need to find it first - jump into a container and run
 # netstat -nr | grep '^0\.0\.0\.0' | awk '{print $2}')
 # It's probably 172.17.0.1
-DOCKER_HOST_IP="host.docker.internal"
-#DOCKER_HOST_IP=172.17.0.1
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    DOCKER_HOST_IP=172.17.0.1
+else
+    DOCKER_HOST_IP="host.docker.internal"
+fi
 
 case ${ENV} in
   local)
@@ -86,18 +90,6 @@ esac
 
 echo "Importing: ${VERSION}"
 
-CURRENT_DIR=${PWD##*/}
-
-case $CURRENT_DIR in
-    "benefit" )
-        CASE_TYPE_IMAGE_NAME="benefit" ;;
-    "bulk-scan" )
-        CASE_TYPE_IMAGE_NAME="bulkscan" ;;
-    * )
-        echo "Please run from the ./benefit or ./bulk-scan directory"
-        exit 1
-esac
-
 docker run \
   --name sscs-ccd-importer-to-env \
   --rm \
@@ -121,6 +113,6 @@ docker run \
   -e "BULK_SCAN_API_URL=${BULK_SCAN_API_URL}" \
   -e "BULK_SCAN_ORCHESTRATOR_URL=${BULK_SCAN_ORCHESTRATOR_URL}" \
   -e "USER_ROLES=citizen, caseworker-sscs, caseworker-sscs-systemupdate, caseworker-sscs-anonymouscitizen, caseworker-sscs-callagent, caseworker-sscs-judge, caseworker-sscs-clerk, caseworker-sscs-dwpresponsewriter, caseworker-sscs-registrar, caseworker-sscs-superuser, caseworker-sscs-teamleader, caseworker-sscs-panelmember, caseworker-sscs-bulkscan" \
-  hmctspublic.azurecr.io/sscs/ccd-definition-importer-${CASE_TYPE_IMAGE_NAME}:${VERSION}
+  hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION}
 
 echo Finished
