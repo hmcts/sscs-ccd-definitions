@@ -685,8 +685,6 @@
   {"LiveFrom": "17/06/2019", "ID": "FL_dwpStates", "ListElementCode": "responseSubmittedDwp", "ListElement": "Response submitted (DWP)"},
   {"LiveFrom": "17/06/2019", "ID": "FL_dwpStates", "ListElementCode": "Registered", "ListElement": "Appeal registered (DWP)"},
   {"LiveFrom": "17/06/2019", "ID": "FL_dwpStates", "ListElementCode": "UnRegistered", "ListElement": "Appeal to-be registered"},
-  {"LiveFrom": "20/06/2019", "ID": "FL_dwpStates", "ListElementCode": "Withdrawn", "ListElement": "Withdrawn"},
-  {"LiveFrom": "20/06/2019", "ID": "FL_dwpStates", "ListElementCode": "withdrawalReceived", "ListElement": "Withdrawal received"},
   {"LiveFrom": "20/06/2019", "ID": "FL_dwpStates", "ListElementCode": "inProgress", "ListElement": "In progress"},
   {"LiveFrom": "17/06/2019", "ID": "FL_dwpFurtherEvidenceStates", "ListElementCode": "furtherEvidenceReceived", "ListElement": "Further evidence received"},
   {"LiveFrom": "17/06/2019", "ID": "FL_dwpFurtherEvidenceStates", "ListElementCode": "lapsed", "ListElement": "Lapsed"},
