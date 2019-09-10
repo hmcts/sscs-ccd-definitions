@@ -10,7 +10,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "interlocutoryReviewState", "Name": "Interlocutory Review", "Description": "Interlocutory Review", "DisplayOrder": 9},
   {"LiveFrom": "19/03/2019", "CaseTypeID": "Benefit", "ID": "outcome", "Name": "Outcome", "Description": "A case has had a decision made and an outcome issued", "DisplayOrder": 10},
   {"LiveFrom": "19/03/2019", "CaseTypeID": "Benefit", "ID": "pendingAppeal", "Name": "Pending Appeal", "Description": "Appeal is not yet valid and requires further information or work to progress", "DisplayOrder": 11},
-  {"LiveFrom": "19/03/2019", "CaseTypeID": "Benefit", "ID": "readyForHearing", "Name": "Ready for Hearing", "Description": "Appeal is ready for scheduling and listing", "DisplayOrder": 12},
+  {"LiveFrom": "19/03/2019", "CaseTypeID": "Benefit", "ID": "readyToList", "Name": "Ready to list", "Description": "Appeal is ready for scheduling and listing", "DisplayOrder": 12},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "ID": "responseReceived", "Name": "Response received", "Description": "Response from DWP received", "DisplayOrder": 13},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "testCreate", "Name": "Test Create Case", "Description": "Create a test / dummy case", "DisplayOrder": 14},
   {"LiveFrom": "19/03/2019", "CaseTypeID": "Benefit", "ID": "validAppeal", "Name": "Valid Appeal", "Description": "A fully valid appeal", "DisplayOrder": 15},
