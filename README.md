@@ -12,16 +12,21 @@ Download the XLSX for AAT from Confluence and update the JSON:
 
     ../bin/xlsx2json.sh ~/Downloads/CCD_SSCSDefinition_v5.1.21_AAT.xlsx
     
+Update the version file
+
+Open benefit/VERSION.yaml and modify the version number. This file will be used by the Azure Pipeline to create a docker importer image tagged with the specified version number.
+    
 * Raise a PR
 * Get it approved and merged
 * Pull latest master branch
 
-Then, tag the master branch with the definition version:
+Then, tag the master branch. Find the latest tag and bump by one. This tag does not relate to the version of either the benefit or bulkscan definitions. It is only the version
+of this repository and does have any effect outside of that.
 
-    git tag 5.1.21
+    git tag 1.0.18
     git push --tags
     
-This will trigger an Azure Pipeline which will build the new benefit definition importer image and store it in the Azure Container Registry (ACR). In this case, the image will be called
+When a new tag is pushed, it will trigger an Azure Pipeline which will build the new benefit definition importer image and store it in the Azure Container Registry (ACR). In this case, the image will be called
 
     hmctspublic.azurecr.io/sscs/ccd-definition-importer-benefit:5.1.21
 
