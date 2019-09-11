@@ -53,5 +53,6 @@ docker run -ti --rm --name json2xlsx \
   -e "TYA_NOTIFICATIONS_API_URL=${TYA_NOTIFICATIONS_API_URL}" \
   -e "BULK_SCAN_API_URL=${BULK_SCAN_API_URL}" \
   -e "BULK_SCAN_ORCHESTRATOR_URL=${BULK_SCAN_ORCHESTRATOR_URL}" \
+  -e "COR_BACKEND_URL=${COR_BACKEND_URL}" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION} \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_v${VERSION}_${ENV^^}.xlsx"
