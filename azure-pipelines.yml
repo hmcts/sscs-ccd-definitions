@@ -40,7 +40,7 @@ jobs:
     steps:
       - powershell: |
           Write-Host ("##vso[task.setvariable variable=imageTagBenefit;]$((Get-Content benefit/VERSION.yaml -Raw) -replace 'TAG: ','')")
-          Write-Host ("##vso[task.setvariable variable=imageTagBulkscan;]$((Get-Content bulk-scan/VERSION.yaml -Raw) -replace 'TAG: ','')")
+          Write-Host ("##vso[task.setvariable variable=imageTagBulkscan;]$((Get-Content bulkscan/VERSION.yaml -Raw) -replace 'TAG: ','')")
       - task: AzureCLI@1
         inputs:
           failOnStandardError: false  # does not work with AzureCLI task
