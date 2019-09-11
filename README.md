@@ -30,3 +30,11 @@ This will trigger an Azure Pipeline which will build the new benefit definition 
 Once version 5.1.21 appears in the ACR, you can run the following command to upload it to your local CCD Docker environment.
 
     ../bin/upload-ccd-definition-to-env.sh local benefit 5.1.21
+    
+## Create a local XLSX from a Definition Version
+
+If needed, you can generate a local copy of a defintion stored in the ACR. This definition should match the version stored in Confluence.
+
+    ../bin/json2xlsx.sh benefit 5.1.21
+    
+This would create a file named sscs-ccd-benefit-5.1.21.xlsx in the ./releases directory relative to the directory in which you ran the command.
