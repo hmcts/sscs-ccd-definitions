@@ -53,7 +53,6 @@ TYA_NOTIFICATIONS_API_URL="http://sscs-tya-notif-${ENV}.service.core-compute-${E
 BULK_SCAN_API_URL="http://sscs-bulk-scan-${ENV}.service.core-compute-${ENV}.internal"
 BULK_SCAN_ORCHESTRATOR_URL="http://sscs-bulk-scan-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
 
-
 MICROSERVICE=ccd_gw
 
 # Good for Mac and Windows for Linux, you'll need to find it first - jump into a container and run
@@ -81,11 +80,12 @@ case ${ENV} in
     TYA_NOTIFICATIONS_API_URL="http://dockerhost:8081"
     BULK_SCAN_API_URL="http://dockerhost:8090"
     BULK_SCAN_ORCHESTRATOR_URL="http://dockerhost:8582"
+    COR_BACKEND_URL="http://dockerhost:1234"
     MICROSERVICE=ccd_gw
     CCD_ENVIRONMENT=AAT
   ;;
   *)
-    echo "$env not recognised"
+    echo "$env not valid"
     exit 1 ;;
 esac
 
@@ -114,6 +114,7 @@ docker run \
   -e "TYA_NOTIFICATIONS_API_URL=${TYA_NOTIFICATIONS_API_URL}" \
   -e "BULK_SCAN_API_URL=${BULK_SCAN_API_URL}" \
   -e "BULK_SCAN_ORCHESTRATOR_URL=${BULK_SCAN_ORCHESTRATOR_URL}" \
+  -e "COR_BACKEND_URL=${COR_BACKEND_URL}" \
   -e "USER_ROLES=citizen, caseworker-sscs, caseworker-sscs-systemupdate, caseworker-sscs-anonymouscitizen, caseworker-sscs-callagent, caseworker-sscs-judge, caseworker-sscs-clerk, caseworker-sscs-dwpresponsewriter, caseworker-sscs-registrar, caseworker-sscs-superuser, caseworker-sscs-teamleader, caseworker-sscs-panelmember, caseworker-sscs-bulkscan" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION}
 
