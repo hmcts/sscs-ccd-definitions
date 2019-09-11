@@ -118,5 +118,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reissueFurtherEvidenceDocument", "Label": "Select the document to resend", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "resendToAppellant", "Label": "Resend to the appellant or appointee", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "resendToRepresentative", "Label": "Resend to the representative", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "resendToDwp", "Label": "Resend to the Dwp", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "resendToDwp", "Label": "Resend to the Dwp", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "interlocReferralDate", "Label": "Date referred to interloc", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
 ]
