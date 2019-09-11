@@ -25,7 +25,7 @@ fi
 
 if [ -z "${1}" ]
   then
-    echo "Usage: ./upload-definition-to-env.docker.sh [local|aat] [benefit|bulkscan] [version]\n"
+    echo "Usage: ./upload-definition-to-env.docker.sh [type] [version] [env]\n"
     exit 1
 fi
 
@@ -38,9 +38,9 @@ az account show &> /dev/null || {
     exit 1
 }
 
-ENV=${1}
-TYPE=${2}
-VERSION=${3}
+TYPE=${1}
+VERSION=${2}
+ENV=${3}
 
 PROXY=http://proxyout.reform.hmcts.net:8080
 IDAM_URI="http://idam-api-idam-${ENV}.service.core-compute-idam-${ENV}.internal"
