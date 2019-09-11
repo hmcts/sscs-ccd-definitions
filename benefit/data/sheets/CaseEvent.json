@@ -248,7 +248,7 @@
     "DisplayOrder": 35,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "CallBackURLSubmittedEvent": "${COR_BACKEND_URL}/notify/onlineappeal}",
+    "CallBackURLSubmittedEvent": "${COR_BACKEND_URL}/notify/onlineappeal",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
     "SecurityClassification": "Public"
   },
