@@ -63,6 +63,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "attachRoboticsJson", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "attachScannedDocs", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "attachScannedDocs", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseEventID": "attachScannedDocs", "UserRole": "caseworker-sscs", "CRUD": "CRU"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseEventID": "attachScannedDocs", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "caseUpdated", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "caseUpdated", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "caseUpdated", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
