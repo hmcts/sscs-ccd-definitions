@@ -40,6 +40,6 @@ Once version 5.1.21 appears in the ACR, you can run the following command to upl
 
 If needed, you can generate a local copy of a defintion stored in the ACR. This definition should match the version stored in Confluence.
 
-    ../bin/json2xlsx.sh benefit 5.1.21
+    ../bin/create-xlsx.sh benefit 5.2.01
     
 This would create a file named sscs-ccd-benefit-5.1.21.xlsx in the ./releases directory relative to the directory in which you ran the command.
