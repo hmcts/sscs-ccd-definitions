@@ -248,7 +248,7 @@
     "DisplayOrder": 35,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "CallBackURLSubmittedEvent": "http://sscs-cor-backend-aat.service.core-compute-aat.internal/notify/onlineappeal",
+    "CallBackURLSubmittedEvent": "${COR_BACKEND_URL}/notify/onlineappeal}",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
     "SecurityClassification": "Public"
   },
