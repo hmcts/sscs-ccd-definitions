@@ -34,12 +34,15 @@ When a new tag is pushed, it will trigger an Azure Pipeline which will build the
 
 Once version 5.1.21 appears in the ACR, you can run the following command to upload it to your local CCD Docker environment.
 
-    ../bin/upload-ccd-definition-to-env.sh local benefit 5.1.21
+    ../bin/upload-ccd-definition-to-env.sh benefit 5.1.21 local
     
-## Create a local XLSX from a Definition Version
+## Create AAT and PROD spreadsheets from a Definition Version
 
-If needed, you can generate a local copy of a defintion stored in the ACR. This definition should match the version stored in Confluence.
+Once the image has been created, you can create AAT and PROD versions of the spreadsheet.
 
-    ../bin/create-xlsx.sh benefit 5.2.01
+Move to the root of this repository, then run:
+
+    ./bin/create-xlsx.sh benefit 5.2.02 aat
+    ./bin/create-xlsx.sh benefit 5.2.02 prod
     
 This would create a file named sscs-ccd-benefit-5.1.21.xlsx in the ./releases directory relative to the directory in which you ran the command.
