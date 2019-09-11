@@ -82,6 +82,7 @@ case ${ENV} in
     BULK_SCAN_API_URL="http://dockerhost:8090"
     BULK_SCAN_ORCHESTRATOR_URL="http://dockerhost:8582"
     MICROSERVICE=ccd_gw
+    CCD_ENVIRONMENT=AAT
   ;;
   *)
     echo "$env not recognised"
@@ -98,6 +99,7 @@ docker run \
   -e "VERBOSE=${VERBOSE:-true}" \
   -e "AUTH_PROVIDER_BASE_URL=${AUTH_PROVIDER_BASE_URL}" \
   -e "MICROSERVICE=${MICROSERVICE}" \
+  -e "CCD_ENVIRONMENT=${CCD_ENVIRONMENT}" \
   -e "IDAM_URI=${IDAM_URI}" \
   -e "IMPORTER_USERNAME=${IMPORTER_USERNAME}" \
   -e "IMPORTER_PASSWORD=${IMPORTER_PASSWORD}" \

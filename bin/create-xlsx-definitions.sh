@@ -16,7 +16,7 @@ case $CURRENT_DIR in
     "benefit" )
         CASE_TYPE_XLSX_NAME="SSCS"
         CASE_TYPE_IMAGE_NAME="benefit" ;;
-    "bulk-scan" )
+    "bulkscan" )
         CASE_TYPE_XLSX_NAME="BulkScanning"
         CASE_TYPE_IMAGE_NAME="bulkscan" ;;
     * )
