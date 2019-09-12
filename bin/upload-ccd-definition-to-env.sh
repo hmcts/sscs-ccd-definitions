@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
+
 cd "$( dirname "${BASH_SOURCE[0]}" )"
 
 function require () {
@@ -108,13 +110,13 @@ docker run \
   -e "CLIENT_SECRET=${CLIENT_SECRET}" \
   -e "CCD_STORE_BASE_URL=${CCD_STORE_BASE_URL}" \
   -e "CCD_DEF_FILENAME=sscs-ccd.xlsx" \
-  -e "EM_CCD_ORCHESTRATOR_URL=${EM_CCD_ORCHESTRATOR_URL}" \
-  -e "SSCS_CCD_ORCHESTRATOR_URL=${SSCS_CCD_ORCHESTRATOR_URL}" \
-  -e "TRIBUNALS_API_URL=${TRIBUNALS_API_URL}" \
-  -e "TYA_NOTIFICATIONS_API_URL=${TYA_NOTIFICATIONS_API_URL}" \
-  -e "BULK_SCAN_API_URL=${BULK_SCAN_API_URL}" \
-  -e "BULK_SCAN_ORCHESTRATOR_URL=${BULK_SCAN_ORCHESTRATOR_URL}" \
-  -e "COR_BACKEND_URL=${COR_BACKEND_URL}" \
+  -e "CCD_DEF_EM_CCD_ORCHESTRATOR_URL=${EM_CCD_ORCHESTRATOR_URL}" \
+  -e "CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL=${SSCS_CCD_ORCHESTRATOR_URL}" \
+  -e "CCD_DEF_TRIBUNALS_API_URL=${TRIBUNALS_API_URL}" \
+  -e "CCD_DEF_TYA_NOTIFICATIONS_API_URL=${TYA_NOTIFICATIONS_API_URL}" \
+  -e "CCD_DEF_BULK_SCAN_API_URL=${BULK_SCAN_API_URL}" \
+  -e "CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL=${BULK_SCAN_ORCHESTRATOR_URL}" \
+  -e "CCD_DEF_COR_BACKEND_URL=${COR_BACKEND_URL}" \
   -e "USER_ROLES=citizen, caseworker-sscs, caseworker-sscs-systemupdate, caseworker-sscs-anonymouscitizen, caseworker-sscs-callagent, caseworker-sscs-judge, caseworker-sscs-clerk, caseworker-sscs-dwpresponsewriter, caseworker-sscs-registrar, caseworker-sscs-superuser, caseworker-sscs-teamleader, caseworker-sscs-panelmember, caseworker-sscs-bulkscan" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION}
 
