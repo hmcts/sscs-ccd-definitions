@@ -1,4 +1,7 @@
 #!/bin/bash
+
+RUN_DIR=`pwd`
+
 set -e
 
 az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
@@ -87,9 +90,15 @@ case ${ENV} in
     CCD_ENVIRONMENT=AAT
   ;;
   *)
-    echo "$env not valid"
+    echo "$env not a valid environment"
     exit 1 ;;
 esac
+
+if [ ${TYPE} == "benefit" ]; then
+  FIXED_LIST_USERS=$(cat ${RUN_DIR}/FixedLists_AssignTo_AAT.txt)
+else
+  FIXED_LIST_USERS=" "
+fi
 
 echo "Importing: ${VERSION}"
 
@@ -117,6 +126,7 @@ docker run \
   -e "CCD_DEF_BULK_SCAN_API_URL=${BULK_SCAN_API_URL}" \
   -e "CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL=${BULK_SCAN_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_COR_BACKEND_URL=${COR_BACKEND_URL}" \
+  -e "CCD_DEF_FIXED_LIST_USERS=${FIXED_LIST_USERS}" \
   -e "USER_ROLES=citizen, caseworker-sscs, caseworker-sscs-systemupdate, caseworker-sscs-anonymouscitizen, caseworker-sscs-callagent, caseworker-sscs-judge, caseworker-sscs-clerk, caseworker-sscs-dwpresponsewriter, caseworker-sscs-registrar, caseworker-sscs-superuser, caseworker-sscs-teamleader, caseworker-sscs-panelmember, caseworker-sscs-bulkscan" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION}
 
