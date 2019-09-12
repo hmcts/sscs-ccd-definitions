@@ -100,7 +100,11 @@ else # local and aat
   SUFFIX="AAT"
 fi
 
-FIXED_LIST_USERS=$(cat ${RUN_DIR}/FixedLists_AssignTo_${SUFFIX}.txt)
+if [ ${TYPE} == "benefit" ]; then
+  FIXED_LIST_USERS=$(cat ${RUN_DIR}/FixedLists_AssignTo_${SUFFIX}.txt)
+else
+  FIXED_LIST_USERS=" "
+fi
 
 echo "Importing: ${VERSION}"
 
