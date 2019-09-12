@@ -94,14 +94,8 @@ case ${ENV} in
     exit 1 ;;
 esac
 
-if [ ${ENV} == "prod" ]; then
-  SUFFIX="PROD"
-else # local and aat
-  SUFFIX="AAT"
-fi
-
 if [ ${TYPE} == "benefit" ]; then
-  FIXED_LIST_USERS=$(cat ${RUN_DIR}/FixedLists_AssignTo_${SUFFIX}.txt)
+  FIXED_LIST_USERS=$(cat ${RUN_DIR}/FixedLists_AssignTo_AAT.txt)
 else
   FIXED_LIST_USERS=" "
 fi
