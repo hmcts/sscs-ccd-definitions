@@ -47,20 +47,19 @@ case ${ENV} in
     exit 1 ;;
 esac
 
-case ${ENV} in
-  local|aat|demo)
-      FIXED_LISTS_SUFFIX="AAT"
-    ;;
-  prod)
-      FIXED_LISTS_SUFFIX="PROD"
-    ;;
-esac
+if [ ${ENV} == "prod" ]; then
+    FIXED_LISTS_SUFFIX="PROD"
+else
+    FIXED_LISTS_SUFFIX="AAT"
+fi
 
 if [ ${TYPE} == "benefit" ]; then
   FIXED_LIST_USERS=$(cat ${RUN_DIR}/${TYPE}/FixedLists_AssignTo_${FIXED_LISTS_SUFFIX}.txt)
 else
   FIXED_LIST_USERS=" "
 fi
+
+UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
 
 docker run -ti --rm --name json2xlsx \
   -v $(pwd)/releases:/tmp \
