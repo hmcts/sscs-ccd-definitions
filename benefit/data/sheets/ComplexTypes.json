@@ -235,5 +235,10 @@
   {"LiveFrom": "01/01/2018", "ID": "interlocWaiver", "ListElementCode": "clerkAppealSatisfactionText", "FieldType": "MultiSelectList", "FieldTypeParameter": "FL_clerkAppealSatisfactionText", "ElementLabel": "Clerk Appeal Satisfaction", "FieldShowCondition": "isWaiverNeeded=\"Yes\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interlocWaiver", "ListElementCode": "clerkConfirmationOfMRN", "FieldType": "YesOrNo", "ElementLabel": "Confirmation from DWP that the appellant has been through the MRN Process", "FieldShowCondition": "isWaiverNeeded=\"Yes\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interlocWaiver", "ListElementCode": "clerkOtherReason", "FieldType": "MultiSelectList", "FieldTypeParameter": "FL_clerkOtherReason", "ElementLabel": "Other reason", "FieldShowCondition": "isWaiverNeeded=\"Yes\"", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "interlocWaiver", "ListElementCode": "clerkConfirmationOther", "FieldType": "TextArea", "ElementLabel": "Other (please specify)", "FieldShowCondition": "isWaiverNeeded=\"Yes\"", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "interlocWaiver", "ListElementCode": "clerkConfirmationOther", "FieldType": "TextArea", "ElementLabel": "Other (please specify)", "FieldShowCondition": "isWaiverNeeded=\"Yes\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "sentOn", "FieldType": "Text", "ElementLabel": "Sent on", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "from", "FieldType": "Text", "ElementLabel": "From", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "to", "FieldType": "Text", "ElementLabel": "To", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document url", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "correspondenceType", "FieldType": "FixedList", "FieldTypeParameter": "correspondenceType", "ElementLabel": "Correspondence type", "SecurityClassification": "PUBLIC"}
 ]
