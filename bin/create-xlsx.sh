@@ -53,7 +53,12 @@ else # local and aat
   SUFFIX="AAT"
 fi
 
-FIXED_LIST_USERS=$(cat ${RUN_DIR}/${TYPE}/FixedLists_AssignTo_${SUFFIX}.txt)
+if [ ${TYPE} == "benefit" ]; then
+  FIXED_LIST_USERS=$(cat ${RUN_DIR}/${TYPE}/FixedLists_AssignTo_${SUFFIX}.txt)
+else
+  FIXED_LIST_USERS=" "
+fi
+
 UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
 
 docker run -ti --rm --name json2xlsx \
