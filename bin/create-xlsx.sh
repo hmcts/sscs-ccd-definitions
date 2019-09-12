@@ -33,7 +33,7 @@ case ${ENV} in
     BULK_SCAN_ORCHESTRATOR_URL="http://dockerhost:8099"
     COR_BACKEND_URL="http://dockerhost:1234"
   ;;
-  aat|prod)
+  aat|prod|demo)
     EM_CCD_ORCHESTRATOR_URL="http://em-ccd-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
     SSCS_CCD_ORCHESTRATOR_URL="http://sscs-ccd-callback-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
     TRIBUNALS_API_URL="http://sscs-tribunals-api-${ENV}.service.core-compute-${ENV}.internal"
@@ -47,19 +47,20 @@ case ${ENV} in
     exit 1 ;;
 esac
 
-if [ ${ENV} == "prod" ]; then
-  SUFFIX="PROD"
-else # local and aat
-  SUFFIX="AAT"
-fi
+case ${ENV} in
+  local|aat|demo)
+      FIXED_LISTS_SUFFIX="AAT"
+    ;;
+  prod)
+      FIXED_LISTS_SUFFIX="PROD"
+    ;;
+esac
 
 if [ ${TYPE} == "benefit" ]; then
-  FIXED_LIST_USERS=$(cat ${RUN_DIR}/${TYPE}/FixedLists_AssignTo_${SUFFIX}.txt)
+  FIXED_LIST_USERS=$(cat ${RUN_DIR}/${TYPE}/FixedLists_AssignTo_${FIXED_LISTS_SUFFIX}.txt)
 else
   FIXED_LIST_USERS=" "
 fi
-
-UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
 
 docker run -ti --rm --name json2xlsx \
   -v $(pwd)/releases:/tmp \
