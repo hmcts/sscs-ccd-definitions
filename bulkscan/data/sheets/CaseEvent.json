@@ -9,7 +9,7 @@
     "DisplayOrder": 2,
     "PreConditionState(s)": "ScannedRecordReceived",
     "PostConditionState": "ScannedRecordAttachedToCase",
-    "CallBackURLAboutToSubmitEvent": "${BULK_SCAN_ORCHESTRATOR_URL}/callback/attach_case",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL}/callback/attach_case",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
     "CanSaveDraft": "N"
@@ -23,7 +23,7 @@
     "DisplayOrder": 3,
     "PreConditionState(s)": "ScannedRecordReceived",
     "PostConditionState": "ScannedRecordReceived",
-    "CallBackURLAboutToSubmitEvent": "${BULK_SCAN_API_URL}/exception-record",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_BULK_SCAN_API_URL}/exception-record",
     "RetriesTimeoutURLAboutToSubmitEvent": 10,
     "SecurityClassification": "Public",
     "ShowEventNotes": "N",
