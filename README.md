@@ -33,13 +33,13 @@ If just bumping the patch version (the third number), here's a little trick that
     
 When a new tag is pushed, it will trigger an Azure Pipeline which will build the new benefit definition importer image and store it in the Azure Container Registry (ACR). In this case, the image will be called
 
-    hmctspublic.azurecr.io/sscs/ccd-definition-importer-benefit:5.1.21
+    hmctspublic.azurecr.io/sscs/ccd-definition-importer-benefit:5.2.02
 
 ## Load a CCD definition to your local environment
 
-Once version 5.1.21 appears in the ACR, you can run the following command to upload it to your local CCD Docker environment.
+Once version 5.2.02 appears in the ACR, you can run the following command to upload it to your local CCD Docker environment.
 
-    ../bin/upload-ccd-definition-to-env.sh benefit 5.1.21 local
+    ../bin/upload-ccd-definition-to-env.sh benefit 5.2.02 local
     
 ## Create AAT and PROD spreadsheets from a Definition Version
 
@@ -50,4 +50,17 @@ Move to the root of this repository, then run:
     ./bin/create-xlsx.sh benefit 5.2.02 aat
     ./bin/create-xlsx.sh benefit 5.2.02 prod
     
-This would create a file named sscs-ccd-benefit-5.1.21.xlsx in the ./releases directory relative to the directory in which you ran the command.
+The definition XLSXs will be created in the ./releases directory.
+
+## Development
+
+To build a local version of the CCD Importer image:
+
+    cd benefit
+    docker build -t hmctspublic.azurecr.io/sscs/ccd-definition-importer-benefit:dev -f ../docker/importer.Dockerfile .
+    
+You can then test loading this into your local environment:
+
+    ../bin/upload-ccd-definition-to-env.sh benefit dev local
+
+

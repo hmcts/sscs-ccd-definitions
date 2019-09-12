@@ -85,5 +85,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "dwpDocuments", "TabLabel": "DWP Documents", "TabDisplayOrder": "17", "CaseFieldID": "dwpOtherDoc", "TabFieldDisplayOrder": 5},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "relatedCasesTab", "TabLabel": "Related Cases", "TabDisplayOrder": "18", "CaseFieldID": "linkedCase", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "relatedCasesTab", "TabLabel": "Related Cases", "TabDisplayOrder": "18", "CaseFieldID": "associatedCase", "TabFieldDisplayOrder": 2},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "unprocessedCorrespondence", "TabLabel": "Unprocessed Correspondence", "TabDisplayOrder": "19", "CaseFieldID": "scannedDocuments", "TabFieldDisplayOrder": 1}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "unprocessedCorrespondence", "TabLabel": "Unprocessed Correspondence", "TabDisplayOrder": "19", "CaseFieldID": "scannedDocuments", "TabFieldDisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "correspondence", "TabLabel": "Notifications Sent", "TabDisplayOrder": 17, "CaseFieldID": "correspondence", "TabFieldDisplayOrder": 1}
 ]
