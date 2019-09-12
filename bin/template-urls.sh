@@ -20,10 +20,12 @@ else
   sed -i 's/http:\/\/sscs-cor-backend-aat.service.core-compute-aat.internal/\${CCD_DEF_COR_BACKEND_URL}/g' ${SHEETS_DIR}/*.json
 fi
 
-# Remove all AssignTo lines and replace with a template var
-sed '/FL_AssignTo/d' ${SHEETS_DIR}/FixedLists.json | sed 's/\[/\[${CCD_DEF_FIXED_LIST_USERS},/' > ${SHEETS_DIR}/FixedLists_Temp.json
-cp ${SHEETS_DIR}/FixedLists_Temp.json ${SHEETS_DIR}/FixedLists.json
-rm ${SHEETS_DIR}/FixedLists_Temp.json
+if [ `pwd` == "benefit" ]; then
+    # Remove all AssignTo lines and replace with a template var
+    sed '/FL_AssignTo/d' ${SHEETS_DIR}/FixedLists.json | sed 's/\[/\[${CCD_DEF_FIXED_LIST_USERS},/' > ${SHEETS_DIR}/FixedLists_Temp.json
+    cp ${SHEETS_DIR}/FixedLists_Temp.json ${SHEETS_DIR}/FixedLists.json
+    rm ${SHEETS_DIR}/FixedLists_Temp.json
 
-# Remove comma from last row, if it exists
-sed "$(( $( wc -l < ${SHEETS_DIR}/FixedLists.json) -1 ))s/,$//" ${SHEETS_DIR}/FixedLists.json
+    # Remove comma from last row, if it exists
+    sed "$(( $( wc -l < ${SHEETS_DIR}/FixedLists.json) -1 ))s/,$//" ${SHEETS_DIR}/FixedLists.json
+fi
