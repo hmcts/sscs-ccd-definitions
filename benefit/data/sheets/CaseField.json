@@ -119,5 +119,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "resendToAppellant", "Label": "Resend to the appellant or appointee", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "resendToRepresentative", "Label": "Resend to the representative", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "resendToDwp", "Label": "Resend to the Dwp", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "interlocReferralDate", "Label": "Date referred to interloc", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "interlocReferralDate", "Label": "Date referred to interloc", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpStateFeNoAction", "Label": "DWP State  fe no action", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"}
 ]
