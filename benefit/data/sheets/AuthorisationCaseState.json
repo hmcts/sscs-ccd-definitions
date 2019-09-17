@@ -45,8 +45,6 @@
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "appealCreated", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "closed", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "dormantAppealState", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "draft", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "draftArchived", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "hearing", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "incompleteApplication", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "incompleteApplicationInformationReqsted", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
