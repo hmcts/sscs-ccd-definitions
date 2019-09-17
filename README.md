@@ -12,7 +12,15 @@ Download the XLSX for AAT from Confluence and update the JSON:
 
     ../bin/xlsx2json.sh ~/Downloads/CCD_SSCSDefinition_v5.1.21_AAT.xlsx
     
-Update the version file
+Due to differences in the FixedLists tab between AAT and PROD, some FixedList rows are stored in the two files:
+
+    FixedLists_AssignTo_AAT.txt
+    FixedLists_AssignTo_PROD.txt
+    
+These should be updated as required. The conversion process performed by xlsx2json will have removed all the FL_AssignTo rows from the FixedLists.json file
+and replace them with a template variable. It will have done a similar thing for all the callback URLs.
+    
+### Update the version file
 
 Open benefit/VERSION.yaml and modify the version number. This file will be used by the Azure Pipeline to create a docker importer image tagged with the specified version number.
     
