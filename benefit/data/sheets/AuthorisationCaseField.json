@@ -644,7 +644,7 @@
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "signedRole", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "bodyContent", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "dateAdded", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
-  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "historicSscsInterlocDirectionDocs-clerk", "UserRole": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "historicSscsInterlocDirectionDocs", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "generateNotice", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "previewDocument", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "signedBy", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
