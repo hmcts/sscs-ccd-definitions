@@ -577,5 +577,20 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "voidCase", "Name": "Void case", "Description": "Voids the case", "DisplayOrder": 124, "PreConditionState(s)": "*", "PostConditionState": "voidState", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "voidIncompleteApplication", "Name": "Void incomplete appeal", "Description": "Void non-valid appeal", "DisplayOrder": 125, "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted", "PostConditionState": "incompleteApplicationVoidState", "SecurityClassification": "Public"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "interlocVoidAppeal", "Name": "Void non-valid case", "Description": "Voids the case", "DisplayOrder": 126, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "voidState", "SecurityClassification": "Public"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "interlocVoidAppeal", "Name": "Void non-valid case", "Description": "Voids the case", "DisplayOrder": 126, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "voidState", "SecurityClassification": "Public"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "readyToList",
+    "Name": "Ready to list",
+    "Description": "Makes an appeal ready to list",
+    "DisplayOrder": 127,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "readyToList",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "RetriesTimeoutURLSubmittedEvent": "5,5",
+    "SecurityClassification": "Public"
+  }
 ]
