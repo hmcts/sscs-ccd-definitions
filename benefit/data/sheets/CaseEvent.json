@@ -569,7 +569,21 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpUploadResponse", "Name": "Upload response", "Description": "Upload a response", "DisplayOrder": 121, "PreConditionState(s)": "withDwp", "PostConditionState": "responseReceived", "SecurityClassification": "Public", "ShowSummary": "Y", "ShowEventNotes": "N"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "dwpUploadResponse",
+    "Name": "Upload response",
+    "Description": "Upload a response",
+    "DisplayOrder": 121,
+    "PreConditionState(s)": "withDwp",
+    "PostConditionState": "responseReceived",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N"
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "validAppealCreated", "Name": "Valid appeal created", "Description": "A new valid appeal", "DisplayOrder": 122, "PostConditionState": "validAppeal", "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send", "SecurityClassification": "Public"},
   {
     "LiveFrom": "01/01/2018",
