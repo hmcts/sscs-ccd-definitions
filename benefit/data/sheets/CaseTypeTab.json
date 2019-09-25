@@ -10,7 +10,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "summaryAreAppointee", "TabFieldDisplayOrder": 9, "FieldShowCondition": "appeal.appellant.isAppointee!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "summaryRepresentativeName", "TabFieldDisplayOrder": 10},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "summaryTyaNumber", "TabFieldDisplayOrder": 11, "FieldShowCondition": "subscriptions.appellantSubscription.tya!=\"\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "summaryTyaAppointeeNumber", "TabFieldDisplayOrder": 12, "FieldShowCondition": "subscriptions.appointeeSubscription.tya!=\"\""},  
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "summaryTyaAppointeeNumber", "TabFieldDisplayOrder": 12, "FieldShowCondition": "subscriptions.appointeeSubscription.tya!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "linkedCase", "TabFieldDisplayOrder": 13},
   {"LiveFrom": "16/09/2019", "CaseTypeID": "Benefit", "TabID": "summary", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "associatedCase", "TabFieldDisplayOrder": 14},
   {"LiveFrom": "16/09/2019", "CaseTypeID": "Benefit", "TabID": "summary", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "createdInGapsFrom", "TabFieldDisplayOrder": 15},
@@ -91,6 +91,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "dwpDocuments", "TabLabel": "DWP Documents", "TabDisplayOrder": "17", "CaseFieldID": "dwpOtherDoc", "TabFieldDisplayOrder": 5},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "relatedCasesTab", "TabLabel": "Related Cases", "TabDisplayOrder": "18", "CaseFieldID": "linkedCase", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "relatedCasesTab", "TabLabel": "Related Cases", "TabDisplayOrder": "18", "CaseFieldID": "associatedCase", "TabFieldDisplayOrder": 2},
+  {"LiveFrom": "25/09/2019", "CaseTypeID": "Benefit", "TabID": "linkedCasesBoolean", "TabLabel": "Related Cases", "TabDisplayOrder": "18", "CaseFieldID": "associatedCase", "TabFieldDisplayOrder": 3},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "unprocessedCorrespondence", "TabLabel": "Unprocessed Correspondence", "TabDisplayOrder": "19", "CaseFieldID": "scannedDocuments", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "correspondence", "TabLabel": "Notifications Sent", "TabDisplayOrder": 20, "CaseFieldID": "correspondence", "TabFieldDisplayOrder": 1}
 ]
