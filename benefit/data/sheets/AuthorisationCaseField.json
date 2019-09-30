@@ -81,6 +81,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "resendToDwp", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "correspondence", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "29/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "linkedCasesBoolean", "UserRole": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "createdInGapsFrom", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "subscriptions", "UserRole": "caseworker-sscs-anonymouscitizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "subscriptions", "UserRole": "caseworker-sscs-callagent", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "generatedNino", "UserRole": "caseworker-sscs-callagent", "CRUD": "CRU"},
