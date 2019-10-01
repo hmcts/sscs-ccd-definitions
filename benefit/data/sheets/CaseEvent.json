@@ -393,7 +393,7 @@
     "Name": "Online hearing decision made",
     "Description": "The online hearing has resolved the case",
     "DisplayOrder": 85,
-    "PreConditionState(s)": "appealCreated",
+    "PreConditionState(s)": "*",
     "PostConditionState": "dormantAppealState",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
