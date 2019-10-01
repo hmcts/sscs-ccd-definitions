@@ -1,25 +1,33 @@
 # SSCS CCD Definitions
 
-## Converting an XLSX definition to JSON
+## If you prefer to work in Excel (usually for bigger changes), then create an Excel version
 
-When a new version of the definition XLSX gets uploaded to Confluence, this is how to update the JSON in this repo:
+Move to the root of this repository. Find the latest version by looking at the VERSION.YAML file, then run:
+
+    ./bin/create-xlsx.sh benefit 5.2.02 aat
+
+The definition XLSXs will be created in the ./releases directory. (Takes a few seconds)
+
+## Update the excel or json
+
+Make your changes to the relevant files
+
+## Converting an XLSX definition to JSON
 
 There are two SSCS CCD definition case types, benefit and bulkscan. Move into the directory of the one you need, e.g.
 
     cd benefit
 
-Download the XLSX for AAT from Confluence and update the JSON:
-
     ../bin/xlsx2json.sh ~/Downloads/CCD_SSCSDefinition_v5.1.21_AAT.xlsx
-    
+
 Due to differences in the FixedLists tab between AAT and PROD, some FixedList rows are stored in the two files:
 
     FixedLists_AssignTo_AAT.txt
     FixedLists_AssignTo_PROD.txt
-    
+
 These should be updated as required. The conversion process performed by xlsx2json will have removed all the FL_AssignTo rows from the FixedLists.json file
 and replace them with a template variable. It will have done a similar thing for all the callback URLs.
-    
+
 ### Update the version file
 
 Open benefit/VERSION.yaml and modify the version number. This file will be used by the Azure Pipeline to create a docker importer image tagged with the specified version number.
@@ -43,23 +51,23 @@ When a new tag is pushed, it will trigger an Azure Pipeline which will build the
 
     hmctspublic.azurecr.io/sscs/ccd-definition-importer-benefit:5.2.02
 
+## Upload to Confluence
+
+To create the AAT and PROD versions, move to the root of this repository, then run:
+
+./bin/create-xlsx.sh benefit 5.2.02 aat
+./bin/create-xlsx.sh benefit 5.2.02 prod
+
+Upload the created AAT and PROD Excel versions to Confluence and put a message on the sscs-ccd slack channel
+
+Note, the CaseTypeTab doesn't change the value to PROD, so you have to manually edit it.
+
 ## Load a CCD definition to your local environment
 
 Once version 5.2.02 appears in the ACR, you can run the following command to upload it to your local CCD Docker environment.
 
     ../bin/upload-ccd-definition-to-env.sh benefit 5.2.02 local
     
-## Create AAT and PROD spreadsheets from a Definition Version
-
-Once the image has been created, you can create AAT and PROD versions of the spreadsheet.
-
-Move to the root of this repository, then run:
-
-    ./bin/create-xlsx.sh benefit 5.2.02 aat
-    ./bin/create-xlsx.sh benefit 5.2.02 prod
-    
-The definition XLSXs will be created in the ./releases directory.
-
 ## Development
 
 To build a local version of the CCD Importer image:
