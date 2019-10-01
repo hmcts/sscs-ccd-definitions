@@ -60,6 +60,8 @@ To create the AAT and PROD versions, move to the root of this repository, then r
 
 Upload the created AAT and PROD Excel versions to Confluence and put a message on the sscs-ccd slack channel
 
+Note, the CaseTypeTab doesn't change the value to PROD, so you have to manually edit it.
+
 ## Load a CCD definition to your local environment
 
 Once version 5.2.02 appears in the ACR, you can run the following command to upload it to your local CCD Docker environment.
