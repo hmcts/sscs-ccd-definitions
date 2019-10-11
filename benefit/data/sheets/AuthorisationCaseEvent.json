@@ -512,5 +512,13 @@
   {"LiveFrom": "01/01/2017", "CaseTypeID": "Benefit", "CaseEventID": "SYSTEM_MAINTENANCE", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "R"},
   {"LiveFrom": "01/01/2017", "CaseTypeID": "Benefit", "CaseEventID": "SYSTEM_MAINTENANCE", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2017", "CaseTypeID": "Benefit", "CaseEventID": "SYSTEM_MAINTENANCE", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "R"},
-  {"LiveFrom": "01/01/2017", "CaseTypeID": "Benefit", "CaseEventID": "SYSTEM_MAINTENANCE", "UserRole": "caseworker-sscs-superuser", "CRUD": "R"}
+  {"LiveFrom": "01/01/2017", "CaseTypeID": "Benefit", "CaseEventID": "SYSTEM_MAINTENANCE", "UserRole": "caseworker-sscs-superuser", "CRUD": "R"},
+  {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpChallengeValidity", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "CRU"},
+  {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpChallengeValidity", "UserRole": "caseworker-sscs-judge", "CRUD": "R"},
+  {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpChallengeValidity", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
+  {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpChallengeValidity", "UserRole": "caseworker-sscs-callagent", "CRUD": "R"},
+  {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpChallengeValidity", "UserRole": "caseworker-sscs-registrar", "CRUD": "R"},
+  {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpChallengeValidity", "UserRole": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpChallengeValidity", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "R"},
+  {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpChallengeValidity", "UserRole": "caseworker-sscs-superuser", "CRUD": "R"}
 ]
