@@ -63,7 +63,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "judicialDocuments", "TabLabel": "Judicial Documents", "TabDisplayOrder": "11", "CaseFieldID": "sscsInterlocDecisionDocument", "TabFieldDisplayOrder": 6},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "judicialDocuments", "TabLabel": "Judicial Documents", "TabDisplayOrder": "11", "CaseFieldID": "directionResponse", "TabFieldDisplayOrder": 7},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "judicialDocuments", "TabLabel": "Judicial Documents", "TabDisplayOrder": "11", "CaseFieldID": "historicSscsInterlocDirectionDocs", "TabFieldDisplayOrder": 8},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "judicialDocuments", "TabLabel": "Judicial Documents", "TabDisplayOrder": "11", "CaseFieldID": "historicSscsInterlocDecisionDocs", "TabFieldDisplayOrder": 9},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "onlinePanel", "TabLabel": "Online Hearing Panel", "TabDisplayOrder": "12", "CaseFieldID": "onlinePanel", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "onlinePanel", "TabLabel": "Online Hearing Panel", "TabDisplayOrder": "12", "CaseFieldID": "assignedToJudge", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "onlinePanel", "TabLabel": "Online Hearing Panel", "TabDisplayOrder": "12", "CaseFieldID": "assignedToMedicalMember", "TabFieldDisplayOrder": 2},
