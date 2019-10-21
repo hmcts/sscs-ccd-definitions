@@ -269,5 +269,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Glasgow", "ListElement": "Glasgow"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Newcastle", "ListElement": "Newcastle"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Newport", "ListElement": "Newport"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Springburn", "ListElement": "Springburn"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Springburn", "ListElement": "Springburn"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "appealToProceed", "ListElement": "Appeal to Proceed"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "provideInformation", "ListElement": "Provide information"}
 ]
