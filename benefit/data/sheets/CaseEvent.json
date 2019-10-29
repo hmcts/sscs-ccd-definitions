@@ -511,7 +511,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToAdmin", "Name": "Send to admin", "Description": "Return the case to an admin with a note", "DisplayOrder": 98, "PreConditionState(s)": "*", "PostConditionState": "*", "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToDwp", "Name": "Send to DWP", "Description": "Send to DWP", "DisplayOrder": 99, "PreConditionState(s)": "validAppeal", "PostConditionState": "*", "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToDwpError", "Name": "Send to DWP Error", "Description": "Flag Error to Send to DWP", "DisplayOrder": 100, "PreConditionState(s)": "validAppeal", "PostConditionState": "*", "SecurityClassification": "Public"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToDwpOffline", "Name": "Send to DWP offline", "Description": "Log manually sending a case to DWP", "DisplayOrder": 101, "PreConditionState(s)": "validAppeal", "PostConditionState": "withDwp", "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit ", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToDwpOffline", "Name": "Send to DWP offline", "Description": "Log manually sending a case to DWP", "DisplayOrder": 101, "PreConditionState(s)": "validAppeal", "PostConditionState": "withDwp", "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit", "SecurityClassification": "Public"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
