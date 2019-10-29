@@ -605,7 +605,7 @@
     "Name": "Validate appeal",
     "Description": "Validate  appeal",
     "DisplayOrder": 125,
-    "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted",
+    "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState",
     "PostConditionState": "validAppeal",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_BULK_SCAN_API_URL}/validate-record",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5",
