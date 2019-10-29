@@ -17,7 +17,7 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "addSCnumber", "Name": "Add / update SC number", "Description": "Add a SC number to the case", "DisplayOrder": 4, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "addNote", "Name": "Add a note", "Description": "The online hearing has resolved the case", "DisplayOrder": 5, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public", "ShowSummary": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "addRepresentative", "Name": "Add a representative", "Description": "Add a rep or supporters details to a case", "DisplayOrder": 6, "PreConditionState(s)": "appealCreated", "PostConditionState": "*", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "addRepresentative", "Name": "Add a representative", "Description": "Add a rep or supporters details to a case", "DisplayOrder": 6, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
