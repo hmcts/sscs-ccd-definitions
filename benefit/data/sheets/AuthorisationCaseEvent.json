@@ -529,7 +529,7 @@
   {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "validSendToInterloc", "UserRole": "caseworker-sscs-registrar", "CRUD": "R"},
   {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "validSendToInterloc", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "validSendToInterloc", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "R"},
-  {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "validSendToInterloc", "UserRole": "caseworker-sscs-superuser", "CRUD": "R"},
+  {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "validSendToInterloc", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpDirectionResponse", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "CRUD"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpDirectionResponse", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpDirectionResponse", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "R"},
