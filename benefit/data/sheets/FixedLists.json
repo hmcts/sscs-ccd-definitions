@@ -143,6 +143,8 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "notAbleToRegister", "ListElement": "Not able to register"},
   {"LiveFrom": "17/10/2019", "ID": "FL_dwpStates", "ListElementCode": "hearingPostponed", "ListElement": "Postponed"},
   {"LiveFrom": "17/10/2019", "ID": "FL_dwpStates", "ListElementCode": "repAdded", "ListElement": "Rep added"},
+  {"LiveFrom": "22/10/2019", "ID": "FL_dwpStates", "ListElementCode": "directionActionRequired", "ListElement": "Direction - action req'd"},
+  {"LiveFrom": "22/10/2019", "ID": "FL_dwpStates", "ListElementCode": "directionResponded", "ListElement": "Direction - responded"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpFurtherEvidenceStates", "ListElementCode": "furtherEvidenceReceived", "ListElement": "Further evidence received"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpFurtherEvidenceStates", "ListElementCode": "lapsed", "ListElement": "Lapsed"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpFurtherEvidenceStates", "ListElementCode": "noAction", "ListElement": "No action"},
@@ -270,5 +272,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Glasgow", "ListElement": "Glasgow"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Newcastle", "ListElement": "Newcastle"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Newport", "ListElement": "Newport"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Springburn", "ListElement": "Springburn"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Springburn", "ListElement": "Springburn"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "appealToProceed", "ListElement": "Appeal to Proceed"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "provideInformation", "ListElement": "Provide information"}
 ]
