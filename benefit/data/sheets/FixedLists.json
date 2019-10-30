@@ -140,7 +140,6 @@
   {"LiveFrom": "20/06/2019", "ID": "FL_dwpStates", "ListElementCode": "feActionedNR", "ListElement": "FE Actioned - NR"},
   {"LiveFrom": "20/06/2019", "ID": "FL_dwpStates", "ListElementCode": "feActionedNA", "ListElement": "FE Actioned - NA"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "inProgress", "ListElement": "In progress"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "notAbleToRegister", "ListElement": "Not able to register"},
   {"LiveFrom": "17/10/2019", "ID": "FL_dwpStates", "ListElementCode": "hearingPostponed", "ListElement": "Postponed"},
   {"LiveFrom": "17/10/2019", "ID": "FL_dwpStates", "ListElementCode": "repAdded", "ListElement": "Rep added"},
   {"LiveFrom": "22/10/2019", "ID": "FL_dwpStates", "ListElementCode": "directionActionRequired", "ListElement": "Direction - action req'd"},
