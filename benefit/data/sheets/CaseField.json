@@ -135,5 +135,7 @@
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "linkedCasesBoolean", "Label": "Has linked case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "dwpResponseDate", "Label": "DWP response date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "decisionType", "Label": "Decision type", "FieldType": "FixedList", "FieldTypeParameter": "FL_decisionTypes", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "selectWhoReviewsCase", "Label": "Select who should review this case", "FieldType": "DynamicList", "FieldTypeParameter": "FL_interlocWorkflow", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "selectWhoReviewsCase", "Label": "Select who should review this case", "FieldType": "DynamicList", "FieldTypeParameter": "FL_interlocWorkflow", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "directionType", "Label": "Direction type", "FieldType": "FixedList", "FieldTypeParameter": "FL_directionTypes", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "state", "Label": "End state", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 ]

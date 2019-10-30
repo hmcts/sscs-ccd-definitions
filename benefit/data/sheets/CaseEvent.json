@@ -165,8 +165,8 @@
     "Name": "Admin Appeal Withdrawn",
     "Description": "Admin Appeal Withdrawn",
     "DisplayOrder": 21,
-    "PreConditionState(s)": "withDwp",
-    "PostConditionState": "dormantAppealState",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
@@ -404,7 +404,6 @@
     "Name": "Non-compliant appeal",
     "Description": "Non-compliant appeal",
     "DisplayOrder": 85,
-    "PreConditionState(s)": "",
     "PostConditionState": "interlocutoryReviewState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
@@ -509,10 +508,10 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hmctsResponseReviewed", "Name": "Response reviewed", "Description": "DWP response has been reviewed", "DisplayOrder": 96, "PreConditionState(s)": "responseReceived", "PostConditionState": "*", "SecurityClassification": "Public", "ShowSummary": "N", "ShowEventNotes": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "interlocSendToTcw", "Name": "Send case to TCW", "Description": "Send case to TCW", "DisplayOrder": 97, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "interlocutoryReviewState", "SecurityClassification": "Public"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToAdmin", "Name": "Send to admin", "Description": "Return the case to an admin with a note", "DisplayOrder": 98, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "interlocutoryReviewState", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToAdmin", "Name": "Send to admin", "Description": "Return the case to an admin with a note", "DisplayOrder": 98, "PreConditionState(s)": "*", "PostConditionState": "*", "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToDwp", "Name": "Send to DWP", "Description": "Send to DWP", "DisplayOrder": 99, "PreConditionState(s)": "validAppeal", "PostConditionState": "*", "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToDwpError", "Name": "Send to DWP Error", "Description": "Flag Error to Send to DWP", "DisplayOrder": 100, "PreConditionState(s)": "validAppeal", "PostConditionState": "*", "SecurityClassification": "Public"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToDwpOffline", "Name": "Send to DWP offline", "Description": "Log manually sending a case to DWP", "DisplayOrder": 101, "PreConditionState(s)": "validAppeal", "PostConditionState": "withDwp", "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit ", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToDwpOffline", "Name": "Send to DWP offline", "Description": "Log manually sending a case to DWP", "DisplayOrder": 101, "PreConditionState(s)": "validAppeal", "PostConditionState": "withDwp", "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit", "SecurityClassification": "Public"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
@@ -619,7 +618,7 @@
     "Name": "Validate appeal",
     "Description": "Validate  appeal",
     "DisplayOrder": 126,
-    "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted",
+    "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState",
     "PostConditionState": "validAppeal",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_BULK_SCAN_API_URL}/validate-record",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5",
@@ -646,5 +645,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "voidCase", "Name": "Void case", "Description": "Voids the case", "DisplayOrder": 128, "PreConditionState(s)": "*", "PostConditionState": "voidState", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "voidIncompleteApplication", "Name": "Void incomplete appeal", "Description": "Void non-valid appeal", "DisplayOrder": 129, "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted", "PostConditionState": "incompleteApplicationVoidState", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "interlocVoidAppeal", "Name": "Void non-valid case", "Description": "Voids the case", "DisplayOrder": 130, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "voidState", "SecurityClassification": "Public"},
-  {"LiveFrom": "01/01/2017", "CaseTypeID": "Benefit", "ID": "SYSTEM_MAINTENANCE", "Name": "System Maintenance", "Description": "Maintenance updates to cases, made automatically by the system", "DisplayOrder": 131, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public", "ShowSummary": "Y"}
+  {"LiveFrom": "01/01/2017", "CaseTypeID": "Benefit", "ID": "SYSTEM_MAINTENANCE", "Name": "System Maintenance", "Description": "Maintenance updates to cases, made automatically by the system", "DisplayOrder": 131, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public", "ShowSummary": "Y"},
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "ID": "dwpDirectionResponse", "Name": "DWP direction response", "DisplayOrder": 132, "PreConditionState(s)": "withDwp", "PostConditionState": "responseReceived", "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit", "SecurityClassification": "Public"}
 ]
