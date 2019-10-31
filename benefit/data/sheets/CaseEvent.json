@@ -524,7 +524,7 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tcwReferToJudge", "Name": "Send to Judge", "Description": "Send to Judge", "DisplayOrder": 103, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "interlocutoryReviewState", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tcwReferToJudge", "Name": "Send to Judge", "Description": "Send to Judge", "DisplayOrder": 103, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sentToDwp", "Name": "Sent to DWP", "Description": "Cases sent to DWP", "DisplayOrder": 104, "PreConditionState(s)": "validAppeal", "PostConditionState": "withDwp", "SecurityClassification": "Public"},
   {
     "LiveFrom": "01/01/2018",
