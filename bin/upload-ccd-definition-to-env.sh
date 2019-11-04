@@ -105,6 +105,7 @@ echo "Importing: ${VERSION}"
 docker run \
   --name sscs-ccd-importer-to-env \
   --rm \
+  -v $(pwd)/releases:/definitions \
   -e "http_proxy=${PROXY}" \
   -e "https_proxy=${PROXY}" \
   -e "VERBOSE=${VERBOSE:-true}" \
