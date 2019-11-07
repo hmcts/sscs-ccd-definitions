@@ -29,10 +29,9 @@ These should be updated as required. The conversion process performed by xlsx2js
 and replace them with a template variable. It will have done a similar thing for all the callback URLs.
 
 ### Update the version file
-
-Open benefit/VERSION.yaml and modify the version number. This file will be used by the Azure Pipeline to create a docker importer image tagged with the specified version number.
     
 * Raise a PR
+* Open benefit/VERSION.yaml and modify the version number. This file will be used by the Azure Pipeline to create a docker importer image tagged with the specified version number.
 * Get it approved and merged
 * Pull latest master branch
 

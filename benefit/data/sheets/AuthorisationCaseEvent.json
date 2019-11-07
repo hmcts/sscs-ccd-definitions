@@ -552,5 +552,17 @@
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpDirectionResponse", "UserRole": "caseworker-sscs-registrar", "CRUD": "R"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpDirectionResponse", "UserRole": "caseworker-sscs-superuser", "CRUD": "R"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpDirectionResponse", "UserRole": "caseworker-sscs-teamleader", "CRUD": "R"},
-  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpDirectionResponse", "UserRole": "caseworker-sscs-bulkscan", "CRUD": "R"}
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpDirectionResponse", "UserRole": "caseworker-sscs-bulkscan", "CRUD": "R"},
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestTimeExtension", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "CRUD"},
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestTimeExtension", "UserRole": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestTimeExtension", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestTimeExtension", "UserRole": "caseworker-sscs-anonymouscitizen", "CRUD": "R"},
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestTimeExtension", "UserRole": "caseworker-sscs-callagent", "CRUD": "R"},
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestTimeExtension", "UserRole": "caseworker-sscs-judge", "CRUD": "R"},
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestTimeExtension", "UserRole": "caseworker-sscs-panelmember", "CRUD": "R"},
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestTimeExtension", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestTimeExtension", "UserRole": "caseworker-sscs-registrar", "CRUD": "R"},
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestTimeExtension", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestTimeExtension", "UserRole": "caseworker-sscs-teamleader", "CRUD": "R"},
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestTimeExtension", "UserRole": "caseworker-sscs-bulkscan", "CRUD": "R"}
 ]
