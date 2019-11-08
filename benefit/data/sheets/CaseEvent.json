@@ -216,6 +216,18 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "appealToProceed",
+    "Name": "Appeal to proceed",
+    "DisplayOrder": 31,
+    "PreConditionState(s)": "interlocutoryReviewState",
+    "PostConditionState": "validAppeal",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_BULK_SCAN_API_URL}/validate-record",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "judgeDecisionAppealToProceed",
     "Name": "Appeal to proceed",
     "DisplayOrder": 31,
