@@ -531,7 +531,7 @@
     "Name": "Send to interloc",
     "Description": "Send a case to a judge for review",
     "DisplayOrder": 102,
-    "PreConditionState(s)": "appealCreated;incompleteApplication;incompleteApplicationInformationReqsted",
+    "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted",
     "PostConditionState": "interlocutoryReviewState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public"
