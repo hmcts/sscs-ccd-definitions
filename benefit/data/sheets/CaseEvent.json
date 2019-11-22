@@ -88,6 +88,8 @@
     "DisplayOrder": 15,
     "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;outcome;pendingAppeal;readyToList;responseReceived;validAppeal;voidState;withDwp",
     "PostConditionState": "interlocutoryReviewState",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public"
   },
   {
@@ -405,7 +407,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "judgeDirectionIssued", "Name": "Issue direction (Judge)", "Description": "Issue direction (Judge)", "DisplayOrder": 75, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "*", "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tcwDirectionIssued", "Name": "Issue direction (TCW)", "Description": "Issue direction (TCW)", "DisplayOrder": 76, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "*", "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "issueFurtherEvidence", "Name": "Issue further evidence", "Description": "Issue further evidence", "DisplayOrder": 77, "PreConditionState(s)": "*", "PostConditionState": "*", "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send", "SecurityClassification": "Public"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpLapseCase", "Name": "Lapse appeal", "Description": "Revise decision", "DisplayOrder": 78, "PreConditionState(s)": "*", "PostConditionState": "dormantAppealState", "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send", "SecurityClassification": "Public", "ShowSummary": "Y", "ShowEventNotes": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpLapseCase", "Name": "Lapse appeal", "Description": "Revise decision", "DisplayOrder": 78, "PreConditionState(s)": "*", "PostConditionState": "dormantAppealState", "SecurityClassification": "Public", "ShowSummary": "Y", "ShowEventNotes": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hmctsLapseCase", "Name": "Lapse case", "Description": "Lapse case", "DisplayOrder": 79, "PreConditionState(s)": "responseReceived", "PostConditionState": "dormantAppealState", "SecurityClassification": "Public", "ShowSummary": "N", "ShowEventNotes": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "linkACase", "Name": "Link a case", "Description": "Link a case", "DisplayOrder": 80, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sentToJudge", "Name": "Log sending to judge", "Description": "The online hearing has resolved the case", "DisplayOrder": 81, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "interlocutoryReviewState", "SecurityClassification": "Public"},
@@ -568,6 +570,7 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tcwReferToJudge", "Name": "Send to Judge", "Description": "Send to Judge", "DisplayOrder": 104, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sentToDwp", "Name": "Sent to DWP", "Description": "Cases sent to DWP", "DisplayOrder": 105, "PreConditionState(s)": "validAppeal", "PostConditionState": "withDwp", "SecurityClassification": "Public"},
+  {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "ID": "sendValidCaseToInterloc", "Name": "Send valid case to interloc", "Description": "", "DisplayOrder": 105, "PreConditionState(s)": "withDwp", "PostConditionState": "", "SecurityClassification": "Public", "ShowSummary": "Y"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
