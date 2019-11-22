@@ -733,5 +733,12 @@
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "directionType", "UserRole": "caseworker-sscs-registrar", "CRUD": "CRUD"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "directionType", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "directionType", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
-  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "directionType", "UserRole": "caseworker-sscs-teamleader", "CRUD": "CRUD"}
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "directionType", "UserRole": "caseworker-sscs-teamleader", "CRUD": "CRUD"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "extensionNextEvent", "UserRole": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "extensionNextEvent", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "extensionNextEvent", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "extensionNextEvent", "UserRole": "caseworker-sscs-registrar", "CRUD": "CRUD"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "extensionNextEvent", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "extensionNextEvent", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "extensionNextEvent", "UserRole": "caseworker-sscs-teamleader", "CRUD": "CRUD"}
 ]
