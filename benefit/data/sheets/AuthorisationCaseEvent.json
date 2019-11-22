@@ -574,7 +574,7 @@
   {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "CaseEventID": "confirmLapsed", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "CaseEventID": "confirmLapsed", "UserRole": "caseworker-sscs-panelmember", "CRUD": "R"},
   {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "CaseEventID": "confirmLapsed", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
-  {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "CaseEventID": "confirmLapsed", "UserRole": "caseworker-sscs-registrar", "CRUD": "R"},
+  {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "CaseEventID": "confirmLapsed", "UserRole": "caseworker-sscs-registrar", "CRUD": "CRUD"},
   {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "CaseEventID": "confirmLapsed", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "CaseEventID": "confirmLapsed", "UserRole": "caseworker-sscs-teamleader", "CRUD": "R"},
   {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "CaseEventID": "confirmLapsed", "UserRole": "caseworker-sscs-bulkscan", "CRUD": "R"},
