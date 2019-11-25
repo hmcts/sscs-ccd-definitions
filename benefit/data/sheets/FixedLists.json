@@ -141,6 +141,7 @@
   {"LiveFrom": "20/06/2019", "ID": "FL_dwpStates", "ListElementCode": "feActionedNR", "ListElement": "FE Actioned - NR"},
   {"LiveFrom": "20/06/2019", "ID": "FL_dwpStates", "ListElementCode": "feActionedNA", "ListElement": "FE Actioned - NA"},
   {"LiveFrom": "22/10/2019", "ID": "FL_dwpStates", "ListElementCode": "extensionRequested", "ListElement": "Extension requested"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "Exception", "ListElement": "Exception"},
   {"LiveFrom": "22/10/2019", "ID": "FL_dwpStates", "ListElementCode": "directionResponded", "ListElement": "Direction - responded"},
   {"LiveFrom": "22/10/2019", "ID": "FL_dwpStates", "ListElementCode": "directionActionRequired", "ListElement": "Direction - action req'd"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "UnRegistered", "ListElement": "Appeal to-be registered"},
