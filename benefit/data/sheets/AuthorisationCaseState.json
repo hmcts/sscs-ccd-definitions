@@ -13,6 +13,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "dormantAppealState", "UserRole": "caseworker-sscs-clerk", "CRUD": "CR"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "dormantAppealState", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "CR"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "dormantAppealState", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "dormantAppealState", "UserRole": "caseworker-sscs-registrar", "CRUD": "CRUD"},
   {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "dormantAppealState", "UserRole": "citizen", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "draft", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "U"},
   {"LiveFrom": "19/03/2019", "CaseTypeID": "Benefit", "CaseStateID": "draft", "UserRole": "citizen", "CRUD": "CRUD"},
