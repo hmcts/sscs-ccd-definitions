@@ -356,7 +356,7 @@
     "Description": "Notification that the hearing has been adjourned",
     "DisplayOrder": 66,
     "PreConditionState(s)": "*",
-    "PostConditionState": "responseReceived",
+    "PostConditionState": "readyToList",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
     "SecurityClassification": "Public"
@@ -371,7 +371,7 @@
     "Description": "Notification that a hearing has been postponed",
     "DisplayOrder": 69,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "readyToList",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
     "SecurityClassification": "Public"
