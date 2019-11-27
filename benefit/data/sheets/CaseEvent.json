@@ -356,12 +356,12 @@
     "Description": "Notification that the hearing has been adjourned",
     "DisplayOrder": 66,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "responseReceived",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
     "SecurityClassification": "Public"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hearingBooked", "Name": "Hearing booked", "Description": "Notification about a hearing being booked", "DisplayOrder": 67, "PreConditionState(s)": "*", "PostConditionState": "*", "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send", "RetriesTimeoutURLSubmittedEvent": "5,5", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hearingBooked", "Name": "Hearing booked", "Description": "Notification about a hearing being booked", "DisplayOrder": 67, "PreConditionState(s)": "*", "PostConditionState": "hearing", "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send", "RetriesTimeoutURLSubmittedEvent": "5,5", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hearingHoldingReminder", "Name": "Hearing Holding Reminder", "Description": "Holding email when hearing not booked", "DisplayOrder": 68, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public"},
   {
     "LiveFrom": "01/01/2018",
