@@ -279,5 +279,9 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Newport", "ListElement": "PIP Newport"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Springburn", "ListElement": "PIP Springburn"},
   {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "appealToProceed", "ListElement": "Appeal to Proceed"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "provideInformation", "ListElement": "Provide information"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "provideInformation", "ListElement": "Provide information"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "grantExtension", "ListElement": "Grant extension"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "refuseExtension", "ListElement": "Refuse extension"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_extensionDecisions", "ListElementCode": "sendToListing", "ListElement": "Send to listing"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_extensionDecisions", "ListElementCode": "sendToValidAppeal", "ListElement": "Send to valid appeal"}
 ]
