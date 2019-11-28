@@ -20,6 +20,7 @@
   {"LiveFrom": "16/09/2019", "CaseTypeID": "Benefit", "TabID": "summary", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "interlocReferralDate", "TabFieldDisplayOrder": 19},
   {"LiveFrom": "16/09/2019", "CaseTypeID": "Benefit", "TabID": "summary", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "outcome", "TabFieldDisplayOrder": 20},
   {"LiveFrom": "16/09/2019", "CaseTypeID": "Benefit", "TabID": "summary", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "createdInGapsFrom", "TabFieldDisplayOrder": 21},
+  {"LiveFrom": "16/09/2019", "CaseTypeID": "Benefit", "TabID": "summary", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "directionDueDate", "TabFieldDisplayOrder": 22},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "eventHistory", "TabLabel": "History", "TabDisplayOrder": 2, "CaseFieldID": "caseHistory", "TabFieldDisplayOrder": 3},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "eventHistory", "TabLabel": "History", "TabDisplayOrder": 2, "CaseFieldID": "dwpFurtherEvidenceStates", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "eventHistory", "TabLabel": "History", "TabDisplayOrder": 2, "CaseFieldID": "interlocReviewState", "TabFieldDisplayOrder": 1},
