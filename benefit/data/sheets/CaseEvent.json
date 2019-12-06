@@ -533,7 +533,7 @@
     "Name": "Response received",
     "Description": "Notification that DWP have responded to the appeal",
     "DisplayOrder": 102,
-    "PreConditionState(s)": "*",
+    "PreConditionState(s)": "appealCreated;hearing;outcome;readyToList;responseReceived;testCreate;validAppeal;incompleteApplicationVoidState;voidState;withDwp",
     "PostConditionState": "responseReceived",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
