@@ -15,7 +15,7 @@
   {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "generatedNino", "Label": "NINO", "DisplayOrder": 2},
   {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "dwpFurtherEvidenceStates", "Label": "Further evidence state", "DisplayOrder": 5},
   {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "dwpState", "Label": "State", "DisplayOrder": 6},
-  {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "dateSentToDwp", "Label": "DWP referral date", "DisplayOrder": 7, "ResultsOrdering": "1:Asc"},
+  {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "dateSentToDwp", "Label": "DWP referral date", "DisplayOrder": 7, "ResultsOrdering": "1:ASC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "interlocReviewState", "Label": "Interlocutory review state", "DisplayOrder": 3},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "urgentCase", "Label": "Is case urgent?", "DisplayOrder": 4},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "interlocReferralDate", "Label": "Interloc Referral Date", "DisplayOrder": 5},
