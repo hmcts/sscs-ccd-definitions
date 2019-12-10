@@ -754,5 +754,10 @@
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "extensionNextEvent", "UserRole": "caseworker-sscs-registrar", "CRUD": "CRUD"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "extensionNextEvent", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "extensionNextEvent", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
-  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "extensionNextEvent", "UserRole": "caseworker-sscs-teamleader", "CRUD": "CRUD"}
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "extensionNextEvent", "UserRole": "caseworker-sscs-teamleader", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "dateCaseSentToGaps", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "dateCaseSentToGaps", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "dateCaseSentToGaps", "UserRole": "caseworker-sscs-judge", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "dateCaseSentToGaps", "UserRole": "caseworker-sscs-superuser", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "dateCaseSentToGaps", "UserRole": "caseworker-sscs-registrar", "CRUD": "R"}
 ]
