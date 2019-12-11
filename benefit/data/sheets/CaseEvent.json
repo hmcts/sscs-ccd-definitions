@@ -588,7 +588,7 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tcwReferToJudge", "Name": "Send to Judge", "Description": "Send to Judge", "DisplayOrder": 111, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public"},
   {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "ID": "sendValidCaseToInterloc", "Name": "Send valid case to interloc", "DisplayOrder": 112, "PreConditionState(s)": "withDwp", "SecurityClassification": "Public", "ShowSummary": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sentToDwp", "Name": "Sent to DWP", "Description": "Case sent to DWP", "DisplayOrder": 113, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sentToDwp", "Name": "Sent to DWP", "Description": "Case sent to DWP", "DisplayOrder": 113, "PreConditionState(s)": "*", "PostConditionState": "withDwp", "SecurityClassification": "Public"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
