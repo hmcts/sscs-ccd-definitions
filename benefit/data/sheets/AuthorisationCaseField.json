@@ -596,7 +596,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "evidence", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "evidenceHandled", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "evidencePresent", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "evidenceReceivedCF", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "evidenceReceivedCF", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "exceptionRecordReference", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "furtherEvidenceAction", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "hearings", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
