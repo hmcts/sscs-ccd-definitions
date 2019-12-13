@@ -31,7 +31,7 @@
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "generatedNino", "Label": "NINO", "DisplayOrder": 5},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "directionDueDate", "Label": "Response due date", "DisplayOrder": 6},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "reservedToJudge", "Label": "Judge", "DisplayOrder": 7},
-  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "caseCreated", "Label": "Case created date", "DisplayOrder": 8},
+  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "caseCreated", "Label": "Is a new digital case?", "DisplayOrder": 8},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "region", "Label": "Regional centre", "DisplayOrder": 9},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "createdInGapsFrom", "Label": "Is a new digital case?", "DisplayOrder": 10},
   {"LiveFrom": "16/07/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "interlocReviewState", "Label": "Review state", "DisplayOrder": 1},
