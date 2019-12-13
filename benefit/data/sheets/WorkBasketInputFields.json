@@ -5,7 +5,7 @@
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "evidenceHandled", "Label": "Further evidence actions", "DisplayOrder": 4},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "documentSentToDwp", "Label": "Documents sent to DWP?", "DisplayOrder": 5},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "directionDueDate", "Label": "Response due date", "DisplayOrder": 6},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "createdInGapsFrom", "Label": "Created in GAPS from", "DisplayOrder": 7},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "createdInGapsFrom", "Label": "Is a new digital case?", "DisplayOrder": 7},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "[CASE_REFERENCE]", "Label": "CCD case number", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "generatedSurname", "Label": "Appellant surname", "DisplayOrder": 2},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "generatedNino", "Label": "NINO", "DisplayOrder": 3},
