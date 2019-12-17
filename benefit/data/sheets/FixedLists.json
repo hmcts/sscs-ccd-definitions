@@ -283,6 +283,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "provideInformation", "ListElement": "Request information"},
   {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "grantExtension", "ListElement": "Grant extension"},
   {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "refuseExtension", "ListElement": "Refuse extension"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_extensionDecisions", "ListElementCode": "sendToListing", "ListElement": "Send to listing"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_extensionDecisions", "ListElementCode": "sendToValidAppeal", "ListElement": "Send to valid appeal"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_extensionDecisions", "ListElementCode": "sendToListing", "ListElement": "List for hearing"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_extensionDecisions", "ListElementCode": "noFurtherAction", "ListElement": "No further action"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_extensionDecisions", "ListElementCode": "sendToValidAppeal", "ListElement": "Make valid appeal"}
 ]
