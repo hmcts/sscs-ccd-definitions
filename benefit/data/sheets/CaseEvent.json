@@ -161,6 +161,7 @@
     "DisplayOrder": 23,
     "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;outcome;pendingAppeal;readyToList;responseReceived;validAppeal;voidState",
     "PostConditionState": "withDwp",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public"
   },
   {
