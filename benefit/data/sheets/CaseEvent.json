@@ -274,7 +274,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hearingPostponed", "Name": "Hearing postponed", "Description": "Notification that a hearing has been postponed", "DisplayOrder": 76, "PreConditionState(s)": "*", "PostConditionState": "readyToList", "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send", "RetriesTimeoutURLSubmittedEvent": "5,5", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hearingReminder", "Name": "Hearing reminder", "Description": "1 day out and 1 week out", "DisplayOrder": 77, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "incompleteApplicationReceived", "Name": "Incomplete application rec'd", "Description": "Incomplete application received", "DisplayOrder": 78, "PostConditionState": "incompleteApplication", "SecurityClassification": "Public"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "interlocInformationReceived", "Name": "Information received", "Description": "Information received", "DisplayOrder": 79, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "interlocutoryReviewState", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "interlocInformationReceived", "Name": "Information received", "Description": "Information received", "DisplayOrder": 79, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "interlocutoryReviewState", "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit", "SecurityClassification": "Public"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
@@ -342,7 +342,7 @@
     "RetriesTimeoutURLSubmittedEvent": "5,5",
     "SecurityClassification": "Public"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reinstateAppeal", "Name": "Reinstate case", "Description": "Reinstate case to interloc state", "DisplayOrder": 96, "PreConditionState(s)": "dormantAppealState", "PostConditionState": "interlocutoryReviewState", "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reinstateAppeal", "Name": "Re-open appeal", "Description": "Reinstate case to interloc state", "DisplayOrder": 96, "PreConditionState(s)": "dormantAppealState", "PostConditionState": "interlocutoryReviewState", "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reinstateVoidAppeal", "Name": "Reinstate case", "Description": "Resinstates a Void case to valid", "DisplayOrder": 97, "PreConditionState(s)": "voidState", "PostConditionState": "appealCreated", "SecurityClassification": "Public"},
   {
     "LiveFrom": "01/01/2018",
