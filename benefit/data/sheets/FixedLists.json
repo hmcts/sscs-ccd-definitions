@@ -278,12 +278,5 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Glasgow", "ListElement": "PIP Glasgow"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Newcastle", "ListElement": "PIP Newcastle"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Newport", "ListElement": "PIP Newport"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Springburn", "ListElement": "PIP Springburn"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "appealToProceed", "ListElement": "Appeal to Proceed"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "provideInformation", "ListElement": "Request information"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "grantExtension", "ListElement": "Grant extension"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_directionTypes", "ListElementCode": "refuseExtension", "ListElement": "Refuse extension"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_extensionDecisions", "ListElementCode": "sendToListing", "ListElement": "List for hearing"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_extensionDecisions", "ListElementCode": "noFurtherAction", "ListElement": "No further action"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_extensionDecisions", "ListElementCode": "sendToValidAppeal", "ListElement": "Make valid appeal"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Springburn", "ListElement": "PIP Springburn"}
 ]
