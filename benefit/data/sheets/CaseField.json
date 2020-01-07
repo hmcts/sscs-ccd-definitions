@@ -29,7 +29,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "lapseInfo", "Label": "Lapsed case information", "FieldType": "lapse", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "withdrawalInfo", "Label": "Withdrawn case information", "FieldType": "withdrawal", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "decisionCorrectionInfo", "Label": "Decision correction information", "FieldType": "decisionCorrection", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "referralInfo", "Label": "Referall information", "FieldType": "otjReferral", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "referralInfo", "Label": "Referral information", "FieldType": "otjReferral", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "caseCorrection", "Label": "Correction information", "FieldType": "caseCorrectionInfo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "decisionInfo", "Label": "Decision information", "FieldType": "decisionInformation", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "bulkScanCaseReference", "Label": "Case reference of scanned case", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
