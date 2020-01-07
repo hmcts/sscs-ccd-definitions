@@ -59,7 +59,9 @@ To create the AAT and PROD versions, move to the root of this repository, then r
 
 Upload the created AAT and PROD Excel versions to Confluence and put a message on the sscs-ccd slack channel
 
-Note, the CaseTypeTab doesn't change the value to PROD, so you have to manually edit it.
+** Note ** , manual changes for the PROD version: 
+- the CaseTypeTab doesn't change the value to PROD, so you have to manually edit it.
+- Copy the correct values on prod into the summaryTyaNumber and summaryTyaAppointeeNumber fields on CaseField tab
 
 ## Load a CCD definition to your local environment
 
