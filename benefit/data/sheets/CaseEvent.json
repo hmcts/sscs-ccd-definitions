@@ -276,6 +276,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hearingReminder", "Name": "Hearing reminder", "Description": "1 day out and 1 week out", "DisplayOrder": 77, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "incompleteApplicationReceived", "Name": "Incomplete application rec'd", "Description": "Incomplete application received", "DisplayOrder": 78, "PostConditionState": "incompleteApplication", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "interlocInformationReceived", "Name": "Information received", "Description": "Information received", "DisplayOrder": 79, "PreConditionState(s)": "interlocutoryReviewState", "PostConditionState": "interlocutoryReviewState", "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "interlocInformationReceivedActionFurtherEvidence", "Name": "Info received further evidence", "Description": "Information received", "DisplayOrder": 80, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
@@ -456,7 +457,7 @@
     "Name": "Send to interloc",
     "Description": "Send a case to a judge for review",
     "DisplayOrder": 112,
-    "PreConditionState(s)": "appealCreated;closed;dormantAppealState;hearing;outcome;readyToList;responseReceived;validAppeal;withDwp;interlocutoryReviewState",
+    "PreConditionState(s)": "appealCreated;closed;dormantAppealState;hearing;outcome;readyToList;responseReceived;validAppeal;withDwp;interlocutoryReviewState;incompleteApplicationInformationReqsted",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
