@@ -42,6 +42,12 @@ case ${ENV} in
     BULK_SCAN_ORCHESTRATOR_URL="http://sscs-bulk-scan-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
     COR_BACKEND_URL="http://sscs-cor-backend-${ENV}.service.core-compute-${ENV}.internal"
   ;;
+  *)
+    echo "${ENV} not recognised"
+    exit 1 ;;
+esac
+
+case ${ENV} in
   aat|demo|local)
     TYA_LINK="https://sscs-tya-frontend-aat.service.core-compute-aat.internal/validate-surname/\${subscriptions.appellantSubscription.tya}/trackyourappeal"
     TYA_APPOINTEE_LINK="https://sscs-tya-frontend-aat.service.core-compute-aat.internal/validate-surname/\${subscriptions.appointeeSubscription.tya}/trackyourappeal"
@@ -81,5 +87,6 @@ docker run -ti --rm --name json2xlsx \
   -e "CCD_DEF_TYA_LINK=${TYA_LINK}" \
   -e "CCD_DEF_TYA_APPOINTEE_LINK=${TYA_APPOINTEE_LINK}" \
   -e "CCD_DEF_FIXED_LIST_USERS=${FIXED_LIST_USERS}" \
+  -e "CCD_ENV=${FIXED_LISTS_SUFFIX}" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION} \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_v${VERSION}_${UPPERCASE_ENV}.xlsx"
