@@ -87,7 +87,7 @@ case ${ENV} in
     BULK_SCAN_ORCHESTRATOR_URL="http://dockerhost:8582"
     COR_BACKEND_URL="http://dockerhost:1234"
     MICROSERVICE=ccd_gw
-    UPPERCASE_ENV=AAT
+    CCD_ENV="AAT"
   ;;
   *)
     echo "$env not a valid environment"
@@ -99,8 +99,6 @@ if [ ${TYPE} == "benefit" ]; then
 else
   FIXED_LIST_USERS=" "
 fi
-
-UPPERCASE_ENV=BLA
 
 echo "Importing: ${VERSION}"
 
@@ -132,7 +130,7 @@ docker run \
   -e "CCD_DEF_FIXED_LIST_USERS=${FIXED_LIST_USERS}" \
   -e "CCD_DEF_TYA_LINK=${TYA_LINK}" \
   -e "CCD_DEF_TYA_APPOINTEE_LINK=${TYA_APPOINTEE_LINK}" \
-  -e "CCD_ENV=${UPPERCASE_ENV}" \
+  -e "CCD_DEF_E=${CCD_ENV}" \
   -e "USER_ROLES=citizen, caseworker-sscs, caseworker-sscs-systemupdate, caseworker-sscs-anonymouscitizen, caseworker-sscs-callagent, caseworker-sscs-judge, caseworker-sscs-clerk, caseworker-sscs-dwpresponsewriter, caseworker-sscs-registrar, caseworker-sscs-superuser, caseworker-sscs-teamleader, caseworker-sscs-panelmember, caseworker-sscs-bulkscan" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION}
 
