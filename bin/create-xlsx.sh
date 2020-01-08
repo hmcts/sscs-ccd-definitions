@@ -47,6 +47,20 @@ case ${ENV} in
     exit 1 ;;
 esac
 
+case ${ENV} in
+  aat|demo|local)
+    TYA_LINK="https://sscs-tya-frontend-aat.service.core-compute-aat.internal/validate-surname/\${subscriptions.appellantSubscription.tya}/trackyourappeal"
+    TYA_APPOINTEE_LINK="https://sscs-tya-frontend-aat.service.core-compute-aat.internal/validate-surname/\${subscriptions.appointeeSubscription.tya}/trackyourappeal"
+  ;;
+  prod)
+    TYA_LINK="https://www.track-benefit-appeal.service.gov.uk/validate-surname/\${subscriptions.appellantSubscription.tya}/trackyourappeal"
+    TYA_APPOINTEE_LINK="https://www.track-benefit-appeal.service.gov.uk/validate-surname/\${subscriptions.appointeeSubscription.tya}/trackyourappeal"
+  ;;
+  *)
+    echo "${ENV} not recognised"
+    exit 1 ;;
+esac
+
 if [ ${ENV} == "prod" ]; then
     FIXED_LISTS_SUFFIX="PROD"
 else
@@ -70,6 +84,9 @@ docker run -ti --rm --name json2xlsx \
   -e "CCD_DEF_BULK_SCAN_API_URL=${BULK_SCAN_API_URL}" \
   -e "CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL=${BULK_SCAN_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_COR_BACKEND_URL=${COR_BACKEND_URL}" \
+  -e "CCD_DEF_TYA_LINK=${TYA_LINK}" \
+  -e "CCD_DEF_TYA_APPOINTEE_LINK=${TYA_APPOINTEE_LINK}" \
   -e "CCD_DEF_FIXED_LIST_USERS=${FIXED_LIST_USERS}" \
+  -e "CCD_DEF_E=${UPPERCASE_ENV}" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION} \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_v${VERSION}_${UPPERCASE_ENV}.xlsx"

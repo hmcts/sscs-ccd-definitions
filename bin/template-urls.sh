@@ -10,6 +10,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   sed -i '' 's/http:\/\/sscs-bulk-scan-aat.service.core-compute-aat.internal/\${CCD_DEF_BULK_SCAN_API_URL}/g' ${SHEETS_DIR}/*.json
   sed -i '' 's/http:\/\/bulk-scan-orchestrator-aat.service.core-compute-aat.internal/\${CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL}/g' ${SHEETS_DIR}/*.json
   sed -i '' 's/http:\/\/sscs-cor-backend-aat.service.core-compute-aat.internal/\${CCD_DEF_COR_BACKEND_URL}/g' ${SHEETS_DIR}/*.json
+  sed -i '' 's/https:\/\/sscs-tya-frontend-aat.service.core-compute-aat.internal/validate-surname/\${subscriptions.appellantSubscription.tya}/trackyourappeal/g' ${SHEETS_DIR}/*.json
 else
   sed -i 's/http:\/\/em-ccd-orchestrator-aat.service.core-compute-aat.internal/\${CCD_DEF_EM_CCD_ORCHESTRATOR_URL}/g' ${SHEETS_DIR}/*.json
   sed -i 's/http:\/\/sscs-ccd-callback-orchestrator-aat.service.core-compute-aat.internal/\${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/g' ${SHEETS_DIR}/*.json
@@ -18,6 +19,7 @@ else
   sed -i 's/http:\/\/sscs-bulk-scan-aat.service.core-compute-aat.internal/\${CCD_DEF_BULK_SCAN_API_URL}/g' ${SHEETS_DIR}/*.json
   sed -i 's/http:\/\/bulk-scan-orchestrator-aat.service.core-compute-aat.internal/\${CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL}/g' ${SHEETS_DIR}/*.json
   sed -i 's/http:\/\/sscs-cor-backend-aat.service.core-compute-aat.internal/\${CCD_DEF_COR_BACKEND_URL}/g' ${SHEETS_DIR}/*.json
+  sed -i 's/https:\/\/sscs-tya-frontend-aat.service.core-compute-aat.internal/validate-surname/\${subscriptions.appellantSubscription.tya}/trackyourappeal/g' ${SHEETS_DIR}/*.json
 fi
 
 if [ `pwd` == "benefit" ]; then

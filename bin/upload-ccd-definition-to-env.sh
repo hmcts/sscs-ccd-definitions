@@ -86,8 +86,10 @@ case ${ENV} in
     BULK_SCAN_API_URL="http://dockerhost:8090"
     BULK_SCAN_ORCHESTRATOR_URL="http://dockerhost:8582"
     COR_BACKEND_URL="http://dockerhost:1234"
+	  TYA_LINK="tya link"
+    TYA_APPOINTEE_LINK="tya appointee link"
     MICROSERVICE=ccd_gw
-    CCD_ENVIRONMENT=AAT
+    CCD_ENV="LOCAL"
   ;;
   *)
     echo "$env not a valid environment"
@@ -128,6 +130,9 @@ docker run \
   -e "CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL=${BULK_SCAN_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_COR_BACKEND_URL=${COR_BACKEND_URL}" \
   -e "CCD_DEF_FIXED_LIST_USERS=${FIXED_LIST_USERS}" \
+  -e "CCD_DEF_TYA_LINK=${TYA_LINK}" \
+  -e "CCD_DEF_TYA_APPOINTEE_LINK=${TYA_APPOINTEE_LINK}" \
+  -e "CCD_DEF_E=${CCD_ENV}" \
   -e "USER_ROLES=citizen, caseworker-sscs, caseworker-sscs-systemupdate, caseworker-sscs-anonymouscitizen, caseworker-sscs-callagent, caseworker-sscs-judge, caseworker-sscs-clerk, caseworker-sscs-dwpresponsewriter, caseworker-sscs-registrar, caseworker-sscs-superuser, caseworker-sscs-teamleader, caseworker-sscs-panelmember, caseworker-sscs-bulkscan" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION}
 
