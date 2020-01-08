@@ -86,8 +86,10 @@ case ${ENV} in
     BULK_SCAN_API_URL="http://dockerhost:8090"
     BULK_SCAN_ORCHESTRATOR_URL="http://dockerhost:8582"
     COR_BACKEND_URL="http://dockerhost:1234"
+	TYA_LINK="tya link"
+    TYA_APPOINTEE_LINK="tya appointee link"
     MICROSERVICE=ccd_gw
-    CCD_ENV="AAT"
+    CCD_ENV="LOCAL"
   ;;
   *)
     echo "$env not a valid environment"
