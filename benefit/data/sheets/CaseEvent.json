@@ -328,6 +328,7 @@
     "SecurityClassification": "Public"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpNotAbleToRegister", "Name": "Not able to register", "Description": "Case can't be registered on DRS", "DisplayOrder": 93, "PreConditionState(s)": "withDwp", "PostConditionState": "interlocutoryReviewState", "SecurityClassification": "Public", "ShowEventNotes": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "notificationSent", "Name": "Notification sent", "Description": "Notification sent via Gov Notify", "DisplayOrder": 93, "PreConditionState(s)": "*", "PostConditionState": "*", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "corDecision", "Name": "Online hearing decision made", "Description": "The online hearing has resolved the case", "DisplayOrder": 94, "PreConditionState(s)": "*", "PostConditionState": "dormantAppealState", "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send", "RetriesTimeoutURLSubmittedEvent": "5,5", "SecurityClassification": "Public"},
   {
     "LiveFrom": "01/01/2018",
