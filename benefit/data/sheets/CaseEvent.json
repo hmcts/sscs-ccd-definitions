@@ -442,7 +442,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
     "ID": "nonCompliantSendToInterloc",
-    "Name": "Send to interloc",
+    "Name": "Send to interloc - pre-valid",
     "Description": "Send a case to a judge for review",
     "DisplayOrder": 111,
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted",
