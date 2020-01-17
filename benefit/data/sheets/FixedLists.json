@@ -278,5 +278,15 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Newcastle", "ListElement": "PIP Newcastle"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Newport", "ListElement": "PIP Newport"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Springburn", "ListElement": "PIP Springburn"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "AE", "ListElement": "PIP AE"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "AE", "ListElement": "PIP AE"},
+  {"LiveFrom": "01/01/2018", "ID": "configurationFiles", "ListElementCode": "sscs-demo-bundle.yaml", "ListElement": "SSCS Demo Bundle"},
+  {"LiveFrom": "01/01/2018", "ID": "pageNumberFormat", "ListElementCode": "pageRange", "ListElement": "Page Range"},
+  {"LiveFrom": "01/01/2018", "ID": "pageNumberFormat", "ListElementCode": "numberOfPages", "ListElement": "Number Of Pages"},
+  {"LiveFrom": "01/01/2018", "ID": "paginationStyle", "ListElementCode": "off", "ListElement": "Off"},
+  {"LiveFrom": "01/01/2018", "ID": "paginationStyle", "ListElementCode": "topLeft", "ListElement": "Top Left"},
+  {"LiveFrom": "01/01/2018", "ID": "paginationStyle", "ListElementCode": "topCenter", "ListElement": "Top Center"},
+  {"LiveFrom": "01/01/2018", "ID": "paginationStyle", "ListElementCode": "topRight", "ListElement": "Top Right"},
+  {"LiveFrom": "01/01/2018", "ID": "paginationStyle", "ListElementCode": "bottomLeft", "ListElement": "Bottom Left"},
+  {"LiveFrom": "01/01/2018", "ID": "paginationStyle", "ListElementCode": "bottomCenter", "ListElement": "Bottom Center"},
+  {"LiveFrom": "01/01/2018", "ID": "paginationStyle", "ListElementCode": "bottomRight", "ListElement": "Bottom Right"}
 ]
