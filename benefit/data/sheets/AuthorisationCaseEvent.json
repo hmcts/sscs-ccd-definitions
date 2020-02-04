@@ -217,7 +217,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "createBundle", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "createBundle", "UserRole": "caseworker-sscs-superuser", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "asyncStitchingComplete", "UserRole": "caseworker-sscs", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "asyncStitchingComplete", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "asyncStitchingComplete", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "asyncStitchingComplete", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "asyncStitchingComplete", "UserRole": "caseworker-sscs-superuser", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "createDraft", "UserRole": "citizen", "CRUD": "CRUD"},
