@@ -86,13 +86,15 @@ case ${ENV} in
     BULK_SCAN_API_URL="http://dockerhost:8090"
     BULK_SCAN_ORCHESTRATOR_URL="http://dockerhost:8582"
     COR_BACKEND_URL="http://dockerhost:1234"
-	  TYA_LINK="tya link"
-    TYA_APPOINTEE_LINK="tya appointee link"
+	  TYA_LINK="http://dockerhost:3000/validate-surname/\${subscriptions.appellantSubscription.tya}/trackyourappeal"
+    TYA_APPOINTEE_LINK="http://dockerhost:3000/validate-surname/\${subscriptions.appointeeSubscription.tya}/trackyourappeal"
+    MYA_LINK="http://dockerhost:3000/sign-in?tya=\${subscriptions.appellantSubscription.tya}"
+    MYA_APPOINTEE_LINK="http://dockerhost:3000/sign-in?tya=\${subscriptions.appointeeSubscription.tya}"
     MICROSERVICE=ccd_gw
     CCD_ENV="LOCAL"
   ;;
   *)
-    echo "$env not a valid environment"
+    echo "${ENV} not a valid environment"
     exit 1 ;;
 esac
 
