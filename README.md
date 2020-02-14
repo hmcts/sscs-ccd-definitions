@@ -73,6 +73,7 @@ To build a local version of the CCD Importer image:
     docker build -t hmctspublic.azurecr.io/sscs/ccd-definition-importer-benefit:dev -f ../docker/importer.Dockerfile .
     
 You can then test loading this into your local environment:
+Note:- local environment should have Python 3.0 or above version 
 
     ../bin/upload-ccd-definition-to-env.sh benefit dev local
 
