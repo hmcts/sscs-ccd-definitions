@@ -305,6 +305,8 @@
     "DisplayOrder": 28,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
   },
@@ -547,6 +549,18 @@
   {
     "LiveFrom": "10/10/2019",
     "CaseTypeID": "Benefit",
+    "ID": "cloneBundle",
+    "Name": "Clone bundle",
+    "DisplayOrder": 47,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_EM_CCD_ORCHESTRATOR_URL}/api/clone-ccd-bundles",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y"
+  },
+  {
+    "LiveFrom": "10/10/2019",
+    "CaseTypeID": "Benefit",
     "ID": "confirmLapsed",
     "Name": "Confirm lapsed",
     "DisplayOrder": 47,
@@ -675,8 +689,7 @@
     "Description": "Create a bundle in the case",
     "DisplayOrder": 58, "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_EM_CCD_ORCHESTRATOR_URL}/api/new-bundle",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
   },
@@ -1416,20 +1429,6 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "withDwp",
     "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
-    "ID": "stitchBundle",
-    "Name": "Stitch bundle",
-    "Description": "Submit bundle to be stitched",
-    "DisplayOrder": 120,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_EM_CCD_ORCHESTRATOR_URL}/api/stitch-ccd-bundles",
-    "RetriesTimeoutURLAboutToSubmitEvent": 5,
-    "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
   },
   {
     "LiveFrom": "01/01/2018",
