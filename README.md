@@ -30,8 +30,9 @@ and replace them with a template variable. It will have done a similar thing for
 
 ### Update the version file
     
-* Raise a PR
+* Raise a PR with the changes
 * Open benefit/VERSION.yaml and modify the version number. This file will be used by the Azure Pipeline to create a docker importer image tagged with the specified version number.
+* Update the benefit/data/sheets/CaseType.json and replace the right version for the field "Name": "SSCS Case v5.2.02_${CCD_DEF_E}"
 * Get it approved and merged
 * Pull latest master branch
 
@@ -73,6 +74,7 @@ To build a local version of the CCD Importer image:
     docker build -t hmctspublic.azurecr.io/sscs/ccd-definition-importer-benefit:dev -f ../docker/importer.Dockerfile .
     
 You can then test loading this into your local environment:
+Note:- local environment should have Python 3.0 or above version 
 
     ../bin/upload-ccd-definition-to-env.sh benefit dev local
 
