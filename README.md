@@ -30,8 +30,9 @@ and replace them with a template variable. It will have done a similar thing for
 
 ### Update the version file
     
-* Raise a PR
+* Raise a PR with the changes
 * Open benefit/VERSION.yaml and modify the version number. This file will be used by the Azure Pipeline to create a docker importer image tagged with the specified version number.
+* Update the benefit/data/sheets/CaseType.json and replace the right version for the field "Name": "SSCS Case v5.2.02_${CCD_DEF_E}"
 * Get it approved and merged
 * Pull latest master branch
 
