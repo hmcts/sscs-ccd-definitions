@@ -305,6 +305,8 @@
     "DisplayOrder": 28,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
   },
@@ -477,8 +479,20 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "asyncStitchingComplete",
+    "Name": "Stitching bundle complete",
+    "DisplayOrder": 42,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "attachRoboticsJson",
-    "Name": "Attach Robotics JSON",
+    "Name": "Attach robotics jSON",
     "Description": "The Robotics JSON has been attached to the case",
     "DisplayOrder": 42,
     "PreConditionState(s)": "appealCreated",
@@ -529,6 +543,18 @@
     "PreConditionState(s)": "withDwp",
     "PostConditionState": "withDwp",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y"
+  },
+  {
+    "LiveFrom": "10/10/2019",
+    "CaseTypeID": "Benefit",
+    "ID": "cloneBundle",
+    "Name": "Clone bundle",
+    "DisplayOrder": 47,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_EM_CCD_ORCHESTRATOR_URL}/api/clone-ccd-bundles",
     "SecurityClassification": "Public",
     "ShowSummary": "Y"
   },
@@ -661,9 +687,9 @@
     "ID": "createBundle",
     "Name": "Create a bundle",
     "Description": "Create a bundle in the case",
-    "DisplayOrder": 58,
-    "PreConditionState(s)": "*",
+    "DisplayOrder": 58, "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public",
     "ShowEventNotes": "N"
   },
@@ -1402,20 +1428,6 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "withDwp",
     "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
-    "ID": "stitchBundle",
-    "Name": "Stitch bundle",
-    "Description": "Submit bundle to be stitched",
-    "DisplayOrder": 120,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_EM_CCD_ORCHESTRATOR_URL}/api/stitch-ccd-bundles",
-    "RetriesTimeoutURLAboutToSubmitEvent": 5,
-    "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
   },
   {
     "LiveFrom": "01/01/2018",
