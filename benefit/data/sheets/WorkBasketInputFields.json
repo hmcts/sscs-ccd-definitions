@@ -1,11 +1,12 @@
 [
   {"LiveFrom": "16/07/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "interlocReviewState", "Label": "Review state", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "hmctsDwpState", "Label": "Sent to DWP state", "DisplayOrder": 2},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "region", "Label": "Regional centre", "DisplayOrder": 3},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "evidenceHandled", "Label": "Further evidence actions", "DisplayOrder": 4},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "documentSentToDwp", "Label": "Documents sent to DWP?", "DisplayOrder": 5},
-  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "directionDueDate", "Label": "Response due date", "DisplayOrder": 6},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "createdInGapsFrom", "Label": "Is a new digital case?", "DisplayOrder": 7},
+  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "urgentCase", "Label": "Is case urgent?", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "region", "Label": "Regional centre", "DisplayOrder": 4},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "evidenceHandled", "Label": "Further evidence actions", "DisplayOrder": 5},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "documentSentToDwp", "Label": "Documents sent to DWP?", "DisplayOrder": 6},
+  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "directionDueDate", "Label": "Response due date", "DisplayOrder": 7},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "createdInGapsFrom", "Label": "Is a new digital case?", "DisplayOrder": 8},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "[CASE_REFERENCE]", "Label": "CCD case number", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "generatedSurname", "Label": "Appellant surname", "DisplayOrder": 2},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "generatedNino", "Label": "NINO", "DisplayOrder": 3},
@@ -25,9 +26,10 @@
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "createdInGapsFrom", "Label": "Is a new digital case?", "DisplayOrder": 5},
   {"LiveFrom": "16/07/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "interlocReviewState", "Label": "Review state", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "hmctsDwpState", "Label": "Sent to DWP state", "DisplayOrder": 2},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "region", "Label": "Regional centre", "DisplayOrder": 3},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "evidenceHandled", "Label": "Further evidence actions", "DisplayOrder": 4},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "documentSentToDwp", "Label": "Documents sent to DWP?", "DisplayOrder": 5},
-  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "directionDueDate", "Label": "Response due date", "DisplayOrder": 6},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "createdInGapsFrom", "Label": "Is a new digital case?", "DisplayOrder": 7}
+  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "urgentCase", "Label": "Is case urgent?", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "region", "Label": "Regional centre", "DisplayOrder": 4},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "evidenceHandled", "Label": "Further evidence actions", "DisplayOrder": 5},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "documentSentToDwp", "Label": "Documents sent to DWP?", "DisplayOrder": 6},
+  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "directionDueDate", "Label": "Response due date", "DisplayOrder": 7},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "createdInGapsFrom", "Label": "Is a new digital case?", "DisplayOrder": 8}
 ]
