@@ -237,7 +237,6 @@
     "DisplayOrder": 22,
     "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;outcome;pendingAppeal;readyToList;responseReceived;validAppeal;withDwp",
     "PostConditionState": "voidState",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public"
   },
   {
@@ -1644,9 +1643,8 @@
     "Name": "Upload further evidence",
     "Description": "Upload further evidence for pre-valid interloc",
     "DisplayOrder": 139,
-    "PreConditionState(s)": "incompleteApplicationInformationReqsted;interlocutoryReviewState",
+    "PreConditionState(s)": "incompleteApplication;incompleteApplicationVoidState;incompleteApplicationInformationReqsted;interlocutoryReviewState",
     "PostConditionState": "*",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N"
