@@ -70,6 +70,7 @@
   {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "subscribeEmail", "FieldType": "YesOrNo", "ElementLabel": "Subscribed to Email", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "subscribeSms", "FieldType": "YesOrNo", "ElementLabel": "Subscribed to Text", "FieldShowCondition": "wantSmsNotifications=\"Yes\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "reason", "FieldType": "Text", "ElementLabel": "Reason for not subscribing / unsubscribing", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "lastLoggedIntoMya", "FieldType": "DateTime", "ElementLabel": "Last logged into MYA on", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "event", "ListElementCode": "date", "FieldType": "Text", "ElementLabel": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "event", "ListElementCode": "type", "FieldType": "FixedList", "FieldTypeParameter": "eventType", "ElementLabel": "Event Type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "event", "ListElementCode": "description", "FieldType": "Text", "ElementLabel": "Description", "SecurityClassification": "PUBLIC"},
