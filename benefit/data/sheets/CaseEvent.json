@@ -324,6 +324,18 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "interlocReviewStateAmend",
+    "Name": "Amend interloc review state",
+    "Description": "Ability to amend interloc review state flag",
+    "DisplayOrder": 30,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "appealCreated",
     "Name": "Appeal created",
     "Description": "Appeal created in CCD",
