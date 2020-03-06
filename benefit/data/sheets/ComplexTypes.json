@@ -245,7 +245,7 @@
   {"LiveFrom": "01/01/2018", "ID": "address", "ListElementCode": "postcodeLookup", "FieldType": "Text", "ElementLabel": "postcodeLookup", "FieldShowCondition": "postcodeLookup=\"AnyValueToFailThisCondition\"", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "address", "ListElementCode": "postcodeAddress", "FieldType": "Text", "ElementLabel": "postcodeAddress", "FieldShowCondition": "postcodeLookup=\"AnyValueToFailThisCondition\"", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "ScannedDocument", "ListElementCode": "type", "FieldType": "FixedList", "FieldTypeParameter": "ScannedDocumentType", "ElementLabel": "Document Type", "SecurityClassification": "Public"},
-  {"LiveFrom": "01/01/2018", "ID": "ScannedDocument", "ListElementCode": "url", "FieldType": "Document", "ElementLabel": "Document URL", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "ID": "ScannedDocument", "ListElementCode": "url", "FieldType": "Document", "ElementLabel": "Document URL", "RegularExpression": ".pdf", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "ScannedDocument", "ListElementCode": "controlNumber", "FieldType": "Text", "ElementLabel": "Document Control Number", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "ScannedDocument", "ListElementCode": "fileName", "FieldType": "Text", "ElementLabel": "File Name", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "ScannedDocument", "ListElementCode": "scannedDate", "FieldType": "DateTime", "ElementLabel": "Scanned Date", "SecurityClassification": "Public"},
