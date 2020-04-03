@@ -500,18 +500,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "asyncStitchingComplete",
-    "Name": "Stitching bundle complete",
-    "DisplayOrder": 42,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
     "ID": "attachRoboticsJson",
     "Name": "Attach robotics jSON",
     "Description": "The Robotics JSON has been attached to the case",
@@ -1450,6 +1438,18 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "withDwp",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "asyncStitchingComplete",
+    "Name": "Stitching bundle complete",
+    "DisplayOrder": 42,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N"
   },
   {
     "LiveFrom": "01/01/2018",
