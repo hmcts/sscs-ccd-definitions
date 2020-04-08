@@ -1597,11 +1597,12 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
     "ID": "subscriptionUpdated",
-    "Name": "Updated subscription",
+    "Name": "Update subscription",
     "Description": "Update Subscription",
     "DisplayOrder": 133,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
     "SecurityClassification": "Public"
