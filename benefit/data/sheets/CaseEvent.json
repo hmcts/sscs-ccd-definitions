@@ -863,7 +863,7 @@
     "DisplayOrder": 72,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
     "SecurityClassification": "Public"
   },
@@ -947,6 +947,7 @@
     "Description": "Incomplete application received",
     "DisplayOrder": 79,
     "PostConditionState": "incompleteApplication",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
@@ -1699,6 +1700,7 @@
     "Description": "A new valid appeal",
     "DisplayOrder": 141,
     "PostConditionState": "validAppeal",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
