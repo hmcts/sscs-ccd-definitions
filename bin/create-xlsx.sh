@@ -32,7 +32,6 @@ if [ ${ENV} == "local" ]; then
     BULK_SCAN_ORCHESTRATOR_URL="http://dockerhost:8099"
     COR_BACKEND_URL="http://dockerhost:1234"
 elif [ ${ENV} == "aat" ] || [ ${ENV} == "demo" ] || [ ${ENV} == "prod" ]; then
-    EM_CCD_ORCHESTRATOR_URL="http://em-ccd-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
     SSCS_CCD_ORCHESTRATOR_URL="http://sscs-ccd-callback-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
     TRIBUNALS_API_URL="http://sscs-tribunals-api-${ENV}.service.core-compute-${ENV}.internal"
     TYA_NOTIFICATIONS_API_URL="http://sscs-tya-notif-${ENV}.service.core-compute-${ENV}.internal"
@@ -42,6 +41,12 @@ elif [ ${ENV} == "aat" ] || [ ${ENV} == "demo" ] || [ ${ENV} == "prod" ]; then
 else
         echo "${ENV} not recognised"
         exit 1
+fi
+
+if [ ${ENV} == "demo" ]; then
+    EM_CCD_ORCHESTRATOR_URL="http://em-ccdorc-demo.service.core-compute-demo.internal/"
+elif [ ${ENV} == "aat" ] || [ ${ENV} == "prod" ]; then
+    EM_CCD_ORCHESTRATOR_URL="http://em-ccd-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
 fi
 
 case ${ENV} in
