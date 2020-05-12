@@ -44,6 +44,12 @@ else
         exit 1
 fi
 
+if [ ${ENV} == "demo" ]; then
+    EM_CCD_ORCHESTRATOR_URL="http://em-ccdorc-demo.service.core-compute-demo.internal/"
+elif [ ${ENV} == "aat" ] || [ ${ENV} == "prod" ]; then
+    EM_CCD_ORCHESTRATOR_URL="http://em-ccd-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
+fi
+
 case ${ENV} in
   local)
     MYA_LINK="http://dockerhost:3000/sign-in?tya=\${subscriptions.appellantSubscription.tya}"
