@@ -291,5 +291,7 @@
   {"LiveFrom": "01/01/2018", "ID": "paginationStyle", "ListElementCode": "topRight", "ListElement": "Top Right"},
   {"LiveFrom": "01/01/2018", "ID": "paginationStyle", "ListElementCode": "bottomLeft", "ListElement": "Bottom Left"},
   {"LiveFrom": "01/01/2018", "ID": "paginationStyle", "ListElementCode": "bottomCenter", "ListElement": "Bottom Center"},
-  {"LiveFrom": "01/01/2018", "ID": "paginationStyle", "ListElementCode": "bottomRight", "ListElement": "Bottom Right"}
+  {"LiveFrom": "01/01/2018", "ID": "paginationStyle", "ListElementCode": "bottomRight", "ListElement": "Bottom Right"},  
+  {"LiveFrom": "01/01/2018", "ID": "FL_decisionNoticeTypes", "ListElementCode": "finalDecision", "ListElement": "Final decision"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_decisionNoticeTypes", "ListElementCode": "decisionToStrikout", "ListElement": "Decision to strikeout"}
 ]

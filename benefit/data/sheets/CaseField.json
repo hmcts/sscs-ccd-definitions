@@ -151,5 +151,6 @@
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "isInterlocRequired", "Label": "Requires Interlocutory Review?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "dateCaseSentToGaps", "Label": "Date case sent to GAPS", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "responseRequired", "Label": "Is response required?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "timeExtensionRequested", "Label": "Time Extension Requested", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "timeExtensionRequested", "Label": "Time Extension Requested", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},  
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "decisionNoticeType", "Label": "Select decision type", "FieldType": "FixedList", "FieldTypeParameter": "FL_decisionNoticeTypes", "SecurityClassification": "PUBLIC"}
 ]
