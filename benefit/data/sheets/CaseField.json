@@ -152,7 +152,7 @@
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "dateCaseSentToGaps", "Label": "Date case sent to GAPS", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "responseRequired", "Label": "Is response required?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "timeExtensionRequested", "Label": "Time Extension Requested", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},  
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipDecisionNoticeDailyLivingQuestion", "Label": "What are you considering awarding for daily living?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_dailyLivingOrMobilityRate", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipDecisionNoticeMobilityQuestion", "Label": "What are you considering awarding for mobility?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_dailyLivingOrMobilityRate", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipDecisionNoticeDailyLivingQuestion", "Label": "What are you considering awarding for daily living?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_rateAwarded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipDecisionNoticeMobilityQuestion", "Label": "What are you considering awarding for mobility?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_rateAwarded", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipDecisionNoticeComparedToDWPQuestion", "Label": "How would this new award compare to the original DWP award?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_comparedToDWP", "SecurityClassification": "PUBLIC"}
 ]
