@@ -154,5 +154,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "timeExtensionRequested", "Label": "Time Extension Requested", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},  
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipDecisionNoticeDailyLivingQuestion", "Label": "What are you considering awarding for daily living?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_rateAwarded", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipDecisionNoticeMobilityQuestion", "Label": "What are you considering awarding for mobility?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_rateAwarded", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipDecisionNoticeComparedToDWPQuestion", "Label": "How would this new award compare to the original DWP award?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_comparedToDWP", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipDecisionNoticeComparedToDWPQuestion", "Label": "How would this new award compare to the original DWP award?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_comparedToDWP", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipDecisionNoticeStartDate", "Label": "Start date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipDecisionNoticeEndDateType", "Label": "Does this award have an end date?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_endDateType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipDecisionNoticeEndDate", "Label": "End date", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
 ]
