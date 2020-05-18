@@ -810,5 +810,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionMobilityActivitiesQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionPreparingFoodQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionTakingNutritionQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionManagingTherapyQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"} 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionManagingTherapyQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionWashAndBatheQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionManagingToiletNeedsQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+
 ]
