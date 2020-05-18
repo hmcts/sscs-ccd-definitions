@@ -309,5 +309,6 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_dailyLivingActivities", "ListElementCode": "readingAndUnderstanding", "ListElement": "Reading and understanding signs, symbols and words"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dailyLivingActivities", "ListElementCode": "engagingWithOtherPeople", "ListElement": "Engaging with other people face to face"},
   {"LiveFrom": "01/01/2018", "ID": "FL_mobilityActivities", "ListElementCode": "planningAndFollowing", "ListElement": "Planning and following journeys"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_mobilityActivities", "ListElementCode": "movingAround", "ListElement": "Moving around"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_mobilityActivities", "ListElementCode": "movingAround", "ListElement": "Moving around"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_pipWriteFinalDecisionPreparingFoodQuestions", "ListElementCode": "preparingFoodCanPrepareAndCookUnaided", "ListElement": "1a. Can prepare and cook a simple meal unaided. (0 points)"}
 ]
