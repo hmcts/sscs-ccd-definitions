@@ -1772,7 +1772,7 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "writeFinalDecisionPIP",
+    "ID": "writeFinalDecision",
     "Name": "Write final decision - PIP",
     "Description": "Write a final decision notice for a PIP case",
     "DisplayOrder": 147,
