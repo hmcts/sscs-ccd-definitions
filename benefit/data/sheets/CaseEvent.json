@@ -989,21 +989,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "issueDecision",
-    "Name": "Issue decision (NEW)",
-    "Description": "Send a decision notice",
-    "DisplayOrder": 82,
-    "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;outcome;readyToList;responseReceived;validAppeal;withDwp",
-    "PostConditionState": "dormantAppealState",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
     "ID": "judgeDirectionIssued",
     "Name": "Issue direction (Judge)",
     "Description": "Issue direction (Judge)",
@@ -1782,6 +1767,21 @@
     "DisplayOrder": 146,
     "PreConditionState(s)": "interlocutoryReviewState",
     "PostConditionState": "voidState",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "writeFinalDecision",
+    "Name": "Write final decision - PIP",
+    "Description": "Write a final decision notice for a PIP case",
+    "DisplayOrder": 147,
+    "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;outcome;readyToList;responseReceived;validAppeal;withDwp",
+    "PostConditionState": "dormantAppealState",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
     "SecurityClassification": "Public"
   }
 ]
