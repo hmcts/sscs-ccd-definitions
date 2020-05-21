@@ -173,5 +173,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipWriteFinalDecisionBudgetingDecisionsQuestion", "Label": "Making budgeting decisions", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_pipWriteFinalDecisionBudgetingDecisionsQuestions", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipWriteFinalDecisionPlanningAndFollowingQuestion", "Label": "Planning and following journeys", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_pipWriteFinalDecisionPlanningFollowingQuestions", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipWriteFinalDecisionMovingAroundQuestion", "Label": "Moving around", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_pipWriteFinalDecisionMovingAroundQuestions", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipWriteFinalDecisionReasonsQuestion", "Label": "Reason for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipWriteFinalDecisionReasonsForDecision", "Label": "Reasons for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
 ]
