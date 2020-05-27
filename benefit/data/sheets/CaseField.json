@@ -179,5 +179,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipWriteFinalDecisionPlanningAndFollowingQuestion", "Label": "Planning and following journeys", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_pipWriteFinalDecisionPlanningFollowingQuestions", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipWriteFinalDecisionMovingAroundQuestion", "Label": "Moving around", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_pipWriteFinalDecisionMovingAroundQuestions", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipWriteFinalDecisionReasonsForDecision", "Label": "Reasons for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipWriteFinalDecisionPageSectionReference", "Label": "Up until which page in the bundle did the tribunal consider when making it's decision?. Please enter this below:", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipWriteFinalDecisionPageSectionReference", "Label": "Up until which page in the bundle did the tribunal consider when making it's decision? Please enter this below:", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 ]
