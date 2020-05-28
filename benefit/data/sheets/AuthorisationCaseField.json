@@ -826,5 +826,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionPlanningAndFollowingQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionMovingAroundQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionReasonsForDecision", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionPageSectionReference", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionPageSectionReference", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionGenerateNotice", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionPreviewDocument", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]
