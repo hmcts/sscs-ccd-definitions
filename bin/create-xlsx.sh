@@ -5,7 +5,7 @@ VERSION=${2}
 ENV=${3}
 
 RUN_DIR=`pwd`
-COMMON_VERSION=$(cat ${RUN_DIR}/SSCS_COMMON_VERSION.txt)
+COMMON_VERSION=$(cat ${RUN_DIR}/benefit/SSCS_COMMON_VERSION.txt)
 
 az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
 
