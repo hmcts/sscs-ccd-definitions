@@ -1027,6 +1027,21 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "issueFinalDecision",
+    "Name": "Issue final decision",
+    "Description": "Issue a final decision notice for a case",
+    "DisplayOrder": 147,
+    "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;outcome;readyToList;responseReceived;validAppeal;withDwp",
+    "PostConditionState": "dormantAppealState",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "issueFurtherEvidence",
     "Name": "Issue further evidence",
     "Description": "Issue further evidence",
@@ -1777,9 +1792,8 @@
     "Description": "Write a final decision notice for a case",
     "DisplayOrder": 147,
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;outcome;readyToList;responseReceived;validAppeal;withDwp",
-    "PostConditionState": "dormantAppealState",
+    "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "SecurityClassification": "Public"
