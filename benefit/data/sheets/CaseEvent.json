@@ -1030,7 +1030,7 @@
     "ID": "issueFinalDecision",
     "Name": "Issue final decision",
     "Description": "Issue a final decision notice for a case",
-    "DisplayOrder": 147,
+    "DisplayOrder": 85,
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;outcome;readyToList;responseReceived;validAppeal;withDwp",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
