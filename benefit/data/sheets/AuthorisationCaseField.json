@@ -801,7 +801,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "draftSscsFurtherEvidenceDocument", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "writeFinalDecisionTypeOfHearing", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "writeFinalDecisionPresentingOfficerAttendedQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "writeFinalDecisionPresentingAppellantAttendedQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "writeFinalDecisionAppellantAttendedQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionDailyLivingQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionComparedToDWPDailyLivingQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionMobilityQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
