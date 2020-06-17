@@ -814,6 +814,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "writeFinalDecisionDisabilityQualifiedPanelMemberName", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "writeFinalDecisionMedicallyQualifiedPanelMemberName", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "writeFinalDecisionDateOfDecision", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "writeFinalDecisionDetailsOfDecision", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "writeFinalDecisionReasons", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionDailyLivingActivitiesQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionMobilityActivitiesQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "pipWriteFinalDecisionPreparingFoodQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
