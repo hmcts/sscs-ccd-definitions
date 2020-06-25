@@ -303,6 +303,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_rateAwarded", "ListElementCode": "enhancedRate", "ListElement": "Enhanced rate"},
   {"LiveFrom": "01/01/2018", "ID": "FL_rateAwarded", "ListElementCode": "standardRate", "ListElement": "Standard rate"},
   {"LiveFrom": "01/01/2018", "ID": "FL_rateAwarded", "ListElementCode": "noAward", "ListElement": "No award"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_rateAwarded", "ListElementCode": "notConsidered", "ListElement": "Not Considered"},
   {"LiveFrom": "01/01/2018", "ID": "FL_comparedToDWP", "ListElementCode": "lower", "ListElement": "Lower"},
   {"LiveFrom": "01/01/2018", "ID": "FL_comparedToDWP", "ListElementCode": "same", "ListElement": "Same"},
   {"LiveFrom": "01/01/2018", "ID": "FL_comparedToDWP", "ListElementCode": "higher", "ListElement": "Higher"},
