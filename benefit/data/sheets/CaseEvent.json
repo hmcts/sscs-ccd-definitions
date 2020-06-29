@@ -1254,8 +1254,22 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "reissueDocument",
+    "Name": "Reissue document",
+    "Description": "Reissue document",
+    "DisplayOrder": 101,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "reissueFurtherEvidence",
-    "Name": "Reisssue further evidence",
+    "Name": "Reissue further evidence",
     "Description": "Reissue further evidence",
     "DisplayOrder": 102,
     "PreConditionState(s)": "*",
