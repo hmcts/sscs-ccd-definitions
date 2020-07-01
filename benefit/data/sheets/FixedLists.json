@@ -33,6 +33,7 @@
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "sscs1", "ListElement": "SSCS1"},
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "tl1Form", "ListElement": "TL1 form"},
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "draftDecisionNotice", "ListElement": "Draft Decision Notice"},
+  {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "finalDecisionNotice", "ListElement": "Final Decision Notice"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeFE", "ListElementCode": "Medical evidence", "ListElement": "Medical evidence"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeFE", "ListElementCode": "Other evidence", "ListElement": "Other evidence"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeFE", "ListElementCode": "appellantEvidence", "ListElement": "Appellant evidence"},
