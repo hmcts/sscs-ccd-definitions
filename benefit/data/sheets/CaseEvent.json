@@ -1,5 +1,4 @@
-[
-  {
+[ {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
     "ID": "secondHearingHoldingReminder",
@@ -104,6 +103,20 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "adjournCase",
+    "Name": "Adjourn case",
+    "Description": "Adjourn case",
+    "DisplayOrder": 9,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "hearing",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
     "SecurityClassification": "Public"
   },
   {
