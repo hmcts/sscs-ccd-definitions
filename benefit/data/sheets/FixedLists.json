@@ -319,5 +319,8 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseDaysOffset", "ListElementCode": "0", "ListElement": "Other"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseDaysOffset", "ListElementCode": "28", "ListElement": "28 days"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseDaysOffset", "ListElementCode": "14", "ListElement": "14 days"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseDaysOffset", "ListElementCode": "7", "ListElement": "7 days"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseDaysOffset", "ListElementCode": "7", "ListElement": "7 days"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_panelMembersExcluded", "ListElementCode": "Reserved", "ListElement": "Reserved"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_panelMembersExcluded", "ListElementCode": "No", "ListElement": "No"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_panelMembersExcluded", "ListElementCode": "Yes", "ListElement": "Yes"}
 ]
