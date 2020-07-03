@@ -315,5 +315,9 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_endDateType", "ListElementCode": "setEndDate", "ListElement": "Set end date"},
   {"LiveFrom": "01/01/2018", "ID": "FL_endDateType", "ListElementCode": "indefinite", "ListElement": "Indefinite award"},
   {"LiveFrom": "01/01/2018", "ID": "FL_allowedOrRefused", "ListElementCode": "refused", "ListElement": "Refused"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_allowedOrRefused", "ListElementCode": "allowed", "ListElement": "Allowed"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_allowedOrRefused", "ListElementCode": "allowed", "ListElement": "Allowed"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseDaysOffset", "ListElementCode": "0", "ListElement": "Other"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseDaysOffset", "ListElementCode": "28", "ListElement": "28 days"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseDaysOffset", "ListElementCode": "14", "ListElement": "14 days"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseDaysOffset", "ListElementCode": "7", "ListElement": "7 days"}
 ]
