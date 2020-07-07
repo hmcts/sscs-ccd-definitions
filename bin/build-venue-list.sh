@@ -16,3 +16,5 @@ VENUE_LIST=$(jq -n --raw-input --raw-output '
 VENUE_LIST=$(echo "$VENUE_LIST" | sed 's/[][]//g')
 #Strip slash quotes
 VENUE_LIST=$(echo "$VENUE_LIST" | sed 's/\\"//g')
+#Replace comma space comma with comma
+VENUE_LIST=$(echo "$VENUE_LIST" | sed 's/, ,/,/g')
