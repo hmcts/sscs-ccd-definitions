@@ -577,5 +577,10 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingPeriod", "ListElementCode": "42", "ListElement": "42 days"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingPeriod", "ListElementCode": "28", "ListElement": "28 days"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingTime", "ListElementCode": "pm", "ListElement": "PM"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingTime", "ListElementCode": "am", "ListElement": "AM"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingTime", "ListElementCode": "am", "ListElement": "AM"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDurationType", "ListElementCode": "setTime", "ListElement": "A set time:"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDurationType", "ListElementCode": "standardTimeSlot", "ListElement": "Standard time slot"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDurationUnits", "ListElementCode": "sessions", "ListElement": "Session(s)"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDurationUnits", "ListElementCode": "hours", "ListElement": "Hours"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDurationUnits", "ListElementCode": "minutes", "ListElement": "Minutes:"}
 ]
