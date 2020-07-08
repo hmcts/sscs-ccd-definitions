@@ -80,7 +80,7 @@ case ${ENV} in
     REDIRECT_URI=http://localhost:3451/oauth2redirect
     CCD_STORE_BASE_URL='http://'${DOCKER_HOST_IP}':4451'
     AUTH_PROVIDER_BASE_URL='http://'${DOCKER_HOST_IP}':4502'
-    EM_CCD_ORCHESTRATOR_URL="http://rpa-em-ccd-orchestrator:8060"
+    EM_CCD_ORCHESTRATOR_URL="http://rpa-em-ccd-orchestrator:8080"
     SSCS_CCD_ORCHESTRATOR_URL="http://dockerhost:8070"
     TRIBUNALS_API_URL="http://dockerhost:8080"
     TYA_NOTIFICATIONS_API_URL="http://dockerhost:8081"
@@ -103,6 +103,7 @@ esac
 if [ ${TYPE} == "benefit" ]; then
   FIXED_LIST_USERS=$(cat ${RUN_DIR}/FixedLists_AssignTo_AAT.txt)
   DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/decision-notice-questions.txt)
+  source build-venue-list.sh
 else
   FIXED_LIST_USERS=" "
 fi
@@ -136,6 +137,7 @@ docker run \
   -e "CCD_DEF_COR_BACKEND_URL=${COR_BACKEND_URL}" \
   -e "CCD_DEF_FIXED_LIST_USERS=${FIXED_LIST_USERS}" \
   -e "CCD_DEF_DECISION_NOTICE_QUESTIONS=${DECISION_NOTICE_QUESTIONS}" \
+  -e "CCD_DEF_VENUE_LIST=${VENUE_LIST}" \
   -e "CCD_DEF_TYA_LINK=${TYA_LINK}" \
   -e "CCD_DEF_TYA_APPOINTEE_LINK=${TYA_APPOINTEE_LINK}" \
   -e "CCD_DEF_MYA_LINK=${MYA_LINK}" \
