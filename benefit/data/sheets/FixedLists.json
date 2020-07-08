@@ -563,5 +563,19 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_languages", "ListElementCode": "albanian", "ListElement": "Albanian"},
   {"LiveFrom": "01/01/2018", "ID": "FL_languages", "ListElementCode": "akan", "ListElement": "Akan"},
   {"LiveFrom": "01/01/2018", "ID": "FL_languages", "ListElementCode": "afrikaans", "ListElement": "Afrikaans"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_languages", "ListElementCode": "acholi", "ListElement": "Acholi"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_languages", "ListElementCode": "acholi", "ListElement": "Acholi"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateType", "ListElementCode": "dateToBeFixed", "ListElement": "Date to be fixed"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateType", "ListElementCode": "specificTime", "ListElement": "Specific time"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateType", "ListElementCode": "specificDateAndTime", "ListElement": "Specific date and time"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateType", "ListElementCode": "firstAvailableDateAfter", "ListElement": "First available date after"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateType", "ListElementCode": "firstAvailableDate", "ListElement": "First available date"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateOrPeriod", "ListElementCode": "providePeriod", "ListElement": "Provide period"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateOrPeriod", "ListElementCode": "provideDate", "ListElement": "Provide date"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateOrTime", "ListElementCode": "provideTime", "ListElement": "Provide time"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateOrTime", "ListElementCode": "provideDate", "ListElement": "Provide date"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingPeriod", "ListElementCode": "90", "ListElement": "90 days"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingPeriod", "ListElementCode": "42", "ListElement": "42 days"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingPeriod", "ListElementCode": "28", "ListElement": "28 days"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingTime", "ListElementCode": "pm", "ListElement": "PM"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingTime", "ListElementCode": "am", "ListElement": "AM"}
 ]

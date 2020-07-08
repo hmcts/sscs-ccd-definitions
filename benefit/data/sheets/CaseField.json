@@ -204,5 +204,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseOtherPanelMemberName", "Label": "Other", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseInterpreterRequired", "Label": "Is an interpreter required for the hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseInterpreterLanguage", "Label": "What language do they need to speak?", "FieldType": "FixedList", "FieldTypeParameter": "FL_languages", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseNextHearingDateType", "Label": "When should the next hearing be?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_adjournCaseNextHearingDateType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseNextHearingDateOrPeriod", "Label": "Provide date or period?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_adjournCaseNextHearingDateOrPeriod", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseNextHearingDateOrTime", "Label": "Provide date or time?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_adjournCaseNextHearingDateOrTime", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "adjournCaseNextHearingFirstAvailableDateAfterDate", "Label": "Provide date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "adjournCaseNextHearingFirstAvailableDateAfterPeriod", "Label": "Provide period", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_adjournCaseNextHearingPeriod", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "adjournCaseNextHearingSpecificDate", "Label": "Provide date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "adjournCaseNextHearingSpecificTime", "Label": "Provide time", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_adjournCaseNextHearingTime", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "languagePreferenceWelsh", "Label": "Is the language preference Welsh?", "HintText": "Select \"No\" for English or \"Yes\" for bilingual", "FieldType": "YesOrNo", "SecurityClassification": "Public"}
 ]
