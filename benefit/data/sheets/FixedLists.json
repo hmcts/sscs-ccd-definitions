@@ -571,8 +571,6 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateType", "ListElementCode": "firstAvailableDate", "ListElement": "First available date"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateOrPeriod", "ListElementCode": "providePeriod", "ListElement": "Provide period"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateOrPeriod", "ListElementCode": "provideDate", "ListElement": "Provide date"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateOrTime", "ListElementCode": "provideTime", "ListElement": "Provide time"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateOrTime", "ListElementCode": "provideDate", "ListElement": "Provide date"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingPeriod", "ListElementCode": "90", "ListElement": "90 days"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingPeriod", "ListElementCode": "42", "ListElement": "42 days"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingPeriod", "ListElementCode": "28", "ListElement": "28 days"},
