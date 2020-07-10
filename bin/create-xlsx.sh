@@ -101,7 +101,7 @@ fi
 if [ ${TYPE} == "benefit" ]; then
   FIXED_LIST_USERS=$(cat ${RUN_DIR}/${TYPE}/FixedLists_AssignTo_${FIXED_LISTS_SUFFIX}.txt)
   DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/decision-notice-questions.txt)
-  source build-venue-list.sh
+  source ${RUN_DIR}/bin/build-venue-list.sh
 else
   FIXED_LIST_USERS=" "
 fi
