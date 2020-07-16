@@ -112,7 +112,7 @@
     "Name": "Adjourn case",
     "Description": "Adjourn case",
     "DisplayOrder": 9,
-    "PreConditionState(s)": "*",
+    "PreConditionState(s)": "hearing",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "ShowSummary": "Y",
