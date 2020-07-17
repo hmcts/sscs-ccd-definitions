@@ -84,6 +84,17 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "addHearing",
+    "Name": "Add hearing",
+    "Description": "Add hearing test data",
+    "DisplayOrder": 8,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "addNote",
     "Name": "Add a note",
     "Description": "The online hearing has resolved the case",
