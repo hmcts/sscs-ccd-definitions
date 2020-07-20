@@ -1660,7 +1660,8 @@
     "Description": "Update not listable case",
     "DisplayOrder": 133,
     "PreConditionState(s)": "notListable",
-    "PostConditionState": "*",
+    "PostConditionState": "readyToList",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public"
   },
   {
