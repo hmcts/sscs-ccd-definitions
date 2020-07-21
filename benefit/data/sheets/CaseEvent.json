@@ -1197,8 +1197,10 @@
     "Description": "Case is not listable",
     "DisplayOrder": 96,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "notListable",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public",
+    "ShowSummary": "Y",
     "ShowEventNotes": "Y"
   },
   {
