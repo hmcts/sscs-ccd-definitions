@@ -97,5 +97,5 @@
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "testCreate", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "testCreate", "UserRole": "citizen", "CRUD": "R"},
   {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "testCreate", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
-  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "notListable", "UserRole": "caseworker-sscs-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "notListable", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]
