@@ -582,5 +582,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDurationType", "ListElementCode": "standardTimeSlot", "ListElement": "Standard time slot"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDurationUnits", "ListElementCode": "sessions", "ListElement": "Session(s)"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDurationUnits", "ListElementCode": "hours", "ListElement": "Hours"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDurationUnits", "ListElementCode": "minutes", "ListElement": "Minutes:"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDurationUnits", "ListElementCode": "minutes", "ListElement": "Minutes:"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_interlocNotListable", "ListElementCode": "reviewByTcw", "ListElement": "A TCW"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_interlocNotListable", "ListElementCode": "reviewByJudge", "ListElement": "A Judge"}
 ]
