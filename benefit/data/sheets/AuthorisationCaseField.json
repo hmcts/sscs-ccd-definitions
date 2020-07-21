@@ -863,7 +863,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCaseReasons", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCaseAnythingElse", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCasePreviewDocument", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCaseGeneratedDate", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "languagePreferenceWelsh", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "languagePreferenceWelsh", "UserRole": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "notListableProvideReasons", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "languagePreferenceWelsh", "UserRole": "citizen", "CRUD": "CRUD"}
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "notListableDueDate", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "updateNotListableDirectionsFulfilled", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "updateNotListableInterlocReview", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "updateNotListableWhoReviewsCase", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]
