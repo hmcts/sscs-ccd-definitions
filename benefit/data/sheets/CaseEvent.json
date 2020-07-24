@@ -1676,7 +1676,9 @@
     "PreConditionState(s)": "notListable",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
