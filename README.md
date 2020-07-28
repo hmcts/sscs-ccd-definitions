@@ -50,15 +50,12 @@ If just bumping the patch version (the third number), here's a little trick that
 When a new tag is pushed, it will trigger an Azure Pipeline which will build the new benefit definition importer image and store it in the Azure Container Registry (ACR). In this case, the image will be called
 
     hmctspublic.azurecr.io/sscs/ccd-definition-importer-benefit:5.2.02
-
-## Upload to Confluence
-
 To create the AAT and PROD versions, move to the root of this repository, then run:
 
 ./bin/create-xlsx.sh benefit 5.2.02 aat
 ./bin/create-xlsx.sh benefit 5.2.02 prod
 
-Upload the created AAT and PROD Excel versions to Confluence and put a message on the sscs-ccd slack channel
+Put a message on the sscs-ccd slack channel with the new version
 
 ## Load a CCD definition to your local environment
 

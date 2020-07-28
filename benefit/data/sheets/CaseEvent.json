@@ -108,6 +108,17 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "addHearing",
+    "Name": "Add a hearing",
+    "Description": "Add a hearing to the case",
+    "DisplayOrder": 9,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "adjournCase",
     "Name": "Adjourn case",
     "Description": "Adjourn case",
