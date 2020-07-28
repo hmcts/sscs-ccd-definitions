@@ -1,0 +1,28 @@
+[
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "notListable",
+    "Name": "Not listable",
+    "Description": "Case is not listable",
+    "DisplayOrder": 96,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "notListable",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "updateNotListable",
+    "Name": "Update not listable case",
+    "Description": "Update not listable case",
+    "DisplayOrder": 133,
+    "PreConditionState(s)": "notListable",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "SecurityClassification": "Public"
+  }
+]
