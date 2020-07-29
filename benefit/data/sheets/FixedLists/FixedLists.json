@@ -160,8 +160,6 @@
   {"LiveFrom": "22/10/2019", "ID": "FL_dwpStates", "ListElementCode": "directionActionRequired", "ListElement": "Direction - action req'd"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "UnRegistered", "ListElement": "Appeal to-be registered"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "Registered", "ListElement": "Appeal registered (DWP)"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "finalDecisionIssued", "ListElement": "Final decision issued"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "adjournmentNotice", "ListElement": "Adjournment notice"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpFurtherEvidenceStates", "ListElementCode": "furtherEvidenceReceived", "ListElement": "Further evidence received"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpFurtherEvidenceStates", "ListElementCode": "noAction", "ListElement": "No action"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpFurtherEvidenceStates", "ListElementCode": "supplementarySubmission", "ListElement": "Supplementary submission"},
