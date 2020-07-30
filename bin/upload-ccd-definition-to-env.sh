@@ -110,6 +110,8 @@ fi
 
 echo "Importing: ${VERSION}"
 
+excludedFilenamePatterns="-e *-prod.json"
+
 docker run \
   --name sscs-ccd-importer-to-env \
   --rm \
@@ -145,6 +147,8 @@ docker run \
   -e "CCD_DEF_MYA_APPOINTEE_LINK=${MYA_APPOINTEE_LINK}" \
   -e "CCD_DEF_E=${CCD_ENV}" \
   -e "USER_ROLES=citizen, caseworker-sscs, caseworker-sscs-systemupdate, caseworker-sscs-anonymouscitizen, caseworker-sscs-callagent, caseworker-sscs-judge, caseworker-sscs-clerk, caseworker-sscs-dwpresponsewriter, caseworker-sscs-registrar, caseworker-sscs-superuser, caseworker-sscs-teamleader, caseworker-sscs-panelmember, caseworker-sscs-bulkscan" \
-  hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION}
+  hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION} \
+  sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_v${VERSION}_${UPPERCASE_ENV}.xlsx"
+
 
 echo Finished
