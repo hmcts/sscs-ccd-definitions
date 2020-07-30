@@ -5,22 +5,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "notListable", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "issueFinalDecision", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "updateNotListable", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "writeFinalDecision", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminAppealWithdrawn", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToAppealCreated", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToDormantAppealState", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToDraft", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToDraftArchived", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToHearing", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToIncompleteApplication", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToIncompleteApplicationInformationReqsted", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToInterlocutoryReviewState", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToOutcome", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToPendingAppeal", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToReadyToList", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendTorRsponseReceived", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToValidAppeal", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToVoidState", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToWithDwp", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminUpdateEvent", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "writeFinalDecision", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]
