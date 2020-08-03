@@ -292,7 +292,7 @@
     "Name": "Admin Appeal Withdrawn",
     "Description": "Admin Appeal Withdrawn",
     "DisplayOrder": 24,
-    "PreConditionState(s)": "appealCreated;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;testCreate;validAppeal;incompleteApplicationVoidState;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;validAppeal;incompleteApplicationVoidState;voidState;withDwp",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
@@ -1340,7 +1340,7 @@
     "Name": "Resend case to GAPS 2",
     "Description": "Re-sends the case to GAPS 2",
     "DisplayOrder": 106,
-    "PreConditionState(s)": "appealCreated;hearing;readyToList;responseReceived;testCreate;validAppeal;incompleteApplicationVoidState;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;hearing;readyToList;responseReceived;validAppeal;incompleteApplicationVoidState;voidState;withDwp",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
