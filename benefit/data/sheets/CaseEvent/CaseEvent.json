@@ -292,7 +292,7 @@
     "Name": "Admin Appeal Withdrawn",
     "Description": "Admin Appeal Withdrawn",
     "DisplayOrder": 24,
-    "PreConditionState(s)": "appealCreated;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;validAppeal;incompleteApplicationVoidState;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;validAppeal;voidState;withDwp",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
@@ -1340,7 +1340,7 @@
     "Name": "Resend case to GAPS 2",
     "Description": "Re-sends the case to GAPS 2",
     "DisplayOrder": 106,
-    "PreConditionState(s)": "appealCreated;hearing;readyToList;responseReceived;validAppeal;incompleteApplicationVoidState;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;hearing;readyToList;responseReceived;validAppeal;voidState;withDwp",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
@@ -1742,7 +1742,7 @@
     "Name": "Upload further evidence",
     "Description": "Upload further evidence for pre-valid interloc",
     "DisplayOrder": 141,
-    "PreConditionState(s)": "incompleteApplication;incompleteApplicationVoidState;incompleteApplicationInformationReqsted;interlocutoryReviewState",
+    "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
@@ -1826,7 +1826,7 @@
     "Description": "Void non-valid appeal (Deprecated)",
     "DisplayOrder": 147,
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted",
-    "PostConditionState": "incompleteApplicationVoidState",
+    "PostConditionState": "voidState",
     "SecurityClassification": "Public"
   },
   {
