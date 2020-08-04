@@ -55,6 +55,7 @@
   {"LiveFrom": "27/01/2018", "CaseTypeID": "Benefit", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "sscsStrikeOutDocument", "TabFieldDisplayOrder": 4},
   {"LiveFrom": "28/01/2018", "CaseTypeID": "Benefit", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "sscsInterlocDirectionDocument", "TabFieldDisplayOrder": 5},
   {"LiveFrom": "28/01/2018", "CaseTypeID": "Benefit", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "directionResponse", "TabFieldDisplayOrder": 6},
+  {"LiveFrom": "28/01/2018", "CaseTypeID": "Benefit", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "sscsWelshDocuments", "TabFieldDisplayOrder": 7},
   {"LiveFrom": "29/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "historicSscsInterlocDirectionDocs", "TabFieldDisplayOrder": 7},
   {"LiveFrom": "01/03/2018", "CaseTypeID": "Benefit", "TabID": "hearingsInfo_sscs", "TabLabel": "Panel and Hearings", "TabDisplayOrder": 8, "CaseFieldID": "panel", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "02/03/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "hearingsInfo_sscs", "TabLabel": "Panel and Hearings", "TabDisplayOrder": 8, "CaseFieldID": "hearings", "TabFieldDisplayOrder": 1},
