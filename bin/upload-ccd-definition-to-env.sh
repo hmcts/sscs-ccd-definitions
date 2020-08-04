@@ -147,4 +147,5 @@ docker run \
   -e "USER_ROLES=citizen, caseworker-sscs, caseworker-sscs-systemupdate, caseworker-sscs-anonymouscitizen, caseworker-sscs-callagent, caseworker-sscs-judge, caseworker-sscs-clerk, caseworker-sscs-dwpresponsewriter, caseworker-sscs-registrar, caseworker-sscs-superuser, caseworker-sscs-teamleader, caseworker-sscs-panelmember, caseworker-sscs-bulkscan" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION}
 
+
 echo Finished

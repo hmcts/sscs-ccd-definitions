@@ -31,7 +31,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "addSCnumber", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "addSCnumber", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminAppealWithdrawn", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRU"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminAppealWithdrawn", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminAppealWithdrawn", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2017", "CaseTypeID": "Benefit", "CaseEventID": "adminAppealWithdrawn", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRU"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "adminAppealWithdrawn", "UserRole": "caseworker-sscs-registrar", "CRUD": "CRU"},
@@ -59,13 +58,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToIncompleteApplicationInformationReqsted", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToInterlocutoryReviewState", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToInterlocutoryReviewState", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRU"},
-  {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToInterlocutoryReviewState", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
-  {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToInterlocutoryReviewState", "UserRole": "caseworker-sscs-judge", "CRUD": "R"},
-  {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToInterlocutoryReviewState", "UserRole": "caseworker-sscs-registrar", "CRUD": "R"},
   {"LiveFrom": "11/11/2019", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToInterlocutoryReviewState", "UserRole": "caseworker-sscs", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToOutcome", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToOutcome", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRU"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToOutcome", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToPendingAppeal", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToPendingAppeal", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToPendingAppeal", "UserRole": "caseworker-sscs", "CRUD": "R"},
@@ -686,5 +679,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "uploadDocumentFurtherEvidence", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "RU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "uploadDocumentFurtherEvidence", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "uploadDocumentFurtherEvidence", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "uploadDocumentFurtherEvidence", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "uploadDocumentFurtherEvidence", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "uploadWelshDocument", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]
