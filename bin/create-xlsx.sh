@@ -108,6 +108,12 @@ fi
 
 UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
 
+if [ ${ENV} == "prod" ]; then
+  excludedFilenamePatterns="-e *-nonprod.json"
+else
+  excludedFilenamePatterns="-e *-prod.json"
+fi
+
 docker run -ti --rm --name json2xlsx \
   -v $(pwd)/releases:/tmp \
   -e "CCD_DEF_EM_CCD_ORCHESTRATOR_URL=${EM_CCD_ORCHESTRATOR_URL}" \
@@ -127,4 +133,4 @@ docker run -ti --rm --name json2xlsx \
   -e "CCD_DEF_VENUE_LIST=${VENUE_LIST}" \
   -e "CCD_DEF_E=${UPPERCASE_ENV}" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION} \
-  sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_v${VERSION}_${UPPERCASE_ENV}.xlsx"
+  sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_v${VERSION}_${UPPERCASE_ENV}.xlsx"
