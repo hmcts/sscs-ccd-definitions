@@ -101,5 +101,17 @@
     "PageLabel": "Next state",
     "PageShowCondition": "updateNotListableSetNewDueDate=\"No\"",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "19/11/2019",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "updateLanguage",
+    "CaseFieldID": "languagePreferenceWelsh",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "OPTIONAL",
+    "PageID": "1.0",
+    "PageLabel": "Update Language",
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Y"
   }
 ]
