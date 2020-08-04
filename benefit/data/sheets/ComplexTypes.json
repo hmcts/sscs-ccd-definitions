@@ -127,8 +127,6 @@
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "documentComment", "FieldType": "Text", "ElementLabel": "Comment", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "evidenceIssued", "FieldType": "YesOrNo", "ElementLabel": "Evidence issued", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "30/07/2018", "ID": "sscsDocument", "ListElementCode": "bundleAddition", "FieldType": "Text", "ElementLabel": "Bundle addition", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "originalDocumentFileName", "FieldType": "Text", "ElementLabel": "Original Document File name", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "documentLanguage", "FieldType": "FixedList", "FieldTypeParameter": "documentLanguage" ,"ElementLabel": "documentLanguage", "ElementLabel": "Language", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "documentTranslationStatus", "FieldType": "FixedList",  "FieldTypeParameter": "documentTranslationStatus" ,"ElementLabel": "documentTranslationStatus", "ElementLabel": "Translation Status", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
@@ -254,7 +252,7 @@
   {"LiveFrom": "01/01/2018", "ID": "ScannedDocument", "ListElementCode": "scannedDate", "FieldType": "DateTime", "ElementLabel": "Scanned Date", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "ScannedDocument", "ListElementCode": "exceptionRecordReference", "FieldType": "Text", "ElementLabel": "Exception Record Reference", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "ScannedDocument", "ListElementCode": "subtype", "FieldType": "Text", "ElementLabel": "Document Subtype", "SecurityClassification": "Public"},
-  {"LiveFrom": "01/01/2018", "ID": "ScannedDocument", "ListElementCode": "deliveryDate", "FieldType": "DateTime", "ElementLabel": "Delivery Date", "SecurityClassification": "Public"},
+    {"LiveFrom": "01/01/2018", "ID": "ScannedDocument", "ListElementCode": "deliveryDate", "FieldType": "DateTime", "ElementLabel": "Delivery Date", "SecurityClassification": "Public"},
   {"LiveFrom": "18/06/2019", "ID": "dwpResponseDocumentCT", "ListElementCode": "dwpResponseDocumentTitle", "FieldType": "Label", "ElementLabel": "Secretary of State's response", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "dwpResponseDocumentCT", "ListElementCode": "documentFileName", "FieldType": "Text", "ElementLabel": "Evidence bundle file name", "FieldShowCondition": "dwpResponseDocumentTitle=\"AnyValueToFailThisCondition\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "dwpResponseDocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document", "SecurityClassification": "PUBLIC"},
@@ -288,5 +286,11 @@
   {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "from", "FieldType": "Text", "ElementLabel": "From", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "to", "FieldType": "Text", "ElementLabel": "To", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document url", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "correspondenceType", "FieldType": "FixedList", "FieldTypeParameter": "correspondenceType", "ElementLabel": "Correspondence type", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "correspondenceType", "FieldType": "FixedList", "FieldTypeParameter": "correspondenceType", "ElementLabel": "Correspondence type", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "sscsWelshDocuments", "ListElementCode": "documentType", "FieldType": "FixedList", "FieldTypeParameter": "documentTypeWelsh", "ElementLabel": "Document type", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "sscsWelshDocuments", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document Url", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "sscsWelshDocuments", "ListElementCode": "documentLanguage", "FieldType": "FixedList", "FieldTypeParameter": "documentLanguage", "ElementLabel": "Language", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "sscsWelshDocuments", "ListElementCode": "documentFileName", "FieldType": "Text", "ElementLabel": "Document File name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "sscsWelshDocuments", "ListElementCode": "documentComment", "FieldType": "Text", "ElementLabel": "Comment", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "sscsWelshDocuments", "ListElementCode": "originalDocumentFileName", "FieldType": "Text", "ElementLabel": "Original Document File name", "SecurityClassification": "PUBLIC"}
 ]
