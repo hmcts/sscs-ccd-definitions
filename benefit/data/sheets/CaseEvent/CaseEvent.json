@@ -992,7 +992,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
     "ID": "issueAdjournment",
-    "Name": "Issue adjournment",
+    "Name": "Issue adjournment notice",
     "Description": "Send an adjournment notice",
     "DisplayOrder": 82,
     "PreConditionState(s)": "hearing",
