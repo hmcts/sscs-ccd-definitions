@@ -463,7 +463,7 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "CaseEventID": "issueAdjournment",
+    "CaseEventID": "issueAdjournmentNotice",
     "CaseFieldID": "adjournCasePreviewDocument",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "MANDATORY",
