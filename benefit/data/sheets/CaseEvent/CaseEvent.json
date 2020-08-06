@@ -137,7 +137,7 @@
     "ID": "adminSendToAppealCreated",
     "Name": "Admin - send to Appeal Created",
     "DisplayOrder": 10,
-    "PreConditionState(s)": "dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;validAppeal;voidState;withDwp",
+    "PreConditionState(s)": "dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp",
     "PostConditionState": "appealCreated",
     "SecurityClassification": "Public"
   },
@@ -147,7 +147,7 @@
     "ID": "adminSendToDormantAppealState",
     "Name": "Admin - send to Dormant",
     "DisplayOrder": 11,
-    "PreConditionState(s)": "appealCreated;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;validAppeal;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public"
@@ -158,7 +158,7 @@
     "ID": "adminSendToDraft",
     "Name": "Admin - send to Draft",
     "DisplayOrder": 12,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;validAppeal;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;dormantAppealState;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp",
     "PostConditionState": "draft",
     "SecurityClassification": "Public"
   },
@@ -168,7 +168,7 @@
     "ID": "adminSendToDraftArchived",
     "Name": "Admin - send to Draft Archived",
     "DisplayOrder": 13,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;validAppeal;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp",
     "PostConditionState": "draftArchived",
     "SecurityClassification": "Public"
   },
@@ -178,7 +178,7 @@
     "ID": "adminSendToHearing",
     "Name": "Admin - send to Hearing",
     "DisplayOrder": 14,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;validAppeal;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp",
     "PostConditionState": "hearing",
     "SecurityClassification": "Public"
   },
@@ -188,7 +188,7 @@
     "ID": "adminSendToIncompleteApplication",
     "Name": "Admin - send to Incomplete App",
     "DisplayOrder": 15,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;validAppeal;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp",
     "PostConditionState": "incompleteApplication",
     "SecurityClassification": "Public"
   },
@@ -198,7 +198,7 @@
     "ID": "adminSendToIncompleteApplicationInformationReqsted",
     "Name": "Admin - send to Info Req'd",
     "DisplayOrder": 16,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;validAppeal;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp",
     "PostConditionState": "incompleteApplicationInformationReqsted",
     "SecurityClassification": "Public"
   },
@@ -208,7 +208,7 @@
     "ID": "adminSendToInterlocutoryReviewState",
     "Name": "Admin - send to Interloc",
     "DisplayOrder": 17,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;pendingAppeal;readyToList;responseReceived;validAppeal;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;readyToList;responseReceived;validAppeal;voidState;withDwp",
     "PostConditionState": "interlocutoryReviewState",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
@@ -217,20 +217,10 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "adminSendToPendingAppeal",
-    "Name": "Admin - send to Pending Appeal",
-    "DisplayOrder": 18,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp",
-    "PostConditionState": "pendingAppeal",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
     "ID": "adminSendToReadyToList",
     "Name": "Admin - send to Ready to List",
     "DisplayOrder": 19,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;responseReceived;validAppeal;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;responseReceived;validAppeal;voidState;withDwp",
     "PostConditionState": "readyToList",
     "SecurityClassification": "Public"
   },
@@ -240,7 +230,7 @@
     "ID": "adminSendTorRsponseReceived",
     "Name": "Admin - send to Response Rec'd",
     "DisplayOrder": 20,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;validAppeal;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;validAppeal;voidState;withDwp",
     "PostConditionState": "responseReceived",
     "SecurityClassification": "Public"
   },
@@ -250,7 +240,7 @@
     "ID": "adminSendToValidAppeal",
     "Name": "Admin - send to Valid",
     "DisplayOrder": 21,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;voidState;withDwp",
     "PostConditionState": "validAppeal",
     "SecurityClassification": "Public"
   },
@@ -260,7 +250,7 @@
     "ID": "adminSendToVoidState",
     "Name": "Admin - send to Void",
     "DisplayOrder": 22,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;validAppeal;withDwp",
+    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;withDwp",
     "PostConditionState": "voidState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public"
@@ -271,7 +261,7 @@
     "ID": "adminSendToWithDwp",
     "Name": "Admin - send to With DWP",
     "DisplayOrder": 23,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;validAppeal;voidState",
+    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState",
     "PostConditionState": "withDwp",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public"
@@ -293,7 +283,7 @@
     "Name": "Admin Appeal Withdrawn",
     "Description": "Admin Appeal Withdrawn",
     "DisplayOrder": 24,
-    "PreConditionState(s)": "appealCreated;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;validAppeal;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
@@ -992,7 +982,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
     "ID": "issueAdjournment",
-    "Name": "Issue adjournment",
+    "Name": "Issue adjournment notice",
     "Description": "Send an adjournment notice",
     "DisplayOrder": 82,
     "PreConditionState(s)": "hearing",
@@ -1088,7 +1078,7 @@
     "Name": "Issue Generic letter",
     "Description": "Issue Generic letter",
     "DisplayOrder": 87,
-    "PreConditionState(s)": "appealCreated;closed;dormantAppealState;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;pendingAppeal;readyToList;responseReceived;validAppeal;withDwp",
+    "PreConditionState(s)": "appealCreated;closed;dormantAppealState;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;withDwp",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
@@ -1709,7 +1699,7 @@
     "Name": "Upload document FE",
     "Description": "Upload document Further Evidence",
     "DisplayOrder": 138,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;hearing;pendingAppeal;readyToList;responseReceived;validAppeal;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;voidState;withDwp",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public"

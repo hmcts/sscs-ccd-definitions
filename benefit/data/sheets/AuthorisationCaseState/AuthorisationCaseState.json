@@ -78,9 +78,5 @@
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "closed", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "closed", "UserRole": "citizen", "CRUD": "R"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "closed", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
-  {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "pendingAppeal", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "pendingAppeal", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "pendingAppeal", "UserRole": "citizen", "CRUD": "R"},
-  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "pendingAppeal", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "draftArchived", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
 ]
