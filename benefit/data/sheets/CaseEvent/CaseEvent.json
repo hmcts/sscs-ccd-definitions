@@ -1854,18 +1854,5 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
-    "ID": "uploadWelshDocument",
-    "Name": "Upload Welsh document",
-    "Description": "Upload Welsh document",
-    "DisplayOrder": 143,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
-    "SecurityClassification": "Public"
   }
 ]
