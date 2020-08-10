@@ -39,5 +39,18 @@
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "decisionIssuedWelsh",
+    "Name": "Welsh issue decision",
+    "Description": "Send a Welsh decision notice",
+    "DisplayOrder": 144,
+    "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp",
+    "PostConditionState": "dormantAppealState",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
+    "SecurityClassification": "Public"
   }
 ]
