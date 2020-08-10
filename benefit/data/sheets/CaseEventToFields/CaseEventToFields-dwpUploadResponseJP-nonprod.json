@@ -13,7 +13,7 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "jointPartyFirstName",
+    "CaseFieldID": "jointPartyTitle",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
@@ -21,6 +21,43 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyName",
     "PageLabel": "Enter their name",
+    "PageShowCondition": "jointParty=\"Yes\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyFirstName",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 6,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "jointPartyName",
+    "PageLabel": "Enter their name",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyLastName",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 6,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "jointPartyName",
+    "PageLabel": "Enter their name",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyDob",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 7,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "jointPartyDob",
+    "PageLabel": "Enter their DOB",
     "PageShowCondition": "jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   }
