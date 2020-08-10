@@ -101,5 +101,27 @@
     "PageLabel": "Next state",
     "PageShowCondition": "updateNotListableSetNewDueDate=\"No\"",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "uploadWelshDocument",
+    "CaseFieldID": "originalDocuments",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "OPTIONAL",
+    "PageID": "1.0",
+    "PageLabel": "Upload Welsh documents",
+    "PageDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "uploadWelshDocument",
+    "CaseFieldID": "sscsWelshPreviewDocuments",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "OPTIONAL",
+    "PageID": "1.0",
+    "PageLabel": "Upload Welsh documents",
+    "PageDisplayOrder": 1
   }
 ]
