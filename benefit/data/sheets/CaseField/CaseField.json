@@ -242,5 +242,6 @@
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyFirstName", "Label": "First name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyLastName", "Label": "Last name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyDob", "Label": "Enter their DOB", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyNino", "Label": "Enter their National Insurance number", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyNino", "Label": "Enter their National Insurance number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyIsAddressSameAsAppellant", "Label": "Is their address the same as the appellant's?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
