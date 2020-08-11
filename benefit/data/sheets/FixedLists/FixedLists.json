@@ -627,5 +627,14 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_elementsDisputed", "ListElementCode": "housing", "ListElement": "Housing"},
   {"LiveFrom": "01/01/2018", "ID": "FL_elementsDisputed", "ListElementCode": "standardAllowanceOverpayment", "ListElement": "Standard allowance - overpayment"},
   {"LiveFrom": "01/01/2018", "ID": "FL_elementsDisputed", "ListElementCode": "standardAllowanceSanctions", "ListElement": "Standard allowance - sanctions"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_elementsDisputed", "ListElementCode": "general", "ListElement": "General"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_elementsDisputed", "ListElementCode": "general", "ListElement": "General"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_titles", "ListElementCode": "reverend", "ListElement": "Reverend"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_titles", "ListElementCode": "doctor", "ListElement": "Doctor"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_titles", "ListElementCode": "madam", "ListElement": "Madam"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_titles", "ListElementCode": "sir", "ListElement": "Sir"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_titles", "ListElementCode": "mrandmrs", "ListElement": "Mr & Mrs"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_titles", "ListElementCode": "ms", "ListElement": "Ms"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_titles", "ListElementCode": "miss", "ListElement": "Miss"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_titles", "ListElementCode": "mrs", "ListElement": "Mrs"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_titles", "ListElementCode": "mr", "ListElement": "Mr"}
 ]
