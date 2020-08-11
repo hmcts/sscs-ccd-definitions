@@ -1,5 +1,5 @@
 [
-  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "TabID": "language_sscs", "TabLabel": "Welsh", "TabDisplayOrder": 21, "CaseFieldID": "languagePreferenceWelsh", "TabFieldDisplayOrder": 1},
-  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "TabID": "language_sscs", "TabLabel": "Welsh", "TabDisplayOrder": 21, "CaseFieldID": "translationWorkOutstanding", "TabFieldDisplayOrder": 2},
+  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "TabID": "language_sscs", "TabLabel": "Welsh", "TabDisplayOrder": 22, "CaseFieldID": "languagePreferenceWelsh", "TabFieldDisplayOrder": 1, "TabShowCondition": "languagePreferenceWelsh=\"Yes\""},
+  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "TabID": "language_sscs", "TabLabel": "Welsh", "TabDisplayOrder": 22, "CaseFieldID": "translationWorkOutstanding", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "28/01/2018", "CaseTypeID": "Benefit", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "sscsWelshDocuments", "TabFieldDisplayOrder": 7}
 ]
