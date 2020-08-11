@@ -1,6 +1,6 @@
 [
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "translationWorkOutstanding", "Label": "Is there document translation work outstanding?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "originalDocuments", "Label": "Original Documents", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "originalDocuments", "Label": "Original documents", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sscsWelshDocuments", "Label": "Welsh documents", "FieldType": "Collection", "FieldTypeParameter": "sscsWelshDocuments", "RegularExpression": "No", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sscsWelshPreviewDocuments", "Label": "Welsh Preview documents", "FieldType": "Collection", "FieldTypeParameter": "sscsWelshDocuments", "RegularExpression": "No", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sscsWelshPreviewDocuments", "Label": "Welsh preview documents", "FieldType": "Collection", "FieldTypeParameter": "sscsWelshDocuments", "RegularExpression": "No", "SecurityClassification": "PUBLIC"}
 ]
