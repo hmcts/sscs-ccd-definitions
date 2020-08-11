@@ -127,5 +127,18 @@
     "PageID": "decisionDisputedByOthers",
     "PageLabel": "Disputed",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "elementsDisputedLinkedAppealRef",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "decisionDisputedByOthers",
+    "PageLabel": "Disputed",
+    "FieldShowCondition": "elementsDisputedIsDecisionDisputedByOthers = \"Yes\"",
+    "ShowSummaryChangeOption": "Y"
   }
 ]
