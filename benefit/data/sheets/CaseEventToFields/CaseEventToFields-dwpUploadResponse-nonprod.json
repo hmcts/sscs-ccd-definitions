@@ -140,5 +140,30 @@
     "PageLabel": "Disputed",
     "FieldShowCondition": "elementsDisputedIsDecisionDisputedByOthers = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointParty",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 5,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "isThereAJointParty",
+    "PageLabel": "Is there a joint party on this case?",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyFirstName",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 6,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "jointPartyName",
+    "PageLabel": "Enter their name",
+    "PageShowCondition": "jointParty=\"Yes\"",
+    "ShowSummaryChangeOption": "Y"
   }
 ]
