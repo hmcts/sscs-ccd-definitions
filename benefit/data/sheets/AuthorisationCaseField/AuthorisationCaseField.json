@@ -892,5 +892,5 @@
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyLastName", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyDob", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyNino", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyIsAddressSameAsAppellant", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyAddressSameAsAppellant", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]
