@@ -149,8 +149,8 @@
     "LiveFrom": "19/11/2019",
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 1,
-    "PageID": "isThereAJointParty",
-    "PageLabel": "Is there a joint party on this case?",
+    "PageID": "jointParty",
+    "PageLabel": "Joint Party",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -205,6 +205,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "jointPartyNino",
     "CaseTypeID": "Benefit",
@@ -214,6 +215,19 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyNino",
     "PageLabel": "Enter their National Insurance number",
+    "PageShowCondition": "jointParty=\"Yes\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyAddressSameAsAppellant",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 9,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "jointPartyAddress",
+    "PageLabel": "Joint Party Address",
     "PageShowCondition": "jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   }
