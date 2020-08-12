@@ -191,6 +191,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "jointPartyDob",
     "CaseTypeID": "Benefit",
@@ -200,6 +201,19 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyDob",
     "PageLabel": "Enter their DOB",
+    "PageShowCondition": "jointParty=\"Yes\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyNino",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 8,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "jointPartyNino",
+    "PageLabel": "Enter their National Insurance number",
     "PageShowCondition": "jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   }
