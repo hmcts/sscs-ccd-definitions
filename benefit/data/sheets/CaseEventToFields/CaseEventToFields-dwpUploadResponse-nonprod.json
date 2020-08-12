@@ -226,7 +226,7 @@
     "LiveFrom": "19/11/2019",
     "PageDisplayOrder": 9,
     "PageFieldDisplayOrder": 1,
-    "PageID": "jointPartyIsAddressSameAsAppellant",
+    "PageID": "jointPartyAddressSameAsAppellant",
     "PageLabel": "Is their address the same as the appellant's?",
     "PageShowCondition": "jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
