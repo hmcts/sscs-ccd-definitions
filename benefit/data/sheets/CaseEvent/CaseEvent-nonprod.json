@@ -70,24 +70,38 @@
   {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "Benefit",
-    "ID": "updateLanguage",
-    "Name": "Update Language",
-    "Description": "Update Language",
+    "ID": "updateWelshPreference",
+    "Name": "Update Welsh Preference",
+    "Description": "Update Welsh Preference",
     "DisplayOrder": 151,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
     "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
     "ID": "requestTranslationFromWLU",
-    "Name": "Request Translation from WLU",
-    "Description": "Request Translation from WLU",
+    "Name": "Request translation from WLU",
+    "Description": "Request translation from WLU",
     "DisplayOrder": 152,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "cancelTranslations",
+    "Name": "Cancel Translations",
+    "Description": "Cancel Translations",
+    "DisplayOrder": 153,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
     "SecurityClassification": "Public"
   }
 ]

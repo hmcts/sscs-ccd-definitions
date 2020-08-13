@@ -127,12 +127,12 @@
   {
     "LiveFrom": "19/11/2019",
     "CaseTypeID": "Benefit",
-    "CaseEventID": "updateLanguage",
+    "CaseEventID": "updateWelshPreference",
     "CaseFieldID": "languagePreferenceWelsh",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "OPTIONAL",
     "PageID": "1.0",
-    "PageLabel": "Update Language",
+    "PageLabel": "Update Welsh Preference",
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "Y"
   }
