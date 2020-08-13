@@ -222,6 +222,8 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "WI", "ListElement": "WI"},
   {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "WC", "ListElement": "WC"},
   {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "VW", "ListElement": "VW"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "US", "ListElement": "US"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "UM", "ListElement": "UM"},
   {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "UC", "ListElement": "UC"},
   {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "TP", "ListElement": "TP"},
   {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "TL", "ListElement": "TL"},
