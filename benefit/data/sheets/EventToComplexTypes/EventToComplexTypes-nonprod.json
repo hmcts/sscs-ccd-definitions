@@ -214,18 +214,6 @@
   {
     "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "jointPartyAddress",
-    "ListElementCode": "line1",
-    "ID": "jointPartyAddressLine1",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "jointPartyAddress",
-    "PageLabel": "Joint Party Address",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "jointPartyAddress",
     "ListElementCode": "line2",
     "ID": "jointPartyAddressLine2",
     "DisplayContext": "OPTIONAL",
