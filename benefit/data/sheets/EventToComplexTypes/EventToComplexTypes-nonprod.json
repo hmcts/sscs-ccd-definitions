@@ -198,5 +198,77 @@
     "PageLabel": "Elements disputed",
     "FieldShowCondition": "elementsDisputedChildDisabled.issueCode=\"doNotUse\"",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyAddress",
+    "ListElementCode": "line1",
+    "ID": "jointPartyAddressLine1",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 2,
+    "PageID": "jointPartyAddress",
+    "PageLabel": "Joint Party Address",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyAddress",
+    "ListElementCode": "line1",
+    "ID": "jointPartyAddressLine1",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 2,
+    "PageID": "jointPartyAddress",
+    "PageLabel": "Joint Party Address",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyAddress",
+    "ListElementCode": "line2",
+    "ID": "jointPartyAddressLine2",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 3,
+    "PageID": "jointPartyAddress",
+    "PageLabel": "Joint Party Address",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyAddress",
+    "ListElementCode": "town",
+    "ID": "jointPartyAddressTown",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 4,
+    "PageID": "jointPartyAddress",
+    "PageLabel": "Joint Party Address",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyAddress",
+    "ListElementCode": "county",
+    "ID": "jointPartyAddressCounty",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 5,
+    "PageID": "jointPartyAddress",
+    "PageLabel": "Joint Party Address",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyAddress",
+    "ListElementCode": "postcode",
+    "ID": "jointPartyAddressPostcode",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 6,
+    "PageID": "jointPartyAddress",
+    "PageLabel": "Joint Party Address",
+    "ShowSummaryChangeOption": "Y"
   }
 ]
