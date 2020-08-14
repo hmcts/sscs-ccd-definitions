@@ -549,6 +549,16 @@
     "PageLabel": "Case Details"
   },
   {
+    "CaseEventID": "appealCreated",
+    "CaseFieldID": "isScottishCase",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 8,
+    "PageID": "1.0"
+  },
+  {
     "CaseEventID": "assignToJudge",
     "CaseFieldID": "assignedToDisabilityMember",
     "CaseTypeID": "Benefit",
@@ -700,6 +710,16 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 7,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "isScottishCase",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 8,
     "PageID": "1.0"
   },
   {
@@ -1088,7 +1108,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
     "PageLabel": "Incomplete appeal"
   },
@@ -1099,7 +1119,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
     "PageID": "1.0",
     "PageLabel": "Incomplete appeal"
   },
@@ -1110,7 +1130,18 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "1.0",
+    "PageLabel": "Incomplete appeal"
+  },
+  {
+    "CaseEventID": "incompleteApplicationReceived",
+    "CaseFieldID": "isScottishCase",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
     "PageID": "1.0",
     "PageLabel": "Incomplete appeal"
   },
@@ -1339,6 +1370,16 @@
     "PageLabel": "Create appeal"
   },
   {
+    "CaseEventID": "nonCompliant",
+    "CaseFieldID": "isScottishCase",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "PageLabel": "Create appeal"
+  },
+  {
     "CaseEventID": "adminSendToInterlocutoryReviewState",
     "CaseFieldID": "interlocReferralReason",
     "CaseTypeID": "Benefit",
@@ -1561,6 +1602,17 @@
     "PageLabel": "Relisting reason"
   },
   {
+    "CaseEventID": "updateHearingType",
+    "CaseFieldID": "isScottishCase",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0",
+    "PageLabel": "Is Scottish Case"
+  },
+  {
     "CaseEventID": "updateIncompleteApplication",
     "CaseFieldID": "appeal",
     "CaseTypeID": "Benefit",
@@ -1570,6 +1622,17 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Incomplete appeal"
+  },
+  {
+    "CaseEventID": "updateIncompleteApplication",
+    "CaseFieldID": "isScottishCase",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "PageLabel": "Is Scottish Case"
   },
   {
     "CaseEventID": "uploadCorDocument",
@@ -1807,6 +1870,17 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 5,
+    "PageID": "1.0",
+    "PageLabel": "Case Details"
+  },
+  {
+    "CaseEventID": "validAppealCreated",
+    "CaseFieldID": "isScottishCase",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 8,
     "PageID": "1.0",
     "PageLabel": "Case Details"
   },
