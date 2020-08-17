@@ -189,13 +189,13 @@
   {"LiveFrom": "01/01/2018", "ID": "appellantInfoRequestDetails", "ListElementCode": "appellantInfoRequestDate", "FieldType": "Date", "ElementLabel": "Date of request", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "infoRequestsCT", "ListElementCode": "appellantInfoRequestCollection", "FieldType": "Collection", "FieldTypeParameter": "appellantInfoRequestDetails", "ElementLabel": "Information requests", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsInterlocDecisionDocument", "ListElementCode": "documentType", "FieldType": "FixedList", "FieldTypeParameter": "FL_InterlocDecision", "ElementLabel": "Type", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "sscsInterlocDecisionDocument", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document Url", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "sscsInterlocDecisionDocument", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document Url", "HintText":"All documents must be PDF formatted", "RegularExpression": ".pdf", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsInterlocDecisionDocument", "ListElementCode": "documentDateAdded", "FieldType": "Date", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsInterlocDecisionDocument", "ListElementCode": "documentFileName", "FieldType": "Text", "ElementLabel": "File name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interlocDecision", "ListElementCode": "interlocDecisionDocument", "FieldType": "Collection", "FieldTypeParameter": "sscsInterlocDecisionDocument", "ElementLabel": "Interloc decision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interlocDecisions", "ListElementCode": "interlocDecisionsCollection", "FieldType": "Collection", "FieldTypeParameter": "interlocDecision", "ElementLabel": "Interloc Decisions", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsInterlocDirectionDocument", "ListElementCode": "documentType", "FieldType": "FixedList", "FieldTypeParameter": "FL_InterlocDirection", "ElementLabel": "Type", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "sscsInterlocDirectionDocument", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document Url", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "sscsInterlocDirectionDocument", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document Url", "HintText":"All documents must be PDF formatted", "RegularExpression": ".pdf", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsInterlocDirectionDocument", "ListElementCode": "documentDateAdded", "FieldType": "Date", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsInterlocDirectionDocument", "ListElementCode": "documentFileName", "FieldType": "Text", "ElementLabel": "File name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "tl1FormCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document for upload", "SecurityClassification": "PUBLIC"},
@@ -285,5 +285,7 @@
   {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "from", "FieldType": "Text", "ElementLabel": "From", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "to", "FieldType": "Text", "ElementLabel": "To", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document url", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "correspondenceType", "FieldType": "FixedList", "FieldTypeParameter": "correspondenceType", "ElementLabel": "Correspondence type", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "correspondenceType", "FieldType": "FixedList", "FieldTypeParameter": "correspondenceType", "ElementLabel": "Correspondence type", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "elementAndIssueCode", "ListElementCode": "issueCode", "FieldType": "FixedList", "FieldTypeParameter": "FL_issueCodesUc", "ElementLabel": "Issue code", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "elementAndIssueCode", "ListElementCode": "outcome", "FieldType": "Text", "ElementLabel": "Outcome", "SecurityClassification": "PUBLIC"}
 ]
