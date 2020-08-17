@@ -8,6 +8,7 @@
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "directionDueDate", "Label": "Response due date", "DisplayOrder": 7},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "createdInGapsFrom", "Label": "Is a new digital case?", "DisplayOrder": 8},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "appeal", "ListElementCode": "hearingType", "Label": "Hearing type", "DisplayOrder": 9},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "isScottishCase", "Label": "Is a Scottish case?", "DisplayOrder": 10},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "[CASE_REFERENCE]", "Label": "CCD case number", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "appeal", "ListElementCode": "appellant.name.lastName", "Label": "Appellant surname", "DisplayOrder": 2},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "appeal", "ListElementCode": "appellant.identity.nino", "Label": "NINO", "DisplayOrder": 3},
