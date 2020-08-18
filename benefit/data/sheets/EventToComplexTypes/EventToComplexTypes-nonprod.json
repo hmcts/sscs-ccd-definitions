@@ -201,19 +201,7 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "jointPartyName",
-    "ListElementCode": "title",
-    "ID": "jointPartyNameTitle",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 1,
-    "PageID": "jointPartyAddress",
-    "PageLabel": "Joint Party Address",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "jointPartyNameFirstName",
+    "CaseFieldID": "jointPartyNameNoTitle",
     "ListElementCode": "firstName",
     "ID": "jointPartyNameFirstName",
     "DisplayContext": "MANDATORY",
@@ -225,7 +213,7 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "jointPartyName",
+    "CaseFieldID": "jointPartyNameNoTitle",
     "ListElementCode": "lastName",
     "ID": "jointPartyNameLastName",
     "DisplayContext": "MANDATORY",
@@ -233,6 +221,30 @@
     "FieldDisplayOrder": 3,
     "PageID": "jointPartyName",
     "PageLabel": "Enter their name",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyIdentity",
+    "ListElementCode": "dob",
+    "ID": "jointPartyIdentityDob",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1,
+    "PageID": "jointPartyIdentity",
+    "PageLabel": "Joint Party Identity Details",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyIdentity",
+    "ListElementCode": "nino",
+    "ID": "jointPartyIdentityNino",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 2,
+    "PageID": "jointPartyIdentity",
+    "PageLabel": "Joint Party Identity Details",
     "ShowSummaryChangeOption": "Y"
   },
   {
