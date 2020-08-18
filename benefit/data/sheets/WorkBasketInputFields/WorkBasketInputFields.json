@@ -34,5 +34,6 @@
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "documentSentToDwp", "Label": "Documents sent to DWP?", "DisplayOrder": 6},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "directionDueDate", "Label": "Response due date", "DisplayOrder": 7},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "createdInGapsFrom", "Label": "Is a new digital case?", "DisplayOrder": 8},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "appeal", "ListElementCode": "hearingType", "Label": "Hearing type", "DisplayOrder": 9}
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "appeal", "ListElementCode": "hearingType", "Label": "Hearing type", "DisplayOrder": 9},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "isScottishCase", "Label": "Is a Scottish case?", "DisplayOrder": 10}
 ]
