@@ -201,6 +201,42 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyName",
+    "ListElementCode": "title",
+    "ID": "jointPartyNameTitle",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1,
+    "PageID": "jointPartyAddress",
+    "PageLabel": "Joint Party Address",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyNameFirstName",
+    "ListElementCode": "firstName",
+    "ID": "jointPartyNameFirstName",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 2,
+    "PageID": "jointPartyName",
+    "PageLabel": "Enter their name",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "jointPartyName",
+    "ListElementCode": "lastName",
+    "ID": "jointPartyNameLastName",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 3,
+    "PageID": "jointPartyName",
+    "PageLabel": "Enter their name",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "jointPartyAddress",
     "ListElementCode": "line1",
     "ID": "jointPartyAddressLine1",
