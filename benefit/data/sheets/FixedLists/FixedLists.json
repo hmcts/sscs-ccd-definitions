@@ -1,6 +1,5 @@
 [${CCD_DEF_FIXED_LIST_USERS},
   ${CCD_DEF_DECISION_NOTICE_QUESTIONS},
-  ${CCD_DEF_VENUE_LIST},
   {"LiveFrom": "01/01/2018", "ID": "eventType", "ListElementCode": "appealCreated", "ListElement": "Appeal Created"},
   {"LiveFrom": "01/01/2018", "ID": "eventType", "ListElementCode": "updateCaseData", "ListElement": "Case Updated"},
   {"LiveFrom": "01/01/2018", "ID": "eventType", "ListElementCode": "appealLapsed", "ListElement": "Appeal Lapsed"},
