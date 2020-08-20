@@ -259,5 +259,55 @@
     "FieldDisplayOrder": 6,
     "PageID": "jointPartyAddress",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "jointPartyAddress",
+    "ListElementCode": "line1",
+    "ID": "jointPartyAddressLine1",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "jointPartyAddress",
+    "ListElementCode": "line2",
+    "ID": "jointPartyAddressLine2",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 2,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "jointPartyAddress",
+    "ListElementCode": "town",
+    "ID": "jointPartyAddressTown",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 3,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "jointPartyAddress",
+    "ListElementCode": "county",
+    "ID": "jointPartyAddressCounty",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 4,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "jointPartyAddress",
+    "ListElementCode": "postcode",
+    "ID": "jointPartyAddressPostcode",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 5,
+    "PageID": "1.0"
   }
 ]
