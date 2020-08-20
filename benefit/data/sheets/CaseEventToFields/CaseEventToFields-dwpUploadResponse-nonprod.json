@@ -150,32 +150,20 @@
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 1,
     "PageID": "jointParty",
-    "PageLabel": "Joint Party",
+    "PageLabel": "Joint party",
     "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "jointPartyTitle",
+    "CaseFieldID": "jointPartyName",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
     "PageDisplayOrder": 6,
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyName",
-    "PageLabel": "Enter their name",
+    "PageLabel": "Joint party name",
     "PageShowCondition": "jointParty=\"Yes\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "jointPartyNameNoTitle",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "COMPLEX",
-    "LiveFrom": "19/11/2019",
-    "PageDisplayOrder": 6,
-    "PageFieldDisplayOrder": 2,
-    "PageID": "jointPartyName",
-    "PageLabel": "Enter their name",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -188,7 +176,7 @@
     "PageDisplayOrder": 7,
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyIdentity",
-    "PageLabel": "Joing Party Identity Details",
+    "PageLabel": "Joint party identity details",
     "PageShowCondition": "jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
@@ -202,7 +190,7 @@
     "PageDisplayOrder": 8,
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyAddress",
-    "PageLabel": "Joint Party Address",
+    "PageLabel": "Joint party address",
     "PageShowCondition": "jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
@@ -215,7 +203,6 @@
     "PageDisplayOrder": 8,
     "PageFieldDisplayOrder": 2,
     "PageID": "jointPartyAddress",
-    "PageLabel": "Joint Party Address",
     "FieldShowCondition": "jointPartyAddressSameAsAppellant=\"No\"",
     "ShowSummaryChangeOption": "Y"
   }
