@@ -179,38 +179,5 @@
     "PageID": "1.0",
     "PageLabel": "Create Welsh Notice",
     "PageDisplayOrder": 1
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
-    "CaseEventID": "createWelshNotice",
-    "CaseFieldID": "signedBy",
-    "PageFieldDisplayOrder": 5,
-    "DisplayContext": "MANDATORY",
-    "PageID": "1.0",
-    "PageLabel": "Create Welsh Notice",
-    "PageDisplayOrder": 1
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
-    "CaseEventID": "createWelshNotice",
-    "CaseFieldID": "signedRole",
-    "PageFieldDisplayOrder": 6,
-    "DisplayContext": "MANDATORY",
-    "PageID": "1.0",
-    "PageLabel": "Create Welsh Notice",
-    "PageDisplayOrder": 1
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
-    "CaseEventID": "createWelshNotice",
-    "CaseFieldID": "dateAdded",
-    "PageFieldDisplayOrder": 7,
-    "DisplayContext": "OPTIONAL",
-    "PageID": "1.0",
-    "PageLabel": "Create Welsh Notice",
-    "PageDisplayOrder": 1
   }
 ]
