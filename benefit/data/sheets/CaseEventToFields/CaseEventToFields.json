@@ -239,6 +239,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEventAdjournCasePopulateVenueDropdown",
     "CaseEventID": "adjournCase",
     "CaseFieldID": "adjournCaseTypeOfNextHearing",
     "CaseTypeID": "Benefit",
@@ -624,7 +625,7 @@
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
     "PageID": "2.0",
-    "PageLabel": "Corespondance"
+    "PageLabel": "Correspondence"
   },
   {
     "CaseEventID": "attachScannedDocs",
@@ -635,7 +636,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Corespondance"
+    "PageLabel": "Correspondence"
   },
   {
     "CaseEventID": "caseUpdated",
