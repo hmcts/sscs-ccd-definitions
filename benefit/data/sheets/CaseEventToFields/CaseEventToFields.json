@@ -1913,7 +1913,7 @@
     "CaseEventID": "directionIssued",
     "CaseFieldID": "directionDueDate",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "directionTypeDl!=\"refuseExtension\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
