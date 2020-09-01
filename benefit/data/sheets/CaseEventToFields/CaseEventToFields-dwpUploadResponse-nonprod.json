@@ -137,7 +137,7 @@
     "LiveFrom": "19/11/2019",
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 1,
-    "PageShowCondition": "dwpUploadResponseDynamicBenefitType = \"uc\"",
+    "PageShowCondition": "dynamicBenefitType = \"uc\"",
     "PageID": "decisionDisputedByOthers",
     "PageLabel": "Disputed",
     "ShowSummaryChangeOption": "Y"
