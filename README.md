@@ -148,4 +148,3 @@ and judge.json file presented below:
   }
 ]
 located in AuthorisationCaseField directory that corresponds the XLS tab name.
-
