@@ -22,13 +22,16 @@ Note:- local environment should have Python 3.0 or above version
 
 Then, tag the master branch. Find the latest tag and bump by one. This tag does not relate to the version of either the benefit or bulkscan definitions. It is only the version
 of this repository and does have any effect outside of that.
-
-    git tag 1.0.18
-    git push --tags
     
-If just bumping the patch version (the third number), here's a little trick that will figure it out and tag it automatically.
+This little trick that will figure it out and tag automatically:
 
     git tag $(git describe --tags --abbrev=0 | awk -F. '{OFS="."}; {$NF+=1; print $0}')
+    git push --tags
+    
+Run this command to manually bump the version number
+NOTE: PLEASE DO NOT TRY TO KEEP THE CCD VERSION NUMBER AND THE TAGGED VERSION NUMBER IN SYNC AS IT CREATES CONFUSION AS THEY FREQUENTLY GET OUT OF SYNC
+
+    git tag 1.0.18
     git push --tags
     
 When a new tag is pushed, it will trigger an Azure Pipeline which will build the new benefit definition importer image and store it in the Azure Container Registry (ACR). In this case, the image will be called
@@ -148,4 +151,3 @@ and judge.json file presented below:
   }
 ]
 located in AuthorisationCaseField directory that corresponds the XLS tab name.
-
