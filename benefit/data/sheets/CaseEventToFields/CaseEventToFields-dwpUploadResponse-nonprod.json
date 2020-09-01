@@ -1,7 +1,7 @@
 [
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "dwpUploadResponseDynamicBenefitType",
+    "CaseFieldID": "dynamicBenefitType",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
@@ -19,7 +19,7 @@
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
     "PageID": "elementsDisputed",
-    "PageShowCondition": "dwpUploadResponseDynamicBenefitType = \"uc\"",
+    "PageShowCondition": "dynamicBenefitType = \"uc\"",
     "PageLabel": "Elements disputed",
     "ShowSummaryChangeOption": "N"
   },
@@ -33,7 +33,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
     "PageLabel": "Issue codes",
-    "PageShowCondition": "dwpUploadResponseDynamicBenefitType = \"uc\"",
+    "PageShowCondition": "dynamicBenefitType = \"uc\"",
     "FieldShowCondition": "elementsDisputedList CONTAINS \"general\"",
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "ShowSummaryChangeOption": "Y"
@@ -163,7 +163,7 @@
     "LiveFrom": "19/11/2019",
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 1,
-    "PageShowCondition": "dwpUploadResponseDynamicBenefitType = \"uc\"",
+    "PageShowCondition": "dynamicBenefitType = \"uc\"",
     "PageID": "jointParty",
     "PageLabel": "Joint party",
     "ShowSummaryChangeOption": "Y"
@@ -178,7 +178,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyName",
     "PageLabel": "Joint party name",
-    "PageShowCondition": "dwpUploadResponseDynamicBenefitType = \"uc\" AND jointParty=\"Yes\"",
+    "PageShowCondition": "dynamicBenefitType = \"uc\" AND jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -192,7 +192,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyIdentity",
     "PageLabel": "Joint party identity details",
-    "PageShowCondition": "dwpUploadResponseDynamicBenefitType = \"uc\" AND jointParty=\"Yes\"",
+    "PageShowCondition": "dynamicBenefitType = \"uc\" AND jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -206,7 +206,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyAddress",
     "PageLabel": "Joint party address",
-    "PageShowCondition": "dwpUploadResponseDynamicBenefitType = \"uc\" AND jointParty=\"Yes\"",
+    "PageShowCondition": "dynamicBenefitType = \"uc\" AND jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
