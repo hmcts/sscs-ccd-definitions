@@ -11,6 +11,11 @@
   {"LiveFrom": "01/01/2018", "ID": "hearingOptions", "ListElementCode": "other", "FieldType": "Text", "ElementLabel": "Other Information", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingOptions", "ListElementCode": "signLanguageType", "FieldType": "Text", "ElementLabel": "Sign languages", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingOptions", "ListElementCode": "agreeLessNotice", "FieldType": "YesOrNo", "ElementLabel": "Agree less notice of hearing availability", "FieldShowCondition": "wantsToAttend=\"Yes\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingSubtype", "ListElementCode": "wantsHearingTypeTelephone", "FieldType": "YesOrNo", "ElementLabel": "Wants hearing type telephone", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingSubtype", "ListElementCode": "hearingTelephoneNumber", "FieldType": "Text", "ElementLabel": "Hearing telephone number", "FieldShowCondition": "wantsHearingTypeTelephone=\"Yes\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingSubtype", "ListElementCode": "wantsHearingTypeVideo", "FieldType": "YesOrNo", "ElementLabel": "Wants hearing type video", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingSubtype", "ListElementCode": "hearingVideoEmail", "FieldType": "Text", "ElementLabel": "Hearing video email address", "FieldShowCondition": "wantsHearingTypeVideo=\"Yes\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingSubtype", "ListElementCode": "wantsHearingTypeFaceToFace", "FieldType": "YesOrNo", "ElementLabel": "Wants hearing type face to face", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "benefit", "ListElementCode": "code", "FieldType": "Text", "ElementLabel": "Benefit Code", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "benefit", "ListElementCode": "description", "FieldType": "Text", "ElementLabel": "Benefit Description", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appealReason", "ListElementCode": "reason", "FieldType": "Text", "ElementLabel": "Reason", "SecurityClassification": "PUBLIC"},
@@ -97,6 +102,7 @@
   {"LiveFrom": "01/01/2018", "ID": "appeal", "ListElementCode": "appellant", "FieldType": "appellant", "ElementLabel": "Appellant Details", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appeal", "ListElementCode": "benefitType", "FieldType": "benefit", "ElementLabel": "Benefit Type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appeal", "ListElementCode": "hearingType", "FieldType": "FixedList", "FieldTypeParameter": "hearingType", "ElementLabel": "Hearing Type", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "appeal", "ListElementCode": "hearingSubtype", "FieldType": "hearingSubtype", "ElementLabel": "Hearing Subtype", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appeal", "ListElementCode": "hearingOptions", "FieldType": "hearingOptions", "ElementLabel": "Hearing Options", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appeal", "ListElementCode": "appealReasons", "FieldType": "appealReasons", "ElementLabel": "Appeal Reasons", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appeal", "ListElementCode": "supporter", "FieldType": "supporter", "ElementLabel": "Supporter Details", "SecurityClassification": "PUBLIC"},
@@ -290,12 +296,6 @@
   {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document url", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "correspondenceType", "FieldType": "FixedList", "FieldTypeParameter": "correspondenceType", "ElementLabel": "Correspondence type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "elementAndIssueCode", "ListElementCode": "issueCode", "FieldType": "FixedList", "FieldTypeParameter": "FL_issueCodesUc", "ElementLabel": "Issue code", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "elementAndIssueCode", "ListElementCode": "outcome", "FieldType": "Text", "ElementLabel": "Outcome", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hearingSubtype", "ListElementCode": "wantsHearingTypeTelephone", "FieldType": "YesOrNo", "ElementLabel": "Wants hearing type telephone", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hearingSubtype", "ListElementCode": "hearingTelephoneNumber", "FieldType": "Text", "ElementLabel": "Hearing telephone number", "FieldShowCondition": "wantsHearingTypeTelephone=\"Yes\"", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hearingSubtype", "ListElementCode": "wantsHearingTypeVideo", "FieldType": "YesOrNo", "ElementLabel": "Wants hearing type video", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hearingSubtype", "ListElementCode": "hearingVideoEmail", "FieldType": "Text", "ElementLabel": "Hearing video email address", "FieldShowCondition": "wantsHearingTypeVideo=\"Yes\"", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hearingSubtype", "ListElementCode": "wantsHearingTypeFaceToFace", "FieldType": "YesOrNo", "ElementLabel": "Wants hearing type face to face", "SecurityClassification": "PUBLIC"}
-
+  {"LiveFrom": "01/01/2018", "ID": "elementAndIssueCode", "ListElementCode": "outcome", "FieldType": "Text", "ElementLabel": "Outcome", "SecurityClassification": "PUBLIC"}
 ]
 
