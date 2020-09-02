@@ -1,6 +1,17 @@
 [
   {
     "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "dynamicBenefitType",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 0,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "elementsDisputedList",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -8,6 +19,7 @@
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
     "PageID": "elementsDisputed",
+    "PageShowCondition": "dynamicBenefitType = \"uc\"",
     "PageLabel": "Elements disputed",
     "ShowSummaryChangeOption": "N"
   },
@@ -21,6 +33,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
     "PageLabel": "Issue codes",
+    "PageShowCondition": "dynamicBenefitType = \"uc\"",
     "FieldShowCondition": "elementsDisputedList CONTAINS \"general\"",
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "ShowSummaryChangeOption": "Y"
@@ -124,6 +137,7 @@
     "LiveFrom": "19/11/2019",
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 1,
+    "PageShowCondition": "dynamicBenefitType = \"uc\"",
     "PageID": "decisionDisputedByOthers",
     "PageLabel": "Disputed",
     "ShowSummaryChangeOption": "Y"
@@ -149,6 +163,7 @@
     "LiveFrom": "19/11/2019",
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 1,
+    "PageShowCondition": "dynamicBenefitType = \"uc\"",
     "PageID": "jointParty",
     "PageLabel": "Joint party",
     "ShowSummaryChangeOption": "Y"
@@ -163,7 +178,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyName",
     "PageLabel": "Joint party name",
-    "PageShowCondition": "jointParty=\"Yes\"",
+    "PageShowCondition": "dynamicBenefitType = \"uc\" AND jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -177,7 +192,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyIdentity",
     "PageLabel": "Joint party identity details",
-    "PageShowCondition": "jointParty=\"Yes\"",
+    "PageShowCondition": "dynamicBenefitType = \"uc\" AND jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -191,7 +206,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyAddress",
     "PageLabel": "Joint party address",
-    "PageShowCondition": "jointParty=\"Yes\"",
+    "PageShowCondition": "dynamicBenefitType = \"uc\" AND jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
