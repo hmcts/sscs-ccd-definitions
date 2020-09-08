@@ -111,6 +111,7 @@
   {"LiveFrom": "01/01/2018", "ID": "subscriptions", "ListElementCode": "appellantSubscription", "FieldType": "subscription", "ElementLabel": "Appellant Subscription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "subscriptions", "ListElementCode": "representativeSubscription", "FieldType": "subscription", "ElementLabel": "Representative Subscription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "subscriptions", "ListElementCode": "appointeeSubscription", "FieldType": "subscription", "ElementLabel": "Appointee Subscription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "subscriptions", "ListElementCode": "jointPartySubscription", "FieldType": "subscription", "ElementLabel": "Joint Party Subscription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "subscriptions", "ListElementCode": "supporterSubscription", "FieldType": "subscription", "ElementLabel": "Supporter Subscription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "evidence", "ListElementCode": "gpConsent", "FieldType": "YesOrNo", "ElementLabel": "GP Consent Given", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "evidence", "ListElementCode": "documents", "FieldType": "Collection", "FieldTypeParameter": "doc", "ElementLabel": "Evidence Documentation", "SecurityClassification": "PUBLIC"},
