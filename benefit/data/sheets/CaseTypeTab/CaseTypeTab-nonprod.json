@@ -3,9 +3,8 @@
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "TabID": "language_sscs", "TabLabel": "Welsh", "TabDisplayOrder": 22, "CaseFieldID": "translationWorkOutstanding", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "28/01/2018", "CaseTypeID": "Benefit", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "sscsWelshDocuments", "TabFieldDisplayOrder": 7},
   {"LiveFrom": "16/09/2019", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "pcqId", "TabFieldDisplayOrder": 30},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "previousState", "TabFieldDisplayOrder": 20},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "reinstatementRegistered", "TabFieldDisplayOrder": 21},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "reinstatementOutcome", "TabFieldDisplayOrder": 22}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "reinstatementOutcome", "TabFieldDisplayOrder": 22}
 ]
 
 
