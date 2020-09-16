@@ -2549,9 +2549,9 @@
   {
     "CaseEventID": "adminRestoreCases",
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEventAdminRestoreCases",
-    "CaseFieldID": "dummyTextField",
+    "CaseFieldID": "restoreCasesDate",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "Optional",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
