@@ -2545,5 +2545,18 @@
     "PageID": "1.0",
     "PageLabel": "Action a new representative",
     "ShowSummaryChangeOption": "N"
+  },
+  {
+    "CaseEventID": "adminRestoreCases",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEventAdminRestoreCases",
+    "CaseFieldID": "dummyTextField",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "Optional",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Restore Cases",
+    "ShowSummaryChangeOption": "N"
   }
 ]
