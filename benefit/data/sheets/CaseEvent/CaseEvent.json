@@ -134,6 +134,17 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "adminRestoreCases",
+    "Name": "Admin - Restore cases",
+    "Description": "Admin - Restore cases",
+    "DisplayOrder": 10,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "adminSendToAppealCreated",
     "Name": "Admin - send to Appeal Created",
     "DisplayOrder": 10,
