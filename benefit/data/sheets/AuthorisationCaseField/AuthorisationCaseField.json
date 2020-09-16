@@ -901,5 +901,5 @@
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyAddress", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "dynamicBenefitType", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "isScottishCase", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "dummyTextField", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "restoreCasesDate", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]
