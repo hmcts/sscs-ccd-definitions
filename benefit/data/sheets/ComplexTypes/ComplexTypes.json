@@ -297,5 +297,21 @@
   {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document url", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "correspondenceType", "FieldType": "FixedList", "FieldTypeParameter": "correspondenceType", "ElementLabel": "Correspondence type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "elementAndIssueCode", "ListElementCode": "issueCode", "FieldType": "FixedList", "FieldTypeParameter": "FL_issueCodesUc", "ElementLabel": "Issue code", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "elementAndIssueCode", "ListElementCode": "outcome", "FieldType": "Text", "ElementLabel": "Outcome", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "elementAndIssueCode", "ListElementCode": "outcome", "FieldType": "Text", "ElementLabel": "Outcome", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2020",
+    "ID": "BulkScanEnvelope",
+    "ListElementCode": "id",
+    "FieldType": "Text",
+    "ElementLabel": "ID",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2020",
+    "ID": "BulkScanEnvelope",
+    "ListElementCode": "action",
+    "FieldType": "Text",
+    "ElementLabel": "Action",
+    "SecurityClassification": "PUBLIC"
+  }
 ]
