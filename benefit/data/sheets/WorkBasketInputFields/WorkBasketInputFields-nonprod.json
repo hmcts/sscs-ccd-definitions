@@ -1,6 +1,0 @@
-[
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "languagePreferenceWelsh", "Label": "Welsh language flag", "DisplayOrder": 10},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "languagePreferenceWelsh", "Label": "Welsh language flag", "DisplayOrder": 10},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "translationWorkOutstanding", "Label": "Translation outstanding", "DisplayOrder": 11},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "translationWorkOutstanding", "Label": "Translation outstanding", "DisplayOrder": 11}
-]
