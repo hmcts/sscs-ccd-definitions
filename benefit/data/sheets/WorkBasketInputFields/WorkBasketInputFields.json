@@ -35,5 +35,9 @@
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "directionDueDate", "Label": "Response due date", "DisplayOrder": 7},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "createdInGapsFrom", "Label": "Is a new digital case?", "DisplayOrder": 8},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "appeal", "ListElementCode": "hearingType", "Label": "Hearing type", "DisplayOrder": 9},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "isScottishCase", "Label": "Is a Scottish case?", "DisplayOrder": 10}
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "isScottishCase", "Label": "Is a Scottish case?", "DisplayOrder": 10},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "languagePreferenceWelsh", "Label": "Welsh language flag", "DisplayOrder": 10},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "languagePreferenceWelsh", "Label": "Welsh language flag", "DisplayOrder": 10},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "translationWorkOutstanding", "Label": "Translation outstanding", "DisplayOrder": 11},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "translationWorkOutstanding", "Label": "Translation outstanding", "DisplayOrder": 11}
 ]
