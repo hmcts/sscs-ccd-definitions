@@ -899,5 +899,20 @@
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyAddressSameAsAppellant", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyAddress", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "dynamicBenefitType", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "isScottishCase", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "isScottishCase", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2020", "CaseTypeID": "Benefit", "CaseFieldID": "bulkScanEnvelopes", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2020", "CaseTypeID": "Benefit", "CaseFieldID": "bulkScanEnvelopes", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2020", "CaseTypeID": "Benefit", "CaseFieldID": "bulkScanEnvelopes", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "translationWorkOutstanding", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "translationWorkOutstanding", "UserRole": "citizen", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "sscsWelshDocuments", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "sscsWelshPreviewDocuments", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "originalDocuments", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "sscsWelshPreviewNextEvent", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "originalNoticeDocuments", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "documentTypes", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "welshBodyContent", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "englishBodyContent", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "welshInterlocNextReviewState", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "restoreCasesDate", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]
