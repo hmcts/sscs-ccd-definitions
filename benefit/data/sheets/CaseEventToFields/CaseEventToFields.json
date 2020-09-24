@@ -2621,5 +2621,18 @@
     "PageID": "1.0",
     "PageLabel": "Create Welsh Notice",
     "PageDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "adminRestoreCases",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEventAdminRestoreCases",
+    "CaseFieldID": "restoreCasesDate",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Restore Cases",
+    "ShowSummaryChangeOption": "N"
   }
 ]
