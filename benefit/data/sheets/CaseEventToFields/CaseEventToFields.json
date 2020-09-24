@@ -394,28 +394,15 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    ",ShowSummaryChangeOption": "Y",
     "CaseEventID": "adjournCase",
-    "CaseFieldID": "adjournCaseNextHearingSpecificDate",
+    "CaseFieldID": "adjournCaseTime",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "adjournCaseNextHearingDateType = \"specificDateAndTime\"",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "adjournCaseNextHearingDateType = \"specificTime\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 6,
-    "PageID": "whenShouldNextHearingBe",
-    "PageLabel": "When should the next hearing be?",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    ",ShowSummaryChangeOption": "Y",
-    "CaseEventID": "adjournCase",
-    "CaseFieldID": "adjournCaseNextHearingSpecificTime",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "adjournCaseNextHearingDateType = \"specificTime\" OR adjournCaseNextHearingDateType = \"specificDateAndTime\"",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 12,
-    "PageFieldDisplayOrder": 7,
     "PageID": "whenShouldNextHearingBe",
     "PageLabel": "When should the next hearing be?"
   },
