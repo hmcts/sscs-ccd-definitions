@@ -1,17 +1,6 @@
 [
-  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "translationWorkOutstanding", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "translationWorkOutstanding", "UserRole": "citizen", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "sscsWelshDocuments", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "sscsWelshPreviewDocuments", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "originalDocuments", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "sscsWelshPreviewNextEvent", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "originalNoticeDocuments", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "documentTypes", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "welshBodyContent", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "englishBodyContent", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "reinstatementRegistered", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "reinstatementRegistered", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "reinstatementOutcome", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "reinstatementOutcome", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "welshInterlocNextReviewState", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "reinstatementOutcome", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
 ]
