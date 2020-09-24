@@ -171,7 +171,6 @@
     "PageLabel": "Panel members",
     "ShowSummaryChangeOption": "Y"
   },
-
   {
     "CaseEventID": "adjournCase",
     "CaseFieldID": "adjournCaseTypeOfHearing",
@@ -277,7 +276,6 @@
     "PageLabel": "Next hearing venue",
     "ShowSummaryChangeOption": "Y"
   },
-
   {
     "CaseEventID": "adjournCase",
     "CaseFieldID": "adjournCaseNextHearingListingDurationType",
@@ -2545,6 +2543,84 @@
     "PageID": "1.0",
     "PageLabel": "Action a new representative",
     "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "uploadWelshDocument",
+    "CaseFieldID": "originalDocuments",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "OPTIONAL",
+    "PageID": "1.0",
+    "PageLabel": "Upload Welsh documents",
+    "PageDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "uploadWelshDocument",
+    "CaseFieldID": "sscsWelshPreviewDocuments",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "OPTIONAL",
+    "PageID": "1.0",
+    "PageLabel": "Upload Welsh documents",
+    "PageDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "19/11/2019",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "updateWelshPreference",
+    "CaseFieldID": "languagePreferenceWelsh",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "OPTIONAL",
+    "PageID": "1.0",
+    "PageLabel": "Update Welsh Preference",
+    "PageDisplayOrder": 1,
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "createWelshNotice",
+    "CaseFieldID": "originalNoticeDocuments",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "MANDATORY",
+    "PageID": "1.0",
+    "PageLabel": "Create Welsh Notice",
+    "PageDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "createWelshNotice",
+    "CaseFieldID": "documentTypes",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "MANDATORY",
+    "PageID": "1.0",
+    "PageLabel": "Create Welsh Notice",
+    "PageDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "createWelshNotice",
+    "CaseFieldID": "englishBodyContent",
+    "PageFieldDisplayOrder": 3,
+    "DisplayContext": "MANDATORY",
+    "PageID": "1.0",
+    "PageLabel": "Create Welsh Notice",
+    "PageDisplayOrder": 1
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "createWelshNotice",
+    "CaseFieldID": "welshBodyContent",
+    "PageFieldDisplayOrder": 4,
+    "DisplayContext": "MANDATORY",
+    "PageID": "1.0",
+    "PageLabel": "Create Welsh Notice",
+    "PageDisplayOrder": 1
   },
   {
     "CaseEventID": "adminRestoreCases",
