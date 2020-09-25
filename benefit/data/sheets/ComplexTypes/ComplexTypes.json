@@ -282,6 +282,10 @@
   {"LiveFrom": "26/06/2019", "ID": "directionResponsedDocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document for upload", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "26/06/2019", "ID": "directionResponsedDocumentCT", "ListElementCode": "documentType", "FieldType": "FixedList", "FieldTypeParameter": "documentType", "ElementLabel": "Select document type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "26/06/2019", "ID": "directionResponseColl", "ListElementCode": "directionResponses", "FieldType": "Collection", "FieldTypeParameter": "directionResponsedDocumentCT", "ElementLabel": "-", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "26/06/2019", "ID": "adjournCaseTimeCT", "ListElementCode": "adjournCaseNextHearingFirstOnSession", "FieldType": "MultiSelectList", "ElementLabel": " ", "FieldTypeParameter": "FL_adjournCaseFirstOnSession", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "26/06/2019", "ID": "adjournCaseTimeCT", "ListElementCode": "adjournCaseNextHearingSpecificTime", "FieldType": "FixedRadioList", "ElementLabel": "Provide time", "FieldTypeParameter": "FL_adjournCaseNextHearingTime", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "ID": "interlocWaiver", "ListElementCode": "isWaiverNeeded", "FieldType": "YesOrNo", "ElementLabel": "Is a waiver being issues for the case?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interlocWaiver", "ListElementCode": "waiverDeclaration", "FieldType": "MultiSelectList", "FieldTypeParameter": "FL_waiverDeclaration", "ElementLabel": "Declaration", "FieldShowCondition": "isWaiverNeeded=\"Yes\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interlocWaiver", "ListElementCode": "waiverReason", "FieldType": "MultiSelectList", "FieldTypeParameter": "FL_nonCompliantRequirements", "ElementLabel": "I have identified the following requirements as being non compliant:-", "FieldShowCondition": "isWaiverNeeded=\"Yes\"", "SecurityClassification": "PUBLIC"},
