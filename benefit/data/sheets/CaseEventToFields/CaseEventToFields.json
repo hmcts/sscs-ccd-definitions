@@ -394,28 +394,15 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    ",ShowSummaryChangeOption": "Y",
     "CaseEventID": "adjournCase",
-    "CaseFieldID": "adjournCaseNextHearingSpecificDate",
+    "CaseFieldID": "adjournCaseTime",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "adjournCaseNextHearingDateType = \"specificDateAndTime\"",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "adjournCaseNextHearingDateType = \"specificTime\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 6,
-    "PageID": "whenShouldNextHearingBe",
-    "PageLabel": "When should the next hearing be?",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    ",ShowSummaryChangeOption": "Y",
-    "CaseEventID": "adjournCase",
-    "CaseFieldID": "adjournCaseNextHearingSpecificTime",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "adjournCaseNextHearingDateType = \"specificTime\" OR adjournCaseNextHearingDateType = \"specificDateAndTime\"",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 12,
-    "PageFieldDisplayOrder": 7,
     "PageID": "whenShouldNextHearingBe",
     "PageLabel": "When should the next hearing be?"
   },
@@ -2621,5 +2608,18 @@
     "PageID": "1.0",
     "PageLabel": "Create Welsh Notice",
     "PageDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "adminRestoreCases",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEventAdminRestoreCases",
+    "CaseFieldID": "restoreCasesDate",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Restore Cases",
+    "ShowSummaryChangeOption": "N"
   }
 ]
