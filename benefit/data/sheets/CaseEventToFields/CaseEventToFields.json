@@ -2655,7 +2655,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
     "PageID": "1.0",
-    "FieldShowCondition": "confidentialityRequestOutcomeAppellant = \"IN_PROGRESS\"",
+    "FieldShowCondition": "confidentialityRequestOutcomeAppellant = \"inProgress\"",
     "PageLabel": "Review confidentiality request"
   },
   {
@@ -2667,7 +2667,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
-    "FieldShowCondition": "confidentialityRequestOutcomeJointParty = \"IN_PROGRESS\"",
+    "FieldShowCondition": "confidentialityRequestOutcomeJointParty = \"inProgress\"",
     "PageLabel": "Review confidentiality request"
   }
 ]
