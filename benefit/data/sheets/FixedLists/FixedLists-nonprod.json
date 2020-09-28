@@ -4,8 +4,6 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "reinstatementGranted", "ListElement": "Reinstatement Granted"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "reinstatementRefused", "ListElement": "Reinstatement Refused"},
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "reinstatementRequest", "ListElement": "Reinstatement request"},
-  {"LiveFrom": "01/01/2018", "ID": "ScannedDocumentType", "ListElementCode": "reinstatementRequest", "ListElement": "Reinstatement request"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_requestOutcomes", "ListElementCode": "inProgress", "ListElement": "In progress"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_requestOutcomes", "ListElementCode": "granted", "ListElement": "Granted"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_requestOutcomes", "ListElementCode": "refused", "ListElement": "Refused"}
+  {"LiveFrom": "01/01/2018", "ID": "ScannedDocumentType", "ListElementCode": "reinstatementRequest", "ListElement": "Reinstatement request"}
+
 ]
