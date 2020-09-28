@@ -2624,13 +2624,38 @@
   },
   {
     "CaseEventID": "reviewConfidentialityRequest",
-    "CaseFieldID": "confidentialityRequestAppellantGrantedOrRefused",
+    "CaseFieldID": "confidentialityRequestOutcomeAppellant",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
+    "FieldShowCondition": "confidentialityRequestAppellantGrantedOrRefused = \"do_not_use\"",
+    "PageLabel": "Review confidentiality request"
+  },
+  {
+    "CaseEventID": "reviewConfidentialityRequest",
+    "CaseFieldID": "confidentialityRequestOutcomeJointParty",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "FieldShowCondition": "confidentialityRequestJointPartyGrantedOrRefused = \"do_not_use\"",
+    "PageLabel": "Review confidentiality request"
+  },
+  {
+    "CaseEventID": "reviewConfidentialityRequest",
+    "CaseFieldID": "confidentialityRequestAppellantGrantedOrRefused",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0",
+    "FieldShowCondition": "confidentialityRequestOutcomeAppellant = \"IN_PROGRESS\"",
     "PageLabel": "Review confidentiality request"
   },
   {
@@ -2640,8 +2665,9 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
+    "FieldShowCondition": "confidentialityRequestOutcomeJointParty = \"IN_PROGRESS\"",
     "PageLabel": "Review confidentiality request"
   }
 ]
