@@ -411,5 +411,7 @@
   {"LiveFrom": "01/01/2018", "ID": "documentTranslationStatus", "ListElementCode": "translationRequired", "ListElement": "Translation Required"},
   {"LiveFrom": "01/01/2018", "ID": "documentTranslationStatus", "ListElementCode": "translationRequested", "ListElement": "Translation Requested"},
   {"LiveFrom": "01/01/2018", "ID": "documentTranslationStatus", "ListElementCode": "translationComplete", "ListElement": "Translation Complete"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_interlocWorkflow", "ListElementCode": "welshTranslation", "ListElement": "Welsh Translation"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_interlocWorkflow", "ListElementCode": "welshTranslation", "ListElement": "Welsh Translation"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_grantOrRefuseConfidentiality", "ListElementCode": "grantConfidentialityRequest", "ListElement": "Grant confidentiality"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_grantOrRefuseConfidentiality", "ListElementCode": "refuseConfidentialityRequest", "ListElement": "Refuse confidentiality"}
 ]

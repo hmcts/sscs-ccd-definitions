@@ -1,4 +1,2 @@
 [
-  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "reinstatementRegistered", "Label": "Reinstatement Registered", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "reinstatementOutcome", "Label": "Reinstatement Outcome", "FieldType": "FixedList", "FieldTypeParameter": "FL_reinstatementOutcome", "SecurityClassification": "PUBLIC"}
 ]
