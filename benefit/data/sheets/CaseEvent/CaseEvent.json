@@ -1393,6 +1393,21 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "reviewConfidentialityRequest",
+    "Name": "Review confidentiality request",
+    "Description": "Review confidentiality request",
+    "DisplayOrder": 159,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "interlocSendToTcw",
     "Name": "Send case to TCW",
     "Description": "Send case to TCW",
@@ -1963,20 +1978,6 @@
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
-    "ID": "reviewConfidentialityRequest",
-    "Name": "Review confidentiality request",
-    "Description": "Review confidentiality request",
-    "DisplayOrder": 159,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N",
     "SecurityClassification": "Public"
   }
 
