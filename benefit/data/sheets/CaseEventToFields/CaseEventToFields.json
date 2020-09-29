@@ -2656,7 +2656,7 @@
     "PageFieldDisplayOrder": 3,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "confidentialityRequestOutcomeAppellant != \"granted\" AND confidentialityRequestOutcomeAppellant != \"refused\"",
+    "FieldShowCondition": "confidentialityRequestOutcomeAppellant != \"granted\" AND confidentialityRequestOutcomeAppellant != \"refused\" AND confidentialityRequestOutcomeAppellant != \"\"",
     "PageLabel": "Review confidentiality request"
   },
   {
@@ -2669,7 +2669,7 @@
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "confidentialityRequestOutcomeJointParty!= \"granted\" AND confidentialityRequestOutcomeJointParty != \"refused\"",
+    "FieldShowCondition": "confidentialityRequestOutcomeJointParty!= \"granted\" AND confidentialityRequestOutcomeJointParty != \"refused\" AND confidentialityRequestOutcomeJointParty != \"\"",
     "PageLabel": "Review confidentiality request"
   }
 ]
