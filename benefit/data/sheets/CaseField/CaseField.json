@@ -260,5 +260,13 @@
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "englishBodyContent", "Label": "English body content", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "welshBodyContent", "Label": "Welsh body content", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "welshInterlocNextReviewState", "Label": "Welsh interloc next review state", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "restoreCasesDate", "Label": "Date to restore cases for", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "restoreCasesDate", "Label": "Date to restore cases for", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "reinstatementRegistered", "Label": "Reinstatement Registered", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "reinstatementOutcome", "Label": "Reinstatement Outcome", "FieldType": "FixedList", "FieldTypeParameter": "FL_requestOutcomes", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "isConfidentialCase", "Label": "Is case confidential?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "confidentialityRequestDate", "Label": "Confidentiality request date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "confidentialityRequestOutcomeAppellant", "Label": "Confidentiality request outcome appellant", "FieldType": "FixedList", "FieldTypeParameter": "FL_requestOutcomes", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "confidentialityRequestOutcomeJointParty", "Label": "Confidentiality request outcome joint party", "FieldType": "FixedList", "FieldTypeParameter": "FL_requestOutcomes", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "confidentialityRequestAppellantGrantedOrRefused", "Label": "What is the outcome of the Appellant confidentiality request?", "FieldType": "FixedRadioList", "FieldTypeParameter" : "FL_grantOrRefuseConfidentiality" ,"SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "confidentialityRequestJointPartyGrantedOrRefused", "Label": "What is the outcome of the Joint Party confidentiality request?", "FieldType": "FixedRadioList", "FieldTypeParameter" : "FL_grantOrRefuseConfidentiality" ,"SecurityClassification": "PUBLIC"}
 ]
