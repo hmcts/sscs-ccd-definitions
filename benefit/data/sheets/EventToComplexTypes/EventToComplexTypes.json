@@ -1,2 +1,42 @@
 [
+  {
+    "CaseEventID": "reviewConfidentialityRequest",
+    "CaseFieldID": "confidentialityRequestOutcomeAppellant",
+    "ListElementCode": "requestOutcome",
+    "ID": "confidentialityRequestOutcomeAppellantRequestOutcome",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "reviewConfidentialityRequest",
+    "CaseFieldID": "confidentialityRequestOutcomeAppellant",
+    "ListElementCode": "date",
+    "ID": "confidentialityRequestOutcomeAppellantDate",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 2,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "reviewConfidentialityRequest",
+    "CaseFieldID": "confidentialityRequestOutcomeJointParty",
+    "ListElementCode": "date",
+    "ID": "confidentialityRequestOutcomeJointPartyRequestOutcome",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 3,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "reviewConfidentialityRequest",
+    "CaseFieldID": "confidentialityRequestOutcomeJointParty",
+    "ListElementCode": "date",
+    "ID": "confidentialityRequestOutcomeJointPartyDate",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 4,
+    "PageID": "1.0"
+  }
 ]
