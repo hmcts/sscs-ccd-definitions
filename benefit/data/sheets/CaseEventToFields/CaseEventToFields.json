@@ -2623,10 +2623,11 @@
     "ShowSummaryChangeOption": "N"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "reviewConfidentialityRequest",
     "CaseFieldID": "confidentialityRequestOutcomeAppellant",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "COMPLEX",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
@@ -2638,7 +2639,7 @@
     "CaseEventID": "reviewConfidentialityRequest",
     "CaseFieldID": "confidentialityRequestOutcomeJointParty",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "COMPLEX",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
@@ -2653,10 +2654,10 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 5,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "confidentialityRequestOutcomeAppellant != \"granted\" AND confidentialityRequestOutcomeAppellant != \"refused\" AND confidentialityRequestOutcomeAppellant != \"\"",
+    "FieldShowCondition": "confidentialityRequestOutcomeAppellant.requestOutcome != \"granted\" AND confidentialityRequestOutcomeAppellant.requestOutcome != \"refused\" AND confidentialityRequestOutcomeAppellant.requestOutcome != \"notSet\"",
     "PageLabel": "Review confidentiality request"
   },
   {
@@ -2666,10 +2667,10 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 6,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "confidentialityRequestOutcomeJointParty!= \"granted\" AND confidentialityRequestOutcomeJointParty != \"refused\" AND confidentialityRequestOutcomeJointParty != \"\"",
+    "FieldShowCondition": "confidentialityRequestOutcomeJointParty.requestOutcome != \"granted\" AND confidentialityRequestOutcomeJointParty.requestOutcome != \"refused\" AND confidentialityRequestOutcomeJointParty.requestOutcome != \"notSet\"",
     "PageLabel": "Review confidentiality request"
   }
 ]
