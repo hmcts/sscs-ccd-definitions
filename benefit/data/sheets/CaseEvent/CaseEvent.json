@@ -1396,7 +1396,7 @@
     "ID": "reviewConfidentialityRequest",
     "Name": "Review confidentiality request",
     "Description": "Review confidentiality request",
-    "DisplayOrder": 159,
+    "DisplayOrder": 109,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
