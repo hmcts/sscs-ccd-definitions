@@ -2632,7 +2632,8 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "FieldShowCondition": "confidentialityRequestAppellantGrantedOrRefused = \"doNotUse\"",
-    "PageLabel": "Review confidentiality request"
+    "PageLabel": "Review confidentiality request",
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "reviewConfidentialityRequest",
@@ -2644,7 +2645,8 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
     "FieldShowCondition": "confidentialityRequestJointPartyGrantedOrRefused = \"doNotUse\"",
-    "PageLabel": "Review confidentiality request"
+    "PageLabel": "Review confidentiality request",
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "reviewConfidentialityRequest",
@@ -2656,7 +2658,8 @@
     "PageFieldDisplayOrder": 5,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "confidentialityRequestOutcomeAppellant.requestOutcome != \"granted\" AND confidentialityRequestOutcomeAppellant.requestOutcome != \"refused\" AND confidentialityRequestOutcomeAppellant.requestOutcome != \"notSet\"",
+    "ShowSummaryContentOption": "0",
+    "FieldShowCondition": "confidentialityRequestOutcomeAppellant.requestOutcome = \"inProgress\"",
     "PageLabel": "Review confidentiality request"
   },
   {
@@ -2669,7 +2672,8 @@
     "PageFieldDisplayOrder": 6,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "confidentialityRequestOutcomeJointParty.requestOutcome != \"granted\" AND confidentialityRequestOutcomeJointParty.requestOutcome != \"refused\" AND confidentialityRequestOutcomeJointParty.requestOutcome != \"notSet\"",
+    "ShowSummaryContentOption": "0",
+    "FieldShowCondition": "confidentialityRequestOutcomeJointParty.requestOutcome = \"inProgress\"",
     "PageLabel": "Review confidentiality request"
   }
 ]
