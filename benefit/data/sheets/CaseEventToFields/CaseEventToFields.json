@@ -952,6 +952,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -979,7 +980,7 @@
     "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "dwpAT38Document",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
@@ -1007,6 +1008,18 @@
     "PageFieldDisplayOrder": 7,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "appeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 0,
+    "PageID": "1.0",
+    "FieldShowCondition": "dwpFurtherInfo=\"DoNotUse\"",
+    "ShowSummaryChangeOption": "N"
   },
   {
     "CaseEventID": "dwpUploadResponse",
