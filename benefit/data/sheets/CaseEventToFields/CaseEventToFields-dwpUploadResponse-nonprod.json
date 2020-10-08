@@ -1,17 +1,6 @@
 [
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "dynamicBenefitType",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "19/11/2019",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 0,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "N"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "elementsDisputedList",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -19,7 +8,7 @@
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
     "PageID": "elementsDisputed",
-    "PageShowCondition": "dynamicBenefitType = \"uc\"",
+    "PageShowCondition": "appeal.benefitType.code=\"UC\"",
     "PageLabel": "Elements disputed",
     "ShowSummaryChangeOption": "N"
   },
@@ -33,7 +22,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
     "PageLabel": "Issue codes",
-    "PageShowCondition": "dynamicBenefitType = \"uc\"",
+    "PageShowCondition": "appeal.benefitType.code=\"UC\"",
     "FieldShowCondition": "elementsDisputedList CONTAINS \"general\"",
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "ShowSummaryChangeOption": "Y"
@@ -137,7 +126,7 @@
     "LiveFrom": "19/11/2019",
     "PageDisplayOrder": 4,
     "PageFieldDisplayOrder": 1,
-    "PageShowCondition": "dynamicBenefitType = \"uc\"",
+    "PageShowCondition": "appeal.benefitType.code=\"UC\"",
     "PageID": "decisionDisputedByOthers",
     "PageLabel": "Disputed",
     "ShowSummaryChangeOption": "Y"
@@ -163,7 +152,7 @@
     "LiveFrom": "19/11/2019",
     "PageDisplayOrder": 5,
     "PageFieldDisplayOrder": 1,
-    "PageShowCondition": "dynamicBenefitType = \"uc\"",
+    "PageShowCondition": "appeal.benefitType.code=\"UC\"",
     "PageID": "jointParty",
     "PageLabel": "Joint party",
     "ShowSummaryChangeOption": "Y"
@@ -178,7 +167,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyName",
     "PageLabel": "Joint party name",
-    "PageShowCondition": "dynamicBenefitType = \"uc\" AND jointParty=\"Yes\"",
+    "PageShowCondition": "appeal.benefitType.code=\"UC\" AND jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -192,7 +181,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyIdentity",
     "PageLabel": "Joint party identity details",
-    "PageShowCondition": "dynamicBenefitType = \"uc\" AND jointParty=\"Yes\"",
+    "PageShowCondition": "appeal.benefitType.code=\"UC\" AND jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -206,7 +195,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyAddress",
     "PageLabel": "Joint party address",
-    "PageShowCondition": "dynamicBenefitType = \"uc\" AND jointParty=\"Yes\"",
+    "PageShowCondition": "appeal.benefitType.code=\"UC\" AND jointParty=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
