@@ -2621,5 +2621,59 @@
     "PageID": "1.0",
     "PageLabel": "Restore Cases",
     "ShowSummaryChangeOption": "N"
+  },
+  {
+    "CaseEventID": "reviewConfidentialityRequest",
+    "CaseFieldID": "confidentialityRequestOutcomeAppellant",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "FieldShowCondition": "confidentialityRequestAppellantGrantedOrRefused = \"doNotUse\"",
+    "PageLabel": "Review confidentiality request",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "reviewConfidentialityRequest",
+    "CaseFieldID": "confidentialityRequestOutcomeJointParty",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "FieldShowCondition": "confidentialityRequestJointPartyGrantedOrRefused = \"doNotUse\"",
+    "PageLabel": "Review confidentiality request",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "reviewConfidentialityRequest",
+    "CaseFieldID": "confidentialityRequestAppellantGrantedOrRefused",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "ShowSummaryContentOption": "0",
+    "FieldShowCondition": "confidentialityRequestOutcomeAppellant.requestOutcome = \"inProgress\"",
+    "PageLabel": "Review confidentiality request"
+  },
+  {
+    "CaseEventID": "reviewConfidentialityRequest",
+    "CaseFieldID": "confidentialityRequestJointPartyGrantedOrRefused",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "ShowSummaryContentOption": "0",
+    "FieldShowCondition": "confidentialityRequestOutcomeJointParty.requestOutcome = \"inProgress\"",
+    "PageLabel": "Review confidentiality request"
   }
 ]
