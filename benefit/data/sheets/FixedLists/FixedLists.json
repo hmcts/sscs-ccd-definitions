@@ -37,6 +37,7 @@
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "finalDecisionNotice", "ListElement": "Final Decision Notice"},
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "draftAdjournmentNotice", "ListElement": "Draft Adjournment Notice"},
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "adjournmentNotice", "ListElement": "Adjournment Notice"},
+  {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "jointPartyEvidence", "ListElement": "Joint party evidence"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeFE", "ListElementCode": "Medical evidence", "ListElement": "Medical evidence"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeFE", "ListElementCode": "Other evidence", "ListElement": "Other evidence"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeFE", "ListElementCode": "appellantEvidence", "ListElement": "Appellant evidence"},
