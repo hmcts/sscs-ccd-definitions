@@ -103,6 +103,7 @@ esac
 if [ ${TYPE} == "benefit" ]; then
   FIXED_LIST_USERS=$(cat ${RUN_DIR}/FixedLists_AssignTo_AAT.txt)
   DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/decision-notice-questions.txt)
+  ESA_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/esa-decision-notice-questions.txt)
   LANGUAGES=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/languages.txt)
 else
   FIXED_LIST_USERS=" "
@@ -137,6 +138,7 @@ docker run \
   -e "CCD_DEF_COR_BACKEND_URL=${COR_BACKEND_URL}" \
   -e "CCD_DEF_FIXED_LIST_USERS=${FIXED_LIST_USERS}" \
   -e "CCD_DEF_DECISION_NOTICE_QUESTIONS=${DECISION_NOTICE_QUESTIONS}" \
+  -e "CCD_DEF_ESA_DECISION_NOTICE_QUESTIONS=${ESA_DECISION_NOTICE_QUESTIONS}" \
   -e "CCD_DEF_LANGUAGES=${LANGUAGES}" \
   -e "CCD_DEF_TYA_LINK=${TYA_LINK}" \
   -e "CCD_DEF_TYA_APPOINTEE_LINK=${TYA_APPOINTEE_LINK}" \
