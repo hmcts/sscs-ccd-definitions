@@ -7,10 +7,18 @@ To build a local version of the CCD Importer image:
     cd benefit
     docker build -t hmctspublic.azurecr.io/sscs/ccd-definition-importer-benefit:dev -f ../docker/importer.Dockerfile .
     
-You can then test loading this into your local environment:
-Note:- local environment should have Python 3.0 or above version 
+To generate a local AAT version of CCD def
 
-    ../bin/upload-ccd-definition-to-env.sh benefit dev local
+    cd ../
+    ./bin/create-xlsx.sh benefit dev aat
+
+To generate a local PROD version of CCD def
+
+    ./bin/create-xlsx.sh benefit dev prod
+
+You can then test loading this generated CCD def into your local environment version from sscs-docker project: Note:- local environment should have Python 3.0 or above version
+
+    ./bin/ccd-import-definition.sh <your local directory path>/sscs-ccd-definitions/releases/CCD_SSCSDefinition_vdev_AAT.xlsx
     
 # Pushing changes
     
