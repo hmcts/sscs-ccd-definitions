@@ -1,5 +1,18 @@
 [
   {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "appeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "typeOfAppeal",
+    "PageLabel": "Type of appeal",
+    "FieldShowCondition": "writeFinalDecisionGenerateNotice=\"DoNotUse\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "writeFinalDecisionIsDescriptorFlow",
@@ -10,6 +23,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "typeOfAppeal",
     "PageLabel": "Type of appeal",
+    "FieldShowCondition": "appeal.benefitType.code=\"PIP\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -34,7 +48,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "allowedOrRefused",
     "PageLabel": "Allowed or refused",
-    "PageShowCondition": "writeFinalDecisionIsDescriptorFlow = \"No\" OR writeFinalDecisionGenerateNotice = \"No\"",
+    "PageShowCondition": "writeFinalDecisionIsDescriptorFlow = \"No\" OR writeFinalDecisionGenerateNotice = \"No\" OR appeal.benefitType.code=\"ESA\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
