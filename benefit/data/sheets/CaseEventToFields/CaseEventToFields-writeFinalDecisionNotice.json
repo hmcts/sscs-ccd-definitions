@@ -196,6 +196,19 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "wcaAppeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 8,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "workCapabilityAssessment",
+    "PageLabel": "Work capability assessment",
+    "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\" AND appeal.benefitType.code=\"ESA\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "writeFinalDecisionMedicallyQualifiedPanelMemberName",
@@ -231,10 +244,22 @@
     "FieldShowCondition": "pipWriteFinalDecisionDailyLivingQuestion != \"notConsidered\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 8,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
     "PageID": "decisionNoticeOptions",
     "PageLabel": "Select activities",
     "PageShowCondition": "writeFinalDecisionIsDescriptorFlow = \"Yes\" AND writeFinalDecisionGenerateNotice = \"Yes\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "supportGroupOnlyAppeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 8,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "workCapabilityAssessment",
+    "PageLabel": "Work capability assessment",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -245,7 +270,7 @@
     "FieldShowCondition": "pipWriteFinalDecisionMobilityQuestion != \"notConsidered\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 8,
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 2,
     "PageID": "decisionNoticeOptions",
     "PageLabel": "Select activities",
     "ShowSummaryChangeOption": "Y"
