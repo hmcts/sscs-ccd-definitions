@@ -272,5 +272,7 @@
   {"LiveFrom": "01/01/2019", "CaseTypeID": "Benefit", "ID": "isProgressingViaGaps", "Label": "Is case progressing via GAPS", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2019", "CaseTypeID": "Benefit", "ID": "summaryIsProgressingViaGaps", "Label": "## Is progressing via GAPS? ${isProgressingViaGaps}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "urgentHearingRegistered", "Label": "Urgent hearing registered", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "urgentHearingOutcome", "Label": "Urgent hearing outcome", "FieldType": "FixedList", "FieldTypeParameter": "FL_requestOutcomes", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "urgentHearingOutcome", "Label": "Urgent hearing outcome", "FieldType": "FixedList", "FieldTypeParameter": "FL_requestOutcomes", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "doesRegulation29Apply", "Label": "Does regulation 29 apply?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "showRegulation29Page", "Label": "Show the Regulation 29 Page?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
