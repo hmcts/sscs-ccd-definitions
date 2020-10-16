@@ -2366,9 +2366,20 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 0,
     "PageID": "1.0",
-    "FieldShowCondition": "issueCode=\"DoNotUse\"",
+    "FieldShowCondition": "issueCode=\"doNotUse\"",
     "PageLabel": "Hmcts review response",
     "ShowSummaryChangeOption": "N"
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "createdInGapsFrom",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "issueCode=\"doNotUse\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 0,
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -2412,7 +2423,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
-    "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
+    "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2424,6 +2435,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 5,
     "PageID": "1.0",
+    "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2435,7 +2447,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 6,
     "PageID": "1.0",
-    "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
+    "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2447,7 +2459,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 7,
     "PageID": "1.0",
-    "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
+    "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2647,6 +2659,19 @@
   },
   {
     "CaseEventID": "reviewConfidentialityRequest",
+    "CaseFieldID": "confidentialityRequestOutcomeJointParty",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "FieldShowCondition": "confidentialityRequestJointPartyGrantedOrRefused = \"doNotUse\"",
+    "PageLabel": "Review confidentiality request",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "reviewConfidentialityRequest",
     "CaseFieldID": "confidentialityRequestAppellantGrantedOrRefused",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -2657,6 +2682,20 @@
     "ShowSummaryChangeOption": "Y",
     "ShowSummaryContentOption": "0",
     "FieldShowCondition": "confidentialityRequestOutcomeAppellant.requestOutcome = \"inProgress\"",
+    "PageLabel": "Review confidentiality request"
+  },
+  {
+    "CaseEventID": "reviewConfidentialityRequest",
+    "CaseFieldID": "confidentialityRequestJointPartyGrantedOrRefused",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "ShowSummaryContentOption": "0",
+    "FieldShowCondition": "confidentialityRequestOutcomeJointParty.requestOutcome = \"inProgress\"",
     "PageLabel": "Review confidentiality request"
   }
 ]
