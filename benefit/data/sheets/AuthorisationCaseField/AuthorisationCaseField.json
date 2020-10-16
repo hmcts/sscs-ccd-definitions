@@ -922,5 +922,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityRequestOutcomeJointParty", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityRequestAppellantGrantedOrRefused", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityRequestJointPartyGrantedOrRefused", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "formType", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "formType", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "isProgressingViaGaps", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "summaryIsProgressingViaGaps", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "urgentHearingRegistered", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "urgentHearingOutcome", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]
