@@ -2359,6 +2359,30 @@
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "appeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 0,
+    "PageID": "1.0",
+    "FieldShowCondition": "issueCode=\"doNotUse\"",
+    "PageLabel": "Hmcts review response",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "createdInGapsFrom",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "issueCode=\"doNotUse\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 0,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "dwpResponseDocument",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
@@ -2366,7 +2390,6 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Hmcts review response",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2378,7 +2401,6 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
-    "PageLabel": "Hmcts review response",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2390,7 +2412,6 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
     "PageID": "1.0",
-    "PageLabel": "Hmcts review response",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2402,7 +2423,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
-    "PageLabel": "Hmcts review response",
+    "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2414,7 +2435,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 5,
     "PageID": "1.0",
-    "PageLabel": "Hmcts review response",
+    "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2426,7 +2447,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 6,
     "PageID": "1.0",
-    "PageLabel": "Hmcts review response",
+    "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2438,7 +2459,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 7,
     "PageID": "1.0",
-    "PageLabel": "Hmcts review response",
+    "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2450,7 +2471,6 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 8,
     "PageID": "1.0",
-    "PageLabel": "Hmcts review response",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2462,7 +2482,6 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 9,
     "PageID": "1.0",
-    "PageLabel": "Hmcts review response",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2474,7 +2493,6 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 10,
     "PageID": "1.0",
-    "PageLabel": "Hmcts review response",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2486,7 +2504,6 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 11,
     "PageID": "1.0",
-    "PageLabel": "Hmcts review response",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2498,7 +2515,6 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 12,
     "PageID": "1.0",
-    "PageLabel": "Hmcts review response",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -2511,7 +2527,6 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 13,
     "PageID": "1.0",
-    "PageLabel": "Hmcts review response",
     "ShowSummaryChangeOption": "Y"
   },
   {
