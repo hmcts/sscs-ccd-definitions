@@ -192,6 +192,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "panelMemberNames",
     "PageLabel": "Panel members",
+    "FieldShowCondition": "appeal.benefitType.code=\"PIP\"",
     "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
