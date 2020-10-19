@@ -1,1 +1,1 @@
-3.5.10-RC-SSCS-7515-V3
+SSCS-7516-Schedule_2_Scores
