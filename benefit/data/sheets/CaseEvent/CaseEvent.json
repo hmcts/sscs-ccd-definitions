@@ -1152,16 +1152,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "makeCaseUrgent",
-    "Name": "Mark case as urgent",
-    "DisplayOrder": 92,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
     "ID": "moveToAppealCreated",
     "Name": "Move to appeal created",
     "Description": "Moves case to appeal created",
@@ -1778,7 +1768,6 @@
     "DisplayOrder": 142,
     "PreConditionState(s)": "withDwp",
     "PostConditionState": "responseReceived",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public",
