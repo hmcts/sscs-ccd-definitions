@@ -249,19 +249,6 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CaseEventID": "writeFinalDecision",
-    "CaseFieldID": "doesRegulation29Apply",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 12,
-    "PageFieldDisplayOrder": 2,
-    "PageID": "regulation29",
-    "PageLabel": "Regulation 29",
-    "PageShowCondition": "appeal.benefitType.code=\"ESA\" AND doesRegulation29Apply=\"Yes\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion",
