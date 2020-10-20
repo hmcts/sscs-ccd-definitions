@@ -1,5 +1,7 @@
 [
-  {"LiveFrom": "16/09/2019", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "pcqId", "TabFieldDisplayOrder": 30},
+  {"LiveFrom": "01/01/2019", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "isProgressingViaGaps", "TabFieldDisplayOrder": 2, "FieldShowCondition": "outcome=\"Do Not Show\""},
+  {"LiveFrom": "01/01/2019", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "summaryIsProgressingViaGaps", "TabFieldDisplayOrder": 2, "FieldShowCondition": "isProgressingViaGaps=\"Yes\""},
+  {"LiveFrom": "16/09/2019", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "pcqId", "TabFieldDisplayOrder": 31},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "reinstatementRegistered", "TabFieldDisplayOrder": 21},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "reinstatementOutcome", "TabFieldDisplayOrder": 22},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "dwpState", "TabFieldDisplayOrder": 23},
