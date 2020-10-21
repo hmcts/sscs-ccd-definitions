@@ -8,5 +8,17 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public"
-  }
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "dwpRaiseException",
+    "Name": "DWP Raise an exception",
+    "Description": "Raise an exception",
+    "DisplayOrder": 64,
+    "PreConditionState(s)": "withDwp",
+    "PostConditionState": "responseReceived",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "Y"
+  },
 ]
