@@ -927,6 +927,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "summaryIsProgressingViaGaps", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "urgentHearingRegistered", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "urgentHearingOutcome", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "reinstatementRegistered", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "reinstatementOutcome", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "esaWriteFinalDecisionMentalAssessmentQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "esaWriteFinalDecisionMobilisingUnaidedQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
