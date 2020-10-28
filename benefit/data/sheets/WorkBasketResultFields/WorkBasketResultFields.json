@@ -1,11 +1,11 @@
 [
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "[CASE_REFERENCE]", "Label": "Case Ref", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "appeal", "ListElementCode": "appellant.name.lastName", "Label": "Surname", "DisplayOrder": 2},
-  {"LiveFrom": "09/07/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "appeal", "ListElementCode": "appellant.identity.nino", "Label": "NINO", "DisplayOrder": 3},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "caseReference", "Label": "SC number", "DisplayOrder": 4},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "region", "Label": "Regional centre", "DisplayOrder": 5},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "[STATE]", "Label": "Case state", "DisplayOrder": 6},
-  {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "dateSentToDwp", "Label": "DWP referral date", "DisplayOrder": 7},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "caseReference", "Label": "SC number", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "region", "Label": "Regional centre", "DisplayOrder": 4},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "[STATE]", "Label": "Case state", "DisplayOrder": 5},
+  {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "dateSentToDwp", "Label": "DWP referral date", "DisplayOrder": 6},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "interlocReviewState", "Label": "Interlocutory review state", "DisplayOrder": 7},
   {"LiveFrom": "25/09/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "linkedCasesBoolean", "Label": "Has related appeal(s)?", "DisplayOrder": 8},
   {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "appeal", "ListElementCode": "appellant.name.lastName", "Label": "Appellant Surname", "DisplayOrder": 3},
   {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "region", "Label": "Regional centre", "DisplayOrder": 4},
@@ -32,3 +32,4 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "[STATE]", "Label": "Case state", "DisplayOrder": 6},
   {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "dateSentToDwp", "Label": "DWP referral date", "DisplayOrder": 7}
 ]
+
