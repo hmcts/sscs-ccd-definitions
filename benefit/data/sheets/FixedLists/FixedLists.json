@@ -1,5 +1,6 @@
 [${CCD_DEF_FIXED_LIST_USERS},
-  ${CCD_DEF_DECISION_NOTICE_QUESTIONS},
+  ${CCD_DEF_PIP_DECISION_NOTICE_QUESTIONS},
+  ${CCD_DEF_ESA_DECISION_NOTICE_QUESTIONS},
   ${CCD_DEF_LANGUAGES},
   {"LiveFrom": "01/01/2018", "ID": "eventType", "ListElementCode": "appealCreated", "ListElement": "Appeal Created"},
   {"LiveFrom": "01/01/2018", "ID": "eventType", "ListElementCode": "updateCaseData", "ListElement": "Case Updated"},
@@ -418,5 +419,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_grantOrRefuseConfidentiality", "ListElementCode": "grantConfidentialityRequest", "ListElement": "Grant confidentiality"},
   {"LiveFrom": "01/01/2018", "ID": "FL_requestOutcomes", "ListElementCode": "inProgress", "ListElement": "In progress"},
   {"LiveFrom": "01/01/2018", "ID": "FL_requestOutcomes", "ListElementCode": "granted", "ListElement": "Granted"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_requestOutcomes", "ListElementCode": "refused", "ListElement": "Refused"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_requestOutcomes", "ListElementCode": "refused", "ListElement": "Refused"},
+  {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "reinstatementRequest", "ListElement": "Reinstatement request"},
+  {"LiveFrom": "01/01/2018", "ID": "ScannedDocumentType", "ListElementCode": "reinstatementRequest", "ListElement": "Reinstatement request"}
 ]
