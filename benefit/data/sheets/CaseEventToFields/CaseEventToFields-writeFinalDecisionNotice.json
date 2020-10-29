@@ -498,7 +498,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "reaching",
     "PageLabel": "Physical Disabilities: Reaching",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"reaching\" AND wcaAppeal = \\\"Yes\\\"\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"reaching\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
