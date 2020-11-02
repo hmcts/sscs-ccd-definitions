@@ -3,6 +3,7 @@
 TYPE=${1}
 VERSION=${2}
 ENV=${3}
+LIKE_PROD=${4:-${ENV}}
 
 RUN_DIR=`pwd`
 COMMON_VERSION=$(cat ${RUN_DIR}/benefit/SSCS_COMMON_VERSION.txt)
@@ -109,7 +110,7 @@ fi
 
 UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
 
-if [ ${ENV} == "prod" ]; then
+if [ ${ENV} == "prod" ] || [ ${LIKE_PROD} == "prod" ]; then
   excludedFilenamePatterns="-e *-nonprod.json"
 else
   excludedFilenamePatterns="-e *-prod.json"
