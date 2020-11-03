@@ -167,5 +167,30 @@
     "PageLabel": "Issue codes",
     "FieldShowCondition": "elementsDisputedList CONTAINS \"disabledChildren\"",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "elementsDisputedIsDecisionDisputedByOthers",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "linkedAppealRef",
+    "PageLabel": "Linked appeal reference",
+    "FieldShowCondition": "elementsDisputedList=\"DoNotUse\"",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "elementsDisputedLinkedAppealRef",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 4,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "linkedAppealRef",
+    "PageShowCondition": "appeal.benefitType.code=\"UC\" AND elementsDisputedIsDecisionDisputedByOthers=\"Yes\"",
+    "ShowSummaryChangeOption": "N"
   }
 ]
