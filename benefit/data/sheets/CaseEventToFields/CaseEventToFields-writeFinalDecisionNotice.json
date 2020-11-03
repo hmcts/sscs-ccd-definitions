@@ -698,6 +698,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "showRegulation29Page",
     "CaseTypeID": "Benefit",
@@ -725,15 +726,41 @@
   },
   {
     "CaseEventID": "writeFinalDecision",
-    "CaseFieldID": "benefitCode",
+    "CaseFieldID": "esaWriteFinalDecisionSchedule3ActivitiesApply",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "READONLY",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 41,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "schedule3Activities",
+    "PageLabel": "Select Schedule 3 activities",
+    "PageShowCondition": "doesRegulation29Apply!=\"No\" AND wcaAppeal = \"Yes\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "esaWriteFinalDecisionSchedule3ActivitiesQuestion",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 41,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "schedule3Activities",
+    "FieldShowCondition": "esaWriteFinalDecisionSchedule3ActivitiesApply != \"No\"",
+    "PageLabel": "Select Schedule 3 activities",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "doesRegulation35Apply",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 41,
     "PageFieldDisplayOrder": 2,
     "PageID": "schedule3Activities",
     "PageLabel": "Select Schedule 3 activities",
-    "PageShowCondition": "doesRegulation29Apply!=\"No\" AND wcaAppeal = \"Yes\"",
+    "FieldShowCondition": "esaWriteFinalDecisionSchedule3ActivitiesApply = \"No\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
