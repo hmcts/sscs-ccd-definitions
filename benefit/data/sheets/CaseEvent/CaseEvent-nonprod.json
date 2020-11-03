@@ -51,5 +51,19 @@
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "dwpRaiseException",
+    "Name": "DWP Raise an exception",
+    "Description": "Raise an exception",
+    "DisplayOrder": 64,
+    "PreConditionState(s)": "withDwp",
+    "PostConditionState": "notListable",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "Y"
   }
 ]
