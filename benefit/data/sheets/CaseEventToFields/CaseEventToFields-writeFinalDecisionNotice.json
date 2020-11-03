@@ -224,17 +224,42 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "wcaAppeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 8,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "workCapabilityAssessment",
+    "PageLabel": "Work capability assessment",
+    "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\" AND appeal.benefitType.code=\"ESA\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "supportGroupOnlyAppeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 8,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "workCapabilityAssessment",
+    "PageLabel": "Work capability assessment",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 8,
+    "PageDisplayOrder": 9,
     "PageFieldDisplayOrder": 2,
     "PageID": "esaDecisionNoticeOptions",
     "PageLabel": "Select Schedule 2 activities",
-    "PageShowCondition": "appeal.benefitType.code=\"ESA\" AND writeFinalDecisionGenerateNotice = \"Yes\"",
+    "PageShowCondition": "appeal.benefitType.code=\"ESA\" AND wcaAppeal = \"Yes\" AND writeFinalDecisionGenerateNotice = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -244,7 +269,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 8,
+    "PageDisplayOrder": 9,
     "PageFieldDisplayOrder": 2,
     "PageID": "esaDecisionNoticeOptions",
     "PageLabel": "Select Schedule 2 activities",
@@ -258,7 +283,7 @@
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "pipWriteFinalDecisionDailyLivingQuestion != \"notConsidered\"",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 8,
+    "PageDisplayOrder": 9,
     "PageFieldDisplayOrder": 2,
     "PageID": "decisionNoticeOptions",
     "PageLabel": "Select activities",
@@ -272,7 +297,7 @@
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "pipWriteFinalDecisionMobilityQuestion != \"notConsidered\"",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 8,
+    "PageDisplayOrder": 9,
     "PageFieldDisplayOrder": 3,
     "PageID": "decisionNoticeOptions",
     "PageLabel": "Select activities",
@@ -284,7 +309,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 9,
+    "PageDisplayOrder": 10,
     "PageFieldDisplayOrder": 1,
     "PageID": "preparingFood",
     "PageLabel": "Daily living: Preparing food",
@@ -297,7 +322,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 10,
+    "PageDisplayOrder": 11,
     "PageFieldDisplayOrder": 1,
     "PageID": "takingNutrition",
     "PageLabel": "Daily living: Taking nutrition",
@@ -310,7 +335,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 11,
+    "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 1,
     "PageID": "managingTherapy",
     "PageLabel": "Daily living: Managing therapy or monitoring a health condition",
@@ -323,7 +348,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 12,
+    "PageDisplayOrder": 13,
     "PageFieldDisplayOrder": 1,
     "PageID": "washingAndBathing",
     "PageLabel": "Daily living: Washing and bathing",
@@ -336,7 +361,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 13,
+    "PageDisplayOrder": 14,
     "PageFieldDisplayOrder": 1,
     "PageID": "managingToiletNeeds",
     "PageLabel": "Daily living: Managing toilet needs or incontinence",
@@ -349,7 +374,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 14,
+    "PageDisplayOrder": 15,
     "PageFieldDisplayOrder": 1,
     "PageID": "dressingAndUndressing",
     "PageLabel": "Daily living: Dressing and undressing",
@@ -362,7 +387,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 15,
+    "PageDisplayOrder": 16,
     "PageFieldDisplayOrder": 1,
     "PageID": "communicating",
     "PageLabel": "Daily living: Communicating",
@@ -375,7 +400,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 16,
+    "PageDisplayOrder": 17,
     "PageFieldDisplayOrder": 1,
     "PageID": "readingAndUnderstanding",
     "PageLabel": "Daily living: Reading and understanding signs, symbols and words",
@@ -388,7 +413,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 17,
+    "PageDisplayOrder": 18,
     "PageFieldDisplayOrder": 1,
     "PageID": "engagingWithOtherPeople",
     "PageLabel": "Daily living: Engaging with other people face to face",
@@ -401,7 +426,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 18,
+    "PageDisplayOrder": 19,
     "PageFieldDisplayOrder": 1,
     "PageID": "makingBudgetingDecisions",
     "PageLabel": "Daily living: Making budgeting decisions",
@@ -414,7 +439,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 19,
+    "PageDisplayOrder": 20,
     "PageFieldDisplayOrder": 1,
     "PageID": "planningAndFollowingJourneys",
     "PageLabel": "Mobility activities: Planning and following journeys",
@@ -427,7 +452,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 20,
+    "PageDisplayOrder": 21,
     "PageFieldDisplayOrder": 1,
     "PageID": "movingAround",
     "PageLabel": "Mobility activities: Moving around",
@@ -445,7 +470,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "mobilisingUnaided",
     "PageLabel": "Physical disabilities: Mobilising unaided",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"mobilisingUnaided\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"mobilisingUnaided\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -459,7 +484,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "standingAndSitting",
     "PageLabel": "Physical Disabilities: Standing and sitting",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"standingAndSitting\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"standingAndSitting\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -473,7 +498,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "reaching",
     "PageLabel": "Physical Disabilities: Reaching",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"reaching\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"reaching\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -487,7 +512,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "pickingUp",
     "PageLabel": "Physical Disabilities: Picking up and moving",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"pickingUp\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"pickingUp\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -501,7 +526,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "manualDexterity",
     "PageLabel": "Physical Disabilities: Manual dexterity",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"manualDexterity\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"manualDexterity\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -515,7 +540,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "selfUnderstood",
     "PageLabel": "Physical Disabilities: Making self understood",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"makingSelfUnderstood\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"makingSelfUnderstood\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -529,7 +554,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "communication",
     "PageLabel": "Physical Disabilities: Understanding communication",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"communication\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"communication\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -543,7 +568,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "navigation",
     "PageLabel": "Physical Disabilities: Navigation and maintaining safety",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"navigation\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"navigation\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -557,7 +582,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "lossOfControl",
     "PageLabel": "Physical Disabilities: Absence or loss of control of bladder and/or bowels",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"lossOfControl\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"lossOfControl\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -571,7 +596,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "consciousness",
     "PageLabel": "Physical Disabilities: Consciousness during waking moments",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"consciousness\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"consciousness\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -585,7 +610,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "learningTasks",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Learning tasks",
-    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"learningTasks\"",
+    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"learningTasks\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -599,7 +624,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "awarenessOfHazards",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Awareness of everyday hazards",
-    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"awarenessOfHazards\"",
+    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"awarenessOfHazards\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -613,7 +638,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "personalAction",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Initiating and completing personal action",
-    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"personalAction\"",
+    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"personalAction\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -627,7 +652,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "copingWithChange",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Coping with change",
-    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"copingWithChange\"",
+    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"copingWithChange\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -641,7 +666,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "gettingAbout",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Getting about",
-    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"gettingAbout\"",
+    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"gettingAbout\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -655,7 +680,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "socialEngagement",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Coping with social engagement",
-    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"socialEngagement\"",
+    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"socialEngagement\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -669,7 +694,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "appropriatenessOfBehaviour",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Appropriateness of behaviour with other people",
-    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"appropriatenessOfBehaviour\"",
+    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"appropriatenessOfBehaviour\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -695,7 +720,7 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "regulation29",
     "PageLabel": "Regulation 29",
-    "PageShowCondition": "appeal.benefitType.code=\"ESA\" AND showRegulation29Page=\"Yes\"",
+    "PageShowCondition": "appeal.benefitType.code=\"ESA\" AND wcaAppeal = \"Yes\" AND showRegulation29Page=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -708,7 +733,7 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "schedule3Activities",
     "PageLabel": "Select Schedule 3 activities",
-    "PageShowCondition": "showRegulation29Page=\"No\" OR doesRegulation29Apply=\"Yes\"",
+    "PageShowCondition": "doesRegulation29Apply!=\"No\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
