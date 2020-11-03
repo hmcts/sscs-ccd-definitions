@@ -16,6 +16,10 @@ To generate a local PROD version of CCD def
 
     ./bin/create-xlsx.sh benefit dev prod
 
+To generate a local version of CCD def similar to prod
+
+    ./bin/create-xlsx.sh benefit dev local prod
+
 You can then test loading this generated CCD def into your local environment version from sscs-docker project: Note:- local environment should have Python 3.0 or above version
 
     ./bin/ccd-import-definition.sh <your local directory path>/sscs-ccd-definitions/releases/CCD_SSCSDefinition_vdev_AAT.xlsx
