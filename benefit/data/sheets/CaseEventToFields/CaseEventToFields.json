@@ -2707,7 +2707,6 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "elementsDisputed",
-    "PageShowCondition": "appeal.benefitType.code=\"UC\"",
     "PageLabel": "Elements disputed",
     "ShowSummaryChangeOption": "N"
   },
@@ -2721,7 +2720,6 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
     "PageLabel": "Issue codes",
-    "PageShowCondition": "appeal.benefitType.code=\"UC\"",
     "FieldShowCondition": "elementsDisputedList CONTAINS \"general\"",
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "ShowSummaryChangeOption": "Y"
