@@ -765,6 +765,7 @@
   },
   {
     "CaseEventID": "writeFinalDecision",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseFieldID": "writeFinalDecisionPageSectionReference",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -778,7 +779,7 @@
   },
   {
     "CaseEventID": "writeFinalDecision",
-    "CaseFieldID": "writeFinalDecisionDetailsOfDecision",
+    "CaseFieldID": "showFinalDecisionNoticeSummaryOfOutcomePage",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
@@ -786,7 +787,19 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "detailsOfDecision",
     "PageLabel": "Summary of outcome decision",
-    "PageShowCondition": "writeFinalDecisionIsDescriptorFlow = \"No\" AND writeFinalDecisionGenerateNotice = \"Yes\"",
+    "FieldShowCondition": "writeFinalDecisionGenerateNotice=\"DoNotUse\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "writeFinalDecisionDetailsOfDecision",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 43,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "detailsOfDecision",
+    "PageShowCondition": "showFinalDecisionNoticeSummaryOfOutcomePage = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {

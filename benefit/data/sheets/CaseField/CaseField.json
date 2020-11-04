@@ -298,5 +298,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "showRegulation29Page", "Label": "Show the Regulation 29 Page?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "esaWriteFinalDecisionSchedule3ActivitiesQuestion", "Label": "Schedule 3 Activities ", "HintText": "(Select all that apply)", "FieldType": "MultiSelectList", "FieldTypeParameter": "FL_schedule3Activities", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "esaWriteFinalDecisionSchedule3ActivitiesApply", "Label": "Do Schedule 3 Activities Apply?", "FieldType": "FixedRadioList", "FieldTypeParameter" : "FL_schedule3ActivitiesApply" ,"SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "doesRegulation35Apply", "Label": "Does regulation 35 apply?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "doesRegulation35Apply", "Label": "Does regulation 35 apply?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "showFinalDecisionNoticeSummaryOfOutcomePage", "Label": "Show the final decision notice outcome page?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
