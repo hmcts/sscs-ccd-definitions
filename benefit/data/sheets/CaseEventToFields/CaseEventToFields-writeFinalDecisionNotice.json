@@ -744,7 +744,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 41,
+    "PageDisplayOrder": 42,
     "PageFieldDisplayOrder": 1,
     "PageID": "schedule3Activities",
     "PageLabel": "Select Schedule 3 activities",
