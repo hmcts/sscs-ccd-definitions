@@ -206,7 +206,18 @@
     "PageDisplayOrder": 6,
     "PageFieldDisplayOrder": 2,
     "PageID": "panelMemberNames",
-    "PageLabel": "Panel members",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "writeFinalDecisionOtherPanelMemberName",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 6,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "panelMemberNames",
+    "FieldShowCondition": "appeal.benefitType.code=\"ESA\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
