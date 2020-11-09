@@ -368,7 +368,6 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_panelMembersExcluded", "DisplayOrder" : "2", "ListElementCode": "No", "ListElement": "No"},
   {"LiveFrom": "01/01/2018", "ID": "FL_panelMembersExcluded", "DisplayOrder" : "1", "ListElementCode": "Yes", "ListElement": "Yes"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateType", "ListElementCode": "dateToBeFixed", "ListElement": "Date to be fixed"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateType", "ListElementCode": "specificTime", "ListElement": "Specific time"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateType", "ListElementCode": "firstAvailableDateAfter", "ListElement": "First available date after"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateType", "ListElementCode": "firstAvailableDate", "ListElement": "First available date"},
   {"LiveFrom": "01/01/2018", "ID": "FL_adjournCaseNextHearingDateOrPeriod", "ListElementCode": "providePeriod", "ListElement": "Provide period"},
