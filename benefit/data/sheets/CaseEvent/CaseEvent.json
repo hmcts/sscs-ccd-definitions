@@ -1139,6 +1139,17 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "makeCaseUrgent",
+    "Name": "Mark case as urgent",
+    "DisplayOrder": 92,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "moveToAppealCreated",
     "Name": "Move to appeal created",
     "Description": "Moves case to appeal created",

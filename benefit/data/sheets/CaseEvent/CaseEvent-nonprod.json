@@ -44,17 +44,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "makeCaseUrgent",
-    "Name": "Mark case as urgent",
-    "DisplayOrder": 92,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
     "ID": "dwpRaiseException",
     "Name": "DWP Raise an exception",
     "Description": "Raise an exception",
