@@ -422,5 +422,17 @@
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "reinstatementRequest", "ListElement": "Reinstatement request"},
   {"LiveFrom": "01/01/2018", "ID": "ScannedDocumentType", "ListElementCode": "reinstatementRequest", "ListElement": "Reinstatement request"},
   {"LiveFrom": "01/01/2018", "ID": "FL_schedule3ActivitiesApply", "ListElementCode": "No", "ListElement": "None apply"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_schedule3ActivitiesApply", "ListElementCode": "Yes", "ListElement": "The Schedule 3 activities selected below apply:"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_schedule3ActivitiesApply", "ListElementCode": "Yes", "ListElement": "The Schedule 3 activities selected below apply:"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "12", "ListElementCode": "doNotReassess", "ListElement": "Do not reassess"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "11", "ListElementCode": "doNotReassess24", "ListElement": "Do not reassess within 24 months"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "10", "ListElementCode": "doNotReassess18", "ListElement": "Do not reassess within 18 months"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "9", "ListElementCode": "doNotReassess12", "ListElement": "Do not reassess within 12 months"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "8", "ListElementCode": "doNotReassess6", "ListElement": "Do not reassess within 6 months"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "7", "ListElementCode": "doNotReassess3", "ListElement": "Do not reassess within 3 months"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "6", "ListElementCode": "reassess24", "ListElement": "Reassess within 24 months"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "5", "ListElementCode": "reassess18", "ListElement": "Reassess within 18 months"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "4", "ListElementCode": "reassess12", "ListElement": "Reassess within 12 months"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "3", "ListElementCode": "reassess6", "ListElement": "Reassess within 6 months"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "2", "ListElementCode": "reassess3", "ListElement": "Reassess within 3 months"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "1", "ListElementCode": "noRecommendation", "ListElement": "No recommendation"}
 ]

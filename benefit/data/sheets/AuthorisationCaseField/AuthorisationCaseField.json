@@ -957,5 +957,6 @@
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "esaWriteFinalDecisionSchedule3ActivitiesApply", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "esaWriteFinalDecisionSchedule3ActivitiesQuestion", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "doesRegulation35Apply", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "showFinalDecisionNoticeSummaryOfOutcomePage", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "showFinalDecisionNoticeSummaryOfOutcomePage", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "dwpReassessTheAward", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]
