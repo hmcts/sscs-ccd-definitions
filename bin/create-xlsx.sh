@@ -103,6 +103,7 @@ if [ ${TYPE} == "benefit" ]; then
   FIXED_LIST_USERS=$(cat ${RUN_DIR}/${TYPE}/FixedLists_AssignTo_${FIXED_LISTS_SUFFIX}.txt)
   PIP_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/pip-decision-notice-questions.txt)
   ESA_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/esa-decision-notice-questions.txt)
+  UC_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/uc-decision-notice-questions.txt)
   LANGUAGES=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/languages.txt)
 else
   FIXED_LIST_USERS=" "
@@ -133,6 +134,7 @@ docker run -ti --rm --name json2xlsx \
   -e "CCD_DEF_FIXED_LIST_USERS=${FIXED_LIST_USERS}" \
   -e "CCD_DEF_PIP_DECISION_NOTICE_QUESTIONS=${PIP_DECISION_NOTICE_QUESTIONS}" \
   -e "CCD_DEF_ESA_DECISION_NOTICE_QUESTIONS=${ESA_DECISION_NOTICE_QUESTIONS}" \
+  -e "CCD_DEF_UC_DECISION_NOTICE_QUESTIONS=${UC_DECISION_NOTICE_QUESTIONS}" \
   -e "CCD_DEF_LANGUAGES=${LANGUAGES}" \
   -e "CCD_DEF_E=${UPPERCASE_ENV}" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION} \

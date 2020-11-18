@@ -48,7 +48,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "allowedOrRefused",
     "PageLabel": "Allowed or refused",
-    "PageShowCondition": "writeFinalDecisionIsDescriptorFlow = \"No\" OR writeFinalDecisionGenerateNotice = \"No\" OR appeal.benefitType.code=\"ESA\"",
+    "PageShowCondition": "writeFinalDecisionIsDescriptorFlow = \"No\" OR writeFinalDecisionGenerateNotice = \"No\" OR appeal.benefitType.code=\"ESA\" OR appeal.benefitType.code=\"UC\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
