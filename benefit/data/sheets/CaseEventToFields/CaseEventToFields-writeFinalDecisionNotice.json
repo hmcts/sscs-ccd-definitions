@@ -244,7 +244,21 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "workCapabilityAssessment",
     "PageLabel": "Work capability assessment",
-    "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\" AND appeal.benefitType.code=\"ESA\"",
+    "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\" AND appeal.benefitType.code!=\"PIP\"",
+    "FieldShowCondition" : "appeal.benefitType.code=\"ESA\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "lcwaAppeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 8,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "workCapabilityAssessment",
+    "PageLabel": "Work capability assessment",
+    "FieldShowCondition" : "appeal.benefitType.code=\"UC\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -254,9 +268,10 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 8,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
     "PageID": "workCapabilityAssessment",
     "PageLabel": "Work capability assessment",
+    "FieldShowCondition" : "appeal.benefitType.code=\"ESA\" OR appeal.benefitType.code=\"UC\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
