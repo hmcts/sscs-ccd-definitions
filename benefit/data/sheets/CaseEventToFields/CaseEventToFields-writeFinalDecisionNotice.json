@@ -271,7 +271,7 @@
     "PageFieldDisplayOrder": 3,
     "PageID": "workCapabilityAssessment",
     "PageLabel": "Work capability assessment",
-    "FieldShowCondition" : "appeal.benefitType.code=\"ESA\" OR appeal.benefitType.code=\"UC\"",
+    "FieldShowCondition" : "lcwaAppeal=\"Yes\" OR wcaAppeal=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
