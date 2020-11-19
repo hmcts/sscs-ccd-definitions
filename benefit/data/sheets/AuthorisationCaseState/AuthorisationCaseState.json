@@ -92,5 +92,7 @@
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "hearing", "UserRole": "caseworker-sscs-pcqextractor", "CRUD": "R"},
   {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "readyToList", "UserRole": "caseworker-sscs-pcqextractor", "CRUD": "R"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "closed", "UserRole": "caseworker-sscs-pcqextractor", "CRUD": "R"},
-  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "draftArchived", "UserRole": "caseworker-sscs-pcqextractor", "CRUD": "R"}
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "draftArchived", "UserRole": "caseworker-sscs-pcqextractor", "CRUD": "R"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "notListable", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "notListable", "UserRole": "citizen", "CRUD": "R"}
 ]
