@@ -1,5 +1,8 @@
 [
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "summaryCreatedInGapsFrom", "TabFieldDisplayOrder": 1},
+  {"LiveFrom": "01/01/2019", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "isProgressingViaGaps", "TabFieldDisplayOrder": 2, "FieldShowCondition": "outcome=\"Do Not Show\""},
+  {"LiveFrom": "01/01/2019", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "summaryIsProgressingViaGaps", "TabFieldDisplayOrder": 2, "FieldShowCondition": "isProgressingViaGaps=\"Yes\""},
+
   {"LiveFrom": "16/09/2019", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "urgentCase", "TabFieldDisplayOrder": 3},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "summaryName", "TabFieldDisplayOrder": 4},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "summaryAddress", "TabFieldDisplayOrder": 5},
