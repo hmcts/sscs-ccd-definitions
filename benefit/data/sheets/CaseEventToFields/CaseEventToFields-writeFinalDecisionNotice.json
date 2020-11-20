@@ -235,6 +235,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "wcaAppeal",
     "CaseTypeID": "Benefit",
@@ -256,6 +257,7 @@
     "PageDisplayOrder": 8,
     "PageFieldDisplayOrder": 2,
     "PageID": "workCapabilityAssessment",
+    "FieldShowCondition": "wcaAppeal = \"Yes\"",
     "PageLabel": "Work capability assessment",
     "ShowSummaryChangeOption": "Y"
   },
@@ -270,7 +272,7 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "esaDecisionNoticeOptions",
     "PageLabel": "Select Schedule 2 activities",
-    "PageShowCondition": "appeal.benefitType.code=\"ESA\" AND wcaAppeal = \"Yes\" AND writeFinalDecisionGenerateNotice = \"Yes\"",
+    "PageShowCondition": "appeal.benefitType.code=\"ESA\" AND wcaAppeal = \"Yes\" AND writeFinalDecisionGenerateNotice = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -481,7 +483,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "mobilisingUnaided",
     "PageLabel": "Physical disabilities: Mobilising unaided",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"mobilisingUnaided\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"mobilisingUnaided\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -495,7 +497,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "standingAndSitting",
     "PageLabel": "Physical Disabilities: Standing and sitting",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"standingAndSitting\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"standingAndSitting\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -509,7 +511,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "reaching",
     "PageLabel": "Physical Disabilities: Reaching",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"reaching\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"reaching\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -523,7 +525,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "pickingUp",
     "PageLabel": "Physical Disabilities: Picking up and moving",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"pickingUp\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"pickingUp\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -537,7 +539,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "manualDexterity",
     "PageLabel": "Physical Disabilities: Manual dexterity",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"manualDexterity\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"manualDexterity\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -551,7 +553,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "selfUnderstood",
     "PageLabel": "Physical Disabilities: Making self understood",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"makingSelfUnderstood\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"makingSelfUnderstood\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -565,7 +567,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "communication",
     "PageLabel": "Physical Disabilities: Understanding communication",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"communication\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"communication\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -579,7 +581,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "navigation",
     "PageLabel": "Physical Disabilities: Navigation and maintaining safety",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"navigation\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"navigation\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -593,7 +595,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "lossOfControl",
     "PageLabel": "Physical Disabilities: Absence or loss of control of bladder and/or bowels",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"lossOfControl\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"lossOfControl\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -607,7 +609,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "consciousness",
     "PageLabel": "Physical Disabilities: Consciousness during waking moments",
-    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"consciousness\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"consciousness\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -621,7 +623,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "learningTasks",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Learning tasks",
-    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"learningTasks\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"learningTasks\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -635,7 +637,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "awarenessOfHazards",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Awareness of everyday hazards",
-    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"awarenessOfHazards\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"awarenessOfHazards\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -649,7 +651,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "personalAction",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Initiating and completing personal action",
-    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"personalAction\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"personalAction\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -663,7 +665,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "copingWithChange",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Coping with change",
-    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"copingWithChange\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"copingWithChange\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -677,7 +679,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "gettingAbout",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Getting about",
-    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"gettingAbout\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"gettingAbout\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -691,7 +693,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "socialEngagement",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Coping with social engagement",
-    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"socialEngagement\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"socialEngagement\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -705,7 +707,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "appropriatenessOfBehaviour",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Appropriateness of behaviour with other people",
-    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"appropriatenessOfBehaviour\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "esaWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"appropriatenessOfBehaviour\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -837,7 +839,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "dwpReassessTheAward",
     "PageLabel": "When should DWP reassess the award?",
-    "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\"",
+    "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\" AND wcaAppeal = \"Yes\" AND writeFinalDecisionAllowedOrRefused = \"allowed\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
