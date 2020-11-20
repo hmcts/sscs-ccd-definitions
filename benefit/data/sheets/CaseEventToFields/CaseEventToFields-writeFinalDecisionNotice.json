@@ -256,6 +256,7 @@
     "PageDisplayOrder": 8,
     "PageFieldDisplayOrder": 2,
     "PageID": "workCapabilityAssessment",
+    "FieldShowCondition": "wcaAppeal = \"Yes\"",
     "PageLabel": "Work capability assessment",
     "ShowSummaryChangeOption": "Y"
   },
@@ -837,7 +838,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "dwpReassessTheAward",
     "PageLabel": "When should DWP reassess the award?",
-    "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\"",
+    "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
