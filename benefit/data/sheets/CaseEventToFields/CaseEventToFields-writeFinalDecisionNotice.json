@@ -838,7 +838,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "dwpReassessTheAward",
     "PageLabel": "When should DWP reassess the award?",
-    "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\" AND wcaAppeal = \"Yes\"",
+    "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\" AND wcaAppeal = \"Yes\" AND writeFinalDecisionAllowedOrRefused = \"allowed\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
