@@ -778,6 +778,20 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "dwpRaiseException",
+    "Name": "DWP Raise an exception",
+    "Description": "Raise an exception",
+    "DisplayOrder": 64,
+    "PreConditionState(s)": "withDwp",
+    "PostConditionState": "notListable",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "dwpResponseLateReminder",
     "Name": "DWP Response Late Reminder",
     "Description": "Holding email when DWP has not responded in time",
@@ -1088,6 +1102,20 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "jointPartyAdded",
+    "Name": "Joint Party Added",
+    "Description": "Joint Party has been registered on case",
+    "DisplayOrder": 88,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "dwpLapseCase",
     "Name": "Lapse appeal",
     "Description": "Revise decision",
@@ -1194,6 +1222,20 @@
     "PreConditionState(s)": "withDwp",
     "PostConditionState": "interlocutoryReviewState",
     "SecurityClassification": "Public",
+    "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "notListable",
+    "Name": "Not listable",
+    "Description": "Case is not listable",
+    "DisplayOrder": 96,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "notListable",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
     "ShowEventNotes": "Y"
   },
   {
@@ -1664,6 +1706,20 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "updateNotListable",
+    "Name": "Update not listable case",
+    "Description": "Update not listable case",
+    "DisplayOrder": 133,
+    "PreConditionState(s)": "notListable",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "caseUpdated",
     "Name": "Update to case data",
     "Description": "Automatic update of data from GAPS 2 - no notification",
@@ -1984,5 +2040,4 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
     "SecurityClassification": "Public"
   }
-
 ]
