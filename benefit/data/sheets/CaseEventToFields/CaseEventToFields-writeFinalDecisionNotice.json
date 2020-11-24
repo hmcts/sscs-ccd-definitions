@@ -217,7 +217,7 @@
     "PageDisplayOrder": 6,
     "PageFieldDisplayOrder": 3,
     "PageID": "panelMemberNames",
-    "FieldShowCondition": "appeal.benefitType.code=\"ESA\"",
+    "FieldShowCondition": "appeal.benefitType.code=\"ESA\" OR appeal.benefitType.code=\"UC\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
