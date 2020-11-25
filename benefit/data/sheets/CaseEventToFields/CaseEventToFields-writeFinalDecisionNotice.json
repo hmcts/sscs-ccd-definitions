@@ -1171,7 +1171,7 @@
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "showFinalDecisionNoticeSummaryOfOutcomePage",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "READONLY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 64,
     "PageFieldDisplayOrder": 1,
