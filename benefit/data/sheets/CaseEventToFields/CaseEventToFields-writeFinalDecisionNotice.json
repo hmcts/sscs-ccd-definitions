@@ -1202,9 +1202,6 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "dwpReassessTheAward",
     "PageLabel": "When should DWP reassess the award?",
-<<<<<<< HEAD
-    "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\" AND wcaAppeal != \"No\" AND lcwaAppeal != \"No\" AND writeFinalDecisionAllowedOrRefused = \"allowed\"",
-=======
     "FieldShowCondition": "writeFinalDecisionGenerateNotice=\"DoNotUse\"",
     "ShowSummaryChangeOption": "Y"
   },
@@ -1218,7 +1215,6 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "dwpReassessTheAward",
     "PageShowCondition": "showDwpReassessAwardPage = \"Yes\"",
->>>>>>> 0be8243... SSCS-8309 Add show condition for reassess award page
     "ShowSummaryChangeOption": "Y"
   },
   {
