@@ -1,6 +1,7 @@
 [${CCD_DEF_FIXED_LIST_USERS},
   ${CCD_DEF_PIP_DECISION_NOTICE_QUESTIONS},
   ${CCD_DEF_ESA_DECISION_NOTICE_QUESTIONS},
+  ${CCD_DEF_UC_DECISION_NOTICE_QUESTIONS},
   ${CCD_DEF_LANGUAGES},
   {"LiveFrom": "01/01/2018", "ID": "eventType", "ListElementCode": "appealCreated", "ListElement": "Appeal Created"},
   {"LiveFrom": "01/01/2018", "ID": "eventType", "ListElementCode": "updateCaseData", "ListElement": "Case Updated"},
@@ -440,5 +441,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "3", "ListElementCode": "reassess6", "ListElement": "Reassess within 6 months"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "2", "ListElementCode": "reassess3", "ListElement": "Reassess within 3 months"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "1", "ListElementCode": "noRecommendation", "ListElement": "No recommendation"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_schedule7ActivitiesApply", "ListElementCode": "No", "ListElement": "None apply"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_schedule7ActivitiesApply", "ListElementCode": "Yes", "ListElement": "The Schedule 7 activities selected below apply:"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeDwp", "ListElementCode": "tl1Form", "ListElement": "TL1 form (Request for time extension)"}
 ]
