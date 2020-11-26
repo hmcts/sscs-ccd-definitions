@@ -112,6 +112,7 @@
   {"LiveFrom": "16/08/2018", "CaseTypeID": "Benefit", "TabID": "dwpDocuments_sscs", "TabLabel": "DWP Documents", "TabDisplayOrder": 17, "CaseFieldID": "dwpNoActionDoc", "TabFieldDisplayOrder": 7},
   {"LiveFrom": "17/08/2018", "CaseTypeID": "Benefit", "TabID": "dwpDocuments_sscs", "TabLabel": "DWP Documents", "TabDisplayOrder": 17, "CaseFieldID": "dwpOtherDoc", "TabFieldDisplayOrder": 7},
   {"LiveFrom": "17/08/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "dwpDocuments_sscs", "TabLabel": "DWP Documents", "TabDisplayOrder": 17, "CaseFieldID": "tl1Form", "TabFieldDisplayOrder": 8},
+  {"LiveFrom": "17/08/2018", "CaseTypeID": "Benefit", "TabID": "dwpDocuments_sscs", "TabLabel": "DWP Documents", "TabDisplayOrder": 17, "CaseFieldID": "dwpDocuments", "TabFieldDisplayOrder": 9},
   {"LiveFrom": "27/09/2018", "CaseTypeID": "Benefit", "TabID": "relatedCasesTab_sscs", "TabLabel": "Related Cases", "TabDisplayOrder": 18, "CaseFieldID": "linkedCase", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "28/09/2018", "CaseTypeID": "Benefit", "TabID": "relatedCasesTab_sscs", "TabLabel": "Related Cases", "TabDisplayOrder": 18, "CaseFieldID": "associatedCase", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "29/09/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "relatedCasesTab_sscs", "TabLabel": "Related Cases", "TabDisplayOrder": 18, "CaseFieldID": "linkedCasesBoolean", "TabFieldDisplayOrder": 3},
