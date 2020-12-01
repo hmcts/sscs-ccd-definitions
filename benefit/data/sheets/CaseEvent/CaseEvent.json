@@ -1374,7 +1374,7 @@
     "Name": "Resend case to GAPS 2",
     "Description": "Re-sends the case to GAPS 2",
     "DisplayOrder": 106,
-    "PreConditionState(s)": "appealCreated;hearing;readyToList;responseReceived;validAppeal;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;hearing;readyToList;responseReceived;validAppeal;voidState;withDwp;notListable",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
