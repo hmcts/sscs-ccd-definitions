@@ -20,7 +20,7 @@
     "ID": "provideAppointeeDetails",
     "Name": "Provide appointee details",
     "Description": "Provide appointee details for case",
-    "DisplayOrder": 3,
+    "DisplayOrder": 99,
     "PreConditionState(s)": "notListable;dormantAppealState",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
