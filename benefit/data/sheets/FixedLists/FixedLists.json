@@ -310,6 +310,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "over13MonthsAndGroundsMissing", "ListElement": "Grounds for appeal missing and over 13 months"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "over13months", "ListElement": "Over 13 months"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "timeExtension", "ListElement": "Time extension"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "phmeRequest", "ListElement": "PHME request"},
   {"LiveFrom": "01/01/2018", "ID": "FL_decisionTypes", "ListElementCode": "strikeOut", "ListElement": "Strike out"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Universal Credit", "ListElement": "Universal Credit"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Worthing DRT", "ListElement": "ESA Worthing DRT"},
@@ -446,5 +447,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpReassessTheAward", "DisplayOrder" : "1", "ListElementCode": "noRecommendation", "ListElement": "No recommendation"},
   {"LiveFrom": "01/01/2018", "ID": "FL_schedule7ActivitiesApply", "ListElementCode": "No", "ListElement": "None apply"},
   {"LiveFrom": "01/01/2018", "ID": "FL_schedule7ActivitiesApply", "ListElementCode": "Yes", "ListElement": "The Schedule 7 activities selected below apply:"},
-  {"LiveFrom": "01/01/2018", "ID": "documentTypeDwp", "ListElementCode": "tl1Form", "ListElement": "TL1 form (Request for time extension)"}
+  {"LiveFrom": "01/01/2018", "ID": "documentTypeDwp", "ListElementCode": "tl1Form", "ListElement": "TL1 form (Request for time extension)"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_editedEvidenceReason", "ListElementCode": "phme", "ListElement": "Potentially harmful medical evidence"}
+
 ]
