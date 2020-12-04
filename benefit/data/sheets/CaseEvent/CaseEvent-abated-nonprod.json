@@ -1,0 +1,17 @@
+[
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "abateCase",
+    "Name": "Abate case",
+    "Description": "Abate the case",
+    "DisplayOrder": 3,
+    "PreConditionState(s)": "notListable",
+    "PostConditionState": "dormantAppealState",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowSummary": "N",
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public"
+  }
+]
