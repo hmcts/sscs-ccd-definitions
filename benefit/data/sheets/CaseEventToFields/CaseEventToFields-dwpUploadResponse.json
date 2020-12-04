@@ -47,12 +47,35 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "dwpEditedEvidenceReason",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "dwpEditedEvidenceBundleDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "benefitCode",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 6,
     "PageID": "1.0",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
     "ShowSummaryChangeOption": "Y"
@@ -64,7 +87,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 7,
     "PageID": "1.0",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
     "ShowSummaryChangeOption": "Y"
@@ -76,7 +99,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 6,
+    "PageFieldDisplayOrder": 8,
     "PageID": "1.0"
   },
   {
@@ -86,7 +109,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 7,
+    "PageFieldDisplayOrder": 9,
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
@@ -98,7 +121,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 8,
+    "PageFieldDisplayOrder": 10,
     "PageID": "1.0",
     "PageLabel": "Log case progress",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
