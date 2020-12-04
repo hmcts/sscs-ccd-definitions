@@ -330,5 +330,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "ucWriteFinalDecisionSchedule7ActivitiesQuestion", "Label": "Schedule 7 Activities ", "HintText": "(Select all that apply)", "FieldType": "MultiSelectList", "FieldTypeParameter": "FL_schedule7Activities", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "ucWriteFinalDecisionSchedule7ActivitiesApply", "Label": "Do Schedule 7 Activities Apply?", "FieldType": "FixedRadioList", "FieldTypeParameter" : "FL_schedule7ActivitiesApply" ,"SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "lcwaAppeal", "Label": "Is this a LCWA appeal?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpDocuments", "Label": "Dwp Documents", "FieldType": "Collection", "FieldTypeParameter": "dwpDocuments", "RegularExpression": "No", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpDocuments", "Label": "Dwp Documents", "FieldType": "Collection", "FieldTypeParameter": "dwpDocuments", "RegularExpression": "No", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/12/2020", "CaseTypeID": "Benefit", "ID": "isSaveAndReturn", "Label": "Is a S&R case?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]

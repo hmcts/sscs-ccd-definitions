@@ -43,6 +43,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "reservedToJudge", "TabFieldDisplayOrder": 34},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "notListableProvideReasons", "TabFieldDisplayOrder": 35},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "isScottishCase", "TabFieldDisplayOrder": 36},
+  {"LiveFrom": "01/12/2020", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "isSaveAndReturn", "TabFieldDisplayOrder": 37},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "subscriptions_sscs", "TabLabel": "Subscriptions", "TabDisplayOrder": 3, "CaseFieldID": "subscriptions", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "caseReference", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "caseCreated", "TabFieldDisplayOrder": 2},
