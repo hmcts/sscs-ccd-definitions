@@ -12,18 +12,6 @@
   },
   {
     "CaseEventID": "amendElementsIssues",
-    "CaseFieldID": "elementsDisputedGeneral",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedGeneralOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedGeneral.issueCode=\"doNotUse\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "amendElementsIssues",
     "CaseFieldID": "elementsDisputedSanctions",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedSanctionsCode",
@@ -31,18 +19,6 @@
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "amendElementsIssues",
-    "CaseFieldID": "elementsDisputedSanctions",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedSanctionsOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedOverpayment.issueCode=\"doNotUse\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -58,18 +34,6 @@
   },
   {
     "CaseEventID": "amendElementsIssues",
-    "CaseFieldID": "elementsDisputedOverpayment",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedOverpaymentOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedOverpayment.issueCode=\"doNotUse\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "amendElementsIssues",
     "CaseFieldID": "elementsDisputedHousing",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedHousingCode",
@@ -77,18 +41,6 @@
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "amendElementsIssues",
-    "CaseFieldID": "elementsDisputedHousing",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedHousingOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedHousing.issueCode=\"doNotUse\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -104,18 +56,6 @@
   },
   {
     "CaseEventID": "amendElementsIssues",
-    "CaseFieldID": "elementsDisputedChildCare",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedChildCareOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedChildCare.issueCode=\"doNotUse\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "amendElementsIssues",
     "CaseFieldID": "elementsDisputedCare",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedCareCode",
@@ -123,18 +63,6 @@
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "amendElementsIssues",
-    "CaseFieldID": "elementsDisputedCare",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedCareOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedCare.issueCode=\"doNotUse\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -150,18 +78,6 @@
   },
   {
     "CaseEventID": "amendElementsIssues",
-    "CaseFieldID": "elementsDisputedChildElement",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedChildElementOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedChildElement.issueCode=\"doNotUse\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "amendElementsIssues",
     "CaseFieldID": "elementsDisputedChildDisabled",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedChildDisabledCode",
@@ -169,18 +85,6 @@
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "amendElementsIssues",
-    "CaseFieldID": "elementsDisputedChildDisabled",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedChildDisabledOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedChildDisabled.issueCode=\"doNotUse\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -196,18 +100,6 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "elementsDisputedGeneral",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedGeneralOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedGeneral.issueCode=\"doNotUse\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "elementsDisputedSanctions",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedSanctionsCode",
@@ -215,18 +107,6 @@
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "elementsDisputedSanctions",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedSanctionsOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedOverpayment.issueCode=\"doNotUse\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -242,18 +122,6 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "elementsDisputedOverpayment",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedOverpaymentOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedOverpayment.issueCode=\"doNotUse\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "elementsDisputedHousing",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedHousingCode",
@@ -261,18 +129,6 @@
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "elementsDisputedHousing",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedHousingOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedHousing.issueCode=\"doNotUse\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -288,18 +144,6 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "elementsDisputedChildCare",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedChildCareOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedChildCare.issueCode=\"doNotUse\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "elementsDisputedCare",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedCareCode",
@@ -307,18 +151,6 @@
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "elementsDisputedCare",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedCareOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedCare.issueCode=\"doNotUse\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -334,18 +166,6 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "elementsDisputedChildElement",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedChildElementOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedChildElement.issueCode=\"doNotUse\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "elementsDisputedChildDisabled",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedChildDisabledCode",
@@ -353,18 +173,6 @@
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "elementsDisputedChildDisabled",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedChildDisabledOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedChildDisabled.issueCode=\"doNotUse\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -457,18 +265,6 @@
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
-    "CaseFieldID": "elementsDisputedGeneral",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedGeneralOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedGeneral.issueCode=\"doNotUse\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "elementsDisputedSanctions",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedSanctionsCode",
@@ -476,18 +272,6 @@
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "hmctsResponseReviewed",
-    "CaseFieldID": "elementsDisputedSanctions",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedSanctionsOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedOverpayment.issueCode=\"doNotUse\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -503,18 +287,6 @@
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
-    "CaseFieldID": "elementsDisputedOverpayment",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedOverpaymentOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedOverpayment.issueCode=\"doNotUse\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "elementsDisputedHousing",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedHousingCode",
@@ -522,18 +294,6 @@
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "hmctsResponseReviewed",
-    "CaseFieldID": "elementsDisputedHousing",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedHousingOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedHousing.issueCode=\"doNotUse\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -549,18 +309,6 @@
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
-    "CaseFieldID": "elementsDisputedChildCare",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedChildCareOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedChildCare.issueCode=\"doNotUse\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "elementsDisputedCare",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedCareCode",
@@ -568,18 +316,6 @@
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "hmctsResponseReviewed",
-    "CaseFieldID": "elementsDisputedCare",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedCareOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedCare.issueCode=\"doNotUse\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -595,18 +331,6 @@
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
-    "CaseFieldID": "elementsDisputedChildElement",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedChildElementOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedChildElement.issueCode=\"doNotUse\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "elementsDisputedChildDisabled",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedChildDisabledCode",
@@ -614,18 +338,6 @@
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
     "PageID": "elementsDisputedId",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "hmctsResponseReviewed",
-    "CaseFieldID": "elementsDisputedChildDisabled",
-    "ListElementCode": "outcome",
-    "ID": "elementsDisputedChildDisabledOutcome",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 2,
-    "PageID": "elementsDisputedId",
-    "FieldShowCondition": "elementsDisputedChildDisabled.issueCode=\"doNotUse\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
