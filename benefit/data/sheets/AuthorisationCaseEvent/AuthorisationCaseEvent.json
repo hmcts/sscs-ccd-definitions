@@ -475,7 +475,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "panelUpdate", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "panelUpdate", "UserRole": "caseworker-sscs-judge", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "panelUpdate", "UserRole": "caseworker-sscs-superuser", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "provideAppointeeDetails", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseEventID": "readyToList", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseEventID": "readyToList", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "readyToList", "UserRole": "caseworker-sscs", "CRUD": "R"},
