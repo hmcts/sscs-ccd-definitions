@@ -13,5 +13,33 @@
     "ShowSummary": "N",
     "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "deathOfAppellant",
+    "Name": "Death of appellant",
+    "Description": "Record the death of an appellant",
+    "DisplayOrder": 61,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowSummary": "N",
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "provideAppointeeDetails",
+    "Name": "Provide appointee details",
+    "Description": "Provide appointee details for case",
+    "DisplayOrder": 99,
+    "PreConditionState(s)": "notListable;dormantAppealState",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public"
   }
 ]
