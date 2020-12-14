@@ -2402,29 +2402,6 @@
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
-    "CaseFieldID": "dwpEditedEvidenceReason",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "hmctsResponseReviewed",
-    "CaseFieldID": "dwpEditedEvidenceBundleDocument",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "10/10/2019",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
-  },
-  {
-    "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "benefitCode",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
