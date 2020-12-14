@@ -2407,7 +2407,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 6,
     "PageID": "1.0",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
@@ -2419,7 +2419,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 7,
     "PageID": "1.0",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
@@ -2431,7 +2431,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 6,
+    "PageFieldDisplayOrder": 8,
     "PageID": "1.0",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
@@ -2443,7 +2443,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 7,
+    "PageFieldDisplayOrder": 9,
     "PageID": "1.0",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
@@ -2455,7 +2455,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 8,
+    "PageFieldDisplayOrder": 10,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },
@@ -2466,9 +2466,21 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 9,
+    "PageFieldDisplayOrder": 11,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "dwpUcbEvidenceDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 12,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dwpUCB=\"Yes\""
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -2477,7 +2489,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 10,
+    "PageFieldDisplayOrder": 13,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },
@@ -2488,7 +2500,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 11,
+    "PageFieldDisplayOrder": 14,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },
@@ -2499,7 +2511,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 12,
+    "PageFieldDisplayOrder": 15,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },
@@ -2511,7 +2523,7 @@
     "FieldShowCondition": "isInterlocRequired=\"Yes\"",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 13,
+    "PageFieldDisplayOrder": 16,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },
