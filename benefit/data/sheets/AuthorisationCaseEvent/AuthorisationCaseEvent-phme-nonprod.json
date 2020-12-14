@@ -1,0 +1,6 @@
+[
+  {"LiveFrom": "22/10/2020", "CaseTypeID": "Benefit", "CaseEventID": "reviewPhmeRequest", "UserRole": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "22/10/2020", "CaseTypeID": "Benefit", "CaseEventID": "reviewPhmeRequest", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
+  {"LiveFrom": "22/10/2020", "CaseTypeID": "Benefit", "CaseEventID": "reviewPhmeRequest", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"}
+]
+
