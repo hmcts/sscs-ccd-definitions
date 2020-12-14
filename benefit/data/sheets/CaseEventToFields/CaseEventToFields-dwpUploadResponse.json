@@ -52,7 +52,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 7,
     "PageID": "1.0",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
     "ShowSummaryChangeOption": "Y"
@@ -64,7 +64,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 8,
     "PageID": "1.0",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
     "ShowSummaryChangeOption": "Y"
@@ -76,7 +76,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 6,
+    "PageFieldDisplayOrder": 9,
     "PageID": "1.0"
   },
   {
@@ -86,7 +86,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 7,
+    "PageFieldDisplayOrder": 10,
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
@@ -98,7 +98,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 8,
+    "PageFieldDisplayOrder": 11,
     "PageID": "1.0",
     "PageLabel": "Log case progress",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
