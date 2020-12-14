@@ -112,6 +112,50 @@
     "PageLabel": "Update case"
   },
   {
+    "CaseEventID": "adminUpdateEvent",
+    "CaseFieldID": "dwpRegionalCentre",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Update case"
+  },
+  {
+    "CaseEventID": "adminUpdateEvent",
+    "CaseFieldID": "urgentCase",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Update case"
+  },
+  {
+    "CaseEventID": "adminUpdateEvent",
+    "CaseFieldID": "urgentHearingRegistered",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Update case"
+  },
+  {
+    "CaseEventID": "adminUpdateEvent",
+    "CaseFieldID": "urgentHearingOutcome",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Update case"
+  },
+  {
     "CaseEventID": "adjournCase",
     "CaseFieldID": "adjournCaseGenerateNotice",
     "CaseTypeID": "Benefit",
