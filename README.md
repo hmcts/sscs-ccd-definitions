@@ -67,7 +67,7 @@ Filename structure is as follows: [major version].[minor version].[minor fix]_[e
 ## QA process
 
 - Test the AAT version locally to make sure it doesn't break and change works as expected 
-- If the change is also for Prod, then also test the Prod version locally, testing the new feature/change
+- If the change on Prod is different (e.g. if there is a <tab-name>-<feature_name>-prod.json> change), then also test the Prod version locally
 
 After PO sign off:
 - Upload AAT version onto AAT
