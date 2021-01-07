@@ -18,7 +18,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 9,
+    "PageFieldDisplayOrder": 10,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },
@@ -29,7 +29,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 10,
+    "PageFieldDisplayOrder": 11,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "dwpUCB=\"Yes\""
