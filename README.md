@@ -26,7 +26,7 @@ You can then test loading this generated CCD def into your local environment ver
     
 # Pushing changes
     
-* Raise a PR with the changes
+* Raise a PR with the changes - Remember: check any new features have full CRUD access
 * Open benefit/VERSION.yaml and modify the version number. This file will be used by the Azure Pipeline to create a docker importer image tagged with the specified version number.
 * Update the benefit/data/sheets/CaseType.json and replace the right version for the field "Name": "SSCS Case v5.2.02_${CCD_DEF_E}"
 * Get it approved and merged
@@ -56,6 +56,28 @@ To create the AAT and PROD versions, move to the root of this repository, then r
 ./bin/create-xlsx.sh benefit 5.2.02 prod
 
 Put a message on the sscs-ccd slack channel with the new version
+
+## File naming conventions
+
+Filename structure is as follows: [major version].[minor version].[minor fix]_[environment] where
+- Major version i.e. v1.x.x indicates major structural changes to the definition, required to deliver new functionality or driven by changes to the definition structure as defined by the CCD team
+- Minor version i.e. vx.1.x indicates minor changes to the version, such as the removal / addition of new fields, updated callback URLs etc
+- Minor fix i.e. vx.x.1 indicates minor fixes and should be used for the addition / removal of users
+
+## QA process
+
+- Test the AAT version locally to make sure it doesn't break and change works as expected 
+- If the change on Prod is different (e.g. if there is a <tab-name>-<feature_name>-prod.json> change), then also test the Prod version locally
+
+After PO sign off:
+- Upload AAT version onto AAT
+- Run Tribunals pipeline to ensure no failures
+- Run E2E test pipeline to ensure no failures
+
+If all ok, create a ticket to get definition uploaded to Prod
+
+*Note*: CRUD access can be changed in a future version to allow new features to be used, once all code is in-place
+
 
 ## Load a CCD definition to your local environment
 
@@ -93,73 +115,81 @@ and replace them with a template variable. It will have done a similar thing for
 
 #Features
 
+## Feature flagging
+Any new features should be put behind feature flags in the definition:
+
+- create a <tab-name>-<feature_name>-nonprod.json file in the relevant directory 
+- if appropriate, also create a <tab-name>-<feature_name>-prod.json in the relevant directory, if you need to make a change to the prod version that you don't want to appear on the non prod version
+
+Please ensure all new features are clearly put into their *own feature files*. This makes releases more straight forward as we know exactly what needs to be moved across as part of the release. 
+
 ##Variable substitution
 
 A json2xlsx processor is able to replace variable placeholders defined in JSON definition files with values read from environment variables as long as variable name starts with CCD_DEF prefix.
 
 For example CCD_DEF_BASE_URL=http://localhost environment variable gets injected into fragment of following CCD definition:
 
-[
-  {
-    "LiveFrom": "2017-01-01",
-    "CaseTypeID": "Benefit",
-    "ID": "createCase",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_BASE_URL}/callback"
-  }
-]
+    [
+      {
+        "LiveFrom": "2017-01-01",
+        "CaseTypeID": "Benefit",
+        "ID": "createCase",
+        "CallBackURLSubmittedEvent": "${CCD_DEF_BASE_URL}/callback"
+      }
+    ]
 to become:
 
-[
-  {
-    "LiveFrom": "2017-01-01",
-    "CaseTypeID": "Benefit",
-    "ID": "createCase",
-    "CallBackURLSubmittedEvent": "http://localhost/callback"
-  }
-]
+    [
+      {
+        "LiveFrom": "2017-01-01",
+        "CaseTypeID": "Benefit",
+        "ID": "createCase",
+        "CallBackURLSubmittedEvent": "http://localhost/callback"
+      }
+    ]
 
-##JSON fragments
+## JSON fragments
 
 A json2xlsx processor is able to read smaller JSON fragments with CCD definitions that helps splitting large definition files into smaller chunks. These fragments can be read from any level of nested directory as long as the top level directory corresponds to a valid sheet name.
 
 For example large AuthorisationCaseField.json file presented below:
 
-[
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "Benefit",
-    "CaseFieldID": "appeal",
-    "UserRole": "caseworker-sscs-clerk",
-    "CRUD": "CRU"
-  },
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "Benefit",
-    "CaseFieldID": "appeal",
-    "UserRole": "caseworker-sscs-judge",
-    "CRUD": "CRU"
-  }
-]
+    [
+      {
+        "LiveFrom": "01/01/2017",
+        "CaseTypeID": "Benefit",
+        "CaseFieldID": "appeal",
+        "UserRole": "caseworker-sscs-clerk",
+        "CRUD": "CRU"
+      },
+      {
+        "LiveFrom": "01/01/2017",
+        "CaseTypeID": "Benefit",
+        "CaseFieldID": "appeal",
+        "UserRole": "caseworker-sscs-judge",
+        "CRUD": "CRU"
+      }
+    ]
 can be split into clerk.json file presented below:
 
-[
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "DRAFT",
-    "CaseFieldID": "appeal",
-    "UserRole": "caseworker-sscs-clerk",
-    "CRUD": "CRU"
-  }
-]
+    [
+      {
+        "LiveFrom": "01/01/2017",
+        "CaseTypeID": "DRAFT",
+        "CaseFieldID": "appeal",
+        "UserRole": "caseworker-sscs-clerk",
+        "CRUD": "CRU"
+      }
+    ]
 and judge.json file presented below:
 
-[
-  {
-    "LiveFrom": "01/01/2017",
-    "CaseTypeID": "DRAFT",
-    "CaseFieldID": "appeal",
-    "UserRole": "caseworker-sscs-judge",
-    "CRUD": "CRU"
-  }
-]
+    [
+      {
+        "LiveFrom": "01/01/2017",
+        "CaseTypeID": "DRAFT",
+        "CaseFieldID": "appeal",
+        "UserRole": "caseworker-sscs-judge",
+        "CRUD": "CRU"
+      }
+    ]
 located in AuthorisationCaseField directory that corresponds the XLS tab name.
