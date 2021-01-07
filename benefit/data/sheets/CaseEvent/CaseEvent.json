@@ -1966,6 +1966,19 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "issueAdjournmentNoticeWelsh",
+    "Name": "Welsh - adjournment notice",
+    "Description": "Send a welsh adjournment notice",
+    "DisplayOrder": 82,
+    "PreConditionState(s)": "hearing",
+    "PostConditionState": "readyToList",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "decisionIssuedWelsh",
     "Name": "Welsh - issue decision",
     "Description": "Send a welsh decision notice",
