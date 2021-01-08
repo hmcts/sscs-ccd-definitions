@@ -86,7 +86,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 10,
+    "PageFieldDisplayOrder": 12,
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
@@ -98,7 +98,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 11,
+    "PageFieldDisplayOrder": 13,
     "PageID": "1.0",
     "PageLabel": "Log case progress",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
