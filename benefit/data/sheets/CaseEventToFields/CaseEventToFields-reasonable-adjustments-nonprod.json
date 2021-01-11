@@ -1,0 +1,67 @@
+[
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "updateReasonableAdjustment",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "appeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\"",
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "jointPartyLabel",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 10,
+    "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND jointParty = \"Yes\"",
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "jointParty",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 11,
+    "FieldShowCondition": "appeal=\"DoNotUse\"",
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "jointPartyWantsReasonableAdjustment",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 12,
+    "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND jointParty = \"Yes\"",
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "jointPartyReasonableAdjustmentRequirements",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 13,
+    "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND jointPartyWantsReasonableAdjustment = \"Yes\"",
+    "PageID": "1.0"
+  }
+]
