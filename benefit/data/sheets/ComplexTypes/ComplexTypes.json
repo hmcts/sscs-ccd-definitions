@@ -336,5 +336,7 @@
   {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "documentComment", "FieldType": "Text", "ElementLabel": "Comment", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "30/07/2018", "ID": "dwpDocuments", "ListElementCode": "bundleAddition", "FieldType": "Text", "ElementLabel": "Bundle addition", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "evidenceIssued", "FieldType": "YesOrNo", "ElementLabel": "Evidence issued", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "documentDateAdded", "FieldType": "Date", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "documentDateAdded", "FieldType": "Date", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "reasAdjCorrespondence", "ListElementCode": "correspondence", "FieldType": "correspondence", "ElementLabel": "Sent on", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "reasAdjCorrespondence", "ListElementCode": "reasonableAdjustmentStatus", "FieldType": "FixedList",  "FieldTypeParameter": "FL_reasonableAdjustmentStatus", "ElementLabel": "Reasonable adjustment status", "SecurityClassification": "PUBLIC"}
 ]
