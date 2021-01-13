@@ -253,8 +253,6 @@
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyIdentity", "Label": "Joint party identity", "FieldType": "identity", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyAddressSameAsAppellant", "Label": "Is their address the same as the appellant's?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyAddress", "Label": "Joint party address", "FieldType": "address", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyWantsReasonableAdjustment", "Label": "Wants reasonable adjustment", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyReasonableAdjustmentRequirements", "Label": "Alternative format requirements", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "isScottishCase", "Label": "Is a Scottish Case?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2020", "CaseTypeID": "Benefit", "ID": "bulkScanEnvelopes", "Label": "Bulk Scan Envelopes", "FieldType": "Collection", "FieldTypeParameter": "BulkScanEnvelope", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "translationWorkOutstanding", "Label": "Is there document translation work outstanding?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -342,6 +340,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "processingVenue", "Label": "Processing venue", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dateOfAppellantDeath", "Label": "Date of appellant death", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "ID": "isSaveAndReturn", "Label": "Is a save & return case?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyLabel", "Label": "## Joint party details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "updateReasonableAdjustment", "Label": "Update Reasonable Adjustments", "FieldType": "FixedList", "FieldTypeParameter": "FL_updateReasonableAdjustments", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "updateReasonableAdjustment", "Label": "Update Reasonable Adjustments", "FieldType": "FixedList", "FieldTypeParameter": "FL_updateReasonableAdjustments", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reasonableAdjustment", "Label": "Reasonable Adjustment", "FieldType": "reasonableAdjustment", "SecurityClassification": "PUBLIC"}
 ]
