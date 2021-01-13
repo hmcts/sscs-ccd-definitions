@@ -1,7 +1,7 @@
 [
   {
     "CaseEventID": "updateReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustments",
     "ListElementCode": "appellant.wantsReasonableAdjustment",
     "ID": "appeal",
     "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND appeal.appellant.isAppointee != \"Yes\"",
@@ -11,17 +11,17 @@
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustments",
     "ListElementCode": "appellant.reasonableAdjustmentRequirements",
     "ID": "appeal",
-    "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND reasonableAdjustment.appellant.wantsReasonableAdjustment = \"Yes\"",
+    "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND reasonableAdjustments.appellant.wantsReasonableAdjustment = \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 5
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustments",
     "ListElementCode": "appointee.wantsReasonableAdjustment",
     "ID": "appeal",
     "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND appeal.appellant.isAppointee = \"Yes\"",
@@ -31,17 +31,17 @@
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustments",
     "ListElementCode": "appointee.reasonableAdjustmentRequirements",
     "ID": "appeal",
-    "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND reasonableAdjustment.appointee.wantsReasonableAdjustment = \"Yes\"",
+    "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND reasonableAdjustments.appointee.wantsReasonableAdjustment = \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 7
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustments",
     "ListElementCode": "representative.wantsReasonableAdjustment",
     "ID": "appeal",
     "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND appeal.rep.hasRepresentative = \"Yes\"",
@@ -51,17 +51,17 @@
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustments",
     "ListElementCode": "representative.reasonableAdjustmentRequirements",
     "ID": "appeal",
-    "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND reasonableAdjustment.representative.wantsReasonableAdjustment = \"Yes\"",
+    "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND reasonableAdjustments.representative.wantsReasonableAdjustment = \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 9
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustments",
     "ListElementCode": "jointParty.wantsReasonableAdjustment",
     "ID": "appeal",
     "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND jointParty = \"Yes\"",
@@ -71,14 +71,14 @@
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustments",
     "ListElementCode": "jointParty.reasonableAdjustmentRequirements",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 11,
-    "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND reasonableAdjustment.jointParty.wantsReasonableAdjustment = \"Yes\"",
+    "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\" AND reasonableAdjustments.jointParty.wantsReasonableAdjustment = \"Yes\"",
     "PageID": "1.0"
   }
 ]
