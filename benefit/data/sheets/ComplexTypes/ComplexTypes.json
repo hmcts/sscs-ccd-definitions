@@ -275,6 +275,8 @@
   {"LiveFrom": "18/06/2019", "ID": "dwpLapseLetterDocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document for upload", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "dwpSupplementaryResponseDocumentCT", "ListElementCode": "dwpSupplementaryResponseDocument", "FieldType": "Label", "ElementLabel": "-", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "dwpSupplementaryResponseDocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document for upload", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "appendix12DocumentCT", "ListElementCode": "appendix12DocumentTitle", "FieldType": "Label", "ElementLabel": "Appendix 12", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "appendix12DocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document for upload", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "dwpNoActionDocumentCT", "ListElementCode": "dwpNoActionDocument", "FieldType": "Label", "ElementLabel": "-", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "dwpNoActionDocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document for upload", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "dwpOtherDocumentCT", "ListElementCode": "dwpNoOtherDocument", "FieldType": "Label", "ElementLabel": "-", "SecurityClassification": "PUBLIC"},
