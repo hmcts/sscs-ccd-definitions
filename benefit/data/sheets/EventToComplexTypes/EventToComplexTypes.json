@@ -389,5 +389,149 @@
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 5,
     "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "type",
+    "ID": "scannedDocumentType",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "url",
+    "ID": "scannedDocumentUrl",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 2
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "editedUrl",
+    "ID": "scannedDocumentEditedUrl",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 3
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "controlNumber",
+    "ID": "scannedDocumentEditedUrl",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 4
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "fileName",
+    "ID": "scannedDocumentFileName",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 5
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "scannedDate",
+    "ID": "scannedDocumentScannedDate",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 6
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "exceptionRecordReference",
+    "ID": "scannedDocumentExceptionRecordReference",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 7
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "subtype",
+    "ID": "scannedDocumentSubtype",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 8
+  },
+  {
+    "CaseEventID": "attachScannedDocs",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "type",
+    "ID": "scannedDocumentType",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "attachScannedDocs",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "url",
+    "ID": "scannedDocumentUrl",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 2
+  },
+  {
+    "CaseEventID": "attachScannedDocs",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "editedUrl",
+    "ID": "scannedDocumentEditedUrl",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 3
+  },
+  {
+    "CaseEventID": "attachScannedDocs",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "controlNumber",
+    "ID": "scannedDocumentEditedUrl",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 4
+  },
+  {
+    "CaseEventID": "attachScannedDocs",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "fileName",
+    "ID": "scannedDocumentFileName",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 5
+  },
+  {
+    "CaseEventID": "attachScannedDocs",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "scannedDate",
+    "ID": "scannedDocumentScannedDate",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 6
+  },
+  {
+    "CaseEventID": "attachScannedDocs",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "exceptionRecordReference",
+    "ID": "scannedDocumentExceptionRecordReference",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 7
+  },
+  {
+    "CaseEventID": "attachScannedDocs",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "subtype",
+    "ID": "scannedDocumentSubtype",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 8
   }
 ]
