@@ -341,6 +341,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dateOfAppellantDeath", "Label": "Date of appellant death", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "ID": "isSaveAndReturn", "Label": "Is a save & return case?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "ID": "appendix12Doc", "Label": "Appendix 12 document", "FieldType": "appendix12DocumentCT", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "updateReasonableAdjustment", "Label": "Update Reasonable Adjustments", "FieldType": "FixedList", "FieldTypeParameter": "FL_updateReasonableAdjustments", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reasonableAdjustmentChoice", "Label": "Update reasonable adjustments", "FieldType": "FixedList", "FieldTypeParameter": "FL_reasonableAdjustments", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reasonableAdjustments", "Label": "Alternative letter format", "FieldType": "reasonableAdjustments", "SecurityClassification": "PUBLIC"}
 ]
