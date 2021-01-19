@@ -1,7 +1,7 @@
 [
   {
     "CaseEventID": "updateReasonableAdjustment",
-    "CaseFieldID": "updateReasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustmentChoice",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
@@ -15,7 +15,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
     "LiveFrom": "01/01/2018",
-    "FieldShowCondition": "updateReasonableAdjustment = \"DONOTSHOW\"",
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"DONOTSHOW\"",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0"
@@ -26,7 +26,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
     "LiveFrom": "01/01/2018",
-    "FieldShowCondition": "updateReasonableAdjustment = \"DONOTSHOW\"",
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"DONOTSHOW\"",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
     "PageID": "1.0"
@@ -39,7 +39,7 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
-    "FieldShowCondition": "updateReasonableAdjustment = \"alternativeLetterFormat\"",
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\"",
     "PageID": "1.0"
   }
 ]
