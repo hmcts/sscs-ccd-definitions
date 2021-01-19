@@ -963,7 +963,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "reinstatementRegistered", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "reinstatementOutcome", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "isConfidentialCase", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityRequestDate", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "isConfidentialCaseLabel", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityRequestOutcomeAppellant", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityRequestOutcomeJointParty", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityRequestAppellantGrantedOrRefused", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
@@ -1043,4 +1043,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "reasonableAdjustments", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "reasonableAdjustmentsOutstanding", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "reasonableAdjustmentsOutstanding", "UserRole": "citizen", "CRUD": "CRUD"}
+  {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "appendix12Doc", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]
