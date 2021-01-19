@@ -302,6 +302,7 @@
   {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "to", "FieldType": "Text", "ElementLabel": "To", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document url", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "correspondenceType", "FieldType": "FixedList", "FieldTypeParameter": "correspondenceType", "ElementLabel": "Correspondence type", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "correspondence", "ListElementCode": "reasonableAdjustmentStatus", "FieldType": "FixedList",  "FieldTypeParameter": "FL_reasonableAdjustmentStatus", "ElementLabel": "Reasonable adjustment status", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "elementAndIssueCode", "ListElementCode": "issueCode", "FieldType": "FixedList", "FieldTypeParameter": "FL_issueCodesUc", "ElementLabel": "Issue code", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "elementAndIssueCode", "ListElementCode": "outcome", "FieldType": "Text", "ElementLabel": "Outcome", "SecurityClassification": "PUBLIC"},
   {
