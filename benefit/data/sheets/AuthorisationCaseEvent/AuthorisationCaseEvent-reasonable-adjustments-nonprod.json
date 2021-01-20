@@ -1,0 +1,6 @@
+[
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "updateReasonableAdjustment", "UserRole": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "updateReasonableAdjustment", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "updateReasonableAdjustment", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"}
+]
+
