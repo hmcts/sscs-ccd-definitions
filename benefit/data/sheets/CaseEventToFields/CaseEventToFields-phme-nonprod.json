@@ -35,6 +35,18 @@
     "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
   },
   {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "appendix12Doc",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 7,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
+  },
+  {
     "CaseEventID": "reviewPhmeRequest",
     "CaseFieldID": "phmeGranted",
     "CaseTypeID": "Benefit",
