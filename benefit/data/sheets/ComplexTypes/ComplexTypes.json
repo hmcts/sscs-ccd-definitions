@@ -345,5 +345,9 @@
   {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustments", "ListElementCode": "appellant", "FieldType": "reasonableAdjustmentDetails", "ElementLabel": "Appellant", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustments", "ListElementCode": "appointee", "FieldType": "reasonableAdjustmentDetails", "ElementLabel": "Appointee", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustments", "ListElementCode": "representative", "FieldType": "reasonableAdjustmentDetails", "ElementLabel": "Representative", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustments", "ListElementCode": "jointParty", "FieldType": "reasonableAdjustmentDetails", "ElementLabel": "Joint Party", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustments", "ListElementCode": "jointParty", "FieldType": "reasonableAdjustmentDetails", "ElementLabel": "Joint Party", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustmentsLetters", "ListElementCode": "appellant", "FieldType": "Collection", "FieldTypeParameter": "correspondence", "ElementLabel": "Appellant", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustmentsLetters", "ListElementCode": "appointee", "FieldType": "Collection", "FieldTypeParameter": "correspondence", "ElementLabel": "Appointee", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustmentsLetters", "ListElementCode": "representative", "FieldType": "Collection", "FieldTypeParameter": "correspondence", "ElementLabel": "Representative", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustmentsLetters", "ListElementCode": "jointParty", "FieldType": "Collection", "FieldTypeParameter": "correspondence","ElementLabel": "Joint Party", "SecurityClassification": "PUBLIC"}
 ]
