@@ -452,6 +452,8 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_schedule7ActivitiesApply", "ListElementCode": "Yes", "ListElement": "The Schedule 7 activities selected below apply:"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeDwp", "ListElementCode": "tl1Form", "ListElement": "TL1 form (Request for time extension)"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeDwp", "ListElementCode": "ucb", "ListElement": "Unacceptable customer behaviour document"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_editedEvidenceReason", "ListElementCode": "phme", "ListElement": "Potentially harmful medical evidence"}
-
+  {"LiveFrom": "01/01/2018", "ID": "FL_editedEvidenceReason", "ListElementCode": "phme", "ListElement": "Potentially harmful medical evidence"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_reasonableAdjustmentStatus", "ListElementCode": "required", "ListElement": "Required"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_reasonableAdjustmentStatus", "ListElementCode": "actioned", "ListElement": "Actioned"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_reasonableAdjustments", "ListElementCode": "alternativeLetterFormat", "ListElement": "Alternative Letter Format"}
 ]

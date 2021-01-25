@@ -1,0 +1,4 @@
+[
+  {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "reasonableAdjustments", "TabFieldDisplayOrder": 29},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "reasonableAdjustments", "TabFieldDisplayOrder": 42}
+]
