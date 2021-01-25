@@ -2,7 +2,7 @@
   {
     "CaseEventID": "processReasonableAdjustment",
     "CaseFieldID": "reasonableAdjustmentsLetters",
-    "ListElementCode": "appellant.sentOn",
+    "ListElementCode": "sentOn",
     "ID": "reasonableAdjustmentsLettersSentOn",
     "DisplayContext": "READONLY",
     "LiveFrom": "19/11/2020",
@@ -11,7 +11,7 @@
   {
     "CaseEventID": "processReasonableAdjustment",
     "CaseFieldID": "reasonableAdjustmentsLetters",
-    "ListElementCode": "appellant.documentLink",
+    "ListElementCode": "documentLink",
     "ID": "reasonableAdjustmentsLettersDocumentLink",
     "DisplayContext": "READONLY",
     "LiveFrom": "19/11/2020",
@@ -20,88 +20,7 @@
   {
     "CaseEventID": "processReasonableAdjustment",
     "CaseFieldID": "reasonableAdjustmentsLetters",
-    "ListElementCode": "appellant.reasonableAdjustmentStatus",
-    "ID": "reasonableAdjustmentsLettersStatus",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 3
-  },
-  {
-    "CaseEventID": "processReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustmentsLetters",
-    "ListElementCode": "representative.sentOn",
-    "ID": "reasonableAdjustmentsLettersSentOn",
-    "DisplayContext": "READONLY",
-    "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 1
-  },
-  {
-    "CaseEventID": "processReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustmentsLetters",
-    "ListElementCode": "representative.documentLink",
-    "ID": "reasonableAdjustmentsLettersDocumentLink",
-    "DisplayContext": "READONLY",
-    "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 2
-  },
-  {
-    "CaseEventID": "processReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustmentsLetters",
-    "ListElementCode": "representative.reasonableAdjustmentStatus",
-    "ID": "reasonableAdjustmentsLettersStatus",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 3
-  },
-  {
-    "CaseEventID": "processReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustmentsLetters",
-    "ListElementCode": "appointee.sentOn",
-    "ID": "reasonableAdjustmentsLettersSentOn",
-    "DisplayContext": "READONLY",
-    "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 1
-  },
-  {
-    "CaseEventID": "processReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustmentsLetters",
-    "ListElementCode": "appointee.documentLink",
-    "ID": "reasonableAdjustmentsLettersDocumentLink",
-    "DisplayContext": "READONLY",
-    "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 2
-  },
-  {
-    "CaseEventID": "processReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustmentsLetters",
-    "ListElementCode": "appointee.reasonableAdjustmentStatus",
-    "ID": "reasonableAdjustmentsLettersStatus",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 3
-  },
-  {
-    "CaseEventID": "processReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustmentsLetters",
-    "ListElementCode": "jointParty.sentOn",
-    "ID": "reasonableAdjustmentsLettersSentOn",
-    "DisplayContext": "READONLY",
-    "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 1
-  },
-  {
-    "CaseEventID": "processReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustmentsLetters",
-    "ListElementCode": "jointParty.documentLink",
-    "ID": "reasonableAdjustmentsLettersDocumentLink",
-    "DisplayContext": "READONLY",
-    "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 2
-  },
-  {
-    "CaseEventID": "processReasonableAdjustment",
-    "CaseFieldID": "reasonableAdjustmentsLetters",
-    "ListElementCode": "jointParty.reasonableAdjustmentStatus",
+    "ListElementCode": "reasonableAdjustmentStatus",
     "ID": "reasonableAdjustmentsLettersStatus",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
