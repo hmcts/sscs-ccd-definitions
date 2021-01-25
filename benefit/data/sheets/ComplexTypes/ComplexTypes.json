@@ -351,5 +351,8 @@
   {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustmentsLetters", "ListElementCode": "appellant", "FieldType": "Collection", "FieldTypeParameter": "correspondence", "ElementLabel": "Appellant", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustmentsLetters", "ListElementCode": "appointee", "FieldType": "Collection", "FieldTypeParameter": "correspondence", "ElementLabel": "Appointee", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustmentsLetters", "ListElementCode": "representative", "FieldType": "Collection", "FieldTypeParameter": "correspondence", "ElementLabel": "Representative", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustmentsLetters", "ListElementCode": "jointParty", "FieldType": "Collection", "FieldTypeParameter": "correspondence","ElementLabel": "Joint Party", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustmentsLetters", "ListElementCode": "jointParty", "FieldType": "Collection", "FieldTypeParameter": "correspondence","ElementLabel": "Joint Party", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "draftSscsDocuments", "ListElementCode": "documentType", "FieldType": "FixedList", "FieldTypeParameter": "documentType", "ElementLabel": "Type", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "draftSscsDocuments", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Original document Url", "HintText":"All documents must be PDF formatted", "RegularExpression": ".pdf", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "draftSscsDocuments", "ListElementCode": "documentFileName", "FieldType": "Text", "ElementLabel": "File name", "SecurityClassification": "PUBLIC"}
 ]
