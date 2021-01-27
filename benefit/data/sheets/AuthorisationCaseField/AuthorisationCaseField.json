@@ -797,6 +797,7 @@
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "dateAdded", "UserRole": "caseworker-sscs-teamleader", "CRUD": "R"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "decisionType", "UserRole": "caseworker-sscs-teamleader", "CRUD": "R"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "CaseFieldID": "historicSscsInterlocDirectionDocs", "UserRole": "caseworker-sscs-teamleader", "CRUD": "R"},
+  {"LiveFrom": "16/07/2019", "CaseTypeID": "Benefit", "CaseFieldID": "interlocReferralReason", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "16/07/2019", "CaseTypeID": "Benefit", "CaseFieldID": "interlocReferralReason", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "16/07/2019", "CaseTypeID": "Benefit", "CaseFieldID": "interlocReferralReason", "UserRole": "caseworker-sscs-judge", "CRUD": "RU"},
   {"LiveFrom": "16/07/2019", "CaseTypeID": "Benefit", "CaseFieldID": "interlocReferralReason", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRU"},
