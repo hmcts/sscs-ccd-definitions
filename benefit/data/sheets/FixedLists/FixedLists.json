@@ -134,6 +134,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_withDwpWorkflow", "ListElementCode": "failedSending", "ListElement": "Failed sending"},
   {"LiveFrom": "01/01/2018", "ID": "FL_withDwpWorkflow", "ListElementCode": "failedSendingFurtherEvidence", "ListElement": "Failed sending further evidence"},
   {"LiveFrom": "01/01/2018", "ID": "FL_withDwpWorkflow", "ListElementCode": "failedRobotics", "ListElement": "Failed sending to robotics"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_withDwpWorkflow", "ListElementCode": "sentToRobotics", "ListElement": "Sent to robotics"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpWorkFlow", "ListElementCode": "dwpAppealToBeRegistered", "ListElement": "Appeal to be registered"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpWorkFlow", "ListElementCode": "dwpExceptionResponseViaEmail", "ListElement": "Exception - response via email"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpWorkFlow", "ListElementCode": "dwpInProgress", "ListElement": "In-progress"},
@@ -452,6 +453,11 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_schedule7ActivitiesApply", "ListElementCode": "Yes", "ListElement": "The Schedule 7 activities selected below apply:"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeDwp", "ListElementCode": "tl1Form", "ListElement": "TL1 form (Request for time extension)"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeDwp", "ListElementCode": "ucb", "ListElement": "Unacceptable customer behaviour document"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_editedEvidenceReason", "ListElementCode": "phme", "ListElement": "Potentially harmful medical evidence"}
-
+  {"LiveFrom": "01/01/2018", "ID": "documentTypeDwp", "ListElementCode": "dwpLT203", "ListElement": "LT203 or OM1 document"},
+  {"LiveFrom": "01/01/2018", "ID": "documentTypeDwp", "ListElementCode": "dwpChallengeValidityDocument", "ListElement": "DWP challenge validity document"},
+  {"LiveFrom": "01/01/2018", "ID": "documentTypeDwp", "ListElementCode": "dwpLapseLetter", "ListElement": "Lapse letter"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_editedEvidenceReason", "ListElementCode": "phme", "ListElement": "Potentially harmful medical evidence"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_reasonableAdjustmentStatus", "ListElementCode": "required", "ListElement": "Required"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_reasonableAdjustmentStatus", "ListElementCode": "actioned", "ListElement": "Actioned"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_reasonableAdjustments", "ListElementCode": "alternativeLetterFormat", "ListElement": "Alternative Letter Format"}
 ]
