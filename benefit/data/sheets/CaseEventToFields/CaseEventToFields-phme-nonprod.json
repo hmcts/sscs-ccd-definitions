@@ -57,5 +57,15 @@
     "PageID": "updateNotListableNextState",
     "PageLabel": "Review PHME request",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "adminUpdateEvent",
+    "CaseFieldID": "dwpPHME",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 8,
+    "PageID": "1.0"
   }
 ]

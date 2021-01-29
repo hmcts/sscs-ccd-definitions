@@ -33,5 +33,15 @@
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "dwpUCB=\"Yes\""
+  },
+  {
+    "CaseEventID": "adminUpdateEvent",
+    "CaseFieldID": "dwpUCB",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 7,
+    "PageID": "1.0"
   }
 ]
