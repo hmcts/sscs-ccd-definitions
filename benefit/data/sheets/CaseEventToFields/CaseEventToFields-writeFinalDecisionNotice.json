@@ -1234,7 +1234,7 @@
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "writeFinalDecisionPreviewDocument",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 68,
     "PageFieldDisplayOrder": 1,
