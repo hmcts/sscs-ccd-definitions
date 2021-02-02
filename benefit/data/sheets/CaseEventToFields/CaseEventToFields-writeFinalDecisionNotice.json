@@ -245,21 +245,7 @@
     "PageID": "workCapabilityAssessment",
     "PageLabel": "Work capability assessment",
     "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\" AND appeal.benefitType.code!=\"PIP\"",
-    "FieldShowCondition" : "appeal.benefitType.code=\"ESA\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "writeFinalDecision",
-    "CaseFieldID": "lcwaAppeal",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 8,
-    "PageFieldDisplayOrder": 2,
-    "PageID": "workCapabilityAssessment",
-    "FieldShowCondition": "wcaAppeal = \"Yes\"",
-    "PageLabel": "Work capability assessment",
-    "FieldShowCondition" : "appeal.benefitType.code=\"UC\"",
+    "FieldShowCondition" : "appeal.benefitType.code=\"ESA\" OR appeal.benefitType.code=\"UC\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -272,7 +258,7 @@
     "PageFieldDisplayOrder": 3,
     "PageID": "workCapabilityAssessment",
     "PageLabel": "Work capability assessment",
-    "FieldShowCondition" : "lcwaAppeal=\"Yes\" OR wcaAppeal=\"Yes\"",
+    "FieldShowCondition" : "wcaAppeal=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -286,7 +272,7 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "schedule6",
     "PageLabel": "Select Schedule 6 activities",
-    "PageShowCondition": "appeal.benefitType.code=\"UC\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal=\"No\" AND writeFinalDecisionGenerateNotice = \"Yes\"",
+    "PageShowCondition": "appeal.benefitType.code=\"UC\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal=\"No\" AND writeFinalDecisionGenerateNotice = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -763,7 +749,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "mobilisingUnaidedUC",
     "PageLabel": "Physical disabilities: Mobilising unaided",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"mobilisingUnaided\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"mobilisingUnaided\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -777,7 +763,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "standingAndSittingUC",
     "PageLabel": "Physical Disabilities: Standing and sitting",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"standingAndSitting\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"" ,
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"standingAndSitting\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"" ,
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -791,7 +777,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "reachingUC",
     "PageLabel": "Physical Disabilities: Reaching",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"reaching\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"reaching\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -805,7 +791,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "pickingUpUC",
     "PageLabel": "Physical Disabilities: Picking up and moving",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"pickingUp\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"pickingUp\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -819,7 +805,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "manualDexterityUC",
     "PageLabel": "Physical Disabilities: Manual dexterity",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"manualDexterity\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"manualDexterity\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -833,7 +819,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "selfUnderstoodUC",
     "PageLabel": "Physical Disabilities: Making self understood",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"makingSelfUnderstood\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"makingSelfUnderstood\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -847,7 +833,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "communicationUC",
     "PageLabel": "Physical Disabilities: Understanding communication",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"communication\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"communication\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -861,7 +847,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "navigationUC",
     "PageLabel": "Physical Disabilities: Navigation and maintaining safety",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"navigation\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"navigation\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -875,7 +861,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "lossOfControlUC",
     "PageLabel": "Physical Disabilities: Absence or loss of control of bladder and/or bowels",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"lossOfControl\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"lossOfControl\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -889,7 +875,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "consciousnessUC",
     "PageLabel": "Physical Disabilities: Consciousness during waking moments",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"consciousness\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"consciousness\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -903,7 +889,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "learningTasksUC",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Learning tasks",
-    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"learningTasks\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"learningTasks\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -917,7 +903,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "awarenessOfHazardsUC",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Awareness of everyday hazards",
-    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"awarenessOfHazards\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"awarenessOfHazards\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -931,7 +917,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "personalActionUC",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Initiating and completing personal action",
-    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"personalAction\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"personalAction\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -945,7 +931,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "copingWithChangeUC",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Coping with change",
-    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"copingWithChange\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"copingWithChange\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -959,7 +945,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "gettingAboutUC",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Getting about",
-    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"gettingAbout\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"gettingAbout\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -973,7 +959,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "socialEngagementUC",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Coping with social engagement",
-    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"socialEngagement\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"socialEngagement\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -987,7 +973,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "appropriatenessOfBehaviourUC",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Appropriateness of behaviour with other people",
-    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"appropriatenessOfBehaviour\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"appropriatenessOfBehaviour\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -1095,7 +1081,7 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "schedule8Paragraph4",
     "PageLabel": "Schedule 8 Paragraph 4",
-    "PageShowCondition": "appeal.benefitType.code=\"UC\" AND lcwaAppeal = \"Yes\" AND showSchedule8Paragraph4Page=\"Yes\"",
+    "PageShowCondition": "appeal.benefitType.code=\"UC\" AND wcaAppeal = \"Yes\" AND showSchedule8Paragraph4Page=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -1123,7 +1109,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "schedule7Activities",
     "PageLabel": "Select Schedule 7 activities",
-    "PageShowCondition": "showSchedule7ActivitiesPage=\"Yes\" AND lcwaAppeal = \"Yes\"",
+    "PageShowCondition": "showSchedule7ActivitiesPage=\"Yes\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -1248,7 +1234,7 @@
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "writeFinalDecisionPreviewDocument",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 68,
     "PageFieldDisplayOrder": 1,

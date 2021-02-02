@@ -24,5 +24,17 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "stopBulkPrintForReasonableAdjustment",
+    "Name": "Stop bulk print",
+    "Description": "Stop a bulk print request for a reasonable adjustment",
+    "DisplayOrder": 134,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "RetriesTimeoutURLSubmittedEvent": "5,5",
+    "SecurityClassification": "Public"
   }
 ]
