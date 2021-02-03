@@ -2304,7 +2304,7 @@
   },
   {
     "CaseEventID": "dwpChallengeValidity",
-    "CaseFieldID": "dwpResponseDocument",
+    "CaseFieldID": "dwpChallengeValidityDocument",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
