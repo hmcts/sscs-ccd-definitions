@@ -77,6 +77,7 @@
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpResponseDocument", "Label": "DWP Response", "FieldType": "dwpResponseDocumentCT", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpEditedResponseDocument", "Label": "DWP Edited Response", "FieldType": "dwpResponseDocumentCT", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpAT38Document", "Label": "AT38", "FieldType": "dwpAT38DocumentCT", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpChallengeValidityDocument", "Label": "DWP Challenge Validity", "FieldType": "dwpResponseDocumentCT", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpEvidenceBundleDocument", "Label": "DWP Evidence bundle", "FieldType": "dwpEvidenceBundleDocumentCT", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpEditedEvidenceBundleDocument", "Label": "DWP Edited Evidence bundle", "FieldType": "dwpEvidenceBundleDocumentCT", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpEditedEvidenceReason", "Label": "Edited evidence reason", "FieldType": "FixedList", "FieldTypeParameter": "FL_editedEvidenceReason", "SecurityClassification": "PUBLIC"},
