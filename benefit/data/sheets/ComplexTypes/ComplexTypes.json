@@ -338,6 +338,7 @@
   {"LiveFrom": "26/06/2019", "ID": "datedRequestOutcome", "ListElementCode": "date", "FieldType": "Date", "ElementLabel": "Request date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "documentType", "FieldType": "FixedList", "FieldTypeParameter": "documentTypeDwp", "ElementLabel": "Document type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Original document Url", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "editedDocumentLink", "FieldType": "Document", "ElementLabel": "Edited document URL", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "documentFileName", "FieldType": "Text", "ElementLabel": "Document File name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "documentComment", "FieldType": "Text", "ElementLabel": "Comment", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "30/07/2018", "ID": "dwpDocuments", "ListElementCode": "bundleAddition", "FieldType": "Text", "ElementLabel": "Bundle addition", "SecurityClassification": "PUBLIC"},
