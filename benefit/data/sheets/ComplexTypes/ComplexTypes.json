@@ -264,6 +264,7 @@
   {"LiveFrom": "01/01/2018", "ID": "ScannedDocument", "ListElementCode": "exceptionRecordReference", "FieldType": "Text", "ElementLabel": "Exception Record Reference", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "ScannedDocument", "ListElementCode": "subtype", "FieldType": "Text", "ElementLabel": "Document Subtype", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "ScannedDocument", "ListElementCode": "deliveryDate", "FieldType": "DateTime", "ElementLabel": "Delivery Date", "SecurityClassification": "Public"},
+  {"LiveFrom": "30/07/2018", "ID": "ScannedDocument", "ListElementCode": "includeInBundle", "FieldType": "YesOrNo", "ElementLabel": "Include in bundle?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "dwpResponseDocumentCT", "ListElementCode": "dwpResponseDocumentTitle", "FieldType": "Label", "ElementLabel": "Secretary of State's response", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "dwpResponseDocumentCT", "ListElementCode": "documentFileName", "FieldType": "Text", "ElementLabel": "Evidence bundle file name", "FieldShowCondition": "dwpResponseDocumentTitle=\"AnyValueToFailThisCondition\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "dwpResponseDocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document", "SecurityClassification": "PUBLIC"},
