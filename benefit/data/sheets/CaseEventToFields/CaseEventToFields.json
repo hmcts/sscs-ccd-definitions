@@ -1859,6 +1859,7 @@
     "PageLabel": "Case Details"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=previewDecisionNotice",
     "CaseEventID": "issueFinalDecision",
     "CaseFieldID": "writeFinalDecisionPreviewDocument",
     "CaseTypeID": "Benefit",
