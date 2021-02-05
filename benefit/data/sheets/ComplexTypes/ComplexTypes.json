@@ -356,5 +356,10 @@
   {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustmentsLetters", "ListElementCode": "jointParty", "FieldType": "Collection", "FieldTypeParameter": "correspondence","ElementLabel": "Joint Party", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "draftSscsDocuments", "ListElementCode": "documentType", "FieldType": "FixedList", "FieldTypeParameter": "documentType", "ElementLabel": "Type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "draftSscsDocuments", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Original document Url", "HintText":"All documents must be PDF formatted", "RegularExpression": ".pdf", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "draftSscsDocuments", "ListElementCode": "documentFileName", "FieldType": "Text", "ElementLabel": "File name", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "draftSscsDocuments", "ListElementCode": "documentFileName", "FieldType": "Text", "ElementLabel": "File name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "UnprocessedAudioVideoEvidence", "ListElementCode": "documentType", "FieldType": "FixedList", "FieldTypeParameter": "documentType", "ElementLabel": "Document Type", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "ID": "UnprocessedAudioVideoEvidence", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document url", "RegularExpression": ".mp3,.mp4,.MP3,.MP4", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "ID": "UnprocessedAudioVideoEvidence", "ListElementCode": "surveillanceDocument", "FieldType": "Document", "ElementLabel": "Surveillance document", "HintText":"Document must be PDF formatted", "RegularExpression": ".pdf", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "ID": "UnprocessedAudioVideoEvidence", "ListElementCode": "fileName", "FieldType": "Text", "ElementLabel": "File name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "UnprocessedAudioVideoEvidence", "ListElementCode": "dateAdded", "FieldType": "Date", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC"}
 ]
