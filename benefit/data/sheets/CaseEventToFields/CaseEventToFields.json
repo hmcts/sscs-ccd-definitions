@@ -107,9 +107,8 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "PageLabel": "Update case"
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "adminUpdateEvent",
@@ -118,9 +117,8 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "PageLabel": "Update case"
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "adminUpdateEvent",
@@ -129,9 +127,8 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "PageLabel": "Update case"
+    "PageFieldDisplayOrder": 4,
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "adminUpdateEvent",
@@ -140,9 +137,8 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "PageLabel": "Update case"
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "adminUpdateEvent",
@@ -151,9 +147,8 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "PageLabel": "Update case"
+    "PageFieldDisplayOrder": 6,
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "adjournCase",
@@ -1864,6 +1859,7 @@
     "PageLabel": "Case Details"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=previewDecisionNotice",
     "CaseEventID": "issueFinalDecision",
     "CaseFieldID": "writeFinalDecisionPreviewDocument",
     "CaseTypeID": "Benefit",
@@ -2309,7 +2305,7 @@
   },
   {
     "CaseEventID": "dwpChallengeValidity",
-    "CaseFieldID": "dwpResponseDocument",
+    "CaseFieldID": "dwpChallengeValidityDocument",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",

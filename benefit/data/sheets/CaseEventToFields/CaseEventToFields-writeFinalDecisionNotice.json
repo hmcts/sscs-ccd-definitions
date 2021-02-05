@@ -1,5 +1,6 @@
 [
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=typeOfAppeal",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "appeal",
     "CaseTypeID": "Benefit",
@@ -90,7 +91,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=typeOfAward",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "pipWriteFinalDecisionDailyLivingQuestion",
     "CaseTypeID": "Benefit",
@@ -142,7 +143,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=awardDates",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "writeFinalDecisionStartDate",
     "CaseTypeID": "Benefit",
@@ -181,7 +182,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=panelMemberNames",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "writeFinalDecisionDisabilityQualifiedPanelMemberName",
     "CaseTypeID": "Benefit",
@@ -196,7 +197,6 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "writeFinalDecisionMedicallyQualifiedPanelMemberName",
     "CaseTypeID": "Benefit",
@@ -220,7 +220,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=decisionDate",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "writeFinalDecisionDateOfDecision",
     "CaseTypeID": "Benefit",
@@ -234,7 +234,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=workCapabilityAssessment",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "wcaAppeal",
     "CaseTypeID": "Benefit",
@@ -245,21 +245,7 @@
     "PageID": "workCapabilityAssessment",
     "PageLabel": "Work capability assessment",
     "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\" AND appeal.benefitType.code!=\"PIP\"",
-    "FieldShowCondition" : "appeal.benefitType.code=\"ESA\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "writeFinalDecision",
-    "CaseFieldID": "lcwaAppeal",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 8,
-    "PageFieldDisplayOrder": 2,
-    "PageID": "workCapabilityAssessment",
-    "FieldShowCondition": "wcaAppeal = \"Yes\"",
-    "PageLabel": "Work capability assessment",
-    "FieldShowCondition" : "appeal.benefitType.code=\"UC\"",
+    "FieldShowCondition" : "appeal.benefitType.code=\"ESA\" OR appeal.benefitType.code=\"UC\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -272,11 +258,11 @@
     "PageFieldDisplayOrder": 3,
     "PageID": "workCapabilityAssessment",
     "PageLabel": "Work capability assessment",
-    "FieldShowCondition" : "lcwaAppeal=\"Yes\" OR wcaAppeal=\"Yes\"",
+    "FieldShowCondition" : "wcaAppeal=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=schedule6",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion",
     "CaseTypeID": "Benefit",
@@ -286,11 +272,10 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "schedule6",
     "PageLabel": "Select Schedule 6 activities",
-    "PageShowCondition": "appeal.benefitType.code=\"UC\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal=\"No\" AND writeFinalDecisionGenerateNotice = \"Yes\"",
+    "PageShowCondition": "appeal.benefitType.code=\"UC\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal=\"No\" AND writeFinalDecisionGenerateNotice = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionMentalAssessmentQuestion",
     "CaseTypeID": "Benefit",
@@ -303,7 +288,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=esaDecisionNoticeOptions",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionPhysicalDisabilitiesQuestion",
     "CaseTypeID": "Benefit",
@@ -317,7 +302,6 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionMentalAssessmentQuestion",
     "CaseTypeID": "Benefit",
@@ -330,7 +314,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=decisionNoticeOptions",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "pipWriteFinalDecisionDailyLivingActivitiesQuestion",
     "CaseTypeID": "Benefit",
@@ -514,7 +498,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=mobilisingUnaided",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionMobilisingUnaidedQuestion",
     "CaseTypeID": "Benefit",
@@ -528,7 +512,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=standingAndSitting",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionStandingAndSittingQuestion",
     "CaseTypeID": "Benefit",
@@ -542,7 +526,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=reaching",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionReachingQuestion",
     "CaseTypeID": "Benefit",
@@ -556,7 +540,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=pickingUp",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionPickingUpQuestion",
     "CaseTypeID": "Benefit",
@@ -570,7 +554,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=manualDexterity",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionManualDexterityQuestion",
     "CaseTypeID": "Benefit",
@@ -584,7 +568,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=selfUnderstood",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionMakingSelfUnderstoodQuestion",
     "CaseTypeID": "Benefit",
@@ -598,7 +582,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=communication",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionCommunicationQuestion",
     "CaseTypeID": "Benefit",
@@ -612,7 +596,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=navigation",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionNavigationQuestion",
     "CaseTypeID": "Benefit",
@@ -626,7 +610,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=lossOfControl",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionLossOfControlQuestion",
     "CaseTypeID": "Benefit",
@@ -640,7 +624,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=consciousness",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionConsciousnessQuestion",
     "CaseTypeID": "Benefit",
@@ -654,7 +638,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=learningTasks",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionLearningTasksQuestion",
     "CaseTypeID": "Benefit",
@@ -668,7 +652,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=awarenessOfHazards",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionAwarenessOfHazardsQuestion",
     "CaseTypeID": "Benefit",
@@ -682,7 +666,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=personalAction",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionPersonalActionQuestion",
     "CaseTypeID": "Benefit",
@@ -696,7 +680,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=copingWithChange",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionCopingWithChangeQuestion",
     "CaseTypeID": "Benefit",
@@ -710,7 +694,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=gettingAbout",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionGettingAboutQuestion",
     "CaseTypeID": "Benefit",
@@ -724,7 +708,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=socialEngagement",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionSocialEngagementQuestion",
     "CaseTypeID": "Benefit",
@@ -738,7 +722,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=appropriatenessOfBehaviour",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionAppropriatenessOfBehaviourQuestion",
     "CaseTypeID": "Benefit",
@@ -753,7 +737,7 @@
   },
 
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=mobilisingUnaidedUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionMobilisingUnaidedQuestion",
     "CaseTypeID": "Benefit",
@@ -763,11 +747,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "mobilisingUnaidedUC",
     "PageLabel": "Physical disabilities: Mobilising unaided",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"mobilisingUnaided\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"mobilisingUnaided\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=standingAndSittingUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionStandingAndSittingQuestion",
     "CaseTypeID": "Benefit",
@@ -777,11 +761,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "standingAndSittingUC",
     "PageLabel": "Physical Disabilities: Standing and sitting",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"standingAndSitting\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"" ,
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"standingAndSitting\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"" ,
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=reachingUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionReachingQuestion",
     "CaseTypeID": "Benefit",
@@ -791,11 +775,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "reachingUC",
     "PageLabel": "Physical Disabilities: Reaching",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"reaching\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"reaching\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=pickingUpUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionPickingUpQuestion",
     "CaseTypeID": "Benefit",
@@ -805,11 +789,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "pickingUpUC",
     "PageLabel": "Physical Disabilities: Picking up and moving",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"pickingUp\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"pickingUp\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=manualDexterityUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionManualDexterityQuestion",
     "CaseTypeID": "Benefit",
@@ -819,11 +803,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "manualDexterityUC",
     "PageLabel": "Physical Disabilities: Manual dexterity",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"manualDexterity\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"manualDexterity\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=selfUnderstoodUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionMakingSelfUnderstoodQuestion",
     "CaseTypeID": "Benefit",
@@ -833,11 +817,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "selfUnderstoodUC",
     "PageLabel": "Physical Disabilities: Making self understood",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"makingSelfUnderstood\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"makingSelfUnderstood\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=communicationUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionCommunicationQuestion",
     "CaseTypeID": "Benefit",
@@ -847,11 +831,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "communicationUC",
     "PageLabel": "Physical Disabilities: Understanding communication",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"communication\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"communication\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=navigationUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionNavigationQuestion",
     "CaseTypeID": "Benefit",
@@ -861,11 +845,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "navigationUC",
     "PageLabel": "Physical Disabilities: Navigation and maintaining safety",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"navigation\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"navigation\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=lossOfControlUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionLossOfControlQuestion",
     "CaseTypeID": "Benefit",
@@ -875,11 +859,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "lossOfControlUC",
     "PageLabel": "Physical Disabilities: Absence or loss of control of bladder and/or bowels",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"lossOfControl\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"lossOfControl\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=consciousnessUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionConsciousnessQuestion",
     "CaseTypeID": "Benefit",
@@ -889,11 +873,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "consciousnessUC",
     "PageLabel": "Physical Disabilities: Consciousness during waking moments",
-    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"consciousness\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionPhysicalDisabilitiesQuestion CONTAINS \"consciousness\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=learningTasksUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionLearningTasksQuestion",
     "CaseTypeID": "Benefit",
@@ -903,11 +887,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "learningTasksUC",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Learning tasks",
-    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"learningTasks\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"learningTasks\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=awarenessOfHazardsUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionAwarenessOfHazardsQuestion",
     "CaseTypeID": "Benefit",
@@ -917,11 +901,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "awarenessOfHazardsUC",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Awareness of everyday hazards",
-    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"awarenessOfHazards\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"awarenessOfHazards\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=personalActionUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionPersonalActionQuestion",
     "CaseTypeID": "Benefit",
@@ -931,11 +915,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "personalActionUC",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Initiating and completing personal action",
-    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"personalAction\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"personalAction\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=copingWithChangeUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionCopingWithChangeQuestion",
     "CaseTypeID": "Benefit",
@@ -945,11 +929,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "copingWithChangeUC",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Coping with change",
-    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"copingWithChange\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"copingWithChange\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=gettingAboutUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionGettingAboutQuestion",
     "CaseTypeID": "Benefit",
@@ -959,11 +943,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "gettingAboutUC",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Getting about",
-    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"gettingAbout\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"gettingAbout\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=socialEngagementUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionSocialEngagementQuestion",
     "CaseTypeID": "Benefit",
@@ -973,11 +957,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "socialEngagementUC",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Coping with social engagement",
-    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"socialEngagement\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"socialEngagement\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=appropriatenessOfBehaviourUC",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionAppropriatenessOfBehaviourQuestion",
     "CaseTypeID": "Benefit",
@@ -987,11 +971,11 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "appropriatenessOfBehaviourUC",
     "PageLabel": "Mental, cognitive and intellectual function assessment: Appropriateness of behaviour with other people",
-    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"appropriatenessOfBehaviour\" AND lcwaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
+    "PageShowCondition": "ucWriteFinalDecisionMentalAssessmentQuestion CONTAINS \"appropriatenessOfBehaviour\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=regulation29",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "showRegulation29Page",
     "CaseTypeID": "Benefit",
@@ -1018,13 +1002,13 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=schedule3Activities",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "showSchedule3ActivitiesPage",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 59,
+    "PageDisplayOrder": 60,
     "PageFieldDisplayOrder": 1,
     "PageID": "schedule3Activities",
     "PageLabel": "Schedule 3 activities",
@@ -1032,14 +1016,13 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "esaWriteFinalDecisionSchedule3ActivitiesApply",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 60,
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
     "PageID": "schedule3Activities",
     "PageLabel": "Select Schedule 3 activities",
     "PageShowCondition": "showSchedule3ActivitiesPage=\"Yes\" AND wcaAppeal = \"Yes\"",
@@ -1052,7 +1035,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 60,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
     "PageID": "schedule3Activities",
     "FieldShowCondition": "esaWriteFinalDecisionSchedule3ActivitiesApply != \"No\"",
     "PageLabel": "Select Schedule 3 activities",
@@ -1065,14 +1048,14 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 60,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 4,
     "PageID": "schedule3Activities",
     "PageLabel": "Select Schedule 3 activities",
     "FieldShowCondition": "esaWriteFinalDecisionSchedule3ActivitiesApply = \"No\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=schedule8Paragraph4",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "showSchedule8Paragraph4Page",
     "CaseTypeID": "Benefit",
@@ -1095,11 +1078,11 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "schedule8Paragraph4",
     "PageLabel": "Schedule 8 Paragraph 4",
-    "PageShowCondition": "appeal.benefitType.code=\"UC\" AND lcwaAppeal = \"Yes\" AND showSchedule8Paragraph4Page=\"Yes\"",
+    "PageShowCondition": "appeal.benefitType.code=\"UC\" AND wcaAppeal = \"Yes\" AND showSchedule8Paragraph4Page=\"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=schedule7Activities",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "showSchedule7ActivitiesPage",
     "CaseTypeID": "Benefit",
@@ -1113,7 +1096,6 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "ucWriteFinalDecisionSchedule7ActivitiesApply",
     "CaseTypeID": "Benefit",
@@ -1123,7 +1105,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "schedule7Activities",
     "PageLabel": "Select Schedule 7 activities",
-    "PageShowCondition": "showSchedule7ActivitiesPage=\"Yes\" AND lcwaAppeal = \"Yes\"",
+    "PageShowCondition": "showSchedule7ActivitiesPage=\"Yes\" AND wcaAppeal = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -1154,7 +1136,7 @@
   },
   {
     "CaseEventID": "writeFinalDecision",
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=pageSectionReference",
     "CaseFieldID": "writeFinalDecisionPageSectionReference",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -1244,7 +1226,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=previewDecisionNotice",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "writeFinalDecisionPreviewDocument",
     "CaseTypeID": "Benefit",

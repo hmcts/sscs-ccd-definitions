@@ -463,6 +463,15 @@
     "FieldDisplayOrder": 8
   },
   {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "includeInBundle",
+    "ID": "scannedDocumentIncludeInBundle",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 9
+  },
+  {
     "CaseEventID": "attachScannedDocs",
     "CaseFieldID": "scannedDocuments",
     "ListElementCode": "type",
