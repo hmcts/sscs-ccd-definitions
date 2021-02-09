@@ -132,7 +132,6 @@
   {"LiveFrom": "10/08/2018", "CaseTypeID": "Benefit", "TabID": "dwpDocuments_sscs", "TabLabel": "DWP Documents", "TabDisplayOrder": 17, "CaseFieldID": "dwpResponseDocument", "TabFieldDisplayOrder": 4},
   {"LiveFrom": "11/08/2018", "CaseTypeID": "Benefit", "TabID": "dwpDocuments_sscs", "TabLabel": "DWP Documents", "TabDisplayOrder": 17, "CaseFieldID": "dwpAT38Document", "TabFieldDisplayOrder": 5},
   {"LiveFrom": "12/08/2018", "CaseTypeID": "Benefit", "TabID": "dwpDocuments_sscs", "TabLabel": "DWP Documents", "TabDisplayOrder": 17, "CaseFieldID": "dwpEvidenceBundleDocument", "TabFieldDisplayOrder": 6},
-  {"LiveFrom": "12/08/2018", "CaseTypeID": "Benefit", "TabID": "dwpDocuments_sscs", "TabLabel": "DWP Documents", "TabDisplayOrder": 17, "CaseFieldID": "dwpEditedEvidenceReason", "TabFieldDisplayOrder": 7},
   {"LiveFrom": "12/08/2018", "CaseTypeID": "Benefit", "TabID": "dwpDocuments_sscs", "TabLabel": "DWP Documents", "TabDisplayOrder": 17, "CaseFieldID": "dwpEditedEvidenceBundleDocument", "TabFieldDisplayOrder": 8},
   {"LiveFrom": "10/08/2018", "CaseTypeID": "Benefit", "TabID": "dwpDocuments_sscs", "TabLabel": "DWP Documents", "TabDisplayOrder": 17, "CaseFieldID": "dwpEditedResponseDocument", "TabFieldDisplayOrder": 9},
   {"LiveFrom": "13/08/2018", "CaseTypeID": "Benefit", "TabID": "dwpDocuments_sscs", "TabLabel": "DWP Documents", "TabDisplayOrder": 17, "CaseFieldID": "dwpLT203", "TabFieldDisplayOrder": 10},
