@@ -542,5 +542,23 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 8
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "dwpUploadAudioVideoEvidence",
+    "ListElementCode": "documentLink",
+    "ID": "dwpAudioVideoDocumentLink",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 4
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "dwpUploadAudioVideoEvidence",
+    "ListElementCode": "rip1Document",
+    "ID": "dwpAudioVideoRip1Document",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 4
   }
 ]
