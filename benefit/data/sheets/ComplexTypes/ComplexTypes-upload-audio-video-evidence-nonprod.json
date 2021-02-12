@@ -1,0 +1,3 @@
+[
+  {"LiveFrom": "01/01/2018", "ID": "draftSscsDocuments", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Original document Url", "RegularExpression": ".pdf,.mp4,.mp3,.MP4,.MP3,.PDF", "SecurityClassification": "PUBLIC"}
+]

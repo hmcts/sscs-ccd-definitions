@@ -70,6 +70,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reservedToJudge", "Label": "Reserved to (Judge):", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "linkedCase", "Label": "Linked case(s)", "FieldType": "Collection", "FieldTypeParameter": "CaseLink", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "scannedDocuments", "Label": "Scanned Documents", "FieldType": "Collection", "FieldTypeParameter": "ScannedDocument", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "audioVideoEvidence", "Label": "Evidence", "FieldType": "Collection", "FieldTypeParameter": "AudioVideoEvidence", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "evidenceHandled", "Label": "Further evidence handled", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "originalSender", "Label": "Original Sender", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "furtherEvidenceAction", "Label": "Further Evidence Action", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
@@ -348,5 +349,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reasonableAdjustments", "Label": "Alternative letter format", "FieldType": "reasonableAdjustments", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "reasonableAdjustmentsOutstanding", "Label": "Are there documents that require reasonable adjustments outstanding?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "ID": "appendix12Doc", "Label": "Appendix 12 document", "FieldType": "appendix12DocumentCT", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "draftFurtherEvidenceDocuments", "Label": "Further evidence documents", "FieldType": "Collection", "FieldTypeParameter": "draftSscsDocuments", "RegularExpression": "No", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "draftFurtherEvidenceDocuments", "Label": "Further evidence documents", "FieldType": "Collection", "FieldTypeParameter": "draftSscsDocuments", "RegularExpression": "No", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "dwpUploadAudioVideoEvidence", "Label": "Audio/Video Evidence", "FieldType": "Collection", "FieldTypeParameter": "AudioVideoEvidence", "SecurityClassification": "PUBLIC"}
 ]
