@@ -151,6 +151,26 @@
     "PageID": "1.0"
   },
   {
+    "CaseEventID": "adminUpdateEvent",
+    "CaseFieldID": "dwpUCB",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 7,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "adminUpdateEvent",
+    "CaseFieldID": "dwpPHME",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 8,
+    "PageID": "1.0"
+  },
+  {
     "CaseEventID": "adjournCase",
     "CaseFieldID": "adjournCaseGenerateNotice",
     "CaseTypeID": "Benefit",
@@ -3055,6 +3075,69 @@
     "PageLabel": "Next state",
     "PageShowCondition": "updateNotListableSetNewDueDate=\"No\"",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "provideAppointeeDetails",
+    "CaseFieldID": "appeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "deathOfAppellant",
+    "CaseFieldID": "dateOfAppellantDeath",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "deathOfAppellant",
+    "CaseFieldID": "appeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "adminUpdateEvent",
+    "CaseFieldID": "dateOfAppellantDeath",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 9,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "reviewPhmeRequest",
+    "CaseFieldID": "phmeGranted",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "updateNotListableNextState",
+    "PageLabel": "Review PHME request",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "updateUCB",
+    "CaseFieldID": "dwpUCB",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "updateUCBFlag",
+    "PageLabel": "Update UCB flag",
+    "ShowSummaryChangeOption": "Y"
   }
-
 ]

@@ -279,6 +279,7 @@
   {"LiveFrom": "18/06/2019", "ID": "dwpSupplementaryResponseDocumentCT", "ListElementCode": "dwpSupplementaryResponseDocument", "FieldType": "Label", "ElementLabel": "-", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "dwpSupplementaryResponseDocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document for upload", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "appendix12DocumentCT", "ListElementCode": "appendix12DocumentTitle", "FieldType": "Label", "ElementLabel": "Appendix 12", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "appendix12DocumentCT", "ListElementCode": "documentFileName", "FieldType": "Text", "ElementLabel": "Evidence bundle file name", "FieldShowCondition": "appendix12DocumentTitle=\"AnyValueToFailThisCondition\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "appendix12DocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document for upload", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "dwpNoActionDocumentCT", "ListElementCode": "dwpNoActionDocument", "FieldType": "Label", "ElementLabel": "-", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "dwpNoActionDocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document for upload", "SecurityClassification": "PUBLIC"},
