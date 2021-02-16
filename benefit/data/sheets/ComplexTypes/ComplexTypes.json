@@ -150,15 +150,6 @@
   {
     "LiveFrom": "01/01/2018",
     "ID": "sscsFurtherEvidenceDoc",
-    "ListElementCode": "documentLink",
-    "FieldType": "Document",
-    "ElementLabel": "Document Url",
-    "RegularExpression": ".pdf",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "ID": "sscsFurtherEvidenceDoc",
     "ListElementCode": "documentFileName",
     "FieldType": "Text",
     "ElementLabel": "File name",
