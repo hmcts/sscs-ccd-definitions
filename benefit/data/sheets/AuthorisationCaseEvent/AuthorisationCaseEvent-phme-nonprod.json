@@ -1,9 +1,0 @@
-[
-  {"LiveFrom": "22/10/2020", "CaseTypeID": "Benefit", "CaseEventID": "reviewPhmeRequest", "UserRole": "caseworker-sscs", "CRUD": "R"},
-  {"LiveFrom": "22/10/2020", "CaseTypeID": "Benefit", "CaseEventID": "reviewPhmeRequest", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
-  {"LiveFrom": "22/10/2020", "CaseTypeID": "Benefit", "CaseEventID": "reviewPhmeRequest", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "createEditedBundle", "UserRole": "caseworker-sscs", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "createEditedBundle", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRU"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "createEditedBundle", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "createEditedBundle", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRU"}
-]
