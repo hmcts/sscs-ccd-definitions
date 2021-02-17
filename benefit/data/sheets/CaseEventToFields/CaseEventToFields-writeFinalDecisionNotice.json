@@ -269,7 +269,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 9,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
     "PageID": "schedule6",
     "PageLabel": "Select Schedule 6 activities",
     "PageShowCondition": "appeal.benefitType.code=\"UC\" AND wcaAppeal = \"Yes\" AND supportGroupOnlyAppeal=\"No\" AND writeFinalDecisionGenerateNotice = \"Yes\"",
