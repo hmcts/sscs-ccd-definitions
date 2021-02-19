@@ -1484,7 +1484,7 @@
     "Name": "Response reviewed",
     "Description": "DWP response has been reviewed",
     "DisplayOrder": 123,
-    "PreConditionState(s)": "withDwp;responseReceived;interlocutoryReviewState;validAppeal",
+    "PreConditionState(s)": "responseReceived;interlocutoryReviewState",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
