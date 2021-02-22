@@ -82,6 +82,7 @@
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpEvidenceBundleDocument", "Label": "DWP Evidence bundle", "FieldType": "dwpEvidenceBundleDocumentCT", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpEditedEvidenceBundleDocument", "Label": "DWP Edited Evidence bundle", "FieldType": "dwpEvidenceBundleDocumentCT", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpEditedEvidenceReason", "Label": "Edited evidence reason", "FieldType": "FixedList", "FieldTypeParameter": "FL_editedEvidenceReason", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpEditedEvidenceReasonLabel", "Label": "**Edited evidence reason:** \r\n${dwpEditedEvidenceReason}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpRegionalCentre", "Label": "DWP Handling Office", "FieldType": "FixedList", "FieldTypeParameter": "FL_dwpRegionalCentre", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "caseCode", "Label": "Case code", "FieldType": "Text", "RegularExpression": "[A-Za-z0-9]{5}", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpState", "Label": "DWP State", "FieldType": "FixedList", "FieldTypeParameter": "FL_dwpStates", "SecurityClassification": "PUBLIC"},
