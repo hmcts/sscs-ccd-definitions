@@ -8,5 +8,6 @@
     "ElementLabel": "Document Url",
     "RegularExpression": ".pdf,.mp3,.mp4,.PDF,.MP3,.MP4",
     "SecurityClassification": "PUBLIC"
-  }
+  },
+  {"LiveFrom": "18/06/2019", "ID": "dwpOtherDocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document for upload", "RegularExpression": ".pdf,.mp4,.mp3,.MP4,.MP3,.PDF", "SecurityClassification": "PUBLIC"}
 ]
