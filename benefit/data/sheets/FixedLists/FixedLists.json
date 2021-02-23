@@ -471,5 +471,8 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_editedEvidenceReason", "ListElementCode": "phme", "ListElement": "Potentially harmful medical evidence"},
   {"LiveFrom": "01/01/2018", "ID": "FL_reasonableAdjustmentStatus", "ListElementCode": "required", "ListElement": "Required"},
   {"LiveFrom": "01/01/2018", "ID": "FL_reasonableAdjustmentStatus", "ListElementCode": "actioned", "ListElement": "Actioned"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_reasonableAdjustments", "ListElementCode": "alternativeLetterFormat", "ListElement": "Alternative Letter Format"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_reasonableAdjustments", "ListElementCode": "alternativeLetterFormat", "ListElement": "Alternative Letter Format"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoStatus", "ListElementCode": "awaitingAction", "ListElement": "Awaiting action"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoStatus", "ListElementCode": "included", "ListElement": "Included"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoStatus", "ListElementCode": "excluded", "ListElement": "Excluded"}
 ]
