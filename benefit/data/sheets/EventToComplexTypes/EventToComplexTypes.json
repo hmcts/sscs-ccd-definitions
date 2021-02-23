@@ -404,7 +404,7 @@
     "CaseFieldID": "scannedDocuments",
     "ListElementCode": "url",
     "ID": "scannedDocumentUrl",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 2
   },
@@ -414,6 +414,7 @@
     "ListElementCode": "editedUrl",
     "ID": "scannedDocumentEditedUrl",
     "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "isConfidentialCase = \"Yes\"",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 3
   },
@@ -431,7 +432,7 @@
     "CaseFieldID": "scannedDocuments",
     "ListElementCode": "fileName",
     "ID": "scannedDocumentFileName",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 5
   },
