@@ -354,5 +354,8 @@
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document url", "RegularExpression": ".mp3,.mp4,.MP3,.MP4", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "rip1Document", "FieldType": "Document", "ElementLabel": "RIP 1 document", "HintText":"Document must be PDF formatted", "RegularExpression": ".pdf", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "fileName", "FieldType": "Text", "ElementLabel": "File name", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "dateAdded", "FieldType": "Date", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "dateAdded", "FieldType": "Date", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "dateApproved", "FieldType": "Date", "ElementLabel": "Date approved", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "status", "FieldType": "FixedList", "FieldTypeParameter": "FL_audioVideoStatus", "ElementLabel": "Audio/video approval status", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "partyUploaded", "FieldType": "FixedList", "FieldTypeParameter": "FL_audioVideoPartyUploaded", "ElementLabel": "Audio/video party uploaded", "SecurityClassification": "PUBLIC"}
 ]
