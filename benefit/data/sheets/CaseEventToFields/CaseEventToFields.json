@@ -2738,7 +2738,6 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "processAudioVideo",
     "CaseFieldID": "audioVideoEvidence",
     "CaseTypeID": "Benefit",
@@ -2809,6 +2808,7 @@
     "PageLabel": "Process Audio/Video Evidence"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "processAudioVideo",
     "CaseFieldID": "dateAdded",
     "CaseTypeID": "Benefit",
