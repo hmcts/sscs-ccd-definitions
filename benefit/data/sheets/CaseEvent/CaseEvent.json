@@ -2055,8 +2055,6 @@
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
-    "RetriesTimeoutURLSubmittedEvent": "5,5",
     "SecurityClassification": "Public"
   },
   {
