@@ -2738,10 +2738,11 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "processAudioVideo",
-    "CaseFieldID": "audioVideoEvidence",
+    "CaseFieldID": "processAudioVideoAction",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "READONLY",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
@@ -2750,9 +2751,10 @@
   },
   {
     "CaseEventID": "processAudioVideo",
-    "CaseFieldID": "processAudioVideoAction",
+    "CaseFieldID": "directionDueDate",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
@@ -2787,7 +2789,7 @@
     "CaseEventID": "processAudioVideo",
     "CaseFieldID": "signedBy",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
@@ -2799,7 +2801,7 @@
     "CaseEventID": "processAudioVideo",
     "CaseFieldID": "signedRole",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
@@ -2808,7 +2810,6 @@
     "PageLabel": "Process Audio/Video Evidence"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "processAudioVideo",
     "CaseFieldID": "dateAdded",
     "CaseTypeID": "Benefit",
