@@ -1,5 +1,6 @@
 [
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=actionFurtherEvidence",
     "CaseEventID": "actionFurtherEvidence",
     "CaseFieldID": "furtherEvidenceAction",
     "CaseTypeID": "Benefit",
@@ -158,16 +159,6 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 7,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "adminUpdateEvent",
-    "CaseFieldID": "dwpPHME",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 8,
     "PageID": "1.0"
   },
   {
@@ -1001,51 +992,6 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpSupplementaryResponse",
-    "CaseFieldID": "dwpFurtherEvidenceStates",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpSupplementaryResponse",
-    "CaseFieldID": "dwpOtherDoc",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpSupplementaryResponse",
-    "CaseFieldID": "dwpSupplementaryResponseDoc",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "PageLabel": "Upload supplementary response",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpSupplementaryResponse",
-    "CaseFieldID": "dwpState",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },
@@ -2387,34 +2333,114 @@
     "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "dwpResponseDocument",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "READONLY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "dwpAT38Document",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "READONLY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "dwpEvidenceBundleDocument",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "READONLY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "dwpEditedEvidenceReason",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "10/10/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dwpEvidenceBundleDocument=\"DONOTSSHOW\""
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "dwpEditedEvidenceReasonLabel",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "10/10/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dwpEditedEvidenceReason!=\"\""
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "dwpEditedResponseDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "10/10/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "dwpEditedEvidenceBundleDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "10/10/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "appendix12Doc",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 7,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "dwpUCB",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "10/10/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 8,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "dwpUcbEvidenceDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 9,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "dwpUCB=\"Yes\""
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -2423,7 +2449,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 6,
+    "PageFieldDisplayOrder": 10,
     "PageID": "1.0",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
@@ -2435,7 +2461,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 7,
+    "PageFieldDisplayOrder": 11,
     "PageID": "1.0",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
@@ -2447,7 +2473,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 8,
+    "PageFieldDisplayOrder": 12,
     "PageID": "1.0",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
@@ -2459,7 +2485,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 9,
+    "PageFieldDisplayOrder": 13,
     "PageID": "1.0",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\" OR createdInGapsFrom!=\"readyToList\"",
     "ShowSummaryChangeOption": "Y"
@@ -2471,41 +2497,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 10,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "hmctsResponseReviewed",
-    "CaseFieldID": "dwpUCB",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "10/10/2019",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 11,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "hmctsResponseReviewed",
-    "CaseFieldID": "dwpUcbEvidenceDocument",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 12,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dwpUCB=\"Yes\""
-  },
-  {
-    "CaseEventID": "hmctsResponseReviewed",
-    "CaseFieldID": "dwpPHME",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "10/10/2019",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 13,
+    "PageFieldDisplayOrder": 14,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },
@@ -2516,7 +2508,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 14,
+    "PageFieldDisplayOrder": 15,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },
@@ -2527,7 +2519,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 15,
+    "PageFieldDisplayOrder": 16,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },
@@ -2539,7 +2531,7 @@
     "FieldShowCondition": "isInterlocRequired=\"Yes\"",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 16,
+    "PageFieldDisplayOrder": 17,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },
@@ -3139,5 +3131,15 @@
     "PageID": "updateUCBFlag",
     "PageLabel": "Update UCB flag",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "manageDwpDocuments",
+    "CaseFieldID": "dwpDocuments",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Upload Dwp documents"
   }
 ]
