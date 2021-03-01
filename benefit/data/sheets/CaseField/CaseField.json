@@ -354,5 +354,6 @@
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "reasonableAdjustmentsOutstanding", "Label": "Are there documents that require reasonable adjustments outstanding?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "ID": "appendix12Doc", "Label": "Appendix 12 document", "FieldType": "appendix12DocumentCT", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "draftFurtherEvidenceDocuments", "Label": "Further evidence documents", "FieldType": "Collection", "FieldTypeParameter": "draftSscsDocuments", "RegularExpression": "No", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "dwpUploadAudioVideoEvidence", "Label": "Audio/Video Evidence", "FieldType": "Collection", "FieldTypeParameter": "AudioVideoEvidence", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "dwpUploadAudioVideoEvidence", "Label": "Audio/Video Evidence", "FieldType": "Collection", "FieldTypeParameter": "AudioVideoEvidence", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "audioVideoEvidenceBundleDocument", "Label": "Audio/Video evidence document for the bundle", "FieldType": "audioVideoEvidenceBundleDocumentCT", "SecurityClassification": "PUBLIC"}
 ]
