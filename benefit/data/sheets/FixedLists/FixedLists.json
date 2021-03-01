@@ -477,6 +477,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoStatus", "ListElementCode": "excluded", "ListElement": "Excluded"},
   {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "ctsc", "ListElement": "CTSC clerk"},
   {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "appellant", "ListElement": "Appellant"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "appointee", "ListElement": "Appointee"},
   {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "rep", "ListElement": "Representative"},
   {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "jointParty", "ListElement": "Joint party"},
   {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "dwp", "ListElement": "DWP"}
