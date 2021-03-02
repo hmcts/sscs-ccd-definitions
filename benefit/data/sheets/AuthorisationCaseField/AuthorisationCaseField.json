@@ -1095,5 +1095,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "draftFurtherEvidenceDocuments", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "isAppellantDeceased", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "appellantDeceasedLabel", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "audioVideoEvidenceBundleDocument", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "audioVideoEvidenceBundleDocument", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "processAudioVideoAction", "UserRole": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "processAudioVideoAction", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "processAudioVideoAction", "UserRole": "caseworker-sscs-registrar", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "processAudioVideoAction", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"}
 ]
