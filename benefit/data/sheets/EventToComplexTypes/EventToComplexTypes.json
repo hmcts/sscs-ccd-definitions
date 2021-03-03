@@ -441,7 +441,7 @@
     "CaseFieldID": "scannedDocuments",
     "ListElementCode": "scannedDate",
     "ID": "scannedDocumentScannedDate",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 6
   },
