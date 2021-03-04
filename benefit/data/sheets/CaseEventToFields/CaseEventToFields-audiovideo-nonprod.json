@@ -178,7 +178,7 @@
   },
   {
     "CaseEventID": "processAudioVideo",
-    "CaseFieldID": "appealNotePad",
+    "CaseFieldID": "appealNote",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "processAudioVideoAction = \"sendToAdmin\" OR processAudioVideoAction = \"sendToJudge\"",
