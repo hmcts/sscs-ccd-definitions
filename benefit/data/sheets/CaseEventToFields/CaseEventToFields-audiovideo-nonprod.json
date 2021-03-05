@@ -95,13 +95,36 @@
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "processAudioVideo",
-    "CaseFieldID": "processAudioVideoAction",
+    "CaseFieldID": "selectedAudioVideoEvidence",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
+    "PageLabel": "Process Audio/Video Evidence"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CaseEventID": "processAudioVideo",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "2.0",
+    "PageLabel": "Process Audio/Video Evidence"
+  },
+  {
+    "CaseEventID": "processAudioVideo",
+    "CaseFieldID": "processAudioVideoAction",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
   {
@@ -111,9 +134,9 @@
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"includeEvidence\"",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
-    "PageID": "1.0",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
   {
@@ -123,9 +146,9 @@
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"includeEvidence\"",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
-    "PageID": "1.0",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
   {
@@ -135,9 +158,9 @@
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"includeEvidence\"",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
-    "PageID": "1.0",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
   {
@@ -147,9 +170,9 @@
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"includeEvidence\"",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
-    "PageID": "1.0",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 6,
+    "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
   {
@@ -159,9 +182,9 @@
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"includeEvidence\"",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 6,
-    "PageID": "1.0",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 7,
+    "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
   {
@@ -171,9 +194,9 @@
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\"",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 7,
-    "PageID": "1.0",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 8,
+    "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
   {
@@ -183,9 +206,9 @@
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "processAudioVideoAction = \"sendToAdmin\" OR processAudioVideoAction = \"sendToJudge\"",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 8,
-    "PageID": "1.0",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 9,
+    "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
   {
@@ -194,9 +217,9 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 2,
+    "PageDisplayOrder": 3,
     "PageFieldDisplayOrder": 1,
-    "PageID": "2.0",
+    "PageID": "3.0",
     "PageLabel": "Process Audio/Video Evidence",
     "PageShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"includeEvidence\""
   }
