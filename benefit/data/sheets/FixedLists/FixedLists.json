@@ -481,5 +481,8 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "appointee", "ListElement": "Appointee"},
   {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "rep", "ListElement": "Representative"},
   {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "jointParty", "ListElement": "Joint party"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "dwp", "ListElement": "DWP"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "dwp", "ListElement": "DWP"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoProcessedAction", "ListElementCode": "sentToAdmin", "ListElement": "Sent To Admin"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoProcessedAction", "ListElementCode": "sentToJudge", "ListElement": "Sent To Judge"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoProcessedAction", "ListElementCode": "directionIssued", "ListElement": "Direction Notice Issued"}
 ]
