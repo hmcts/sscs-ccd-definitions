@@ -9,5 +9,10 @@
     "RegularExpression": ".pdf,.mp3,.mp4,.PDF,.MP3,.MP4",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "18/06/2019", "ID": "dwpOtherDocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document for upload", "RegularExpression": ".pdf,.mp4,.mp3,.MP4,.MP3,.PDF", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "18/06/2019", "ID": "dwpOtherDocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document for upload", "RegularExpression": ".pdf,.mp4,.mp3,.MP4,.MP3,.PDF", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "partyUploaded", "FieldType": "Text", "ElementLabel": "Party uploaded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "dateApproved", "FieldType": "Date", "ElementLabel": "Date approved", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "partyUploaded", "FieldType": "Text", "ElementLabel": "Party uploaded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "dateApproved", "FieldType": "Date", "ElementLabel": "Date approved", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "rip1DocumentLink", "FieldType": "Document", "ElementLabel": "RIP 1 document", "SecurityClassification": "PUBLIC"}
 ]
