@@ -109,7 +109,7 @@
     "CaseFieldID": "directionDueDate",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\"",
+    "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"includeEvidence\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
@@ -121,7 +121,7 @@
     "CaseFieldID": "bodyContent",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\"",
+    "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"includeEvidence\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
@@ -133,7 +133,7 @@
     "CaseFieldID": "reservedToJudge",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\"",
+    "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"includeEvidence\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
@@ -145,7 +145,7 @@
     "CaseFieldID": "signedBy",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\"",
+    "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"includeEvidence\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 5,
@@ -157,7 +157,7 @@
     "CaseFieldID": "signedRole",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\"",
+    "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"includeEvidence\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 6,
@@ -198,6 +198,6 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence",
-    "PageShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\""
+    "PageShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"includeEvidence\""
   }
 ]
