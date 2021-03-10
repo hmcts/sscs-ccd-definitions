@@ -2074,17 +2074,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "manageWelshDocuments",
-    "Name": "Welsh – manage Welsh doc(s)",
-    "Description": "Action further evidence",
-    "DisplayOrder": 161,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
     "ID": "cancelTranslations",
     "Name": "Welsh - cancel translations",
     "Description": "Welsh - cancel translations",
