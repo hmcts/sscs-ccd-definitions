@@ -2179,6 +2179,17 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "manageWelshDocuments",
+    "Name": "Welsh – manage Welsh doc(s)",
+    "Description": "Manage Welsh document(s)",
+    "DisplayOrder": 178,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "createWithDwpTestCase",
     "Name": "Create with dwp test test",
     "Description": "Create a test case in withDwp state",
