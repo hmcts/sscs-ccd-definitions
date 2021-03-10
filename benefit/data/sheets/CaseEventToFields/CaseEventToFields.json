@@ -45,6 +45,17 @@
     "PageLabel": "Handle Further Evidence"
   },
   {
+    "CaseEventID": "manageWelshDocuments",
+    "CaseFieldID": "sscsWelshDocuments",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Manage Welsh Doc(s)"
+  },
+  {
     "CaseEventID": "addHearing",
     "CaseFieldID": "hearings",
     "CaseTypeID": "Benefit",
