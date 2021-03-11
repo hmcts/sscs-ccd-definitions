@@ -351,12 +351,14 @@
   {"LiveFrom": "01/01/2018", "ID": "reasonableAdjustmentsLetters", "ListElementCode": "jointParty", "FieldType": "Collection", "FieldTypeParameter": "correspondence","ElementLabel": "Joint Party", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "draftSscsDocuments", "ListElementCode": "documentType", "FieldType": "FixedList", "FieldTypeParameter": "documentType", "ElementLabel": "Type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "draftSscsDocuments", "ListElementCode": "documentFileName", "FieldType": "Text", "ElementLabel": "File name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "documentType", "FieldType": "Text", "ElementLabel": "Document Type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document url", "RegularExpression": ".mp3,.mp4,.MP3,.MP4", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "rip1Document", "FieldType": "Document", "ElementLabel": "RIP 1 document", "HintText":"Document must be PDF formatted", "RegularExpression": ".pdf", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "fileName", "FieldType": "Text", "ElementLabel": "File name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "dateAdded", "FieldType": "Date", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "dateApproved", "FieldType": "Date", "ElementLabel": "Date approved", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "partyUploaded", "FieldType": "FixedList", "FieldTypeParameter": "FL_audioVideoPartyUploaded", "ElementLabel": "Audio/video party uploaded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "processedAction", "FieldType": "FixedList", "FieldTypeParameter": "FL_audioVideoProcessedAction", "ElementLabel": "Audio/video processed action", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "audioVideoEvidenceBundleDocumentCT", "ListElementCode": "documentFileName", "FieldType": "Text", "ElementLabel": "Audio video bundle document file name", "FieldShowCondition": "documentLink=\"AnyValueToFailThisCondition\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "audioVideoEvidenceBundleDocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document", "SecurityClassification": "PUBLIC"}
 ]
