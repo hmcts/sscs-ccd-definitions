@@ -833,5 +833,51 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 15
+  },
+  {
+    "CaseEventID": "processAudioVideo",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "ListElementCode": "documentType",
+    "ID": "selectedAudioVideoEvidenceDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "processAudioVideo",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "ListElementCode": "documentLink",
+    "ID": "selectedAudioVideoEvidenceDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 2
+  },
+  {
+    "CaseEventID": "processAudioVideo",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "ListElementCode": "rip1Document",
+    "ID": "selectedAudioVideoEvidenceDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldShowCondition": "showRip1DocPage=\"Yes\"",
+    "FieldDisplayOrder": 3
+  },
+  {
+    "CaseEventID": "processAudioVideo",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "ListElementCode": "dateAdded",
+    "ID": "selectedAudioVideoEvidenceDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 4
+  },
+  {
+    "CaseEventID": "processAudioVideo",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "ListElementCode": "partyUploaded",
+    "ID": "selectedAudioVideoEvidenceDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 5
   }
 ]
