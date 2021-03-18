@@ -225,6 +225,17 @@
   },
   {
     "CaseEventID": "processAudioVideo",
+    "CaseFieldID": "processAudioVideoReviewState",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 10,
+    "PageID": "2.0",
+    "PageLabel": "Process Audio/Video Evidence"
+  },
+  {
+    "CaseEventID": "processAudioVideo",
     "CaseFieldID": "previewDocument",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
