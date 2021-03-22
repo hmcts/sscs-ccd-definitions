@@ -17,6 +17,7 @@
   {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "dormantAppealState", "UserRole": "citizen", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "draft", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "19/03/2019", "CaseTypeID": "Benefit", "CaseStateID": "draft", "UserRole": "citizen", "CRUD": "CRUD"},
+  {"LiveFrom": "19/03/2019", "CaseTypeID": "Benefit", "CaseStateID": "draft", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "incompleteApplication", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "incompleteApplication", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "incompleteApplication", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
