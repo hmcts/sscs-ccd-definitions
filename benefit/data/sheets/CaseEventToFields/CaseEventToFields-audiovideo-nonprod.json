@@ -201,25 +201,13 @@
   },
   {
     "CaseEventID": "processAudioVideo",
-    "CaseFieldID": "dateAdded",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\"",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 8,
-    "PageID": "2.0",
-    "PageLabel": "Process Audio/Video Evidence"
-  },
-  {
-    "CaseEventID": "processAudioVideo",
     "CaseFieldID": "appealNote",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "processAudioVideoAction = \"sendToAdmin\" OR processAudioVideoAction = \"sendToJudge\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 9,
+    "PageFieldDisplayOrder": 8,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
