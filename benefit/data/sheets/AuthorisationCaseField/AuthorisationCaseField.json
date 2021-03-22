@@ -1114,8 +1114,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "showRip1DocPage", "UserRole": "caseworker-sscs-registrar", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "showRip1DocPage", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "appealNote", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "tempNoteDetail", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "tempNoteDetail", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "processAudioVideoReviewState", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "processAudioVideoReviewState", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "processAudioVideoReviewState", "UserRole": "caseworker-sscs-registrar", "CRUD": "CRUD"},
