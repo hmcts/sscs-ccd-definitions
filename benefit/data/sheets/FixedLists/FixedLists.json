@@ -426,6 +426,7 @@
   {"LiveFrom": "01/01/2018", "ID": "documentTypeWelsh", "ListElementCode": "urgentHearingRequest", "ListElement": "Urgent hearing request"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeWelsh", "ListElementCode": "adjournmentNotice", "ListElement": "Adjournment Notice"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeWelsh", "ListElementCode": "reinstatementRequest", "ListElement": "Reinstatement request"},
+  {"LiveFrom": "01/01/2018", "ID": "documentTypeWelsh", "ListElementCode": "finalDecisionNotice", "ListElement": "Final Decision Notice"},
   {"LiveFrom": "01/01/2018", "ID": "documentLanguage", "ListElementCode": "CY", "ListElement": "Welsh"},
   {"LiveFrom": "01/01/2018", "ID": "documentLanguage", "ListElementCode": "EN", "ListElement": "English"},
   {"LiveFrom": "01/01/2018", "ID": "documentTranslationStatus", "ListElementCode": "translationNotRequired", "ListElement": "Translation Not Required"},
