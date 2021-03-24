@@ -69,7 +69,7 @@
   },
   {
     "CaseEventID": "addNote",
-    "CaseFieldID": "tempNoteDetail",
+    "CaseFieldID": "appealNote",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
@@ -1135,7 +1135,7 @@
   },
   {
     "CaseEventID": "interlocSendToTcw",
-    "CaseFieldID": "appealNotePad",
+    "CaseFieldID": "appealNote",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
@@ -1359,7 +1359,7 @@
   },
   {
     "CaseEventID": "adminSendToInterlocutoryReviewState",
-    "CaseFieldID": "appealNotePad",
+    "CaseFieldID": "appealNote",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -1381,7 +1381,7 @@
   },
   {
     "CaseEventID": "nonCompliantSendToInterloc",
-    "CaseFieldID": "appealNotePad",
+    "CaseFieldID": "appealNote",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -1504,7 +1504,7 @@
   },
   {
     "CaseEventID": "tcwReferToJudge",
-    "CaseFieldID": "appealNotePad",
+    "CaseFieldID": "appealNote",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -2152,7 +2152,7 @@
   },
   {
     "CaseEventID": "sendToAdmin",
-    "CaseFieldID": "appealNotePad",
+    "CaseFieldID": "appealNote",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
@@ -2253,7 +2253,7 @@
   },
   {
     "CaseEventID": "adminAppealWithdrawn",
-    "CaseFieldID": "appealNotePad",
+    "CaseFieldID": "appealNote",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
