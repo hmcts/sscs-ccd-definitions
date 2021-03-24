@@ -481,5 +481,10 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "dwp", "ListElement": "DWP"},
   {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoProcessedAction", "ListElementCode": "sentToAdmin", "ListElement": "Sent To Admin"},
   {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoProcessedAction", "ListElementCode": "sentToJudge", "ListElement": "Sent To Judge"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoProcessedAction", "ListElementCode": "directionIssued", "ListElement": "Direction Notice Issued"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoProcessedAction", "ListElementCode": "directionIssued", "ListElement": "Direction Notice Issued"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_processAudioVideoReviewState", "ListElementCode": "awaitingInfo", "ListElement": "Awaiting Information"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_processAudioVideoReviewState", "ListElementCode": "awaitingAdminAction", "ListElement": "Awaiting Admin Action"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_processAudioVideoReviewState", "ListElementCode": "reviewByJudge", "ListElement": "Review by Judge"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_processAudioVideoReviewState", "ListElementCode": "clear", "ListElement": "Clear Interloc Review State"}
+]
 ]
