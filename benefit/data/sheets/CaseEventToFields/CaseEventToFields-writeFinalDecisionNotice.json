@@ -48,7 +48,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "allowedOrRefused",
     "PageLabel": "Allowed or refused",
-    "PageShowCondition": "writeFinalDecisionIsDescriptorFlow = \"No\" OR writeFinalDecisionGenerateNotice = \"No\" OR appeal.benefitType.code=\"ESA\" OR appeal.benefitType.code=\"UC\" OR appeal.benefitType.code=\"DLA\"",
+    "PageShowCondition": "writeFinalDecisionIsDescriptorFlow != \"Yes\" OR writeFinalDecisionGenerateNotice != \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -192,7 +192,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "panelMemberNames",
     "PageLabel": "Panel members",
-    "FieldShowCondition": "appeal.benefitType.code=\"PIP\" OR appeal.benefitType.code=\"DLA\"",
+    "FieldShowCondition": "appeal.benefitType.code=\"PIP\" OR appeal.benefitType.code=\"DLA\" OR appeal.benefitType.code=\"carersAllowance\"",
     "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
   },
@@ -244,7 +244,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "workCapabilityAssessment",
     "PageLabel": "Work capability assessment",
-    "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\" AND appeal.benefitType.code!=\"PIP\" AND appeal.benefitType.code!=\"DLA\"",
+    "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\" AND appeal.benefitType.code!=\"PIP\" AND appeal.benefitType.code!=\"DLA\" AND appeal.benefitType.code!=\"carersAllowance\"",
     "FieldShowCondition" : "appeal.benefitType.code=\"ESA\" OR appeal.benefitType.code=\"UC\"",
     "ShowSummaryChangeOption": "Y"
   },
