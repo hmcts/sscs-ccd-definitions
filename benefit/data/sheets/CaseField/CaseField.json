@@ -38,7 +38,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "directionText", "Label": "Judges Direction", "HintText": "Copy the Judge's direction information here", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "decisionNotes", "Label": "Decision Notes", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "appealNotePad", "Label": "Note pad", "FieldType": "notePad", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "appealNote", "Label": "Note", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "isCorDecision", "Label": "COR Decision?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "infoRequests", "Label": "Info request", "FieldType": "infoRequestsCT", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "informationFromAppellant", "Label": "Request info from an appellant", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -361,5 +360,6 @@
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "audioVideoEvidenceBundleDocument", "Label": "Audio/Video evidence document for the bundle", "FieldType": "audioVideoEvidenceBundleDocumentCT", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "selectedAudioVideoEvidenceDetails", "Label": "Selected Audio/Video Evidence Details", "FieldType": "AudioVideoEvidence", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "selectedAudioVideoEvidence", "Label": "Selected Audio/Video Evidence", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tempNoteDetail", "Label": "Enter note", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "processAudioVideoReviewState", "Label": "Interloc Review State", "FieldType": "FixedList", "FieldTypeParameter": "FL_processAudioVideoReviewState", "SecurityClassification": "PUBLIC"}
 ]
