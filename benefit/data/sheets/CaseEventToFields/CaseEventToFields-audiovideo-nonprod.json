@@ -201,7 +201,7 @@
   },
   {
     "CaseEventID": "processAudioVideo",
-    "CaseFieldID": "appealNote",
+    "CaseFieldID": "tempNoteDetail",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "processAudioVideoAction = \"sendToAdmin\" OR processAudioVideoAction = \"sendToJudge\"",
