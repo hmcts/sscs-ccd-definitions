@@ -1135,9 +1135,9 @@
   },
   {
     "CaseEventID": "interlocSendToTcw",
-    "CaseFieldID": "appealNotePad",
+    "CaseFieldID": "tempNoteDetail",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
@@ -1359,7 +1359,7 @@
   },
   {
     "CaseEventID": "adminSendToInterlocutoryReviewState",
-    "CaseFieldID": "appealNotePad",
+    "CaseFieldID": "tempNoteDetail",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -1381,7 +1381,7 @@
   },
   {
     "CaseEventID": "nonCompliantSendToInterloc",
-    "CaseFieldID": "appealNotePad",
+    "CaseFieldID": "tempNoteDetail",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -1504,7 +1504,7 @@
   },
   {
     "CaseEventID": "tcwReferToJudge",
-    "CaseFieldID": "appealNotePad",
+    "CaseFieldID": "tempNoteDetail",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -2152,9 +2152,9 @@
   },
   {
     "CaseEventID": "sendToAdmin",
-    "CaseFieldID": "appealNotePad",
+    "CaseFieldID": "tempNoteDetail",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
@@ -2253,7 +2253,7 @@
   },
   {
     "CaseEventID": "adminAppealWithdrawn",
-    "CaseFieldID": "appealNotePad",
+    "CaseFieldID": "tempNoteDetail",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -2789,7 +2789,7 @@
   {
     "CaseEventID": "adminRestoreCases",
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEventAdminRestoreCases",
-    "CaseFieldID": "restoreCasesDate",
+    "CaseFieldID": "restoreCaseFileName",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
