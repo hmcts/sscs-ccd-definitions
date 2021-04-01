@@ -274,6 +274,7 @@
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "welshBodyContent", "Label": "Welsh body content", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "welshInterlocNextReviewState", "Label": "Welsh interloc next review state", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "restoreCasesDate", "Label": "Date to restore cases for", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "restoreCaseFileName", "Label": "File name used to restore cases", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "reinstatementRegistered", "Label": "Reinstatement Registered", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "reinstatementOutcome", "Label": "Reinstatement Outcome", "FieldType": "FixedList", "FieldTypeParameter": "FL_requestOutcomes", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "isConfidentialCase", "Label": "Is case confidential?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
