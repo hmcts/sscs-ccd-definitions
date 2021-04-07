@@ -155,7 +155,7 @@
     "CaseEventID": "processAudioVideo",
     "CaseFieldID": "bodyContent",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"admitEvidence\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
