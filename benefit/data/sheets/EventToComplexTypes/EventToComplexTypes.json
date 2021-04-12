@@ -578,7 +578,8 @@
     "ID": "appealAppointee",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 18
+    "FieldDisplayOrder": 18,
+    "FieldShowCondition": "appeal.appellant.isAppointee = \"Yes\""
   },
   {
     "CaseEventID": "caseUpdated",
@@ -790,7 +791,7 @@
     "ID": "appealHearingSubtypeWantsHearingTypeTelephone",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 34,
+    "FieldDisplayOrder": 35,
     "PageID": "1.0"
   },
   {
@@ -800,7 +801,7 @@
     "ID": "appealHearingSubtypeHearingTelephoneNumber",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 34,
+    "FieldDisplayOrder": 36,
     "PageID": "1.0"
   },
   {
@@ -810,7 +811,7 @@
     "ID": "appealHearingSubtypeWantsHearingTypeVideo",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 34,
+    "FieldDisplayOrder": 37,
     "PageID": "1.0"
   },
   {
@@ -820,7 +821,7 @@
     "ID": "appealHearingSubtypeHearingVideoEmail",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 34,
+    "FieldDisplayOrder": 38,
     "PageID": "1.0"
   },
   {
@@ -830,7 +831,7 @@
     "ID": "appealHearingSubtypeWantsHearingTypeFaceToFace",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 34,
+    "FieldDisplayOrder": 39,
     "PageID": "1.0"
   },
   {
@@ -840,7 +841,7 @@
     "ID": "appealHearingOptions",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 35,
+    "FieldDisplayOrder": 40,
     "PageID": "1.0"
   },
   {
@@ -850,7 +851,7 @@
     "ID": "appealHearingOptionsWantsAttend",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 35,
+    "FieldDisplayOrder": 40,
     "PageID": "1.0"
   },
   {
@@ -860,18 +861,9 @@
     "ID": "appealHearingOptionsSupport",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 35,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "caseUpdated",
-    "CaseFieldID": "appeal",
-    "ListElementCode": "hearingOptions.arrangements",
-    "ID": "appealHearingOptionsArrangements",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 35,
-    "PageID": "1.0"
+    "FieldDisplayOrder": 41,
+    "PageID": "1.0",
+    "FieldShowCondition": "appeal.hearingOptions.wantsToAttend=\"Yes\""
   },
   {
     "CaseEventID": "caseUpdated",
@@ -880,8 +872,9 @@
     "ID": "appealHearingOptionsLanguageInterpreter",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 35,
-    "PageID": "1.0"
+    "FieldDisplayOrder": 42,
+    "PageID": "1.0",
+    "FieldShowCondition": "appeal.hearingOptions.wantsToAttend=\"Yes\" AND appeal.hearingOptions.wantsSupport=\"Yes\""
   },
   {
     "CaseEventID": "caseUpdated",
@@ -890,7 +883,51 @@
     "ID": "appealHearingOptionsLanguages",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 35,
+    "FieldDisplayOrder": 43,
+    "PageID": "1.0",
+    "FieldShowCondition": "appeal.hearingOptions.wantsToAttend=\"Yes\" AND appeal.hearingOptions.wantsSupport=\"Yes\" AND appeal.hearingOptions.languageInterpreter=\"Yes\""
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "appeal",
+    "ListElementCode": "hearingOptions.signLanguageType",
+    "ID": "appealHearingOptionsSignLanguageType",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 44,
+    "PageID": "1.0",
+    "FieldShowCondition": "appeal.hearingOptions.wantsToAttend=\"Yes\" AND appeal.hearingOptions.wantsSupport=\"Yes\""
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "appeal",
+    "ListElementCode": "hearingOptions.arrangements",
+    "ID": "appealHearingOptionsArrangements",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 45,
+    "PageID": "1.0",
+    "FieldShowCondition": "appeal.hearingOptions.wantsToAttend=\"Yes\" AND appeal.hearingOptions.wantsSupport=\"Yes\""
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "appeal",
+    "ListElementCode": "hearingOptions.other",
+    "ID": "appealHearingOptionsOther",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 46,
+    "PageID": "1.0",
+    "FieldShowCondition": "appeal.hearingOptions.wantsToAttend=\"Yes\" AND appeal.hearingOptions.wantsSupport=\"Yes\""
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "appeal",
+    "ListElementCode": "hearingOptions.agreeLessNotice",
+    "ID": "appealHearingOptionsAgreeLessNotice",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 47,
     "PageID": "1.0"
   },
   {
@@ -900,8 +937,9 @@
     "ID": "appealHearingOptionsScheduleHearing",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 35,
-    "PageID": "1.0"
+    "FieldDisplayOrder": 48,
+    "PageID": "1.0",
+    "FieldShowCondition": "appeal.hearingOptions.wantsToAttend=\"Yes\""
   },
   {
     "CaseEventID": "caseUpdated",
@@ -910,38 +948,31 @@
     "ID": "appealHearingOptionsExcludeDates",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 35,
-    "PageID": "1.0"
+    "FieldDisplayOrder": 49,
+    "PageID": "1.0",
+    "FieldShowCondition": "appeal.hearingOptions.wantsToAttend=\"Yes\" AND appeal.hearingOptions.scheduleHearing=\"Yes\""
   },
   {
     "CaseEventID": "caseUpdated",
     "CaseFieldID": "appeal",
-    "ListElementCode": "hearingOptions.other",
-    "ID": "appealHearingOptionsOther",
+    "ListElementCode": "hearingOptions.excludeDates.start",
+    "ID": "appealHearingOptionsExcludeDatesStart",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 35,
-    "PageID": "1.0"
+    "FieldDisplayOrder": 49,
+    "PageID": "1.0",
+    "FieldShowCondition": "appeal.hearingOptions.wantsToAttend=\"Yes\" AND appeal.hearingOptions.scheduleHearing=\"Yes\""
   },
   {
     "CaseEventID": "caseUpdated",
     "CaseFieldID": "appeal",
-    "ListElementCode": "hearingOptions.signLanguageType",
-    "ID": "appealHearingOptionsSignLanguageType",
+    "ListElementCode": "hearingOptions.excludeDates.end",
+    "ID": "appealHearingOptionsExcludeDatesEnd",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 35,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "caseUpdated",
-    "CaseFieldID": "appeal",
-    "ListElementCode": "hearingOptions.agreeLessNotice",
-    "ID": "appealHearingOptionsAgreeLessNotice",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 35,
-    "PageID": "1.0"
+    "FieldDisplayOrder": 50,
+    "PageID": "1.0",
+    "FieldShowCondition": "appeal.hearingOptions.wantsToAttend=\"Yes\" AND appeal.hearingOptions.scheduleHearing=\"Yes\""
   },
   {
     "CaseEventID": "caseUpdated",
@@ -950,7 +981,7 @@
     "ID": "appealAppealReasons",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 36,
+    "FieldDisplayOrder": 51,
     "PageID": "1.0"
   },
   {
@@ -960,7 +991,7 @@
     "ID": "appealAppealReasonsReasons",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 36,
+    "FieldDisplayOrder": 51,
     "PageID": "1.0"
   },
   {
@@ -970,7 +1001,7 @@
     "ID": "appealAppealReasonsReason",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 36,
+    "FieldDisplayOrder": 51,
     "PageID": "1.0"
   },
   {
@@ -980,7 +1011,7 @@
     "ID": "appealAppealReasonsDescription",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 36,
+    "FieldDisplayOrder": 51,
     "PageID": "1.0"
   },
   {
@@ -990,7 +1021,7 @@
     "ID": "appealAppealReasonsOtherReasons",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 36,
+    "FieldDisplayOrder": 51,
     "PageID": "1.0"
   },
   {
@@ -1000,7 +1031,7 @@
     "ID": "appealRep",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 37,
+    "FieldDisplayOrder": 52,
     "PageID": "1.0"
   },
   {
@@ -1010,7 +1041,7 @@
     "ID": "appealRepHasRep",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 37,
+    "FieldDisplayOrder": 52,
     "PageID": "1.0"
   },
   {
@@ -1020,7 +1051,7 @@
     "ID": "appealRepOrganisation",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 38,
+    "FieldDisplayOrder": 53,
     "PageID": "1.0"
   },
   {
@@ -1030,7 +1061,7 @@
     "ID": "appealRepTitle",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 39,
+    "FieldDisplayOrder": 54,
     "PageID": "1.0"
   },
   {
@@ -1040,7 +1071,7 @@
     "ID": "appealRepFirstName",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 40,
+    "FieldDisplayOrder": 55,
     "PageID": "1.0"
   },
   {
@@ -1050,7 +1081,7 @@
     "ID": "appealRepMiddleName",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 41,
+    "FieldDisplayOrder": 56,
     "PageID": "1.0"
   },
   {
@@ -1060,7 +1091,7 @@
     "ID": "appealRepLastName",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 42,
+    "FieldDisplayOrder": 57,
     "PageID": "1.0"
   },
   {
@@ -1070,7 +1101,7 @@
     "ID": "appealRepName",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 43,
+    "FieldDisplayOrder": 58,
     "PageID": "1.0"
   },
   {
@@ -1080,7 +1111,7 @@
     "ID": "appealRepAddress",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 44,
+    "FieldDisplayOrder": 59,
     "PageID": "1.0"
   },
   {
@@ -1090,7 +1121,7 @@
     "ID": "appealRepAddressLine1",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 44,
+    "FieldDisplayOrder": 59,
     "PageID": "1.0"
   },
   {
@@ -1100,7 +1131,7 @@
     "ID": "appealRepAddressLine2",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 45,
+    "FieldDisplayOrder": 60,
     "PageID": "1.0"
   },
   {
@@ -1110,7 +1141,7 @@
     "ID": "appealRepAddressTown",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 46,
+    "FieldDisplayOrder": 61,
     "PageID": "1.0"
   },
   {
@@ -1120,7 +1151,7 @@
   "ID": "appealRepAddressCounty",
   "DisplayContext": "OPTIONAL",
   "LiveFrom": "19/11/2019",
-  "FieldDisplayOrder": 47,
+  "FieldDisplayOrder": 62,
   "PageID": "1.0"
   },
   {
@@ -1130,7 +1161,7 @@
     "ID": "appealRepAddressPostcode",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 48,
+    "FieldDisplayOrder": 63,
     "PageID": "1.0"
   },
   {
@@ -1140,7 +1171,7 @@
     "ID": "appealRepContact",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 49,
+    "FieldDisplayOrder": 64,
     "PageID": "1.0"
   },
   {
@@ -1150,7 +1181,7 @@
     "ID": "appealRepContactPhone",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 49,
+    "FieldDisplayOrder": 64,
     "PageID": "1.0"
   },
   {
@@ -1160,7 +1191,7 @@
     "ID": "appealRepContactMobile",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 50,
+    "FieldDisplayOrder": 65,
     "PageID": "1.0"
   },
   {
@@ -1170,7 +1201,7 @@
     "ID": "appealRepContactEmail",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 51,
+    "FieldDisplayOrder": 66,
     "PageID": "1.0"
   },
   {
@@ -1180,7 +1211,7 @@
     "ID": "jointPartyAddressLine1",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 52,
+    "FieldDisplayOrder": 67,
     "PageID": "1.0"
   },
   {
@@ -1190,7 +1221,7 @@
     "ID": "jointPartyAddressLine2",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 53,
+    "FieldDisplayOrder": 68,
     "PageID": "1.0"
   },
   {
@@ -1200,7 +1231,7 @@
     "ID": "jointPartyAddressTown",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 54,
+    "FieldDisplayOrder": 69,
     "PageID": "1.0"
   },
   {
@@ -1210,7 +1241,7 @@
     "ID": "jointPartyAddressCounty",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 55,
+    "FieldDisplayOrder": 70,
     "PageID": "1.0"
   },
   {
@@ -1220,7 +1251,7 @@
     "ID": "jointPartyAddressPostcode",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 56,
+    "FieldDisplayOrder": 71,
     "PageID": "1.0"
   },
   {
