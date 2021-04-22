@@ -29,6 +29,7 @@
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "Direction Notice", "ListElement": "Directions Notice"},
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "dl6", "ListElement": "DL6"},
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "dl16", "ListElement": "DL16"},
+  {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "hmctsEvidence", "ListElement": "HMCTS evidence"},
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "appellantEvidence", "ListElement": "Appellant evidence"},
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "representativeEvidence", "ListElement": "Representative evidence"},
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "dwpEvidence", "ListElement": "DWP evidence"},
