@@ -130,12 +130,35 @@
   },
   {
     "CaseEventID": "processAudioVideo",
-    "CaseFieldID": "processAudioVideoAction",
+    "CaseFieldID": "tempMediaUrl",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
+    "PageID": "2.0",
+    "FieldShowCondition": "selectedAudioVideoEvidence=\"DoNotUse\"",
+    "PageLabel": "Process Audio/Video Evidence"
+  },
+  {
+    "CaseEventID": "processAudioVideo",
+    "CaseFieldID": "tempMediaUrlLabel",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "2.0",
+    "PageLabel": "Process Audio/Video Evidence"
+  },
+  {
+    "CaseEventID": "processAudioVideo",
+    "CaseFieldID": "processAudioVideoAction",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 4,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -147,7 +170,7 @@
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 5,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -159,7 +182,7 @@
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"admitEvidence\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 6,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -171,7 +194,7 @@
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"admitEvidence\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 7,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -183,7 +206,7 @@
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"admitEvidence\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 6,
+    "PageFieldDisplayOrder": 8,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -195,7 +218,7 @@
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"admitEvidence\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 7,
+    "PageFieldDisplayOrder": 9,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -207,7 +230,7 @@
     "FieldShowCondition": "processAudioVideoAction = \"sendToAdmin\" OR processAudioVideoAction = \"sendToJudge\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 8,
+    "PageFieldDisplayOrder": 10,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -218,7 +241,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 10,
+    "PageFieldDisplayOrder": 11,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
