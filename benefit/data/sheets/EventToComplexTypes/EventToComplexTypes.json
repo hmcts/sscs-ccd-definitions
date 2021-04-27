@@ -1714,6 +1714,7 @@
     "ID": "selectedAudioVideoEvidenceDetails",
     "DisplayContext": "READONLY",
     "LiveFrom": "19/11/2019",
+    "FieldShowCondition": "documentType=\"DoNotUse\"",
     "FieldDisplayOrder": 2
   },
   {
