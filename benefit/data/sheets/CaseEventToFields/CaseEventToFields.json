@@ -3191,5 +3191,15 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Upload Dwp documents"
+  },
+  {
+    "CaseEventID": "generateCoversheet",
+    "CaseFieldID": "previewDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Generate coversheet"
   }
 ]
