@@ -8,4 +8,4 @@ COPY --from=base . .
 COPY ./data /data
 COPY ./data/ccd-template.xlsx /opt/ccd-definition-processor/data
 
-CMD cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -o /sscs-ccd.xlsx && "/wait" && "/scripts/upload-definition.sh"
+CMD cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -e *-nonprod.json -o /sscs-ccd.xlsx && "/wait" && "/scripts/upload-definition.sh"
