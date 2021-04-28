@@ -732,5 +732,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "draftToNonCompliant", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "draftToNonCompliant", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "draftToValidAppealCreated", "UserRole": "caseworker-sscs", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "draftToValidAppealCreated", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "draftToValidAppealCreated", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "generateCoversheet", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "generateCoversheet", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"}
 ]
