@@ -3201,5 +3201,58 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Generate coversheet"
+  },
+  {
+    "CaseEventID": "processReasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustmentsLetters",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustmentChoice",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "appeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"DONOTSHOW\"",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "jointParty",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"DONOTSHOW\"",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustments",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\"",
+    "PageID": "1.0"
   }
 ]
