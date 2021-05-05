@@ -191,7 +191,6 @@
   {"LiveFrom": "08/11/2018", "CaseTypeID": "Benefit", "TabID": "eventHistory_superuser", "TabLabel": "History", "TabDisplayOrder": 2, "CaseFieldID": "caseHistory", "TabFieldDisplayOrder": 6},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "elements_and_issues", "TabLabel": "Elements and issues", "CaseFieldID": "elementsDisputedGeneral", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "elements_and_issues", "CaseFieldID": "elementsDisputedSanctions", "TabFieldDisplayOrder": 2},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "elements_and_issues", "CaseFieldID": "elementsDisputedOverpayment", "TabFieldDisplayOrder": 3},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "elements_and_issues", "CaseFieldID": "elementsDisputedHousing", "TabFieldDisplayOrder": 4},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "elements_and_issues", "CaseFieldID": "elementsDisputedChildCare", "TabFieldDisplayOrder": 5},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "elements_and_issues", "CaseFieldID": "elementsDisputedCare", "TabFieldDisplayOrder": 6},
