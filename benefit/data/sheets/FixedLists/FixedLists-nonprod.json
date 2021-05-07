@@ -1,7 +1,0 @@
-[
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "finalDecisionIssued", "ListElement": "Final decision issued"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "adjournmentNoticeIssued", "ListElement": "Adjournment notice issued"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Tyneview Park DRT", "ListElement": "Tyneview Park DRT"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Birmingham DRT", "ListElement": "Birmingham DRT"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Bradford DRT", "ListElement": "Bradford DRT"}
-]
