@@ -139,6 +139,7 @@
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "evidenceIssued", "FieldType": "YesOrNo", "ElementLabel": "Evidence issued", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "30/07/2018", "ID": "sscsDocument", "ListElementCode": "bundleAddition", "FieldType": "Text", "ElementLabel": "Bundle addition", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "documentTranslationStatus", "FieldType": "FixedList", "FieldTypeParameter": "documentTranslationStatus" , "ElementLabel": "documentTranslationStatus", "ElementLabel": "Translation status", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "resizedDocumentLink", "FieldType": "Document", "ElementLabel": "Resized document URL", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "ID": "sscsFurtherEvidenceDoc",
