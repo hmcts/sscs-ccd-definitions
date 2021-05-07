@@ -295,6 +295,19 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "elementsDisputedLimitedWork",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 9,
+    "PageID": "elementsDisputedId",
+    "PageLabel": "Issue codes",
+    "FieldShowCondition": "elementsDisputedList CONTAINS \"limitedCapabilityWork\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "elementsDisputedIsDecisionDisputedByOthers",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",

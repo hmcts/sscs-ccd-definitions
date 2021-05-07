@@ -195,6 +195,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "elements_and_issues", "CaseFieldID": "elementsDisputedCare", "TabFieldDisplayOrder": 6},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "elements_and_issues", "CaseFieldID": "elementsDisputedChildElement", "TabFieldDisplayOrder": 7},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "elements_and_issues", "CaseFieldID": "elementsDisputedChildDisabled", "TabFieldDisplayOrder": 8},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "elements_and_issues", "CaseFieldID": "elementsDisputedLimitedWork", "TabFieldDisplayOrder": 9},
   {"LiveFrom": "21/10/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 21, "CaseFieldID": "adjournCasePanelMembersExcluded", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "21/10/2018", "CaseTypeID": "Benefit", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 21, "CaseFieldID": "adjournCaseNextHearingListingDuration", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "21/10/2018", "CaseTypeID": "Benefit", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 21, "CaseFieldID": "adjournCaseNextHearingListingDurationUnits", "TabFieldDisplayOrder": 3},
