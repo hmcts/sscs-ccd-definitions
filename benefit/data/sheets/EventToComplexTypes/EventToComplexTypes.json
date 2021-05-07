@@ -88,6 +88,17 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CaseEventID": "amendElementsIssues",
+    "CaseFieldID": "elementsDisputedLimitedWork",
+    "ListElementCode": "issueCode",
+    "ID": "elementsDisputedLimitedWorkCode",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1,
+    "PageID": "elementsDisputedId",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "elementsDisputedGeneral",
     "ListElementCode": "issueCode",
@@ -169,6 +180,17 @@
     "CaseFieldID": "elementsDisputedChildDisabled",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedChildDisabledCode",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1,
+    "PageID": "elementsDisputedId",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "elementsDisputedLimitedWork",
+    "ListElementCode": "issueCode",
+    "ID": "elementsDisputedLimitedWorkCode",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
@@ -334,6 +356,17 @@
     "CaseFieldID": "elementsDisputedChildDisabled",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedChildDisabledCode",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1,
+    "PageID": "elementsDisputedId",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "elementsDisputedLimitedWork",
+    "ListElementCode": "issueCode",
+    "ID": "elementsDisputedLimitedWorkCode",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
