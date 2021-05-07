@@ -1,0 +1,4 @@
+[
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "finalDecisionIssued", "ListElement": "Final decision issued"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "adjournmentNoticeIssued", "ListElement": "Adjournment notice issued"}
+]
