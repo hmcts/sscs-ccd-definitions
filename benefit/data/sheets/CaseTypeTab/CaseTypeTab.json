@@ -88,6 +88,7 @@
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "isSaveAndReturn", "TabFieldDisplayOrder": 28},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "dwpRegionalCentre", "TabFieldDisplayOrder": 29},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "reasonableAdjustments", "TabFieldDisplayOrder": 30},
+  {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "dwpDueDate", "TabFieldDisplayOrder": 31},
   {"LiveFrom": "12/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "events_sscs", "TabLabel": "Case Progression", "TabDisplayOrder": 5, "CaseFieldID": "events", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "18/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "evidence_sscs", "TabLabel": "GAPS 2 Evidence", "TabDisplayOrder": 6, "CaseFieldID": "evidence", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "24/01/2018", "CaseTypeID": "Benefit", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "phmeGrantedLabel", "TabFieldDisplayOrder": 1, "FieldShowCondition": "phmeGranted =\"Yes\" AND interlocReferralReason!=\"phmeRequest\""},
