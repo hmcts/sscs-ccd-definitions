@@ -2618,19 +2618,6 @@
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
-    "CaseFieldID": "elementsDisputedOverpayment",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "COMPLEX",
-    "LiveFrom": "19/11/2019",
-    "PageDisplayOrder": 3,
-    "PageFieldDisplayOrder": 3,
-    "PageID": "elementsDisputedId",
-    "PageLabel": "Issue codes",
-    "FieldShowCondition": "elementsDisputedList CONTAINS \"standardAllowanceOverpayment\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "elementsDisputedHousing",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
@@ -2925,19 +2912,6 @@
     "PageID": "elementsDisputedId",
     "PageLabel": "Issue codes",
     "FieldShowCondition": "elementsDisputedList CONTAINS \"standardAllowanceSanctions\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "amendElementsIssues",
-    "CaseFieldID": "elementsDisputedOverpayment",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "COMPLEX",
-    "LiveFrom": "19/11/2019",
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 3,
-    "PageID": "elementsDisputedId",
-    "PageLabel": "Issue codes",
-    "FieldShowCondition": "elementsDisputedList CONTAINS \"standardAllowanceOverpayment\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
