@@ -2,6 +2,5 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Tyneview Park DRT", "ListElement": "Tyneview Park DRT"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Birmingham DRT", "ListElement": "Birmingham DRT"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Bradford DRT", "ListElement": "Bradford DRT"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Attendance Allowance", "ListElement": "Attendance Allowance"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "RfE", "ListElement": "RfE"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Attendance Allowance", "ListElement": "Attendance Allowance"}
 ]
