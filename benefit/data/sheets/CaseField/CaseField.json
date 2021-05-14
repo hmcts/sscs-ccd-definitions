@@ -55,6 +55,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "caseHistory", "Label": "Case history", "FieldType": "CaseHistoryViewer", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "relistingReason", "Label": "Relisting reason", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dateSentToDwp", "Label": "Date evidence sent to DWP", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpDueDate", "Label": "DWP response due date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "interlocReviewState", "Label": "Interlocutory review state", "HintText": "The state of a case whilst in interlocutory review", "FieldType": "FixedList", "FieldTypeParameter": "FL_interlocWorkflow", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hmctsDwpState", "Label": "Sent to DWP state", "HintText": "The state of a case after attempting to send to DWP", "FieldType": "FixedList", "FieldTypeParameter": "FL_withDwpWorkflow", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpResponseState", "Label": "DWP response state", "HintText": "The response state of a case with DWP", "FieldType": "FixedList", "FieldTypeParameter": "FL_dwpWorkFlow", "SecurityClassification": "PUBLIC"},
@@ -366,5 +367,6 @@
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "processAudioVideoReviewState", "Label": "Interloc Review State", "FieldType": "FixedList", "FieldTypeParameter": "FL_processAudioVideoReviewState", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tempMediaUrl", "Label": "Audio/Video Evidence", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tempMediaUrlLabel", "Label": "**Document url**  \r\n${tempMediaUrl}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "hasUnprocessedAudioVideoEvidence", "Label": "Has unprocessed Audio/Video evidence", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "hasUnprocessedAudioVideoEvidence", "Label": "Has unprocessed Audio/Video evidence", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "showWorkCapabilityAssessmentPage", "Label": "Show the Work Capability Assessment page?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]

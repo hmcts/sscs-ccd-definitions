@@ -23,17 +23,6 @@
   },
   {
     "CaseEventID": "amendElementsIssues",
-    "CaseFieldID": "elementsDisputedOverpayment",
-    "ListElementCode": "issueCode",
-    "ID": "elementsDisputedOverpaymentCode",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 1,
-    "PageID": "elementsDisputedId",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "amendElementsIssues",
     "CaseFieldID": "elementsDisputedHousing",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedHousingCode",
