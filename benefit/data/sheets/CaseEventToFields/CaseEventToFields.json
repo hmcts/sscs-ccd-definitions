@@ -2683,6 +2683,19 @@
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "elementsDisputedLimitedWork",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 9,
+    "PageID": "elementsDisputedId",
+    "PageLabel": "Issue codes",
+    "FieldShowCondition": "elementsDisputedList CONTAINS \"limitedCapabilityWork\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "elementsDisputedIsDecisionDisputedByOthers",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -2977,6 +2990,19 @@
     "PageID": "elementsDisputedId",
     "PageLabel": "Issue codes",
     "FieldShowCondition": "elementsDisputedList CONTAINS \"disabledChildren\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "amendElementsIssues",
+    "CaseFieldID": "elementsDisputedLimitedWork",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 9,
+    "PageID": "elementsDisputedId",
+    "PageLabel": "Issue codes",
+    "FieldShowCondition": "elementsDisputedList CONTAINS \"limitedCapabilityWork\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
