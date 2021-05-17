@@ -254,6 +254,7 @@
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "elementsDisputedCare", "Label": "Carer element", "HintText": "Select at least 1 issue code (maximum 3)", "FieldType": "Collection", "FieldTypeParameter": "elementAndIssueCode", "Min": 1, "Max": 3, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "elementsDisputedChildElement", "Label": "Child element", "HintText": "Select at least 1 issue code (maximum 3)", "FieldType": "Collection", "FieldTypeParameter": "elementAndIssueCode", "Min": 1, "Max": 3, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "elementsDisputedChildDisabled", "Label": "Disabled child addition", "HintText": "Select at least 1 issue code (maximum 3)", "FieldType": "Collection", "FieldTypeParameter": "elementAndIssueCode", "Min": 1, "Max": 3, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "elementsDisputedLimitedWork", "Label": "Limited Capability for Work (WCA)", "HintText": "Select at least 1 issue code (maximum 3)", "FieldType": "Collection", "FieldTypeParameter": "elementAndIssueCode", "Min": 1, "Max": 3, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "elementsDisputedIsDecisionDisputedByOthers", "Label": "Has this UC decision been disputed by any other party?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "elementsDisputedLinkedAppealRef", "Label": "Reference of linked appeal", "FieldType": "Text", "Max": 16, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "previousState", "Label": "Previous State", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -366,5 +367,6 @@
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "processAudioVideoReviewState", "Label": "Interloc Review State", "FieldType": "FixedList", "FieldTypeParameter": "FL_processAudioVideoReviewState", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tempMediaUrl", "Label": "Audio/Video Evidence", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tempMediaUrlLabel", "Label": "**Document url**  \r\n${tempMediaUrl}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "hasUnprocessedAudioVideoEvidence", "Label": "Has unprocessed Audio/Video evidence", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "hasUnprocessedAudioVideoEvidence", "Label": "Has unprocessed Audio/Video evidence", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "showWorkCapabilityAssessmentPage", "Label": "Show the Work Capability Assessment page?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
