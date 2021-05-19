@@ -217,19 +217,6 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "elementsDisputedOverpayment",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "COMPLEX",
-    "LiveFrom": "19/11/2019",
-    "PageDisplayOrder": 3,
-    "PageFieldDisplayOrder": 3,
-    "PageID": "elementsDisputedId",
-    "PageLabel": "Issue codes",
-    "FieldShowCondition": "elementsDisputedList CONTAINS \"standardAllowanceOverpayment\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "elementsDisputedHousing",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
@@ -291,6 +278,19 @@
     "PageID": "elementsDisputedId",
     "PageLabel": "Issue codes",
     "FieldShowCondition": "elementsDisputedList CONTAINS \"disabledChildren\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "elementsDisputedLimitedWork",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 9,
+    "PageID": "elementsDisputedId",
+    "PageLabel": "Issue codes",
+    "FieldShowCondition": "elementsDisputedList CONTAINS \"limitedCapabilityWork\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
