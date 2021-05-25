@@ -1746,6 +1746,43 @@
     "FieldDisplayOrder": 5
   },
   {
+    "CaseEventID": "playbackAudioVideoEvidence",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "ListElementCode": "documentType",
+    "ID": "selectedAudioVideoEvidenceDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "playbackAudioVideoEvidence",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "ListElementCode": "documentLink",
+    "ID": "selectedAudioVideoEvidenceDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldShowCondition": "documentType=\"DoNotUse\"",
+    "FieldDisplayOrder": 2
+  },
+  {
+    "CaseEventID": "playbackAudioVideoEvidence",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "ListElementCode": "dateAdded",
+    "ID": "selectedAudioVideoEvidenceDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 3
+  },
+  {
+    "CaseEventID": "playbackAudioVideoEvidence",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "ListElementCode": "partyUploaded",
+    "ID": "selectedAudioVideoEvidenceDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 4
+  },
+  {
     "CaseEventID": "processReasonableAdjustment",
     "CaseFieldID": "reasonableAdjustmentsLetters",
     "ListElementCode": "appellant.sentOn",
