@@ -1,8 +1,13 @@
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
 sscs-ccd.xlsx
 /releases/*
 */releases/*
 */output/*
 .idea
+sscs-ccd-definitions.iml
 Change History.json
 .DS_Store
 /bin/venues.csv
