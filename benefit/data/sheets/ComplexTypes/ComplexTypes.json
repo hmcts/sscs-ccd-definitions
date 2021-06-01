@@ -142,6 +142,7 @@
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "resizedDocumentLink", "FieldType": "Document", "ElementLabel": "Resized document URL", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "dateApproved", "FieldType": "Date", "ElementLabel": "Date approved", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "partyUploaded", "FieldType": "Text", "ElementLabel": "Party uploaded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "statementOfEvidencePdf", "FieldType": "Document",  "ElementLabel": "Statement of evidence pdf", "RegularExpression": ".pdf", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "ID": "sscsFurtherEvidenceDoc",
@@ -358,7 +359,7 @@
   {"LiveFrom": "01/01/2018", "ID": "draftSscsDocuments", "ListElementCode": "documentType", "FieldType": "FixedList", "FieldTypeParameter": "documentType", "ElementLabel": "Type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "draftSscsDocuments", "ListElementCode": "documentFileName", "FieldType": "Text", "ElementLabel": "File name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "documentType", "FieldType": "Text", "ElementLabel": "Document Type", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Document url", "RegularExpression": ".mp3,.mp4,.MP3,.MP4", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Audio/video document url", "RegularExpression": ".mp3,.mp4,.MP3,.MP4", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "rip1Document", "FieldType": "Document", "ElementLabel": "RIP 1 document", "HintText":"Document must be PDF formatted", "RegularExpression": ".pdf", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "fileName", "FieldType": "Text", "ElementLabel": "File name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "dateAdded", "FieldType": "Date", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC"},
