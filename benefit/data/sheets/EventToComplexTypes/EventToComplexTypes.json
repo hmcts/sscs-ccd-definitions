@@ -1746,6 +1746,15 @@
     "FieldDisplayOrder": 5
   },
   {
+    "CaseEventID": "processAudioVideo",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "ListElementCode": "statementOfEvidencePdf",
+    "ID": "selectedAudioVideoEvidenceDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 6
+  },
+  {
     "CaseEventID": "playbackAudioVideoEvidence",
     "CaseFieldID": "selectedAudioVideoEvidenceDetails",
     "ListElementCode": "documentType",
