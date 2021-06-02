@@ -1614,7 +1614,7 @@
     "Description": "Review PHME request",
     "DisplayOrder": 128,
     "PreConditionState(s)": "*",
-    "PostConditionState": "readyToList",
+    "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public"
   },
