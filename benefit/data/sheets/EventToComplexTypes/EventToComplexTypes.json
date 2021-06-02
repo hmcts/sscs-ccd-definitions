@@ -77,6 +77,17 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CaseEventID": "amendElementsIssues",
+    "CaseFieldID": "elementsDisputedLimitedWork",
+    "ListElementCode": "issueCode",
+    "ID": "elementsDisputedLimitedWorkCode",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1,
+    "PageID": "elementsDisputedId",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "elementsDisputedGeneral",
     "ListElementCode": "issueCode",
@@ -147,6 +158,17 @@
     "CaseFieldID": "elementsDisputedChildDisabled",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedChildDisabledCode",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1,
+    "PageID": "elementsDisputedId",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "elementsDisputedLimitedWork",
+    "ListElementCode": "issueCode",
+    "ID": "elementsDisputedLimitedWorkCode",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
@@ -301,6 +323,17 @@
     "CaseFieldID": "elementsDisputedChildDisabled",
     "ListElementCode": "issueCode",
     "ID": "elementsDisputedChildDisabledCode",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1,
+    "PageID": "elementsDisputedId",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "elementsDisputedLimitedWork",
+    "ListElementCode": "issueCode",
+    "ID": "elementsDisputedLimitedWorkCode",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
@@ -1711,6 +1744,43 @@
     "DisplayContext": "READONLY",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 5
+  },
+  {
+    "CaseEventID": "playbackAudioVideoEvidence",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "ListElementCode": "documentType",
+    "ID": "selectedAudioVideoEvidenceDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "playbackAudioVideoEvidence",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "ListElementCode": "documentLink",
+    "ID": "selectedAudioVideoEvidenceDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldShowCondition": "documentType=\"DoNotUse\"",
+    "FieldDisplayOrder": 2
+  },
+  {
+    "CaseEventID": "playbackAudioVideoEvidence",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "ListElementCode": "dateAdded",
+    "ID": "selectedAudioVideoEvidenceDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 3
+  },
+  {
+    "CaseEventID": "playbackAudioVideoEvidence",
+    "CaseFieldID": "selectedAudioVideoEvidenceDetails",
+    "ListElementCode": "partyUploaded",
+    "ID": "selectedAudioVideoEvidenceDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 4
   },
   {
     "CaseEventID": "processReasonableAdjustment",
