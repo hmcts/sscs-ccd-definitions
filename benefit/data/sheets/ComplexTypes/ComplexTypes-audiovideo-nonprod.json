@@ -13,5 +13,6 @@
   {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "partyUploaded", "FieldType": "Text", "ElementLabel": "Party uploaded", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "dateApproved", "FieldType": "Date", "ElementLabel": "Date approved", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "rip1DocumentLink", "FieldType": "Document", "ElementLabel": "RIP 1 document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "documentTranslationStatus", "FieldType": "FixedList", "FieldTypeParameter": "documentTranslationStatus" , "ElementLabel": "Translation status", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "dwpDocuments", "ListElementCode": "documentTranslationStatus", "FieldType": "FixedList", "FieldTypeParameter": "documentTranslationStatus" , "ElementLabel": "Translation status", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "statementOfEvidencePdf", "FieldType": "Document",  "ElementLabel": "Statement of evidence pdf", "RegularExpression": ".pdf", "SecurityClassification": "PUBLIC"}
 ]
