@@ -142,7 +142,6 @@
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "resizedDocumentLink", "FieldType": "Document", "ElementLabel": "Resized document URL", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "dateApproved", "FieldType": "Date", "ElementLabel": "Date approved", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "partyUploaded", "FieldType": "Text", "ElementLabel": "Party uploaded", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "statementOfEvidencePdf", "FieldType": "Document",  "ElementLabel": "Statement of evidence pdf", "RegularExpression": ".pdf", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "ID": "sscsFurtherEvidenceDoc",
