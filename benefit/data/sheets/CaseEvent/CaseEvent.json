@@ -2373,5 +2373,20 @@
     "DisplayOrder": 999,
     "PostConditionState": "validAppeal",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "dwpRequestHearingRecording",
+    "Name": "DWP Request hearing recording",
+    "Description": "Request a hearing recording",
+    "DisplayOrder": 1000,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N"
   }
 ]

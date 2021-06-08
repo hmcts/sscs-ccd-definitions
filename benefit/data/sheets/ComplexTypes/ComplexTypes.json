@@ -367,5 +367,9 @@
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "processedAction", "FieldType": "FixedList", "FieldTypeParameter": "FL_audioVideoProcessedAction", "ElementLabel": "Audio/video processed action", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "AudioVideoEvidence", "ListElementCode": "statementOfEvidencePdf", "FieldType": "Document",  "ElementLabel": "Statement of evidence pdf", "RegularExpression": ".pdf", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "audioVideoEvidenceBundleDocumentCT", "ListElementCode": "documentFileName", "FieldType": "Text", "ElementLabel": "Audio video bundle document file name", "FieldShowCondition": "documentLink=\"AnyValueToFailThisCondition\"", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/06/2019", "ID": "audioVideoEvidenceBundleDocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "18/06/2019", "ID": "audioVideoEvidenceBundleDocumentCT", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Select document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "hearingRecordingRequest", "ListElementCode": "requestingParty", "FieldType": "FixedList", "FieldTypeParameter": "FL_parties", "ElementLabel": "RequestingP arty", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "hearingRecordingRequest", "ListElementCode": "requestedHearing", "FieldType": "Text", "ElementLabel": "Requested hearing", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "hearingRecordingRequest", "ListElementCode": "status", "FieldType": "Text", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "hearingRecordingRequest", "ListElementCode": "requestedHearingName", "FieldType": "Text", "ElementLabel": "Requested Hearing", "SecurityClassification": "PUBLIC"}
 ]
