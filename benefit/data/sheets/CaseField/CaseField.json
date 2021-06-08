@@ -375,5 +375,9 @@
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "selectHearingDetails", "Label": "Select hearing", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "hearingRecording", "Label": "Hearing recording", "FieldType": "HearingRecording", "HintText": "You can only upload MP3 and MP4 files up to 500MB", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "showHearingRecordings", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "sscsHearingRecordings", "Label": "Hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "sscsHearingRecordingDetails", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "sscsHearingRecordings", "Label": "Hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "sscsHearingRecordingDetails", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "requestableHearingDetails", "Label": "Requestable hearings recordings", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "requestedHearings", "Label": "Requested hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingRequest", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "releasedHearings", "Label": "Released hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingRequest", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "hearingRecordingRequests", "Label": "Hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingRequest", "SecurityClassification": "PUBLIC"}
 ]
