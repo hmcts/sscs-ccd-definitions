@@ -373,5 +373,9 @@
   {"LiveFrom": "18/06/2019", "ID": "sscsHearingRecordingDetails", "ListElementCode": "hearingDate", "FieldType": "Text", "ElementLabel": "Hearing date and time", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "sscsHearingRecordingDetails", "ListElementCode": "hearingType", "FieldType": "FixedRadioList", "ElementLabel": "Hearing type", "FieldTypeParameter": "FL_hearingRecordingType", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "sscsHearingRecordingDetails", "ListElementCode": "uploadDate", "FieldType": "Text", "ElementLabel": "Upload date and time", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/06/2019", "ID": "sscsHearingRecordingDetails", "ListElementCode": "recordings", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Recordings", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "18/06/2019", "ID": "sscsHearingRecordingDetails", "ListElementCode": "recordings", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Recordings", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "hearingRecordingRequest", "ListElementCode": "requestingParty", "FieldType": "FixedList", "FieldTypeParameter": "FL_parties", "ElementLabel": "RequestingP arty", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "hearingRecordingRequest", "ListElementCode": "requestedHearing", "FieldType": "Text", "ElementLabel": "Requested hearing", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "hearingRecordingRequest", "ListElementCode": "status", "FieldType": "Text", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "hearingRecordingRequest", "ListElementCode": "requestedHearingName", "FieldType": "Text", "ElementLabel": "Requested Hearing", "SecurityClassification": "PUBLIC"}
 ]
