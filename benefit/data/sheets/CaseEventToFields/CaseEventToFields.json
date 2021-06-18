@@ -1415,15 +1415,25 @@
   },
   {
     "CaseEventID": "requestInfoIncompleteApplication",
-    "CaseFieldID": "infoRequests",
+    "CaseFieldID": "informationFromPartySelected",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "informationFromAppellant=\"Yes\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
-    "PageID": "1.0",
-    "PageLabel": "Request information"
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "requestInfoIncompleteApplication",
+    "CaseFieldID": "infoRequests",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "informationFromAppellant=\"Yes\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "requestInfoIncompleteApplication",
@@ -1432,9 +1442,8 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
-    "PageID": "1.0",
-    "PageLabel": "Request information"
+    "PageFieldDisplayOrder": 4,
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "requestInfoIncompleteApplication",
@@ -1444,9 +1453,8 @@
     "FieldShowCondition": "responseRequired=\"Yes\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
-    "PageID": "1.0",
-    "PageLabel": "Request information"
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "removeLinkForCase",
@@ -3419,5 +3427,16 @@
     "PageID": "3.0",
     "PageLabel": "Process Audio/Video Evidence",
     "PageShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"admitEvidence\""
+  },
+  {
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "selectHearingDetails",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Upload hearing recording"
   }
 ]
