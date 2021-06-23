@@ -2585,6 +2585,18 @@
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "panelDoctorSpecialism",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 20,
+    "PageID": "1.0",
+    "FieldShowCondition": "appeal.benefitType.code=\"industrialInjuriesDisablement\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "elementsDisputedList",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
