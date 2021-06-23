@@ -1,21 +1,4 @@
 [
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "IIDB Barrow", "ListElement": "IIDB Barrow"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "IIDB Barnsley", "ListElement": "IIDB Barnsley"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "urologist", "ListElement": "Urologist"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "rheumaticPhysician", "ListElement": "Rheumatic Physician"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "renalPhysician", "ListElement": "Renal Physician"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "psychiatrist", "ListElement": "Psychiatrist"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "plasticSurgeon", "ListElement": "Plastic Surgeon"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "orthopaedicSurgeon", "ListElement": "Orthopaedic Surgeon"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "neurologist", "ListElement": "Neurologist"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "generalSurgeon", "ListElement": "General Surgeon"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "generalPractitioner", "ListElement": "General Practitioner"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "generalPhysician", "ListElement": "General Physician"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "eyeSurgeon", "ListElement": "Eye Surgeon"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "entSurgeon", "ListElement": "ENT Surgeon"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "dermatologist", "ListElement": "Dermatologist"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "chestSpecialist", "ListElement": "Chest Specialist"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "chestPhysician", "ListElement": "Chest Physician"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "carer", "ListElement": "Carer"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "cardiologist", "ListElement": "Cardiologist"}
 ]
