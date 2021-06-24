@@ -1153,6 +1153,16 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "releasedHearings", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "releasedHearings", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "requestedHearingsTextList", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "releasedHearingsTextList", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "releasedHearingsTextList", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "hearingRecordings", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "hearingRecordings", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "showHearingRecordings", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "showHearingRecordings", "UserRole": "caseworker-sscs-superuser", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "showHearingRecordings", "UserRole": "caseworker-sscs-judge", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "showHearingRecordings", "UserRole": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "sscsHearingRecordings", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "sscsHearingRecordings", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "sscsHearingRecordings", "UserRole": "caseworker-sscs-judge", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "sscsHearingRecordings", "UserRole": "caseworker-sscs", "CRUD": "R"}
 
 ]
