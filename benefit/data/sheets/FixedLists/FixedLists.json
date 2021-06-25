@@ -47,6 +47,7 @@
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "reinstatementRequest", "ListElement": "Reinstatement request"},
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "urgentHearingRequest", "ListElement": "Urgent hearing request"},
   {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "confidentialityRequest", "ListElement": "Confidentiality request"},
+  {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "withdrawalRequest", "ListElement": "Withdrawal request"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeFE", "ListElementCode": "Medical evidence", "ListElement": "Medical evidence"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeFE", "ListElementCode": "Other evidence", "ListElement": "Other evidence"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeFE", "ListElementCode": "appellantEvidence", "ListElement": "Appellant evidence"},

@@ -2259,7 +2259,7 @@
   },
   {
     "CaseEventID": "adminAppealWithdrawn",
-    "CaseFieldID": "sscsDocument",
+    "CaseFieldID": "withdrawalDocument",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
