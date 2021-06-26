@@ -54,6 +54,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "notListableProvideReasons", "TabFieldDisplayOrder": 46},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "isScottishCase", "TabFieldDisplayOrder": 47},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "reasonableAdjustments", "TabFieldDisplayOrder": 48},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "panelDoctorSpecialism", "TabFieldDisplayOrder": 49},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "subscriptions_sscs", "TabLabel": "Subscriptions", "TabDisplayOrder": 3, "CaseFieldID": "subscriptions", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "phmeGrantedLabel", "TabFieldDisplayOrder": 1, "FieldShowCondition": "phmeGranted =\"Yes\" AND interlocReferralReason!=\"phmeRequest\""},
@@ -90,6 +91,7 @@
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "dwpRegionalCentre", "TabFieldDisplayOrder": 29},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "reasonableAdjustments", "TabFieldDisplayOrder": 30},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "dwpDueDate", "TabFieldDisplayOrder": 31},
+  {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "panelDoctorSpecialism", "TabFieldDisplayOrder": 32},
   {"LiveFrom": "12/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "events_sscs", "TabLabel": "Case Progression", "TabDisplayOrder": 5, "CaseFieldID": "events", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "18/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "evidence_sscs", "TabLabel": "GAPS 2 Evidence", "TabDisplayOrder": 6, "CaseFieldID": "evidence", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "24/01/2018", "CaseTypeID": "Benefit", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "phmeGrantedLabel", "TabFieldDisplayOrder": 1, "FieldShowCondition": "phmeGranted =\"Yes\" AND interlocReferralReason!=\"phmeRequest\""},
