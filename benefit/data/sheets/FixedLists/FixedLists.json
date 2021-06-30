@@ -512,8 +512,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "chestPhysician", "ListElement": "Chest Physician"},
   {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "carer", "ListElement": "Carer"},
   {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "cardiologist", "ListElement": "Cardiologist"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_processAudioVideoReviewState", "ListElementCode": "clear", "ListElement": "Clear Interloc Review State"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_parties", "ListElementCode": "dwp", "ListElement": "DWP"},
   {"LiveFrom": "01/01/2018", "ID": "FL_hearingRecordingType", "DisplayOrder" : "1", "ListElementCode": "final", "ListElement": "Final Hearing"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_hearingRecordingType", "DisplayOrder" : "2", "ListElementCode": "adjourned", "ListElement": "Adjourned hearing"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_hearingRecordingType", "DisplayOrder" : "2", "ListElementCode": "adjourned", "ListElement": "Adjourned hearing"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_parties", "ListElementCode": "dwp", "ListElement": "DWP"}
 ]
