@@ -222,5 +222,7 @@
   {"LiveFrom": "21/10/2018", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 21, "CaseFieldID": "adjournCaseInterpreterLanguage", "TabFieldDisplayOrder": 4},
   {"LiveFrom": "21/10/2018", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 21, "CaseFieldID": "dwpUCB", "TabFieldDisplayOrder": 5, "FieldShowCondition": "dwpUCB=\"Yes\""},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "TabID": "language_sscs", "TabLabel": "Welsh", "TabDisplayOrder": 23, "CaseFieldID": "languagePreferenceWelsh", "TabFieldDisplayOrder": 1, "TabShowCondition": "languagePreferenceWelsh=\"Yes\""},
-  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "TabID": "language_sscs", "TabLabel": "Welsh", "TabDisplayOrder": 23, "CaseFieldID": "translationWorkOutstanding", "TabFieldDisplayOrder": 2}
+  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "TabID": "language_sscs", "TabLabel": "Welsh", "TabDisplayOrder": 23, "CaseFieldID": "translationWorkOutstanding", "TabFieldDisplayOrder": 2},
+  {"LiveFrom": "02/03/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "hearingRecordingsInfo_sscs", "TabLabel": "Hearing Recordings", "TabDisplayOrder": 24, "CaseFieldID": "showHearingRecordings", "TabFieldDisplayOrder": 1, "TabShowCondition": "showHearingRecordings=\"Yes\"", "FieldShowCondition": "showHearingRecordings=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "21/10/2018", "CaseTypeID": "Benefit", "TabID": "hearingRecordingsInfo_sscs", "TabLabel": "Hearing Recordings", "TabDisplayOrder": 24, "CaseFieldID": "sscsHearingRecordings", "TabFieldDisplayOrder": 2}
 ]
