@@ -511,5 +511,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "chestSpecialist", "ListElement": "Chest Specialist"},
   {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "chestPhysician", "ListElement": "Chest Physician"},
   {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "carer", "ListElement": "Carer"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "cardiologist", "ListElement": "Cardiologist"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_panelDoctorSpecialism", "ListElementCode": "cardiologist", "ListElement": "Cardiologist"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_hearingRecordingType", "DisplayOrder" : "1", "ListElementCode": "final", "ListElement": "Final Hearing"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_hearingRecordingType", "DisplayOrder" : "2", "ListElementCode": "adjourned", "ListElement": "Adjourned hearing"}
 ]
