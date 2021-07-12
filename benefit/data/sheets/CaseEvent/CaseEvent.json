@@ -1322,6 +1322,17 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "citizenRequestHearingRecording",
+    "Name": "MYA Request hearing recording",
+    "Description": "Request a hearing recording",
+    "DisplayOrder": 107,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "dwpNoAction",
     "Name": "No action",
     "Description": "Take no action",
