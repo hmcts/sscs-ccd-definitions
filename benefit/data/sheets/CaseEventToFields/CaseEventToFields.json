@@ -2780,7 +2780,7 @@
     "CaseEventID": "uploadWelshDocument",
     "CaseFieldID": "sscsWelshPreviewDocuments",
     "PageFieldDisplayOrder": 2,
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "COMPLEX",
     "PageID": "1.0",
     "PageLabel": "Upload Welsh documents",
     "PageDisplayOrder": 1
