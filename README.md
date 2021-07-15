@@ -182,6 +182,7 @@ can be split into clerk.json file presented below:
         "CRUD": "CRU"
       }
     ]
+
 and judge.json file presented below:
 
     [
