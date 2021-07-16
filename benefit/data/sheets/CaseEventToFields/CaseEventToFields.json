@@ -1107,7 +1107,31 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 9,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Log case progress"
+  },
+  {
+    "CaseEventID": "interlocInformationReceived",
+    "CaseFieldID": "interlocReferralReason",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "interlocReviewState=\"reviewByJudge\" OR interlocReviewState=\"reviewByTcw\"",
+    "PageID": "1.0",
+    "PageLabel": "Log case progress"
+  },
+  {
+    "CaseEventID": "interlocInformationReceived",
+    "CaseFieldID": "tempNoteDetail",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "FieldShowCondition": "interlocReviewState=\"reviewByJudge\" OR interlocReviewState=\"reviewByTcw\"",
     "PageID": "1.0",
     "PageLabel": "Log case progress"
   },
@@ -2780,7 +2804,7 @@
     "CaseEventID": "uploadWelshDocument",
     "CaseFieldID": "sscsWelshPreviewDocuments",
     "PageFieldDisplayOrder": 2,
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "COMPLEX",
     "PageID": "1.0",
     "PageLabel": "Upload Welsh documents",
     "PageDisplayOrder": 1
@@ -3462,5 +3486,38 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "2.0",
     "PageLabel": "Upload hearing recording"
+  },
+  {
+    "CaseEventID": "dwpRequestHearingRecording",
+    "CaseFieldID": "requestableHearingDetails",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Request hearing recording"
+  },
+  {
+    "CaseEventID": "dwpRequestHearingRecording",
+    "CaseFieldID": "requestedHearingsTextList",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Request hearing recording"
+  },
+  {
+    "CaseEventID": "dwpRequestHearingRecording",
+    "CaseFieldID": "releasedHearingsTextList",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Request hearing recording"
   }
 ]
