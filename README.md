@@ -7,7 +7,7 @@ To build a local version of the CCD Importer image:
     cd benefit
     docker build -t hmctspublic.azurecr.io/sscs/ccd-definition-importer-benefit:dev -f ../docker/importer.Dockerfile .
     
-To generate a local AAT version of CCD def
+To generate a local AAT version of CCD def 
 
     cd ../
     ./bin/create-xlsx.sh benefit dev aat
