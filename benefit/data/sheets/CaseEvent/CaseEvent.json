@@ -512,7 +512,6 @@
     "DisplayOrder": 44,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_COR_BACKEND_URL}/notify/onlineappeal",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
     "SecurityClassification": "Public"
   },
