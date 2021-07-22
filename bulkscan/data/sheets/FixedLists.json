@@ -1,4 +1,4 @@
-[${CCD_DEF_FIXED_LIST_USERS},
+[
   {"LiveFrom": "01/01/2018", "ID": "ScannedDocumentType", "ListElementCode": "cherished", "ListElement": "Cherished"},
   {"LiveFrom": "01/01/2018", "ID": "ScannedDocumentType", "ListElementCode": "other", "ListElement": "Other"},
   {"LiveFrom": "01/01/2018", "ID": "ScannedDocumentType", "ListElementCode": "coversheet", "ListElement": "Coversheet"},
