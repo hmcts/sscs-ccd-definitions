@@ -106,14 +106,6 @@ There are two SSCS CCD definition case types, benefit and bulkscan. Move into th
 
     ../bin/xlsx2json.sh ~/Downloads/CCD_SSCSDefinition_v5.1.21_AAT.xlsx
 
-Due to differences in the FixedLists tab between AAT and PROD, some FixedList rows are stored in the two files:
-
-    FixedLists_AssignTo_AAT.txt
-    FixedLists_AssignTo_PROD.txt
-
-These should be updated as required. The conversion process performed by xlsx2json will have removed all the FL_AssignTo rows from the FixedLists.json file
-and replace them with a template variable. It will have done a similar thing for all the callback URLs.
-
 #Features
 
 ## Feature flagging
