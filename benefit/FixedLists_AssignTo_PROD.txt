@@ -24,4 +24,6 @@
 {"LiveFrom": "01/01/2018", "ID": "FL_AssignToDisabilityMember", "ListElementCode": "c2109742-d58c-4499-8aaa-137df460b618|Elaine Raven", "ListElement": "Elaine Raven"},
 {"LiveFrom": "05/12/2019", "ID": "FL_AssignToDisabilityMember", "ListElementCode": "ccda7510-cdfe-410f-9d01-dbcc028c9373|Rosamund Reece", "ListElement": "Rosamund Reece"},
 {"LiveFrom": "01/01/2018", "ID": "FL_AssignToDisabilityMember", "ListElementCode": "8f1d42c6-4799-49c5-bf5a-3ed3899baf65|Paul Smith", "ListElement": "Paul Smith"},
-{"LiveFrom": "01/01/2018", "ID": "FL_AssignToDisabilityMember", "ListElementCode": "unassigned", "ListElement": "Unassigned"}
+{"LiveFrom": "01/01/2018", "ID": "FL_AssignToDisabilityMember", "ListElementCode": "unassigned", "ListElement": "Unassigned"},
+{"LiveFrom": "01/01/2018", "ID": "FL_AssignToJudge", "ListElementCode": "districttribunaljudge.ajudge@ejudiciary.net", "ListElement": "District Tribunal Judge AJudge"},
+{"LiveFrom": "01/01/2018", "ID": "FL_AssignToJudge", "ListElementCode": "districttribunaljudge.anotherjudge@ejudiciary.net", "ListElement": "District Tribunal Judge AnotherJudge"}
