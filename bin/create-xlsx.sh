@@ -32,14 +32,12 @@ if [ ${ENV} == "local" ]; then
     TYA_NOTIFICATIONS_API_URL="http://host.docker.internal:8081"
     BULK_SCAN_API_URL="http://host.docker.internal:8090"
     BULK_SCAN_ORCHESTRATOR_URL="http://host.docker.internal:8099"
-    COR_BACKEND_URL="http://host.docker.internal:1234"
 elif [ ${ENV} == "aat" ] || [ ${ENV} == "demo" ] || [ ${ENV} == "prod" ] || [ ${ENV} == "perftest" ] || [ ${ENV} == "ithc" ]; then
     SSCS_CCD_ORCHESTRATOR_URL="http://sscs-ccd-callback-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
     TRIBUNALS_API_URL="http://sscs-tribunals-api-${ENV}.service.core-compute-${ENV}.internal"
     TYA_NOTIFICATIONS_API_URL="http://sscs-tya-notif-${ENV}.service.core-compute-${ENV}.internal"
     BULK_SCAN_API_URL="http://sscs-bulk-scan-${ENV}.service.core-compute-${ENV}.internal"
     BULK_SCAN_ORCHESTRATOR_URL="http://sscs-bulk-scan-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
-    COR_BACKEND_URL="http://sscs-cor-backend-${ENV}.service.core-compute-${ENV}.internal"
 else
         echo "${ENV} not recognised"
         exit 1
@@ -107,13 +105,10 @@ else
 fi
 
 if [ ${TYPE} == "benefit" ]; then
-  FIXED_LIST_USERS=$(cat ${RUN_DIR}/${TYPE}/FixedLists_AssignTo_${FIXED_LISTS_SUFFIX}.txt)
   PIP_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/pip-decision-notice-questions.txt)
   ESA_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/esa-decision-notice-questions.txt)
   UC_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/uc-decision-notice-questions.txt)
   LANGUAGES=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/languages.txt)
-else
-  FIXED_LIST_USERS=" "
 fi
 
 UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
@@ -132,13 +127,11 @@ docker run -ti --rm --name json2xlsx \
   -e "CCD_DEF_TYA_NOTIFICATIONS_API_URL=${TYA_NOTIFICATIONS_API_URL}" \
   -e "CCD_DEF_BULK_SCAN_API_URL=${BULK_SCAN_API_URL}" \
   -e "CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL=${BULK_SCAN_ORCHESTRATOR_URL}" \
-  -e "CCD_DEF_COR_BACKEND_URL=${COR_BACKEND_URL}" \
   -e "CCD_DEF_TYA_LINK=${TYA_LINK}" \
   -e "CCD_DEF_TYA_APPOINTEE_LINK=${TYA_APPOINTEE_LINK}" \
   -e "CCD_DEF_MYA_LINK=${MYA_LINK}" \
   -e "CCD_DEF_MYA_REPRESENTATIVE_LINK=${MYA_REPRESENTATIVE_LINK}" \
   -e "CCD_DEF_MYA_APPOINTEE_LINK=${MYA_APPOINTEE_LINK}" \
-  -e "CCD_DEF_FIXED_LIST_USERS=${FIXED_LIST_USERS}" \
   -e "CCD_DEF_PIP_DECISION_NOTICE_QUESTIONS=${PIP_DECISION_NOTICE_QUESTIONS}" \
   -e "CCD_DEF_ESA_DECISION_NOTICE_QUESTIONS=${ESA_DECISION_NOTICE_QUESTIONS}" \
   -e "CCD_DEF_UC_DECISION_NOTICE_QUESTIONS=${UC_DECISION_NOTICE_QUESTIONS}" \
