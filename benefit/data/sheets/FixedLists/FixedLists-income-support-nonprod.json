@@ -1,6 +1,5 @@
 [
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "IS Worthing", "ListElement": "IS Worthing"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "IS Birkenhead", "ListElement": "IS Birkenhead"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "IS Inverness", "ListElement": "IS Inverness"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Sheffield Benefit Centre", "ListElement": "Sheffield Benefit Centre"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "IS Inverness", "ListElement": "IS Inverness"}
 ]
