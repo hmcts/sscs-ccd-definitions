@@ -2050,23 +2050,5 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 8
-  },
-  {
-    "CaseEventID": "adminAppealWithdrawn",
-    "CaseFieldID": "withdrawalDocument",
-    "ListElementCode": "documentLink",
-    "ID": "withdrawalDocument",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "FieldDisplayOrder": 1
-  },
-  {
-    "CaseEventID": "adminAppealWithdrawn",
-    "CaseFieldID": "withdrawalDocument",
-    "ListElementCode": "documentFileName",
-    "ID": "withdrawalDocument",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "FieldDisplayOrder": 2
   }
 ]
