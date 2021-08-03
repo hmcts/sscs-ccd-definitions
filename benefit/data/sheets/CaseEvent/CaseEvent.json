@@ -1409,21 +1409,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "playbackAudioVideoEvidence",
-    "Name": "Playback audio/video evidence",
-    "Description": "Playback audio/video evidence",
-    "DisplayOrder": 112,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
     "ID": "processReasonableAdjustment",
     "Name": "Process reasonable adjustment",
     "Description": "Process reasonable adjustment",
