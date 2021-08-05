@@ -1644,6 +1644,7 @@
     "PageLabel": "Upload documents"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "uploadDocumentFurtherEvidence",
     "CaseFieldID": "draftSscsFurtherEvidenceDocument",
     "CaseTypeID": "Benefit",
@@ -1653,6 +1654,30 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Upload further evidence documents"
+  },
+  {
+    "CaseEventID": "uploadDocumentFurtherEvidence",
+    "CaseFieldID": "showRequestingPartyPage",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "2.0",
+    "PageLabel": "Hearing request party",
+    "PageShowCondition": "showRequestingPartyPage=\"Yes\"",
+    "FieldShowCondition": "requestingParty=\"DoNotShow\""
+  },
+  {
+    "CaseEventID": "uploadDocumentFurtherEvidence",
+    "CaseFieldID": "requestingParty",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "2.0",
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "uploadFurtherEvidence",
