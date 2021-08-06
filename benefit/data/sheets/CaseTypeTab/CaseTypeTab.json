@@ -106,6 +106,7 @@
   {"LiveFrom": "28/01/2018", "CaseTypeID": "Benefit", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "directionResponse", "TabFieldDisplayOrder": 9},
   {"LiveFrom": "29/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "historicSscsInterlocDirectionDocs", "TabFieldDisplayOrder": 10},
   {"LiveFrom": "28/01/2018", "CaseTypeID": "Benefit", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "sscsWelshDocuments", "TabFieldDisplayOrder": 11},
+  {"LiveFrom": "28/01/2018", "CaseTypeID": "Benefit", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "dwpReleasedHearings", "TabFieldDisplayOrder": 12},
   {"LiveFrom": "01/03/2018", "CaseTypeID": "Benefit", "TabID": "hearingsInfo_sscs", "TabLabel": "Panel and Hearings", "TabDisplayOrder": 8, "CaseFieldID": "panel", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "02/03/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "hearingsInfo_sscs", "TabLabel": "Panel and Hearings", "TabDisplayOrder": 8, "CaseFieldID": "hearings", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "13/03/2018", "CaseTypeID": "Benefit", "TabID": "interlocDocs_sscs", "TabLabel": "Interloc Documents", "TabDisplayOrder": 9, "CaseFieldID": "interlocDecisionInfo", "TabFieldDisplayOrder": 1},
