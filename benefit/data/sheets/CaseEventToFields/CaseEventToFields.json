@@ -3521,5 +3521,16 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Request hearing recording"
+  },
+  {
+    "CaseEventID": "processHearingRecordingRequest",
+    "CaseFieldID": "processHearingRecordingRequests",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Please review the hearing recordings"
   }
 ]

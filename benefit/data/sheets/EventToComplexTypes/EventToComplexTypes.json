@@ -2012,5 +2012,60 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 8
+  },
+  {
+    "CaseEventID": "processHearingRecordingRequest",
+    "CaseFieldID": "processHearingRecordingRequests",
+    "ListElementCode": "hearingTitle",
+    "ID": "processHearingRecordingRequesthearingTitle",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "processHearingRecordingRequest",
+    "CaseFieldID": "processHearingRecordingRequests",
+    "ListElementCode": "hearingInformation",
+    "ID": "processHearingRecordingRequestHearingInformation",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 2
+  },
+  {
+    "CaseEventID": "processHearingRecordingRequest",
+    "CaseFieldID": "processHearingRecordingRequests",
+    "ListElementCode": "recordings",
+    "ID": "processHearingRecordingRequestRecordings",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 3
+  },
+  {
+    "CaseEventID": "processHearingRecordingRequest",
+    "CaseFieldID": "processHearingRecordingRequests",
+    "ListElementCode": "dwp",
+    "ID": "processHearingRecordingRequestDwp",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 4
+  },
+  {
+    "CaseEventID": "processHearingRecordingRequest",
+    "CaseFieldID": "processHearingRecordingRequests",
+    "ListElementCode": "jointParty",
+    "ID": "processHearingRecordingRequestJointParty",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "FieldShowCondition": "jointParty=\"Yes\"",
+    "FieldDisplayOrder": 5
+  },
+  {
+    "CaseEventID": "processHearingRecordingRequest",
+    "CaseFieldID": "processHearingRecordingRequests",
+    "ListElementCode": "appellant",
+    "ID": "processHearingRecordingRequestAppellant",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 6
   }
 ]

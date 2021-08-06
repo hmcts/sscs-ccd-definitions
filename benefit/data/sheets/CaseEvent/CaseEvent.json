@@ -1409,6 +1409,19 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "processHearingRecordingRequest",
+    "Name": "Process hearing recording",
+    "Description": "Process hearing recording request",
+    "DisplayOrder": 114,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "processReasonableAdjustment",
     "Name": "Process reasonable adjustment",
     "Description": "Process reasonable adjustment",
