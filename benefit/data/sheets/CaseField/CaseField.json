@@ -372,6 +372,7 @@
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "panelDoctorSpecialism", "Label": "Panel doctor specialism", "FieldType": "FixedList", "FieldTypeParameter": "FL_panelDoctorSpecialism","SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "selectHearingDetails", "Label": "Select hearing", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "hearingRecording", "Label": "Hearing recording", "FieldType": "HearingRecording", "HintText": "You can only upload MP3 and MP4 files up to 500MB", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "existingHearingRecordings", "Label": "Hearing recordings", "FieldType": "sscsHearingRecordingDetails", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "sscsHearingRecordings", "Label": "Hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "sscsHearingRecordingDetails", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "requestableHearingDetails", "Label": "Requestable hearings recordings", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "requestedHearings", "Label": "Requested hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingRequest", "SecurityClassification": "PUBLIC"},
@@ -380,5 +381,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "releasedHearingsTextList", "Label": "Released hearings", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "hearingRecordingRequestOutstanding", "Label": "Hearing recording request outstanding?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "requestingParty", "Label": "Requesting party", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "showRequestingPartyPage", "Label": "Show the requesting party page?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "showRequestingPartyPage", "Label": "Show the requesting party page?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hearingRecordingExist", "Label": "Hearing recording exists?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]

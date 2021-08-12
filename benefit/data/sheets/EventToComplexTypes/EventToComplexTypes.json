@@ -2012,5 +2012,50 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 8
+  },
+  {
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "existingHearingRecordings",
+    "ListElementCode": "venue",
+    "ID": "existingHearingRecordingDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "existingHearingRecordings",
+    "ListElementCode": "hearingDate",
+    "ID": "existingHearingRecordingDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 2
+  },
+  {
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "existingHearingRecordings",
+    "ListElementCode": "hearingType",
+    "ID": "existingHearingRecordingDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 3
+  },
+  {
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "existingHearingRecordings",
+    "ListElementCode": "uploadDate",
+    "ID": "existingHearingRecordingDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 4
+  },
+  {
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "existingHearingRecordings",
+    "ListElementCode": "recordings",
+    "ID": "existingHearingRecordingDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 5
   }
 ]
