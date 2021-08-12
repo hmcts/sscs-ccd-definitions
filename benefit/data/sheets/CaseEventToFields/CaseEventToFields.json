@@ -3479,6 +3479,7 @@
     "PageLabel": "Upload hearing recording"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=addRecording",
     "CaseEventID": "uploadHearingRecording",
     "CaseFieldID": "hearingRecordingExist",
     "CaseTypeID": "Benefit",
@@ -3491,7 +3492,6 @@
     "PageLabel": "Upload hearing recording"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=addRecording",
     "CaseEventID": "uploadHearingRecording",
     "CaseFieldID": "existingHearingRecordings",
     "CaseTypeID": "Benefit",
