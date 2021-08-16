@@ -1158,6 +1158,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "releasedHearingsTextList", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "requestingParty", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "showRequestingPartyPage", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "processHearingRecordingRequests", "UserRole": "caseworker-sscs", "CRUD": "RU"}
-
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "processHearingRecordingRequests", "UserRole": "caseworker-sscs", "CRUD": "RU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "processHearingRecordingRequests", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
 ]
