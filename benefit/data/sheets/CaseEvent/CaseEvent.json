@@ -2305,6 +2305,20 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "postponementRequest",
+    "Name": "postponementRequest",
+    "Description": "Postponement Request",
+    "DisplayOrder": 184,
+    "PreConditionState(s)": "hearing",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "processAudioVideoWelsh",
     "Name": "Welsh - process A/V evidence",
     "Description": "Issue a Welsh direction notice based on audio and video evidence",
