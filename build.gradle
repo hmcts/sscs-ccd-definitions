@@ -5,6 +5,7 @@ plugins {
     id 'pmd'
     id 'jacoco'
     id 'maven'
+    id 'org.sonarqube' version '3.3'
 }
 
 group 'com.github.hmcts'
@@ -54,6 +55,18 @@ jacocoTestReport {
     reports {
         xml.enabled = true
         csv.enabled = false
+    }
+}
+
+project.tasks['sonarqube'].dependsOn test, jacocoTestReport
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "Reform :: sscs-ccd-definitions"
+        property "sonar.projectKey", "uk.gov.hmcts.reform:sscs-ccd-definitions"
+        property "sonar.coverage.jacoco.xmlReportPaths", "${project.buildDir}/reports/jacoco/test/jacocoTestReport.xml"
+        property "sonar.pitest.mode", "reuseReport"
+        property "sonar.pitest.reportsDirectory", "build/reports/pitest"
     }
 }
 
