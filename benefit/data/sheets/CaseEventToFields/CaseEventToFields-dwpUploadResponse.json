@@ -10,7 +10,8 @@
     "PageFieldDisplayOrder": 0,
     "PageID": "1.0",
     "FieldShowCondition": "dwpFurtherInfo=\"DoNotUse\"",
-    "ShowSummaryChangeOption": "N"
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "dwpUploadResponse",

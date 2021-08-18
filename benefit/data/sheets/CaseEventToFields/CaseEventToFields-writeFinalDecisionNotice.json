@@ -11,7 +11,8 @@
     "PageID": "typeOfAppeal",
     "PageLabel": "Type of appeal",
     "FieldShowCondition": "writeFinalDecisionGenerateNotice=\"DoNotUse\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -24,7 +25,8 @@
     "PageID": "typeOfAppeal",
     "PageLabel": "Type of appeal",
     "FieldShowCondition": "appeal.benefitType.code=\"PIP\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -75,7 +77,8 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "typeOfHearing",
     "PageLabel": "Type of hearing",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -88,7 +91,8 @@
     "PageFieldDisplayOrder": 3,
     "PageID": "typeOfHearing",
     "PageLabel": "Type of hearing",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=typeOfAward",
@@ -115,7 +119,8 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "typeOfAward",
     "PageLabel": "Type of award",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -140,7 +145,8 @@
     "PageFieldDisplayOrder": 4,
     "PageID": "typeOfAward",
     "PageLabel": "Type of award",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=awardDates",
@@ -179,7 +185,8 @@
     "PageFieldDisplayOrder": 3,
     "PageID": "awardDates",
     "PageLabel": "Award dates",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=panelMemberNames",
@@ -194,7 +201,8 @@
     "PageLabel": "Panel members",
     "FieldShowCondition": "appeal.benefitType.code!=\"ESA\" AND appeal.benefitType.code!=\"UC\"",
     "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -217,7 +225,8 @@
     "PageFieldDisplayOrder": 3,
     "PageID": "panelMemberNames",
     "FieldShowCondition": "appeal.benefitType.code=\"ESA\" OR appeal.benefitType.code=\"UC\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=decisionDate",
@@ -246,7 +255,8 @@
     "PageLabel": "Work capability assessment",
     "PageShowCondition": "showWorkCapabilityAssessmentPage=\"Yes\"",
     "FieldShowCondition": "appeal.benefitType.code=\"DoNotShow\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -269,7 +279,8 @@
     "PageFieldDisplayOrder": 3,
     "PageID": "workCapabilityAssessment",
     "FieldShowCondition" : "wcaAppeal=\"Yes\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=schedule6",
@@ -336,7 +347,8 @@
     "PageID": "decisionNoticeOptions",
     "PageLabel": "Select activities",
     "PageShowCondition": "writeFinalDecisionIsDescriptorFlow = \"Yes\" AND writeFinalDecisionGenerateNotice = \"Yes\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -349,7 +361,8 @@
     "PageFieldDisplayOrder": 3,
     "PageID": "decisionNoticeOptions",
     "PageLabel": "Select activities",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -996,7 +1009,8 @@
     "PageID": "regulation29",
     "PageLabel": "Regulation 29",
     "FieldShowCondition": "appeal.benefitType.code=\"DoNotShow\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -1023,7 +1037,8 @@
     "PageID": "schedule3Activities",
     "PageLabel": "Schedule 3 activities",
     "FieldShowCondition": "appeal.benefitType.code=\"DoNotShow\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -1049,7 +1064,8 @@
     "PageID": "schedule3Activities",
     "FieldShowCondition": "esaWriteFinalDecisionSchedule3ActivitiesApply != \"No\"",
     "PageLabel": "Select Schedule 3 activities",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -1062,7 +1078,8 @@
     "PageID": "schedule3Activities",
     "PageLabel": "Select Schedule 3 activities",
     "FieldShowCondition": "esaWriteFinalDecisionSchedule3ActivitiesApply = \"No\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=schedule8Paragraph4",
@@ -1076,7 +1093,8 @@
     "PageID": "schedule8Paragraph4",
     "PageLabel": "Schedule 8 Paragraph 4",
     "FieldShowCondition": "appeal.benefitType.code=\"DoNotShow\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -1103,7 +1121,8 @@
     "PageID": "schedule7Activities",
     "PageLabel": "Schedule 7 activities",
     "FieldShowCondition": "appeal.benefitType.code=\"DoNotShow\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -1129,7 +1148,8 @@
     "PageID": "schedule7Activities",
     "FieldShowCondition": "ucWriteFinalDecisionSchedule7ActivitiesApply != \"No\"",
     "PageLabel": "Select Schedule 7 activities",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -1142,7 +1162,8 @@
     "PageID": "schedule7Activities",
     "PageLabel": "Select Schedule 7 activities",
     "FieldShowCondition": "ucWriteFinalDecisionSchedule7ActivitiesApply = \"No\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -1169,7 +1190,8 @@
     "PageID": "detailsOfDecision",
     "PageLabel": "Summary of outcome decision",
     "FieldShowCondition": "writeFinalDecisionGenerateNotice=\"DoNotUse\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -1194,7 +1216,8 @@
     "PageID": "dwpReassessTheAward",
     "PageLabel": "When should DWP reassess the award?",
     "FieldShowCondition": "writeFinalDecisionGenerateNotice=\"DoNotUse\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "writeFinalDecision",
