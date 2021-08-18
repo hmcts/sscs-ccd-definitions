@@ -382,5 +382,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "requestingParty", "Label": "Requesting party", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "showRequestingPartyPage", "Label": "Show the requesting party page?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "showPostponementDetailsPage", "Label": "Show the Postponement Details page?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "16/08/2021", "CaseTypeID": "Benefit", "ID": "documentRequestDetails", "Label": "Postponement Details",  "FieldType": "TextArea",  "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "16/08/2021", "CaseTypeID": "Benefit", "ID": "postponementRequestDetails", "Label": "Postponement Details",  "FieldType": "TextArea",  "SecurityClassification": "PUBLIC"}
 ]

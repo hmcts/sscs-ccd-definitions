@@ -33,11 +33,11 @@
     "PageID": "2.0",
     "PageLabel": "Hearing request party",
     "PageShowCondition": "showPostponementDetailsPage=\"Yes\"",
-    "FieldShowCondition": "documentRequestDetails=\"DoNotShow\""
+    "FieldShowCondition": "postponementRequestDetails=\"DoNotShow\""
   },
   {
     "CaseEventID": "actionFurtherEvidence",
-    "CaseFieldID": "documentRequestDetails",
+    "CaseFieldID": "postponementRequestDetails",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "21/08/2021",
