@@ -26,7 +26,6 @@ You can then test loading this generated CCD def into your local environment ver
     
 # Pushing changes
 
-    
 * Raise a PR with the changes - Remember: check any new features have full CRUD access
 * Open benefit/VERSION.yaml and modify the version number. This file will be used by the Azure Pipeline to create a docker importer image tagged with the specified version number.
 * Update the benefit/data/sheets/CaseType.json and replace the right version for the field "Name": "SSCS Case v5.2.02_${CCD_DEF_E}"
