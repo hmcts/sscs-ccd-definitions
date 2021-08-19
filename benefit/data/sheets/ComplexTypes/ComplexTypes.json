@@ -380,7 +380,7 @@
   {"LiveFrom": "18/06/2019", "ID": "hearingRecordingRequest", "ListElementCode": "status", "FieldType": "Text", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingRecordingRequest", "ListElementCode": "dateRequested", "FieldType": "Date", "ElementLabel": "Date requested", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingRecordingRequest", "ListElementCode": "requestDocument", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/06/2019", "ID": "hearingRecordingRequest", "ListElementCode": "sscsHearingRecordingList", "FieldType": "Collection", "ElementLabel": "Hearing recordings", "FieldTypeParameter": "sscsHearingRecordingDetails", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "hearingRecordingRequest", "ListElementCode": "sscsHearingRecording", "FieldType": "sscsHearingRecordingDetails", "ElementLabel": "Hearing recording", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "hearingRecordingDetails", "ListElementCode": "fileName", "FieldType": "Text", "ElementLabel": "File name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "hearingRecordingDetails", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Recording", "RegularExpression": ".mp3,.mp4,.MP3,.MP4", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "hearingRecordingDetails", "ListElementCode": "hearingType", "FieldType": "FixedRadioList", "ElementLabel": "Hearing type", "FieldTypeParameter": "FL_hearingRecordingType", "SecurityClassification": "PUBLIC"}
