@@ -2402,8 +2402,7 @@
     "PageID": "1.0",
     "FieldShowCondition": "issueCode=\"doNotUse\"",
     "PageLabel": "Hmcts review response",
-    "ShowSummaryChangeOption": "N",
-    "RetainHiddenValue": "Yes"
+    "ShowSummaryChangeOption": "N"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -2414,8 +2413,7 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 0,
-    "PageID": "1.0",
-    "RetainHiddenValue": "Yes"
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -2931,8 +2929,7 @@
     "PageID": "1.0",
     "FieldShowCondition": "confidentialityRequestAppellantGrantedOrRefused = \"doNotUse\"",
     "PageLabel": "Review confidentiality request",
-    "ShowSummaryChangeOption": "Y",
-    "RetainHiddenValue": "Yes"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "reviewConfidentialityRequest",
@@ -2945,8 +2942,7 @@
     "PageID": "1.0",
     "FieldShowCondition": "confidentialityRequestJointPartyGrantedOrRefused = \"doNotUse\"",
     "PageLabel": "Review confidentiality request",
-    "ShowSummaryChangeOption": "Y",
-    "RetainHiddenValue": "Yes"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "reviewConfidentialityRequest",
@@ -3322,8 +3318,7 @@
     "FieldShowCondition": "reasonableAdjustmentChoice = \"DONOTSHOW\"",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
-    "PageID": "1.0",
-    "RetainHiddenValue": "Yes"
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
@@ -3334,8 +3329,7 @@
     "FieldShowCondition": "reasonableAdjustmentChoice = \"DONOTSHOW\"",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
-    "PageID": "1.0",
-    "RetainHiddenValue": "Yes"
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "updateReasonableAdjustment",

@@ -11,8 +11,7 @@
     "PageID": "typeOfAppeal",
     "PageLabel": "Type of appeal",
     "FieldShowCondition": "writeFinalDecisionGenerateNotice=\"DoNotUse\"",
-    "ShowSummaryChangeOption": "Y",
-    "RetainHiddenValue": "Yes"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -1190,8 +1189,7 @@
     "PageID": "detailsOfDecision",
     "PageLabel": "Summary of outcome decision",
     "FieldShowCondition": "writeFinalDecisionGenerateNotice=\"DoNotUse\"",
-    "ShowSummaryChangeOption": "Y",
-    "RetainHiddenValue": "Yes"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -1216,8 +1214,7 @@
     "PageID": "dwpReassessTheAward",
     "PageLabel": "When should DWP reassess the award?",
     "FieldShowCondition": "writeFinalDecisionGenerateNotice=\"DoNotUse\"",
-    "ShowSummaryChangeOption": "Y",
-    "RetainHiddenValue": "Yes"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "writeFinalDecision",
