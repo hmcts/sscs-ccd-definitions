@@ -6,16 +6,3 @@ dependencies:
   - name: nodejs
     version: ~2.3.7
     repository: '@hmctspublic'
-  - name: ccd
-    version: ~5.0.4
-    repository: '@hmctspublic'
-    tags:
-      - ccd-pr
-  - name: xui-webapp
-    version: ~0.2.1
-    repository: '@hmctspublic'
-    condition: xui-webapp.enabled
-  - name: idam-pr
-    version: 2.2.7
-    repository: '@hmctspublic'
-    condition: idam-pr.enabled
