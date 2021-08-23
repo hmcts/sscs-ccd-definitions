@@ -296,7 +296,8 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "directionsDueDate",
     "PageLabel": "Directions due date",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEventAdjournCasePopulateVenueDropdown",
@@ -335,7 +336,8 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "nextHearingVenue",
     "PageLabel": "Next hearing venue",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "adjournCase",
@@ -361,7 +363,8 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "nextHearingListingDuration",
     "PageLabel": "How long should the next hearing be listed for?",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "adjournCase",
@@ -374,7 +377,8 @@
     "PageFieldDisplayOrder": 3,
     "PageID": "nextHearingListingDuration",
     "PageLabel": "How long should the next hearing be listed for?",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "adjournCase",
@@ -400,7 +404,8 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "interpreterRequired",
     "PageLabel": "Language interpreter",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
@@ -425,7 +430,8 @@
     "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 2,
     "PageID": "whenShouldNextHearingBe",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "adjournCase",
@@ -437,7 +443,8 @@
     "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 4,
     "PageID": "whenShouldNextHearingBe",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "adjournCase",
@@ -449,7 +456,8 @@
     "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 5,
     "PageID": "whenShouldNextHearingBe",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     ",ShowSummaryChangeOption": "Y",
@@ -462,7 +470,8 @@
     "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 6,
     "PageID": "whenShouldNextHearingBe",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "adjournCase",
@@ -1121,7 +1130,8 @@
     "PageFieldDisplayOrder": 2,
     "FieldShowCondition": "interlocReviewState=\"reviewByJudge\" OR interlocReviewState=\"reviewByTcw\"",
     "PageID": "1.0",
-    "PageLabel": "Log case progress"
+    "PageLabel": "Log case progress",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "interlocInformationReceived",
@@ -1478,7 +1488,8 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 5,
-    "PageID": "1.0"
+    "PageID": "1.0",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "removeLinkForCase",
@@ -1931,7 +1942,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
-    "PageLabel": "Issue direction"
+    "PageLabel": "Issue direction",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "directionIssued",
@@ -1955,7 +1967,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
-    "PageLabel": "Issue direction"
+    "PageLabel": "Issue direction",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "directionIssued",
@@ -2087,7 +2100,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
-    "PageLabel": "Issue decision"
+    "PageLabel": "Issue decision",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "decisionIssued",
@@ -2774,7 +2788,8 @@
     "PageID": "linkedAppealRef",
     "PageLabel": "Linked appeal reference",
     "FieldShowCondition": "elementsDisputedList=\"DoNotUse\"",
-    "ShowSummaryChangeOption": "N"
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -2941,7 +2956,8 @@
     "ShowSummaryChangeOption": "Y",
     "ShowSummaryContentOption": "0",
     "FieldShowCondition": "confidentialityRequestOutcomeAppellant.requestOutcome = \"inProgress\"",
-    "PageLabel": "Review confidentiality request"
+    "PageLabel": "Review confidentiality request",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "reviewConfidentialityRequest",
@@ -2955,7 +2971,8 @@
     "ShowSummaryChangeOption": "Y",
     "ShowSummaryContentOption": "0",
     "FieldShowCondition": "confidentialityRequestOutcomeJointParty.requestOutcome = \"inProgress\"",
-    "PageLabel": "Review confidentiality request"
+    "PageLabel": "Review confidentiality request",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "amendElementsIssues",
@@ -3162,7 +3179,8 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "updateNotListableDueDate",
     "PageLabel": "Due date",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "updateNotListable",
