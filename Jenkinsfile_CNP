@@ -29,19 +29,29 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
 
-  disableLegacyDeployment()
+  after('test') {
+    // enable yarn audit and send message on master branch only
+    try {
+        yarnBuilder.yarn('audit')
+    } catch (error) {
+        onMaster {
+            slackSend(channel: '#sscs-tech', color: 'warning', message: "Yarn Audit has detected vulnerabilities in ${env.JOB_NAME}. You can check if there are patches for them in the full report, build details here: <${env.RUN_DISPLAY_URL}|Build ${env.BUILD_DISPLAY_NAME}>.")
+        }
+      }
+    }
 
     before('functionalTest:preview') {
-        yarnBuilder.yarn('setup')
-        env.TEST_E2E_URL_WEB = "https://www-ccd.aat.platform.hmcts.net/list/case?jurisdiction=sscs"
-        env.TEST_E2E_URL_GATEWAY = "https://gateway-ccd.aat.platform.hmcts.net"
-        env.TEST_E2E_NUM_BROWSERS = 4
-        env.TEST_E2E_WAIT_FOR_ANGULAR = 'false'
-        env.TEST_E2E_FAIL_FAST = 'false'
-        env.TEST_E2E_ANNOTATION = "--cucumberOpts.tags=@nightly-test"
+      yarnBuilder.yarn('setup')
+      env.TEST_E2E_URL_WEB = "https://www-ccd.aat.platform.hmcts.net/list/case?jurisdiction=sscs"
+      env.TEST_E2E_URL_GATEWAY = "https://gateway-ccd.aat.platform.hmcts.net"
+      env.TEST_E2E_NUM_BROWSERS = 4
+      env.TEST_E2E_WAIT_FOR_ANGULAR = 'false'
+      env.TEST_E2E_FAIL_FAST = 'false'
+      env.TEST_E2E_ANNOTATION = "--cucumberOpts.tags=@nightly-test"
     }
+
     after('functionalTest:preview') {
-        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
+      steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
     }
 
   println """done!""".stripIndent()
