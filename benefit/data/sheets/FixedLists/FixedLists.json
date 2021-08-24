@@ -331,7 +331,6 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "FC", "ListElement": "FC"},
   {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "FA", "ListElement": "FA"},
   {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "EX", "ListElement": "EX"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "EX", "ListElement": "EX"},
   {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "EQ", "ListElement": "EQ"},
   {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "EI", "ListElement": "EI"},
   {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "EC", "ListElement": "EC"},
