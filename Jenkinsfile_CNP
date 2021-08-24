@@ -40,7 +40,7 @@ withPipeline("nodejs", product, component) {
       }
     }
 
-    before('functionalTest:preview') {
+    before('functionalTest:aat') {
       yarnBuilder.yarn('setup')
       env.TEST_E2E_URL_WEB = "https://www-ccd.aat.platform.hmcts.net/list/case?jurisdiction=sscs"
       env.TEST_E2E_URL_GATEWAY = "https://gateway-ccd.aat.platform.hmcts.net"
@@ -50,7 +50,7 @@ withPipeline("nodejs", product, component) {
       env.TEST_E2E_ANNOTATION = "--cucumberOpts.tags=@nightly-test"
     }
 
-    after('functionalTest:preview') {
+    after('functionalTest:aat') {
       steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
     }
 
