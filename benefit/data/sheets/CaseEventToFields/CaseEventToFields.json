@@ -1937,7 +1937,7 @@
     "CaseFieldID": "directionDueDate",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "directionTypeDl!=\"refuseExtension\"",
+    "FieldShowCondition": "directionTypeDl!=\"refuseExtension\" AND directionTypeDl!=\"refuseHearingRecordingRequest\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
