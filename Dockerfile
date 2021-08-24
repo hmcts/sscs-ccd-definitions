@@ -1,6 +1,6 @@
 FROM hmctspublic.azurecr.io/base/node:12-alpine as base
 USER hmcts
-COPY --chown=hmcts:hmcts package.json ./
+COPY --chown=hmcts:hmcts package.json yarn.lock ./
 COPY /benefit /
 ADD ./config "/config"
 RUN yarn install --production && yarn cache clean
