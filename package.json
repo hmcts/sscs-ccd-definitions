@@ -12,6 +12,7 @@
     "start": "node index.js",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
+    "highLevelDataSetup": "echo './gradlew highLevelDataSetup --args=$1' > ./temp.sh && sh ./temp.sh",
     "test:smoke": "echo smoke",
     "e2e": "yarn --cwd sscs-ccd-e2e-tests test:fullfunctional",
     "test:fullfunctional": "yarn --cwd sscs-ccd-e2e-tests install && protractor sscs-ccd-e2e-tests/e2e/features.parallel.conf.js --cucumberOpts.tags=@nightly-test",
