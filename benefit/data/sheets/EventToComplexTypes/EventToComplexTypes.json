@@ -2083,6 +2083,7 @@
     "ID": "processHearingRecordingRequestRep",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
+    "FieldShowCondition": "appeal.rep.hasRepresentative = \"Yes\"",
     "FieldDisplayOrder": 7
   }
 ]
