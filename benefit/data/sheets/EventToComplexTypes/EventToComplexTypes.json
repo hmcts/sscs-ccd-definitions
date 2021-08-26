@@ -2075,5 +2075,14 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 6
+  },
+  {
+    "CaseEventID": "processHearingRecordingRequest",
+    "CaseFieldID": "processHearingRecordingRequests",
+    "ListElementCode": "rep",
+    "ID": "processHearingRecordingRequestRep",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 7
   }
 ]

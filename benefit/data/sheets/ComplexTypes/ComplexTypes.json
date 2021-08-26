@@ -390,5 +390,6 @@
   {"LiveFrom": "18/06/2019", "ID": "processHearingRecordingRequest", "ListElementCode": "recordings", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "processHearingRecordingRequest", "ListElementCode": "dwp", "FieldType": "DynamicList", "ElementLabel": "DWP", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "processHearingRecordingRequest", "ListElementCode": "jointParty", "FieldType": "DynamicList", "ElementLabel": "Joint Party", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/06/2019", "ID": "processHearingRecordingRequest", "ListElementCode": "appellant", "FieldType": "DynamicList", "ElementLabel": "Appellant", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "18/06/2019", "ID": "processHearingRecordingRequest", "ListElementCode": "appellant", "FieldType": "DynamicList", "ElementLabel": "Appellant", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "processHearingRecordingRequest", "ListElementCode": "rep", "FieldType": "DynamicList", "ElementLabel": "Representative", "SecurityClassification": "PUBLIC"}
 ]
