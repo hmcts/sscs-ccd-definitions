@@ -43,7 +43,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "assignedToDisabilityMember", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "decisionNotes", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "isCorDecision", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "appealNotePad", "UserRole": "caseworker-sscs", "CRUD": "CR"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "appealNotePad", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "infoRequests", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "informationFromAppellant", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "informationFromPartySelected", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
@@ -354,7 +354,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "dateInformationRequested", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "directionText", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "decisionNotes", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "appealNotePad", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "appealNotePad", "UserRole": "caseworker-sscs-superuser", "CRUD": "RUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "isCorDecision", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "infoRequests", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "informationFromDWP", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
@@ -1143,6 +1143,10 @@
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "requestedHearings", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "requestedHearings", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "requestedHearings", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "refusedHearings", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "CRUD"},
+  {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "refusedHearings", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "refusedHearings", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "refusedHearings", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "dwpReleasedHearings", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "CRUD"},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "dwpReleasedHearings", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
   {"LiveFrom": "14/12/2020", "CaseTypeID": "Benefit", "CaseFieldID": "dwpReleasedHearings", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
@@ -1155,6 +1159,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "releasedHearingsTextList", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "requestingParty", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "showRequestingPartyPage", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "processHearingRecordingRequests", "UserRole": "caseworker-sscs", "CRUD": "RU"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "processHearingRecordingRequests", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "processHearingRecordingRequests", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]

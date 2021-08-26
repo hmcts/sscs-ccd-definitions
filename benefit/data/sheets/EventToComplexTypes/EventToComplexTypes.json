@@ -1869,7 +1869,8 @@
     "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND appeal.appellant.isAppointee != \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 5
+    "FieldDisplayOrder": 5,
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
@@ -1879,7 +1880,8 @@
     "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND reasonableAdjustments.appellant.wantsReasonableAdjustment = \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 6
+    "FieldDisplayOrder": 6,
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
@@ -1889,7 +1891,8 @@
     "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND appeal.appellant.isAppointee = \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 7
+    "FieldDisplayOrder": 7,
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
@@ -1899,7 +1902,8 @@
     "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND reasonableAdjustments.appointee.wantsReasonableAdjustment = \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 8
+    "FieldDisplayOrder": 8,
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
@@ -1909,7 +1913,8 @@
     "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND appeal.rep.hasRepresentative = \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 9
+    "FieldDisplayOrder": 9,
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
@@ -1919,7 +1924,8 @@
     "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND reasonableAdjustments.representative.wantsReasonableAdjustment = \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 10
+    "FieldDisplayOrder": 10,
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
@@ -1929,7 +1935,8 @@
     "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND jointParty = \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 11
+    "FieldDisplayOrder": 11,
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
@@ -1939,7 +1946,8 @@
     "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND reasonableAdjustments.jointParty.wantsReasonableAdjustment = \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "FieldDisplayOrder": 12
+    "FieldDisplayOrder": 12,
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "uploadWelshDocument",
@@ -2067,5 +2075,15 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 6
+  },
+  {
+    "CaseEventID": "processHearingRecordingRequest",
+    "CaseFieldID": "processHearingRecordingRequests",
+    "ListElementCode": "rep",
+    "ID": "processHearingRecordingRequestRep",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "FieldShowCondition": "appeal.rep.hasRepresentative = \"Yes\"",
+    "FieldDisplayOrder": 7
   }
 ]

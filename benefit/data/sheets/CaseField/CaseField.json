@@ -377,10 +377,11 @@
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "requestedHearings", "Label": "Requested hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingRequest", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "citizenReleasedHearings", "Label": "Released hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingRequest", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "dwpReleasedHearings", "Label": "Released hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingRequest", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "refusedHearings", "Label": "Refused hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingRequest", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "requestedHearingsTextList", "Label": "Requested hearings", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "releasedHearingsTextList", "Label": "Released hearings", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "hearingRecordingRequestOutstanding", "Label": "Hearing recording request outstanding?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "requestingParty", "Label": "Requesting party", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "showRequestingPartyPage", "Label": "Show the requesting party page?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "processHearingRecordingRequests", "Label": "Please review the hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "processHearingRecordingRequest", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "processHearingRecordingRequests", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "processHearingRecordingRequest", "SecurityClassification": "PUBLIC"}
 ]
