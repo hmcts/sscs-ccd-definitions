@@ -12,3 +12,4 @@ Change History.json
 .DS_Store
 /bin/venues.csv
 /node_modules/
+/sscs-ccd-e2e-tests/
