@@ -6,6 +6,7 @@ variables:
   repositoryBulkscan: sscs/ccd-definition-importer-bulkscan
   acrName: hmctspublic
   acrResourceGroup: rpe-acr-prod-rg
+  nonProdTag: 'nonProd'
 
 trigger:
   branches:
@@ -60,6 +61,14 @@ jobs:
               echo "Building $(repositoryBenefit):$(imageTagBenefit) ..."
               az acr build -r $(acrName) -t $(repositoryBenefit):$(imageTagBenefit) -g $(acrResourceGroup) -f ../docker/importer.Dockerfile .
               az acr repository update --name $(acrName) --image $(repositoryBenefit):$(imageTagBenefit) --delete-enabled false --write-enabled false
+            else
+              echo "$(repositoryBenefit):$(imageTagBenefit) already exists"
+            fi
+            response=$(az acr repository show-tags -n $(acrName) --repository $(repositoryBenefit) | grep $(imageTagBenefit)$(nonProdTag) | grep -v RC || true
+            if [ -z "$response" ]; then
+              echo "Building $(repositoryBenefit):$(imageTagBenefit)$(nonProdTag) ..."
+              az acr build -r $(acrName) -t $(repositoryBenefit):$(imageTagBenefit)$(nonProdTag) -g $(acrResourceGroup) --build-arg exclude=prod -f ../docker/importer.Dockerfile .
+              az acr repository update --name $(acrName) --image $(repositoryBenefit):$(imageTagBenefit)$(nonProdTag) --delete-enabled false --write-enabled false
             else
               echo "$(repositoryBenefit):$(imageTagBenefit) already exists"
             fi
