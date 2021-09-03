@@ -551,6 +551,20 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "01/09/2021",
+    "CaseTypeID": "Benefit",
+    "ID": "actionPostponementRequest",
+    "Name": "Action Postponement Request",
+    "Description": "Action Postponement Request",
+    "DisplayOrder": 48,
+    "EventEnablingCondition": "unprocessedPostponementRequest=\"Yes\" AND interlocReviewState!=\"awaitingInformation\" AND interlocReviewState!=\"none\" AND interlocReviewState!=\"awaitingAdminAction\" AND interlocReviewState!=\"welshTranslation\" AND interlocReviewState!=\"\"",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
     "ID": "attachScannedDocs",
