@@ -24,30 +24,6 @@
   },
   {
     "CaseEventID": "actionFurtherEvidence",
-    "CaseFieldID": "showPostponementDetailsPage",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "21/08/2021",
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "2.0",
-    "PageLabel": "Hearing request party",
-    "PageShowCondition": "showPostponementDetailsPage=\"Yes\"",
-    "FieldShowCondition": "postponementRequestDetails=\"DoNotShow\""
-  },
-  {
-    "CaseEventID": "actionFurtherEvidence",
-    "CaseFieldID": "postponementRequestDetails",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "21/08/2021",
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 2,
-    "PageID": "2.0",
-    "PageLabel": "Handle Further Evidence"
-  },
-  {
-    "CaseEventID": "actionFurtherEvidence",
     "CaseFieldID": "scannedDocuments",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
