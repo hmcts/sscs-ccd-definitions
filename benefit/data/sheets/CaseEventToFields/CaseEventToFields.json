@@ -3658,5 +3658,28 @@
     "FieldShowCondition": "processHearingRecordingRequests=\"doNotUse\"",
     "ShowSummaryChangeOption": "N",
     "PageLabel": "Please review the hearing recordings"
+  },
+  {
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "actionPostponementRequestSelected",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/09/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Action Postponement Request"
+  },
+  {
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "postponementRequestDetails",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/09/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "FieldShowCondition": "actionPostponementRequestSelected=\"sendToJudge\"",
+    "PageLabel": "Action Postponement Request"
   }
 ]
