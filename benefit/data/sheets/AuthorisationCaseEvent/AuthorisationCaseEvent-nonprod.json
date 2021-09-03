@@ -15,6 +15,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "uploadHearingRecording", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "uploadHearingRecording", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestHearingRecording", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestHearingRecording", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "05/08/2021", "CaseTypeID": "Benefit", "CaseEventID": "dwpRequestHearingRecording", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "processHearingRecordingRequest", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "processHearingRecordingRequest", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
