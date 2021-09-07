@@ -3746,6 +3746,7 @@
     "CaseFieldID": "listingOption",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "actionPostponementRequestSelected=\"grant\"",
     "LiveFrom": "01/09/2021",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 7,
