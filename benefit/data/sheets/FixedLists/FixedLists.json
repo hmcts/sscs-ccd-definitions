@@ -549,7 +549,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_parties", "ListElementCode": "representative", "ListElement": "Representative"},
   {"LiveFrom": "01/01/2018", "ID": "FL_parties", "ListElementCode": "jointParty", "ListElement": "Joint party"},
   {"LiveFrom": "01/01/2018", "ID": "FL_actionPostponementRequest", "ListElementCode": "sendToJudge", "ListElement": "Send to Judge"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_actionPostponementRequest", "ListElementCode": "refuse", "ListElement": "Refuse"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_actionPostponementRequest", "ListElementCode": "refuse", "ListElement": "Refuse Postponement"},
   {"LiveFrom": "01/01/2018", "ID": "FL_actionPostponementRequest", "ListElementCode": "grant", "ListElement": "Grant Postponement"},
   {"LiveFrom": "01/09/2021", "ID": "FL_actionPostponementRequestListing", "ListElementCode": "readyToList", "ListElement": "Ready to List"},
   {"LiveFrom": "01/09/2021", "ID": "FL_actionPostponementRequestListing", "ListElementCode": "notListable", "ListElement": "Not Listable"}
