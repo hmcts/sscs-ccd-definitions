@@ -516,5 +516,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_parties", "ListElementCode": "dwp", "ListElement": "DWP"},
   {"LiveFrom": "01/01/2018", "ID": "FL_parties", "ListElementCode": "appellant", "ListElement": "Appellant (or Appointee)"},
   {"LiveFrom": "01/01/2018", "ID": "FL_parties", "ListElementCode": "representative", "ListElement": "Representative"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_parties", "ListElementCode": "jointParty", "ListElement": "Joint party"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_parties", "ListElementCode": "jointParty", "ListElement": "Joint party"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_ogd", "ListElementCode": "hmrc", "ListElement": "HMRC"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_ogd", "ListElementCode": "dwp", "ListElement": "DWP"}
 ]

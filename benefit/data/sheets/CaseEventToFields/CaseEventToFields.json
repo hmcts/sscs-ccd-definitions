@@ -811,6 +811,16 @@
     "PageID": "1.0"
   },
   {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "ogd",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 14,
+    "PageID": "1.0"
+  },
+  {
     "CaseEventID": "corDecision",
     "CaseFieldID": "decisionNotes",
     "CaseTypeID": "Benefit",

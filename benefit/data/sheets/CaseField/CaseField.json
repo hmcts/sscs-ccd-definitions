@@ -55,7 +55,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "multiBundleConfiguration", "Label": "Bundle configuration", "FieldType": "Collection", "FieldTypeParameter": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "caseHistory", "Label": "Case history", "FieldType": "CaseHistoryViewer", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "relistingReason", "Label": "Relisting reason", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dateSentToDwp", "Label": "Date evidence sent to DWP", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dateSentToDwp", "Label": "Date evidence sent to ${ogd}", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpDueDate", "Label": "DWP response due date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "interlocReviewState", "Label": "Interlocutory review state", "HintText": "The state of a case whilst in interlocutory review", "FieldType": "FixedList", "FieldTypeParameter": "FL_interlocWorkflow", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hmctsDwpState", "Label": "Sent to DWP state", "HintText": "The state of a case after attempting to send to DWP", "FieldType": "FixedList", "FieldTypeParameter": "FL_withDwpWorkflow", "SecurityClassification": "PUBLIC"},
@@ -380,5 +380,6 @@
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "releasedHearings", "Label": "Released hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingRequest", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "requestedHearingsTextList", "Label": "Requested hearings", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "releasedHearingsTextList", "Label": "Released hearings", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "hearingRecordingRequestOutstanding", "Label": "Hearing recording request outstanding?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "hearingRecordingRequestOutstanding", "Label": "Hearing recording request outstanding?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "ogd", "Label": "Other Government Department this case relates to", "FieldType": "FixedList", "FieldTypeParameter": "FL_ogd",  "SecurityClassification": "PUBLIC"}
 ]
