@@ -1001,6 +1001,7 @@
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyAddressSameAsAppellant", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyAddress", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "otherParties", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "childMaintenanceNumber", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "isScottishCase", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2020", "CaseTypeID": "Benefit", "CaseFieldID": "bulkScanEnvelopes", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2020", "CaseTypeID": "Benefit", "CaseFieldID": "bulkScanEnvelopes", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
