@@ -1,5 +1,7 @@
 [
   {"LiveFrom": "16/08/2021", "ID": "ScannedDocumentType", "ListElementCode": "postponementRequest", "ListElement": "Postponement request"},
   {"LiveFrom": "16/08/2021", "ID": "documentType", "ListElementCode": "postponementRequest", "ListElement": "Postponement request"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_selectWhoReviewsCase", "ListElementCode": "postponementRequestInterlocSendToTcw", "ListElement": "Postponement request for interloc - send to TCW"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_selectWhoReviewsCase", "ListElementCode": "postponementRequestInterlocSendToTcw", "ListElement": "Postponement request for interloc - send to TCW"},
+  {"LiveFrom": "01/09/2021", "ID": "documentType", "ListElementCode": "postponementRequestDirectionNotice", "ListElement": "Postponement Request direction notice"},
+  {"LiveFrom": "01/09/2021", "ID": "documentTypeWelsh", "ListElementCode": "postponementRequestDirectionNotice", "ListElement": "Postponement Request direction notice"}
 ]

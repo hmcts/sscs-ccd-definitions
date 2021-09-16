@@ -75,6 +75,21 @@
     "ShowEventNotes": "N"
   },
   {
+    "LiveFrom": "01/09/2021",
+    "CaseTypeID": "Benefit",
+    "ID": "actionPostponementRequest",
+    "Name": "Action Postponement Request",
+    "Description": "Action Postponement Request",
+    "DisplayOrder": 6,
+    "EventEnablingCondition": "unprocessedPostponementRequest=\"Yes\" AND interlocReviewState!=\"awaitingInformation\" AND interlocReviewState!=\"none\" AND interlocReviewState!=\"awaitingAdminAction\" AND interlocReviewState!=\"welshTranslation\" AND interlocReviewState!=\"\"",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
     "ID": "actionStrikeOut",
@@ -548,21 +563,6 @@
     "DisplayOrder": 47,
     "PreConditionState(s)": "appealCreated",
     "PostConditionState": "*",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/09/2021",
-    "CaseTypeID": "Benefit",
-    "ID": "actionPostponementRequest",
-    "Name": "Action Postponement Request",
-    "Description": "Action Postponement Request",
-    "DisplayOrder": 48,
-    "EventEnablingCondition": "unprocessedPostponementRequest=\"Yes\" AND interlocReviewState!=\"awaitingInformation\" AND interlocReviewState!=\"none\" AND interlocReviewState!=\"awaitingAdminAction\" AND interlocReviewState!=\"welshTranslation\" AND interlocReviewState!=\"\"",
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
   {
@@ -2243,6 +2243,21 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/09/2021",
+    "CaseTypeID": "Benefit",
+    "ID": "actionPostponementRequestWelsh",
+    "Name": "Welsh- Action Postponement Req",
+    "Description": "Welsh- Action Postponement Req",
+    "DisplayOrder": 179,
+    "EventEnablingCondition": "unprocessedPostponementRequest=\"Yes\" AND interlocReviewState!=\"awaitingInformation\" AND interlocReviewState!=\"none\" AND interlocReviewState!=\"awaitingAdminAction\" AND interlocReviewState!=\"welshTranslation\" AND interlocReviewState!=\"\"",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
   {
