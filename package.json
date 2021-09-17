@@ -8,14 +8,12 @@
     "lint": "echo lint",
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
-    "test:functional": "yarn --cwd sscs-ccd-e2e-tests test:fullfunctional",
+    "test:functional": "yarn --cwd sscs-ccd-e2e-tests postinstall && test:fullfunctional",
     "start": "node index.js",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
     "highLevelDataSetup": "echo 'sh bin/create-xlsx-step.sh benefit $1 && ./gradlew highLevelDataSetup --args=$1' > ./temp.sh && sh ./temp.sh",
     "test:smoke": "echo smoke",
-    "e2e": "yarn --cwd sscs-ccd-e2e-tests test:fullfunctional",
-    "test:fullfunctional": "yarn --cwd sscs-ccd-e2e-tests install && protractor sscs-ccd-e2e-tests/e2e/features.parallel.conf.js --cucumberOpts.tags=@nightly-test",
     "test:prod": "yarn --cwd sscs-ccd-e2e-tests install && protractor sscs-ccd-e2e-tests/e2e/features.parallel.conf.js --cucumberOpts.tags=@nightly-test --cucumberOpts.tags=~@issue-decision --cucumberOpts.tags=~@uc --cucumberOpts.tags=~@reinstatement --cucumberOpts.tags=~@bundle"
   },
   "dependencies": {
