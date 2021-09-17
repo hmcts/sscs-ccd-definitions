@@ -24,6 +24,28 @@
   },
   {
     "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0",
+    "PageLabel": "Handle Further Evidence"
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "directionDueDate",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "1.0",
+    "PageLabel": "Handle Further Evidence"
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
     "CaseFieldID": "showPostponementDetailsPage",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -44,28 +66,6 @@
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
     "PageID": "2.0",
-    "PageLabel": "Handle Further Evidence"
-  },
-  {
-    "CaseEventID": "actionFurtherEvidence",
-    "CaseFieldID": "scannedDocuments",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "COMPLEX",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
-    "PageID": "1.0",
-    "PageLabel": "Handle Further Evidence"
-  },
-  {
-    "CaseEventID": "actionFurtherEvidence",
-    "CaseFieldID": "directionDueDate",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
-    "PageID": "1.0",
     "PageLabel": "Handle Further Evidence"
   },
   {
