@@ -9,8 +9,8 @@ COMMON_VERSION=$(cat ${RUN_DIR}/benefit/SSCS_COMMON_VERSION.txt)
 
 #az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
 
-echo "IMAGE_NAME"
-echo $IMAGE_NAME
+echo "JOB_NAME"
+echo $JOB_NAME
 
 if [ -z "${TYPE}" ] || [ -z "${ENV}" ]; then
     echo "Usage create-xlsx.sh [type] [env]"
@@ -148,5 +148,5 @@ docker run -i --rm --name json2xlsx \
   -e "CCD_DEF_UC_DECISION_NOTICE_QUESTIONS=${UC_DECISION_NOTICE_QUESTIONS}" \
   -e "CCD_DEF_LANGUAGES=${LANGUAGES}" \
   -e "CCD_DEF_E=${UPPERCASE_ENV}" \
-  hmctspublic.azurecr.io/sscs/ccd-definitions:${IMAGE_NAME} \
+  hmctspublic.azurecr.io/sscs/ccd-definitions:pr-763 \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_${UPPERCASE_ENV}.xlsx"
