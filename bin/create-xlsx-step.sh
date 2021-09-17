@@ -148,5 +148,5 @@ docker run -i --rm --name json2xlsx \
   -e "CCD_DEF_UC_DECISION_NOTICE_QUESTIONS=${UC_DECISION_NOTICE_QUESTIONS}" \
   -e "CCD_DEF_LANGUAGES=${LANGUAGES}" \
   -e "CCD_DEF_E=${UPPERCASE_ENV}" \
-  hmctspublic.azurecr.io/sscs/ccd-definitions:pr-763 \
+  hmctspublic.azurecr.io/sscs/ccd-definitions:pr-772 \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_${UPPERCASE_ENV}.xlsx"
