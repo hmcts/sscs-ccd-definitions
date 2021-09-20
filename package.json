@@ -8,11 +8,11 @@
     "lint": "echo lint",
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
-    "test:functional": "yarn --cwd sscs-ccd-e2e-tests postinstall && yarn --cwd sscs-ccd-e2e-tests test:fullfunctional",
+    "test:functional": "yarn --cwd sscs-ccd-e2e-tests test:fullfunctional",
     "start": "node index.js",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
-    "highLevelDataSetup": "echo 'sh bin/create-xlsx-step.sh benefit $1 && ./gradlew highLevelDataSetup --args=$1' > ./temp.sh && sh ./temp.sh",
+    "highLevelDataSetup": "echo 'sh bin/before-data-setup-step.sh benefit $1 && ./gradlew highLevelDataSetup --args=$1 && sh bin/after-data-setup-step.sh' > ./temp.sh && sh ./temp.sh",
     "test:smoke": "echo smoke",
     "test:prod": "yarn --cwd sscs-ccd-e2e-tests install && protractor sscs-ccd-e2e-tests/e2e/features.parallel.conf.js --cucumberOpts.tags=@nightly-test --cucumberOpts.tags=~@issue-decision --cucumberOpts.tags=~@uc --cucumberOpts.tags=~@reinstatement --cucumberOpts.tags=~@bundle"
   },

@@ -4,8 +4,8 @@ FROM hmcts/ccd-definition-processor:latest as base
 # ----        Runtime image         ----
 FROM hmcts/ccd-definition-importer:latest as runtime
 
-# ---- To build prod version image, pass --build-arg exclude=nonprod
-ARG exclude=prod
+# ---- To build non prod version image, pass --build-arg exclude=prod
+ARG exclude=nonprod
 ENV EXCLUSION=*-$exclude.json
 
 RUN apk add --no-cache curl jq zip unzip git
