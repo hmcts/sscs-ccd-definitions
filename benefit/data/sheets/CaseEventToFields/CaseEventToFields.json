@@ -53,7 +53,7 @@
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
     "PageID": "2.0",
-    "PageLabel": "Hearing request party",
+    "PageLabel": "Handle Further Evidence",
     "PageShowCondition": "showPostponementDetailsPage=\"Yes\"",
     "FieldShowCondition": "postponementRequestDetails=\"DoNotShow\""
   },
