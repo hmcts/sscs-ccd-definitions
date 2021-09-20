@@ -3650,6 +3650,7 @@
     "PageShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"admitEvidence\""
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=selectHearing",
     "CaseEventID": "uploadHearingRecording",
     "CaseFieldID": "selectHearingDetails",
     "CaseTypeID": "Benefit",
@@ -3657,19 +3658,43 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
+    "PageID": "selectHearing",
     "PageLabel": "Upload hearing recording"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=addRecording",
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "hearingRecordingExist",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "addRecording",
+    "FieldShowCondition": "selectHearingDetails=\"DoNotUse\"",
+    "PageLabel": "Upload hearing recording"
+  },
+  {
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "existingHearingRecordings",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "hearingRecordingExist=\"Yes\"",
+    "PageID": "addRecording",
+    "PageLabel": "Upload hearing recording"
+  },
+  {
     "CaseEventID": "uploadHearingRecording",
     "CaseFieldID": "hearingRecording",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "2.0",
+    "PageFieldDisplayOrder": 3,
+    "PageID": "addRecording",
     "PageLabel": "Upload hearing recording"
   },
   {
