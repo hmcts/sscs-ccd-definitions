@@ -2575,7 +2575,8 @@
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dwpEvidenceBundleDocument=\"DONOTSSHOW\""
+    "FieldShowCondition": "dwpEvidenceBundleDocument=\"DONOTSSHOW\"",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -2751,7 +2752,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 18,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
