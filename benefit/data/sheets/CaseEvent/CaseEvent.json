@@ -1448,9 +1448,9 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "processHearingRecordingRequest",
-    "Name": "Process hearing recording",
-    "Description": "Process hearing recording request",
+    "ID": "actionHearingRecordingRequest",
+    "Name": "Action hearing recording req",
+    "Description": "Action hearing recording request",
     "DisplayOrder": 116,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",

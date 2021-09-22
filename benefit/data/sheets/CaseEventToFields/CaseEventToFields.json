@@ -3734,7 +3734,7 @@
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
-    "CaseEventID": "processHearingRecordingRequest",
+    "CaseEventID": "actionHearingRecordingRequest",
     "CaseFieldID": "processHearingRecordingRequests",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
@@ -3745,7 +3745,7 @@
     "PageLabel": "Please review the hearing recordings"
   },
   {
-    "CaseEventID": "processHearingRecordingRequest",
+    "CaseEventID": "actionHearingRecordingRequest",
     "CaseFieldID": "jointParty",
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
@@ -3758,7 +3758,7 @@
     "PageLabel": "Please review the hearing recordings"
   },
   {
-    "CaseEventID": "processHearingRecordingRequest",
+    "CaseEventID": "actionHearingRecordingRequest",
     "CaseFieldID": "appeal",
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
