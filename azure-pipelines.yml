@@ -64,7 +64,7 @@ jobs:
             else
               echo "$(repositoryBenefit):$(imageTagBenefit) already exists"
             fi
-            response=$(az acr repository show-tags -n $(acrName) --repository $(repositoryBenefit) | grep $(imageTagBenefit)$(nonProdTag) | grep -v RC || true
+            response=$(az acr repository show-tags -n $(acrName) --repository $(repositoryBenefit) | grep $(imageTagBenefit)$(nonProdTag)) | grep -v RC || true
             if [ -z "$response" ]; then
               echo "Building $(repositoryBenefit):$(imageTagBenefit)$(nonProdTag) ..."
               az acr build -r $(acrName) -t $(repositoryBenefit):$(imageTagBenefit)$(nonProdTag) -g $(acrResourceGroup) --build-arg exclude=prod -f ../docker/importer.Dockerfile .
