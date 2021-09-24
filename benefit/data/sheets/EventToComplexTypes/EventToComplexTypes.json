@@ -2022,7 +2022,52 @@
     "FieldDisplayOrder": 8
   },
   {
-    "CaseEventID": "processHearingRecordingRequest",
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "existingHearingRecordings",
+    "ListElementCode": "venue",
+    "ID": "existingHearingRecordingDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "existingHearingRecordings",
+    "ListElementCode": "hearingDate",
+    "ID": "existingHearingRecordingDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 2
+  },
+  {
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "existingHearingRecordings",
+    "ListElementCode": "hearingType",
+    "ID": "existingHearingRecordingDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 3
+  },
+  {
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "existingHearingRecordings",
+    "ListElementCode": "uploadDate",
+    "ID": "existingHearingRecordingDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 4
+  },
+  {
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "existingHearingRecordings",
+    "ListElementCode": "recordings",
+    "ID": "existingHearingRecordingDetails",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 5
+  },
+  {
+    "CaseEventID": "actionHearingRecordingRequest",
     "CaseFieldID": "processHearingRecordingRequests",
     "ListElementCode": "hearingTitle",
     "ID": "processHearingRecordingRequesthearingTitle",
@@ -2031,7 +2076,7 @@
     "FieldDisplayOrder": 1
   },
   {
-    "CaseEventID": "processHearingRecordingRequest",
+    "CaseEventID": "actionHearingRecordingRequest",
     "CaseFieldID": "processHearingRecordingRequests",
     "ListElementCode": "hearingInformation",
     "ID": "processHearingRecordingRequestHearingInformation",
@@ -2040,7 +2085,7 @@
     "FieldDisplayOrder": 2
   },
   {
-    "CaseEventID": "processHearingRecordingRequest",
+    "CaseEventID": "actionHearingRecordingRequest",
     "CaseFieldID": "processHearingRecordingRequests",
     "ListElementCode": "recordings",
     "ID": "processHearingRecordingRequestRecordings",
@@ -2049,7 +2094,7 @@
     "FieldDisplayOrder": 3
   },
   {
-    "CaseEventID": "processHearingRecordingRequest",
+    "CaseEventID": "actionHearingRecordingRequest",
     "CaseFieldID": "processHearingRecordingRequests",
     "ListElementCode": "dwp",
     "ID": "processHearingRecordingRequestDwp",
@@ -2058,7 +2103,7 @@
     "FieldDisplayOrder": 4
   },
   {
-    "CaseEventID": "processHearingRecordingRequest",
+    "CaseEventID": "actionHearingRecordingRequest",
     "CaseFieldID": "processHearingRecordingRequests",
     "ListElementCode": "jointParty",
     "ID": "processHearingRecordingRequestJointParty",
@@ -2068,7 +2113,7 @@
     "FieldDisplayOrder": 5
   },
   {
-    "CaseEventID": "processHearingRecordingRequest",
+    "CaseEventID": "actionHearingRecordingRequest",
     "CaseFieldID": "processHearingRecordingRequests",
     "ListElementCode": "appellant",
     "ID": "processHearingRecordingRequestAppellant",
@@ -2077,7 +2122,7 @@
     "FieldDisplayOrder": 6
   },
   {
-    "CaseEventID": "processHearingRecordingRequest",
+    "CaseEventID": "actionHearingRecordingRequest",
     "CaseFieldID": "processHearingRecordingRequests",
     "ListElementCode": "rep",
     "ID": "processHearingRecordingRequestRep",
