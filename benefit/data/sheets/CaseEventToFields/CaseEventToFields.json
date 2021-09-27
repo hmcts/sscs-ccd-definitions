@@ -45,6 +45,30 @@
     "PageLabel": "Handle Further Evidence"
   },
   {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "showPostponementDetailsPage",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "21/08/2021",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "2.0",
+    "PageLabel": "Handle Further Evidence",
+    "PageShowCondition": "showPostponementDetailsPage=\"Yes\"",
+    "FieldShowCondition": "postponementRequestDetails=\"DoNotShow\""
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "postponementRequestDetails",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "21/08/2021",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "2.0",
+    "PageLabel": "Handle Further Evidence"
+  },
+  {
     "CaseEventID": "manageWelshDocuments",
     "CaseFieldID": "sscsWelshDocuments",
     "CaseTypeID": "Benefit",
@@ -77,6 +101,18 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Add a case note",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "CaseEventID": "amendNote",
+    "CaseFieldID": "appealNotePad",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Amend a Note",
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -170,6 +206,16 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 7,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "adminUpdateEvent",
+    "CaseFieldID": "isInc5249521",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 8,
     "PageID": "1.0"
   },
   {
@@ -296,7 +342,8 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "directionsDueDate",
     "PageLabel": "Directions due date",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEventAdjournCasePopulateVenueDropdown",
@@ -335,7 +382,8 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "nextHearingVenue",
     "PageLabel": "Next hearing venue",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "adjournCase",
@@ -361,7 +409,8 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "nextHearingListingDuration",
     "PageLabel": "How long should the next hearing be listed for?",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "adjournCase",
@@ -374,7 +423,8 @@
     "PageFieldDisplayOrder": 3,
     "PageID": "nextHearingListingDuration",
     "PageLabel": "How long should the next hearing be listed for?",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "adjournCase",
@@ -400,7 +450,8 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "interpreterRequired",
     "PageLabel": "Language interpreter",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
@@ -425,7 +476,8 @@
     "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 2,
     "PageID": "whenShouldNextHearingBe",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "adjournCase",
@@ -437,7 +489,8 @@
     "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 4,
     "PageID": "whenShouldNextHearingBe",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "adjournCase",
@@ -449,7 +502,8 @@
     "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 5,
     "PageID": "whenShouldNextHearingBe",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     ",ShowSummaryChangeOption": "Y",
@@ -462,7 +516,8 @@
     "PageDisplayOrder": 12,
     "PageFieldDisplayOrder": 6,
     "PageID": "whenShouldNextHearingBe",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "adjournCase",
@@ -1121,7 +1176,8 @@
     "PageFieldDisplayOrder": 2,
     "FieldShowCondition": "interlocReviewState=\"reviewByJudge\" OR interlocReviewState=\"reviewByTcw\"",
     "PageID": "1.0",
-    "PageLabel": "Log case progress"
+    "PageLabel": "Log case progress",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "interlocInformationReceived",
@@ -1349,13 +1405,14 @@
     "PageLabel": "Create appeal"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=interlocReferral",
     "CaseEventID": "adminSendToInterlocutoryReviewState",
     "CaseFieldID": "interlocReferralReason",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "20/08/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Interloc referral"
   },
@@ -1366,7 +1423,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "11/11/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
     "PageLabel": "Interloc referral"
   },
@@ -1377,9 +1434,33 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "11/11/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 3,
     "PageID": "1.0",
     "PageLabel": "Interloc referral"
+  },
+  {
+    "CaseEventID": "adminSendToInterlocutoryReviewState",
+    "CaseFieldID": "postponementRequestDetails",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "10/10/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "FieldShowCondition": "selectWhoReviewsCase=\"postponementRequestInterlocSendToTcw\"",
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "adminSendToInterlocutoryReviewState",
+    "CaseFieldID": "originalSender",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "FieldShowCondition": "selectWhoReviewsCase=\"postponementRequestInterlocSendToTcw\"",
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "adminSendToInterlocutoryReviewState",
@@ -1391,6 +1472,18 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "2.0",
     "PageLabel": "Appeal notepad"
+  },
+  {
+    "CaseEventID": "adminSendToInterlocutoryReviewState",
+    "CaseFieldID": "postponementPreviewDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "3.0",
+    "PageShowCondition": "selectWhoReviewsCase=\"postponementRequestInterlocSendToTcw\"",
+    "PageLabel": "Preview postponement request document"
   },
   {
     "CaseEventID": "nonCompliantSendToInterloc",
@@ -1478,7 +1571,8 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 5,
-    "PageID": "1.0"
+    "PageID": "1.0",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "removeLinkForCase",
@@ -1644,6 +1738,7 @@
     "PageLabel": "Upload documents"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "uploadDocumentFurtherEvidence",
     "CaseFieldID": "draftSscsFurtherEvidenceDocument",
     "CaseTypeID": "Benefit",
@@ -1653,6 +1748,30 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Upload further evidence documents"
+  },
+  {
+    "CaseEventID": "uploadDocumentFurtherEvidence",
+    "CaseFieldID": "showRequestingPartyPage",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "2.0",
+    "PageLabel": "Hearing request party",
+    "PageShowCondition": "showRequestingPartyPage=\"Yes\"",
+    "FieldShowCondition": "requestingParty=\"DoNotShow\""
+  },
+  {
+    "CaseEventID": "uploadDocumentFurtherEvidence",
+    "CaseFieldID": "requestingParty",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "2.0",
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "uploadFurtherEvidence",
@@ -1901,12 +2020,13 @@
     "CaseFieldID": "directionDueDate",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "directionTypeDl!=\"refuseExtension\"",
+    "FieldShowCondition": "directionTypeDl!=\"refuseExtension\" AND directionTypeDl!=\"refuseHearingRecordingRequest\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
-    "PageLabel": "Issue direction"
+    "PageLabel": "Issue direction",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "directionIssued",
@@ -1930,7 +2050,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
-    "PageLabel": "Issue direction"
+    "PageLabel": "Issue direction",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "directionIssued",
@@ -2062,7 +2183,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
-    "PageLabel": "Issue decision"
+    "PageLabel": "Issue decision",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "decisionIssued",
@@ -2353,6 +2475,43 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=interlocReferral",
+    "CaseEventID": "validSendToInterloc",
+    "CaseFieldID": "postponementRequestDetails",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "10/10/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "selectWhoReviewsCase=\"postponementRequestInterlocSendToTcw\"",
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "validSendToInterloc",
+    "CaseFieldID": "originalSender",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "FieldShowCondition": "selectWhoReviewsCase=\"postponementRequestInterlocSendToTcw\"",
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "validSendToInterloc",
+    "CaseFieldID": "postponementPreviewDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "2.0",
+    "PageShowCondition": "selectWhoReviewsCase=\"postponementRequestInterlocSendToTcw\"",
+    "PageLabel": "Preview postponement request document"
+  },
+  {
     "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "appeal",
     "CaseTypeID": "Benefit",
@@ -2416,7 +2575,8 @@
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dwpEvidenceBundleDocument=\"DONOTSSHOW\""
+    "FieldShowCondition": "dwpEvidenceBundleDocument=\"DONOTSSHOW\"",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -2592,7 +2752,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 18,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -2749,7 +2910,8 @@
     "PageID": "linkedAppealRef",
     "PageLabel": "Linked appeal reference",
     "FieldShowCondition": "elementsDisputedList=\"DoNotUse\"",
-    "ShowSummaryChangeOption": "N"
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -2916,7 +3078,8 @@
     "ShowSummaryChangeOption": "Y",
     "ShowSummaryContentOption": "0",
     "FieldShowCondition": "confidentialityRequestOutcomeAppellant.requestOutcome = \"inProgress\"",
-    "PageLabel": "Review confidentiality request"
+    "PageLabel": "Review confidentiality request",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "reviewConfidentialityRequest",
@@ -2930,7 +3093,8 @@
     "ShowSummaryChangeOption": "Y",
     "ShowSummaryContentOption": "0",
     "FieldShowCondition": "confidentialityRequestOutcomeJointParty.requestOutcome = \"inProgress\"",
-    "PageLabel": "Review confidentiality request"
+    "PageLabel": "Review confidentiality request",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "amendElementsIssues",
@@ -3137,7 +3301,8 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "updateNotListableDueDate",
     "PageLabel": "Due date",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "updateNotListable",
@@ -3300,6 +3465,51 @@
     "PageID": "1.0"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=postponementDetails",
+    "CaseEventID": "postponementRequest",
+    "CaseFieldID": "postponementRequestHearingDateAndTime",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Postponement details"
+  },
+  {
+    "CaseEventID": "postponementRequest",
+    "CaseFieldID": "postponementRequestHearingVenue",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "PageLabel": "Postponement details"
+  },
+  {
+    "CaseEventID": "postponementRequest",
+    "CaseFieldID": "postponementRequestDetails",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0",
+    "PageLabel": "Postponement details"
+  },
+  {
+    "CaseEventID": "postponementRequest",
+    "CaseFieldID": "postponementPreviewDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "2.0",
+    "PageLabel": "Preview postponement request document"
+  },
+  {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "processAudioVideo",
     "CaseFieldID": "selectedAudioVideoEvidence",
@@ -3337,35 +3547,12 @@
   },
   {
     "CaseEventID": "processAudioVideo",
-    "CaseFieldID": "tempMediaUrl",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 2,
-    "PageID": "2.0",
-    "FieldShowCondition": "selectedAudioVideoEvidence=\"DoNotUse\"",
-    "PageLabel": "Process Audio/Video Evidence"
-  },
-  {
-    "CaseEventID": "processAudioVideo",
-    "CaseFieldID": "tempMediaUrlLabel",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "READONLY",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 3,
-    "PageID": "2.0",
-    "PageLabel": "Process Audio/Video Evidence"
-  },
-  {
-    "CaseEventID": "processAudioVideo",
     "CaseFieldID": "processAudioVideoAction",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 2,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -3377,7 +3564,7 @@
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 3,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -3389,7 +3576,7 @@
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"admitEvidence\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 6,
+    "PageFieldDisplayOrder": 4,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -3401,7 +3588,7 @@
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"admitEvidence\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 7,
+    "PageFieldDisplayOrder": 5,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -3413,7 +3600,7 @@
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"admitEvidence\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 8,
+    "PageFieldDisplayOrder": 6,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -3425,7 +3612,7 @@
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"admitEvidence\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 9,
+    "PageFieldDisplayOrder": 7,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -3437,7 +3624,7 @@
     "FieldShowCondition": "processAudioVideoAction = \"sendToAdmin\" OR processAudioVideoAction = \"sendToJudge\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 10,
+    "PageFieldDisplayOrder": 8,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -3448,7 +3635,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 11,
+    "PageFieldDisplayOrder": 9,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
@@ -3465,6 +3652,7 @@
     "PageShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"admitEvidence\""
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=selectHearing",
     "CaseEventID": "uploadHearingRecording",
     "CaseFieldID": "selectHearingDetails",
     "CaseTypeID": "Benefit",
@@ -3472,19 +3660,43 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
+    "PageID": "selectHearing",
     "PageLabel": "Upload hearing recording"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=addRecording",
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "hearingRecordingExist",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "addRecording",
+    "FieldShowCondition": "selectHearingDetails=\"DoNotUse\"",
+    "PageLabel": "Upload hearing recording"
+  },
+  {
+    "CaseEventID": "uploadHearingRecording",
+    "CaseFieldID": "existingHearingRecordings",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "hearingRecordingExist=\"Yes\"",
+    "PageID": "addRecording",
+    "PageLabel": "Upload hearing recording"
+  },
+  {
     "CaseEventID": "uploadHearingRecording",
     "CaseFieldID": "hearingRecording",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "2.0",
+    "PageFieldDisplayOrder": 3,
+    "PageID": "addRecording",
     "PageLabel": "Upload hearing recording"
   },
   {
@@ -3519,5 +3731,151 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Request hearing recording"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CaseEventID": "actionHearingRecordingRequest",
+    "CaseFieldID": "processHearingRecordingRequests",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Please review the hearing recordings"
+  },
+  {
+    "CaseEventID": "actionHearingRecordingRequest",
+    "CaseFieldID": "jointParty",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "FieldShowCondition": "processHearingRecordingRequests=\"doNotUse\"",
+    "ShowSummaryChangeOption": "N",
+    "PageLabel": "Please review the hearing recordings"
+  },
+  {
+    "CaseEventID": "actionHearingRecordingRequest",
+    "CaseFieldID": "appeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0",
+    "FieldShowCondition": "processHearingRecordingRequests=\"doNotUse\"",
+    "ShowSummaryChangeOption": "N",
+    "PageLabel": "Please review the hearing recordings"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "actionPostponementRequestSelected",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/09/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Action Postponement Request"
+  },
+  {
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "postponementRequestDetails",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/09/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "FieldShowCondition": "actionPostponementRequestSelected=\"sendToJudge\"",
+    "PageLabel": "Action Postponement Request"
+  },
+  {
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "bodyContent",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "actionPostponementRequestSelected=\"grant\" OR actionPostponementRequestSelected=\"refuse\"",
+    "LiveFrom": "01/09/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0",
+    "PageLabel": "Action Postponement Request"
+  },
+  {
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "reservedToJudge",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "actionPostponementRequestSelected=\"grant\" OR actionPostponementRequestSelected=\"refuse\"",
+    "LiveFrom": "01/09/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "1.0",
+    "PageLabel": "Action Postponement Request"
+  },
+  {
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "signedBy",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "actionPostponementRequestSelected=\"grant\" OR actionPostponementRequestSelected=\"refuse\"",
+    "LiveFrom": "01/09/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0",
+    "PageLabel": "Action Postponement Request"
+  },
+  {
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "signedRole",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "actionPostponementRequestSelected=\"grant\" OR actionPostponementRequestSelected=\"refuse\"",
+    "LiveFrom": "01/09/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "PageID": "1.0",
+    "PageLabel": "Action Postponement Request"
+  },
+  {
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "listingOption",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "actionPostponementRequestSelected=\"grant\"",
+    "LiveFrom": "01/09/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 7,
+    "PageID": "1.0",
+    "PageLabel": "Action Postponement Request"
+  },
+  {
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "directionDueDate",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "listingOption=\"notListable\"",
+    "LiveFrom": "01/09/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 8,
+    "PageID": "1.0",
+    "PageLabel": "Action Postponement Request"
+  },
+  {
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "previewDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/09/2021",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "2.0",
+    "PageLabel": "Action Postponement Request",
+    "PageShowCondition": "actionPostponementRequestSelected=\"grant\" OR actionPostponementRequestSelected=\"refuse\""
   }
 ]
