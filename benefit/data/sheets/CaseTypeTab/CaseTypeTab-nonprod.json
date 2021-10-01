@@ -1,5 +1,6 @@
 [
-  {"LiveFrom": "16/09/2019", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "pcqId", "TabFieldDisplayOrder": 31}
+  {"LiveFrom": "16/09/2019", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "pcqId", "TabFieldDisplayOrder": 31},
+  {"LiveFrom": "01/10/2021", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "summaryConfidentialityRequired", "TabFieldDisplayOrder": 32}
 ]
 
 
