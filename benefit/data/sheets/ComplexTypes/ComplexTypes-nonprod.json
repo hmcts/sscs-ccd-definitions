@@ -1,0 +1,5 @@
+[
+{"LiveFrom": "01/01/2018", "ID": "role", "ListElementCode": "name", "FieldType": "Text", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
+{"LiveFrom": "01/01/2018", "ID": "role", "ListElementCode": "description", "FieldType": "Text", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
+{"LiveFrom": "01/01/2018", "ID": "appellant", "ListElementCode": "role", "FieldType": "role", "ElementLabel": "Role", "SecurityClassification": "PUBLIC"}
+]
