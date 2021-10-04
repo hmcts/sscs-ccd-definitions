@@ -21,7 +21,8 @@
     "PageFieldDisplayOrder": 0,
     "PageID": "1.0",
     "FieldShowCondition": "dwpFurtherEvidenceStates=\"DoNotUse\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "dwpSupplementaryResponse",

@@ -1031,6 +1031,7 @@
     "DisplayOrder": 82,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "EventEnablingCondition": "appeal.benefitType.code!=\"childSupport\"",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
     "SecurityClassification": "Public"
