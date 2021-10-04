@@ -60,9 +60,9 @@ case ${ENV} in
   demo)
     TYA_LINK="https://sscs-tya-frontend-${ENV}.service.core-compute-${ENV}.internal/validate-surname/\${subscriptions.appellantSubscription.tya}/trackyourappeal"
     TYA_APPOINTEE_LINK="https://sscs-tya-frontend-${ENV}.service.core-compute-${ENV}.internal/validate-surname/\${subscriptions.appointeeSubscription.tya}/trackyourappeal"
-    MYA_LINK="http://sscs-cor-frontend-${ENV}.service.core-compute-${ENV}.internal/sign-in?tya=\${subscriptions.appellantSubscription.tya}"
-    MYA_REPRESENTATIVE_LINK="http://sscs-cor-frontend-${ENV}.service.core-compute-${ENV}.internal/sign-in?tya=\${subscriptions.representativeSubscription.tya}"
-    MYA_APPOINTEE_LINK="http://sscs-cor-frontend-${ENV}.service.core-compute-${ENV}.internal/sign-in?tya=\${subscriptions.appointeeSubscription.tya}"
+    MYA_LINK="https://sscs-cor.demo.platform.hmcts.net/sign-in?tya=\${subscriptions.appellantSubscription.tya}"
+    MYA_REPRESENTATIVE_LINK="https://sscs-cor.demo.platform.hmcts.net/sign-in?tya=\${subscriptions.representativeSubscription.tya}"
+    MYA_APPOINTEE_LINK="https://sscs-cor.demo.platform.hmcts.net/sign-in?tya=\${subscriptions.appointeeSubscription.tya}"
   ;;
   perftest)
     TYA_LINK="https://sscs-tya-frontend-${ENV}.service.core-compute-${ENV}.internal/validate-surname/\${subscriptions.appellantSubscription.tya}/trackyourappeal"
@@ -97,6 +97,7 @@ case ${ENV} in
     echo "${ENV} not recognised"
     exit 1 ;;
 esac
+
 
 if [ ${ENV} == "prod" ]; then
     FIXED_LISTS_SUFFIX="PROD"

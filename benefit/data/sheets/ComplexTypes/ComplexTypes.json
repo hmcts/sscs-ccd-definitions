@@ -58,6 +58,8 @@
   {"LiveFrom": "01/01/2018", "ID": "mrnDetails", "ListElementCode": "mrnDate", "FieldType": "Date", "ElementLabel": "MRN Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "mrnDetails", "ListElementCode": "mrnLateReason", "FieldType": "Text", "ElementLabel": "MRN Late Reason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "mrnDetails", "ListElementCode": "mrnMissingReason", "FieldType": "Text", "ElementLabel": "MRN Missing Reason", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "role", "ListElementCode": "name", "FieldType": "Text", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "role", "ListElementCode": "description", "FieldType": "Text", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appellant", "ListElementCode": "name", "FieldType": "name", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appellant", "ListElementCode": "identity", "FieldType": "identity", "ElementLabel": "Identity", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appellant", "ListElementCode": "address", "FieldType": "address", "ElementLabel": "Address Details", "SecurityClassification": "PUBLIC"},
