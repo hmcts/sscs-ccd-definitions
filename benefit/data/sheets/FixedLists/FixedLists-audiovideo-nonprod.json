@@ -2,5 +2,6 @@
   {"LiveFrom": "01/01/2018", "ID": "documentTypeDwp", "ListElementCode": "audioDocument", "ListElement": "Audio document"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeDwp", "ListElementCode": "videoDocument", "ListElement": "Video document"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeWelsh", "ListElementCode": "rip1Document", "ListElement": "RIP 1 document"},
-  {"LiveFrom": "01/01/2018", "ID": "documentTypeWelsh", "ListElementCode": "audioVideoEvidenceDirectionNotice", "ListElement": "Audio/Video evidence direction notice"}
+  {"LiveFrom": "01/01/2018", "ID": "documentTypeWelsh", "ListElementCode": "audioVideoEvidenceDirectionNotice", "ListElement": "Audio/Video evidence direction notice"},
+  {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "rip1Document", "ListElement": "RIP 1 document"}
 ]
