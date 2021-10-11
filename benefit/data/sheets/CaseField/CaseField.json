@@ -122,6 +122,8 @@
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "summaryName", "Label": "**Name**  \r\n${appeal.appellant.name.firstName} ${appeal.appellant.name.lastName}  ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "summaryAddress", "Label": "**Address**  \r\n${appeal.appellant.address.line1}, ${appeal.appellant.address.line2}, ${appeal.appellant.address.town}  \r\n${appeal.appellant.address.postcode}  ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "summaryNino", "Label": "**NINO**  \r\n${appeal.appellant.identity.nino}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "summaryRole", "Label": "**Role**  \r\n${appeal.appellant.role.name}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "summaryRoleDescription", "Label": "**Role Description**  \r\n${appeal.appellant.role.description}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "summaryDOB", "Label": "**Date of birth**  \r\n${appeal.appellant.identity.dob}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "summaryBenefitType", "Label": "**Benefit type**  \r\n${appeal.benefitType.description}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "summaryCaseReference", "Label": "**SC number**  \r\n${caseReference}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -398,5 +400,6 @@
   {"LiveFrom": "01/09/2021", "CaseTypeID": "Benefit", "ID": "actionPostponementRequestSelected", "Label": "Action postponement request", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionPostponementRequest", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/09/2021", "CaseTypeID": "Benefit", "ID": "listingOption", "Label": "Listing option", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionPostponementRequestListing", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "isInc5249521", "Label": "Is Inc 5249521?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "isInc5249521CaseLabel", "Label": "## Bundle check required: ${isInc5249521} ", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "isInc5249521CaseLabel", "Label": "## Bundle check required: ${isInc5249521} ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "summaryConfidentialityRequired", "Label": "**Confidentiality Required**  \r\n${appeal.appellant.confidentialityRequired}", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 ]
