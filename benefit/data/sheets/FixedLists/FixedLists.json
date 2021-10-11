@@ -552,6 +552,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Blackpool", "ListElement": "PIP Blackpool"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Bellevale", "ListElement": "PIP Bellevale"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "AE", "ListElement": "PIP AE"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "Child Support", "ListElement": "Child Support"},
   {"LiveFrom": "01/01/2018", "ID": "pageNumberFormat", "ListElementCode": "pageRange", "ListElement": "Page Range"},
   {"LiveFrom": "01/01/2018", "ID": "pageNumberFormat", "ListElementCode": "numberOfPages", "ListElement": "Number Of Pages"},
   {"LiveFrom": "01/01/2018", "ID": "paginationStyle", "ListElementCode": "off", "ListElement": "Off"},
