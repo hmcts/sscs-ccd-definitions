@@ -1,6 +1,0 @@
-[
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "hasUnprocessedAudioVideoEvidence", "Label": "Does case have unprocessed audio/video evidence?", "DisplayOrder": 13},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "hasUnprocessedAudioVideoEvidence", "Label": "Does case have unprocessed audio/video evidence?", "DisplayOrder": 6},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "hasUnprocessedAudioVideoEvidence", "Label": "Does case have unprocessed audio/video evidence?", "DisplayOrder": 6},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "hasUnprocessedAudioVideoEvidence", "Label": "Does case have unprocessed audio/video evidence?", "DisplayOrder": 13}
-]

@@ -1,20 +1,38 @@
 #!/usr/bin/env bash
 
 TYPE=${1}
-VERSION=${2}
-ENV=${3}
-LIKE_PROD=${4:-${ENV}}
-SHUTTERED=${5:-false}
+ENV=${2}
+LIKE_PROD=${3:-${ENV}}
 
 RUN_DIR=`pwd`
 COMMON_VERSION=$(cat ${RUN_DIR}/benefit/SSCS_COMMON_VERSION.txt)
 
-az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
-
-if [ -z "${VERSION}" ] || [ -z "${TYPE}" ] || [ -z "${ENV}" ]; then
-    echo "Usage create-xlsx.sh [type] [version] [env]"
+if [ -z "${TYPE}" ] || [ -z "${ENV}" ]; then
+    echo "Usage create-xlsx.sh [type] [env]"
     exit 1
 fi
+
+if [ ${ENV} == "preview" ]; then
+    ENV="aat"
+fi
+
+#REPOSITORY=sscs/ccd-definitions
+#ACR_NAME=hmctspublic
+#TIMESTAMP=$(printf '%s\n' "$LAST_COMMIT_TIMESTAMP")
+#SUBSCRIPTION=$(printf '%s\n' "$REGISTRY_SUBSCRIPTION")
+
+#az acr login --name hmctspublic --subscription $SUBSCRIPTION
+#LATEST_TAG=$(az acr repository show-tags -n $ACR_NAME --repository $REPOSITORY | grep $TIMESTAMP)
+
+
+if [ $BRANCH_NAME == "staging" ]; then
+  COMMIT_LABEL=$(printf '%s\n' "$GIT_COMMIT" | awk '{ print substr($0,0,7) }')
+  LATEST_TAG="$BRANCH_NAME-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
+else
+  LATEST_TAG=$(printf '%s\n' "$BRANCH_NAME" | awk '{ print tolower($0) }')
+fi
+
+echo "Latest tag from repo $LATEST_TAG"
 
 case ${TYPE} in
     "benefit" )
@@ -61,9 +79,9 @@ case ${ENV} in
   demo)
     TYA_LINK="https://sscs-tya-frontend-${ENV}.service.core-compute-${ENV}.internal/validate-surname/\${subscriptions.appellantSubscription.tya}/trackyourappeal"
     TYA_APPOINTEE_LINK="https://sscs-tya-frontend-${ENV}.service.core-compute-${ENV}.internal/validate-surname/\${subscriptions.appointeeSubscription.tya}/trackyourappeal"
-    MYA_LINK="https://sscs-cor.demo.platform.hmcts.net/sign-in?tya=\${subscriptions.appellantSubscription.tya}"
-    MYA_REPRESENTATIVE_LINK="https://sscs-cor.demo.platform.hmcts.net/sign-in?tya=\${subscriptions.representativeSubscription.tya}"
-    MYA_APPOINTEE_LINK="https://sscs-cor.demo.platform.hmcts.net/sign-in?tya=\${subscriptions.appointeeSubscription.tya}"
+    MYA_LINK="http://sscs-cor-frontend-${ENV}.service.core-compute-${ENV}.internal/sign-in?tya=\${subscriptions.appellantSubscription.tya}"
+    MYA_REPRESENTATIVE_LINK="http://sscs-cor-frontend-${ENV}.service.core-compute-${ENV}.internal/sign-in?tya=\${subscriptions.representativeSubscription.tya}"
+    MYA_APPOINTEE_LINK="http://sscs-cor-frontend-${ENV}.service.core-compute-${ENV}.internal/sign-in?tya=\${subscriptions.appointeeSubscription.tya}"
   ;;
   perftest)
     TYA_LINK="https://sscs-tya-frontend-${ENV}.service.core-compute-${ENV}.internal/validate-surname/\${subscriptions.appellantSubscription.tya}/trackyourappeal"
@@ -99,7 +117,6 @@ case ${ENV} in
     exit 1 ;;
 esac
 
-
 if [ ${ENV} == "prod" ]; then
     FIXED_LISTS_SUFFIX="PROD"
 else
@@ -115,39 +132,34 @@ fi
 
 UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
 
-if [ ${SHUTTERED} == true ]; then
-  shutteredExclusion="*-nonshuttered.json"
-  ccdDefinitionFile="CCD_${CASE_TYPE_XLSX_NAME}Definition_v${VERSION}_${UPPERCASE_ENV}_SHUTTERED.xlsx"
+if [ ${ENV} == "prod" ] || [ ${LIKE_PROD} == "prod" ]; then
+  excludedFilenamePatterns="-e *-nonprod.json,*-shuttered.json"
 else
-  shutteredExclusion="*-shuttered.json"
-  ccdDefinitionFile="CCD_${CASE_TYPE_XLSX_NAME}Definition_v${VERSION}_${UPPERCASE_ENV}.xlsx"
+  excludedFilenamePatterns="-e *-prod.json,*-shuttered.json"
 fi
 
 if [ ${ENV} == "prod" ] || [ ${LIKE_PROD} == "prod" ]; then
-  excludedFilenamePatterns="-e *-nonprod.json,${shutteredExclusion}"
+  echo "${ENV} deployment is after all the testing done. Remove this condition after test on master"
+  exit 1
 else
-  excludedFilenamePatterns="-e *-prod.json,${shutteredExclusion}"
+  docker run -i --rm --name json2xlsx \
+    -v $(pwd)/src/test/resources/ccd_definition:/tmp \
+    -e "CCD_DEF_EM_CCD_ORCHESTRATOR_URL=${EM_CCD_ORCHESTRATOR_URL}" \
+    -e "CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL=${SSCS_CCD_ORCHESTRATOR_URL}" \
+    -e "CCD_DEF_TRIBUNALS_API_URL=${TRIBUNALS_API_URL}" \
+    -e "CCD_DEF_TYA_NOTIFICATIONS_API_URL=${TYA_NOTIFICATIONS_API_URL}" \
+    -e "CCD_DEF_BULK_SCAN_API_URL=${BULK_SCAN_API_URL}" \
+    -e "CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL=${BULK_SCAN_ORCHESTRATOR_URL}" \
+    -e "CCD_DEF_TYA_LINK=${TYA_LINK}" \
+    -e "CCD_DEF_TYA_APPOINTEE_LINK=${TYA_APPOINTEE_LINK}" \
+    -e "CCD_DEF_MYA_LINK=${MYA_LINK}" \
+    -e "CCD_DEF_MYA_REPRESENTATIVE_LINK=${MYA_REPRESENTATIVE_LINK}" \
+    -e "CCD_DEF_MYA_APPOINTEE_LINK=${MYA_APPOINTEE_LINK}" \
+    -e "CCD_DEF_PIP_DECISION_NOTICE_QUESTIONS=${PIP_DECISION_NOTICE_QUESTIONS}" \
+    -e "CCD_DEF_ESA_DECISION_NOTICE_QUESTIONS=${ESA_DECISION_NOTICE_QUESTIONS}" \
+    -e "CCD_DEF_UC_DECISION_NOTICE_QUESTIONS=${UC_DECISION_NOTICE_QUESTIONS}" \
+    -e "CCD_DEF_LANGUAGES=${LANGUAGES}" \
+    -e "CCD_DEF_E=${UPPERCASE_ENV}" \
+    hmctspublic.azurecr.io/sscs/ccd-definitions:${LATEST_TAG} \
+    sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_${UPPERCASE_ENV}.xlsx"
 fi
-
-echo ${excludedFilenamePatterns}
-
-docker run -ti --rm --name json2xlsx \
-  -v $(pwd)/releases:/tmp \
-  -e "CCD_DEF_EM_CCD_ORCHESTRATOR_URL=${EM_CCD_ORCHESTRATOR_URL}" \
-  -e "CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL=${SSCS_CCD_ORCHESTRATOR_URL}" \
-  -e "CCD_DEF_TRIBUNALS_API_URL=${TRIBUNALS_API_URL}" \
-  -e "CCD_DEF_TYA_NOTIFICATIONS_API_URL=${TYA_NOTIFICATIONS_API_URL}" \
-  -e "CCD_DEF_BULK_SCAN_API_URL=${BULK_SCAN_API_URL}" \
-  -e "CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL=${BULK_SCAN_ORCHESTRATOR_URL}" \
-  -e "CCD_DEF_TYA_LINK=${TYA_LINK}" \
-  -e "CCD_DEF_TYA_APPOINTEE_LINK=${TYA_APPOINTEE_LINK}" \
-  -e "CCD_DEF_MYA_LINK=${MYA_LINK}" \
-  -e "CCD_DEF_MYA_REPRESENTATIVE_LINK=${MYA_REPRESENTATIVE_LINK}" \
-  -e "CCD_DEF_MYA_APPOINTEE_LINK=${MYA_APPOINTEE_LINK}" \
-  -e "CCD_DEF_PIP_DECISION_NOTICE_QUESTIONS=${PIP_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_ESA_DECISION_NOTICE_QUESTIONS=${ESA_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_UC_DECISION_NOTICE_QUESTIONS=${UC_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_LANGUAGES=${LANGUAGES}" \
-  -e "CCD_DEF_E=${UPPERCASE_ENV}" \
-  hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION} \
-  sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/${ccdDefinitionFile}"
