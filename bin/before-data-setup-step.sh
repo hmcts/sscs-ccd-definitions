@@ -133,9 +133,9 @@ fi
 UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
 
 if [ ${ENV} == "prod" ] || [ ${LIKE_PROD} == "prod" ]; then
-  excludedFilenamePatterns="-e *-nonprod.json"
+  excludedFilenamePatterns="-e *-nonprod.json,*-shuttered.json"
 else
-  excludedFilenamePatterns="-e *-prod.json"
+  excludedFilenamePatterns="-e *-prod.json,*-shuttered.json"
 fi
 
 if [ ${ENV} == "prod" ] || [ ${LIKE_PROD} == "prod" ]; then
