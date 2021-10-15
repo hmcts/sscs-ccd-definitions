@@ -4,6 +4,7 @@ TYPE=${1}
 VERSION=${2}
 ENV=${3}
 LIKE_PROD=${4:-${ENV}}
+SHUTTERED=${5:-false}
 
 RUN_DIR=`pwd`
 COMMON_VERSION=$(cat ${RUN_DIR}/benefit/SSCS_COMMON_VERSION.txt)
@@ -114,11 +115,21 @@ fi
 
 UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
 
-if [ ${ENV} == "prod" ] || [ ${LIKE_PROD} == "prod" ]; then
-  excludedFilenamePatterns="-e *-nonprod.json"
+if [ ${SHUTTERED} == true ]; then
+  shutteredExclusion="*-nonshuttered.json"
+  ccdDefinitionFile="CCD_${CASE_TYPE_XLSX_NAME}Definition_v${VERSION}_${UPPERCASE_ENV}_SHUTTERED.xlsx"
 else
-  excludedFilenamePatterns="-e *-prod.json"
+  shutteredExclusion="*-shuttered.json"
+  ccdDefinitionFile="CCD_${CASE_TYPE_XLSX_NAME}Definition_v${VERSION}_${UPPERCASE_ENV}.xlsx"
 fi
+
+if [ ${ENV} == "prod" ] || [ ${LIKE_PROD} == "prod" ]; then
+  excludedFilenamePatterns="-e *-nonprod.json,${shutteredExclusion}"
+else
+  excludedFilenamePatterns="-e *-prod.json,${shutteredExclusion}"
+fi
+
+echo ${excludedFilenamePatterns}
 
 docker run -ti --rm --name json2xlsx \
   -v $(pwd)/releases:/tmp \
@@ -139,4 +150,4 @@ docker run -ti --rm --name json2xlsx \
   -e "CCD_DEF_LANGUAGES=${LANGUAGES}" \
   -e "CCD_DEF_E=${UPPERCASE_ENV}" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION} \
-  sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_v${VERSION}_${UPPERCASE_ENV}.xlsx"
+  sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/${ccdDefinitionFile}"
