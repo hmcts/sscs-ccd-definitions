@@ -3571,7 +3571,7 @@
   },
   {
     "CaseEventID": "processAudioVideo",
-    "CaseFieldID": "bodyContent",
+    "CaseFieldID": "directionNoticeContent",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"admitEvidence\"",
