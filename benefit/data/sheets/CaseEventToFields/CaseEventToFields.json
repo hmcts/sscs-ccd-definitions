@@ -2405,13 +2405,14 @@
   },
   {
     "CaseEventID": "adminAppealWithdrawn",
-    "CaseFieldID": "sscsDocument",
+    "CaseFieldID": "previewDocument",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
+    "CaseEventFieldLabel": "Withdrawal document",
     "PageLabel": "Add withdrawal document",
     "ShowSummaryChangeOption": "Y"
   },
@@ -3570,7 +3571,7 @@
   },
   {
     "CaseEventID": "processAudioVideo",
-    "CaseFieldID": "bodyContent",
+    "CaseFieldID": "directionNoticeContent",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "processAudioVideoAction = \"issueDirectionsNotice\" OR processAudioVideoAction = \"excludeEvidence\" OR processAudioVideoAction = \"admitEvidence\"",
