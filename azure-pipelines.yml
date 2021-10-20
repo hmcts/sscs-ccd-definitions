@@ -42,7 +42,7 @@ jobs:
     condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/')) # TAGS ONLY
     dependsOn: Test
     pool:
-      vmImage: 'Ubuntu 16.04'
+      vmImage: 'ubuntu-latest'
     steps:
       - powershell: |
           Write-Host ("##vso[task.setvariable variable=imageTagBenefit;]$((Get-Content benefit/VERSION.yaml -Raw) -replace 'TAG: ','')")
