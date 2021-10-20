@@ -22,7 +22,7 @@ jobs:
   - job: Test
     displayName: 'Test the JSON will build successfully into an Excel definitions file'
     pool:
-      vmImage: 'Ubuntu 16.04'
+      vmImage: 'ubuntu-latest'
     steps:
       - script: |
           cd benefit
