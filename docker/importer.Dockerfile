@@ -6,7 +6,7 @@ FROM hmcts/ccd-definition-importer:latest as runtime
 
 # ---- To build non prod version image, pass --build-arg exclude=prod
 ARG exclude=nonprod
-ENV EXCLUSION=*-$exclude.json
+ENV EXCLUSION=*-$exclude.json,*-shuttered.json
 
 RUN apk add --no-cache curl jq zip unzip git
 COPY --from=base . .

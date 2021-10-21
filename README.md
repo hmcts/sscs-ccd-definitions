@@ -15,6 +15,11 @@ To generate a local AAT version of CCD def
 To generate a local PROD version of CCD def
 
     ./bin/create-xlsx.sh benefit dev prod
+    
+To generate a shuttered CCD definition, run below script with corresponding parameters. 
+Below command creates shuttered local PROD version of CCD def.
+
+    ./bin/create-shuttered-xlsx.sh benefit dev prod
 
 To generate a local version of CCD def similar to prod
 
