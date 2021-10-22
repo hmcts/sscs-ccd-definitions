@@ -219,6 +219,36 @@
     "PageID": "1.0"
   },
   {
+    "CaseEventID": "adminUpdateEvent",
+    "CaseFieldID": "dateOfAppellantDeath",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 9,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "adminUpdateEvent",
+    "CaseFieldID": "hmctsDwpState",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 10,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "adminUpdateEvent",
+    "CaseFieldID": "isProgressingViaGaps",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 11,
+    "PageID": "1.0"
+  },
+  {
     "CaseEventID": "adjournCase",
     "CaseFieldID": "adjournCaseGenerateNotice",
     "CaseTypeID": "Benefit",
@@ -3346,26 +3376,6 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "adminUpdateEvent",
-    "CaseFieldID": "dateOfAppellantDeath",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 9,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "adminUpdateEvent",
-    "CaseFieldID": "hmctsDwpState",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 10,
     "PageID": "1.0"
   },
   {
