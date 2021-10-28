@@ -16,10 +16,12 @@ if [ ${ENV} == "preview" ]; then
     ENV="aat"
 fi
 
-#TIMESTAMP=$(printf '%s\n' "$LAST_COMMIT_TIMESTAMP")
+TIMESTAMP=$(printf '%s\n' "$LAST_COMMIT_TIMESTAMP")
 SUBSCRIPTION=$(printf '%s\n' "$REGISTRY_SUBSCRIPTION")
+echo "TIMESTAMP is $TIMESTAMP"
+echo "SUBSCRIPTION is $SUBSCRIPTION"
 
-az acr login --name hmctspublic --subscription $SUBSCRIPTION
+az acr login --name hmctspublic --subscription "$SUBSCRIPTION"
 LATEST_TAG=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --orderby time_desc --top 5| grep $BRANCH_NAME| head -n 1| sed 's/"//g;s/,//g;s/ //g')
 
 
