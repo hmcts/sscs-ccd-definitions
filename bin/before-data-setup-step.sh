@@ -17,10 +17,10 @@ if [ ${ENV} == "preview" ]; then
 fi
 
 #TIMESTAMP=$(printf '%s\n' "$LAST_COMMIT_TIMESTAMP")
-SUBSCRIPTION=$(printf '%s\n' "$REGISTRY_SUBSCRIPTION")
+#SUBSCRIPTION=$(printf '%s\n' "$REGISTRY_SUBSCRIPTION")
 
-az acr login --name hmctspublic --subscription $SUBSCRIPTION
-LATEST_TAG=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --orderby time_desc --top 5| grep $BRANCH_NAME| head -n 1| sed 's/"//g;s/,//g')
+az acr login --name hmctspublic --subscription DCD-CFTAPPS-DEV
+LATEST_TAG=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --orderby time_desc --top 5| grep $BRANCH_NAME| head -n 1| sed 's/"//g;s/,//g;s/ //g')
 
 
 echo "Latest tag from repo $LATEST_TAG"
