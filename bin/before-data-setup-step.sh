@@ -23,15 +23,16 @@ echo "SUBSCRIPTION is $SUBSCRIPTION"
 echo "BRANCH_NAME is $BRANCH_NAME"
 
 
-az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
+#az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
+#
+#echo "seeing $(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --orderby time_desc --top 5)"
+#BLAH=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --orderby time_desc --top 5| grep $BRANCH_NAME)
+#echo "BLAH is $BLAH"
+#
+#LATEST_TAG=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --orderby time_desc --top 5| grep $BRANCH_NAME| head -n 1| sed 's/"//g;s/,//g;s/ //g')
 
-echo "seeing $(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --orderby time_desc --top 5)"
-BLAH=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --orderby time_desc --top 5| grep $BRANCH_NAME)
-echo "BLAH is $BLAH"
 
-LATEST_TAG=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --orderby time_desc --top 5| grep $BRANCH_NAME| head -n 1| sed 's/"//g;s/,//g;s/ //g')
-
-
+LATEST_TAG="PR-809"
 echo "Latest tag from repo $LATEST_TAG"
 
 case ${TYPE} in
