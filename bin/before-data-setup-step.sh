@@ -16,21 +16,12 @@ if [ ${ENV} == "preview" ]; then
     ENV="aat"
 fi
 
-#REPOSITORY=sscs/ccd-definitions
-#ACR_NAME=hmctspublic
 #TIMESTAMP=$(printf '%s\n' "$LAST_COMMIT_TIMESTAMP")
-#SUBSCRIPTION=$(printf '%s\n' "$REGISTRY_SUBSCRIPTION")
+SUBSCRIPTION=$(printf '%s\n' "$REGISTRY_SUBSCRIPTION")
 
-#az acr login --name hmctspublic --subscription $SUBSCRIPTION
-#LATEST_TAG=$(az acr repository show-tags -n $ACR_NAME --repository $REPOSITORY | grep $TIMESTAMP)
+az acr login --name hmctspublic --subscription $SUBSCRIPTION
+LATEST_TAG=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --orderby time_desc --top 5| grep $BRANCH_NAME| head -n 1| sed 's/"//g;s/,//g')
 
-
-if [ $BRANCH_NAME == "staging" ]; then
-  COMMIT_LABEL=$(printf '%s\n' "$GIT_COMMIT" | awk '{ print substr($0,0,7) }')
-  LATEST_TAG="$BRANCH_NAME-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
-else
-  LATEST_TAG=$(printf '%s\n' "$BRANCH_NAME" | awk '{ print tolower($0) }')
-fi
 
 echo "Latest tag from repo $LATEST_TAG"
 
