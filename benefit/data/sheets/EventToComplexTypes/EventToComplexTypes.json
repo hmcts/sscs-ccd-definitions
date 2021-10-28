@@ -1952,20 +1952,11 @@
   {
     "CaseEventID": "uploadWelshDocument",
     "CaseFieldID": "sscsWelshPreviewDocuments",
-    "ListElementCode": "documentType",
-    "ID": "sscsWelshPreviewDocumentsDocumentType",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "01/01/2018",
-    "FieldDisplayOrder": 1
-  },
-  {
-    "CaseEventID": "uploadWelshDocument",
-    "CaseFieldID": "sscsWelshPreviewDocuments",
     "ListElementCode": "documentLink",
     "ID": "sscsWelshPreviewDocumentsDocumentLink",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
-    "FieldDisplayOrder": 2
+    "FieldDisplayOrder": 1
   },
   {
   "CaseEventID": "uploadWelshDocument",
@@ -1974,16 +1965,7 @@
   "ID": "sscsWelshPreviewDocumentsDocumentLanguage",
   "DisplayContext": "OPTIONAL",
   "LiveFrom": "01/01/2018",
-  "FieldDisplayOrder": 3
-  },
-  {
-    "CaseEventID": "uploadWelshDocument",
-    "CaseFieldID": "sscsWelshPreviewDocuments",
-    "ListElementCode": "documentFileName",
-    "ID": "sscsWelshPreviewDocumentsDocumentFileName",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "FieldDisplayOrder": 4
+  "FieldDisplayOrder": 2
   },
   {
     "CaseEventID": "uploadWelshDocument",
@@ -1992,25 +1974,7 @@
     "ID": "sscsWelshPreviewDocumentsDocumentComment",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
-    "FieldDisplayOrder": 5
-  },
-  {
-    "CaseEventID": "uploadWelshDocument",
-    "CaseFieldID": "sscsWelshPreviewDocuments",
-    "ListElementCode": "bundleAddition",
-    "ID": "sscsWelshPreviewDocumentsBundleAddition",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "FieldDisplayOrder": 6
-  },
-  {
-    "CaseEventID": "uploadWelshDocument",
-    "CaseFieldID": "sscsWelshPreviewDocuments",
-    "ListElementCode": "evidenceIssued",
-    "ID": "sscsWelshPreviewDocumentsEvidenceIssued",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "FieldDisplayOrder": 7
+    "FieldDisplayOrder": 3
   },
   {
     "CaseEventID": "uploadWelshDocument",
@@ -2019,7 +1983,7 @@
     "ID": "sscsWelshPreviewDocumentsDocumentDateAdded",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
-    "FieldDisplayOrder": 8
+    "FieldDisplayOrder": 4
   },
   {
     "CaseEventID": "uploadHearingRecording",
