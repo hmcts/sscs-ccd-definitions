@@ -32,7 +32,7 @@ echo "BRANCH_NAME is $BRANCH_NAME"
 #LATEST_TAG=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --orderby time_desc --top 5| grep $BRANCH_NAME| head -n 1| sed 's/"//g;s/,//g;s/ //g')
 
 
-LATEST_TAG="PR-809"
+LATEST_TAG="pr-809"
 echo "Latest tag from repo $LATEST_TAG"
 
 case ${TYPE} in
