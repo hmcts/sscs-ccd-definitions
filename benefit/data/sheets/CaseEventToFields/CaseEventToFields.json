@@ -3413,6 +3413,16 @@
     "PageLabel": "Upload Dwp documents"
   },
   {
+    "CaseEventID": "manageAudioVideo",
+    "CaseFieldID": "audioVideoEvidence",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Manage Audio/Video evidence"
+  },
+  {
     "CaseEventID": "generateCoversheet",
     "CaseFieldID": "previewDocument",
     "CaseTypeID": "Benefit",
