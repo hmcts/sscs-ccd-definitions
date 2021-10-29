@@ -18,17 +18,20 @@ fi
 
 TIMESTAMP=$(printf '%s\n' "$LAST_COMMIT_TIMESTAMP")
 SUBSCRIPTION=$(printf '%s\n' "$REGISTRY_SUBSCRIPTION")
+COMMIT_LABEL=$(printf '%s\n' "$GIT_COMMIT" | awk '{ print substr($0,0,7) }')
+echo "ENV is $ENV"
+echo "COMMIT_LABEL is $COMMIT_LABEL"
 echo "TIMESTAMP is $TIMESTAMP"
-echo "SUBSCRIPTION is $SUBSCRIPTION"
 echo "BRANCH_NAME is $BRANCH_NAME"
-
+echo "SUBSCRIPTION is $SUBSCRIPTION"
 
 #az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
 #LATEST_TAG=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --subscription 8999dec3-0104-4a27-94ee-6588559729d1 --orderby time_desc -o tsv --query "[]")
 
-if [ $BRANCH_NAME == "staging" ]; then
-  COMMIT_LABEL=$(printf '%s\n' "$GIT_COMMIT" | awk '{ print substr($0,0,7) }')
+if [ "$BRANCH_NAME" == "staging" ]; then
   LATEST_TAG="$BRANCH_NAME-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
+elif [ "$BRANCH_NAME" == "master" ]; then
+   LATEST_TAG="$ENV-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
 else
   LATEST_TAG=$(printf '%s\n' "$BRANCH_NAME" | awk '{ print tolower($0) }')
 fi
