@@ -34,7 +34,7 @@ elif [ "$BRANCH_NAME" == "master" ]; then
    LATEST_TAG="$ENV-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
 else
   #LATEST_TAG=$(printf '%s\n' "$BRANCH_NAME" | awk '{ print tolower($0) }')
-  LATEST_TAG="This is probably a PR - so fail here, branch name is ${BRANCH_NAME}"
+  LATEST_TAG="This-is-probably-a-PR-so-fail-here-branch-name-is-${BRANCH_NAME}"
 fi
 echo "Latest tag from repo $LATEST_TAG"
 
