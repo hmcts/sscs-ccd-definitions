@@ -29,10 +29,14 @@ echo "BRANCH_NAME is $BRANCH_NAME"
 #BLAH=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --orderby time_desc --top 5| grep $BRANCH_NAME)
 #echo "BLAH is $BLAH"
 #
-#LATEST_TAG=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --orderby time_desc --top 5| grep $BRANCH_NAME| head -n 1| sed 's/"//g;s/,//g;s/ //g')
+#LATEST_TAG=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --subscription 8999dec3-0104-4a27-94ee-6588559729d1 --orderby time_desc -o tsv --query "[]")
 
-
-LATEST_TAG="pr-809"
+if [ $BRANCH_NAME == "staging" ]; then
+  COMMIT_LABEL=$(printf '%s\n' "$GIT_COMMIT" | awk '{ print substr($0,0,7) }')
+  LATEST_TAG="$BRANCH_NAME-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
+else
+  LATEST_TAG=$(printf '%s\n' "$BRANCH_NAME" | awk '{ print tolower($0) }')
+fi
 echo "Latest tag from repo $LATEST_TAG"
 
 case ${TYPE} in
