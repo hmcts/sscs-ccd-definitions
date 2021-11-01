@@ -12,7 +12,7 @@
     "start": "node index.js",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
-    "highLevelDataSetup": "echo 'sh bin/before-data-setup-step.sh benefit $1 && sh bin/after-data-setup-step.sh' > ./temp.sh && sh ./temp.sh",
+    "highLevelDataSetup": "echo 'sh bin/before-data-setup-step.sh benefit $1' > ./temp.sh && sh ./temp.sh",
     "test:smoke": "echo smoke"
   },
   "dependencies": {
