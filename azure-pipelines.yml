@@ -22,7 +22,7 @@ jobs:
   - job: Test
     displayName: 'Test the JSON will build successfully into an Excel definitions file'
     pool:
-      vmImage: 'Ubuntu 16.04'
+      vmImage: 'ubuntu-latest'
     steps:
       - script: |
           cd benefit
@@ -42,7 +42,7 @@ jobs:
     condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/')) # TAGS ONLY
     dependsOn: Test
     pool:
-      vmImage: 'Ubuntu 16.04'
+      vmImage: 'ubuntu-latest'
     steps:
       - powershell: |
           Write-Host ("##vso[task.setvariable variable=imageTagBenefit;]$((Get-Content benefit/VERSION.yaml -Raw) -replace 'TAG: ','')")
