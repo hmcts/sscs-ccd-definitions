@@ -75,7 +75,7 @@ withPipeline("nodejs", product, component) {
         env.TEST_E2E_NUM_BROWSERS = params.NUM_TESTS_IN_PARALLEL
         env.TEST_E2E_WAIT_FOR_ANGULAR = 'false'
         env.TEST_E2E_FAIL_FAST = 'false'
-        env.TEST_E2E_ANNOTATION = params.NIGHTLY_TAG
+        env.TEST_E2E_ANNOTATION = params.PREVIEW_TAG
     }
 
     after('functionalTest:aat') {
