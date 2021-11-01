@@ -3,9 +3,6 @@ package benefit;
 import uk.gov.hmcts.befta.dse.ccd.CcdEnvironment;
 import uk.gov.hmcts.befta.dse.ccd.DataLoaderToDefinitionStore;
 
-import java.util.Arrays;
-
-
 public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
 
     private static final String definitionsPath = "ccd_definition";
@@ -30,6 +27,7 @@ public class HighLevelDataSetupApp extends DataLoaderToDefinitionStore {
                             "Prod is not ready yet");
                 }
             } catch (IllegalArgumentException e) {
+                e.printStackTrace();
             }
         }
 
