@@ -31,7 +31,7 @@ echo "SUBSCRIPTION is $SUBSCRIPTION"
 if [ "$BRANCH_NAME" == "staging" ]; then
   LATEST_TAG="$BRANCH_NAME-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
 elif [ "$BRANCH_NAME" == "master" ]; then
-   LATEST_TAG="$ENV-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
+   LATEST_TAG="aat-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
 else
   LATEST_TAG="This-is-probably-a-PR-so-fail-here-branch-name-is-${BRANCH_NAME}"
 fi
