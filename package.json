@@ -8,7 +8,7 @@
     "lint": "echo lint",
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
-    "test:functional": "yarn --cwd sscs-ccd-e2e-tests test:fullfunctional",
+    "test:functional": "yarn --cwd sscs-ccd-e2e-tests test:previewfunctional",
     "start": "node index.js",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
@@ -46,7 +46,8 @@
     "minimist": "^1.2.3",
     "bl": "1.2.3",
     "ini": "1.3.6",
-    "axios": "0.21.1",
-    "ws": "^7.4.6"
+    "axios": "^0.21.2",
+    "ws": "^7.4.6",
+    "ansi-regex": "^5.0.1"
   }
 }
