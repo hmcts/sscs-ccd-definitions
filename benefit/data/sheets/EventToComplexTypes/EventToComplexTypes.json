@@ -1206,12 +1206,34 @@
   },
   {
     "CaseEventID": "caseUpdated",
+    "CaseFieldID": "appeal",
+    "ListElementCode": "appellant.role.name",
+    "ID": "appealAppellantRole",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "appeal.benefitType.code = \"childSupport\"",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 67,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "appeal",
+    "ListElementCode": "appellant.role.description",
+    "ID": "appealAppellantRole",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "appeal.appellant.role.name = \"Other\"",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 68,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
     "CaseFieldID": "jointPartyAddress",
     "ListElementCode": "line1",
     "ID": "jointPartyAddressLine1",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 67,
+    "FieldDisplayOrder": 69,
     "PageID": "1.0"
   },
   {
@@ -1221,7 +1243,7 @@
     "ID": "jointPartyAddressLine2",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 68,
+    "FieldDisplayOrder": 70,
     "PageID": "1.0"
   },
   {
@@ -1231,7 +1253,7 @@
     "ID": "jointPartyAddressTown",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 69,
+    "FieldDisplayOrder": 71,
     "PageID": "1.0"
   },
   {
@@ -1241,7 +1263,7 @@
     "ID": "jointPartyAddressCounty",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 70,
+    "FieldDisplayOrder": 72,
     "PageID": "1.0"
   },
   {
@@ -1251,7 +1273,7 @@
     "ID": "jointPartyAddressPostcode",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 71,
+    "FieldDisplayOrder": 73,
     "PageID": "1.0"
   },
   {
