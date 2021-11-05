@@ -1780,6 +1780,7 @@
     "PageLabel": "Upload further evidence documents"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=hearingRequestPartyPage",
     "CaseEventID": "uploadDocumentFurtherEvidence",
     "CaseFieldID": "showRequestingPartyPage",
     "CaseTypeID": "Benefit",
@@ -1802,6 +1803,38 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "2.0",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "uploadDocumentFurtherEvidence",
+    "CaseFieldID": "requestableHearingDetails",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "requestHearingRecording",
+    "PageShowCondition": "showRequestingPartyPage=\"Yes\""
+  },
+  {
+    "CaseEventID": "uploadDocumentFurtherEvidence",
+    "CaseFieldID": "requestedHearingsTextList",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "requestHearingRecording",
+    "PageLabel": "Request hearing recording"
+  },
+  {
+    "CaseEventID": "uploadDocumentFurtherEvidence",
+    "CaseFieldID": "releasedHearingsTextList",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "requestHearingRecording"
   },
   {
     "CaseEventID": "uploadFurtherEvidence",
@@ -3727,8 +3760,8 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
     "PageLabel": "Request hearing recording"
   },
@@ -3738,8 +3771,8 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
     "PageID": "1.0",
     "PageLabel": "Request hearing recording"
   },
