@@ -54,6 +54,7 @@
   {"LiveFrom": "01/01/2018", "ID": "representative", "ListElementCode": "address", "FieldType": "address", "ElementLabel": "Address Details", "FieldShowCondition": "hasRepresentative=\"Yes\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "representative", "ListElementCode": "contact", "FieldType": "contact", "ElementLabel": "Contact Details", "FieldShowCondition": "hasRepresentative=\"Yes\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "representative", "ListElementCode": "id", "FieldType": "Text", "ElementLabel": "Id", "FieldShowCondition": "name=\"AnyValueToFailThisCondition\"" ,"SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "id", "FieldType": "Text", "ElementLabel": "Id", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "name", "FieldType": "name", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "address", "FieldType": "address", "ElementLabel": "Address Details", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "contact", "FieldType": "contact", "ElementLabel": "Contact Details", "SecurityClassification": "PUBLIC"},
