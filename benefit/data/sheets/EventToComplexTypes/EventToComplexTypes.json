@@ -2100,7 +2100,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "name",
     "ID": "otherPartyName",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 1,
     "PageID": "1.0"
@@ -2120,7 +2120,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "name.firstName",
     "ID": "otherPartyFirstName",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 3,
     "PageID": "1.0"
@@ -2130,7 +2130,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "name.lastName",
     "ID": "otherPartyLastName",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 4,
     "PageID": "1.0"
@@ -2140,7 +2140,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "address",
     "ID": "otherPartyAddress",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 5,
     "PageID": "1.0"
@@ -2150,7 +2150,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "address.line1",
     "ID": "otherPartyAddressLine1",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 6,
     "PageID": "1.0"
@@ -2160,7 +2160,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "address.line2",
     "ID": "otherPartyAddressLine2",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 7,
     "PageID": "1.0"
@@ -2170,7 +2170,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "address.town",
     "ID": "otherPartyAddressTown",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 8,
     "PageID": "1.0"
@@ -2190,7 +2190,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "address.postcode",
     "ID": "otherPartyAddressPostcode",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 10,
     "PageID": "1.0"
@@ -2230,7 +2230,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "confidentialityRequired",
     "ID": "otherPartyConfidentialityRequired",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 14,
     "PageID": "1.0"
@@ -2240,7 +2240,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "unacceptableCustomerBehaviour",
     "ID": "otherPartyUnacceptableCustomerBehaviour",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 15,
     "PageID": "1.0"
@@ -2250,7 +2250,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "role",
     "ID": "otherPartyRole",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 16,
     "PageID": "1.0"
@@ -2260,7 +2260,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "role.name",
     "ID": "otherPartyRoleName",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 17,
     "PageID": "1.0"
@@ -2270,7 +2270,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "role.description",
     "ID": "otherPartyRoleDescription",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 18,
     "PageID": "1.0"
