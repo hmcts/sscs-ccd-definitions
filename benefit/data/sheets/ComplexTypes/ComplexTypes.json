@@ -100,6 +100,7 @@
   {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "adjournedDate", "FieldType": "Date", "ElementLabel": "Date hearing adjourned", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "hearingId", "FieldType": "Text", "ElementLabel": "Hearing id", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "eventDate", "FieldType": "Date", "ElementLabel": "Date hearing set", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "venueId", "FieldType": "Text", "ElementLabel": "Venue id", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "doc", "ListElementCode": "dateReceived", "FieldType": "Date", "ElementLabel": "Date Received", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "doc", "ListElementCode": "evidenceType", "FieldType": "Text", "ElementLabel": "Evidence Type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "doc", "ListElementCode": "evidenceProvidedBy", "FieldType": "Text", "ElementLabel": "Evidence Provided By", "SecurityClassification": "PUBLIC"},
