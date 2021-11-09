@@ -61,7 +61,7 @@
   {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "role", "FieldType": "role", "ElementLabel": "Party Role", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "hearingSubtype", "FieldType": "hearingSubtype", "ElementLabel": "Hearing Subtype", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "hearingOptions", "FieldType": "hearingOptions", "ElementLabel": "Hearing Options", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "isAppointee", "FieldType": "YesOrNo", "ElementLabel": "Appointee", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "isAppointee", "FieldType": "YesOrNo", "ElementLabel": "Has Appointee", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "appointee", "FieldType": "appointee", "ElementLabel": "Appointee details", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "rep", "FieldType": "representative", "ElementLabel": "Representative Details", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "supporter", "ListElementCode": "name", "FieldType": "name", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
