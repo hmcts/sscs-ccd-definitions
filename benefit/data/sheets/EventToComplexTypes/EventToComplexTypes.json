@@ -2240,7 +2240,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "address.line2",
     "ID": "otherPartyAddressLine2",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 7,
     "PageID": "1.0"
