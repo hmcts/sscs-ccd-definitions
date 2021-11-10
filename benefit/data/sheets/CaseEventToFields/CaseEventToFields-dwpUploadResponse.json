@@ -90,7 +90,7 @@
     "PageFieldDisplayOrder": 7,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
+    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\" OR dwpEditedEvidenceReason=\"childSupportConfidentiality\""
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -185,6 +185,17 @@
     "PageLabel": "Log case progress",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "otherParties",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 16,
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "dwpUploadResponse",

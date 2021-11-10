@@ -565,6 +565,15 @@
   {
     "CaseEventID": "caseUpdated",
     "CaseFieldID": "appeal",
+    "ListElementCode": "appellant.confidentialityRequired",
+    "ID": "appealAppellantConfidentiality",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 16
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "appeal",
     "ListElementCode": "appellant.isAppointee",
     "ID": "appealApellantIsAppointee",
     "DisplayContext": "OPTIONAL",
