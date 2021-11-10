@@ -2073,7 +2073,7 @@
     "ID": "processHearingRecordingRequestJointParty",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
-    "FieldShowCondition": "jointParty=\"Yes\"",
+    "FieldShowCondition": "jointParty = \"Yes\"",
     "FieldDisplayOrder": 5
   },
   {

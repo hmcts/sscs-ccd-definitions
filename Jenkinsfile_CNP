@@ -37,9 +37,12 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
     ]
 }
 
+def branchesToSync = ['demo', 'ithc', 'perftest']
+
 withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
+  syncBranchesWithMaster(branchesToSync)
 
   after('test') {
     // enable yarn audit and send message on master branch only
