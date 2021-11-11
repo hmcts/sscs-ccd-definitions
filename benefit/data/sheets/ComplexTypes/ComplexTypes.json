@@ -39,7 +39,7 @@
   {"LiveFrom": "01/01/2018", "ID": "name", "ListElementCode": "middleName", "FieldType": "Text", "ElementLabel": "Middle Name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "name", "ListElementCode": "lastName", "FieldType": "Text", "ElementLabel": "Last Name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "role", "ListElementCode": "name", "FieldType": "FixedList", "FieldTypeParameter": "FL_roles", "ElementLabel": "Role", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "role", "ListElementCode": "description", "FieldType": "Text", "ElementLabel": "Description", "FieldShowCondition": "name=\"other\"" ,"SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "role", "ListElementCode": "description", "FieldType": "Text", "ElementLabel": "Description", "FieldShowCondition": "name=\"Other\"" ,"SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appointee", "ListElementCode": "name", "FieldType": "name", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appointee", "ListElementCode": "identity", "FieldType": "identity", "ElementLabel": "Identity", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appointee", "ListElementCode": "address", "FieldType": "address", "ElementLabel": "Address Details", "SecurityClassification": "PUBLIC"},
