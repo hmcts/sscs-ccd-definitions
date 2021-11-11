@@ -37,9 +37,12 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
     ]
 }
 
+def branchesToSync = ['demo', 'ithc', 'perftest']
+
 withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
+  syncBranchesWithMaster(branchesToSync)
 
   after('test') {
     // enable yarn audit and send message on master branch only
@@ -79,7 +82,16 @@ withPipeline("nodejs", product, component) {
     }
 
     after('functionalTest:aat') {
-        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test/functional/output/mochawesome.html'
+
+        publishHTML([
+                allowMissing         : true,
+                alwaysLinkToLastBuild: true,
+                keepAll              : true,
+                reportDir            : "sscs-ccd-e2e-tests/reports/tests/functional/",
+                reportFiles          : 'index.html',
+                reportName           : 'SSCS - EXUI Functional Test Report'
+        ])
+
     }
 
   println """done!""".stripIndent()
