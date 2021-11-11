@@ -567,6 +567,7 @@
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant.confidentialityRequired",
     "ID": "appealAppellantConfidentiality",
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\"",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 16
