@@ -2260,11 +2260,21 @@
   {
     "CaseEventID": "updateOtherPartyData",
     "CaseFieldID": "otherParties",
+    "ListElementCode": "contact.email",
+    "ID": "otherPartyMobile",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 14,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateOtherPartyData",
+    "CaseFieldID": "otherParties",
     "ListElementCode": "confidentialityRequired",
     "ID": "otherPartyConfidentialityRequired",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 14,
+    "FieldDisplayOrder": 15,
     "PageID": "1.0"
   },
   {
@@ -2274,7 +2284,7 @@
     "ID": "otherPartyUnacceptableCustomerBehaviour",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 15,
+    "FieldDisplayOrder": 16,
     "PageID": "1.0"
   },
   {
@@ -2284,7 +2294,7 @@
     "ID": "otherPartyRole",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 16,
+    "FieldDisplayOrder": 17,
     "PageID": "1.0"
   },
   {
@@ -2303,6 +2313,7 @@
     "ListElementCode": "role.description",
     "ID": "otherPartyRoleDescription",
     "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "otherParties.role.name=\"Other\"",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 18,
     "PageID": "1.0"
