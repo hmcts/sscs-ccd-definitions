@@ -1207,10 +1207,20 @@
   {
     "CaseEventID": "caseUpdated",
     "CaseFieldID": "appeal",
+    "ListElementCode": "appellant.role",
+    "ID": "appealAppellantRole",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "appeal.benefitType.code = \"childSupport\"",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 67,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "appeal",
     "ListElementCode": "appellant.role.name",
     "ID": "appealAppellantRole",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "appeal.benefitType.code = \"childSupport\"",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 67,
     "PageID": "1.0"
@@ -1220,7 +1230,7 @@
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant.role.description",
     "ID": "appealAppellantRole",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "appeal.appellant.role.name = \"Other\"",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 68,
