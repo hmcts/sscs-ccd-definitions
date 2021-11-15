@@ -2857,7 +2857,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 1,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -2867,7 +2867,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 2,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -2877,7 +2877,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 3,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -2887,7 +2887,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 4,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -2897,7 +2897,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 5,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -2907,7 +2907,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 6,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -2917,7 +2917,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 7,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -2927,7 +2927,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 8,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -2937,7 +2937,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 9,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -2947,7 +2947,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 10,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -2957,7 +2957,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 11,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -2967,7 +2967,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 12,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -2977,7 +2977,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 13,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -2987,7 +2987,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 14,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -2997,7 +2997,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 15,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3007,7 +3007,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 16,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3017,7 +3017,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 17,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3027,207 +3027,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 18,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingSubtype",
-    "ID": "otherPartyHearingSubtype",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 19,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingSubtype.wantsHearingTypeTelephone",
-    "ID": "otherPartyHearingSubtypeWantsHearingTypeTelephone",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 20,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingSubtype.hearingTelephoneNumber",
-    "ID": "otherPartyHearingSubtypeHearingTelephoneNumber",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 21,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingSubtype.wantsHearingTypeVideo",
-    "ID": "otherPartyHearingSubtypeWantsHearingTypeVideo",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 22,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingSubtype.hearingVideoEmail",
-    "ID": "otherPartyHearingSubtypeHearingVideoEmail",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 23,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingSubtype.wantsHearingTypeFaceToFace",
-    "ID": "otherPartyHearingSubtypeWantsHearingTypeFaceToFace",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 24,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingOptions",
-    "ID": "otherPartyHearingOptions",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 25,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingOptions.wantsToAttend",
-    "ID": "otherPartyHearingOptionsWantsAttend",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 26,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingOptions.wantsSupport",
-    "ID": "otherPartyHearingOptionsSupport",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 27,
-    "PageID": "1.0",
-    "FieldShowCondition": "otherParties.hearingOptions.wantsToAttend=\"Yes\""
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingOptions.languageInterpreter",
-    "ID": "otherPartyHearingOptionsLanguageInterpreter",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 28,
-    "PageID": "1.0",
-    "FieldShowCondition": "otherParties.hearingOptions.wantsToAttend=\"Yes\" AND otherParties.hearingOptions.wantsSupport=\"Yes\""
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingOptions.languages",
-    "ID": "otherPartyHearingOptionsLanguages",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 29,
-    "PageID": "1.0",
-    "FieldShowCondition": "otherParties.hearingOptions.wantsToAttend=\"Yes\" AND otherParties.hearingOptions.wantsSupport=\"Yes\" AND otherParties.hearingOptions.languageInterpreter=\"Yes\""
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingOptions.signLanguageType",
-    "ID": "otherPartiesHearingOptionsSignLanguageType",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 30,
-    "PageID": "1.0",
-    "FieldShowCondition": "otherParties.hearingOptions.wantsToAttend=\"Yes\" AND otherParties.hearingOptions.wantsSupport=\"Yes\""
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingOptions.arrangements",
-    "ID": "otherPartyHearingOptionsArrangements",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 31,
-    "PageID": "1.0",
-    "FieldShowCondition": "otherParties.hearingOptions.wantsToAttend=\"Yes\" AND otherParties.hearingOptions.wantsSupport=\"Yes\""
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingOptions.other",
-    "ID": "otherPartyHearingOptionsOther",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 32,
-    "PageID": "1.0",
-    "FieldShowCondition": "otherParties.hearingOptions.wantsToAttend=\"Yes\" AND otherParties.hearingOptions.wantsSupport=\"Yes\""
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingOptions.agreeLessNotice",
-    "ID": "otherPartyHearingOptionsAgreeLessNotice",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 33,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingOptions.scheduleHearing",
-    "ID": "otherPartyHearingOptionsScheduleHearing",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 34,
-    "PageID": "1.0",
-    "FieldShowCondition": "otherParties.hearingOptions.wantsToAttend=\"Yes\""
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingOptions.excludeDates",
-    "ID": "otherPartyHearingOptionsExcludeDates",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 35,
-    "PageID": "1.0",
-    "FieldShowCondition": "otherParties.hearingOptions.wantsToAttend=\"Yes\" AND otherParties.hearingOptions.scheduleHearing=\"Yes\""
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingOptions.excludeDates.start",
-    "ID": "otherPartyHearingOptionsExcludeDatesStart",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 36,
-    "PageID": "1.0",
-    "FieldShowCondition": "otherParties.hearingOptions.wantsToAttend=\"Yes\" AND otherParties.hearingOptions.scheduleHearing=\"Yes\""
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "ListElementCode": "hearingOptions.excludeDates.end",
-    "ID": "otherPartyHearingOptionsExcludeDatesEnd",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 37,
-    "PageID": "1.0",
-    "FieldShowCondition": "otherParties.hearingOptions.wantsToAttend=\"Yes\" AND otherParties.hearingOptions.scheduleHearing=\"Yes\""
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3237,7 +3037,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 38,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3247,7 +3047,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 39,
-    "PageID": "1.0",
+    "PageID": "otherPartyData",
     "FieldShowCondition": "otherParties.isAppointee = \"Yes\""
   },
   {
@@ -3258,7 +3058,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 40,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3268,7 +3068,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 41,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3278,7 +3078,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 42,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3288,7 +3088,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 43,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3298,7 +3098,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 44,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3308,7 +3108,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 45,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3318,7 +3118,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 46,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3328,7 +3128,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 47,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3338,7 +3138,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 48,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3348,7 +3148,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 49,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3358,7 +3158,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 50,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3368,7 +3168,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 51,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3378,7 +3178,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 52,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3388,7 +3188,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 53,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3398,7 +3198,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 54,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3408,7 +3208,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 55,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3418,7 +3218,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 56,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3428,7 +3228,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 57,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3438,7 +3238,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 58,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3448,7 +3248,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 59,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3458,7 +3258,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 60,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3468,7 +3268,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 61,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3478,7 +3278,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 62,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3488,7 +3288,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 63,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3498,7 +3298,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 64,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3508,7 +3308,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 65,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3518,7 +3318,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 66,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3528,7 +3328,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 67,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3538,7 +3338,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 68,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3548,7 +3348,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 69,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -3558,6 +3358,6 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 70,
-    "PageID": "1.0"
+    "PageID": "otherPartyData"
   }
 ]
