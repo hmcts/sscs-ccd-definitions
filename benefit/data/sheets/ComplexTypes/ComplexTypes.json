@@ -438,12 +438,12 @@
   {"LiveFrom": "01/10/2021", "ID": "otherParty", "ListElementCode": "confidentialityRequired", "FieldType": "YesOrNo", "ElementLabel": "Confidentiality Required", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/10/2021", "ID": "otherParty", "ListElementCode": "unacceptableCustomerBehaviour", "FieldType": "YesOrNo", "ElementLabel": "Unacceptable Customer Behaviour", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "role", "FieldType": "role", "ElementLabel": "Other Party Role", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/06/2019", "ID": "otherParty", "ListElementCode": "appellantSubscription", "FieldType": "subscription", "ElementLabel": "Appellant subscription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "otherParty", "ListElementCode": "otherPartySubscription", "FieldType": "subscription", "ElementLabel": "Other party subscription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "hearingSubtype", "FieldType": "hearingSubtype", "ElementLabel": "Hearing Subtype", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "hearingOptions", "FieldType": "hearingOptions", "ElementLabel": "Hearing Options", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "isAppointee", "FieldType": "YesOrNo", "ElementLabel": "Has Appointee", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "appointee", "FieldType": "appointee", "ElementLabel": "Appointee details", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/06/2019", "ID": "otherParty", "ListElementCode": "appointeeSubscription", "FieldType": "subscription", "ElementLabel": "Appointee Subscription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "otherParty", "ListElementCode": "otherPartyAppointeeSubscription", "FieldType": "subscription", "ElementLabel": "Other party appointee subscription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherParty", "ListElementCode": "rep", "FieldType": "representative", "ElementLabel": "Representative Details", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/06/2019", "ID": "otherParty", "ListElementCode": "representativeSubscription", "FieldType": "subscription", "ElementLabel": "Representative subscription", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "18/06/2019", "ID": "otherParty", "ListElementCode": "otherPartyRepresentativeSubscription", "FieldType": "subscription", "ElementLabel": "Other party representative subscription", "SecurityClassification": "PUBLIC"}
 ]
