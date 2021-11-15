@@ -843,6 +843,17 @@
   },
   {
     "CaseEventID": "caseUpdated",
+    "CaseFieldID": "childMaintenanceNumber",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "appeal.benefitType.code = \"childSupport\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 8,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
     "CaseFieldID": "jointParty",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
