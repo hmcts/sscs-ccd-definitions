@@ -97,6 +97,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "phmeGranted", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "phmeGrantedLabel", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "phmeUnderReviewLabel", "UserRole": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "benefitCode", "UserRole": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "issueCode", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "subscriptions", "UserRole": "caseworker-sscs-anonymouscitizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "subscriptions", "UserRole": "caseworker-sscs-callagent", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "generatedNino", "UserRole": "caseworker-sscs-callagent", "CRUD": "CRU"},
