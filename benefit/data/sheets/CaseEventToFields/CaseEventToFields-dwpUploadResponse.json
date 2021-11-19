@@ -407,17 +407,5 @@
     "PageID": "jointPartyAddress",
     "FieldShowCondition": "jointPartyAddressSameAsAppellant=\"No\"",
     "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "COMPLEX",
-    "LiveFrom": "19/11/2019",
-    "PageDisplayOrder": 9,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "updateOtherParties",
-    "PageShowCondition": "appeal.benefitType.code=\"childSupport\"",
-    "PageLabel": "Update other party data"
   }
 ]
