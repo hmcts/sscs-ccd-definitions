@@ -188,17 +188,6 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "otherParties",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\"",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 16,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "elementsDisputedList",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -407,5 +396,17 @@
     "PageID": "jointPartyAddress",
     "FieldShowCondition": "jointPartyAddressSameAsAppellant=\"No\"",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "otherParties",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "19/11/2019",
+    "PageDisplayOrder": 9,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "updateOtherParties",
+    "PageShowCondition": "appeal.benefitType.code=\"childSupport\"",
+    "PageLabel": "Update other party data"
   }
 ]
