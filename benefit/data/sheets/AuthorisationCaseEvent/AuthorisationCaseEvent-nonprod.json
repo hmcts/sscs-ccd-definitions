@@ -23,7 +23,6 @@
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequestWelsh", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequestWelsh", "UserRole": "caseworker-sscs-superuser", "CRUD": "R"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequestWelsh", "UserRole": "caseworker-sscs", "CRUD": "R"},
-  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequestWelsh", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseEventID": "confirmPanelComposition", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseEventID": "confirmPanelComposition", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseEventID": "confirmPanelComposition", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
