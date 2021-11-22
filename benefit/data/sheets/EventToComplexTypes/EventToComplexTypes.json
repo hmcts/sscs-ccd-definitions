@@ -3500,6 +3500,17 @@
     "FieldDisplayOrder": 14,
     "PageID": "1.0"
   },
+
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartySubscription.lastLoggedIntoMya",
+    "ID": "otherPartySubscriptionMya",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 15,
+    "PageID": "1.0"
+  },
   {
     "CaseEventID": "subscriptionUpdated",
     "CaseFieldID": "otherParties",
@@ -3507,7 +3518,7 @@
     "ID": "appointee",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 15,
+    "FieldDisplayOrder": 16,
     "PageID": "1.0"
   },
   {
@@ -3517,7 +3528,7 @@
     "ID": "appointeeName",
     "DisplayContext": "READONLY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 16,
+    "FieldDisplayOrder": 17,
     "PageID": "1.0"
   },
   {
@@ -3527,7 +3538,7 @@
     "ID": "appointeeNameTitle",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 17,
+    "FieldDisplayOrder": 18,
     "PageID": "1.0"
   },
   {
@@ -3537,7 +3548,7 @@
     "ID": "appointeeNameFirstName",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 18,
+    "FieldDisplayOrder": 19,
     "PageID": "1.0"
   },
   {
@@ -3547,7 +3558,7 @@
     "ID": "appointeeNameLastName",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 19,
+    "FieldDisplayOrder": 20,
     "PageID": "1.0"
   },
   {
@@ -3557,7 +3568,7 @@
     "ID": "appointeeAddress",
     "DisplayContext": "READONLY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 20,
+    "FieldDisplayOrder": 21,
     "PageID": "1.0"
   },
   {
@@ -3567,7 +3578,7 @@
     "ID": "appointeeContact",
     "DisplayContext": "READONLY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 21,
+    "FieldDisplayOrder": 22,
     "PageID": "1.0"
   },
   {
@@ -3577,7 +3588,7 @@
     "ID": "opAppointeeSubscriptionSubscription",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 22,
+    "FieldDisplayOrder": 23,
     "PageID": "1.0"
   },
   {
@@ -3587,7 +3598,7 @@
     "ID": "opAppointeeSubscriptionSubscriptionWantsSms",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 23,
+    "FieldDisplayOrder": 24,
     "PageID": "1.0"
   },
   {
@@ -3597,7 +3608,7 @@
     "ID": "opAppointeeSubscriptionWantsSms",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 24,
+    "FieldDisplayOrder": 25,
     "PageID": "1.0"
   },
   {
@@ -3607,7 +3618,7 @@
     "ID": "opAppointeeSubscriptionWantsSms",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 25,
+    "FieldDisplayOrder": 26,
     "PageID": "1.0"
   },
   {
@@ -3617,7 +3628,7 @@
     "ID": "opAppointeeSubscriptionWantsSms",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 26,
+    "FieldDisplayOrder": 27,
     "PageID": "1.0"
   },
   {
@@ -3627,7 +3638,7 @@
     "ID": "opAppointeeSubscriptionWantsSms",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 27,
+    "FieldDisplayOrder": 28,
     "PageID": "1.0"
   },
   {
@@ -3637,7 +3648,7 @@
     "ID": "opAppointeeSubscriptionWantsSms",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 28,
+    "FieldDisplayOrder": 29,
     "PageID": "1.0"
   },
   {
@@ -3647,7 +3658,17 @@
     "ID": "opAppointeeSubscriptionWantsSms",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 29,
+    "FieldDisplayOrder": 30,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyAppointeeSubscription.lastLoggedIntoMya",
+    "ID": "opAppointeeSubscriptionMya",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 31,
     "PageID": "1.0"
   },
   {
@@ -3657,7 +3678,7 @@
     "ID": "rep",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 30,
+    "FieldDisplayOrder": 32,
     "PageID": "1.0"
   },
   {
@@ -3667,7 +3688,7 @@
     "ID": "repName",
     "DisplayContext": "READONLY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 31,
+    "FieldDisplayOrder": 33,
     "PageID": "1.0"
   },
   {
@@ -3677,7 +3698,7 @@
     "ID": "repNameTitle",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 32,
+    "FieldDisplayOrder": 34,
     "PageID": "1.0"
   },
   {
@@ -3687,7 +3708,7 @@
     "ID": "repNameFirstName",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 33,
+    "FieldDisplayOrder": 35,
     "PageID": "1.0"
   },
   {
@@ -3697,7 +3718,7 @@
     "ID": "repNameLastName",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 34,
+    "FieldDisplayOrder": 36,
     "PageID": "1.0"
   },
   {
@@ -3707,7 +3728,7 @@
     "ID": "repAddress",
     "DisplayContext": "READONLY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 35,
+    "FieldDisplayOrder": 37,
     "PageID": "1.0"
   },
   {
@@ -3717,7 +3738,7 @@
     "ID": "repContact",
     "DisplayContext": "READONLY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 36,
+    "FieldDisplayOrder": 38,
     "PageID": "1.0"
   },
   {
@@ -3727,7 +3748,7 @@
     "ID": "opRepresentativeSubscriptionSubscription",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 37,
+    "FieldDisplayOrder": 39,
     "PageID": "1.0"
   },
   {
@@ -3737,7 +3758,7 @@
     "ID": "opRepresentativeSubscriptionSubscriptionWantsSms",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 38,
+    "FieldDisplayOrder": 40,
     "PageID": "1.0"
   },
   {
@@ -3747,7 +3768,7 @@
     "ID": "opRepresentativeSubscriptionWantsSms",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 39,
+    "FieldDisplayOrder": 41,
     "PageID": "1.0"
   },
   {
@@ -3757,7 +3778,7 @@
     "ID": "opRepresentativeSubscriptionWantsSms",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 40,
+    "FieldDisplayOrder": 42,
     "PageID": "1.0"
   },
   {
@@ -3767,7 +3788,7 @@
     "ID": "opRepresentativeSubscriptionWantsSms",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 41,
+    "FieldDisplayOrder": 43,
     "PageID": "1.0"
   },
   {
@@ -3777,7 +3798,7 @@
     "ID": "opRepresentativeSubscriptionWantsSms",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 42,
+    "FieldDisplayOrder": 44,
     "PageID": "1.0"
   },
   {
@@ -3787,7 +3808,7 @@
     "ID": "opRepresentativeSubscriptionWantsSms",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 43,
+    "FieldDisplayOrder": 44,
     "PageID": "1.0"
   },
   {
@@ -3797,7 +3818,17 @@
     "ID": "opRepresentativeSubscriptionWantsSms",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 44,
+    "FieldDisplayOrder": 45,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyRepresentativeSubscription.lastLoggedIntoMya",
+    "ID": "opRepresentativeSubscriptionMya",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 46,
     "PageID": "1.0"
   }
 ]
