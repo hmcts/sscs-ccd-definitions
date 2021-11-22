@@ -843,6 +843,17 @@
   },
   {
     "CaseEventID": "caseUpdated",
+    "CaseFieldID": "childMaintenanceNumber",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "appeal.benefitType.code = \"childSupport\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 8,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
     "CaseFieldID": "jointParty",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
@@ -4025,6 +4036,17 @@
     "PageID": "rip1Doc",
     "FieldShowCondition": "isRip1Doc = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "manageScannedDocuments",
+    "CaseFieldID": "scannedDocuments",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Manage unprocessed correspondence"
   },
   {
     "CaseEventID": "updateOtherPartyData",
