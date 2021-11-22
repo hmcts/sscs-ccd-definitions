@@ -2192,7 +2192,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "address.line2",
     "ID": "otherPartyAddressLine2",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 7,
     "PageID": "1.0"
@@ -3355,7 +3355,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "rep.contact.email",
     "ID": "otherPartyRepEmail",
-    "DisplayContext": "READONLY",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 70,
     "PageID": "otherPartyData"
