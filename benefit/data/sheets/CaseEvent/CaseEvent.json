@@ -2019,6 +2019,19 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "updateOtherPartyData",
+    "Name": "Update other party data",
+    "Description": "Update other party data",
+    "DisplayOrder": 160,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "EventEnablingCondition": "appeal.benefitType.code=\"childSupport\"",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "updateReasonableAdjustment",
     "Name": "Update reasonable adjustment",
     "Description": "Update reasonable adjustment",
