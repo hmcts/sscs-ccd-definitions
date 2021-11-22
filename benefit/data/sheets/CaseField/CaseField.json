@@ -270,6 +270,7 @@
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyAddressSameAsAppellant", "Label": "Is their address the same as the appellant's?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyAddress", "Label": "Joint party address", "FieldType": "address", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "otherParties", "Label": "Other parties", "FieldType": "Collection", "FieldTypeParameter": "otherParty", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "otherPartyUCB", "Label": "Other party - Unacceptable Customer Behaviour (UCB)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "childMaintenanceNumber", "Label": "Child maintenance number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "isScottishCase", "Label": "Is a Scottish Case?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2020", "CaseTypeID": "Benefit", "ID": "bulkScanEnvelopes", "Label": "Bulk Scan Envelopes", "FieldType": "Collection", "FieldTypeParameter": "BulkScanEnvelope", "SecurityClassification": "PUBLIC"},
@@ -403,5 +404,6 @@
   {"LiveFrom": "01/09/2021", "CaseTypeID": "Benefit", "ID": "listingOption", "Label": "Listing option", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionPostponementRequestListing", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "ID": "isInc5249521", "Label": "Is Inc 5249521?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "isInc5249521CaseLabel", "Label": "## Bundle check required: ${isInc5249521} ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "summaryConfidentialityRequired", "Label": "**Confidentiality Required**  \r\n${appeal.appellant.confidentialityRequired}", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "summaryConfidentialityRequired", "Label": "**Confidentiality Required**  \r\n${appeal.appellant.confidentialityRequired}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "ID": "isFqpmRequired", "Label": "Case requires a Financially Qualified Panel Member (FQPM)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]

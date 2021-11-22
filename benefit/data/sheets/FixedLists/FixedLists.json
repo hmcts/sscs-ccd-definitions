@@ -731,5 +731,8 @@
   {"LiveFrom": "01/09/2021", "ID": "FL_actionPostponementRequestListing", "ListElementCode": "notListable", "ListElement": "Not Listable"},
   {"LiveFrom": "01/09/2021", "ID": "FL_appellantRole", "ListElementCode": "Paying parent", "ListElement": "Paying parent"},
   {"LiveFrom": "01/09/2021", "ID": "FL_appellantRole", "ListElementCode": "Receiving parent", "ListElement": "Receiving parent"},
-  {"LiveFrom": "01/09/2021", "ID": "FL_appellantRole", "ListElementCode": "Other", "ListElement": "Other"}
+  {"LiveFrom": "01/09/2021", "ID": "FL_appellantRole", "ListElementCode": "Other", "ListElement": "Other"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_roles", "ListElementCode": "payingParent", "ListElement": "Paying parent"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_roles", "ListElementCode": "receivingParent", "ListElement": "Receiving parent"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_roles", "ListElementCode": "other", "ListElement": "Other"}
 ]
