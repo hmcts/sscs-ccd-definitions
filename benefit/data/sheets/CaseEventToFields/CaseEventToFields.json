@@ -4047,5 +4047,16 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Update other party data"
+  },
+  {
+    "CaseEventID": "confirmPanelComposition",
+    "CaseFieldID": "isFqpmRequired",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/11/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Confirm panel composition"
   }
 ]
