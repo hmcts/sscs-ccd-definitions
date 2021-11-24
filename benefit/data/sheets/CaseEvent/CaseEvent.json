@@ -1476,20 +1476,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "otherPartyAdded",
-    "Name": "Other Party Added",
-    "Description": "Other Party has been added to the case",
-    "DisplayOrder": 117,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "Y"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
     "ID": "postponementRequest",
     "Name": "Postponement request",
     "Description": "Postponement request",
