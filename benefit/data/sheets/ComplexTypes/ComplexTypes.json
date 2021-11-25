@@ -429,5 +429,10 @@
   {"LiveFrom": "18/06/2019", "ID": "processHearingRecordingRequest", "ListElementCode": "dwp", "FieldType": "DynamicList", "ElementLabel": "DWP", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "processHearingRecordingRequest", "ListElementCode": "jointParty", "FieldType": "DynamicList", "ElementLabel": "Joint Party", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "processHearingRecordingRequest", "ListElementCode": "appellant", "FieldType": "DynamicList", "ElementLabel": "Appellant", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/06/2019", "ID": "processHearingRecordingRequest", "ListElementCode": "rep", "FieldType": "DynamicList", "ElementLabel": "Representative", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "18/06/2019", "ID": "processHearingRecordingRequest", "ListElementCode": "rep", "FieldType": "DynamicList", "ElementLabel": "Representative", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "otherPartyHearingRecordingReq", "ListElementCode": "hearingRecordingRequest", "FieldType": "hearingRecordingRequest", "ElementLabel": "Hearing recording request", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "otherPartyHearingRecordingReq", "ListElementCode": "otherPartyId", "FieldType": "Text", "ElementLabel": "Hearing ID", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "otherPartyHearingRecordingReqUi", "ListElementCode": "otherPartyName", "FieldType": "Text", "ElementLabel": "Other party name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "otherPartyHearingRecordingReqUi", "ListElementCode": "hearingRecordingStatus", "FieldType": "DynamicList", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"}
+
 ]
