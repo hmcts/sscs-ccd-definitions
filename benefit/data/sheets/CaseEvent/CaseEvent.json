@@ -663,6 +663,7 @@
     "PostConditionState": "*",
     "EventEnablingCondition": "appeal.benefitType.code=\"childSupport\"",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
   {
@@ -2028,6 +2029,7 @@
     "PostConditionState": "*",
     "EventEnablingCondition": "appeal.benefitType.code=\"childSupport\"",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
   {
