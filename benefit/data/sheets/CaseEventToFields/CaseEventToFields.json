@@ -3890,6 +3890,7 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "appeal.benefitType.code = \"childSupport\"",
     "PageID": "1.0"
   },
   {
