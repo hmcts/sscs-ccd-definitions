@@ -58,7 +58,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "isScottishCase", "TabFieldDisplayOrder": 53},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "reasonableAdjustments", "TabFieldDisplayOrder": 54},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "panelDoctorSpecialism", "TabFieldDisplayOrder": 55},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "subscriptions_sscs", "TabLabel": "Subscriptions", "TabDisplayOrder": 3, "CaseFieldID": "subscriptions", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "isInc5249521CaseLabel", "TabFieldDisplayOrder": 1, "FieldShowCondition": "isInc5249521 =\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "phmeGrantedLabel", "TabFieldDisplayOrder": 2, "FieldShowCondition": "phmeGranted =\"Yes\" AND interlocReferralReason!=\"phmeRequest\""},
