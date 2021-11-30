@@ -3359,5 +3359,476 @@
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 70,
     "PageID": "otherPartyData"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "role",
+    "ID": "role",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 2,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "role.name",
+    "ID": "otherPartRoleName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 2,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "name",
+    "ID": "otherPartyname",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 3,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "name.title",
+    "ID": "otherPartyname",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 4,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "name.firstName",
+    "ID": "otherPartyname",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 5,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "name.lastName",
+    "ID": "otherPartyname",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 6,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartySubscription",
+    "ID": "otherPartySubscription",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 7,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartySubscription.wantSmsNotifications",
+    "ID": "otherPartySubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 8,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartySubscription.tya",
+    "ID": "otherPartySubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 9,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartySubscription.email",
+    "ID": "appellantSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 10,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartySubscription.mobile",
+    "ID": "otherPartySubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 11,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartySubscription.subscribeEmail",
+    "ID": "otherPartySubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 12,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartySubscription.subscribeSms",
+    "ID": "otherPartySubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 13,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartySubscription.reason",
+    "ID": "otherPartySubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 14,
+    "PageID": "1.0"
+  },
+
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartySubscription.lastLoggedIntoMya",
+    "ID": "otherPartySubscriptionMya",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 15,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointee",
+    "ID": "appointee",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 16,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointee.name",
+    "ID": "appointeeName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 17,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointee.name.title",
+    "ID": "appointeeNameTitle",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 18,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointee.name.firstName",
+    "ID": "appointeeNameFirstName",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 19,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointee.name.lastName",
+    "ID": "appointeeNameLastName",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 20,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointee.address",
+    "ID": "appointeeAddress",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 21,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointee.contact",
+    "ID": "appointeeContact",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 22,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyAppointeeSubscription",
+    "ID": "opAppointeeSubscriptionSubscription",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 23,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyAppointeeSubscription.wantSmsNotifications",
+    "ID": "opAppointeeSubscriptionSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 24,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyAppointeeSubscription.tya",
+    "ID": "opAppointeeSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 25,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyAppointeeSubscription.email",
+    "ID": "opAppointeeSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 26,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyAppointeeSubscription.mobile",
+    "ID": "opAppointeeSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 27,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyAppointeeSubscription.subscribeEmail",
+    "ID": "opAppointeeSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 28,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyAppointeeSubscription.subscribeSms",
+    "ID": "opAppointeeSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 29,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyAppointeeSubscription.reason",
+    "ID": "opAppointeeSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 30,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyAppointeeSubscription.lastLoggedIntoMya",
+    "ID": "opAppointeeSubscriptionMya",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 31,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "rep",
+    "ID": "rep",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 32,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "rep.name",
+    "ID": "repName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 33,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "rep.name.title",
+    "ID": "repNameTitle",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 34,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "rep.name.firstName",
+    "ID": "repNameFirstName",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 35,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "rep.name.lastName",
+    "ID": "repNameLastName",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 36,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "rep.address",
+    "ID": "repAddress",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 37,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "rep.contact",
+    "ID": "repContact",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 38,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyRepresentativeSubscription",
+    "ID": "opRepresentativeSubscriptionSubscription",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 39,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyRepresentativeSubscription.wantSmsNotifications",
+    "ID": "opRepresentativeSubscriptionSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 40,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyRepresentativeSubscription.tya",
+    "ID": "opRepresentativeSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 41,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyRepresentativeSubscription.email",
+    "ID": "opRepresentativeSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 42,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyRepresentativeSubscription.mobile",
+    "ID": "opRepresentativeSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 43,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyRepresentativeSubscription.subscribeEmail",
+    "ID": "opRepresentativeSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 44,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyRepresentativeSubscription.subscribeSms",
+    "ID": "opRepresentativeSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 44,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyRepresentativeSubscription.reason",
+    "ID": "opRepresentativeSubscriptionWantsSms",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 45,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "otherPartyRepresentativeSubscription.lastLoggedIntoMya",
+    "ID": "opRepresentativeSubscriptionMya",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 46,
+    "PageID": "1.0"
   }
 ]
