@@ -247,5 +247,6 @@
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "TabID": "language_sscs", "TabLabel": "Welsh", "TabDisplayOrder": 23, "CaseFieldID": "languagePreferenceWelsh", "TabFieldDisplayOrder": 1, "TabShowCondition": "languagePreferenceWelsh=\"Yes\""},
   {"LiveFrom": "09/06/2020", "CaseTypeID": "Benefit", "TabID": "language_sscs", "TabLabel": "Welsh", "TabDisplayOrder": 23, "CaseFieldID": "translationWorkOutstanding", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "21/10/2018", "CaseTypeID": "Benefit", "TabID": "hearingRecordingsInfo_sscs", "TabLabel": "Hearing Recordings", "TabDisplayOrder": 24, "CaseFieldID": "sscsHearingRecordings", "TabFieldDisplayOrder": 2},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "other_party_sscs", "TabLabel": "Other Party Details", "TabDisplayOrder": 25, "CaseFieldID": "otherParties", "TabFieldDisplayOrder": 1}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "other_party_sscs", "TabLabel": "Other Party Details", "TabDisplayOrder": 25, "CaseFieldID": "isConfidentialCaseLabel", "TabFieldDisplayOrder": 1, "FieldShowCondition": "isConfidentialCase =\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "TabID": "other_party_sscs", "TabLabel": "Other Party Details", "TabDisplayOrder": 25, "CaseFieldID": "otherParties", "TabFieldDisplayOrder": 2}
 ]
