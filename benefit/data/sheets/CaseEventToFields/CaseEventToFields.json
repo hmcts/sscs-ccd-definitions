@@ -1658,6 +1658,30 @@
     "PageLabel": "Subscriptions"
   },
   {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "appeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "[STATE]=\"doNotUse\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "PageLabel": "Subscriptions"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0",
+    "PageLabel": "Subscriptions"
+  },
+  {
     "CaseEventID": "tcwDecisionAdmitAppeal",
     "CaseFieldID": "interlocDecisionInfo",
     "CaseTypeID": "Benefit",
@@ -4047,5 +4071,16 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Update other party data"
+  },
+  {
+    "CaseEventID": "confirmPanelComposition",
+    "CaseFieldID": "isFqpmRequired",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/11/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Confirm panel composition"
   }
 ]
