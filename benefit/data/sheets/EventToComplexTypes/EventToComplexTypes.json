@@ -3830,5 +3830,33 @@
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 46,
     "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "actionHearingRecordingRequest",
+    "CaseFieldID": "reissueDocumentOtherParty",
+    "ListElementCode": "otherPartyName",
+    "ID": "otherPartyName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "actionHearingRecordingRequest",
+    "CaseFieldID": "reissueDocumentOtherParty",
+    "ListElementCode": "otherPartyId",
+    "ID": "otherPartyId",
+    "FieldShowCondition": "appeal = \"doNotShow\"",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 2
+  },
+  {
+    "CaseEventID": "actionHearingRecordingRequest",
+    "CaseFieldID": "reissueDocumentOtherParty",
+    "ListElementCode": "reissue",
+    "ID": "otherPartyReissue",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 3
   }
 ]

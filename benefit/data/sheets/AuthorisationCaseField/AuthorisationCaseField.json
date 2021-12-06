@@ -1204,5 +1204,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "hearingRecordingRequestOutstanding", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "isFqpmRequired", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "isFqpmRequired", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
-  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "isFqpmRequired", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"}
+  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "isFqpmRequired", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "reissueDocumentOtherParty", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+
 ]
