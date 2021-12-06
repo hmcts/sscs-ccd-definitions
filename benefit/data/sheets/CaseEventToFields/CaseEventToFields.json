@@ -907,6 +907,17 @@
     "PageID": "1.0"
   },
   {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "otherParties",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 14,
+    "PageID": "1.0"
+  },
+  {
     "CaseEventID": "corDecision",
     "CaseFieldID": "decisionNotes",
     "CaseTypeID": "Benefit",

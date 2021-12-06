@@ -90,7 +90,7 @@
     "PageFieldDisplayOrder": 7,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
+    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\" OR dwpEditedEvidenceReason=\"childSupportConfidentiality\""
   },
   {
     "CaseEventID": "dwpUploadResponse",
