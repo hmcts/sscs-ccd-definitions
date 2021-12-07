@@ -66,9 +66,9 @@ Put a message on the sscs-ccd slack channel with the new version
 ## File naming conventions
 
 Filename structure is as follows: [major version].[minor version].[minor fix]_[environment] where
-- Major version i.e. v1.x.x indicates major structural changes to the definition, required to deliver new functionality or driven by changes to the definition structure as defined by the CCD team
-- Minor version i.e. vx.1.x indicates minor changes to the version, such as the removal / addition of new fields, updated callback URLs etc
-- Minor fix i.e. vx.x.1 indicates minor fixes and should be used for the addition / removal of users
+- Major version i.e. v1.x.x indicates major structural backwards incompatible changes to the definition, required to deliver new functionality or driven by changes to the definition structure as defined by the CCD team
+- Minor version i.e. vx.1.x indicates minor changes to the version, where functionality is added in a backwards compatible manner.
+- Patch version i.e. vx.x.1 indicates minor changes or fixes and should be used for the addition / removal of users, fields and updating callbacks.
 
 ## QA process
 
