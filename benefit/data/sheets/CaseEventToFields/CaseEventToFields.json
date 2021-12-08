@@ -907,6 +907,17 @@
     "PageID": "1.0"
   },
   {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "otherParties",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 14,
+    "PageID": "1.0"
+  },
+  {
     "CaseEventID": "corDecision",
     "CaseFieldID": "decisionNotes",
     "CaseTypeID": "Benefit",
@@ -3846,16 +3857,16 @@
     "PageLabel": "Request hearing recording"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=selectHearing",
     "CaseEventID": "actionHearingRecordingRequest",
-    "CaseFieldID": "processHearingRecordingRequests",
+    "CaseFieldID": "selectHearingDetails",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "PageLabel": "Please review the hearing recordings"
+    "PageID": "selectHearing",
+    "PageLabel": "Action hearing recording request"
   },
   {
     "CaseEventID": "actionHearingRecordingRequest",
@@ -3865,10 +3876,10 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
-    "PageID": "1.0",
-    "FieldShowCondition": "processHearingRecordingRequests=\"doNotUse\"",
+    "PageID": "selectHearing",
+    "FieldShowCondition": "processHearingRecordingRequest=\"doNotUse\"",
     "ShowSummaryChangeOption": "N",
-    "PageLabel": "Please review the hearing recordings"
+    "PageLabel": "Action hearing recording request"
   },
   {
     "CaseEventID": "actionHearingRecordingRequest",
@@ -3878,10 +3889,33 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
-    "PageID": "1.0",
-    "FieldShowCondition": "processHearingRecordingRequests=\"doNotUse\"",
+    "PageID": "selectHearing",
+    "FieldShowCondition": "processHearingRecordingRequest=\"doNotUse\"",
     "ShowSummaryChangeOption": "N",
+    "PageLabel": "Action hearing recording request"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=validateHearingRecordingRequest",
+    "CaseEventID": "actionHearingRecordingRequest",
+    "CaseFieldID": "processHearingRecordingRequest",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
     "PageLabel": "Please review the hearing recordings"
+  },
+  {
+    "CaseEventID": "actionHearingRecordingRequest",
+    "CaseFieldID": "otherPartyHearingRecordingReqUi",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "appeal.benefitType.code = \"childSupport\"",
+    "PageID": "1.0"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
