@@ -3832,7 +3832,7 @@
     "PageID": "1.0"
   },
   {
-    "CaseEventID": "actionHearingRecordingRequest",
+    "CaseEventID": "reissueDocument",
     "CaseFieldID": "reissueDocumentOtherParty",
     "ListElementCode": "otherPartyName",
     "ID": "otherPartyName",
@@ -3841,7 +3841,7 @@
     "FieldDisplayOrder": 1
   },
   {
-    "CaseEventID": "actionHearingRecordingRequest",
+    "CaseEventID": "reissueDocument",
     "CaseFieldID": "reissueDocumentOtherParty",
     "ListElementCode": "otherPartyId",
     "ID": "otherPartyId",
@@ -3851,7 +3851,7 @@
     "FieldDisplayOrder": 2
   },
   {
-    "CaseEventID": "actionHearingRecordingRequest",
+    "CaseEventID": "reissueDocument",
     "CaseFieldID": "reissueDocumentOtherParty",
     "ListElementCode": "reissue",
     "ID": "otherPartyReissue",
