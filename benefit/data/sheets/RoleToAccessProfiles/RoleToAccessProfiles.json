@@ -5,7 +5,7 @@
     "RoleName": "dwpUser",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "dwpUser",
+    "AccessProfiles": "caseworker-sscs-dwpresponsewriter",
     "Disabled": "N"
   },
   {
@@ -14,16 +14,7 @@
     "RoleName": "hmctsUser",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "hmctsUser",
-    "Disabled": "N"
-  },
-  {
-    "LiveFrom": "18/06/2019",
-    "CaseTypeID": "Benefit",
-    "RoleName": "Respondent",
-    "Authorisation": "",
-    "ReadOnly": "N",
-    "AccessProfiles": "[RESPONDENT]",
+    "AccessProfiles": "caseworker-sscs-hmctsresponsewriter",
     "Disabled": "N"
   }
 }
