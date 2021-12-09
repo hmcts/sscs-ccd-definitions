@@ -2,7 +2,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "appealCreated", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "appealCreated", "UserRole": "caseworker-sscs-callagent", "CRUD": "CRU"},
   {"LiveFrom": "16/07/2019", "CaseTypeID": "Benefit", "CaseStateID": "appealCreated", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "R"},
-  {"LiveFrom": "16/07/2019", "CaseTypeID": "Benefit", "CaseStateID": "appealCreated", "UserRole": "caseworker-sscs-hmctsresponsewriter", "CRUD": "R"},
+  {"LiveFrom": "16/07/2019", "CaseTypeID": "SSCS5", "CaseStateID": "appealCreated", "UserRole": "caseworker-sscs-hmctsresponsewriter", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "appealCreated", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "appealCreated", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "appealCreated", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
