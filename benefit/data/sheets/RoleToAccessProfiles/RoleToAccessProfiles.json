@@ -2,7 +2,7 @@
   {
     "LiveFrom": "18/06/2019",
     "CaseTypeID": "Benefit",
-    "RoleName": "dwpUser",
+    "RoleName": "caseworker-sscs-dwpresponsewriter",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "caseworker-sscs-dwpresponsewriter",
@@ -11,7 +11,7 @@
   {
     "LiveFrom": "18/06/2019",
     "CaseTypeID": "SSCS5",
-    "RoleName": "hmctsUser",
+    "RoleName": "caseworker-sscs-hmctsresponsewriter",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "caseworker-sscs-hmctsresponsewriter",
