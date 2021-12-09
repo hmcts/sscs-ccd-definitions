@@ -409,6 +409,7 @@
   {"LiveFrom": "18/06/2019", "ID": "sscsHearingRecordingDetails", "ListElementCode": "hearingId", "FieldType": "Text", "ElementLabel": "Hearing ID", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "sscsHearingRecordingDetails", "ListElementCode": "venue", "FieldType": "Text", "ElementLabel": "Venue", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "hearingRecordingRequest", "ListElementCode": "requestingParty", "FieldType": "FixedList", "FieldTypeParameter": "FL_parties", "ElementLabel": "Requesting Party", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "ID": "hearingRecordingRequest", "ListElementCode": "otherPartyId", "FieldType": "Text", "ElementLabel": "Other Party Id", "FieldShowCondition": "requestingParty=\"AnyValueToFailThisCondition\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "hearingRecordingRequest", "ListElementCode": "status", "FieldType": "Text", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingRecordingRequest", "ListElementCode": "dateRequested", "FieldType": "Date", "ElementLabel": "Date requested", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingRecordingRequest", "ListElementCode": "dateApproved", "FieldType": "Date", "ElementLabel": "Date approved", "SecurityClassification": "PUBLIC"},
