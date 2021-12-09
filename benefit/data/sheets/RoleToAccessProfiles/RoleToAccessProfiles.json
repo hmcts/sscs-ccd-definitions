@@ -10,7 +10,7 @@
   },
   {
     "LiveFrom": "18/06/2019",
-    "CaseTypeID": "SSCS5",
+    "CaseTypeID": "Benefit",
     "RoleName": "caseworker-sscs-hmctsresponsewriter",
     "Authorisation": "",
     "ReadOnly": "N",
