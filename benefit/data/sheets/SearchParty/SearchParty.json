@@ -1,0 +1,22 @@
+[
+  {
+    "LiveFrom": "1/1/2022",
+    "CaseTypeID": "Benefit",
+    "SearchPartyName": "appeal.appellant.name.firstName, appeal.appellant.name.lastName",
+    "SearchPartyEmailAddress": "appeal.appellant.contact.email",
+    "SearchPartyAddressLine1": "appeal.appellant.address.line1",
+    "SearchPartyPostCode": "appeal.appellant.address.postcode",
+    "SearchPartyDoB": "appeal.appellant.identity.dob",
+    "SearchPartyDoD": "dateOfAppellantDeath"
+  },
+  {
+    "LiveFrom": "1/1/2022",
+    "CaseTypeID": "SSCS5",
+    "SearchPartyName": "appeal.appellant.name.firstName, appeal.appellant.name.lastName",
+    "SearchPartyEmailAddress": "appeal.appellant.contact.email",
+    "SearchPartyAddressLine1": "appeal.appellant.address.line1",
+    "SearchPartyPostCode": "appeal.appellant.address.postcode",
+    "SearchPartyDoB": "appeal.appellant.identity.dob",
+    "SearchPartyDoD": "dateOfAppellantDeath"
+  }
+]
