@@ -1,0 +1,29 @@
+{
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "dwpUser",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "dwpUser",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "SSCS5",
+    "RoleName": "hmctsUser",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "hmctsUser",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "Respondent",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "[RESPONDENT]",
+    "Disabled": "N"
+  }
+}
