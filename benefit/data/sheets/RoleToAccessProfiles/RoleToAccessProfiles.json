@@ -1,4 +1,4 @@
-{
+[
   {
     "LiveFrom": "18/06/2019",
     "CaseTypeID": "Benefit",
@@ -17,4 +17,4 @@
     "AccessProfiles": "caseworker-sscs-hmctsresponsewriter",
     "Disabled": "N"
   }
-}
+]
