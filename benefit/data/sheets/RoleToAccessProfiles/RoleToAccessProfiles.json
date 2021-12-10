@@ -11,10 +11,10 @@
   {
     "LiveFrom": "18/06/2019",
     "CaseTypeID": "Benefit",
-    "RoleName": "caseworker-sscs-hmctsresponsewriter",
+    "RoleName": "caseworker-sscs-hmrcresponsewriter",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker-sscs-hmctsresponsewriter",
+    "AccessProfiles": "caseworker-sscs-hmrcresponsewriter",
     "Disabled": "N"
   }
 ]
