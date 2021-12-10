@@ -5,7 +5,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "actionFurtherEvidence", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "manageWelshDocuments", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionStrikeOut", "AccessProfile": "caseworker-sscs-dwpresponsewriter", "CRUD": "CRU"},
-  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionStrikeOut", "AccessProfile": "caseworker-sscs-hmrcresponsewriter", "CRUD": "CRU"},
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionStrikeOut", "AccessProfile": "caseworker-sscs-ogdresponsewriter", "CRUD": "CRU"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionStrikeOut", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionStrikeOut", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionStrikeOut", "AccessProfile": "caseworker-sscs-anonymouscitizen", "CRUD": "R"},
