@@ -5,7 +5,7 @@
     "RoleName": "caseworker-sscs-dwpresponsewriter",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker-sscs-dwpresponsewriter",
+    "AccessProfiles": "caseworker-sscs-ogdresponsewriter",
     "Disabled": "N"
   },
   {
@@ -14,7 +14,7 @@
     "RoleName": "caseworker-sscs-hmrcresponsewriter",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker-sscs-hmrcresponsewriter",
+    "AccessProfiles": "caseworker-sscs-ogdresponsewriter",
     "Disabled": "N"
   }
 ]
