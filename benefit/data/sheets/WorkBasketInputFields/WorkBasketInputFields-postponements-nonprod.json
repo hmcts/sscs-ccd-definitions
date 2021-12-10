@@ -1,5 +1,5 @@
 [
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "unprocessedPostponementRequest", "Label": "Postponement request", "DisplayOrder": 9},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "unprocessedPostponementRequest", "Label": "Postponement request", "DisplayOrder": 9},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "unprocessedPostponementRequest", "Label": "Postponement request", "DisplayOrder": 17}
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-judge", "CaseFieldID": "unprocessedPostponementRequest", "Label": "Postponement request", "DisplayOrder": 9},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-registrar", "CaseFieldID": "unprocessedPostponementRequest", "Label": "Postponement request", "DisplayOrder": 9},
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-superuser", "CaseFieldID": "unprocessedPostponementRequest", "Label": "Postponement request", "DisplayOrder": 17}
 ]
