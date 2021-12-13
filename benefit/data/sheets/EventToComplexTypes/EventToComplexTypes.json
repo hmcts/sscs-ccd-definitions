@@ -3858,5 +3858,23 @@
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 46,
     "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "reissueFurtherEvidence",
+    "CaseFieldID": "otherPartyOptions",
+    "ListElementCode": "otherPartyName",
+    "ID": "otherPartyOptionsName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/12/2021",
+    "FieldDisplayOrder": 47
+  },
+  {
+    "CaseEventID": "reissueFurtherEvidence",
+    "CaseFieldID": "otherPartyOptions",
+    "ListElementCode": "resendToOtherParty",
+    "ID": "otherPartyOptionsResend",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/12/2021",
+    "FieldDisplayOrder": 48
   }
 ]
