@@ -1206,5 +1206,7 @@
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "isFqpmRequired", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "isFqpmRequired", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "otherPartyHearingRecordingReq", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "otherPartyHearingRecordingReqUi", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "otherPartyHearingRecordingReqUi", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/12/2021", "CaseTypeID": "Benefit", "CaseFieldID": "otherPartyOptions", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/12/2021", "CaseTypeID": "Benefit", "CaseFieldID": "showReissueToOtherPartyUiSection", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]

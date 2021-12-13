@@ -2141,7 +2141,7 @@
     "CaseEventID": "actionHearingRecordingRequest",
     "CaseFieldID": "otherPartyHearingRecordingReqUi",
     "ListElementCode": "otherPartyName",
-    "ID": "otherPartyName",
+    "ID": "otherPartyIsAppointee",
     "DisplayContext": "READONLY",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 8
@@ -2150,7 +2150,7 @@
     "CaseEventID": "actionHearingRecordingRequest",
     "CaseFieldID": "otherPartyHearingRecordingReqUi",
     "ListElementCode": "hearingRecordingStatus",
-    "ID": "otherPartyHearingRecordingStatus",
+    "ID": "otherPartyIsAppointee",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 9

@@ -2513,6 +2513,30 @@
     "PageLabel": "Handle reissue further evidence"
   },
   {
+    "CaseEventID": "reissueFurtherEvidence",
+    "CaseFieldID": "otherPartyOptions",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/12/2021",
+    "FieldShowCondition": "showReissueToOtherPartyUiSection=\"Yes\"",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0",
+    "PageLabel": "Handle reissue further evidence"
+  },
+  {
+    "CaseEventID": "reissueFurtherEvidence",
+    "CaseFieldID": "showReissueToOtherPartyUiSection",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/12/2021",
+    "FieldShowCondition": "resendToRepresentative=\"DoNotShow\"",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0",
+    "PageLabel": "Handle reissue further evidence"
+  },
+  {
     "CaseEventID": "adminAppealWithdrawn",
     "CaseFieldID": "previewDocument",
     "CaseTypeID": "Benefit",
