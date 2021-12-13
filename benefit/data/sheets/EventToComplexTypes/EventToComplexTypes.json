@@ -3862,7 +3862,7 @@
   {
     "CaseEventID": "reissueFurtherEvidence",
     "CaseFieldID": "otherPartyOptions",
-    "ListElementCode": "otherPartyName",
+    "ListElementCode": "otherPartyOptionName",
     "ID": "otherPartyOptionsName",
     "DisplayContext": "READONLY",
     "LiveFrom": "01/12/2021",
