@@ -151,6 +151,7 @@
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "partyUploaded", "FieldType": "Text", "ElementLabel": "Party uploaded", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "originalPartySender", "FieldType": "Text", "ElementLabel": "Original Sender", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "avDocumentLink", "FieldType": "Document", "ElementLabel": "Audio/video document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "originalSenderOtherPartyId", "FieldType": "Text", "ElementLabel": "Original sender other party ID", "FieldShowCondition": "documentType=\"AnyValueToFailThisCondition\"", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "ID": "sscsFurtherEvidenceDoc",
