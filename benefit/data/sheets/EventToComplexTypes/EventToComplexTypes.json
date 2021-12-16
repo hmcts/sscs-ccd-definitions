@@ -2898,6 +2898,16 @@
     "PageID": "1.0"
   },
   {
+    "CaseEventID": "updateOtherPartyData",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "sendNewOtherPartyNotification",
+    "ID": "sendNewOtherPartyNotification",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 70,
+    "PageID": "1.0"
+  },
+  {
     "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "otherParties",
     "ListElementCode": "name",
