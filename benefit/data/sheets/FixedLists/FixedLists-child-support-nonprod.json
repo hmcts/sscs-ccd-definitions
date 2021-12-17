@@ -1,4 +1,9 @@
 [
   {"LiveFrom": "09/11/2021", "ID": "documentType", "ListElementCode": "otherPartyEvidence", "ListElement": "Other party evidence"},
-  {"LiveFrom": "09/11/2021", "ID": "documentType", "ListElementCode": "otherPartyRepEvidence", "ListElement": "Other party representative evidence"}
+  {"LiveFrom": "09/11/2021", "ID": "documentType", "ListElementCode": "otherPartyRepEvidence", "ListElement": "Other party representative evidence"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_parties", "ListElementCode": "otherParty", "ListElement": "Other party"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_parties", "ListElementCode": "otherPartyRep", "ListElement": "Other party representative"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "otherParty", "ListElement": "Other party"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "otherPartyRep", "ListElement": "Other party representative"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_audioVideoPartyUploaded", "ListElementCode": "otherPartyAppointee", "ListElement": "Other party appointee"}
 ]
