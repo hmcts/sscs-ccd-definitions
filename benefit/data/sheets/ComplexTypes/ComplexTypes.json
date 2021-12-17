@@ -440,5 +440,5 @@
   {"LiveFrom": "18/06/2019", "ID": "otherPartyHearingRecordingReqUi", "ListElementCode": "hearingRecordingStatus", "FieldType": "DynamicList", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/12/2021", "ID": "OtherPartyOption", "ListElementCode": "otherPartyOptionName", "FieldType": "Text", "ElementLabel": "Other party name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/12/2021", "ID": "OtherPartyOption", "ListElementCode": "otherPartyOptionId", "FieldType": "Text", "ElementLabel": "Other party id", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/12/2021", "ID": "OtherPartyOption", "ListElementCode": "resendToOtherParty", "FieldType": "YesOrNo", "ElementLabel": "Resend", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "18/12/2021", "ID": "OtherPartyOption", "ListElementCode": "resendToOtherParty", "FieldType": "YesOrNo", "ElementLabel": "Reissue evidence", "SecurityClassification": "PUBLIC"}
 ]
