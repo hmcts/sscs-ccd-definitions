@@ -1,4 +1,0 @@
-[
-  {"LiveFrom": "01/01/2018", "ID": "documentTypeFE", "ListElementCode": "requestForHearingRecording", "ListElement": "Request for Hearing Recording"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "DisplayOrder" : "14","ListElementCode": "rejectHearingRecordingRequest", "ListElement": "Reject hearing recording request"}
-]
