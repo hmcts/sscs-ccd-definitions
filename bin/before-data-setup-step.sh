@@ -7,10 +7,6 @@ LIKE_PROD=${3:-${ENV}}
 RUN_DIR=`pwd`
 COMMON_VERSION=$(cat ${RUN_DIR}/benefit/SSCS_COMMON_VERSION.txt)
 
-if [[ "string" == "string" ]]; then
-    echo "This is Bash"
-fi
-
 if [ -z "${TYPE}" ] || [ -z "${ENV}" ]; then
     echo "Usage create-xlsx.sh [type] [env]"
     exit 1
