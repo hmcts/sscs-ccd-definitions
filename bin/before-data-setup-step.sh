@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 TYPE=${1}
 ENV=${2}
