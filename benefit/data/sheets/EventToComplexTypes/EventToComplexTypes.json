@@ -1363,11 +1363,31 @@
   {
     "CaseEventID": "actionFurtherEvidence",
     "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "originalSenderOtherPartyId",
+    "ID": "scannedDocumentOtherPartyId",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "originalSenderOtherPartyId != \"\"",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 8
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "originalSenderOtherPartyName",
+    "ID": "scannedDocumentOtherPartyName",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "originalSenderOtherPartyName != \"\"",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 9
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
     "ListElementCode": "subtype",
     "ID": "scannedDocumentSubtype",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 8
+    "FieldDisplayOrder": 10
   },
   {
     "CaseEventID": "actionFurtherEvidence",
@@ -1376,7 +1396,7 @@
     "ID": "scannedDocumentIncludeInBundle",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 9
+    "FieldDisplayOrder": 11
   },
   {
     "CaseEventID": "attachScannedDocs",
