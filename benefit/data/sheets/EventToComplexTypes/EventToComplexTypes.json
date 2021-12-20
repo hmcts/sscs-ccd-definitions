@@ -1363,11 +1363,31 @@
   {
     "CaseEventID": "actionFurtherEvidence",
     "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "originalSenderOtherPartyId",
+    "ID": "scannedDocumentOtherPartyId",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "originalSenderOtherPartyId != \"\"",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 8
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "originalSenderOtherPartyName",
+    "ID": "scannedDocumentOtherPartyName",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "originalSenderOtherPartyName != \"\"",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 9
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
     "ListElementCode": "subtype",
     "ID": "scannedDocumentSubtype",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 8
+    "FieldDisplayOrder": 10
   },
   {
     "CaseEventID": "actionFurtherEvidence",
@@ -1376,7 +1396,7 @@
     "ID": "scannedDocumentIncludeInBundle",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 9
+    "FieldDisplayOrder": 11
   },
   {
     "CaseEventID": "attachScannedDocs",
@@ -4108,5 +4128,33 @@
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 46,
     "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "reissueDocument",
+    "CaseFieldID": "reissueDocumentOtherParty",
+    "ListElementCode": "otherPartyName",
+    "ID": "otherPartyName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "reissueDocument",
+    "CaseFieldID": "reissueDocumentOtherParty",
+    "ListElementCode": "otherPartyId",
+    "ID": "otherPartyId",
+    "FieldShowCondition": "appeal = \"doNotShow\"",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 2
+  },
+  {
+    "CaseEventID": "reissueDocument",
+    "CaseFieldID": "reissueDocumentOtherParty",
+    "ListElementCode": "reissue",
+    "ID": "otherPartyReissue",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 3
   }
 ]
