@@ -3881,48 +3881,56 @@
   },
   {
     "CaseEventID": "reissueDocument",
-    "CaseFieldID": "reissueDocumentOtherParty",
-    "ListElementCode": "otherPartyName",
-    "ID": "otherPartyName",
+    "CaseFieldID": "otherPartyOptions",
+    "ListElementCode": "otherPartyOptionName",
+    "ID": "otherPartyNameReissueDoc",
     "DisplayContext": "READONLY",
-    "LiveFrom": "01/01/2018",
-    "FieldDisplayOrder": 1
+    "LiveFrom": "01/01/2021",
+    "FieldDisplayOrder": 47
   },
   {
     "CaseEventID": "reissueDocument",
-    "CaseFieldID": "reissueDocumentOtherParty",
-    "ListElementCode": "otherPartyId",
-    "ID": "otherPartyId",
-    "FieldShowCondition": "appeal = \"doNotShow\"",
+    "CaseFieldID": "otherPartyOptions",
+    "ListElementCode": "otherPartyOptionId",
+    "ID": "otherPartyIdReissueDoc",
     "DisplayContext": "READONLY",
-    "LiveFrom": "01/01/2018",
-    "FieldDisplayOrder": 2
+    "LiveFrom": "01/01/2021",
+    "FieldDisplayOrder": 48
   },
   {
     "CaseEventID": "reissueDocument",
-    "CaseFieldID": "reissueDocumentOtherParty",
-    "ListElementCode": "reissue",
-    "ID": "otherPartyReissue",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "FieldDisplayOrder": 3
+    "CaseFieldID": "otherPartyOptions",
+    "ListElementCode": "resendToOtherParty",
+    "ID": "otherPartyResendReissueDoc",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2021",
+    "FieldDisplayOrder": 49
   },
   {
     "CaseEventID": "reissueFurtherEvidence",
     "CaseFieldID": "otherPartyOptions",
     "ListElementCode": "otherPartyOptionName",
-    "ID": "otherPartyOptionsName",
+    "ID": "otherPartyOptionsNameReissueEv",
     "DisplayContext": "READONLY",
     "LiveFrom": "01/12/2021",
-    "FieldDisplayOrder": 47
+    "FieldDisplayOrder": 50
   },
   {
     "CaseEventID": "reissueFurtherEvidence",
     "CaseFieldID": "otherPartyOptions",
     "ListElementCode": "resendToOtherParty",
-    "ID": "otherPartyOptionsResend",
+    "ID": "otherPartyOptionsResendReissueEv",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/12/2021",
+    "FieldDisplayOrder": 51
+  },
+  {
+    "CaseEventID": "reissueFurtherEvidence",
+    "CaseFieldID": "otherPartyOptions",
+    "ListElementCode": "otherPartyOptionId",
+    "ID": "otherPartyIdReissueEv",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2021",
     "FieldDisplayOrder": 48
   }
 ]

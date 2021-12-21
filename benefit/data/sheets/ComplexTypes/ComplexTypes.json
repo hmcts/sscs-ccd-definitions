@@ -444,10 +444,7 @@
   {"LiveFrom": "18/06/2019", "ID": "otherPartyHearingRecordingReq", "ListElementCode": "otherPartyId", "FieldType": "Text", "ElementLabel": "Hearing ID", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "otherPartyHearingRecordingReqUi", "ListElementCode": "otherPartyName", "FieldType": "Text", "ElementLabel": "Other party name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "otherPartyHearingRecordingReqUi", "ListElementCode": "hearingRecordingStatus", "FieldType": "DynamicList", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/06/2019", "ID": "reissueDocumentOtherParty", "ListElementCode": "otherPartyName", "FieldType": "Text", "ElementLabel": "Other party name", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "reissueDocumentOtherParty", "ListElementCode": "otherPartyId", "FieldType": "Text", "ElementLabel": "Other party Id", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "reissueDocumentOtherParty", "ListElementCode": "reissue", "FieldType": "YesOrNo", "ElementLabel": "Re-issue document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/12/2021", "ID": "OtherPartyOption", "ListElementCode": "otherPartyOptionName", "FieldType": "Text", "ElementLabel": "Other party name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/12/2021", "ID": "OtherPartyOption", "ListElementCode": "otherPartyOptionId", "FieldType": "Text", "ElementLabel": "Other party id", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/12/2021", "ID": "OtherPartyOption", "ListElementCode": "resendToOtherParty", "FieldType": "YesOrNo", "ElementLabel": "Reissue evidence", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "18/12/2021", "ID": "OtherPartyOption", "ListElementCode": "resendToOtherParty", "FieldType": "YesOrNo", "ElementLabel": "Reissue", "SecurityClassification": "PUBLIC"}
 ]
