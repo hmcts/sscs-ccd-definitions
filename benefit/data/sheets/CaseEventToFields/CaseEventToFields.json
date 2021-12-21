@@ -2490,7 +2490,7 @@
     "FieldShowCondition": "resendToRepresentative=\"DoNotShow\"",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 6,
-    "PageID": "1.0",
+    "PageID": "reissueDocument",
     "PageLabel": "Reissue document"
   },
   {
