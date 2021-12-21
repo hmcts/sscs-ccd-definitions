@@ -15,7 +15,6 @@
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "translationWorkOutstanding", "Label": "Translation outstanding", "DisplayOrder": 14},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "reasonableAdjustmentsOutstanding", "Label": "Alternative letter format required", "DisplayOrder": 15},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "hasUnprocessedAudioVideoEvidence", "Label": "Does case have unprocessed audio/video evidence?", "DisplayOrder": 16},
-  {"LiveFrom": "16/12/2021", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "dwpDueDate", "Label": "DWP response due date", "DisplayOrder": 17},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "[CASE_REFERENCE]", "Label": "CCD case number", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "appeal", "ListElementCode": "appellant.name.lastName", "Label": "Appellant surname", "DisplayOrder": 2},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "appeal", "ListElementCode": "appellant.identity.nino", "Label": "NINO", "DisplayOrder": 3},
@@ -33,7 +32,6 @@
   {"LiveFrom": "11/11/2021", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "issueCode", "Label": "Issue code", "DisplayOrder": 6},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "createdInGapsFrom", "Label": "Is a new digital case?", "DisplayOrder": 7},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "hasUnprocessedAudioVideoEvidence", "Label": "Does case have unprocessed audio/video evidence?", "DisplayOrder": 8},
-  {"LiveFrom": "16/12/2021", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "dwpDueDate", "Label": "DWP response due date", "DisplayOrder": 9},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "interlocReviewState", "Label": "Review state", "DisplayOrder": 1},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "urgentCase", "Label": "Is case urgent?", "DisplayOrder": 2},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "reservedToJudge", "Label": "Reserved to", "DisplayOrder": 3},
@@ -42,7 +40,6 @@
   {"LiveFrom": "11/11/2021", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "issueCode", "Label": "Issue code", "DisplayOrder": 6},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "createdInGapsFrom", "Label": "Is a new digital case?", "DisplayOrder": 7},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "hasUnprocessedAudioVideoEvidence", "Label": "Does case have unprocessed audio/video evidence?", "DisplayOrder": 8},
-  {"LiveFrom": "16/12/2021", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "dwpDueDate", "Label": "DWP response due date", "DisplayOrder": 9},
   {"LiveFrom": "16/07/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "interlocReviewState", "Label": "Review state", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "hmctsDwpState", "Label": "Failed sending for manual review", "DisplayOrder": 2},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "urgentCase", "Label": "Is case urgent?", "DisplayOrder": 3},
@@ -58,6 +55,6 @@
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "languagePreferenceWelsh", "Label": "Welsh language flag", "DisplayOrder": 13},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "translationWorkOutstanding", "Label": "Translation outstanding", "DisplayOrder": 14},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "reasonableAdjustmentsOutstanding", "Label": "Alternative letter format required", "DisplayOrder": 15},
-  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "hasUnprocessedAudioVideoEvidence", "Label": "Does case have unprocessed audio/video evidence?", "DisplayOrder": 16},
-  {"LiveFrom": "16/12/2021", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "dwpDueDate", "Label": "DWP response due date", "DisplayOrder": 17}
+  {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "hasUnprocessedAudioVideoEvidence", "Label": "Does case have unprocessed audio/video evidence?", "DisplayOrder": 16}
+
 ]
