@@ -111,6 +111,12 @@ There are two SSCS CCD definition case types, benefit and bulkscan. Move into th
 
     ../bin/xlsx2json.sh ~/Downloads/CCD_SSCSDefinition_v5.1.21_AAT.xlsx
 
+### Sync with sscs-common
+
+When you add fields to the sscs-common, you should also update the sscs-ccd-definitions so that the
+definition file in AAT matches the java model in sscs-common, thereby avoiding validation failures.
+We recommend that the AAT CCD definition to be generated through master branch
+
 #Features
 
 ## Feature flagging
