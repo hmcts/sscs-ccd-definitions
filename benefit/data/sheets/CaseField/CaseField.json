@@ -410,4 +410,5 @@
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "ID": "otherPartyHearingRecordingReqUi", "Label": "Other party hearing recording requests", "FieldType": "Collection", "FieldTypeParameter": "otherPartyHearingRecordingReqUi", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/12/2021", "CaseTypeID": "Benefit", "ID": "otherPartyOptions", "Label": "Other party", "FieldType": "Collection", "FieldTypeParameter": "OtherPartyOption", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/12/2021", "CaseTypeID": "Benefit", "ID": "showReissueToOtherPartyUiSection", "Label": "Show reissue to other party ui section", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "caseName", "Label": "Case name", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 ]
