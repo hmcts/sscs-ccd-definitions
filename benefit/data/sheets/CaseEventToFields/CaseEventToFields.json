@@ -3579,13 +3579,24 @@
   },
   {
     "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "showOtherPartyDetails",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "FieldShowCondition": "reasonableAdjustments=\"DoNotShow\"",
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
     "CaseFieldID": "otherParties",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
-    "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\"",
+    "PageFieldDisplayOrder": 6,
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND showOtherPartyDetails=\"Yes\"",
     "PageID": "1.0"
   },
   {
