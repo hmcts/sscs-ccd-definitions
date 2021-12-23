@@ -1924,6 +1924,33 @@
     "FieldDisplayOrder": 3
   },
   {
+    "CaseEventID": "processReasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustmentsLetters",
+    "ListElementCode": "otherParty.sentOn",
+    "ID": "reasonableAdjustmentsLettersOtherPartySentOn",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "processReasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustmentsLetters",
+    "ListElementCode": "otherParty.documentLink",
+    "ID": "reasonableAdjustmentsLettersOtherPartyDocumentLink",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 2
+  },
+  {
+    "CaseEventID": "processReasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustmentsLetters",
+    "ListElementCode": "otherParty.reasonableAdjustmentStatus",
+    "ID": "reasonableAdjustmentsLettersOtherPartyStatus",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 3
+  },
+  {
     "CaseEventID": "updateReasonableAdjustment",
     "CaseFieldID": "reasonableAdjustments",
     "ListElementCode": "appellant.wantsReasonableAdjustment",
