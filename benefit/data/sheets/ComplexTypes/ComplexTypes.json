@@ -448,7 +448,6 @@
   {"LiveFrom": "18/06/2019", "ID": "otherPartyHearingRecordingReqUi", "ListElementCode": "otherPartyName", "FieldType": "Text", "ElementLabel": "Other party name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "otherPartyHearingRecordingReqUi", "ListElementCode": "otherPartyId", "FieldType": "Text", "ElementLabel": "Other party id", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "ID": "otherPartyHearingRecordingReqUi", "ListElementCode": "requestingParty", "FieldType": "FixedList", "FieldTypeParameter": "FL_parties", "ElementLabel": "Requesting Party", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/06/2019", "ID": "otherPartyHearingRecordingReqUi", "ListElementCode": "hearingRecordingStatus", "FieldType": "DynamicList", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"}
   {"LiveFrom": "18/06/2019", "ID": "otherPartyHearingRecordingReqUi", "ListElementCode": "hearingRecordingStatus", "FieldType": "DynamicList", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/12/2021", "ID": "OtherPartyOption", "ListElementCode": "otherPartyOptionName", "FieldType": "Text", "ElementLabel": "Other party name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/12/2021", "ID": "OtherPartyOption", "ListElementCode": "otherPartyOptionId", "FieldType": "Text", "ElementLabel": "Other party id", "SecurityClassification": "PUBLIC"},
