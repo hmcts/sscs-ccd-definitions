@@ -2270,7 +2270,7 @@
     "Name": "Write adjournment notice",
     "Description": "Write adjournment notice",
     "DisplayOrder": 179,
-    "PreConditionState(s)": "hearing",
+    "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
