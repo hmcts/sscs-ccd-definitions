@@ -240,6 +240,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_benefitCodes", "ListElementCode": "023", "ListElement": "023"},
   {"LiveFrom": "01/01/2018", "ID": "FL_benefitCodes", "ListElementCode": "022", "ListElement": "022"},
   {"LiveFrom": "01/01/2018", "ID": "FL_benefitCodes", "ListElementCode": "016", "ListElement": "016"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_benefitCodes", "ListElementCode": "015", "ListElement": "015"},
   {"LiveFrom": "01/01/2018", "ID": "FL_benefitCodes", "ListElementCode": "014", "ListElement": "014"},
   {"LiveFrom": "01/01/2018", "ID": "FL_benefitCodes", "ListElementCode": "013", "ListElement": "013"},
   {"LiveFrom": "01/01/2018", "ID": "FL_benefitCodes", "ListElementCode": "012", "ListElement": "012"},
