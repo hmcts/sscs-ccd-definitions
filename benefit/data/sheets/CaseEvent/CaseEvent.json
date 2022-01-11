@@ -1048,7 +1048,7 @@
     "DisplayOrder": 82,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "EventEnablingCondition": "appeal.benefitType.code!=\"childSupport\"",
+    "EventEnablingCondition": "appeal.benefitType.code!=\"childSupport\" AND appeal.benefitType.code!=\"taxCredit\"  AND appeal.benefitType.code!=\"guardiansAllowance\"  AND appeal.benefitType.code!=\"taxFreeChildcare\"  AND appeal.benefitType.code!=\"homeResponsibilitiesProtection\"  AND appeal.benefitType.code!=\"childBenefit\"  AND appeal.benefitType.code!=\"thirtyHoursFreeChildcare\"  AND appeal.benefitType.code!=\"guaranteedMinimumPension\"  AND appeal.benefitType.code!=\"nationalInsuranceCredits\"",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
     "SecurityClassification": "Public"
