@@ -3314,7 +3314,7 @@
     "PageID": "otherPartyData"
   },
   {
-    "CaseEventID": "updateOtherPartyData",
+    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "otherParties",
     "ListElementCode": "contact.email",
     "ID": "otherPartyEmail",
