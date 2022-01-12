@@ -1644,7 +1644,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Sent to DWP state"
+    "PageLabel": "Sent to FTA state"
   },
   {
     "CaseEventID": "subscriptionUpdated",

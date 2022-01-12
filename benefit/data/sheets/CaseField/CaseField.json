@@ -65,7 +65,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "draftCorDocument", "Label": "Hidden document collection", "FieldType": "Collection", "FieldTypeParameter": "corDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "associatedCase", "Label": "Related appeal(s)", "FieldType": "Collection", "FieldTypeParameter": "CaseLink", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "urgentCase", "Label": "Urgent case", "FieldType": "FixedList", "FieldTypeParameter": "FL_isUrgent", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "ID": "documentSentToDwp", "Label": "Documents sent to FTA?", "HintText": "Has the direction / decision notice been sent to DWP?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "ID": "documentSentToDwp", "Label": "Documents sent to FTA?", "HintText": "Has the direction / decision notice been sent to FTA?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sscsInterlocDecisionDocument", "Label": "Interloc Decisions", "FieldType": "sscsInterlocDecisionDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sscsStrikeOutDocument", "Label": "Interloc strike out information", "FieldType": "sscsStrikeOutDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sscsInterlocDirectionDocument", "Label": "Interloc Directions", "FieldType": "sscsInterlocDirectionDocument", "SecurityClassification": "PUBLIC"},
