@@ -2826,7 +2826,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "role.description",
     "ID": "otherPartyRoleDescription",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "FieldShowCondition": "otherParties.role.name=\"Other\"",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 18,
