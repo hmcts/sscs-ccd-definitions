@@ -2595,7 +2595,7 @@
     "CaseEventID": "updateOtherPartyData",
     "CaseFieldID": "otherParties",
     "ListElementCode": "contact.email",
-    "ID": "otherPartyMobile",
+    "ID": "otherPartyEmail",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 14,
@@ -3316,11 +3316,21 @@
   {
     "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "otherParties",
+    "ListElementCode": "contact.email",
+    "ID": "otherPartyEmail",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 14,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "otherParties",
     "ListElementCode": "confidentialityRequired",
     "ID": "otherPartyConfidentialityRequired",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 14,
+    "FieldDisplayOrder": 15,
     "PageID": "otherPartyData"
   },
   {
@@ -3330,7 +3340,7 @@
     "ID": "otherPartyUnacceptableCustomerBehaviour",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 15,
+    "FieldDisplayOrder": 16,
     "PageID": "otherPartyData"
   },
   {
@@ -3340,7 +3350,7 @@
     "ID": "otherPartyRole",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 16,
+    "FieldDisplayOrder": 17,
     "PageID": "otherPartyData"
   },
   {
@@ -3350,7 +3360,7 @@
     "ID": "otherPartyRoleName",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 17,
+    "FieldDisplayOrder": 18,
     "PageID": "otherPartyData"
   },
   {
@@ -3360,7 +3370,7 @@
     "ID": "otherPartyRoleDescription",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 18,
+    "FieldDisplayOrder": 19,
     "PageID": "otherPartyData"
   },
   {
