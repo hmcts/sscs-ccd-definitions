@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "onlinePanel", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "caseReference", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "caseCreated", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
@@ -1222,6 +1223,6 @@
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "caseAccessCategory", "AccessProfile": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "showOtherPartyDetails", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "caseName", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "caseName", "AccessProfile": "citizen", "CRUD": "CRUD"}
-
+  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "caseName", "AccessProfile": "citizen", "CRUD": "CRUD"},
+  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "caseManagementLocation", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]
