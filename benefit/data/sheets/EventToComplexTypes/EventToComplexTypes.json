@@ -567,8 +567,8 @@
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant.confidentialityRequired",
     "ID": "appealAppellantConfidentiality",
-    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\"",
-    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\"",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 16
   },
@@ -1543,11 +1543,31 @@
   {
     "CaseEventID": "actionFurtherEvidence",
     "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "originalSenderOtherPartyId",
+    "ID": "scannedDocumentOtherPartyId",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "originalSenderOtherPartyId != \"\"",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 8
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
+    "ListElementCode": "originalSenderOtherPartyName",
+    "ID": "scannedDocumentOtherPartyName",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "originalSenderOtherPartyName != \"\"",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 9
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocuments",
     "ListElementCode": "subtype",
     "ID": "scannedDocumentSubtype",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 8
+    "FieldDisplayOrder": 10
   },
   {
     "CaseEventID": "actionFurtherEvidence",
@@ -1556,7 +1576,7 @@
     "ID": "scannedDocumentIncludeInBundle",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
-    "FieldDisplayOrder": 9
+    "FieldDisplayOrder": 11
   },
   {
     "CaseEventID": "attachScannedDocs",
@@ -2084,6 +2104,42 @@
     "FieldDisplayOrder": 3
   },
   {
+    "CaseEventID": "processReasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustmentsLetters",
+    "ListElementCode": "otherParty.to",
+    "ID": "reasonableAdjustmentsLettersOtherPartyTo",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "processReasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustmentsLetters",
+    "ListElementCode": "otherParty.sentOn",
+    "ID": "reasonableAdjustmentsLettersOtherPartySentOn",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 2
+  },
+  {
+    "CaseEventID": "processReasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustmentsLetters",
+    "ListElementCode": "otherParty.documentLink",
+    "ID": "reasonableAdjustmentsLettersOtherPartyDocumentLink",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 3
+  },
+  {
+    "CaseEventID": "processReasonableAdjustment",
+    "CaseFieldID": "reasonableAdjustmentsLetters",
+    "ListElementCode": "otherParty.reasonableAdjustmentStatus",
+    "ID": "reasonableAdjustmentsLettersOtherPartyStatus",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 4
+  },
+  {
     "CaseEventID": "updateReasonableAdjustment",
     "CaseFieldID": "reasonableAdjustments",
     "ListElementCode": "appellant.wantsReasonableAdjustment",
@@ -2099,7 +2155,6 @@
     "CaseFieldID": "reasonableAdjustments",
     "ListElementCode": "appellant.reasonableAdjustmentRequirements",
     "ID": "appeal",
-    "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND reasonableAdjustments.appellant.wantsReasonableAdjustment = \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 6,
@@ -2121,7 +2176,6 @@
     "CaseFieldID": "reasonableAdjustments",
     "ListElementCode": "appointee.reasonableAdjustmentRequirements",
     "ID": "appeal",
-    "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND reasonableAdjustments.appointee.wantsReasonableAdjustment = \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 8,
@@ -2143,7 +2197,6 @@
     "CaseFieldID": "reasonableAdjustments",
     "ListElementCode": "representative.reasonableAdjustmentRequirements",
     "ID": "appeal",
-    "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND reasonableAdjustments.representative.wantsReasonableAdjustment = \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 10,
@@ -2165,10 +2218,263 @@
     "CaseFieldID": "reasonableAdjustments",
     "ListElementCode": "jointParty.reasonableAdjustmentRequirements",
     "ID": "appeal",
-    "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND reasonableAdjustments.jointParty.wantsReasonableAdjustment = \"Yes\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 12,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "isAppointee",
+    "FieldShowCondition": "isAppointee = \"DONOTSHOW\"",
+    "ID": "otherPartyIsAppointee",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 13,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "name",
+    "FieldShowCondition": "isAppointee != \"Yes\"",
+    "ID": "otherPartyName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 14
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "name.firstName",
+    "ID": "otherPartyFirstName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 15
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "name.lastName",
+    "ID": "otherPartyLastName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 16
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "reasonableAdjustment",
+    "ID": "otherPartyReasonableAdjustment",
+    "FieldShowCondition": "isAppointee != \"Yes\"",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 17,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "reasonableAdjustment.wantsReasonableAdjustment",
+    "ID": "otherPartyWantsReasonableAdjustment",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 18,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "reasonableAdjustment.reasonableAdjustmentRequirements",
+    "ID": "otherPartyReasonableAdjustmentRequirements",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 19,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointee",
+    "FieldShowCondition": "isAppointee = \"Yes\"",
+    "ID": "otherPartyAppointee",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 20,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointee.name",
+    "ID": "otherPartyAppointeeName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 21,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointee.name.firstName",
+    "ID": "otherPartyAppointeeFirstName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 22
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointee.name.lastName",
+    "ID": "otherPartyLastName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 23
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointeeReasonableAdjustment",
+    "ID": "otherPartyAppointeeReasonableAdjustment",
+    "FieldShowCondition": "isAppointee = \"Yes\"",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 24,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointeeReasonableAdjustment.wantsReasonableAdjustment",
+    "ID": "otherPartyAppointeeWantsReasonableAdjustment",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 25,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointeeReasonableAdjustment.reasonableAdjustmentRequirements",
+    "ID": "otherPartyAppointeeReasonableAdjustmentRequirements",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 26,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointee.address",
+    "ID": "otherPartyAppointeeAddress",
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"DO NOT SHOW\"",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 27,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "appointee.contact",
+    "ID": "otherPartyAppointeeContact",
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"DO NOT SHOW\"",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 28,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "rep",
+    "ID": "otherPartyRep",
+    "FieldShowCondition": "otherParties.rep.hasRepresentative = \"Yes\"",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 29,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "rep.name",
+    "ID": "otherPartyRepName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 30,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "rep.name.firstName",
+    "ID": "otherPartyRepFirstName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 31
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "rep.name.lastName",
+    "ID": "otherPartyRepLastName",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 32
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "repReasonableAdjustment",
+    "ID": "otherPartyRepReasonableAdjustment",
+    "FieldShowCondition": "otherParties.rep.hasRepresentative = \"Yes\"",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 33,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "repReasonableAdjustment.wantsReasonableAdjustment",
+    "ID": "otherPartyRepWantsReasonableAdjustment",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 34,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "repReasonableAdjustment.reasonableAdjustmentRequirements",
+    "ID": "otherPartyRepReasonableAdjustmentRequirements",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 35,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "rep.address",
+    "ID": "otherPartyRepAddress",
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"DO NOT SHOW\"",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 36,
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "ListElementCode": "rep.contact",
+    "ID": "otherPartyRepContact",
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"DO NOT SHOW\"",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 37,
     "RetainHiddenValue": "Yes"
   },
   {
@@ -2469,7 +2775,7 @@
     "CaseEventID": "updateOtherPartyData",
     "CaseFieldID": "otherParties",
     "ListElementCode": "contact.email",
-    "ID": "otherPartyMobile",
+    "ID": "otherPartyEmail",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 14,
@@ -3190,11 +3496,21 @@
   {
     "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "otherParties",
+    "ListElementCode": "contact.email",
+    "ID": "otherPartyEmail",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 14,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "otherParties",
     "ListElementCode": "confidentialityRequired",
     "ID": "otherPartyConfidentialityRequired",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 14,
+    "FieldDisplayOrder": 15,
     "PageID": "otherPartyData"
   },
   {
@@ -3204,7 +3520,7 @@
     "ID": "otherPartyUnacceptableCustomerBehaviour",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 15,
+    "FieldDisplayOrder": 16,
     "PageID": "otherPartyData"
   },
   {
@@ -3214,7 +3530,7 @@
     "ID": "otherPartyRole",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 16,
+    "FieldDisplayOrder": 17,
     "PageID": "otherPartyData"
   },
   {
@@ -3224,7 +3540,7 @@
     "ID": "otherPartyRoleName",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 17,
+    "FieldDisplayOrder": 18,
     "PageID": "otherPartyData"
   },
   {
@@ -3234,7 +3550,7 @@
     "ID": "otherPartyRoleDescription",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
-    "FieldDisplayOrder": 18,
+    "FieldDisplayOrder": 19,
     "PageID": "otherPartyData"
   },
   {
@@ -4038,5 +4354,61 @@
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 46,
     "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "reissueDocument",
+    "CaseFieldID": "otherPartyOptions",
+    "ListElementCode": "otherPartyOptionName",
+    "ID": "otherPartyNameReissueDoc",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2021",
+    "FieldDisplayOrder": 47
+  },
+  {
+    "CaseEventID": "reissueDocument",
+    "CaseFieldID": "otherPartyOptions",
+    "ListElementCode": "otherPartyOptionId",
+    "ID": "otherPartyIdReissueDoc",
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"DO NOT SHOW\"",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2021",
+    "FieldDisplayOrder": 48
+  },
+  {
+    "CaseEventID": "reissueDocument",
+    "CaseFieldID": "otherPartyOptions",
+    "ListElementCode": "resendToOtherParty",
+    "ID": "otherPartyResendReissueDoc",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2021",
+    "FieldDisplayOrder": 49
+  },
+  {
+    "CaseEventID": "reissueFurtherEvidence",
+    "CaseFieldID": "otherPartyOptions",
+    "ListElementCode": "otherPartyOptionName",
+    "ID": "otherPartyOptionsNameReissueEv",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/12/2021",
+    "FieldDisplayOrder": 50
+  },
+  {
+    "CaseEventID": "reissueFurtherEvidence",
+    "CaseFieldID": "otherPartyOptions",
+    "ListElementCode": "resendToOtherParty",
+    "ID": "otherPartyOptionsResendReissueEv",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/12/2021",
+    "FieldDisplayOrder": 51
+  },
+  {
+    "CaseEventID": "reissueFurtherEvidence",
+    "CaseFieldID": "otherPartyOptions",
+    "ListElementCode": "otherPartyOptionId",
+    "ID": "otherPartyIdReissueEv",
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"DO NOT SHOW\"",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2021",
+    "FieldDisplayOrder": 52
   }
 ]

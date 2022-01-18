@@ -12,7 +12,7 @@
     "start": "node index.js",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
-    "highLevelDataSetup": "echo 'sh bin/before-data-setup-step.sh benefit $1 && ./gradlew highLevelDataSetup --args=$1 && sh bin/after-data-setup-step.sh' > ./temp.sh && sh ./temp.sh",
+    "highLevelDataSetup": "echo 'bash bin/before-data-setup-step.sh benefit $1 && ./gradlew highLevelDataSetup --args=$1 && sh bin/after-data-setup-step.sh' > ./temp.sh && sh ./temp.sh",
     "test:smoke": "echo smoke"
   },
   "dependencies": {
@@ -49,6 +49,7 @@
     "axios": "^0.21.2",
     "ws": "^7.4.6",
     "ansi-regex": "^5.0.1",
-    "json-schema": "^0.4.0"
+    "json-schema": "^0.4.0",
+    "follow-redirects": "1.14.7"
   }
 }

@@ -907,17 +907,6 @@
     "PageID": "1.0"
   },
   {
-    "CaseEventID": "caseUpdated",
-    "CaseFieldID": "otherParties",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\"",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 14,
-    "PageID": "1.0"
-  },
-  {
     "CaseEventID": "corDecision",
     "CaseFieldID": "decisionNotes",
     "CaseTypeID": "Benefit",
@@ -2469,6 +2458,42 @@
     "PageLabel": "Reissue document"
   },
   {
+    "CaseEventID": "reissueDocument",
+    "CaseFieldID": "appeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "[STATE]=\"doNotUse\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "reissueDocument",
+    "PageLabel": "Reissue document"
+  },
+  {
+    "CaseEventID": "reissueDocument",
+    "CaseFieldID": "otherPartyOptions",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "reissueDocument",
+    "FieldShowCondition": "showReissueToOtherPartyUiSection=\"Yes\"",
+    "PageLabel": "Reissue document"
+  },
+  {
+    "CaseEventID": "reissueDocument",
+    "CaseFieldID": "showReissueToOtherPartyUiSection",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/12/2021",
+    "FieldShowCondition": "resendToRepresentative=\"DoNotShow\"",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "PageID": "reissueDocument",
+    "PageLabel": "Reissue document"
+  },
+  {
     "CaseEventID": "reissueFurtherEvidence",
     "CaseFieldID": "reissueFurtherEvidenceDocument",
     "CaseTypeID": "Benefit",
@@ -2509,6 +2534,30 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
+    "PageID": "1.0",
+    "PageLabel": "Handle reissue further evidence"
+  },
+  {
+    "CaseEventID": "reissueFurtherEvidence",
+    "CaseFieldID": "otherPartyOptions",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/12/2021",
+    "FieldShowCondition": "showReissueToOtherPartyUiSection=\"Yes\"",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0",
+    "PageLabel": "Handle reissue further evidence"
+  },
+  {
+    "CaseEventID": "reissueFurtherEvidence",
+    "CaseFieldID": "showReissueToOtherPartyUiSection",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/12/2021",
+    "FieldShowCondition": "resendToRepresentative=\"DoNotShow\"",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
     "PageID": "1.0",
     "PageLabel": "Handle reissue further evidence"
   },
@@ -3466,7 +3515,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "updateNotListableNextState",
-    "PageLabel": "Review PHME request",
+    "PageLabel": "Review PHE request",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -3562,6 +3611,28 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
     "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\"",
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "showOtherPartyDetails",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "FieldShowCondition": "reasonableAdjustments=\"DoNotShow\"",
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND showOtherPartyDetails=\"Yes\"",
     "PageID": "1.0"
   },
   {
