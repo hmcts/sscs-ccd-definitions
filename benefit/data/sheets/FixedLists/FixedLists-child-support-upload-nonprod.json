@@ -1,5 +1,4 @@
 [
-  {"LiveFrom": "01/10/2021", "ID": "FL_editedEvidenceReason", "ListElementCode": "childSupportConfidentiality", "ListElement": "Child support - Confidentiality"},
-  {"LiveFrom": "01/10/2021", "ID": "ScannedDocumentType", "ListElementCode": "otherPartyHearingPreferences", "ListElement": "Other party hearing preferences"},
+   {"LiveFrom": "01/10/2021", "ID": "ScannedDocumentType", "ListElementCode": "otherPartyHearingPreferences", "ListElement": "Other party hearing preferences"},
   {"LiveFrom": "01/10/2021", "ID": "documentType", "ListElementCode": "otherPartyHearingPreferences", "ListElement": "Other party hearing preferences"}
 ]
