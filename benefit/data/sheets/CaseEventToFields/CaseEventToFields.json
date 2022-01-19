@@ -688,6 +688,16 @@
     "PageID": "1.0"
   },
   {
+    "CaseEventID": "appealCreated",
+    "CaseFieldID": "SearchCriteria",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 9,
+    "PageID": "1.0"
+  },
+  {
     "CaseEventID": "assignToJudge",
     "CaseFieldID": "assignedToDisabilityMember",
     "CaseTypeID": "Benefit",

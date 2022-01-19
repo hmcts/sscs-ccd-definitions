@@ -1,0 +1,20 @@
+[
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "hmcts-staff",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "GS_profile",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "hmcts-judiciary",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "GS_profile",
+    "Disabled": "N"
+  }
+]
