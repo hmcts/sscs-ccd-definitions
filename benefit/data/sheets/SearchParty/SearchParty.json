@@ -1,0 +1,22 @@
+[
+  {
+    "LiveFrom": "1/1/2022",
+    "CaseTypeID": "Benefit",
+    "SearchPartyName": "appeal.appellant.name.firstName, appeal.appellant.name.lastName",
+    "SearchPartyEmailAddress": "appeal.appellant.contact.email",
+    "SearchPartyAddressLine1": "appeal.appellant.address.line1",
+    "SearchPartyPostCode": "appeal.appellant.address.postcode",
+    "SearchPartyDoB": "appeal.appellant.identity.dob",
+    "SearchPartyDoD": "dateOfAppellantDeath"
+  },
+  {
+    "LiveFrom": "1/1/2022",
+    "CaseTypeID": "Benefit",
+    "SearchPartyName": "appeal.appointee.name.firstName, appeal.appointee.name.lastName",
+    "SearchPartyEmailAddress": "appeal.appointee.contact.email",
+    "SearchPartyAddressLine1": "appeal.appointee.address.line1",
+    "SearchPartyPostCode": "appeal.appointee.address.postcode",
+    "SearchPartyDoB": "appeal.appointee.identity.dob",
+    "SearchPartyDoD": ""
+  }
+]
