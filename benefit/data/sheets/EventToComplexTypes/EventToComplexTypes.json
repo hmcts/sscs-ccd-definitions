@@ -2806,7 +2806,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "role",
     "ID": "otherPartyRole",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 17,
     "PageID": "1.0"
@@ -2816,7 +2816,7 @@
     "CaseFieldID": "otherParties",
     "ListElementCode": "role.name",
     "ID": "otherPartyRoleName",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 17,
     "PageID": "1.0"
