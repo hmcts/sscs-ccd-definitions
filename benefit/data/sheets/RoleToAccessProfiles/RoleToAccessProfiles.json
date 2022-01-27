@@ -5,7 +5,7 @@
     "RoleName": "idam:caseworker-sscs-dwpresponsewriter",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker-sscs-ogdresponsewriter",
+    "AccessProfiles": "caseworker-sscs-dwpresponsewriter",
     "Disabled": "N"
   },
   {
