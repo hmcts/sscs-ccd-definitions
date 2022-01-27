@@ -1428,18 +1428,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "nonCompliant",
-    "Name": "Non-compliant appeal",
-    "Description": "Non-compliant appeal",
-    "DisplayOrder": 113,
-    "PostConditionState": "interlocutoryReviewState",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
     "ID": "dwpNotAbleToRegister",
     "Name": "Not able to register",
     "Description": "Case can't be registered on DRS",
@@ -1485,20 +1473,6 @@
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
-    "ID": "processAudioVideo",
-    "Name": "Process audio/video evidence",
-    "Description": "Issue a direction notice based on audio and video evidence",
-    "DisplayOrder": 118,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
   {
@@ -1914,20 +1888,6 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
-    "ID": "dwpSupplementaryResponse",
-    "Name": "Supplementary response",
-    "Description": "An additional response from DWP",
-    "DisplayOrder": 152,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N"
-  },
-  {
     "LiveFrom": "01/01/2017",
     "CaseTypeID": "Benefit",
     "ID": "SYSTEM_MAINTENANCE",
@@ -2100,29 +2060,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "uploadDocument",
-    "Name": "Upload document",
-    "Description": "Upload document",
-    "DisplayOrder": 166,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
-    "ID": "uploadDocumentFurtherEvidence",
-    "Name": "Upload document FE",
-    "Description": "Upload document Further Evidence",
-    "DisplayOrder": 167,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;voidState;withDwp;notListable",
-    "PostConditionState": "*",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
     "ID": "uploadDraftCorDocument",
     "Name": "Upload draft Cor document",
     "Description": "Upload cor document",
@@ -2141,36 +2078,6 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
-    "ID": "uploadFurtherEvidence",
-    "Name": "Upload further evidence",
-    "Description": "Upload further evidence for pre-valid interloc",
-    "DisplayOrder": 170,
-    "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState",
-    "PostConditionState": "*",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
-    "ID": "dwpUploadResponse",
-    "Name": "Upload response",
-    "Description": "Upload a response",
-    "DisplayOrder": 171,
-    "PreConditionState(s)": "withDwp",
-    "PostConditionState": "responseReceived",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N"
   },
   {
     "LiveFrom": "01/01/2018",
