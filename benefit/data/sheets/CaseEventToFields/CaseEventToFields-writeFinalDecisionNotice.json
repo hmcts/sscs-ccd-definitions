@@ -94,6 +94,20 @@
     "RetainHiddenValue": "Yes"
   },
   {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "otherPartyAttendedQuestions",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "writeFinalDecisionTypeOfHearing = \"faceToFace\" OR writeFinalDecisionTypeOfHearing = \"telephone\" OR writeFinalDecisionTypeOfHearing = \"video\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "typeOfHearing",
+    "PageLabel": "Type of hearing",
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
+  },
+  {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=typeOfAward",
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "pipWriteFinalDecisionDailyLivingQuestion",
