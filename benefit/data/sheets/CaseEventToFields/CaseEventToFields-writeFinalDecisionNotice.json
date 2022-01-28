@@ -97,7 +97,7 @@
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "otherPartyAttendedQuestions",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "COMPLEX",
     "FieldShowCondition": "writeFinalDecisionTypeOfHearing = \"faceToFace\" OR writeFinalDecisionTypeOfHearing = \"telephone\" OR writeFinalDecisionTypeOfHearing = \"video\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 3,
