@@ -212,7 +212,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "panelMemberNames",
     "PageLabel": "Panel members",
-    "FieldShowCondition": "appeal.benefitType.code!=\"ESA\" AND appeal.benefitType.code!=\"UC\"",
+    "FieldShowCondition": "appeal.benefitType.code!=\"ESA\" AND appeal.benefitType.code!=\"UC\" AND appeal.benefitType.code!=\"childSupport\" AND appeal.benefitType.code!=\"taxCredit\" AND appeal.benefitType.code!=\"guardiansAllowance\" AND appeal.benefitType.code!=\"taxFreeChildcare\" AND appeal.benefitType.code!=\"homeResponsibilitiesProtection\" AND appeal.benefitType.code!=\"childBenefit\" AND appeal.benefitType.code!=\"thirtyHoursFreeChildcare\" AND appeal.benefitType.code!=\"guaranteedMinimumPension\" AND appeal.benefitType.code!=\"nationalInsuranceCredits\"",
     "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\"",
     "ShowSummaryChangeOption": "Y",
     "RetainHiddenValue": "Yes"
@@ -226,6 +226,19 @@
     "PageDisplayOrder": 6,
     "PageFieldDisplayOrder": 2,
     "PageID": "panelMemberNames",
+    "FieldShowCondition": "appeal.benefitType.code!=\"childSupport\" AND appeal.benefitType.code!=\"taxCredit\" AND appeal.benefitType.code!=\"guardiansAllowance\" AND appeal.benefitType.code!=\"taxFreeChildcare\" AND appeal.benefitType.code!=\"homeResponsibilitiesProtection\" AND appeal.benefitType.code!=\"childBenefit\" AND appeal.benefitType.code!=\"thirtyHoursFreeChildcare\" AND appeal.benefitType.code!=\"guaranteedMinimumPension\" AND appeal.benefitType.code!=\"nationalInsuranceCredits\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "writeFinalDecisionFinanciallyQualifiedPanelMemberName",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 6,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "panelMemberNames",
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -237,7 +250,7 @@
     "PageDisplayOrder": 6,
     "PageFieldDisplayOrder": 3,
     "PageID": "panelMemberNames",
-    "FieldShowCondition": "appeal.benefitType.code=\"ESA\" OR appeal.benefitType.code=\"UC\"",
+    "FieldShowCondition": "appeal.benefitType.code=\"ESA\" OR appeal.benefitType.code=\"UC\" OR appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\"",
     "ShowSummaryChangeOption": "Y",
     "RetainHiddenValue": "Yes"
   },
