@@ -1,5 +1,4 @@
 [
-<<<<<<< HEAD
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "onlinePanel", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "caseReference", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "caseCreated", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
