@@ -1,6 +1,6 @@
 [
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "pcqId", "TabFieldDisplayOrder": 31},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-superuser", "TabID": "wa_fields", "TabLabel": "WA fields", "TabDisplayOrder": 29, "CaseFieldID": "caseNameHmctsInternal", "TabFieldDisplayOrder": 1},
+  {"LiveFrom": "", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "TabID": "wa_fields", "TabLabel": "WA fields", "TabDisplayOrder": 29, "CaseFieldID": "caseNameHmctsInternal", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "caseNameHmctsRestricted", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "caseNamePublic", "TabFieldDisplayOrder": 3},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "ogdType", "TabFieldDisplayOrder": 4},
