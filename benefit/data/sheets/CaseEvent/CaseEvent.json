@@ -1603,7 +1603,7 @@
     "Name": "Request time extension",
     "Description": "Request time extension",
     "DisplayOrder": 126,
-    "PreConditionState(s)": "interlocutoryReviewState;appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;notListable",
+    "PreConditionState(s)": "interlocutoryReviewState;appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;notListable;incompleteApplication;incompleteApplicationInformationReqsted",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public",
