@@ -83,7 +83,7 @@
   {
     "LiveFrom": "18/06/2019",
     "CaseTypeID": "Benefit",
-    "RoleName": "citizen",
+    "RoleName": "idam:citizen",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "citizen",
