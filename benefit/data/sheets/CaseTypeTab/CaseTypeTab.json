@@ -102,6 +102,7 @@
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "dwpDueDate", "TabFieldDisplayOrder": 36},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "panelDoctorSpecialism", "TabFieldDisplayOrder": 37},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "isFqpmRequired", "TabFieldDisplayOrder": 38, "FieldShowCondition": "isFqpmRequired!=\"\""},
+  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "SearchCriteria", "TabFieldDisplayOrder": 39},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "events_sscs", "TabLabel": "Case Progression", "TabDisplayOrder": 5, "CaseFieldID": "events", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "evidence_sscs", "TabLabel": "GAPS 2 Evidence", "TabDisplayOrder": 6, "CaseFieldID": "evidence", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "isInc5249521CaseLabel", "TabFieldDisplayOrder": 1, "FieldShowCondition": "isInc5249521 =\"Yes\""},
