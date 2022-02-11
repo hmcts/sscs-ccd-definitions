@@ -62,6 +62,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToReadyToList", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToReadyToList", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToReadyToList", "UserRole": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToReadyToList", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendTorRsponseReceived", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendTorRsponseReceived", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendTorRsponseReceived", "UserRole": "caseworker-sscs", "CRUD": "R"},
@@ -788,5 +789,9 @@
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseEventID": "confirmPanelComposition", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "updateOtherPartyData", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "updateOtherPartyData", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "updateOtherPartyData", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "updateOtherPartyData", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Benefit", "CaseEventID": "updateOtherPartyData", "UserRole": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Benefit", "CaseEventID": "updateOtherPartyData", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Benefit", "CaseEventID": "updateOtherPartyData", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"}
 ]
