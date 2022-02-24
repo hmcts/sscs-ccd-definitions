@@ -1178,7 +1178,7 @@
     "Name": "Issue adjournment notice",
     "Description": "Send an adjournment notice",
     "DisplayOrder": 93,
-    "PreConditionState(s)": "hearing",
+    "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
