@@ -88,5 +88,14 @@
     "ReadOnly": "N",
     "AccessProfiles": "citizen",
     "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "[CREATOR]",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "[CREATOR]",
+    "Disabled": "N"
   }
 ]
