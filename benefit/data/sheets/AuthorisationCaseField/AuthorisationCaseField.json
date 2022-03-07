@@ -1225,5 +1225,7 @@
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "caseName", "UserRole": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "caseManagementLocation", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "SearchCriteria", "UserRole": "caseworker-sscs", "CRUD": "R"},
-  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "SearchCriteria", "UserRole": "citizen", "CRUD": "R"}
+  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "SearchCriteria", "UserRole": "citizen", "CRUD": "R"},
+  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "addedDocuments", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "addedDocuments", "UserRole": "citizen", "CRUD": "CRUD"}
 ]

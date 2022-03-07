@@ -1422,7 +1422,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Documents to DWP",
+    "PageLabel": "Documents to FTA",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -1644,7 +1644,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Sent to DWP state"
+    "PageLabel": "Sent to FTA state"
   },
   {
     "CaseEventID": "subscriptionUpdated",
@@ -1674,7 +1674,7 @@
     "CaseFieldID": "otherParties",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
-    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\"",
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
@@ -2573,7 +2573,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Add dwp state"
+    "PageLabel": "Add FTA state"
   },
   {
     "CaseEventID": "dwpChallengeValidity",
@@ -3516,7 +3516,7 @@
     "LiveFrom": "01/01/2018",
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Upload Dwp documents"
+    "PageLabel": "Upload FTA documents"
   },
   {
     "CaseEventID": "manageAudioVideo",
@@ -3939,7 +3939,7 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
-    "FieldShowCondition": "appeal.benefitType.code = \"childSupport\"",
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\"",
     "PageID": "1.0"
   },
   {
