@@ -1,0 +1,4 @@
+[
+    {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "hearingRoute", "TabFieldDisplayOrder": 57},
+    {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "hearingState", "TabFieldDisplayOrder": 58}
+]
