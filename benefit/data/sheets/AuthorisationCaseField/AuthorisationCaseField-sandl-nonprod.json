@@ -1,3 +1,4 @@
 [
-
+    {"LiveFrom": "09/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "hearingRoute", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+    {"LiveFrom": "09/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "hearingState", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"}
 ]
