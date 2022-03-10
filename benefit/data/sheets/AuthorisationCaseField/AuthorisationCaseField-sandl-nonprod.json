@@ -1,4 +1,14 @@
 [
-    {"LiveFrom": "09/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "hearingRoute", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-    {"LiveFrom": "09/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "hearingState", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"}
+    {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseEventID": "hearingRoute", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+    {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseEventID": "hearingRoute", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+    {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseEventID": "hearingRoute", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
+    {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseEventID": "hearingRoute", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+    {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseEventID": "hearingRoute", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+
+    
+    {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseEventID": "hearingState", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+    {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseEventID": "hearingState", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+    {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseEventID": "hearingState", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
+    {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseEventID": "hearingState", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+    {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseEventID": "hearingState", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
 ]
