@@ -1,5 +1,5 @@
 [
-    {"LiveFrom": "08/03/2022", "ID": "FL_hearingRoute", "ListElementCode": "listAssist", "ListElement": "List Assist"},
-    {"LiveFrom": "08/03/2022", "ID": "FL_hearingRoute", "ListElementCode": "gaps", "ListElement": "Gaps"},
-    {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "hearingCreated", "ListElement": "Hearing Created"}
+    {"LiveFrom": "08/03/2022", "ID": "FL_hearingRoute", "ListElementCode": "LIST_ASSIST", "ListElement": "List Assist"},
+    {"LiveFrom": "08/03/2022", "ID": "FL_hearingRoute", "ListElementCode": "GAPS", "ListElement": "Gaps"},
+    {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "HEARING_CREATED", "ListElement": "Hearing Created"}
 ]
