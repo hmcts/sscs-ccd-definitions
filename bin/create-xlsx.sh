@@ -1,3 +1,4 @@
+
 #!/usr/bin/env bash
 
 TYPE=${1}
@@ -8,8 +9,6 @@ SHUTTERED=${5:-false}
 
 RUN_DIR=`pwd`
 COMMON_VERSION=$(cat ${RUN_DIR}/benefit/SSCS_COMMON_VERSION.txt)
-
-az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
 
 if [ -z "${VERSION}" ] || [ -z "${TYPE}" ] || [ -z "${ENV}" ]; then
     echo "Usage create-xlsx.sh [type] [version] [env]"
@@ -25,6 +24,8 @@ case ${TYPE} in
         echo "Type must be benefit or bulkscan"
         exit 1
 esac
+
+docker build -t hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION} -f ./docker/importer.Dockerfile ./${TYPE}
 
 if [ ${ENV} == "local" ]; then
     EM_CCD_ORCHESTRATOR_URL="http://host.docker.internal:4623"

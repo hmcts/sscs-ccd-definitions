@@ -1,0 +1,13 @@
+[
+  {"LiveFrom": "01/01/2018", "ID": "FL_hearingLocationType", "ListElementCode": "court", "ListElement": "Court"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_hearingLocationType", "ListElementCode": "cluster", "ListElement": "Cluster"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_hearingLocationType", "ListElementCode": "region", "ListElement": "Region"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_hearingRequirementType", "ListElementCode": "mustinc", "ListElement": "Must Include"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_hearingRequirementType", "ListElementCode": "exclude", "ListElement": "Must Exclude"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_hearingRequirementType", "ListElementCode": "optinc", "ListElement": "Optional Include"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_hearingType", "ListElementCode": "substantive", "ListElement": "Substantive"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_hearingType", "ListElementCode": "directionHearings", "ListElement": "Direction Hearings"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_hearingType", "ListElementCode": "chambersOutcome", "ListElement": "Chambers Outcome"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_hearingPriorityType", "ListElementCode": "high", "ListElement": "High Priority"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_hearingPriorityType", "ListElementCode": "normal", "ListElement": "Normal Priority"}
+]

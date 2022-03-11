@@ -1,0 +1,7 @@
+[
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "autoListFlag", "Label": "Will this case be Auto Listed?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hearingsInWelshFlag", "Label": "Is this case to be heard in Welsh?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "additionalSecurityFlag", "Label": "Is additional security needed?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sensitiveFlag", "Label": "Is this case sensitive?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hmcHearings", "Label": "HMC Hearings", "FieldType": "Collection", "FieldTypeParameter": "hmcHearing", "SecurityClassification": "PUBLIC"}
+]
