@@ -1,0 +1,128 @@
+[
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-dwpresponsewriter",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs-dwpresponsewriter",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-systemupdate",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs-systemupdate",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-clerk",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs-clerk",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-judge",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs-judge",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-panelmember",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs-panelmember",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-superuser",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs-superuser",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-registrar",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs-registrar",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-anonymouscitizen",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs-anonymouscitizen",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-callagent",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs-callagent",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-bulkscan",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs-bulkscan",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-teamleader",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs-teamleader",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:citizen",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "citizen",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "[CREATOR]",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "[CREATOR]",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs",
+    "Disabled": "N"
+  }
+]
