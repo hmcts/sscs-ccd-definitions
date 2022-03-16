@@ -29,6 +29,24 @@
   {
     "LiveFrom": "18/06/2019",
     "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-judge",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs-judge",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-panelmember",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs-panelmember",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-superuser",
     "Authorisation": "",
     "ReadOnly": "N",
@@ -96,6 +114,15 @@
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "[CREATOR]",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs",
     "Disabled": "N"
   }
 ]
