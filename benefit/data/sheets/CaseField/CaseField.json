@@ -379,6 +379,7 @@
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "hasUnprocessedAudioVideoEvidence", "Label": "Has unprocessed Audio/Video evidence", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "showWorkCapabilityAssessmentPage", "Label": "Show the Work Capability Assessment page?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "panelDoctorSpecialism", "Label": "Panel doctor specialism", "FieldType": "FixedList", "FieldTypeParameter": "FL_panelDoctorSpecialism","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "22/03/2022", "CaseTypeID": "Benefit", "ID": "secondPanelDoctorSpecialism", "Label": "Second Panel doctor specialism ", "FieldType": "FixedList", "FieldTypeParameter": "FL_panelDoctorSpecialism","SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "selectHearingDetails", "Label": "Select hearing", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "hearingRecording", "Label": "Hearing recording", "FieldType": "HearingRecording", "HintText": "You can only upload MP3 and MP4 files up to 500MB", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "sscsHearingRecordings", "Label": "Hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "sscsHearingRecordingDetails", "SecurityClassification": "PUBLIC"},
