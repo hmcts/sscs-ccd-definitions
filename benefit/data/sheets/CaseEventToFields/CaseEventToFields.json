@@ -4177,5 +4177,27 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Confirm panel composition"
+  },
+  {
+    "CaseEventID": "panelDoctorSpecialismAmend",
+    "CaseFieldID": "panelDoctorSpecialism",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "24/03/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Amend Panel Doctor Specialism"
+  },
+  {
+    "CaseEventID": "panelDoctorSpecialismAmend",
+    "CaseFieldID": "secondPanelDoctorSpecialism",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "24/03/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "PageLabel": "Amend Panel Doctor Specialism"
   }
 ]
