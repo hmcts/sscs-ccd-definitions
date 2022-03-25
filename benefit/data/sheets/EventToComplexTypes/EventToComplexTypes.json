@@ -4618,5 +4618,31 @@
     "FieldDisplayOrder": 20,
     "PageID": "1.0",
     "FieldShowCondition": "appeal.hearingOptions.wantsToAttend=\"Yes\" AND appeal.hearingOptions.scheduleHearing=\"Yes\""
+  },
+  {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "otherPartyAttendedQuestions",
+    "ListElementCode": "otherPartyName",
+    "LiveFrom": "01/01/2018",
+    "DisplayContext": "READONLY",
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "typeOfHearing",
+    "PageLabel": "Type of hearing",
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\""
+  },
+  {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "otherPartyAttendedQuestions",
+    "ListElementCode": "attendedOtherParty",
+    "LiveFrom": "01/01/2018",
+    "DisplayContext": "MANDATORY",
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "typeOfHearing",
+    "PageLabel": "Type of hearing",
+    "ShowSummaryChangeOption": "Y",
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\""
   }
 ]
