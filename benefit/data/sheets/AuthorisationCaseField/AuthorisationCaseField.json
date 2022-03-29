@@ -1222,6 +1222,7 @@
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "caseManagementCategory", "AccessProfile": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "CaseAccessCategory", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "CaseAccessCategory", "AccessProfile": "citizen", "CRUD": "CRUD"},
+  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "CaseAccessCategory", "AccessProfile": "caseworker-sscs-dwpresponsewriter", "CRUD": "CRUD"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "showOtherPartyDetails", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "caseName", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "CaseFieldID": "caseName", "AccessProfile": "citizen", "CRUD": "CRUD"},

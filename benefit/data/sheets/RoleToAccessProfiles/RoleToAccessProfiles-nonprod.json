@@ -3,10 +3,20 @@
     "LiveFrom": "18/06/2019",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-dwpresponsewriter",
-    "CaseAccessCategory": "taxCredit,guardiansAllowance",
+    "CaseAccessCategories": "personalIndependencePayment,carer'sAllowance,jobseeker’sAllowance,employmentAndSupportAllowance,disabilityLivingAllowance,universalCredit,industrialDeathBenefit,pensionCredit,retirementPension,childSupport,bereavementBenefit,industrialInjuriesDisablement,maternityAllowance,socialFund,incomeSupport,bereavementSupportPaymentScheme,attendanceAllowance",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "caseworker-sscs-dwpresponsewriter",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/06/2019",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-hmrcresponsewriter",
+    "CaseAccessCategories": "taxCredit,guardiansAllowance,tax-FreeChildcare,homeResponsibilitiesProtection,childBenefit,30HoursFreeChildcare,guaranteedMinimumPension,nationalInsuranceCredits",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker-sscs-hmrcresponsewriter",
     "Disabled": "N"
   },
   {
@@ -121,6 +131,7 @@
     "LiveFrom": "18/06/2019",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs",
+    "CaseAccessCategories": "doNotRemove",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "caseworker-sscs",
