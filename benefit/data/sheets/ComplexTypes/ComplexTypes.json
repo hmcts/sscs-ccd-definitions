@@ -453,6 +453,8 @@
   {"LiveFrom": "18/12/2021", "ID": "OtherPartyOption", "ListElementCode": "otherPartyOptionName", "FieldType": "Text", "ElementLabel": "Other party name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/12/2021", "ID": "OtherPartyOption", "ListElementCode": "otherPartyOptionId", "FieldType": "Text", "ElementLabel": "Other party id", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/12/2021", "ID": "OtherPartyOption", "ListElementCode": "resendToOtherParty", "FieldType": "YesOrNo", "ElementLabel": "Reissue", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/12/2021", "ID": "otherPartyAttendedQuestion", "ListElementCode": "otherPartyName", "FieldType": "Text", "ElementLabel": "Other party name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/12/2021", "ID": "otherPartyAttendedQuestion", "ListElementCode": "attendedOtherParty", "FieldType": "YesOrNo", "ElementLabel": "Other party attend the hearing?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/12/2021", "ID": "CaseManagementLocation", "ListElementCode": "region", "FieldType": "Text", "ElementLabel": "Region", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/12/2021", "ID": "CaseManagementLocation", "ListElementCode": "baseLocation", "FieldType": "Text", "ElementLabel": "Base Location", "SecurityClassification": "PUBLIC"}
 ]
