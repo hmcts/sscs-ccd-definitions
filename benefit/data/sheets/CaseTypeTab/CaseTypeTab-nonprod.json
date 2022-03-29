@@ -5,7 +5,7 @@
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "caseNamePublic", "TabFieldDisplayOrder": 3},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "ogdType", "TabFieldDisplayOrder": 4},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "caseManagementCategory", "TabFieldDisplayOrder": 5},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "caseAccessCategory", "TabFieldDisplayOrder": 6},
+  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "CaseAccessCategory", "TabFieldDisplayOrder": 6},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "SearchCriteria", "TabFieldDisplayOrder": 7},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "caseManagementLocation", "TabFieldDisplayOrder": 40},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "dwpIsOfficerAttending", "TabFieldDisplayOrder": 9}
