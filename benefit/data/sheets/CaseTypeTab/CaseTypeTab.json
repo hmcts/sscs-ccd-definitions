@@ -259,13 +259,5 @@
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "language_sscs", "TabLabel": "Welsh", "TabDisplayOrder": 25, "CaseFieldID": "languagePreferenceWelsh", "TabFieldDisplayOrder": 1, "TabShowCondition": "languagePreferenceWelsh=\"Yes\""},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "language_sscs", "TabLabel": "Welsh", "TabDisplayOrder": 26, "CaseFieldID": "translationWorkOutstanding", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "hearingRecordingsInfo_sscs", "TabLabel": "Hearing Recordings", "TabDisplayOrder": 27, "CaseFieldID": "sscsHearingRecordings", "TabFieldDisplayOrder": 2},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "other_party_sscs", "TabLabel": "Other Party Details", "TabDisplayOrder": 28, "CaseFieldID": "otherParties", "TabFieldDisplayOrder": 1},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingRoute", "TabFieldDisplayOrder": 5},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingState", "TabFieldDisplayOrder": 6},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_clerk", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingRoute", "TabFieldDisplayOrder": 5},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_clerk", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingState", "TabFieldDisplayOrder": 6},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_registrar", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingRoute", "TabFieldDisplayOrder": 5},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_registrar", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingState", "TabFieldDisplayOrder": 6},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingRoute", "TabFieldDisplayOrder": 5},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingState", "TabFieldDisplayOrder": 6}
+  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "other_party_sscs", "TabLabel": "Other Party Details", "TabDisplayOrder": 28, "CaseFieldID": "otherParties", "TabFieldDisplayOrder": 1}
 ]
