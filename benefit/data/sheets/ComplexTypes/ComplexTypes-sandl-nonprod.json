@@ -1,0 +1,3 @@
+[
+    {"LiveFrom": "10/03/2022", "ID": "regionalProcessingCenter", "ListElementCode": "hearingRoute", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingRoute", "ElementLabel": "Hearing Route", "SecurityClassification": "PUBLIC"}
+]
