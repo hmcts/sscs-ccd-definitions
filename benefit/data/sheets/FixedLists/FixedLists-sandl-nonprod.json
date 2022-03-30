@@ -1,9 +1,0 @@
-[
-    {"LiveFrom": "08/03/2022", "ID": "FL_hearingRoute", "ListElementCode": "listAssist", "ListElement": "List Assist"},
-    {"LiveFrom": "08/03/2022", "ID": "FL_hearingRoute", "ListElementCode": "gaps", "ListElement": "Gaps"},
-    {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "createHearing", "ListElement": "Create Hearing"},
-    {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "updatedCase", "ListElement": "Case Updated"},
-    {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "updateHearing", "ListElement": "Update Hearing"},
-    {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "cancelHearing", "ListElement": "Cancel Hearing"},
-    {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "partyNotified", "ListElement": "Parties Notified"}
-]

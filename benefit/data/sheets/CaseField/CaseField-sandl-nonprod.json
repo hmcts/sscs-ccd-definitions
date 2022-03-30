@@ -1,5 +1,0 @@
-[
-    {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "hearingRoute", "Label": "Hearing Route", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingRoute", "SecurityClassification": "PUBLIC"},
-    {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "hearingState", "Label": "Hearing State", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingState", "SecurityClassification": "PUBLIC"}
-]
-  
