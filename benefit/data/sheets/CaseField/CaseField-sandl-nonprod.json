@@ -1,0 +1,4 @@
+[
+  {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "activeHearingId", "Label": "Hearing Route", "FieldType": "Number","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "activeHearingVersionNumber", "Label": "Hearing State", "FieldType": "Number", "SecurityClassification": "PUBLIC"}
+]
