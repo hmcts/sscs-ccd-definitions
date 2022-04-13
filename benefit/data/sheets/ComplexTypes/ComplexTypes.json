@@ -456,5 +456,6 @@
   {"LiveFrom": "18/12/2021", "ID": "otherPartyAttendedQuestion", "ListElementCode": "otherPartyName", "FieldType": "Text", "ElementLabel": "Other party name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/12/2021", "ID": "otherPartyAttendedQuestion", "ListElementCode": "attendedOtherParty", "FieldType": "YesOrNo", "ElementLabel": "Other party attend the hearing?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/12/2021", "ID": "CaseManagementLocation", "ListElementCode": "region", "FieldType": "Text", "ElementLabel": "Region", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/12/2021", "ID": "CaseManagementLocation", "ListElementCode": "baseLocation", "FieldType": "Text", "ElementLabel": "Base Location", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "18/12/2021", "ID": "CaseManagementLocation", "ListElementCode": "baseLocation", "FieldType": "Text", "ElementLabel": "Base Location", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/03/2022", "ID": "regionalProcessingCenter", "ListElementCode": "hearingRoute", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingRoute", "ElementLabel": "Hearing Route", "SecurityClassification": "PUBLIC"}
 ]
