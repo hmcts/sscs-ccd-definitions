@@ -49,6 +49,8 @@
     "ws": "^7.4.6",
     "ansi-regex": "^5.0.1",
     "json-schema": "^0.4.0",
-    "follow-redirects": "1.14.8"
+    "follow-redirects": "1.14.8",
+    "async": "2.6.4",
+    "moment": "2.29.3"
   }
 }
