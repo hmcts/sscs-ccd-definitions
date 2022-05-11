@@ -2909,12 +2909,24 @@
     "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "panelDoctorSpecialism",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 20,
     "PageID": "1.0",
-    "FieldShowCondition": "appeal.benefitType.code=\"industrialInjuriesDisablement\"",
+    "FieldShowCondition": "appeal.benefitType.code=\"industrialInjuriesDisablement\" OR appeal.benefitType.code=\"industrialDeathBenefit\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "secondPanelDoctorSpecialism",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "22/03/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 21,
+    "PageID": "1.0",
+    "FieldShowCondition": "appeal.benefitType.code=\"industrialInjuriesDisablement\" OR appeal.benefitType.code=\"industrialDeathBenefit\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -4165,5 +4177,27 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Confirm panel composition"
+  },
+  {
+    "CaseEventID": "panelDoctorSpecialismAmend",
+    "CaseFieldID": "panelDoctorSpecialism",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "24/03/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Amend Panel Doctor Specialism"
+  },
+  {
+    "CaseEventID": "panelDoctorSpecialismAmend",
+    "CaseFieldID": "secondPanelDoctorSpecialism",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "24/03/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "PageLabel": "Amend Panel Doctor Specialism"
   }
 ]
