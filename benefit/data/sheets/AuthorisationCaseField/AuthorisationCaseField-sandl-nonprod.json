@@ -13,5 +13,8 @@
   {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "overrideDuration", "UserRole": "caseworker-sscs-registrar", "CRUD": "R"},
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingEpimsId", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "R"},
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingEpimsId", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingEpimsId", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingEpimsId", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingDate", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "R"},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingDate", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingDate", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
 ]
