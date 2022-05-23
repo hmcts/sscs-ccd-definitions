@@ -188,6 +188,17 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "dwpIsOfficerAttending",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "10/10/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 16,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "elementsDisputedList",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
