@@ -265,6 +265,5 @@
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingRoute", "TabFieldDisplayOrder": 8},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_clerk", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingRoute", "TabFieldDisplayOrder": 7},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_registrar", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingRoute", "TabFieldDisplayOrder": 7},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingRoute", "TabFieldDisplayOrder": 8},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "dwpIsOfficerAttending", "TabFieldDisplayOrder": 9}
+  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingRoute", "TabFieldDisplayOrder": 8}
 ]

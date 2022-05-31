@@ -15,7 +15,6 @@
   {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "dwpState", "Label": "State", "DisplayOrder": 6},
   {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "caseCreated", "Label": "Case created date", "DisplayOrder": 7},
   {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "dateSentToDwp", "Label": "FTA referral date", "DisplayOrder": 8, "ResultsOrdering": "1:ASC"},
-  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "dwpIsOfficerAttending", "Label": "Is the Presenting officer attending", "DisplayOrder": 9},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "interlocReviewState", "Label": "Interlocutory review state", "DisplayOrder": 3},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "urgentCase", "Label": "Is case urgent?", "DisplayOrder": 4},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "interlocReferralDate", "Label": "Interloc referral date", "DisplayOrder": 5, "ResultsOrdering": "1:ASC"},

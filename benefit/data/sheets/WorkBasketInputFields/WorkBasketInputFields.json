@@ -25,7 +25,6 @@
   {"LiveFrom": "11/11/2021", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "issueCode", "Label": "Issue code", "DisplayOrder": 7},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "dwpFurtherEvidenceStates", "Label": "FTA evidence received state", "DisplayOrder": 8},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "createdInGapsFrom", "Label": "Is a new digital case?", "DisplayOrder": 9},
-  {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "dwpIsOfficerAttending", "Label": "Is the Presenting officer attending", "DisplayOrder": 10},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "interlocReviewState", "Label": "Review state", "DisplayOrder": 1},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "urgentCase", "Label": "Is case urgent?", "DisplayOrder": 2},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "reservedToJudge", "Label": "Reserved to", "DisplayOrder": 3},
@@ -60,6 +59,5 @@
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "translationWorkOutstanding", "Label": "Translation outstanding", "DisplayOrder": 14},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "reasonableAdjustmentsOutstanding", "Label": "Alternative letter format required", "DisplayOrder": 15},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "hasUnprocessedAudioVideoEvidence", "Label": "Does case have unprocessed audio/video evidence?", "DisplayOrder": 16},
-  {"LiveFrom": "16/12/2021", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "dwpDueDate", "Label": "FTA response due date", "DisplayOrder": 17},
-  {"LiveFrom": "10/10/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "dwpIsOfficerAttending", "Label": "Is the Presenting officer attending", "DisplayOrder": 18}
+  {"LiveFrom": "16/12/2021", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "dwpDueDate", "Label": "FTA response due date", "DisplayOrder": 17}
 ]
