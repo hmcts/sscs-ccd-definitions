@@ -37,6 +37,5 @@
   {"LiveFrom": "11/06/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "dateSentToDwp", "Label": "FTA referral date", "DisplayOrder": 7},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "interlocReviewState", "Label": "Interlocutory review state", "DisplayOrder": 8},
   {"LiveFrom": "25/09/2019", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "linkedCasesBoolean", "Label": "Has related appeal(s)?", "DisplayOrder": 9},
-  {"LiveFrom": "25/09/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "[LAST_STATE_MODIFIED_DATE]", "Label": "Date of state change", "DisplayOrder": 10, "ResultsOrdering": "1:ASC"},
-  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "dwpIsOfficerAttending", "Label": "Is the Presenting officer attending", "DisplayOrder": 11}
+  {"LiveFrom": "25/09/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "[LAST_STATE_MODIFIED_DATE]", "Label": "Date of state change", "DisplayOrder": 10, "ResultsOrdering": "1:ASC"}
 ]
