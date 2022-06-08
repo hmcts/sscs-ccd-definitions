@@ -1331,7 +1331,7 @@
     "CaseFieldID": "appeal",
     "ListElementCode": "rep.name.title",
     "ID": "appealRepNameTitle",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "10/12/2021",
     "FieldDisplayOrder": 4,
     "PageID": "1.0"
@@ -1341,7 +1341,7 @@
     "CaseFieldID": "appeal",
     "ListElementCode": "rep.name.firstName",
     "ID": "appealRepNameFirstName",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "10/12/2021",
     "FieldDisplayOrder": 5,
     "PageID": "1.0"
@@ -1361,7 +1361,7 @@
     "CaseFieldID": "appeal",
     "ListElementCode": "rep.name.lastName",
     "ID": "appealRepNameLastName",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "10/12/2021",
     "FieldDisplayOrder": 7,
     "PageID": "1.0"
