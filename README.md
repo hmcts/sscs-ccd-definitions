@@ -6,7 +6,6 @@
 
 
 
-
 To build a local version of the CCD Importer image:
 
     cd benefit
@@ -16,6 +15,10 @@ To generate a local AAT version of CCD def
 
     cd ../
     ./bin/create-xlsx.sh benefit dev aat
+
+To generate a local DEMO version of CCD def
+
+    ./bin/create-xlsx.sh benefit dev demo
 
 To generate a local PROD version of CCD def
 
