@@ -95,5 +95,17 @@
   {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "draftArchived", "UserRole": "caseworker-sscs-pcqextractor", "CRUD": "R"},
   {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "draftArchived", "UserRole": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "notListable", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "notListable", "UserRole": "citizen", "CRUD": "R"}
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "notListable", "UserRole": "citizen", "CRUD": "R"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "handlingError", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "handlingError", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "handlingError", "UserRole": "citizen", "CRUD": "R"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "handlingError", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "handlingError", "UserRole": "caseworker-sscs-judge", "CRUD": "RU"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "handlingError", "UserRole": "caseworker-sscs-registrar", "CRUD": "RU"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "withdrawnRevisedStruckOutLapsedState", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "withdrawnRevisedStruckOutLapsedState", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "withdrawnRevisedStruckOutLapsedState", "UserRole": "citizen", "CRUD": "R"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "withdrawnRevisedStruckOutLapsedState", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "withdrawnRevisedStruckOutLapsedState", "UserRole": "caseworker-sscs-judge", "CRUD": "RU"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "withdrawnRevisedStruckOutLapsedState", "UserRole": "caseworker-sscs-registrar", "CRUD": "RU"}
 ]
