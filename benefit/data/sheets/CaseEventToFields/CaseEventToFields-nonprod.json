@@ -1,0 +1,13 @@
+[
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideDuration",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/06/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  }
+]

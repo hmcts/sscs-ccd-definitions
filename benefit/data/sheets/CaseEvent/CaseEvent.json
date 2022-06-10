@@ -2496,6 +2496,27 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "01/06/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "updateListingRequirements",
+    "Name": "Update Listing Requirements",
+    "Description": "Update Listing Requirements for a case",
+    "DisplayOrder": 195,
+    "PreConditionState(s)": "notListable;withDwp;responseReceived",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "listingError",
+    "Name": "Listing Error",
+    "Description": "A listing Error has occurred",
+    "DisplayOrder": 195,
+    "PostConditionState": "handlingError",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
     "ID": "listingError",
