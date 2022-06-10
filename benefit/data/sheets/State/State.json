@@ -14,6 +14,6 @@
   {"LiveFrom": "19/03/2019", "CaseTypeID": "Benefit", "ID": "validAppeal", "Name": "Valid Appeal", "Description": "A fully valid appeal", "DisplayOrder": 13, "TitleDisplay": "# ${[CASE_REFERENCE]}: ${appeal.appellant.name.lastName}"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "voidState", "Name": "Void cases", "Description": "Cases that have been voided", "DisplayOrder": 14, "TitleDisplay": "# ${[CASE_REFERENCE]}: ${appeal.appellant.name.lastName}"},
   {"LiveFrom": "19/03/2019", "CaseTypeID": "Benefit", "ID": "withDwp", "Name": "With FTA", "Description": "Cases with FTA", "DisplayOrder": 15, "TitleDisplay": "# ${[CASE_REFERENCE]}: ${appeal.appellant.name.lastName}"},
-  {"LiveFrom": "19/03/2019", "CaseTypeID": "Benefit", "ID": "handlingError", "Name": "Handling Error", "Description": "Issue with List assist Hearing", "DisplayOrder": 16, "TitleDisplay": "# ${[CASE_REFERENCE]}: ${appeal.appellant.name.lastName}"},
+  {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "ID": "handlingError", "Name": "Handling Error", "Description": "Issue with List assist Hearing", "DisplayOrder": 16, "TitleDisplay": "# ${[CASE_REFERENCE]}: ${appeal.appellant.name.lastName}"},
   {"LiveFrom": "19/03/2019", "CaseTypeID": "Benefit", "ID": "withdrawnRevisedStruckOutLapsedState", "Name": "Withdrawn, Revised, Struck Out or Lapsed", "Description": "Hearing Withdrawn, Revised, Struck Out or Lapsed", "DisplayOrder": 17, "TitleDisplay": "# ${[CASE_REFERENCE]}: ${appeal.appellant.name.lastName}"}
 ]
