@@ -2498,6 +2498,16 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "listingError",
+    "Name": "Listing Error",
+    "Description": "A listing Error has occurred",
+    "DisplayOrder": 195,
+    "PostConditionState": "handlingError",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "createWithDwpTestCase",
     "Name": "Create with FTA test test",
     "Description": "Create a test case in withDwp state",
