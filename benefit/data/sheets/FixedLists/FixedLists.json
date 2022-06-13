@@ -751,5 +751,12 @@
   {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "updatedCase", "ListElement": "Case Updated"},
   {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "updateHearing", "ListElement": "Update Hearing"},
   {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "cancelHearing", "ListElement": "Cancel Hearing"},
-  {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "partyNotified", "ListElement": "Parties Notified"}
+  {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "partyNotified", "ListElement": "Parties Notified"},
+  {"LiveFrom": "13/06/2022", "ID": "FL_hearingStatus", "ListElementCode": "AWAITING_LISTING", "ListElement": "Hearing is Awaiting a listing"},
+  {"LiveFrom": "13/06/2022", "ID": "FL_hearingStatus", "ListElementCode": "LISTED", "ListElement": "Hearing has been Listed"},
+  {"LiveFrom": "13/06/2022", "ID": "FL_hearingStatus", "ListElementCode": "EXCEPTION", "ListElement": "Hearing has an Exception"},
+  {"LiveFrom": "13/06/2022", "ID": "FL_hearingStatus", "ListElementCode": "CANCELLED", "ListElement": "Hearing has been Cancelled"},
+  {"LiveFrom": "13/06/2022", "ID": "FL_hearingStatus", "ListElementCode": "AWAITING_ACTUALS", "ListElement": "Hearing is Awaiting Actuals"},
+  {"LiveFrom": "13/06/2022", "ID": "FL_hearingStatus", "ListElementCode": "COMPLETED", "ListElement": "Hearing is Completed"},
+  {"LiveFrom": "13/06/2022", "ID": "FL_hearingStatus", "ListElementCode": "ADJOURNED", "ListElement": "Hearing is Adjourned"}
 ]
