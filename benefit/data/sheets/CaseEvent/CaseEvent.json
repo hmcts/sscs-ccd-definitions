@@ -2516,13 +2516,14 @@
     "SecurityClassification": "Public"
   },
   {
-    "LiveFrom": "01/01/2018",
+    "LiveFrom": "10/06/2022",
     "CaseTypeID": "Benefit",
-    "ID": "createTestCase",
-    "Name": "Create test case",
-    "Description": "Create a test case in validAppealCreated state",
-    "DisplayOrder": 999,
-    "PostConditionState": "validAppeal",
+    "ID": "listingError",
+    "Name": "Listing Error",
+    "Description": "A listing Error has occurred",
+    "DisplayOrder": 195,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "handlingError",
     "SecurityClassification": "Public"
   }
 ]
