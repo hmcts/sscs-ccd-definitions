@@ -1,0 +1,5 @@
+[
+    {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "CaseEventID": "listingError", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+    {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "CaseEventID": "listingError", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"}
+]
+  
