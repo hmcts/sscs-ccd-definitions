@@ -897,13 +897,24 @@
   },
   {
     "CaseEventID": "caseUpdated",
-    "CaseFieldID": "jointPartyIdentity",
+    "CaseFieldID": "jointPartyContact",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "jointParty=\"Yes\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 13,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "jointPartyIdentity",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "jointParty=\"Yes\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 14,
     "PageID": "1.0"
   },
   {
