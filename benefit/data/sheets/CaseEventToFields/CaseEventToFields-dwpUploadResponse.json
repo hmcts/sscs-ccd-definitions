@@ -377,7 +377,7 @@
     "CaseFieldID": "jointPartyContact",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "LiveFrom": "19/11/2019",
+    "LiveFrom": "16/06/2022",
     "PageDisplayOrder": 8,
     "PageFieldDisplayOrder": 1,
     "PageID": "jointPartyContact",
