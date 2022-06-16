@@ -1,4 +1,6 @@
 [
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "workBasketHearingEpimsId", "Label": "Hearing Date", "DisplayOrder": 7},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "workBasketHearingEpimsId", "Label": "Hearing Date", "DisplayOrder": 7}
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "workBasketHearingEpimsId", "Label": "Hearing Date", "DisplayOrder": 7},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "workBasketHearingDate", "Label": "Hearing Date", "DisplayOrder": 8},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "workBasketHearingDate", "Label": "Hearing Date", "DisplayOrder": 8}
 ]
