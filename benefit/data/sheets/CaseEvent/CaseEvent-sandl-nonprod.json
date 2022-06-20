@@ -5,7 +5,7 @@
     "ID": "updateListingRequirements",
     "Name": "Update Listing Requirements",
     "Description": "Update Listing Requirements for a case",
-    "DisplayOrder": 195,
+    "DisplayOrder": 196,
     "PreConditionState(s)": "notListable;withDwp;responseReceived",
     "PostConditionState": "*",
     "SecurityClassification": "Public"
