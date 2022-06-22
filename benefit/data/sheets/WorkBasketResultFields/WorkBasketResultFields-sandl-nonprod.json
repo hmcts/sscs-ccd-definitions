@@ -1,3 +1,5 @@
 [
-  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "dwpIsOfficerAttending", "Label": "Is the Presenting officer attending", "DisplayOrder": 11}
+  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "dwpIsOfficerAttending", "Label": "Is the Presenting officer attending", "DisplayOrder": 11},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "workBasketHearingDate", "Label": "Hearing Date", "DisplayOrder": 18},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "workBasketHearingDate", "Label": "Hearing Date", "DisplayOrder": 18}
 ]
