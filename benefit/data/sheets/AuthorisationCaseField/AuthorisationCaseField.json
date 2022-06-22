@@ -1251,5 +1251,7 @@
   {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "hearingState", "UserRole": "caseworker-sscs-registrar", "CRUD": "CRUD"},
   {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "hearingState", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "CRUD"},
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingDate", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingDate", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingDate", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingDate", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingDate", "UserRole": "citizen", "CRUD": "CRUD"}
 ]
