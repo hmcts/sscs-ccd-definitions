@@ -425,5 +425,6 @@
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "ID": "caseManagementLocation", "Label": "Case management location", "FieldType": "CaseManagementLocation", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "ID": "SearchCriteria ", "Label": "Search Criteria", "FieldType": "SearchCriteria ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "hearingRoute", "Label": "Hearing Route", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingRoute", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "hearingState", "Label": "Hearing State", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingState", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "hearingState", "Label": "Hearing State", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingState", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "ID": "workBasketHearingDate", "Label": "Hearing Date", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
 ]
