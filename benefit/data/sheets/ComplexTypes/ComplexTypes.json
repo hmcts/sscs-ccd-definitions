@@ -147,6 +147,8 @@
   {"LiveFrom": "01/01/2018", "ID": "regionalProcessingCenter", "ListElementCode": "phoneNumber", "FieldType": "Text", "ElementLabel": "Phone Number", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "regionalProcessingCenter", "ListElementCode": "faxNumber", "FieldType": "Text", "ElementLabel": "Fax Number", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "regionalProcessingCenter", "ListElementCode": "email", "FieldType": "Text", "ElementLabel": "Email", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/03/2022", "ID": "regionalProcessingCenter", "ListElementCode": "hearingRoute", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingRoute", "ElementLabel": "Hearing Route", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "22/06/2022", "ID": "regionalProcessingCenter", "ListElementCode": "epimsId", "FieldType": "Text", "ElementLabel": "Epims ID", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "documentType", "FieldType": "FixedList", "FieldTypeParameter": "documentType", "ElementLabel": "Type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "documentEmailContent", "FieldType": "TextArea", "ElementLabel": "Email content", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "sscsDocument", "ListElementCode": "documentLink", "FieldType": "Document", "ElementLabel": "Original document URL", "SecurityClassification": "PUBLIC"},
@@ -466,6 +468,5 @@
   {"LiveFrom": "18/12/2021", "ID": "otherPartyAttendedQuestion", "ListElementCode": "otherPartyName", "FieldType": "Text", "ElementLabel": "Other party name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/12/2021", "ID": "otherPartyAttendedQuestion", "ListElementCode": "attendedOtherParty", "FieldType": "YesOrNo", "ElementLabel": "Other party attend the hearing?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/12/2021", "ID": "CaseManagementLocation", "ListElementCode": "region", "FieldType": "Text", "ElementLabel": "Region", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "18/12/2021", "ID": "CaseManagementLocation", "ListElementCode": "baseLocation", "FieldType": "Text", "ElementLabel": "Base Location", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "10/03/2022", "ID": "regionalProcessingCenter", "ListElementCode": "hearingRoute", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingRoute", "ElementLabel": "Hearing Route", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "18/12/2021", "ID": "CaseManagementLocation", "ListElementCode": "baseLocation", "FieldType": "Text", "ElementLabel": "Base Location", "SecurityClassification": "PUBLIC"}
 ]
