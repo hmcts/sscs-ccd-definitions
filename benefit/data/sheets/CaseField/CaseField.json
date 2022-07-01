@@ -16,6 +16,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "regionalProcessingCenter", "Label": "RegionalProcessingCenter", "FieldType": "regionalProcessingCenter", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sscsDocument", "Label": "Case documents", "FieldType": "Collection", "FieldTypeParameter": "sscsDocument", "RegularExpression": "No", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "draftSscsFurtherEvidenceDocument", "Label": "Further evidence  documents", "FieldType": "Collection", "FieldTypeParameter": "sscsFurtherEvidenceDoc", "RegularExpression": "No", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "addedDocuments", "Label": "Added documents", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "panel", "Label": "Panel", "FieldType": "panel", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "evidencePresent", "Label": "Evidence Present", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "onlinePanel", "Label": "Panel", "FieldType": "panel", "SecurityClassification": "PUBLIC"},
@@ -182,8 +183,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "writeFinalDecisionTypeOfHearing", "Label": "What type of hearing was held?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_pipTypeOfHearing", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "writeFinalDecisionPresentingOfficerAttendedQuestion", "Label": "Did a Presenting Officer attend on behalf of the Respondent?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "writeFinalDecisionAppellantAttendedQuestion", "Label": "Did the appellant attend the hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "otherPartyAttendedQuestions", "Label": "Other party", "FieldType": "Collection", "FieldTypeParameter": "otherPartyAttendedQuestion", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "writeFinalDecisionDisabilityQualifiedPanelMemberName", "Label": "Name of the Disability Qualified Panel Member (DQPM)", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "writeFinalDecisionMedicallyQualifiedPanelMemberName", "Label": "Name of the Medically Qualified Panel Member (MQPM)", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "writeFinalDecisionFinanciallyQualifiedPanelMemberName", "Label": "Name of the Financially Qualified Panel Member (FQPM)", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "writeFinalDecisionOtherPanelMemberName", "Label": "Other", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipWriteFinalDecisionDailyLivingQuestion", "Label": "What are you considering awarding for daily living?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_rateAwarded", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "pipWriteFinalDecisionComparedToDWPDailyLivingQuestion", "Label": "How would this new award compare to the original FTA award for daily living?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_comparedToDWP", "SecurityClassification": "PUBLIC"},
@@ -266,6 +269,7 @@
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "previousState", "Label": "Previous State", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointParty", "Label": "Is there a joint party on this case?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "jointPartyName", "Label": "Joint party name", "FieldType": "jointPartyName", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "ID": "jointPartyId", "Label": "Joint party id", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyIdentity", "Label": "Joint party identity", "FieldType": "identity", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyAddressSameAsAppellant", "Label": "Is their address the same as the appellant's?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "jointPartyAddress", "Label": "Joint party address", "FieldType": "address", "SecurityClassification": "PUBLIC"},
@@ -378,6 +382,7 @@
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "hasUnprocessedAudioVideoEvidence", "Label": "Has unprocessed Audio/Video evidence", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "showWorkCapabilityAssessmentPage", "Label": "Show the Work Capability Assessment page?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "panelDoctorSpecialism", "Label": "Panel doctor specialism", "FieldType": "FixedList", "FieldTypeParameter": "FL_panelDoctorSpecialism","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "22/03/2022", "CaseTypeID": "Benefit", "ID": "secondPanelDoctorSpecialism", "Label": "Second Panel doctor specialism", "FieldType": "FixedList", "FieldTypeParameter": "FL_panelDoctorSpecialism","SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "selectHearingDetails", "Label": "Select hearing", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "hearingRecording", "Label": "Hearing recording", "FieldType": "HearingRecording", "HintText": "You can only upload MP3 and MP4 files up to 500MB", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "sscsHearingRecordings", "Label": "Hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "sscsHearingRecordingDetails", "SecurityClassification": "PUBLIC"},
@@ -418,6 +423,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "caseAccessCategory", "Label": "Case access category", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "caseName", "Label": "Case name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "ID": "caseManagementLocation", "Label": "Case management location", "FieldType": "CaseManagementLocation", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "ID": "SearchCriteria ", "Label": "Search Criteria", "FieldType": "SearchCriteria ", "SecurityClassification": "PUBLIC"}
-
+  {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "ID": "SearchCriteria ", "Label": "Search Criteria", "FieldType": "SearchCriteria ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "hearingRoute", "Label": "Hearing Route", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingRoute", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "hearingState", "Label": "Hearing State", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingState", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "ID": "workBasketHearingDate", "Label": "Hearing Date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "ID": "workBasketHearingEpimsId", "Label": "Hearing Venue", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingEpimsId", "SecurityClassification": "PUBLIC"}
 ]

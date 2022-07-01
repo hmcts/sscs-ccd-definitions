@@ -422,6 +422,19 @@
     "ShowEventNotes": "N"
   },
   {
+    "LiveFrom": "24/03/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "panelDoctorSpecialismAmend",
+    "Name": "Amend panel doctor specialism",
+    "Description": "Ability to amend panel doctor specialism",
+    "DisplayOrder": 37,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "EventEnablingCondition": "appeal.benefitType.code=\"industrialInjuriesDisablement\" OR appeal.benefitType.code=\"industrialDeathBenefit\"",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "N"
+  },
+  {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
     "ID": "appealCreated",
@@ -2485,31 +2498,42 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "createWithDwpTestCase",
-    "Name": "Create with FTA test test",
-    "Description": "Create a test case in withDwp state",
-    "DisplayOrder": 997,
-    "PostConditionState": "withDwp",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
-    "ID": "createResponseReceivedTestCase",
-    "Name": "Create response received test",
-    "Description": "Create a test case in responseReceived state",
-    "DisplayOrder": 998,
-    "PostConditionState": "responseReceived",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
     "ID": "createTestCase",
     "Name": "Create test case",
     "Description": "Create a test case in validAppealCreated state",
     "DisplayOrder": 999,
     "PostConditionState": "validAppeal",
+    "SecurityClassification": "Public"
+  },
+  {
+      "LiveFrom": "01/01/2018",
+      "CaseTypeID": "Benefit",
+      "ID": "createWithDwpTestCase",
+      "Name": "Create with FTA test test",
+      "Description": "Create a test case in withDwp state",
+      "DisplayOrder": 997,
+      "PostConditionState": "withDwp",
+      "SecurityClassification": "Public"
+  },
+  {
+      "LiveFrom": "01/01/2018",
+      "CaseTypeID": "Benefit",
+      "ID": "createResponseReceivedTestCase",
+      "Name": "Create response received test",
+      "Description": "Create a test case in responseReceived state",
+      "DisplayOrder": 998,
+      "PostConditionState": "responseReceived",
+      "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "10/06/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "listingError",
+    "Name": "Listing Error",
+    "Description": "A listing Error has occurred",
+    "DisplayOrder": 195,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "handlingError",
     "SecurityClassification": "Public"
   }
 ]

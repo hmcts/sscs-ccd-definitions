@@ -1,8 +1,8 @@
 apiVersion: v2
 description: SSCS - CCD Definitions
 name: sscs-ccd-definitions
-version: 0.0.4
+version: 0.0.5
 dependencies:
   - name: nodejs
-    version: ~2.4.0
+    version: ~2.4.2
     repository: '@hmctspublic'
