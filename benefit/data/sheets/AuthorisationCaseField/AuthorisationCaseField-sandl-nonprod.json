@@ -9,9 +9,14 @@
   {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "dwpIsOfficerAttending", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingDate", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "R"},
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingEpimsId", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "R"},
-  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "overrideDuration", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
-  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "overrideDuration", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "overrideDuration", "UserRole": "caseworker-sscs-judge", "CRUD": "R"},
-  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "overrideDuration", "UserRole": "caseworker-sscs-registrar", "CRUD": "R"},
-  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "overrideDuration", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
+  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "overrideFields", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "overrideFields", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "overrideFields", "UserRole": "caseworker-sscs-judge", "CRUD": "R"},
+  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "overrideFields", "UserRole": "caseworker-sscs-registrar", "CRUD": "R"},
+  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "overrideFields", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "defaultOverrideFields", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
+  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "defaultOverrideFields", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "defaultOverrideFields", "UserRole": "caseworker-sscs-judge", "CRUD": "R"},
+  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "defaultOverrideFields", "UserRole": "caseworker-sscs-registrar", "CRUD": "R"},
+  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "defaultOverrideFields", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
 ]
