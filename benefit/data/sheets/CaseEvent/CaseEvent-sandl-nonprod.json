@@ -1,0 +1,13 @@
+[
+  {
+    "LiveFrom": "01/06/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "updateListingRequirements",
+    "Name": "Update Listing Requirements",
+    "Description": "Update Listing Requirements for a case",
+    "DisplayOrder": 196,
+    "PreConditionState(s)": "notListable;withDwp;responseReceived",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
+  }
+]
