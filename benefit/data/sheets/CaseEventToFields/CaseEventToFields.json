@@ -119,7 +119,7 @@
     "CaseEventID": "addRepresentative",
     "CaseFieldID": "appeal",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "COMPLEX",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
@@ -1422,7 +1422,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Documents to DWP",
+    "PageLabel": "Documents to FTA",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -1644,7 +1644,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Sent to DWP state"
+    "PageLabel": "Sent to FTA state"
   },
   {
     "CaseEventID": "subscriptionUpdated",
@@ -1654,6 +1654,30 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Subscriptions"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "appeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "[STATE]=\"doNotUse\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "PageLabel": "Subscriptions"
+  },
+  {
+    "CaseEventID": "subscriptionUpdated",
+    "CaseFieldID": "otherParties",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
     "PageID": "1.0",
     "PageLabel": "Subscriptions"
   },
@@ -1705,34 +1729,12 @@
     "CaseEventID": "updateHearingType",
     "CaseFieldID": "appeal",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "COMPLEX",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Select hearing type"
-  },
-  {
-    "CaseEventID": "updateHearingType",
-    "CaseFieldID": "relistingReason",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
-    "PageID": "1.0",
-    "PageLabel": "Relisting reason"
-  },
-  {
-    "CaseEventID": "updateHearingType",
-    "CaseFieldID": "isScottishCase",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
-    "PageID": "1.0",
-    "PageLabel": "Is Scottish Case"
   },
   {
     "CaseEventID": "updateIncompleteApplication",
@@ -2434,6 +2436,42 @@
     "PageLabel": "Reissue document"
   },
   {
+    "CaseEventID": "reissueDocument",
+    "CaseFieldID": "appeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "[STATE]=\"doNotUse\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "reissueDocument",
+    "PageLabel": "Reissue document"
+  },
+  {
+    "CaseEventID": "reissueDocument",
+    "CaseFieldID": "otherPartyOptions",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "reissueDocument",
+    "FieldShowCondition": "showReissueToOtherPartyUiSection=\"Yes\"",
+    "PageLabel": "Reissue document"
+  },
+  {
+    "CaseEventID": "reissueDocument",
+    "CaseFieldID": "showReissueToOtherPartyUiSection",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/12/2021",
+    "FieldShowCondition": "resendToRepresentative=\"DoNotShow\"",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "PageID": "reissueDocument",
+    "PageLabel": "Reissue document"
+  },
+  {
     "CaseEventID": "reissueFurtherEvidence",
     "CaseFieldID": "reissueFurtherEvidenceDocument",
     "CaseTypeID": "Benefit",
@@ -2478,6 +2516,30 @@
     "PageLabel": "Handle reissue further evidence"
   },
   {
+    "CaseEventID": "reissueFurtherEvidence",
+    "CaseFieldID": "otherPartyOptions",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/12/2021",
+    "FieldShowCondition": "showReissueToOtherPartyUiSection=\"Yes\"",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0",
+    "PageLabel": "Handle reissue further evidence"
+  },
+  {
+    "CaseEventID": "reissueFurtherEvidence",
+    "CaseFieldID": "showReissueToOtherPartyUiSection",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/12/2021",
+    "FieldShowCondition": "resendToRepresentative=\"DoNotShow\"",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "PageID": "1.0",
+    "PageLabel": "Handle reissue further evidence"
+  },
+  {
     "CaseEventID": "adminAppealWithdrawn",
     "CaseFieldID": "previewDocument",
     "CaseTypeID": "Benefit",
@@ -2511,7 +2573,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Add dwp state"
+    "PageLabel": "Add FTA state"
   },
   {
     "CaseEventID": "dwpChallengeValidity",
@@ -2847,12 +2909,24 @@
     "CaseEventID": "hmctsResponseReviewed",
     "CaseFieldID": "panelDoctorSpecialism",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 20,
     "PageID": "1.0",
-    "FieldShowCondition": "appeal.benefitType.code=\"industrialInjuriesDisablement\"",
+    "FieldShowCondition": "appeal.benefitType.code=\"industrialInjuriesDisablement\" OR appeal.benefitType.code=\"industrialDeathBenefit\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "hmctsResponseReviewed",
+    "CaseFieldID": "secondPanelDoctorSpecialism",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "22/03/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 21,
+    "PageID": "1.0",
+    "FieldShowCondition": "appeal.benefitType.code=\"industrialInjuriesDisablement\" OR appeal.benefitType.code=\"industrialDeathBenefit\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -3431,7 +3505,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "updateNotListableNextState",
-    "PageLabel": "Review PHME request",
+    "PageLabel": "Review PHE request",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -3454,7 +3528,7 @@
     "LiveFrom": "01/01/2018",
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Upload Dwp documents"
+    "PageLabel": "Upload FTA documents"
   },
   {
     "CaseEventID": "manageAudioVideo",
@@ -3527,6 +3601,28 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
     "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\"",
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "showOtherPartyDetails",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "FieldShowCondition": "reasonableAdjustments=\"DoNotShow\"",
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateReasonableAdjustment",
+    "CaseFieldID": "otherParties",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "FieldShowCondition": "reasonableAdjustmentChoice = \"alternativeLetterFormat\" AND showOtherPartyDetails=\"Yes\"",
     "PageID": "1.0"
   },
   {
@@ -3798,16 +3894,16 @@
     "PageLabel": "Request hearing recording"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=selectHearing",
     "CaseEventID": "actionHearingRecordingRequest",
-    "CaseFieldID": "processHearingRecordingRequests",
+    "CaseFieldID": "selectHearingDetails",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "PageLabel": "Please review the hearing recordings"
+    "PageID": "selectHearing",
+    "PageLabel": "Action hearing recording request"
   },
   {
     "CaseEventID": "actionHearingRecordingRequest",
@@ -3817,10 +3913,10 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
-    "PageID": "1.0",
-    "FieldShowCondition": "processHearingRecordingRequests=\"doNotUse\"",
+    "PageID": "selectHearing",
+    "FieldShowCondition": "processHearingRecordingRequest=\"doNotUse\"",
     "ShowSummaryChangeOption": "N",
-    "PageLabel": "Please review the hearing recordings"
+    "PageLabel": "Action hearing recording request"
   },
   {
     "CaseEventID": "actionHearingRecordingRequest",
@@ -3830,10 +3926,33 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
-    "PageID": "1.0",
-    "FieldShowCondition": "processHearingRecordingRequests=\"doNotUse\"",
+    "PageID": "selectHearing",
+    "FieldShowCondition": "processHearingRecordingRequest=\"doNotUse\"",
     "ShowSummaryChangeOption": "N",
+    "PageLabel": "Action hearing recording request"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=validateHearingRecordingRequest",
+    "CaseEventID": "actionHearingRecordingRequest",
+    "CaseFieldID": "processHearingRecordingRequest",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
     "PageLabel": "Please review the hearing recordings"
+  },
+  {
+    "CaseEventID": "actionHearingRecordingRequest",
+    "CaseFieldID": "otherPartyHearingRecordingReqUi",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\"",
+    "PageID": "1.0"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
@@ -4025,5 +4144,60 @@
     "PageID": "rip1Doc",
     "FieldShowCondition": "isRip1Doc = \"Yes\"",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "manageScannedDocuments",
+    "CaseFieldID": "scannedDocuments",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Manage unprocessed correspondence"
+  },
+  {
+    "CaseEventID": "updateOtherPartyData",
+    "CaseFieldID": "otherParties",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Update other party data"
+  },
+  {
+    "CaseEventID": "confirmPanelComposition",
+    "CaseFieldID": "isFqpmRequired",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/11/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Confirm panel composition"
+  },
+  {
+    "CaseEventID": "panelDoctorSpecialismAmend",
+    "CaseFieldID": "panelDoctorSpecialism",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "24/03/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Amend Panel Doctor Specialism"
+  },
+  {
+    "CaseEventID": "panelDoctorSpecialismAmend",
+    "CaseFieldID": "secondPanelDoctorSpecialism",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "24/03/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "PageLabel": "Amend Panel Doctor Specialism"
   }
 ]

@@ -1,0 +1,13 @@
+[
+  {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "TU", "ListElement": "TU"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "RO", "ListElement": "RO"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "DS", "ListElement": "DS"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_issueCodes", "ListElementCode": "DK", "ListElement": "DK"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_issueCodesUc", "ListElementCode": "TU", "ListElement": "TU"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_issueCodesUc", "ListElementCode": "RO", "ListElement": "RO"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_issueCodesUc", "ListElementCode": "DS", "ListElement": "DS"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_issueCodesUc", "ListElementCode": "DK", "ListElement": "DK"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "C.B.O (HMRC)", "ListElement": "C.B.O (HMRC)"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_dwpRegionalCentre", "ListElementCode": "TCO Preston Appeals Team", "ListElement": "TCO Preston Appeals Team"},
+  {"LiveFrom": "01/01/2018", "ID": "documentType", "ListElementCode": "sscs5", "ListElement": "SSCS5"}
+]
