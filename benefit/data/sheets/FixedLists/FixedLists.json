@@ -912,5 +912,6 @@
   {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "574546", "ListElement": "Barnsley Law Courts"},
   {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "239985", "ListElement": "Ashford House"},
   {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "816964", "ListElement": "Anchorage House"},
-  {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "540049", "ListElement": "Aldershot Justice Centre"}
+  {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "540049", "ListElement": "Aldershot Justice Centre"},
+  {"LiveFrom": "04/07/2022", "ID": "FL_hearingRoute", "ListElementCode": "listAssist", "ListElement": "List Assist"}
 ]
