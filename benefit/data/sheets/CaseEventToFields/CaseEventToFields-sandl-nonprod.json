@@ -1,10 +1,10 @@
 [
   {
-    "LiveFrom": "01/06/2022",
+    "LiveFrom": "01/07/2022",
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideDuration",
+    "CaseFieldID": "overrideFields",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
