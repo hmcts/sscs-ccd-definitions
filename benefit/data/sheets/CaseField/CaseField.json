@@ -420,7 +420,6 @@
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "ID": "showOtherPartyDetails", "Label": "Show other party details", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "ogdType", "Label": "OGD type", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "caseManagementCategory", "Label": "Case management category", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "caseAccessCategory", "Label": "Case access category", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "CaseAccessCategory", "Label": "Case access category", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "caseName", "Label": "Case name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/11/2021", "CaseTypeID": "Benefit", "ID": "caseManagementLocation", "Label": "Case management location", "FieldType": "CaseManagementLocation", "SecurityClassification": "PUBLIC"},
