@@ -1,0 +1,104 @@
+[
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "duration",
+    "ID": "updateListingRequirementsOverrideFieldsDuration",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/07/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "reservedToJudge.isReservedToMember",
+    "ID": "updateListingRequirementsOverrideFieldsReservedToJudgeReservedMember",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/07/2022",
+    "FieldDisplayOrder": 2,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "reservedToJudge.reservedMember",
+    "ID": "updateListingRequirementsOverrideFieldsReservedToJudgeReservedMember",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "overrideFields.reservedToJudge.isReservedToMember = \"Yes\"",
+    "LiveFrom": "01/07/2022",
+    "FieldDisplayOrder": 3,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "appellantInterpreter.isInterpreterWanted",
+    "ID": "updateListingRequirementsOverrideFieldsAppellantInterpreterIsInterpreterWanted",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/07/2022",
+    "FieldDisplayOrder": 4,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "appellantInterpreter.interpreterLanguage",
+    "ID": "updateListingRequirementsOverrideFieldsAppellantInterpreterInterpreterLanguage",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "overrideFields.appellantInterpreter.isInterpreterWanted = \"Yes\"",
+    "LiveFrom": "01/07/2022",
+    "FieldDisplayOrder": 5,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "appellantHearingChannel",
+    "ID": "updateListingRequirementsOverrideFieldsAppellantHearingChannel",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/07/2022",
+    "FieldDisplayOrder": 6,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "hearingWindow",
+    "ID": "updateListingRequirementsOverrideFieldsHearingWindow",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/07/2022",
+    "FieldDisplayOrder": 7,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "autoList",
+    "ID": "updateListingRequirementsOverrideFieldsAutoList",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/07/2022",
+    "FieldDisplayOrder": 8,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "hearingVenueEpimsIds",
+    "ID": "updateListingRequirementsOverrideFieldsHearingVenueEpimsIds",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/07/2022",
+    "FieldDisplayOrder": 9,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "poToAttend",
+    "ID": "updateListingRequirementsOverrideFieldsPoToAttend",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/07/2022",
+    "FieldDisplayOrder": 10,
+    "PageID": "1.0"
+  }
+]
