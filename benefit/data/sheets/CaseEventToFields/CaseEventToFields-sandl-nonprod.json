@@ -10,5 +10,18 @@
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
     "PageLabel": "Select Override Values"
+  },
+  {
+    "LiveFrom": "06/07/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "amendReasons",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "PageShowCondition": "[STATE]=\"readyToList\"",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "2.0",
+    "ShowSummaryChangeOption": "Y",
+    "PageLabel": "Amend Reason"
   }
 ]
