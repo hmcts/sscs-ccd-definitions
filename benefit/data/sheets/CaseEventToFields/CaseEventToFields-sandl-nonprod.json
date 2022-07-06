@@ -4,10 +4,11 @@
     "CaseEventID": "updateListingRequirements",
     "CaseFieldID": "overrideFields",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "COMPLEX",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "PageLabel": "Select Override Values"
   }
 ]
