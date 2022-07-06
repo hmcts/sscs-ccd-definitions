@@ -12,6 +12,8 @@ if [ -z "${TYPE}" ] || [ -z "${ENV}" ]; then
     exit 1
 fi
 
+ORIGINAL_ENV=${ENV}
+
 if [[ ${ENV} == "preview" ]]; then
     ENV="aat"
 fi
@@ -28,7 +30,7 @@ echo "SUBSCRIPTION is $SUBSCRIPTION"
 #az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
 #LATEST_TAG=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --subscription 8999dec3-0104-4a27-94ee-6588559729d1 --orderby time_desc -o tsv --query "[]")
 
-if [[ ${BRANCH_NAME} == "staging" ]]; then
+if [[ $ORIGINAL_ENV == "preview" || ${BRANCH_NAME} == "staging" ]]; then
   LATEST_TAG="$BRANCH_NAME-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
 elif [[ $BRANCH_NAME == "master" || $BRANCH_NAME == "demo" || $BRANCH_NAME == "ithc" || $BRANCH_NAME == "perftest" ]]; then
    LATEST_TAG="aat-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
@@ -133,7 +135,7 @@ if [[ ${TYPE} == "benefit" ]]; then
   LANGUAGES=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/languages.txt)
 fi
 
-UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
+UPPERCASE_ENV=$(printf '%s\n' "${ORIGINAL_ENV}" | awk '{ print toupper($0) }')
 
 if [[ ${ENV} == "prod" || ${LIKE_PROD} == "prod" ]]; then
   excludedFilenamePatterns="-e *-nonprod.json,*-shuttered.json"
