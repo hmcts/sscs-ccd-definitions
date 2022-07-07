@@ -9,5 +9,16 @@
     "PreConditionState(s)": "notListable;withDwp;responseReceived",
     "PostConditionState": "*",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "04/07/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "addCaseOutcome",
+    "Name": "Add case outcome",
+    "Description": "Add a case outcome",
+    "DisplayOrder": 14,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
   }
 ]
