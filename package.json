@@ -50,7 +50,7 @@
     "ansi-regex": "^5.0.1",
     "json-schema": "^0.4.0",
     "follow-redirects": "1.14.8",
-    "async": "2.6.4",
+    "async": "3.0.1",
     "moment": "2.29.3"
   }
 }
