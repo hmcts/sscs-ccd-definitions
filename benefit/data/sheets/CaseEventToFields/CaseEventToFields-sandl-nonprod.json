@@ -17,7 +17,7 @@
     "CaseFieldID": "amendReasons",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "PageShowCondition": "[STATE]=\"readyToList\"",
+    "FieldShowCondition": "[STATE]=\"readyToList\"",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
     "PageID": "2.0",
