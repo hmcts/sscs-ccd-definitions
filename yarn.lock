@@ -345,7 +345,7 @@ async@^3.2.4:
     lodash "^4.17.14"
 
 async@~3.2.4:
-  version "1.0.0"
+  version "3.2.4"
   resolved "https://registry.yarnpkg.com/async/-/async-1.0.0.tgz#f8fc04ca3a13784ade9e1641af98578cfbd647a9"
   integrity sha1-+PwEyjoTeErenhZBr5hXjPvWR6k=
 
