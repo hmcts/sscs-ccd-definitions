@@ -9,5 +9,7 @@
     {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_clerk", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "overrideDuration", "TabFieldDisplayOrder": 7},
     {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_registrar", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "overrideDuration", "TabFieldDisplayOrder": 7},
     {"LiveFrom": "", "CaseTypeID": "Benefit","TabID": "outcome_superuser", "TabLabel": "Outcome", "TabDisplayOrder": 30, "CaseFieldID": "caseOutcome", "TabFieldDisplayOrder": 1},
-    {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "outcome_superuser", "TabLabel": "Outcome", "TabDisplayOrder": 30, "CaseFieldID": "didPoAttend", "TabFieldDisplayOrder": 2}
+    {"LiveFrom": "", "CaseTypeID": "Benefit","TabID": "outcome_sscs", "TabLabel": "Outcome", "TabDisplayOrder": 30, "CaseFieldID": "caseOutcome", "TabFieldDisplayOrder": 1},
+    {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "outcome_superuser", "TabLabel": "Outcome", "TabDisplayOrder": 30, "CaseFieldID": "didPoAttend", "TabFieldDisplayOrder": 2},
+    {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "outcome_sscs", "TabLabel": "Outcome", "TabDisplayOrder": 30, "CaseFieldID": "didPoAttend", "TabFieldDisplayOrder": 2}
 ]
