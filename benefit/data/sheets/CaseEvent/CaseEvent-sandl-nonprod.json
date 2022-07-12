@@ -17,7 +17,7 @@
     "Name": "Add case outcome",
     "Description": "Add a case outcome",
     "DisplayOrder": 14,
-    "PreConditionState(s)": "*",
+    "PreConditionState(s)": "dormantAppealState;hearing;readyToList",
     "PostConditionState": "*",
     "SecurityClassification": "Public"
   }
