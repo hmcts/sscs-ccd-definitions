@@ -747,6 +747,7 @@
   {"LiveFrom": "01/09/2021", "ID": "FL_roles", "ListElementCode": "Receiving parent", "ListElement": "Receiving parent"},
   {"LiveFrom": "01/09/2021", "ID": "FL_roles", "ListElementCode": "Other", "ListElement": "Other"},
   {"LiveFrom": "08/03/2022", "ID": "FL_hearingRoute", "ListElementCode": "gaps", "ListElement": "Gaps"},
+  {"LiveFrom": "04/07/2022", "ID": "FL_hearingRoute", "ListElementCode": "listAssist", "ListElement": "List Assist"}
   {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "createHearing", "ListElement": "Create Hearing"},
   {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "updatedCase", "ListElement": "Case Updated"},
   {"LiveFrom": "08/03/2022", "ID": "FL_hearingState", "ListElementCode": "updateHearing", "ListElement": "Update Hearing"},
@@ -912,6 +913,5 @@
   {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "574546", "ListElement": "Barnsley Law Courts"},
   {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "239985", "ListElement": "Ashford House"},
   {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "816964", "ListElement": "Anchorage House"},
-  {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "540049", "ListElement": "Aldershot Justice Centre"},
-  {"LiveFrom": "04/07/2022", "ID": "FL_hearingRoute", "ListElementCode": "listAssist", "ListElement": "List Assist"}
+  {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "540049", "ListElement": "Aldershot Justice Centre"}
 ]
