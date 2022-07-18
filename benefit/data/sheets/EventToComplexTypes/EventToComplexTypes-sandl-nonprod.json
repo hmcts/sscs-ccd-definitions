@@ -64,8 +64,8 @@
   {
     "CaseEventID": "updateListingRequirements",
     "CaseFieldID": "overrideFields",
-    "ListElementCode": "hearingWindow",
-    "ID": "updateListingRequirementsOverrideFieldsHearingWindow",
+    "ListElementCode": "autoList",
+    "ID": "updateListingRequirementsOverrideFieldsAutoList",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/07/2022",
     "FieldDisplayOrder": 7,
@@ -74,8 +74,8 @@
   {
     "CaseEventID": "updateListingRequirements",
     "CaseFieldID": "overrideFields",
-    "ListElementCode": "autoList",
-    "ID": "updateListingRequirementsOverrideFieldsAutoList",
+    "ListElementCode": "hearingVenueEpimsIds.hearingVenueEpimsId",
+    "ID": "updateListingRequirementsOverrideFieldsHearingVenueEpimsIds",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/07/2022",
     "FieldDisplayOrder": 8,
@@ -84,8 +84,8 @@
   {
     "CaseEventID": "updateListingRequirements",
     "CaseFieldID": "overrideFields",
-    "ListElementCode": "hearingVenueEpimsIds",
-    "ID": "updateListingRequirementsOverrideFieldsHearingVenueEpimsIds",
+    "ListElementCode": "poToAttend",
+    "ID": "updateListingRequirementsOverrideFieldsPoToAttend",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/07/2022",
     "FieldDisplayOrder": 9,
@@ -94,8 +94,28 @@
   {
     "CaseEventID": "updateListingRequirements",
     "CaseFieldID": "overrideFields",
-    "ListElementCode": "poToAttend",
-    "ID": "updateListingRequirementsOverrideFieldsPoToAttend",
+    "ListElementCode": "hearingWindow.firstDateTimeMustBe",
+    "ID": "updateListingRequirementsOverrideFieldsHearingWindowFirstDateTimeMustBe",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/07/2022",
+    "FieldDisplayOrder": 10,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "hearingWindow.dateRangeStart",
+    "ID": "updateListingRequirementsOverrideFieldsHearingWindowdateRangeStart",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/07/2022",
+    "FieldDisplayOrder": 10,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "hearingWindow.dateRangeEnd",
+    "ID": "updateListingRequirementsOverrideFieldsHearingWindowDateRangeEnd",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/07/2022",
     "FieldDisplayOrder": 10,
