@@ -476,7 +476,7 @@
   {"LiveFrom": "01/07/2022", "ID": "hearingWindow", "ListElementCode": "firstDateTimeMustBe", "FieldType": "DateTime", "ElementLabel": "Hearing must be on this Date and Time", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/07/2022", "ID": "hearingWindow", "ListElementCode": "dateRangeStart", "FieldType": "Date", "ElementLabel": "Hearing must be on or after this date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/07/2022", "ID": "hearingWindow", "ListElementCode": "dateRangeEnd", "FieldType": "Date", "ElementLabel": "Hearing must be on or before this date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/07/2022", "ID": "hearingVenueEpimsId", "ListElementCode": "hearingVenueEpimsId", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingEpimsId", "ElementLabel": "Hearing Venue", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/07/2022", "ID": "hearingVenueEpimsId", "ListElementCode": "value", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingEpimsId", "ElementLabel": "Hearing Venue", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/07/2022", "ID": "overrideFields", "ListElementCode": "duration", "FieldType": "Number", "ElementLabel": "Duration of the hearing", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/07/2022", "ID": "overrideFields", "ListElementCode": "reservedToJudge", "FieldType": "reservedTo", "ElementLabel": "Reserved to Judge", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/07/2022", "ID": "overrideFields", "ListElementCode": "appellantInterpreter", "FieldType": "hearingInterpreter", "ElementLabel": "Hearing Interpreter", "SecurityClassification": "PUBLIC"},
