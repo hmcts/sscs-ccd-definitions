@@ -1,13 +1,27 @@
 [
   {
-    "LiveFrom": "01/06/2022",
+    "LiveFrom": "01/07/2022",
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideDuration",
+    "CaseFieldID": "overrideFields",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "COMPLEX",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "PageLabel": "Select Override Values"
+  },
+  {
+    "LiveFrom": "06/07/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "amendReasons",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "[STATE]=\"readyToList\"",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "2.0",
+    "ShowSummaryChangeOption": "Y",
+    "PageLabel": "Amend Reason"
   }
 ]
