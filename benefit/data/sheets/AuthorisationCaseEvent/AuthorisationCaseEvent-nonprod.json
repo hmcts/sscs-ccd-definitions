@@ -14,5 +14,6 @@
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequest", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequestWelsh", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequestWelsh", "UserRole": "caseworker-sscs-superuser", "CRUD": "R"},
-  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequestWelsh", "UserRole": "caseworker-sscs", "CRUD": "R"}
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequestWelsh", "UserRole": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "24/03/2022", "CaseTypeID": "Benefit", "CaseEventID": "migrateCase", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
 ]
