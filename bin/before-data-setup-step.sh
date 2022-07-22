@@ -25,8 +25,12 @@ echo "TIMESTAMP is $TIMESTAMP"
 echo "BRANCH_NAME is $BRANCH_NAME"
 echo "SUBSCRIPTION is $SUBSCRIPTION"
 
-#az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
-#LATEST_TAG=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --subscription 8999dec3-0104-4a27-94ee-6588559729d1 --orderby time_desc -o tsv --query "[]")
+az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
+LATEST_TAG_FROM_ACR =$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --subscription 8999dec3-0104-4a27-94ee-6588559729d1 --orderby time_desc -o tsv --query "[]")
+
+echo "LATEST_TAG_FROM_ACR"
+echo $LATEST_TAG_FROM_ACR
+echo "--------"
 
 if [[ ${BRANCH_NAME} == "staging" ]]; then
   LATEST_TAG="$BRANCH_NAME-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
