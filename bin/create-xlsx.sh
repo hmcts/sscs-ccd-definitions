@@ -131,7 +131,7 @@ fi
 
 echo ${excludedFilenamePatterns}
 
-docker run -ti --rm --name json2xlsx \
+docker run --rm --name json2xlsx \
   -v $(pwd)/releases:/tmp \
   -e "CCD_DEF_EM_CCD_ORCHESTRATOR_URL=${EM_CCD_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL=${SSCS_CCD_ORCHESTRATOR_URL}" \
