@@ -27,12 +27,12 @@ esac
 docker build -t hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION} -f ./docker/importer.Dockerfile ./${TYPE}
 
 if [ ${ENV} == "local" ]; then
-    EM_CCD_ORCHESTRATOR_URL="http://host.docker.internal:4623"
-    SSCS_CCD_ORCHESTRATOR_URL="http://host.docker.internal:8070"
-    TRIBUNALS_API_URL="http://host.docker.internal:8080"
-    TYA_NOTIFICATIONS_API_URL="http://host.docker.internal:8081"
-    BULK_SCAN_API_URL="http://host.docker.internal:8090"
-    BULK_SCAN_ORCHESTRATOR_URL="http://host.docker.internal:8099"
+    EM_CCD_ORCHESTRATOR_URL="http://localhost:4623"
+    SSCS_CCD_ORCHESTRATOR_URL="http://localhost:8070"
+    TRIBUNALS_API_URL="http://localhost:8080"
+    TYA_NOTIFICATIONS_API_URL="http://localhost:8081"
+    BULK_SCAN_API_URL="http://localhost:8090"
+    BULK_SCAN_ORCHESTRATOR_URL="http://localhost:8099"
 elif [ ${ENV} == "aat" ] || [ ${ENV} == "demo" ] || [ ${ENV} == "prod" ] || [ ${ENV} == "perftest" ] || [ ${ENV} == "ithc" ]; then
     SSCS_CCD_ORCHESTRATOR_URL="http://sscs-ccd-callback-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
     TRIBUNALS_API_URL="http://sscs-tribunals-api-${ENV}.service.core-compute-${ENV}.internal"
