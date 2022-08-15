@@ -2032,6 +2032,17 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "UpdateListingRequirements",
+    "Name": "Update listing requirements",
+    "Description": "Update listing requirements",
+    "DisplayOrder": 161,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "updateNotListable",
     "Name": "Update not listable case",
     "Description": "Update not listable case",
