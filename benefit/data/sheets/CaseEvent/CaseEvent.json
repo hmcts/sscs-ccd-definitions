@@ -2509,11 +2509,12 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "createTestCase",
-    "Name": "Create test case",
-    "Description": "Create a test case in validAppealCreated state",
-    "DisplayOrder": 999,
-    "PostConditionState": "validAppeal",
+    "ID": "migrateCase",
+    "Name": "Migrate Case",
+    "Description": "Migrate Case",
+    "DisplayOrder": 996,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
     "SecurityClassification": "Public"
   },
   {
@@ -2539,12 +2540,12 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "migrateCase",
-    "Name": "Migrate Case",
-    "Description": "Migrate Case",
-    "DisplayOrder": 996,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "ID": "createTestCase",
+    "Name": "Create test case",
+    "Description": "Create a test case in validAppealCreated state",
+    "DisplayOrder": 999,
+    "PostConditionState": "validAppeal",
     "SecurityClassification": "Public"
   }
+
 ]
