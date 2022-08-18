@@ -913,5 +913,10 @@
   {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "574546", "ListElement": "Barnsley Law Courts"},
   {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "239985", "ListElement": "Ashford House"},
   {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "816964", "ListElement": "Anchorage House"},
-  {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "540049", "ListElement": "Aldershot Justice Centre"}
+  {"LiveFrom": "23/06/2022", "ID": "FL_hearingEpimsId", "ListElementCode": "540049", "ListElement": "Aldershot Justice Centre"},
+  {"LiveFrom": "01/07/2022", "ID": "FL_hearingChannel", "ListElementCode": "TEL", "ListElement": "Telephone"},
+  {"LiveFrom": "01/07/2022", "ID": "FL_hearingChannel", "ListElementCode": "VID", "ListElement": "Video"},
+  {"LiveFrom": "01/07/2022", "ID": "FL_hearingChannel", "ListElementCode": "INTER", "ListElement": "Face To Face"},
+  {"LiveFrom": "01/07/2022", "ID": "FL_hearingChannel", "ListElementCode": "NA", "ListElement": "Not Attending"},
+  {"LiveFrom": "01/07/2022", "ID": "FL_hearingChannel", "ListElementCode": "ONPPRS", "ListElement": "Paper"}
 ]
