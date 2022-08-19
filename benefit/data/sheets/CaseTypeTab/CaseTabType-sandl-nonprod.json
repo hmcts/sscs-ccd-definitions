@@ -6,7 +6,7 @@
     {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_clerk", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingState", "TabFieldDisplayOrder": 8},
     {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_clerk", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "defaultOverrideFields", "TabFieldDisplayOrder": 9},
     {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_clerk", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "overrideFields", "TabFieldDisplayOrder": 10},
-    {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_clerk", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "amendReasons", "TabFieldDisplayOrder": 11},
+    {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_clerk", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "amendReasons", "TabFieldDisplayOrder": 11, "FieldShowCondition": "[STATE]=\"readyToList\""},
     {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_registrar", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingState", "TabFieldDisplayOrder": 8},
     {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_registrar", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "defaultOverrideFields", "TabFieldDisplayOrder": 9},
     {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_registrar", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "overrideFields", "TabFieldDisplayOrder": 10},
@@ -14,5 +14,5 @@
     {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "hearingState", "TabFieldDisplayOrder": 9},
     {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "defaultOverrideFields", "TabFieldDisplayOrder": 10},
     {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "overrideFields", "TabFieldDisplayOrder": 11},
-    {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "amendReasons", "TabFieldDisplayOrder": 12}
+    {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "amendReasons", "TabFieldDisplayOrder": 12, "FieldShowCondition": "[STATE]=\"readyToList\""}
 ]
