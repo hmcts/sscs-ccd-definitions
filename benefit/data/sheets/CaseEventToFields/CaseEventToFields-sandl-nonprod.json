@@ -47,20 +47,20 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "LiveFrom": "05/07/2022",
     "CaseEventID": "caseUpdated",
     "CaseFieldID": "caseOutcome",
     "CaseTypeID": "Benefit",
-    "LiveFrom": "05/07/2022",
     "DisplayContext": "OPTIONAL",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 14,
     "PageID": "1.0"
   },
   {
+    "LiveFrom": "05/07/2022",
     "CaseEventID": "caseUpdated",
     "CaseFieldID": "didPoAttend",
     "CaseTypeID": "Benefit",
-    "LiveFrom": "05/07/2022",
     "DisplayContext": "OPTIONAL",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 15,
