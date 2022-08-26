@@ -1,0 +1,6 @@
+[
+  {"LiveFrom": "30/08/2022", "ID": "notificationResponse", "ListElementCode": "responseReceived", "FieldType": "DateTime", "ElementLabel": "Response Received", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "30/08/2022", "ID": "notificationResponse", "ListElementCode": "correspondenceType", "FieldType": "FixedList", "FieldTypeParameter": "correspondenceType", "ElementLabel": "Correspondence Type", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "30/08/2022", "ID": "notificationResponse", "ListElementCode": "recipientPartyId", "FieldType": "Text", "ElementLabel": "Recipient Party Id", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "30/08/2022", "ID": "notificationResponse", "ListElementCode": "event", "FieldType": "FixedList", "FieldTypeParameter": "eventType", "ElementLabel": "Event Type", "SecurityClassification": "PUBLIC"}
+]

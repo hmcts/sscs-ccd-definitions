@@ -23,5 +23,8 @@
   {"LiveFrom": "06/07/2022", "CaseTypeID": "Benefit", "CaseFieldID": "amendReasons", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "06/07/2022", "CaseTypeID": "Benefit", "CaseFieldID": "amendReasons", "UserRole": "caseworker-sscs-judge", "CRUD": "R"},
   {"LiveFrom": "06/07/2022", "CaseTypeID": "Benefit", "CaseFieldID": "amendReasons", "UserRole": "caseworker-sscs-registrar", "CRUD": "R"},
-  {"LiveFrom": "06/07/2022", "CaseTypeID": "Benefit", "CaseFieldID": "amendReasons", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
+  {"LiveFrom": "06/07/2022", "CaseTypeID": "Benefit", "CaseFieldID": "amendReasons", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "30/08/2022", "CaseTypeID": "Benefit", "CaseFieldID": "notificationResponse", "UserRole": "caseworker-sscs-clerk", "CRUD": "R"},
+  {"LiveFrom": "30/08/2022", "CaseTypeID": "Benefit", "CaseFieldID": "notificationResponse", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "30/08/2022", "CaseTypeID": "Benefit", "CaseFieldID": "notificationResponse", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
 ]

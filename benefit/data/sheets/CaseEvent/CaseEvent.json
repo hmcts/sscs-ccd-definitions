@@ -1490,17 +1490,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "notificationSent",
-    "Name": "Notification sent",
-    "Description": "Notification sent via Gov Notify",
-    "DisplayOrder": 117,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
     "ID": "postponementRequest",
     "Name": "Postponement request",
     "Description": "Postponement request",
@@ -2504,6 +2493,54 @@
     "DisplayOrder": 198,
     "PreConditionState(s)": "voidState",
     "PostConditionState": "appealCreated",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "notificationSent",
+    "Name": "Notification sent",
+    "Description": "Notification sent via Gov Notify",
+    "DisplayOrder": 950,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_HEARINGS_API_URL}/ccdSubmittedEvent",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "26/08/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "letterNotificationSent",
+    "Name": "Letter Notification Sent",
+    "Description": "Letter Notification Sent",
+    "DisplayOrder": 951,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_HEARINGS_API_URL}/ccdSubmittedEvent",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "26/08/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "emailNotificationSent",
+    "Name": "Email Notification Sent",
+    "Description": "Email Notification Sent",
+    "DisplayOrder": 952,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_HEARINGS_API_URL}/ccdSubmittedEvent",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "26/08/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "smsNotificationSent",
+    "Name": "Sms Notification Sent",
+    "Description": "Sms Notification Sent",
+    "DisplayOrder": 953,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_HEARINGS_API_URL}/ccdSubmittedEvent",
     "SecurityClassification": "Public"
   },
   {
