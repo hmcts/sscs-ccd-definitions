@@ -2324,7 +2324,7 @@
     "Name": "Welsh- Action Postponement Req",
     "Description": "Welsh- Action Postponement Req",
     "DisplayOrder": 185,
-    "EventEnablingCondition": "unprocessedPostponementRequest=\"Yes\" AND interlocReviewState!=\"awaitingInformation\" AND interlocReviewState!=\"none\" AND interlocReviewState!=\"awaitingAdminAction\" AND interlocReviewState!=\"welshTranslation\" AND interlocReviewState!=\"\"",
+    "EventEnablingCondition": "unprocessedPostponementRequest=\"Yes\" AND interlocReviewState!=\"none\" AND interlocReviewState!=\"awaitingAdminAction\" AND interlocReviewState!=\"welshTranslation\" AND interlocReviewState!=\"\"",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
