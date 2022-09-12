@@ -28,4 +28,6 @@
   {"LiveFrom": "04/07/2022", "CaseTypeID": "Benefit", "CaseFieldID": "caseOutcome", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "04/07/2022", "CaseTypeID": "Benefit", "CaseFieldID": "didPoAttend", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "04/07/2022", "CaseTypeID": "Benefit", "CaseFieldID": "didPoAttend", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "06/07/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingEpimsId", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+  {"LiveFrom": "06/07/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingEpimsId", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"}
 ]
