@@ -113,6 +113,7 @@
   {"LiveFrom": "13/06/2022", "ID": "hearingDetails", "ListElementCode": "start", "FieldType": "DateTime", "ElementLabel": "Hearing Start Date and Time", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "13/06/2022", "ID": "hearingDetails", "ListElementCode": "end", "FieldType": "DateTime", "ElementLabel": "Hearing End Date and Time", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "13/06/2022", "ID": "hearingDetails", "ListElementCode": "epimsId", "FieldType": "Text", "ElementLabel": "Epims Id", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "13/06/2022", "ID": "hearingDetails", "ListElementCode": "hearingChannel", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingChannel", "ElementLabel": "Hearing Channel", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "doc", "ListElementCode": "dateReceived", "FieldType": "Date", "ElementLabel": "Date Received", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "doc", "ListElementCode": "evidenceType", "FieldType": "Text", "ElementLabel": "Evidence Type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "doc", "ListElementCode": "evidenceProvidedBy", "FieldType": "Text", "ElementLabel": "Evidence Provided By", "SecurityClassification": "PUBLIC"},
