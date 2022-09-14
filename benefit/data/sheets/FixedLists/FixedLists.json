@@ -15,6 +15,8 @@
   {"LiveFrom": "01/01/2018", "ID": "eventType", "ListElementCode": "hearingAdjourned", "ListElement": "Hearing Adjourned"},
   {"LiveFrom": "01/01/2018", "ID": "eventType", "ListElementCode": "responseReceived", "ListElement": "Response received"},
   {"LiveFrom": "01/01/2018", "ID": "eventType", "ListElementCode": "appealDormant", "ListElement": "Appeal Dormant"},
+  {"LiveFrom": "05/09/2022", "ID": "eventType", "ListElementCode": "readyToList", "ListElement": "Ready to List"},
+  {"LiveFrom": "05/09/2022", "ID": "eventType", "ListElementCode": "notListable", "ListElement": "Not Listable"},
   {"LiveFrom": "01/01/2018", "ID": "hearingType", "ListElementCode": "oral", "ListElement": "Oral"},
   {"LiveFrom": "01/01/2018", "ID": "hearingType", "ListElementCode": "paper", "ListElement": "Paper"},
   {"LiveFrom": "01/01/2018", "ID": "hearingArrangementOptions", "ListElementCode": "signLanguageInterpreter", "ListElement": "Sign language interpreter"},
