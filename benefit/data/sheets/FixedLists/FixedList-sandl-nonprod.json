@@ -2,6 +2,5 @@
   {"LiveFrom": "06/07/2022", "ID": "FL_amendReason", "ListElementCode": "partyreq", "ListElement": "Party requested change"},
   {"LiveFrom": "06/07/2022", "ID": "FL_amendReason", "ListElementCode": "judgereq", "ListElement": "Judge requested change"},
   {"LiveFrom": "06/07/2022", "ID": "FL_amendReason", "ListElementCode": "adminreq", "ListElement": "Admin requested change"},
-  {"LiveFrom": "06/07/2022", "ID": "FL_amendReason", "ListElementCode": "adminerr", "ListElement": "Admin error"},
-  {"LiveFrom": "12/08/2022", "ID": "FL_dwpStates", "ListElementCode": "hearingDateIssued", "ListElement": "Hearing Date Issued"}
+  {"LiveFrom": "06/07/2022", "ID": "FL_amendReason", "ListElementCode": "adminerr", "ListElement": "Admin error"}
 ]
