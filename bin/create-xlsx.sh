@@ -24,7 +24,33 @@ case ${TYPE} in
         exit 1
 esac
 
-docker build -t hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION} -f ./docker/importer.Dockerfile ./${TYPE}
+TAG_VERSION=$(grep -A3 'TAG:' "${RUN_DIR}/${TYPE}/VERSION.yaml" | tail -n1 | xargs)
+TAG_VERSION=$(echo "${TAG_VERSION//*TAG:/}" | xargs)
+
+if [ "${VERSION}" == "tag" ]; then
+    CCD_DEF_VERSION=${TAG_VERSION}
+    FILE_VERSION=${TAG_VERSION}
+elif [ "${VERSION}" == "dev" ]; then
+    CCD_DEF_VERSION="${TAG_VERSION}-dev"
+    FILE_VERSION=${VERSION}
+else
+    CCD_DEF_VERSION="${TAG_VERSION}"
+    FILE_VERSION=${VERSION}
+fi
+
+UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
+
+if [ ${SHUTTERED} == true ]; then
+  shutteredExclusion="*-nonshuttered.json"
+  ccdDefinitionFile="CCD_${CASE_TYPE_XLSX_NAME}Definition_v${FILE_VERSION}_${UPPERCASE_ENV}_SHUTTERED.xlsx"
+else
+  shutteredExclusion="*-shuttered.json"
+  ccdDefinitionFile="CCD_${CASE_TYPE_XLSX_NAME}Definition_v${FILE_VERSION}_${UPPERCASE_ENV}.xlsx"
+fi
+
+echo "Tag version: ${TAG_VERSION}, CCD Definitions Version: ${CCD_DEF_VERSION}, File Name: ${ccdDefinitionFile}"
+
+docker build -t hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:latest -f ./docker/importer.Dockerfile ./${TYPE}
 
 if [ ${ENV} == "local" ]; then
     EM_CCD_ORCHESTRATOR_URL="http://localhost:4623"
@@ -99,16 +125,6 @@ case ${ENV} in
     exit 1 ;;
 esac
 
-UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
-
-if [ ${SHUTTERED} == true ]; then
-  shutteredExclusion="*-nonshuttered.json"
-  ccdDefinitionFile="CCD_${CASE_TYPE_XLSX_NAME}Definition_v${VERSION}_${UPPERCASE_ENV}_SHUTTERED.xlsx"
-else
-  shutteredExclusion="*-shuttered.json"
-  ccdDefinitionFile="CCD_${CASE_TYPE_XLSX_NAME}Definition_v${VERSION}_${UPPERCASE_ENV}.xlsx"
-fi
-
 if [ ${ENV} == "prod" ] || [ ${LIKE_PROD} == "prod" ]; then
   excludedFilenamePatterns="-e *-nonprod.json,${shutteredExclusion}"
 else
@@ -130,6 +146,7 @@ docker run --rm --name json2xlsx \
   -e "CCD_DEF_MYA_LINK=${MYA_LINK}" \
   -e "CCD_DEF_MYA_REPRESENTATIVE_LINK=${MYA_REPRESENTATIVE_LINK}" \
   -e "CCD_DEF_MYA_APPOINTEE_LINK=${MYA_APPOINTEE_LINK}" \
-  -e "CCD_DEF_E=${UPPERCASE_ENV}" \
-  hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION} \
+  -e "CCD_DEF_ENV=${UPPERCASE_ENV}" \
+  -e "CCD_DEF_VERSION=${CCD_DEF_VERSION}" \
+  hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:latest \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/${ccdDefinitionFile}"
