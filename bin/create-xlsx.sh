@@ -7,7 +7,7 @@ LIKE_PROD=${4:-${ENV}}
 SHUTTERED=${5:-false}
 
 RUN_DIR=`pwd`
-COMMON_VERSION=$(cat ${RUN_DIR}/benefit/SSCS_COMMON_VERSION.txt)
+
 
 if [ -z "${VERSION}" ] || [ -z "${TYPE}" ] || [ -z "${ENV}" ]; then
     echo "Usage create-xlsx.sh [type] [version] [env]"
@@ -99,20 +99,6 @@ case ${ENV} in
     exit 1 ;;
 esac
 
-
-if [ ${ENV} == "prod" ]; then
-    FIXED_LISTS_SUFFIX="PROD"
-else
-    FIXED_LISTS_SUFFIX="AAT"
-fi
-
-if [ ${TYPE} == "benefit" ]; then
-  PIP_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/pip-decision-notice-questions.txt)
-  ESA_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/esa-decision-notice-questions.txt)
-  UC_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/uc-decision-notice-questions.txt)
-  LANGUAGES=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/languages.txt)
-fi
-
 UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
 
 if [ ${SHUTTERED} == true ]; then
@@ -144,10 +130,6 @@ docker run --rm --name json2xlsx \
   -e "CCD_DEF_MYA_LINK=${MYA_LINK}" \
   -e "CCD_DEF_MYA_REPRESENTATIVE_LINK=${MYA_REPRESENTATIVE_LINK}" \
   -e "CCD_DEF_MYA_APPOINTEE_LINK=${MYA_APPOINTEE_LINK}" \
-  -e "CCD_DEF_PIP_DECISION_NOTICE_QUESTIONS=${PIP_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_ESA_DECISION_NOTICE_QUESTIONS=${ESA_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_UC_DECISION_NOTICE_QUESTIONS=${UC_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_LANGUAGES=${LANGUAGES}" \
   -e "CCD_DEF_E=${UPPERCASE_ENV}" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION} \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/${ccdDefinitionFile}"
