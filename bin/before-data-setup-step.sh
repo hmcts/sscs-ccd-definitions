@@ -5,6 +5,7 @@ ENV=${2}
 LIKE_PROD=${3:-${ENV}}
 
 RUN_DIR=`pwd`
+TAG_VERSION=$(cat "${RUN_DIR}/${TYPE}/VERSION.yaml")
 
 if [ -z "${TYPE}" ] || [ -z "${ENV}" ]; then
     echo "Usage create-xlsx.sh [type] [env]"
@@ -141,6 +142,7 @@ docker run -i --rm --name json2xlsx \
   -e "CCD_DEF_MYA_LINK=${MYA_LINK}" \
   -e "CCD_DEF_MYA_REPRESENTATIVE_LINK=${MYA_REPRESENTATIVE_LINK}" \
   -e "CCD_DEF_MYA_APPOINTEE_LINK=${MYA_APPOINTEE_LINK}" \
-  -e "CCD_DEF_E=${UPPERCASE_ENV}" \
+  -e "CCD_DEF_ENV=${UPPERCASE_ENV}" \
+  -e "CCD_DEF_VERSION=${TAG_VERSION}" \
   hmctspublic.azurecr.io/sscs/ccd-definitions:${LATEST_TAG} \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_${UPPERCASE_ENV}.xlsx"

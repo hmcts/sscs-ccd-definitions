@@ -25,13 +25,10 @@ jobs:
       vmImage: 'ubuntu-latest'
     steps:
       - script: |
-          cd benefit
-          docker build -f ../docker/importer.Dockerfile -t test-image .
+          docker build -f ../docker/importer.Dockerfile -t test-image ./benefit
           docker run --rm test-image sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -o /sscs-ccd.xlsx"
-          cd ../bulkscan
-          docker build -f ../docker/importer.Dockerfile -t test-image .
+          docker build -f ../docker/importer.Dockerfile -t test-image ./bulkscan
           docker run --rm test-image sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -o /sscs-ccd.xlsx"
-          cd ..
   - job: Release
     displayName: 'Build and Push Docker Images to ACR'
     condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/')) # TAGS ONLY
