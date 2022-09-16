@@ -1015,6 +1015,7 @@
   {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyId", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyId", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyId", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyId", "UserRole": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyIdentity", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyAddressSameAsAppellant", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "10/06/2020", "CaseTypeID": "Benefit", "CaseFieldID": "jointPartyAddress", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
