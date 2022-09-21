@@ -74,6 +74,7 @@
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "readyToList", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "readyToList", "UserRole": "caseworker-sscs-judge", "CRUD": "RU"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "readyToList", "UserRole": "caseworker-sscs-registrar", "CRUD": "RU"},
+  {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "readyToList", "UserRole": "caseworker-sscs-clerk", "CRUD": "RU"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "closed", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "closed", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "closed", "UserRole": "citizen", "CRUD": "R"},

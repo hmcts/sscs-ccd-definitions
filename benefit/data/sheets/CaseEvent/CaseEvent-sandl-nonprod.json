@@ -5,8 +5,21 @@
     "ID": "updateListingRequirements",
     "Name": "Update Listing Requirements",
     "Description": "Update Listing Requirements for a case",
-    "DisplayOrder": 196,
-    "PreConditionState(s)": "notListable;withDwp;responseReceived",
+    "DisplayOrder": 161,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "04/07/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "addCaseOutcome",
+    "Name": "Add case outcome",
+    "Description": "Add a case outcome",
+    "DisplayOrder": 14,
+    "PreConditionState(s)": "dormantAppealState;hearing;readyToList",
     "PostConditionState": "*",
     "SecurityClassification": "Public"
   }

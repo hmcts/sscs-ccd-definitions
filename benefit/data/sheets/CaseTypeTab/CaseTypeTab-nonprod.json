@@ -1,11 +1,4 @@
 [
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "pcqId", "TabFieldDisplayOrder": 31},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "TabID": "wa_fields", "TabLabel": "WA fields", "TabDisplayOrder": 29, "CaseFieldID": "caseNameHmctsInternal", "TabFieldDisplayOrder": 1},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "caseNameHmctsRestricted", "TabFieldDisplayOrder": 2},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "caseNamePublic", "TabFieldDisplayOrder": 3},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "ogdType", "TabFieldDisplayOrder": 4},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "caseManagementCategory", "TabFieldDisplayOrder": 5},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "caseAccessCategory", "TabFieldDisplayOrder": 6},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "wa_fields", "TabLabel": "Appeal Details", "TabDisplayOrder": 29, "CaseFieldID": "SearchCriteria", "TabFieldDisplayOrder": 7},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "caseInfo_sscs", "TabLabel": "Appeal Details", "TabDisplayOrder": 4, "CaseFieldID": "caseManagementLocation", "TabFieldDisplayOrder": 40}
+  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "cam_fields", "TabLabel": "CAM Fields", "TabDisplayOrder": 29, "CaseFieldID": "SearchCriteria", "TabFieldDisplayOrder": 7}
 ]
