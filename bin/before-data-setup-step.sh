@@ -5,7 +5,7 @@ ENV=${2}
 LIKE_PROD=${3:-${ENV}}
 
 RUN_DIR=`pwd`
-TAG_VERSION=$(cat "${RUN_DIR}/${TYPE}/VERSION.yaml")
+TAG_VERSION=$(cat ${RUN_DIR}/${TYPE}/VERSION.yaml | awk '{print $2}')
 
 if [ -z "${TYPE}" ] || [ -z "${ENV}" ]; then
     echo "Usage create-xlsx.sh [type] [env]"
