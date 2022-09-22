@@ -24,8 +24,7 @@ case ${TYPE} in
         exit 1
 esac
 
-TAG_VERSION=$(grep -A3 'TAG:' "${RUN_DIR}/${TYPE}/VERSION.yaml" | tail -n1 | xargs)
-TAG_VERSION=$(echo "${TAG_VERSION//*TAG:/}" | xargs)
+TAG_VERSION=$(cat ${RUN_DIR}/${TYPE}/VERSION.yaml | awk '{print $2}')
 
 if [ "${VERSION}" == "tag" ]; then
     CCD_DEF_VERSION=${TAG_VERSION}
