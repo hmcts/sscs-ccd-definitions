@@ -1,13 +1,69 @@
 [
   {
-    "LiveFrom": "01/06/2022",
+    "LiveFrom": "01/07/2022",
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideDuration",
+    "CaseFieldID": "overrideFields",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "PageLabel": "Select Override Values"
+  },
+  {
+    "LiveFrom": "06/07/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "amendReasons",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "[STATE]=\"readyToList\"",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "2.0",
+    "ShowSummaryChangeOption": "Y",
+    "PageLabel": "Amend Reason"
+  },
+  {
+    "LiveFrom": "04/07/2022",
+    "CaseEventID": "addCaseOutcome",
+    "CaseFieldID": "caseOutcome",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "04/07/2022",
+    "CaseEventID": "addCaseOutcome",
+    "CaseFieldID": "didPoAttend",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "05/07/2022",
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "caseOutcome",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 14,
+    "PageID": "1.0"
+  },
+  {
+    "LiveFrom": "05/07/2022",
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "didPoAttend",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 15,
+    "PageID": "1.0"
   }
 ]
