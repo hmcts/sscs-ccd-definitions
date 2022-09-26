@@ -26,7 +26,6 @@ jobs:
     steps:
       - script: |
           cd benefit
-          export CCD_DEF_VERSION=$(cat ${RUN_DIR}/${TYPE}/VERSION.yaml | awk '{print $2}')
           docker build -f ../docker/importer.Dockerfile -t test-image ./
           docker run --rm test-image sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -o /sscs-ccd.xlsx"
           cd ../bulkscan
