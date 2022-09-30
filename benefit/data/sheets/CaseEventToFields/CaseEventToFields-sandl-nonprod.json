@@ -12,16 +12,6 @@
     "PageLabel": "Select Override Values"
   },
   {
-    "LiveFrom": "30/09/2022",
-    "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "poToAttend",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
-    "PageID": "1.0"
-  },
-  {
     "LiveFrom": "06/07/2022",
     "CaseEventID": "updateListingRequirements",
     "CaseFieldID": "amendReasons",
