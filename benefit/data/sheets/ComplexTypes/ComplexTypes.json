@@ -490,5 +490,6 @@
   {"LiveFrom": "01/07/2022", "ID": "listingValues", "ListElementCode": "hearingWindow", "FieldType": "hearingWindow", "ElementLabel": "Hearing Window", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/07/2022", "ID": "listingValues", "ListElementCode": "autoList", "FieldType": "YesOrNo", "ElementLabel": "Should be Auto-listed", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/07/2022", "ID": "listingValues", "ListElementCode": "hearingVenueEpimsIds", "FieldType": "Collection", "FieldTypeParameter": "hearingVenueEpimsId", "ElementLabel": "Hearing Venue Choices", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/07/2022", "ID": "listingValues", "ListElementCode": "poToAttend", "FieldType": "YesOrNo", "ElementLabel": "Is PO Office Attending?", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/07/2022", "ID": "listingValues", "ListElementCode": "poToAttend", "FieldType": "YesOrNo", "ElementLabel": "Is PO Office Attending?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/07/2022", "ID": "poToAttendType", "ListElementCode": "poToAttend", "FieldType": "YesOrNo", "ElementLabel": "Is PO Office Attending?", "SecurityClassification": "PUBLIC"}
 ]
