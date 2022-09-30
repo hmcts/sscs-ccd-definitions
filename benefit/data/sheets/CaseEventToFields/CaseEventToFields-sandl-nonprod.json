@@ -55,15 +55,5 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 14,
     "PageID": "1.0"
-  },
-  {
-    "LiveFrom": "05/07/2022",
-    "CaseEventID": "caseUpdated",
-    "CaseFieldID": "didPoAttend",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 15,
-    "PageID": "1.0"
   }
 ]
