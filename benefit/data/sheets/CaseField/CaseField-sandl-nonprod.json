@@ -2,9 +2,8 @@
   {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "activeHearingId", "Label": "Active Hearing ID", "FieldType": "Number","SecurityClassification": "PUBLIC"},
   {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "activeHearingVersionNumber", "Label": "Active Hearing Version Number", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/06/2022", "CaseTypeID": "Benefit", "ID": "overrideFields", "Label": "Overrides Listing Values", "FieldType": "overrideFields", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/06/2022", "CaseTypeID": "Benefit", "ID": "defaultOverrideFields", "Label": "Default Listing Values", "FieldType": "overrideFields", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/06/2022", "CaseTypeID": "Benefit", "ID": "defaultOverrideFields", "Label": "Default Listing Values", "FieldType": "listingValues", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "06/07/2022", "CaseTypeID": "Benefit", "ID": "amendReasons", "Label": "Amend Reason", "FieldType": "MultiSelectList", "FieldTypeParameter": "FL_amendReason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/09/2020", "CaseTypeID": "Benefit", "ID": "unprocessedPostponement", "Label": "Unprocessed Postponement", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/09/2020", "CaseTypeID": "Benefit", "ID": "postponementEvent", "Label": "Postponement Event Type", "FieldType": "FixedList", "FieldTypeParameter": "eventType", "SecurityClassification": "PUBLIC"}
 ]
-

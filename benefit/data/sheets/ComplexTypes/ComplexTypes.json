@@ -484,5 +484,11 @@
   {"LiveFrom": "01/07/2022", "ID": "overrideFields", "ListElementCode": "hearingWindow", "FieldType": "hearingWindow", "ElementLabel": "Hearing Window", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/07/2022", "ID": "overrideFields", "ListElementCode": "autoList", "FieldType": "YesOrNo", "ElementLabel": "Should be Auto-listed", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/07/2022", "ID": "overrideFields", "ListElementCode": "hearingVenueEpimsIds", "FieldType": "Collection", "FieldTypeParameter": "hearingVenueEpimsId", "ElementLabel": "Hearing Venue Choices", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/07/2022", "ID": "overrideFields", "ListElementCode": "poToAttend", "FieldType": "YesOrNo", "ElementLabel": "Is PO Office Attending?", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/07/2022", "ID": "listingValues", "ListElementCode": "duration", "FieldType": "Number", "ElementLabel": "Duration of the hearing", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/07/2022", "ID": "listingValues", "ListElementCode": "appellantInterpreter", "FieldType": "hearingInterpreter", "ElementLabel": "Hearing Interpreter", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/07/2022", "ID": "listingValues", "ListElementCode": "appellantHearingChannel", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingChannel", "ElementLabel": "Appellant's Hearing Channel", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/07/2022", "ID": "listingValues", "ListElementCode": "hearingWindow", "FieldType": "hearingWindow", "ElementLabel": "Hearing Window", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/07/2022", "ID": "listingValues", "ListElementCode": "autoList", "FieldType": "YesOrNo", "ElementLabel": "Should be Auto-listed", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/07/2022", "ID": "listingValues", "ListElementCode": "hearingVenueEpimsIds", "FieldType": "Collection", "FieldTypeParameter": "hearingVenueEpimsId", "ElementLabel": "Hearing Venue Choices", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/07/2022", "ID": "listingValues", "ListElementCode": "poToAttend", "FieldType": "YesOrNo", "ElementLabel": "Is PO Office Attending?", "SecurityClassification": "PUBLIC"}
 ]
