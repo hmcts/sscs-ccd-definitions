@@ -14,7 +14,7 @@
   {
     "LiveFrom": "30/09/2022",
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "poToAttendType",
+    "CaseFieldID": "poToAttend",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "PageDisplayOrder": 1,
