@@ -11,7 +11,6 @@
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "postponementRequest", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "30/08/2022", "CaseTypeID": "Benefit", "CaseEventID": "postponementRequest", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
   {"LiveFrom": "30/08/2022", "CaseTypeID": "Benefit", "CaseEventID": "postponementRequest", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
-  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequest", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
   {"LiveFrom": "30/08/2022", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequest", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequest", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequest", "UserRole": "caseworker-sscs-registrar", "CRUD": "CRUD"},
