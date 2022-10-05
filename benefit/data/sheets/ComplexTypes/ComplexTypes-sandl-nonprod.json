@@ -1,0 +1,8 @@
+[
+  {"LiveFrom": "05/10/2022", "ID": "setAside", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionSetAside", "ElementLabel": "Action Set Aside Application", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "05/10/2022", "ID": "setAside", "ListElementCode": "requestStatementOfReasons", "FieldType": "YesOrNo", "ElementLabel": "Request Statement of Reasons?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "05/10/2022", "ID": "correction", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionCorrection", "ElementLabel": "Action Correction Application", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "05/10/2022", "ID": "statementOfReasons", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionStatementOfReasons", "ElementLabel": "Action Statement of Reasons Application", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "05/10/2022", "ID": "permissionToAppeal", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionPermissionToAppeal", "ElementLabel": "Action Permission to Appeal Application", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "05/10/2022", "ID": "libertyToApply", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionLibertyToApply", "ElementLabel": "Action Liberty to Apply Application", "SecurityClassification": "PUBLIC"}
+]
