@@ -89,6 +89,20 @@
     "ShowEventNotes": "N"
   },
   {
+    "LiveFrom": "05/11/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "actionPostHearingApplication",
+    "Name": "Action Post Hearing Application",
+    "Description": "Action Post Hearing Application",
+    "DisplayOrder": 8,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "01/09/2021",
     "CaseTypeID": "Benefit",
     "ID": "actionPostponementRequest",
