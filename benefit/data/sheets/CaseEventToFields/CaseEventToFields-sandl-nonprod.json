@@ -16,7 +16,7 @@
     "CaseEventID": "updateListingRequirements",
     "CaseFieldID": "poToAttend",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0"
