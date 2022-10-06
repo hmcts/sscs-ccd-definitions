@@ -2,7 +2,7 @@
   {
     "LiveFrom": "01/07/2022",
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "defaultListingValues",
+    "CaseFieldID": "overrideFields",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
     "PageDisplayOrder": 1,
