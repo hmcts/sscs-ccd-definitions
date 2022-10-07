@@ -116,7 +116,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "issueCode", "Label": "Issue code", "FieldType": "FixedList", "FieldTypeParameter": "FL_issueCodes", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpOriginatingOffice", "Label": "Originating office", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpPresentingOffice", "Label": "Presenting office", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpIsOfficerAttending", "Label": "Is the Presenting officer attending?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpIsOfficerAttending", "Label": "Is the Presenting Officer attending?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpUCB", "Label": "Appellant - Unacceptable Customer Behaviour (UCB)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpPHME", "Label": "Potentially Harmful Medical Evidence (PHME)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpComplexAppeal", "Label": "Is the appeal complex?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
