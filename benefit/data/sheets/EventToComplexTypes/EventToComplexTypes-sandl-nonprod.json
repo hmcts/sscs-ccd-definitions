@@ -1,7 +1,7 @@
 [
   {
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideFields",
+    "CaseFieldID": "defaultListingValues",
     "ListElementCode": "duration",
     "ID": "updateListingRequirementsOverrideFieldsDuration",
     "DisplayContext": "OPTIONAL",
@@ -11,7 +11,7 @@
   },
   {
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideFields",
+    "CaseFieldID": "defaultListingValues",
     "ListElementCode": "appellantInterpreter.isInterpreterWanted",
     "ID": "updateListingRequirementsOverrideFieldsAppellantInterpreterIsInterpreterWanted",
     "DisplayContext": "OPTIONAL",
@@ -21,7 +21,7 @@
   },
   {
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideFields",
+    "CaseFieldID": "defaultListingValues",
     "ListElementCode": "appellantInterpreter.interpreterLanguage",
     "ID": "updateListingRequirementsOverrideFieldsAppellantInterpreterInterpreterLanguage",
     "DisplayContext": "OPTIONAL",
@@ -32,7 +32,7 @@
   },
   {
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideFields",
+    "CaseFieldID": "defaultListingValues",
     "ListElementCode": "appellantHearingChannel",
     "ID": "updateListingRequirementsOverrideFieldsAppellantHearingChannel",
     "DisplayContext": "OPTIONAL",
@@ -42,7 +42,7 @@
   },
   {
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideFields",
+    "CaseFieldID": "defaultListingValues",
     "ListElementCode": "autoList",
     "ID": "updateListingRequirementsOverrideFieldsAutoList",
     "DisplayContext": "OPTIONAL",
@@ -52,7 +52,7 @@
   },
   {
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideFields",
+    "CaseFieldID": "defaultListingValues",
     "ListElementCode": "hearingVenueEpimsIds.value",
     "ID": "updateListingRequirementsOverrideFieldsHearingVenueEpimsIdsValue",
     "DisplayContext": "OPTIONAL",
@@ -62,17 +62,7 @@
   },
   {
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideFields",
-    "ListElementCode": "poToAttend",
-    "ID": "updateListingRequirementsOverrideFieldsPoToAttend",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/07/2022",
-    "FieldDisplayOrder": 9,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideFields",
+    "CaseFieldID": "defaultListingValues",
     "ListElementCode": "hearingWindow.firstDateTimeMustBe",
     "ID": "updateListingRequirementsOverrideFieldsHearingWindowFirstDateTimeMustBe",
     "DisplayContext": "OPTIONAL",
@@ -82,7 +72,7 @@
   },
   {
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideFields",
+    "CaseFieldID": "defaultListingValues",
     "ListElementCode": "hearingWindow.dateRangeStart",
     "ID": "updateListingRequirementsOverrideFieldsHearingWindowDateRangeStart",
     "DisplayContext": "OPTIONAL",
@@ -92,7 +82,7 @@
   },
   {
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideFields",
+    "CaseFieldID": "defaultListingValues",
     "ListElementCode": "hearingWindow.dateRangeEnd",
     "ID": "updateListingRequirementsOverrideFieldsHearingWindowDateRangeEnd",
     "DisplayContext": "OPTIONAL",

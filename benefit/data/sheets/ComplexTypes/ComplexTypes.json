@@ -483,12 +483,5 @@
   {"LiveFrom": "01/07/2022", "ID": "overrideFields", "ListElementCode": "appellantHearingChannel", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingChannel", "ElementLabel": "Appellant's Hearing Channel", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/07/2022", "ID": "overrideFields", "ListElementCode": "hearingWindow", "FieldType": "hearingWindow", "ElementLabel": "Hearing Window", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/07/2022", "ID": "overrideFields", "ListElementCode": "autoList", "FieldType": "YesOrNo", "ElementLabel": "Should be Auto-listed", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/07/2022", "ID": "overrideFields", "ListElementCode": "hearingVenueEpimsIds", "FieldType": "Collection", "FieldTypeParameter": "hearingVenueEpimsId", "ElementLabel": "Hearing Venue Choices", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/07/2022", "ID": "defaultListingValues", "ListElementCode": "duration", "FieldType": "Number", "ElementLabel": "Duration of the hearing", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/07/2022", "ID": "defaultListingValues", "ListElementCode": "appellantInterpreter", "FieldType": "hearingInterpreter", "ElementLabel": "Hearing Interpreter", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/07/2022", "ID": "defaultListingValues", "ListElementCode": "appellantHearingChannel", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingChannel", "ElementLabel": "Appellant's Hearing Channel", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/07/2022", "ID": "defaultListingValues", "ListElementCode": "hearingWindow", "FieldType": "hearingWindow", "ElementLabel": "Hearing Window", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/07/2022", "ID": "defaultListingValues", "ListElementCode": "autoList", "FieldType": "YesOrNo", "ElementLabel": "Should be Auto-listed", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/07/2022", "ID": "defaultListingValues", "ListElementCode": "hearingVenueEpimsIds", "FieldType": "Collection", "FieldTypeParameter": "hearingVenueEpimsId", "ElementLabel": "Hearing Venue Choices", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/07/2022", "ID": "defaultListingValues", "ListElementCode": "poToAttend", "FieldType": "YesOrNo", "ElementLabel": "Is PO Office Attending?", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/07/2022", "ID": "overrideFields", "ListElementCode": "hearingVenueEpimsIds", "FieldType": "Collection", "FieldTypeParameter": "hearingVenueEpimsId", "ElementLabel": "Hearing Venue Choices", "SecurityClassification": "PUBLIC"}
 ]
