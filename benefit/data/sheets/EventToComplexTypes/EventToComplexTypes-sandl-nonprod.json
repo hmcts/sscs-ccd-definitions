@@ -89,15 +89,5 @@
     "LiveFrom": "01/07/2022",
     "FieldDisplayOrder": 10,
     "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "defaultListingValues",
-    "ListElementCode": "poToAttend",
-    "ID": "updateListingRequirementsDefaultValuePoToAttend",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/07/2022",
-    "FieldDisplayOrder": 11,
-    "PageID": "1.0"
   }
 ]
