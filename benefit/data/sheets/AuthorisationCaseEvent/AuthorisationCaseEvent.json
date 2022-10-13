@@ -76,6 +76,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToWithDwp", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToWithDwp", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminUpdateEvent", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRU"},
+  {"LiveFrom": "10/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "adminUpdateEvent", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminUpdateEvent", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "amendDueDate", "UserRole": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "amendDueDate", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
