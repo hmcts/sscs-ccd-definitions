@@ -6,7 +6,6 @@
   {"LiveFrom": "06/07/2022", "CaseTypeID": "Benefit", "ID": "amendReasons", "Label": "Amend Reason", "FieldType": "MultiSelectList", "FieldTypeParameter": "FL_amendReason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/09/2020", "CaseTypeID": "Benefit", "ID": "unprocessedPostponement", "Label": "Unprocessed Postponement", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/09/2020", "CaseTypeID": "Benefit", "ID": "postponementEvent", "Label": "Postponement Event Type", "FieldType": "FixedList", "FieldTypeParameter": "eventType", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "05/09/2020", "CaseTypeID": "Benefit", "ID": "filename", "Label": "File Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/09/2020", "CaseTypeID": "Benefit", "ID": "actionPostHearingApplicationTypeSelected", "Label": "Action Post Hearing Application Type Selected", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_actionPostHearingApplicationTypeSelected", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/09/2020", "CaseTypeID": "Benefit", "ID": "actionSetAside", "Label": "Set Aside", "FieldType": "setAside", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/09/2020", "CaseTypeID": "Benefit", "ID": "actionCorrection", "Label": "Correction", "FieldType": "correction", "SecurityClassification": "PUBLIC"},

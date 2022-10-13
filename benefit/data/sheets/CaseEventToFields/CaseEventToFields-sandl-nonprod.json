@@ -194,17 +194,5 @@
     "PageLabel": "Notice Document",
     "PageShowCondition": "actionSetAside.action = \"refuse\"",
     "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "actionPostHearingApplication",
-    "CaseFieldID": "filename",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "05/10/2022",
-    "PageDisplayOrder": 30,
-    "PageFieldDisplayOrder": 2,
-    "PageID": "Notice_Staging",
-    "PageLabel": "Notice Document",
-    "ShowSummaryChangeOption": "Y"
   }
 ]
