@@ -23,5 +23,47 @@
     "PageID": "2.0",
     "ShowSummaryChangeOption": "Y",
     "PageLabel": "Amend Reason"
+  },
+  {
+    "LiveFrom": "04/07/2022",
+    "CaseEventID": "addCaseOutcome",
+    "CaseFieldID": "caseOutcome",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "04/07/2022",
+    "CaseEventID": "addCaseOutcome",
+    "CaseFieldID": "didPoAttend",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "05/07/2022",
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "caseOutcome",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 14,
+    "PageID": "1.0"
+  },
+  {
+    "LiveFrom": "05/07/2022",
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "didPoAttend",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 15,
+    "PageID": "1.0"
   }
 ]

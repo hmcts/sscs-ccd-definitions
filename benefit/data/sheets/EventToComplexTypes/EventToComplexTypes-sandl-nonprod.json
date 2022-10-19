@@ -12,27 +12,6 @@
   {
     "CaseEventID": "updateListingRequirements",
     "CaseFieldID": "overrideFields",
-    "ListElementCode": "reservedToJudge.isReservedToMember",
-    "ID": "updateListingRequirementsOverrideFieldsReservedToJudgeReservedMember",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/07/2022",
-    "FieldDisplayOrder": 2,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideFields",
-    "ListElementCode": "reservedToJudge.reservedMember",
-    "ID": "updateListingRequirementsOverrideFieldsReservedToJudgeReservedMember",
-    "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "overrideFields.reservedToJudge.isReservedToMember = \"Yes\"",
-    "LiveFrom": "01/07/2022",
-    "FieldDisplayOrder": 3,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideFields",
     "ListElementCode": "appellantInterpreter.isInterpreterWanted",
     "ID": "updateListingRequirementsOverrideFieldsAppellantInterpreterIsInterpreterWanted",
     "DisplayContext": "OPTIONAL",
