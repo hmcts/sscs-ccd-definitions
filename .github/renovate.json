@@ -10,6 +10,15 @@
     {
       "matchPackageNames": ["com.github.hmcts:sscs-common"],
       "prPriority": 100
+    },
+    {
+      "matchPackagePatterns": ["org.springframework"],
+      "addLabels": ["high-priority"],
+      "prPriority": 99
+    },
+    {
+      "matchPackagePatterns": ["com.github.hmcts"],
+      "prPriority": 98
     }
   ],
   "helm-requirements": {
