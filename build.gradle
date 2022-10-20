@@ -72,7 +72,7 @@ dependencies {
     testCompile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.12.3'
     testCompile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jdk8', version: '2.12.3'
     testCompile group: 'commons-io', name: 'commons-io', version: '2.8.0'
-    testCompile group: 'com.github.hmcts', name: 'befta-fw', version: '8.6.0'
+    testCompile group: 'com.github.hmcts', name: 'befta-fw', version: '9.0.0-CCD-3068.3'
 
     testRuntime 'org.glassfish:jakarta.el:3.0.3'
     testCompileOnly 'org.projectlombok:lombok:1.18.18'
