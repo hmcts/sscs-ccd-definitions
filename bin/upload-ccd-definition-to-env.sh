@@ -1,7 +1,6 @@
 #!/bin/bash
 
 RUN_DIR=`pwd`
-COMMON_VERSION=$(cat ${RUN_DIR}/SSCS_COMMON_VERSION.txt)
 
 set -e
 
@@ -99,13 +98,6 @@ case ${ENV} in
     exit 1 ;;
 esac
 
-if [ ${TYPE} == "benefit" ]; then
-  PIP_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/pip-decision-notice-questions.txt)
-  ESA_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/esa-decision-notice-questions.txt)
-  UC_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/uc-decision-notice-questions.txt)
-  LANGUAGES=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/languages.txt)
-fi
-
 echo "Importing: ${VERSION}"
 
 docker run \
@@ -132,18 +124,14 @@ docker run \
   -e "CCD_DEF_TYA_NOTIFICATIONS_API_URL=${TYA_NOTIFICATIONS_API_URL}" \
   -e "CCD_DEF_BULK_SCAN_API_URL=${BULK_SCAN_API_URL}" \
   -e "CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL=${BULK_SCAN_ORCHESTRATOR_URL}" \
-  -e "CCD_DEF_PIP_DECISION_NOTICE_QUESTIONS=${PIP_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_ESA_DECISION_NOTICE_QUESTIONS=${ESA_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_UC_DECISION_NOTICE_QUESTIONS=${UC_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_LANGUAGES=${LANGUAGES}" \
   -e "CCD_DEF_TYA_LINK=${TYA_LINK}" \
   -e "CCD_DEF_TYA_APPOINTEE_LINK=${TYA_APPOINTEE_LINK}" \
   -e "CCD_DEF_MYA_LINK=${MYA_LINK}" \
   -e "CCD_DEF_MYA_REPRESENTATIVE_LINK=${MYA_REPRESENTATIVE_LINK}" \
   -e "CCD_DEF_MYA_APPOINTEE_LINK=${MYA_APPOINTEE_LINK}" \
-  -e "CCD_DEF_E=${CCD_ENV}" \
+  -e "CCD_DEF_ENV=${CCD_ENV}" \
+  -e "CCD_DEF_VERSION=${VERSION}" \
   -e "USER_ROLES=citizen, caseworker-sscs, caseworker-sscs-systemupdate, caseworker-sscs-anonymouscitizen, caseworker-sscs-callagent, caseworker-sscs-judge, caseworker-sscs-clerk, caseworker-sscs-dwpresponsewriter, caseworker-sscs-registrar, caseworker-sscs-superuser, caseworker-sscs-teamleader, caseworker-sscs-panelmember, caseworker-sscs-bulkscan, caseworker-sscs-pcqextractor" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION}
-
 
 echo Finished

@@ -63,16 +63,6 @@
   {
     "CaseEventID": "updateListingRequirements",
     "CaseFieldID": "overrideFields",
-    "ListElementCode": "poToAttend",
-    "ID": "updateListingRequirementsOverrideFieldsPoToAttend",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/07/2022",
-    "FieldDisplayOrder": 9,
-    "PageID": "1.0"
-  },
-  {
-    "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "overrideFields",
     "ListElementCode": "hearingWindow.firstDateTimeMustBe",
     "ID": "updateListingRequirementsOverrideFieldsHearingWindowFirstDateTimeMustBe",
     "DisplayContext": "OPTIONAL",
