@@ -5,7 +5,7 @@ ENV=${2}
 LIKE_PROD=${3:-${ENV}}
 
 RUN_DIR=`pwd`
-COMMON_VERSION=$(cat ${RUN_DIR}/benefit/SSCS_COMMON_VERSION.txt)
+TAG_VERSION=$(cat ${RUN_DIR}/${TYPE}/VERSION.yaml | awk '{print $2}')
 
 if [ -z "${TYPE}" ] || [ -z "${ENV}" ]; then
     echo "Usage create-xlsx.sh [type] [env]"
@@ -120,19 +120,6 @@ case ${ENV} in
     exit 1 ;;
 esac
 
-if [[ ${ENV} == "prod" ]]; then
-    FIXED_LISTS_SUFFIX="PROD"
-else
-    FIXED_LISTS_SUFFIX="AAT"
-fi
-
-if [[ ${TYPE} == "benefit" ]]; then
-  PIP_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/pip-decision-notice-questions.txt)
-  ESA_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/esa-decision-notice-questions.txt)
-  UC_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/uc-decision-notice-questions.txt)
-  LANGUAGES=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/languages.txt)
-fi
-
 UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
 
 if [[ ${ENV} == "prod" || ${LIKE_PROD} == "prod" ]]; then
@@ -155,10 +142,7 @@ docker run -i --rm --name json2xlsx \
   -e "CCD_DEF_MYA_LINK=${MYA_LINK}" \
   -e "CCD_DEF_MYA_REPRESENTATIVE_LINK=${MYA_REPRESENTATIVE_LINK}" \
   -e "CCD_DEF_MYA_APPOINTEE_LINK=${MYA_APPOINTEE_LINK}" \
-  -e "CCD_DEF_PIP_DECISION_NOTICE_QUESTIONS=${PIP_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_ESA_DECISION_NOTICE_QUESTIONS=${ESA_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_UC_DECISION_NOTICE_QUESTIONS=${UC_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_LANGUAGES=${LANGUAGES}" \
-  -e "CCD_DEF_E=${UPPERCASE_ENV}" \
+  -e "CCD_DEF_ENV=${UPPERCASE_ENV}" \
+  -e "CCD_DEF_VERSION=${TAG_VERSION}" \
   hmctspublic.azurecr.io/sscs/ccd-definitions:${LATEST_TAG} \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_${UPPERCASE_ENV}.xlsx"
