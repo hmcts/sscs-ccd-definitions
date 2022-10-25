@@ -34,6 +34,7 @@
     "PreConditionState(s)": "dormantAppealState;postHearing",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
     "SecurityClassification": "Public"
   },
   {
