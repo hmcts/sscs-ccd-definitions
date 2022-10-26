@@ -75,12 +75,12 @@ dependencies {
 
     testImplementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.13.4'
     testImplementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jdk8', version: '2.13.4'
-    testImplementation group: 'commons-io', name: 'commons-io', version: '2.8.0'
+    testImplementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
     testImplementation group: 'com.github.hmcts', name: 'befta-fw', version: '8.7.6', {
         exclude group: 'junit', module: 'junit'
     }
 
     testRuntimeOnly group: 'org.glassfish', name: 'jakarta.el', version: '3.0.4'
-    testImplementation group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
-    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+    testImplementation group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
 }
