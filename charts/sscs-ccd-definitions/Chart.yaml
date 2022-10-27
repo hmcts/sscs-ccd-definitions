@@ -1,8 +1,8 @@
 apiVersion: v2
 description: SSCS - CCD Definitions
 name: sscs-ccd-definitions
-version: 0.0.5
+version: 0.0.6
 dependencies:
   - name: nodejs
     version: ~2.4.2
-    repository: '@hmctspublic'
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
