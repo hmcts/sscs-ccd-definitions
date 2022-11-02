@@ -28,8 +28,12 @@ echo "SUBSCRIPTION is $SUBSCRIPTION"
 #az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
 #LATEST_TAG=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --subscription 8999dec3-0104-4a27-94ee-6588559729d1 --orderby time_desc -o tsv --query "[]")
 
+echo "Processing for branch $BRANCH_NAME"
+
 if [[ ${BRANCH_NAME} == "staging" ]]; then
   LATEST_TAG="$BRANCH_NAME-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
+elif [[ ${BRANCH_NAME} =~ "PR" ]]; then
+    LATEST_TAG="${BRANCH_NAME,,}-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
 elif [[ $BRANCH_NAME == "master" || $BRANCH_NAME == "demo" || $BRANCH_NAME == "ithc" || $BRANCH_NAME == "perftest" ]]; then
    LATEST_TAG="aat-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
 else
