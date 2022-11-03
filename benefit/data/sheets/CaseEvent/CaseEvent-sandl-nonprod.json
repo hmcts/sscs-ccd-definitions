@@ -28,7 +28,7 @@
     "LiveFrom": "05/11/2022",
     "CaseTypeID": "Benefit",
     "ID": "actionPostHearingApplication",
-    "Name": "Action Post Hearing App",
+    "Name": "Review Post Hearing App",
     "Description": "Action Post Hearing Application",
     "DisplayOrder": 8,
     "PreConditionState(s)": "dormantAppealState;postHearing",
