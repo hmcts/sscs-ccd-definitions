@@ -30,7 +30,7 @@
     "ID": "actionPostHearingApplication",
     "Name": "Review Post Hearing App",
     "Description": "Action Post Hearing Application",
-    "DisplayOrder": 8,
+    "DisplayOrder": 136,
     "PreConditionState(s)": "dormantAppealState;postHearing",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
