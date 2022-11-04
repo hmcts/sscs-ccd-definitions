@@ -89,5 +89,66 @@
     "LiveFrom": "01/07/2022",
     "FieldDisplayOrder": 10,
     "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "actionPostHearingApplication",
+    "CaseFieldID": "actionSetAside",
+    "ListElementCode": "action",
+    "ID": "actionPostHearingApplicationActionSetAsideAction",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "05/10/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "Set_Aside"
+  },
+  {
+    "CaseEventID": "actionPostHearingApplication",
+    "CaseFieldID": "actionSetAside",
+    "ListElementCode": "requestStatementOfReasons",
+    "ID": "actionPostHearingApplicationActionSetAsideRequestStatementOfReasons",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "actionSetAside.action = \"refuse\"",
+    "LiveFrom": "05/10/2022",
+    "FieldDisplayOrder": 2,
+    "PageID": "Set_Aside"
+  },
+  {
+    "CaseEventID": "actionPostHearingApplication",
+    "CaseFieldID": "actionCorrection",
+    "ListElementCode": "action",
+    "ID": "actionPostHearingApplicationActionCorrectionAction",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "05/10/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "Correction"
+  },
+  {
+    "CaseEventID": "actionPostHearingApplication",
+    "CaseFieldID": "actionStatementOfReasons",
+    "ListElementCode": "action",
+    "ID": "actionPostHearingApplicationActionStatementOfReasonsAction",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "05/10/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "Statement_Of_Reasons"
+  },
+  {
+    "CaseEventID": "actionPostHearingApplication",
+    "CaseFieldID": "actionPermissionToAppeal",
+    "ListElementCode": "action",
+    "ID": "actionPostHearingApplicationActionPermissionToAppealAction",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "05/10/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "Permission_To_Appeal"
+  },
+  {
+    "CaseEventID": "actionPostHearingApplication",
+    "CaseFieldID": "actionLibertyToApply",
+    "ListElementCode": "action",
+    "ID": "actionPostHearingApplicationActionLibertyToApplyAction",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "05/10/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "Liberty_To_Apply"
   }
 ]
