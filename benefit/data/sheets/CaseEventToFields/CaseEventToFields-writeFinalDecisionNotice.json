@@ -84,7 +84,7 @@
     "CaseFieldID": "writeFinalDecisionAppellantAttendedQuestion",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "writeFinalDecisionTypeOfHearing = \"faceToFace\" OR writeFinalDecisionTypeOfHearing = \"telephone\" OR writeFinalDecisionTypeOfHearing = \"video\"",
+    "FieldShowCondition": "appeal.appellant.isAppointee != \"Yes\" AND (writeFinalDecisionTypeOfHearing = \"faceToFace\" OR writeFinalDecisionTypeOfHearing = \"telephone\" OR writeFinalDecisionTypeOfHearing = \"video\")",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 3,
     "PageFieldDisplayOrder": 3,
