@@ -19,5 +19,12 @@
   {"LiveFrom": "05/10/2022", "ID": "FL_actionStatementOfReasons", "ListElementCode": "issueDirections", "ListElement": "Issue directions"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionStatementOfReasons", "ListElementCode": "write", "ListElement": "Write Statement of Reasons"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionPermissionToAppeal", "ListElementCode": "refuse", "ListElement": "Refuse Permission to Appeal Application"},
-  {"LiveFrom": "05/10/2022", "ID": "FL_actionLibertyToApply", "ListElementCode": "refuse", "ListElement": "Refuse Liberty to Apply Application"}
+  {"LiveFrom": "05/10/2022", "ID": "FL_actionLibertyToApply", "ListElementCode": "refuse", "ListElement": "Refuse Liberty to Apply Application"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_requestPostHearingTypeSelected", "ListElementCode": "setAside", "ListElement": "Set Aside"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_requestPostHearingTypeSelected", "ListElementCode": "correction", "ListElement": "Correction"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_requestPostHearingTypeSelected", "ListElementCode": "statementOfReasons", "ListElement": "Statement of Reasons"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_requestPostHearingTypeSelected", "ListElementCode": "permissionToAppeal", "ListElement": "Permission to Appeal"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_requestPostHearingTypeSelected", "ListElementCode": "libertyToApply", "ListElement": "Liberty to Apply"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_requestFormat", "ListElementCode": "upload", "ListElement": "Upload request"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_requestFormat", "ListElementCode": "generate", "ListElement": "Enter request details"}
 ]
