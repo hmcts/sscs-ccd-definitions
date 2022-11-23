@@ -11,5 +11,6 @@
   {"LiveFrom": "05/09/2020", "CaseTypeID": "Benefit", "ID": "actionCorrection", "Label": "Correction", "FieldType": "correction", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/09/2020", "CaseTypeID": "Benefit", "ID": "actionStatementOfReasons", "Label": "Statement of Reasons", "FieldType": "statementOfReasons", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/09/2020", "CaseTypeID": "Benefit", "ID": "actionPermissionToAppeal", "Label": "Permission to Appeal", "FieldType": "permissionToAppeal", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "05/09/2020", "CaseTypeID": "Benefit", "ID": "actionLibertyToApply", "Label": "Liberty to Apply", "FieldType": "libertyToApply", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "05/09/2020", "CaseTypeID": "Benefit", "ID": "actionLibertyToApply", "Label": "Liberty to Apply", "FieldType": "libertyToApply", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "ID": "adjournmentInProgress", "Label": "Adjournment in progress?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
