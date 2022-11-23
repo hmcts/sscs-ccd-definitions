@@ -78,11 +78,11 @@
     "PageID": "1.0"
   },
   {
-    "LiveFrom": "05/10/2022",
     "CaseEventID": "actionPostHearingApplication",
     "CaseFieldID": "actionPostHearingApplicationTypeSelected",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
+    "LiveFrom": "05/10/2022",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "Type_Selection",
@@ -90,9 +90,8 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateNotice",
     "CaseEventID": "actionPostHearingApplication",
-    "CaseFieldID": "actionSetAside",
+    "CaseFieldID": "setAside",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
     "LiveFrom": "05/10/2022",
@@ -108,7 +107,7 @@
     "CaseFieldID": "generateNotice",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "actionSetAside.action = \"refuse\"",
+    "FieldShowCondition": "setAside.action = \"refuse\"",
     "LiveFrom": "05/10/2022",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
@@ -117,6 +116,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateNotice",
     "CaseEventID": "actionPostHearingApplication",
     "CaseFieldID": "bodyContent",
     "CaseTypeID": "Benefit",
@@ -131,7 +131,7 @@
   },
   {
     "CaseEventID": "actionPostHearingApplication",
-    "CaseFieldID": "actionCorrection",
+    "CaseFieldID": "correction",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
     "LiveFrom": "05/10/2022",
@@ -144,7 +144,7 @@
   },
   {
     "CaseEventID": "actionPostHearingApplication",
-    "CaseFieldID": "actionStatementOfReasons",
+    "CaseFieldID": "statementOfReasons",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
     "LiveFrom": "05/10/2022",
@@ -157,7 +157,7 @@
   },
   {
     "CaseEventID": "actionPostHearingApplication",
-    "CaseFieldID": "actionPermissionToAppeal",
+    "CaseFieldID": "permissionToAppeal",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
     "LiveFrom": "05/10/2022",
@@ -170,7 +170,7 @@
   },
   {
     "CaseEventID": "actionPostHearingApplication",
-    "CaseFieldID": "actionLibertyToApply",
+    "CaseFieldID": "libertyToApply",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
     "LiveFrom": "05/10/2022",
@@ -192,7 +192,60 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "Notice_Staging",
     "PageLabel": "Notice Document",
-    "PageShowCondition": "actionSetAside.action = \"refuse\"",
+    "PageShowCondition": "setAside.action = \"refuse\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "requestPostHearing",
+    "CaseFieldID": "requestPostHearingTypeSelected",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "23/11/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Type_Selection",
+    "PageLabel": "Application Type Selection",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "requestPostHearing",
+    "CaseFieldID": "setAside",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "23/11/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Set_Aside",
+    "PageLabel": "Set Aside",
+    "PageShowCondition": "requestPostHearingTypeSelected=\"setAside\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateDocument",
+    "CaseEventID": "requestPostHearing",
+    "CaseFieldID": "bodyContent",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "setAside.requestFormat = \"generate\"",
+    "LiveFrom": "23/11/2022",
+    "CaseEventFieldLabel": "Request Detail",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "Set_Aside",
+    "PageLabel": "Set Aside",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "requestPostHearing",
+    "CaseFieldID": "previewDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "23/11/2022",
+    "CaseEventFieldLabel": "Request Document",
+    "PageDisplayOrder": 30,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Request_Staging",
+    "PageLabel": "Request Document",
     "ShowSummaryChangeOption": "Y"
   }
 ]
