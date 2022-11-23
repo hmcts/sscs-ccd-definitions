@@ -92,9 +92,9 @@
   },
   {
     "CaseEventID": "actionPostHearingApplication",
-    "CaseFieldID": "actionSetAside",
+    "CaseFieldID": "setAside",
     "ListElementCode": "action",
-    "ID": "actionPostHearingApplicationActionSetAsideAction",
+    "ID": "actionPostHearingApplicationSetAsideAction",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "05/10/2022",
     "FieldDisplayOrder": 1,
@@ -102,20 +102,20 @@
   },
   {
     "CaseEventID": "actionPostHearingApplication",
-    "CaseFieldID": "actionSetAside",
+    "CaseFieldID": "setAside",
     "ListElementCode": "requestStatementOfReasons",
-    "ID": "actionPostHearingApplicationActionSetAsideRequestStatementOfReasons",
+    "ID": "actionPostHearingApplicationSetAsideRequestStatementOfReasons",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "actionSetAside.action = \"refuse\"",
+    "FieldShowCondition": "setAside.action = \"refuse\"",
     "LiveFrom": "05/10/2022",
     "FieldDisplayOrder": 2,
     "PageID": "Set_Aside"
   },
   {
     "CaseEventID": "actionPostHearingApplication",
-    "CaseFieldID": "actionCorrection",
+    "CaseFieldID": "correction",
     "ListElementCode": "action",
-    "ID": "actionPostHearingApplicationActionCorrectionAction",
+    "ID": "actionPostHearingApplicationCorrectionAction",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "05/10/2022",
     "FieldDisplayOrder": 1,
@@ -123,9 +123,9 @@
   },
   {
     "CaseEventID": "actionPostHearingApplication",
-    "CaseFieldID": "actionStatementOfReasons",
+    "CaseFieldID": "statementOfReasons",
     "ListElementCode": "action",
-    "ID": "actionPostHearingApplicationActionStatementOfReasonsAction",
+    "ID": "actionPostHearingApplicationStatementOfReasonsAction",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "05/10/2022",
     "FieldDisplayOrder": 1,
@@ -133,9 +133,9 @@
   },
   {
     "CaseEventID": "actionPostHearingApplication",
-    "CaseFieldID": "actionPermissionToAppeal",
+    "CaseFieldID": "permissionToAppeal",
     "ListElementCode": "action",
-    "ID": "actionPostHearingApplicationActionPermissionToAppealAction",
+    "ID": "actionPostHearingApplicationPermissionToAppealAction",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "05/10/2022",
     "FieldDisplayOrder": 1,
@@ -143,12 +143,22 @@
   },
   {
     "CaseEventID": "actionPostHearingApplication",
-    "CaseFieldID": "actionLibertyToApply",
+    "CaseFieldID": "libertyToApply",
     "ListElementCode": "action",
-    "ID": "actionPostHearingApplicationActionLibertyToApplyAction",
+    "ID": "actionPostHearingApplicationLibertyToApplyAction",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "05/10/2022",
     "FieldDisplayOrder": 1,
     "PageID": "Liberty_To_Apply"
+  },
+  {
+    "CaseEventID": "requestPostHearing",
+    "CaseFieldID": "setAside",
+    "ListElementCode": "requestFormat",
+    "ID": "requestPostHearingSetAsideRequestFormat",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "23/11/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "Set_Aside"
   }
 ]

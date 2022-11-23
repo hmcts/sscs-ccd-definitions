@@ -25,6 +25,21 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "23/11/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "requestPostHearing",
+    "Name": "Post Hearing Request",
+    "Description": "Post Hearing Request",
+    "DisplayOrder": 117,
+    "PreConditionState(s)": "dormantAppealState;postHearing",
+    "PostConditionState": "*",
+    "EventEnablingCondition": "hearingRoute=\"listAssist\"",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "05/11/2022",
     "CaseTypeID": "Benefit",
     "ID": "actionPostHearingApplication",
@@ -33,6 +48,8 @@
     "DisplayOrder": 136,
     "PreConditionState(s)": "dormantAppealState;postHearing",
     "PostConditionState": "*",
+    "EventEnablingCondition": "hearingRoute=\"listAssist\"",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
     "SecurityClassification": "Public"
@@ -167,6 +184,61 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/11/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "setAsideRequest",
+    "Name": "Set Aside Request",
+    "Description": "Set Aside Request",
+    "DisplayOrder": 500,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/11/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "correctionRequested",
+    "Name": "Correction Granted",
+    "Description": "Correction Granted",
+    "DisplayOrder": 500,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/11/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "sORRequest",
+    "Name": "Statement of Reasons Request",
+    "Description": "SOR Request",
+    "DisplayOrder": 500,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/11/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "permissionToAppealRequest",
+    "Name": "Permission to Appeal Request",
+    "Description": "Permission to Appeal Request",
+    "DisplayOrder": 500,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/11/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "libertyToApplyRequest",
+    "Name": "Liberty to Apply Request",
+    "Description": "Liberty to Apply Request",
+    "DisplayOrder": 500,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
     "SecurityClassification": "Public"
   }
 ]
