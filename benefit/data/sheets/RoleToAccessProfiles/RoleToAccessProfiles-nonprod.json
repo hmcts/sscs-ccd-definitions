@@ -121,15 +121,6 @@
   {
     "LiveFrom": "18/06/2019",
     "CaseTypeID": "Benefit",
-    "RoleName": "[CREATOR]",
-    "Authorisation": "",
-    "ReadOnly": "N",
-    "AccessProfiles": "[CREATOR]",
-    "Disabled": "N"
-  },
-  {
-    "LiveFrom": "18/06/2019",
-    "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs",
     "CaseAccessCategories": "doNotRemove",
     "Authorisation": "",
