@@ -27,7 +27,7 @@
   {
     "LiveFrom": "23/11/2022",
     "CaseTypeID": "Benefit",
-    "ID": "requestPostHearing",
+    "ID": "postHearingRequest",
     "Name": "Post Hearing Request",
     "Description": "Post Hearing Request",
     "DisplayOrder": 117,
@@ -42,9 +42,9 @@
   {
     "LiveFrom": "05/11/2022",
     "CaseTypeID": "Benefit",
-    "ID": "actionPostHearingApplication",
+    "ID": "postHearingReview",
     "Name": "Review Post Hearing App",
-    "Description": "Action Post Hearing Application",
+    "Description": "Review Post Hearing Application",
     "DisplayOrder": 136,
     "PreConditionState(s)": "dormantAppealState;postHearing",
     "PostConditionState": "*",
@@ -200,7 +200,7 @@
   {
     "LiveFrom": "23/11/2022",
     "CaseTypeID": "Benefit",
-    "ID": "correctionRequested",
+    "ID": "correctionRequest",
     "Name": "Correction Granted",
     "Description": "Correction Granted",
     "DisplayOrder": 500,
