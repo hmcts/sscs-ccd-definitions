@@ -194,18 +194,18 @@
     "Description": "Set Aside Request",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "postHearing",
     "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "23/11/2022",
     "CaseTypeID": "Benefit",
     "ID": "correctionRequest",
-    "Name": "Correction Granted",
-    "Description": "Correction Granted",
+    "Name": "Correction Request",
+    "Description": "Correction Request",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "postHearing",
     "SecurityClassification": "Public"
   },
   {
@@ -216,7 +216,7 @@
     "Description": "SOR Request",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "postHearing",
     "SecurityClassification": "Public"
   },
   {
@@ -227,7 +227,7 @@
     "Description": "Permission to Appeal Request",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "postHearing",
     "SecurityClassification": "Public"
   },
   {
@@ -238,7 +238,7 @@
     "Description": "Liberty to Apply Request",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "postHearing",
     "SecurityClassification": "Public"
   }
 ]
