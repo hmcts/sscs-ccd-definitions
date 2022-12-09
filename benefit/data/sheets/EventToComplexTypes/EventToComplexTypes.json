@@ -412,6 +412,15 @@
   {
     "CaseEventID": "caseUpdated",
     "CaseFieldID": "appeal",
+    "ListElementCode": "appellant.name",
+    "ID": "appealAppellantName",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 4
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "appeal",
     "ListElementCode": "appellant.name.title",
     "ID": "appealAppellantTitle",
     "DisplayContext": "OPTIONAL",
@@ -466,6 +475,15 @@
   {
     "CaseEventID": "caseUpdated",
     "CaseFieldID": "appeal",
+    "ListElementCode": "appellant.address",
+    "ID": "appealAppellantAddress",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 9
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "appeal",
     "ListElementCode": "appellant.address.line1",
     "ID": "appealAppellantAddressLine1",
     "DisplayContext": "OPTIONAL",
@@ -507,6 +525,15 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 13
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "appeal",
+    "ListElementCode": "appellant.contact",
+    "ID": "appealAppellantContact",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2020",
+    "FieldDisplayOrder": 14
   },
   {
     "CaseEventID": "caseUpdated",
@@ -1337,6 +1364,26 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "10/12/2021",
     "FieldDisplayOrder": 7,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "addRepresentative",
+    "CaseFieldID": "appeal",
+    "ListElementCode": "rep.name",
+    "ID": "appealRepName",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "10/12/2021",
+    "FieldDisplayOrder": 8,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "addRepresentative",
+    "CaseFieldID": "appeal",
+    "ListElementCode": "rep.address",
+    "ID": "appealRepAddress",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "10/12/2021",
+    "FieldDisplayOrder": 9,
     "PageID": "1.0"
   },
   {
