@@ -12,7 +12,7 @@
   {
     "LiveFrom": "18/06/2019",
     "CaseTypeID": "Benefit",
-    "RoleName": "caseworker-sscs-hmrcresponsewriter",
+    "RoleName": "idam:caseworker-sscs-hmrcresponsewriter",
     "CaseAccessCategories": "taxCredit,guardiansAllowance,tax-FreeChildcare,homeResponsibilitiesProtection,childBenefit,30HoursFreeChildcare,guaranteedMinimumPension,nationalInsuranceCredits",
     "Authorisation": "",
     "ReadOnly": "N",
