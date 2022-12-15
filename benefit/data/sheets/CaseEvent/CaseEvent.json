@@ -1340,7 +1340,7 @@
     "Description": "A listing Error has occurred",
     "DisplayOrder": 104,
     "PreConditionState(s)": "*",
-    "PostConditionState": "handlingError",
+    "PostConditionState": "listingError",
     "SecurityClassification": "Public"
   },
   {
