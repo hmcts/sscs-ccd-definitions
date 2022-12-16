@@ -261,6 +261,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEventAdjournCasePopulatePanelMemberDropdown",
     "CaseEventID": "adjournCase",
     "CaseFieldID": "adjournCasePanelMembersExcluded",
     "CaseTypeID": "Benefit",
