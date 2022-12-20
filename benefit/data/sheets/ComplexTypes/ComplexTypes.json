@@ -171,7 +171,7 @@
 
   {"LiveFrom": "01/01/2018", "ID": "otherPartySelection", "ListElementCode": "otherPartiesList", "FieldType": "DynamicList", "ElementLabel": "Other party", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "ID": "addDocument", "ListElementCode": "documentsList", "FieldType": "DynamicList", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "documentSelection", "ListElementCode": "documentsList", "FieldType": "DynamicList", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
 
   {
     "LiveFrom": "01/01/2018",
