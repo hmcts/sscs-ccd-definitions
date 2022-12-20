@@ -11,10 +11,5 @@
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "workBasketHearingEpimsId", "Label": "Hearing Venue", "DisplayOrder": 19},
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "workBasketHearingEpimsId", "Label": "Hearing Venue", "DisplayOrder": 19},
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "workBasketHearingEpimsId", "Label": "Hearing Venue", "DisplayOrder": 19},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "workBasketHearingEpimsId", "Label": "Hearing Venue", "DisplayOrder": 19},
-  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "hearingRoute", "Label": "Hearing Route", "DisplayOrder": 20},
-  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "hearingRoute", "Label": "Hearing Route", "DisplayOrder": 20},
-  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "hearingRoute", "Label": "Hearing Route", "DisplayOrder": 20},
-  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "hearingRoute", "Label": "Hearing Route", "DisplayOrder": 20},
-  {"LiveFrom": "25/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "hearingRoute", "Label": "Hearing Route", "DisplayOrder": 20}
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "workBasketHearingEpimsId", "Label": "Hearing Venue", "DisplayOrder": 19}
 ]
