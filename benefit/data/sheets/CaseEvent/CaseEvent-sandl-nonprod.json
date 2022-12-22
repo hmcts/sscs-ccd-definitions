@@ -25,6 +25,17 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "10/06/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "listingError",
+    "Name": "Listing Error",
+    "Description": "A listing Error has occurred",
+    "DisplayOrder": 15,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "listingError",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "05/11/2022",
     "CaseTypeID": "Benefit",
     "ID": "actionPostHearingApplication",

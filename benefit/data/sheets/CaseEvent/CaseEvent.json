@@ -1335,12 +1335,12 @@
   {
     "LiveFrom": "10/06/2022",
     "CaseTypeID": "Benefit",
-    "ID": "listingError",
-    "Name": "Listing Error",
-    "Description": "A listing Error has occurred",
+    "ID": "handlingError",
+    "Name": "Handling Error",
+    "Description": "A handling Error has occurred",
     "DisplayOrder": 104,
     "PreConditionState(s)": "*",
-    "PostConditionState": "listingError",
+    "PostConditionState": "handlingError",
     "SecurityClassification": "Public"
   },
   {
