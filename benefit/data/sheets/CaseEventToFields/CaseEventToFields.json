@@ -1757,7 +1757,7 @@
 
   {
     "CaseEventID": "issueGenericLetter",
-    "CaseFieldID": "letterText",
+    "CaseFieldID": "genericLetterText",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",

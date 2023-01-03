@@ -44,7 +44,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "informationFromAppellant", "Label": "Request info from case party", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "informationFromPartySelected", "Label": "Select party to request info from", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "letterText", "Label": "Add letter text", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "genericLetterText", "Label": "Add letter text", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hasJointParty", "Label": "Joint party toggle", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hasRepresentative", "Label": "Send to all parties", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
