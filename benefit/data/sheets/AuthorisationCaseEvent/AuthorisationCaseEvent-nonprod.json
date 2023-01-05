@@ -17,5 +17,6 @@
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequest", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequestWelsh", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequestWelsh", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "R"},
-  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequestWelsh", "AccessProfile": "caseworker-sscs", "CRUD": "R"}
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseEventID": "actionPostponementRequestWelsh", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "setHearingRoute", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"}
 ]
