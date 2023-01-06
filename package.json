@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=14.18.2"
+    "node": ">=16.15.0"
   },
   "scripts": {
     "reset-ccd-submodule": "git submodule update --init --recursive --remote && git submodule foreach --recursive git pull origin master && yarn --cwd sscs-ccd-e2e-tests install",
