@@ -26,5 +26,7 @@
   {"LiveFrom": "23/11/2022", "ID": "FL_postHearingRequestType", "ListElementCode": "correction", "ListElement": "Correction"},
   {"LiveFrom": "23/11/2022", "ID": "FL_postHearingRequestType", "ListElementCode": "statementOfReasons", "ListElement": "Statement of Reasons"},
   {"LiveFrom": "23/11/2022", "ID": "FL_requestFormat", "ListElementCode": "upload", "ListElement": "Upload request"},
-  {"LiveFrom": "23/11/2022", "ID": "FL_requestFormat", "ListElementCode": "generate", "ListElement": "Enter request details"}
+  {"LiveFrom": "23/11/2022", "ID": "FL_requestFormat", "ListElementCode": "generate", "ListElement": "Enter request details"},
+  {"LiveFrom": "04/11/2023", "ID": "FL_reservedCases", "ListElementCode": "Yes", "ListElement": "Yes"},
+  {"LiveFrom": "04/11/2023", "ID": "FL_reservedCases", "ListElementCode": "No", "ListElement": "No"}
 ]
