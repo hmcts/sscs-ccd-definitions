@@ -378,6 +378,7 @@
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "selectedAudioVideoEvidenceDetails", "Label": "Selected Audio/Video Evidence Details", "FieldType": "AudioVideoEvidence", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "selectedAudioVideoEvidence", "Label": "Selected Audio/Video Evidence", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tempNoteDetail", "Label": "Enter note", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "noteDetailRemoveAudioVideo", "Label": "Enter note", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "processAudioVideoReviewState", "Label": "Interloc Review State", "FieldType": "FixedList", "FieldTypeParameter": "FL_processAudioVideoReviewState", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "hasUnprocessedAudioVideoEvidence", "Label": "Has unprocessed Audio/Video evidence", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "showWorkCapabilityAssessmentPage", "Label": "Show the Work Capability Assessment page?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},

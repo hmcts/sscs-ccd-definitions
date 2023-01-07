@@ -3791,12 +3791,24 @@
   },
   {
     "CaseEventID": "processAudioVideo",
+    "CaseFieldID": "noteDetailRemoveAudioVideo",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "processAudioVideoAction =\"removeEvidence\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 9,
+    "PageID": "2.0",
+    "PageLabel": "Process Audio/Video Evidence"
+  },
+  {
+    "CaseEventID": "processAudioVideo",
     "CaseFieldID": "processAudioVideoReviewState",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 9,
+    "PageFieldDisplayOrder": 10,
     "PageID": "2.0",
     "PageLabel": "Process Audio/Video Evidence"
   },
