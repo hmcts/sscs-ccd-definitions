@@ -13,8 +13,8 @@
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "workBasketHearingEpimsId", "Label": "Hearing Venue", "DisplayOrder": 20},
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "workBasketHearingEpimsId", "Label": "Hearing Venue", "DisplayOrder": 20},
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "workBasketHearingEpimsId", "Label": "Hearing Venue", "DisplayOrder": 20},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "excludeReservedCases", "Label": "Exclude reserved cases", "DisplayOrder": 22},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "excludeReservedCases", "Label": "Exclude reserved cases", "DisplayOrder": 22},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "excludeReservedCases", "Label": "Exclude reserved cases", "DisplayOrder": 22},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "excludeReservedCases", "Label": "Exclude reserved cases", "DisplayOrder": 22}
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-judge", "CaseFieldID": "excludeReservedCases", "Label": "Exclude reserved cases", "DisplayOrder": 23},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-registrar", "CaseFieldID": "excludeReservedCases", "Label": "Exclude reserved cases", "DisplayOrder": 23},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-clerk", "CaseFieldID": "excludeReservedCases", "Label": "Exclude reserved cases", "DisplayOrder": 23},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs-superuser", "CaseFieldID": "excludeReservedCases", "Label": "Exclude reserved cases", "DisplayOrder": 23}
 ]
