@@ -64,5 +64,10 @@
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-superuser", "CaseFieldID": "translationWorkOutstanding", "Label": "Translation outstanding", "DisplayOrder": 15},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-superuser", "CaseFieldID": "reasonableAdjustmentsOutstanding", "Label": "Alternative letter format required", "DisplayOrder": 16},
   {"LiveFrom": "20/06/2019", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-superuser", "CaseFieldID": "hasUnprocessedAudioVideoEvidence", "Label": "Does case have unprocessed audio/video evidence?", "DisplayOrder": 17},
-  {"LiveFrom": "16/12/2021", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-superuser", "CaseFieldID": "dwpDueDate", "Label": "FTA response due date", "DisplayOrder": 18}
+  {"LiveFrom": "16/12/2021", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-superuser", "CaseFieldID": "dwpDueDate", "Label": "FTA response due date", "DisplayOrder": 18},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-superuser", "CaseFieldID": "hearingRoute", "Label": "Hearing Route", "DisplayOrder": 22},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-clerk", "CaseFieldID": "hearingRoute", "Label": "Hearing Route", "DisplayOrder": 22},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-judge", "CaseFieldID": "hearingRoute", "Label": "Hearing Route", "DisplayOrder": 22},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "hearingRoute", "Label": "Hearing Route", "DisplayOrder": 22},
+  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-registrar", "CaseFieldID": "hearingRoute", "Label": "Hearing Route", "DisplayOrder": 22}
 ]

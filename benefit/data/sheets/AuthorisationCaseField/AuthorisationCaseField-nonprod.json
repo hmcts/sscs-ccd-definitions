@@ -1,10 +1,3 @@
 [
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "functionalTest", "`AccessProfile`": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingEpimsId", "AccessProfile": "citizen", "CRUD": "CRUD"},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingRoute", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingRoute", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingRoute", "AccessProfile": "caseworker-sscs-judge", "CRUD": "CRUD"},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingRoute", "AccessProfile": "caseworker-sscs-registrar", "CRUD": "CRUD"},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingRoute", "AccessProfile": "caseworker-sscs-dwpresponsewriter", "CRUD": "CRUD"},
-  {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "CaseFieldID": "workBasketHearingRoute", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "functionalTest", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
 ]
