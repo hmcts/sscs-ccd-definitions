@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=14.18.2"
+    "node": ">=16.15.0"
   },
   "scripts": {
     "reset-ccd-submodule": "git submodule update --init --recursive --remote && git submodule foreach --recursive git pull origin master && yarn --cwd sscs-ccd-e2e-tests install",
-    "setup": "git submodule update --init --recursive --remote && yarn --cwd sscs-ccd-e2e-tests install",
+    "setup": "git submodule update --init --recursive --remote && yarn --cwd sscs-ccd-e2e-tests install && yarn --cwd sscs-ccd-e2e-tests transpile && yarn --cwd sscs-ccd-e2e-tests webdriverUpdate",
     "lint": "echo lint",
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
