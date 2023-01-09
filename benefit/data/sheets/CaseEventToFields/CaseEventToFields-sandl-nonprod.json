@@ -194,19 +194,5 @@
     "PageLabel": "Notice Document",
     "PageShowCondition": "actionSetAside.action = \"refuse\"",
     "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "writeFinalDecision",
-    "CaseFieldID": "writeFinalDecisionAppointeeAttendedQuestion",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "appeal.appellant.isAppointee = \"Yes\" AND (writeFinalDecisionTypeOfHearing = \"faceToFace\" OR writeFinalDecisionTypeOfHearing = \"telephone\" OR writeFinalDecisionTypeOfHearing = \"video\")",
-    "LiveFrom": "16/11/2022",
-    "PageDisplayOrder": 3,
-    "PageFieldDisplayOrder": 3,
-    "PageID": "typeOfHearing",
-    "PageLabel": "Type of hearing",
-    "ShowSummaryChangeOption": "Y",
-    "RetainHiddenValue": "Yes"
   }
 ]

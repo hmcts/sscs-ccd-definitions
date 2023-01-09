@@ -95,6 +95,20 @@
   },
   {
     "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "writeFinalDecisionAppointeeAttendedQuestion",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "appeal.appellant.isAppointee = \"Yes\" AND (writeFinalDecisionTypeOfHearing = \"faceToFace\" OR writeFinalDecisionTypeOfHearing = \"telephone\" OR writeFinalDecisionTypeOfHearing = \"video\")",
+    "LiveFrom": "09/01/2023",
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "typeOfHearing",
+    "PageLabel": "Type of hearing",
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "otherPartyAttendedQuestions",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
