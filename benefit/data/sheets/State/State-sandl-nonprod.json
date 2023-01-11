@@ -1,3 +1,4 @@
 [
-  {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "ID": "postHearing", "Name": "Post Hearing", "Description": "Issue with List assist Hearing", "DisplayOrder": 16, "TitleDisplay": "# ${[CASE_REFERENCE]}: ${appeal.appellant.name.lastName}"}
+  {"LiveFrom": "19/03/2019", "CaseTypeID": "Benefit", "ID": "listingError", "Name": "Listing Error", "Description": "Listing Error", "DisplayOrder": 10, "TitleDisplay": "# ${[CASE_REFERENCE]}: ${appeal.appellant.name.lastName}"},
+  {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "ID": "postHearing", "Name": "Post Hearing", "Description": "Issue with List assist Hearing", "DisplayOrder": 17, "TitleDisplay": "# ${[CASE_REFERENCE]}: ${appeal.appellant.name.lastName}"}
 ]
