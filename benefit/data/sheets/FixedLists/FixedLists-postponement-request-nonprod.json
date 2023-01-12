@@ -4,5 +4,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_selectWhoReviewsCase", "ListElementCode": "postponementRequestInterlocSendToTcw", "ListElement": "Postponement request for interloc - send to TCW"},
   {"LiveFrom": "01/09/2021", "ID": "documentType", "ListElementCode": "postponementRequestDirectionNotice", "ListElement": "Postponement Request direction notice"},
   {"LiveFrom": "01/09/2021", "ID": "documentTypeWelsh", "ListElementCode": "postponementRequestDirectionNotice", "ListElement": "Postponement Request direction notice"},
+  {"LiveFrom": "01/01/2023", "ID": "documentType", "ListElementCode": "setAsideApplication", "ListElement": "Set Aside application"},
+  {"LiveFrom": "01/01/2023", "ID": "documentTypeWelsh", "ListElementCode": "setAsideApplication", "ListElement": "Set Aside application"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "DisplayOrder" : "14","ListElementCode": "reviewPostponementRequest", "ListElement": "Review hearing postponement request"}
 ]
