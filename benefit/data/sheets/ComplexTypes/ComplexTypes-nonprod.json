@@ -1,0 +1,4 @@
+[
+    {"LiveFrom": "01/01/2018", "ID": "otherPartySelection", "ListElementCode": "otherPartiesList", "FieldType": "DynamicList", "ElementLabel": "Other party", "SecurityClassification": "PUBLIC"},
+    {"LiveFrom": "01/01/2018", "ID": "documentSelectionList", "ListElementCode": "documentsList", "FieldType": "DynamicList", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"}
+]
