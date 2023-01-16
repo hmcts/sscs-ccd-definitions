@@ -1617,7 +1617,7 @@
   },
   {
     "CaseEventID": "issueGenericLetter",
-    "CaseFieldID": "allParties",
+    "CaseFieldID": "sendToAllParties",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
@@ -1637,7 +1637,7 @@
     "DisplayContext": "READONLY", 
     "PageDisplayOrder": 28, 
     "PageID": "1.0",
-    "FieldShowCondition": "allParties=\"DUMMY_VALUE_TO_HIDE_FIELD\"", 
+    "FieldShowCondition": "sendToAllParties=\"DUMMY_VALUE_TO_HIDE_FIELD\"", 
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -1649,7 +1649,7 @@
     "DisplayContext": "READONLY", 
     "PageDisplayOrder": 28, 
     "PageID": "1.0",
-    "FieldShowCondition": "allParties=\"DUMMY_VALUE_TO_HIDE_FIELD\"", 
+    "FieldShowCondition": "sendToAllParties=\"DUMMY_VALUE_TO_HIDE_FIELD\"", 
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -1661,7 +1661,7 @@
     "DisplayContext": "READONLY", 
     "PageDisplayOrder": 28, 
     "PageID": "1.0",
-    "FieldShowCondition": "allParties=\"DUMMY_VALUE_TO_HIDE_FIELD\"", 
+    "FieldShowCondition": "sendToAllParties=\"DUMMY_VALUE_TO_HIDE_FIELD\"", 
     "ShowSummaryChangeOption": "N"
   }, 
   {
@@ -1674,7 +1674,7 @@
     "PageFieldDisplayOrder": 9,
     "PageID": "1.0",
     "PageLabel": "Issue generic letter",
-    "FieldShowCondition": "allParties = \"No\"",
+    "FieldShowCondition": "sendToAllParties = \"No\"",
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -1687,7 +1687,7 @@
     "PageFieldDisplayOrder": 10,
     "PageID": "1.0",
     "PageLabel": "Issue generic letter",
-    "FieldShowCondition": "allParties = \"No\" AND hasRepresentative = \"Yes\"",
+    "FieldShowCondition": "sendToAllParties = \"No\" AND hasRepresentative = \"Yes\"",
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -1700,7 +1700,7 @@
     "PageFieldDisplayOrder": 11,
     "PageID": "1.0",
     "PageLabel": "Issue generic letter",
-    "FieldShowCondition": "allParties = \"No\" AND hasJointParty = \"Yes\"",
+    "FieldShowCondition": "sendToAllParties = \"No\" AND hasJointParty = \"Yes\"",
     "ShowSummaryChangeOption": "N"
   },
   {
@@ -1713,7 +1713,7 @@
     "PageFieldDisplayOrder": 12,
     "PageID": "1.0",
     "PageLabel": "Issue generic letter",
-    "FieldShowCondition": "allParties = \"No\" AND hasOtherParties = \"Yes\"",
+    "FieldShowCondition": "sendToAllParties = \"No\" AND hasOtherParties = \"Yes\"",
     "ShowSummaryChangeOption": "N"
   },
 
@@ -1726,7 +1726,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 13,
     "PageID": "1.0",
-    "FieldShowCondition": "allParties = \"No\" AND sendToOtherParties = \"Yes\"",
+    "FieldShowCondition": "sendToAllParties = \"No\" AND sendToOtherParties = \"Yes\"",
     "PageLabel": " "
   },
 
@@ -1752,7 +1752,8 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "2.0",
     "FieldShowCondition": "addDocuments = \"Yes\"",
-    "PageLabel": " "
+    "PageLabel": " ",
+    "ShowSummaryChangeOption": "Y"
   },
 
   {
@@ -1766,7 +1767,6 @@
     "PageID": "3.0",
     "ShowSummaryChangeOption": "Y"
   },
-
   {
     "CaseEventID": "removeLinkForCase",
     "CaseFieldID": "linkedCase",
