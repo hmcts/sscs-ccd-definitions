@@ -571,7 +571,7 @@ chardet@^0.7.0:
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-charenc@0.0.2:
+charenc@0.0.2, "charenc@>= 0.0.1":
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
   integrity sha1-wKHS86cJLgN3S/qD8UwPxXkKhmc=
@@ -834,7 +834,7 @@ cross-spawn@^7.0.2, cross-spawn@^7.0.3:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-crypt@0.0.2:
+crypt@0.0.2, "crypt@>= 0.0.1":
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/crypt/-/crypt-0.0.2.tgz#88d7ff7ec0dfb86f713dc87bbb42d044d3e6c41b"
   integrity sha1-iNf/fsDfuG9xPch7u0LQRNPmxBs=
@@ -2430,12 +2430,12 @@ os-tmpdir@~1.0.2:
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
   integrity sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
 
-otp@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/otp/-/otp-0.1.3.tgz#c257bf25d2f9027af77ac52269b3c14268d2bd6b"
-  integrity sha1-wle/JdL5Anr3esUiabPBQmjSvWs=
+otp@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/otp/-/otp-1.1.0.tgz#904b50ef204a10a4feb69ee9a83adb02381a4188"
+  integrity sha512-d47A2di4pOAkixA55lbXZCL4H+eDfTvcaw/a3JYzYBhta0I4TbOUJ16F2vXw1cQq4KAmqaSDXwVR8+zmmgb3Aw==
   dependencies:
-    thirty-two "^0.0.2"
+    sha1 "^1.1.1"
 
 p-finally@^1.0.0:
   version "1.0.0"
@@ -3057,6 +3057,14 @@ setprototypeof@1.2.0:
   resolved "https://registry.yarnpkg.com/setprototypeof/-/setprototypeof-1.2.0.tgz#66c9a24a73f9fc28cbe66b09fed3d33dcaf1b424"
   integrity sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==
 
+sha1@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/sha1/-/sha1-1.1.1.tgz#addaa7a93168f393f19eb2b15091618e2700f848"
+  integrity sha512-dZBS6OrMjtgVkopB1Gmo4RQCDKiZsqcpAQpkV/aaj+FCrCg8r4I4qMkDPQjBgLIxlmu9k4nUbWq6ohXahOneYA==
+  dependencies:
+    charenc ">= 0.0.1"
+    crypt ">= 0.0.1"
+
 shebang-command@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/shebang-command/-/shebang-command-1.2.0.tgz#44aac65b695b03398968c39f363fee5deafdf1ea"
@@ -3320,11 +3328,6 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
-
-thirty-two@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/thirty-two/-/thirty-two-0.0.2.tgz#4253e29d8cb058f0480267c5698c0e4927e54b6a"
-  integrity sha1-QlPinYywWPBIAmfFaYwOSSflS2o=
 
 through@^2.3.6, through@^2.3.8:
   version "2.3.8"
