@@ -26,5 +26,15 @@
   {"LiveFrom": "23/11/2022", "ID": "FL_postHearingRequestType", "ListElementCode": "correction", "ListElement": "Correction"},
   {"LiveFrom": "23/11/2022", "ID": "FL_postHearingRequestType", "ListElementCode": "statementOfReasons", "ListElement": "Statement of Reasons"},
   {"LiveFrom": "23/11/2022", "ID": "FL_requestFormat", "ListElementCode": "upload", "ListElement": "Upload request"},
-  {"LiveFrom": "23/11/2022", "ID": "FL_requestFormat", "ListElementCode": "generate", "ListElement": "Enter request details"}
+  {"LiveFrom": "23/11/2022", "ID": "FL_requestFormat", "ListElementCode": "generate", "ListElement": "Enter request details"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_confidentialityType", "ListElementCode": "general", "ListElement": "General"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_confidentialityType", "ListElementCode": "confidential", "ListElement": "Confidential"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_confidentialityPartyMembers", "ListElementCode": "appellantOrAppointee", "ListElement": "Appellant Or Appointee"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_confidentialityPartyMembers", "ListElementCode": "jointPartyRep", "ListElement": "Joint Party Rep"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_confidentialityPartyMembers", "ListElementCode": "jointParty", "ListElement": "Joint Party"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_confidentialityPartyMembers", "ListElementCode": "otherParty", "ListElement": "Other Party"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_confidentialityPartyMembers", "ListElementCode": "otherPartyRep", "ListElement": "Other Party Rep"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_confidentialityPartyMembers", "ListElementCode": "representative", "ListElement": "Representative"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_confidentialityPartyMembers", "ListElementCode": "fta", "ListElement": "FTA"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_confidentialityPartyMembers", "ListElementCode": "allParties", "ListElement": "All Parties"}
 ]

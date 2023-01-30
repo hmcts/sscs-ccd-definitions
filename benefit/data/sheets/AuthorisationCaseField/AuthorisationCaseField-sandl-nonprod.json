@@ -83,5 +83,17 @@
   {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "postHearingRequestType", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "postHearingRequestType", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "postHearingRequestType", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "CRUD"},
-  {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "postHearingRequestType", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"}
+  {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "postHearingRequestType", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityType", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityType", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityType", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityType", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
+  {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityType", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "CRUD"},
+  {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityType", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityPartyMembers", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityPartyMembers", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityPartyMembers", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityPartyMembers", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
+  {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityPartyMembers", "UserRole": "caseworker-sscs-dwpresponsewriter", "CRUD": "CRUD"},
+  {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "confidentialityPartyMembers", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"}
 ]

@@ -13,5 +13,7 @@
   {"LiveFrom": "05/09/2022", "CaseTypeID": "Benefit", "ID": "statementOfReasons", "Label": "Statement of Reasons", "FieldType": "statementOfReasons", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/09/2022", "CaseTypeID": "Benefit", "ID": "permissionToAppeal", "Label": "Permission to Appeal", "FieldType": "permissionToAppeal", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/09/2022", "CaseTypeID": "Benefit", "ID": "libertyToApply", "Label": "Liberty to Apply", "FieldType": "libertyToApply", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "ID": "postHearingRequestType", "Label": "Post Hearing Request", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_postHearingRequestType", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "ID": "postHearingRequestType", "Label": "Post Hearing Request", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_postHearingRequestType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "ID": "confidentialityType", "Label": "Confidentiality", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_confidentialityType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "06/07/2022", "CaseTypeID": "Benefit", "ID": "confidentialityPartyMembers", "Label": "Confidentiality Party Members", "FieldType": "MultiSelectList", "FieldTypeParameter": "FL_confidentialityPartyMembers", "SecurityClassification": "PUBLIC"}
 ]

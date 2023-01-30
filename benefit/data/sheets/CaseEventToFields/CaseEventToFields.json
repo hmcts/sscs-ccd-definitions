@@ -2093,13 +2093,37 @@
   },
   {
     "CaseEventID": "directionIssued",
+    "CaseFieldID": "confidentialityType",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "Mandatory",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "PageLabel": "Issue direction"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "confidentialityPartyMembers",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "confidentialityType=\"confidential\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0",
+    "PageLabel": "Issue direction",
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "directionIssued",
     "CaseFieldID": "directionDueDate",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "directionTypeDl!=\"refuseExtension\" AND directionTypeDl!=\"refuseHearingRecordingRequest\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
     "PageLabel": "Issue direction",
     "RetainHiddenValue": "Yes"
@@ -2111,7 +2135,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 5,
     "PageID": "1.0",
     "PageLabel": "Issue direction",
     "ShowSummaryChangeOption": "Y"
@@ -2124,7 +2148,7 @@
     "FieldShowCondition": "bodyContent=\"doNotUse\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 6,
     "PageID": "1.0",
     "PageLabel": "Issue direction",
     "RetainHiddenValue": "Yes"
@@ -2137,7 +2161,7 @@
     "FieldShowCondition": "createdInGapsFrom!=\"readyToList\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 7,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2149,7 +2173,7 @@
     "FieldShowCondition": "directionTypeDl=\"refuseExtension\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 6,
+    "PageFieldDisplayOrder": 8,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2160,7 +2184,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 7,
+    "PageFieldDisplayOrder": 9,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2172,7 +2196,7 @@
     "FieldShowCondition": "generateNotice=\"No\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 8,
+    "PageFieldDisplayOrder": 10,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2184,7 +2208,7 @@
     "FieldShowCondition": "generateNotice=\"Yes\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 9,
+    "PageFieldDisplayOrder": 11,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2196,7 +2220,7 @@
     "FieldShowCondition": "generateNotice=\"Yes\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 10,
+    "PageFieldDisplayOrder": 12,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2208,7 +2232,7 @@
     "FieldShowCondition": "generateNotice=\"Yes\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 11,
+    "PageFieldDisplayOrder": 13,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2220,7 +2244,7 @@
     "FieldShowCondition": "generateNotice=\"Yes\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 12,
+    "PageFieldDisplayOrder": 14,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2231,7 +2255,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 13,
+    "PageFieldDisplayOrder": 15,
     "PageID": "2.0",
     "PageLabel": "Issue direction",
     "PageShowCondition": "generateNotice=\"Yes\""
