@@ -1,5 +1,5 @@
 {
-  "name": "sscs-ccd-e2e-tests",
+  "name": "e2e-tests",
   "version": "0.1.0",
   "engines": {
     "node": ">=16.15.0"
@@ -8,8 +8,8 @@
   "scripts": {
     "build": "yarn webdriverUpdate",
     "transpile": "yarn tsc -b",
-    "lint": "yarn eslint ../sscs-ccd-e2e-tests && yarn prettier --check .",
-    "lint:fix": "yarn prettier --write ../sscs-ccd-e2e-tests && yarn eslint . --fix --quiet",
+    "lint": "yarn eslint ../e2e-tests && yarn prettier --check .",
+    "lint:fix": "yarn prettier --write ../e2e-tests && yarn eslint . --fix --quiet",
     "webdriverUpdate": "webdriver-manager update --gecko=false",
     "e2e": "yarn test:fullfunctional",
     "test:local": "yarn build && cross-env NODE_ENV=development protractor ./dist/e2e/features.parallel.conf.js --cucumberOpts.tags=~@wip --cucumberOpts.tags=@nightly-test",

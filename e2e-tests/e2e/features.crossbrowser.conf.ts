@@ -32,7 +32,7 @@ async function onPrepare(): Promise<void> {
 async function onComplete(): Promise<void> {
   await browser.getProcessedConfig();
   const session = await browser.getSession();
-  logger.info(`SauceOnDemandSessionID=${session.getId()} job-name=sscs-ccd-e2e-tests`);
+  logger.info(`SauceOnDemandSessionID=${session.getId()} job-name=-e2e-tests`);
   report.generate({
     jsonDir: reportDir,
     reportPath: reportDir,

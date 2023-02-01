@@ -6,11 +6,11 @@
     "node": ">=16.15.0"
   },
   "scripts": {
-    "setup": "yarn --cwd sscs-ccd-e2e-tests install",
+    "setup": "yarn --cwd e2e-tests install",
     "lint": "echo lint",
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
-    "test:functional": "yarn --cwd sscs-ccd-e2e-tests test:previewfunctional",
+    "test:functional": "yarn --cwd e2e-tests test:previewfunctional",
     "start": "node index.js",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
