@@ -25,12 +25,23 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "10/06/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "listingError",
+    "Name": "Listing Error",
+    "Description": "A listing Error has occurred",
+    "DisplayOrder": 104,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "listingError",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "23/11/2022",
     "CaseTypeID": "Benefit",
     "ID": "postHearingRequest",
     "Name": "Post Hearing Request",
     "Description": "Post Hearing Request",
-    "DisplayOrder": 117,
+    "DisplayOrder": 118,
     "PreConditionState(s)": "dormantAppealState;postHearing",
     "PostConditionState": "*",
     "EventEnablingCondition": "hearingRoute=\"listAssist\"",
@@ -45,7 +56,7 @@
     "ID": "postHearingReview",
     "Name": "Review Post Hearing App",
     "Description": "Review Post Hearing Application",
-    "DisplayOrder": 136,
+    "DisplayOrder": 137,
     "PreConditionState(s)": "dormantAppealState;postHearing",
     "PostConditionState": "*",
     "EventEnablingCondition": "hearingRoute=\"listAssist\"",
