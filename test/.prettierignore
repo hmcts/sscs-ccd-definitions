@@ -1,0 +1,13 @@
+functional-output/
+node_modules/
+.idea/
+yarn-error.log
+.DS_Store
+.vscode/
+dist/
+*.iml
+reports/
+protractorFailuresReport/
+
+e2e/reporter/resources/
+.github/
