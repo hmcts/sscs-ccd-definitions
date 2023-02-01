@@ -6,7 +6,7 @@
     "node": ">=16.15.0"
   },
   "scripts": {
-    "setup": "yarn --cwd e2e-tests install",
+    "setup": "yarn --cwd e2e-tests install && yarn --cwd e2e-tests transpile && yarn --cwd e2e-tests webdriverUpdate",
     "lint": "echo lint",
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
