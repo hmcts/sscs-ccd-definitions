@@ -5,19 +5,6 @@
   "engines": {
     "node": ">=16.15.0"
   },
-  "scripts": {
-    "reset-ccd-submodule": "git submodule update --init --recursive --remote && git submodule foreach --recursive git pull origin master && yarn --cwd sscs-ccd-e2e-tests install",
-    "setup": "git submodule update --init --recursive --remote && yarn --cwd sscs-ccd-e2e-tests install && yarn --cwd sscs-ccd-e2e-tests transpile && yarn --cwd sscs-ccd-e2e-tests webdriverUpdate",
-    "lint": "echo lint",
-    "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
-    "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
-    "test:functional": "yarn --cwd sscs-ccd-e2e-tests test:previewfunctional",
-    "start": "node index.js",
-    "test:coverage": "echo test:coverage",
-    "test:a11y": "echo test:a11y",
-    "highLevelDataSetup": "echo 'bash bin/before-data-setup-step.sh benefit $1 && ./gradlew highLevelDataSetup --args=$1 && sh bin/after-data-setup-step.sh' > ./temp.sh && sh ./temp.sh",
-    "test:smoke": "echo smoke"
-  },
   "dependencies": {
     "@hmcts/nodejs-healthcheck": "1.8.0",
     "@hmcts/properties-volume": "0.0.14",

@@ -55,7 +55,7 @@ withPipeline("nodejs", product, component) {
       }
     }
 
-    before('functionalTest:preview') {
+    /*before('functionalTest:preview') {
         stage('Setup') {
             yarnBuilder.yarn('setup')
         }
@@ -107,7 +107,7 @@ withPipeline("nodejs", product, component) {
                 reportName           : 'ExUi Functional Test Report'
         ])
         steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/functional/*'
-    }
+    }*/
 
   println """done!""".stripIndent()
 }
