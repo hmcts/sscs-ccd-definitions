@@ -42,7 +42,7 @@ export class AuthenticationFlow {
     await this.goToSignInPage();
     this.userName = config.get(`users.${user}.user`);
     this.password = config.get(`users.${user}.password`);
-    logger.info(`Signing in to user ${this.userName} with password ${this.password}`);
+    logger.info(`Signing in to user ${this.userName}`);
     await this.idamSignInPage.signIn(this.userName, this.password);
     logger.info(`Signed in to user ${this.userName}`);
   }
