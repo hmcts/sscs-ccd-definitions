@@ -6,10 +6,10 @@
   },
   "private": true,
   "scripts": {
-    "build": "yarn webdriverUpdate",
+    "build": "yarn webdriverUpdate && yarn transpile",
     "transpile": "yarn tsc -b",
-    "lint": "yarn eslint ../e2e-tests && yarn prettier --check .",
-    "lint:fix": "yarn prettier --write ../e2e-tests && yarn eslint . --fix --quiet",
+    "lint": "yarn eslint . && yarn prettier --check .",
+    "lint:fix": "yarn prettier --write . && yarn eslint . --fix --quiet",
     "webdriverUpdate": "webdriver-manager update --gecko=false",
     "e2e": "yarn test:fullfunctional",
     "test:local": "yarn build && cross-env NODE_ENV=development protractor ./dist/e2e/features.parallel.conf.js --cucumberOpts.tags=~@wip --cucumberOpts.tags=@nightly-test",
