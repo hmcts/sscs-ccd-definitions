@@ -107,7 +107,7 @@
     "CaseFieldID": "generateNotice",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "setAside.action = \"refuse\"",
+    "FieldShowCondition": "setAside.action = \"refuse\" OR setAside.action = \"grant\"",
     "LiveFrom": "05/10/2022",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
@@ -192,7 +192,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "Notice_Staging",
     "PageLabel": "Notice Document",
-    "PageShowCondition": "setAside.action = \"refuse\"",
+    "PageShowCondition": "setAside.action = \"refuse\" OR setAside.action = \"grant\" ",
     "ShowSummaryChangeOption": "Y"
   },
   {
