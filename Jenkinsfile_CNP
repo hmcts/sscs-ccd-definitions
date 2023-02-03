@@ -5,8 +5,8 @@ properties([
                 string(name: 'CCD_GATEWAY_URL', defaultValue: 'https://gateway-ccd.aat.platform.hmcts.net', description: 'The CCD Gateway URL these tests will need to run'),
                 string(name: 'TRIBUNALS_API_URI', defaultValue: 'http://sscs-tribunals-api-aat.service.core-compute-aat.internal', description: 'The API service to create test data'),
                 string(name: 'NUM_TESTS_IN_PARALLEL', defaultValue: '50', description: 'The number of tests to run in parallel'),
-                string(name: 'NIGHTLY_TAG', defaultValue: '--cucumberOpts.tags=@nightly-test', description: 'Tag for nightly build'),
-                string(name: 'PREVIEW_TAG', defaultValue: '--cucumberOpts.tags=@preview-test', description: 'Tag for preview build')
+                string(name: 'NIGHTLY_TAG', defaultValue: '--cucumberOpts.tags=~@wip --cucumberOpts.tags=@nightly-test', description: 'Tag for nightly build'),
+                string(name: 'PREVIEW_TAG', defaultValue: '--cucumberOpts.tags=~@wip --cucumberOpts.tags=@preview-test', description: 'Tag for preview build')
         ])
 ])
 
@@ -95,6 +95,53 @@ withPipeline("nodejs", product, component) {
         env.TEST_E2E_FAIL_FAST = 'false'
         env.TEST_E2E_ANNOTATION = params.PREVIEW_TAG
         env.TEST_E2E_RETRIES = 2
+    }
+
+    afterSuccess('builde2e') {
+        stage('Transpile') {
+            yarnBuilder.yarn('transpile')
+        }
+        stage('Webdriver Manager Update') {
+            yarnBuilder.yarn('webdriverUpdate')
+        }
+        stage('a11y xui') {
+            yarnBuilder.yarn('test:a11y')
+        }
+    }
+
+    afterAlways('builde2e') {
+        publishHTML([
+                allowMissing         : true,
+                alwaysLinkToLastBuild: true,
+                keepAll              : true,
+                reportDir            : "e2e-tests/reports/tests-results/a11y/",
+                reportFiles          : 'a11y.html',
+                reportName           : 'ExUi Manage Cases a11y Accessibility Report'
+        ])
+        publishHTML([
+                allowMissing         : true,
+                alwaysLinkToLastBuild: true,
+                keepAll              : true,
+                reportDir            : "e2e-tests/reports/tests-results/a11y/",
+                reportFiles          : 'index.html',
+                reportName           : 'ExUi Manage Cases a11y Test Report'
+        ])
+        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/a11y/*'
+    }
+
+    enableCrossBrowserTest(60)
+    enableFullFunctionalTest(120)
+
+    afterAlways('crossBrowserTest') {
+        publishHTML([
+                allowMissing         : true,
+                alwaysLinkToLastBuild: true,
+                keepAll              : true,
+                reportDir            : "e2e-tests/reports/tests-results/crossbrowser/",
+                reportFiles          : 'index.html',
+                reportName           : 'ExUi Cross Browser Report'
+        ])
+        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/crossbrowser/*'
     }
 
     afterAlways('functionalTest:aat') {
