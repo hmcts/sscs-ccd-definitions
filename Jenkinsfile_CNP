@@ -75,13 +75,12 @@ withPipeline("nodejs", product, component) {
                 allowMissing         : true,
                 alwaysLinkToLastBuild: true,
                 keepAll              : true,
-                reportDir            : "sscs-ccd-e2e-tests/reports/tests-results/functional/",
+                reportDir            : "e2e-tests/reports/tests-results/functional/",
                 reportFiles          : 'index.html',
                 reportName           : 'ExUi Functional Test Report'
         ])
-        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'sscs-ccd-e2e-tests/reports/tests-results/functional/*'
+        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'e2e-tests/reports/tests-results/functional/*'
     }
-
 
     before('functionalTest:aat') {
         stage('Setup') {
@@ -102,7 +101,7 @@ withPipeline("nodejs", product, component) {
                 allowMissing         : true,
                 alwaysLinkToLastBuild: true,
                 keepAll              : true,
-                reportDir            : "sscs-ccd-e2e-tests/reports/tests-results/functional/",
+                reportDir            : "e2e-tests/reports/tests-results/functional/",
                 reportFiles          : 'index.html',
                 reportName           : 'ExUi Functional Test Report'
         ])

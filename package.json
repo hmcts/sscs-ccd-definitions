@@ -6,12 +6,11 @@
     "node": ">=16.15.0"
   },
   "scripts": {
-    "reset-ccd-submodule": "git submodule update --init --recursive --remote && git submodule foreach --recursive git pull origin master && yarn --cwd sscs-ccd-e2e-tests install",
-    "setup": "git submodule update --init --recursive --remote && yarn --cwd sscs-ccd-e2e-tests install && yarn --cwd sscs-ccd-e2e-tests transpile && yarn --cwd sscs-ccd-e2e-tests webdriverUpdate",
+    "setup": "yarn --cwd e2e-tests install && yarn --cwd e2e-tests transpile && yarn --cwd e2e-tests webdriverUpdate",
     "lint": "echo lint",
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
-    "test:functional": "yarn --cwd sscs-ccd-e2e-tests test:previewfunctional",
+    "test:functional": "yarn --cwd e2e-tests test:previewfunctional",
     "start": "node index.js",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
