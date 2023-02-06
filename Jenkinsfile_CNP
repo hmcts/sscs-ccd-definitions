@@ -5,8 +5,8 @@ properties([
                 string(name: 'CCD_GATEWAY_URL', defaultValue: 'https://gateway-ccd.aat.platform.hmcts.net', description: 'The CCD Gateway URL these tests will need to run'),
                 string(name: 'TRIBUNALS_API_URI', defaultValue: 'http://sscs-tribunals-api-aat.service.core-compute-aat.internal', description: 'The API service to create test data'),
                 string(name: 'NUM_TESTS_IN_PARALLEL', defaultValue: '50', description: 'The number of tests to run in parallel'),
-                string(name: 'NIGHTLY_TAG', defaultValue: '--cucumberOpts.tags=~@wip --cucumberOpts.tags=@nightly-test', description: 'Tag for nightly build'),
-                string(name: 'PREVIEW_TAG', defaultValue: '--cucumberOpts.tags=~@wip --cucumberOpts.tags=@preview-test', description: 'Tag for preview build')
+                string(name: 'NIGHTLY_TAG', defaultValue: '--cucumberOpts.tags=@nightly-test', description: 'Tag for nightly build'),
+                string(name: 'PREVIEW_TAG', defaultValue: '--cucumberOpts.tags=@preview-test', description: 'Tag for preview build')
         ])
 ])
 
@@ -75,16 +75,6 @@ withPipeline("nodejs", product, component) {
                 allowMissing         : true,
                 alwaysLinkToLastBuild: true,
                 keepAll              : true,
-                reportDir            : "reports/tests-results/crossbrowser/",
-                reportFiles          : 'index.html',
-                reportName           : 'ExUi Cross Browser Report'
-        ])
-        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/crossbrowser/*'
-
-        publishHTML([
-                allowMissing         : true,
-                alwaysLinkToLastBuild: true,
-                keepAll              : true,
                 reportDir            : "reports/tests-results/functional/",
                 reportFiles          : 'index.html',
                 reportName           : 'ExUi Functional Test Report'
@@ -107,16 +97,6 @@ withPipeline("nodejs", product, component) {
     }
 
     afterAlways('functionalTest:aat') {
-        publishHTML([
-                allowMissing         : true,
-                alwaysLinkToLastBuild: true,
-                keepAll              : true,
-                reportDir            : "reports/tests-results/crossbrowser/",
-                reportFiles          : 'index.html',
-                reportName           : 'ExUi Cross Browser Report'
-        ])
-        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/crossbrowser/*'
-
         publishHTML([
                 allowMissing         : true,
                 alwaysLinkToLastBuild: true,
