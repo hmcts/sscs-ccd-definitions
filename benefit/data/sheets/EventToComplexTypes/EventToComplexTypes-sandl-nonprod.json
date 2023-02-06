@@ -89,5 +89,15 @@
     "LiveFrom": "01/07/2022",
     "FieldDisplayOrder": 10,
     "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "reservedTo",
+    "ListElementCode": "reservedJudge",
+    "ID": "updateListingRequirementsReservedJudge",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/07/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
   }
 ]
