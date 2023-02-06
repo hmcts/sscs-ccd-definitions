@@ -1,0 +1,104 @@
+#!groovy
+properties(
+        [[$class: 'GithubProjectProperty', projectUrlStr: 'https://github.com/hmcts/sscs-ccd-e2e-tests'],
+         pipelineTriggers([[$class: 'GitHubPushTrigger']])]
+)
+
+@Library("Infrastructure")
+
+def product = "sscs"
+def component = "ccd-e2e-tests"
+
+def secrets = [
+        'sscs-${env}': [
+                secret('test-e2e-caseofficer-username', 'TEST_CASEOFFICER_USERNAME'),
+                secret('test-e2e-caseofficer-password', 'TEST_CASEOFFICER_PASSWORD'),
+                secret('test-e2e-judge-username', 'TEST_JUDGE_USERNAME'),
+                secret('test-e2e-judge-password', 'TEST_JUDGE_PASSWORD'),
+                secret('test-e2e-dwp-username', 'TEST_DWP_USERNAME'),
+                secret('test-e2e-dwp-password', 'TEST_DWP_PASSWORD')
+        ]
+]
+
+def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
+
+static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
+    [$class     : 'AzureKeyVaultSecret',
+     secretType : 'Secret',
+     name       : secretName,
+     version    : '',
+     envVariable: envVar
+    ]
+}
+
+withNightlyPipeline("nodejs", product, component) {
+    loadVaultSecrets(secrets)
+
+    env.TEST_E2E_URL_WEB = 'https://manage-case.aat.platform.hmcts.net/list/case?jurisdiction=sscs'
+    env.TEST_E2E_URL_GATEWAY = 'https://gateway-ccd.aat.platform.hmcts.net'
+    env.TEST_E2E_API_URI = 'http://sscs-tribunals-api-aat.service.core-compute-aat.internal'
+    env.TEST_E2E_WAIT_FOR_ANGULAR = 'false'
+    env.TEST_E2E_FAIL_FAST = 'false'
+    env.TEST_E2E_NUM_BROWSERS = '50'
+    env.TEST_E2E_ANNOTATION = '--cucumberOpts.tags=~@wip --cucumberOpts.tags=@nightly-test'
+    env.TEST_E2E_RETRIES = 1
+
+    afterSuccess('build') {
+        stage('Transpile') {
+            yarnBuilder.yarn('transpile')
+        }
+        stage('Webdriver Manager Update') {
+            yarnBuilder.yarn('webdriverUpdate')
+        }
+        stage('a11y xui') {
+            yarnBuilder.yarn('test:a11y')
+        }
+    }
+
+    afterAlways('build') {
+        publishHTML([
+                allowMissing         : true,
+                alwaysLinkToLastBuild: true,
+                keepAll              : true,
+                reportDir            : "reports/tests-results/a11y/",
+                reportFiles          : 'a11y.html',
+                reportName           : 'ExUi Manage Cases a11y Accessibility Report'
+        ])
+        publishHTML([
+                allowMissing         : true,
+                alwaysLinkToLastBuild: true,
+                keepAll              : true,
+                reportDir            : "reports/tests-results/a11y/",
+                reportFiles          : 'index.html',
+                reportName           : 'ExUi Manage Cases a11y Test Report'
+        ])
+        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/a11y/*'
+    }
+
+    enableCrossBrowserTest(60)
+    enableFullFunctionalTest(120)
+
+    afterAlways('crossBrowserTest') {
+        publishHTML([
+                allowMissing         : true,
+                alwaysLinkToLastBuild: true,
+                keepAll              : true,
+                reportDir            : "reports/tests-results/crossbrowser/",
+                reportFiles          : 'index.html',
+                reportName           : 'ExUi Cross Browser Report'
+        ])
+        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/crossbrowser/*'
+    }
+
+    afterAlways('fullFunctionalTest') {
+        publishHTML([
+                allowMissing         : true,
+                alwaysLinkToLastBuild: true,
+                keepAll              : true,
+                reportDir            : "reports/tests-results/functional/",
+                reportFiles          : 'index.html',
+                reportName           : 'ExUi Functional Test Report'
+        ])
+        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/functional/*'
+    }
+}
