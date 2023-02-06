@@ -471,7 +471,7 @@
   },
   {
     "CaseEventID": "adjournCase",
-    "CaseFieldID": "adjournCaseInterpreterLanguage",
+    "CaseFieldID": "adjournCaseInterpreterLanguageList",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "adjournCaseInterpreterRequired = \"Yes\"",
