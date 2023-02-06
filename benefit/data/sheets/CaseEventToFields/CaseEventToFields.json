@@ -274,7 +274,7 @@
   },
   {
     "CaseEventID": "adjournCase",
-    "CaseFieldID": "adjournCasePanelMemberName1",
+    "CaseFieldID": "adjournCasePanelMember1",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -286,7 +286,7 @@
   },
   {
     "CaseEventID": "adjournCase",
-    "CaseFieldID": "adjournCasePanelMemberName2",
+    "CaseFieldID": "adjournCasePanelMember2",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -298,7 +298,7 @@
   },
   {
     "CaseEventID": "adjournCase",
-    "CaseFieldID": "adjournCasePanelMemberName3",
+    "CaseFieldID": "adjournCasePanelMember3",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
