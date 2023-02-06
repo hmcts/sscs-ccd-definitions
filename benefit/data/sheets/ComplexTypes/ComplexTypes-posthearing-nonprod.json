@@ -4,6 +4,6 @@
   {"LiveFrom": "30/01/2023", "ID": "setAside", "ListElementCode": "requestFormat", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_requestFormat", "ElementLabel": "Upload or enter details of your post hearing request?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "30/01/2023", "ID": "correction", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionCorrection", "ElementLabel": "Action Correction Application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "30/01/2023", "ID": "statementOfReasons", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionStatementOfReasons", "ElementLabel": "Action Statement of Reasons Application", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "30/01/2023", ",ID": "permissionToAppeal", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionPermissionToAppeal", "ElementLabel": "Action Permission to Appeal Application", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "30/01/2023", "ID": "permissionToAppeal", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionPermissionToAppeal", "ElementLabel": "Action Permission to Appeal Application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "30/01/2023", "ID": "libertyToApply", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionLibertyToApply", "ElementLabel": "Action Liberty to Apply Application", "SecurityClassification": "PUBLIC"}
 ]
