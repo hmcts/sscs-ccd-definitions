@@ -1,4 +1,4 @@
-# SSCS CCD Definitions
+# SSCS CCD Definitions 
 
 # Local Development
 
