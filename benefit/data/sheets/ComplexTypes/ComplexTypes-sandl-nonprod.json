@@ -6,5 +6,6 @@
   {"LiveFrom": "05/10/2022", "ID": "statementOfReasons", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionStatementOfReasons", "ElementLabel": "Action Statement of Reasons Application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/10/2022", "ID": "permissionToAppeal", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionPermissionToAppeal", "ElementLabel": "Action Permission to Appeal Application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/10/2022", "ID": "libertyToApply", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionLibertyToApply", "ElementLabel": "Action Liberty to Apply Application", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "03/02/2023", "ID": "reserveTo", "ListElementCode": "reservedDistrictTribunalJudge", "FieldType": "YesOrNo", "ElementLabel": "Is this reserved to a District Tribunal Judge?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/10/2022", "ID": "reserveTo", "ListElementCode": "reservedJudge", "FieldType": "JudicialUser", "ElementLabel": "Reserved to Judge", "SecurityClassification": "PUBLIC"}
 ]

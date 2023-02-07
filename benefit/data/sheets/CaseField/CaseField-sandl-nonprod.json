@@ -14,6 +14,5 @@
   {"LiveFrom": "05/09/2022", "CaseTypeID": "Benefit", "ID": "permissionToAppeal", "Label": "Permission to Appeal", "FieldType": "permissionToAppeal", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/09/2022", "CaseTypeID": "Benefit", "ID": "libertyToApply", "Label": "Liberty to Apply", "FieldType": "libertyToApply", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "ID": "postHearingRequestType", "Label": "Post Hearing Request", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_postHearingRequestType", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "03/02/2023", "CaseTypeID": "Benefit", "ID": "reservedDistrictTribunalJudge", "Label": "Is this reserved to a District Tribunal Judge?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/01/2023", "CaseTypeID": "Benefit", "ID": "reserveTo", "Label": "Reserve to", "FieldType": "reserveTo", "SecurityClassification": "PUBLIC"}
 ]

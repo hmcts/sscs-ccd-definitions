@@ -23,17 +23,6 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "LiveFrom": "03/02/2023",
-    "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "reservedDistrictTribunalJudge",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
     "LiveFrom": "06/10/2022",
     "CaseEventID": "updateListingRequirements",
     "CaseFieldID": "reserveTo",
