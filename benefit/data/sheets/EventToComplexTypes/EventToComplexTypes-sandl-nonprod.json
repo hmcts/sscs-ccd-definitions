@@ -96,7 +96,7 @@
     "ListElementCode": "reservedDistrictTribunalJudge",
     "ID": "updateListingRequirementsReserveToReservedDistrictTribunalJudge",
     "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/07/2022",
+    "LiveFrom": "08/02/2023",
     "FieldDisplayOrder": 1,
     "PageID": "1.0"
   },
@@ -105,9 +105,9 @@
     "CaseFieldID": "reserveTo",
     "ListElementCode": "reservedJudge",
     "ID": "updateListingRequirementsReserveToReservedJudge",
-    "FieldShowCondition": "reserveTo.reservedDistrictTribunalJudge != \"Yes\"",
     "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/07/2022",
+    "FieldShowCondition": "reserveTo.reservedDistrictTribunalJudge != \"Yes\"",
+    "LiveFrom": "08/02/2023",
     "FieldDisplayOrder": 2,
     "PageID": "1.0"
   },

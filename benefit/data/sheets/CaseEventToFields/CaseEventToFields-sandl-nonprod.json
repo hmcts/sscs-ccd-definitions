@@ -27,7 +27,7 @@
     "CaseEventID": "updateListingRequirements",
     "CaseFieldID": "reserveTo",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "COMPLEX",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
