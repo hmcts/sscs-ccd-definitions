@@ -1,0 +1,4 @@
+[
+  {"LiveFrom": "09/02/2023", "ID": "panelMemberExclusions", "ListElementCode": "arePanelMembersExcluded", "FieldType": "YesOrNo", "ElementLabel": "Are panel members excluded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "09/02/2023", "ID": "panelMemberExclusions", "ListElementCode": "excludedPanelMembers", "FieldType": "Collection", "FieldTypeParameter": "JudicialUser", "ElementLabel": "Excluded Panel Member", "SecurityClassification": "PUBLIC"}
+]

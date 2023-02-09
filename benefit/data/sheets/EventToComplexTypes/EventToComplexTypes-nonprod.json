@@ -1,0 +1,23 @@
+[
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "panelMemberExclusions",
+    "ListElementCode": "arePanelMembersExcluded",
+    "ID": "updateListingRequirementsArePanelMembersExcluded",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "09/02/2023",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "panelMemberExclusions",
+    "ListElementCode": "excludedPanelMembers",
+    "ID": "updateListingRequirementsExcludedPanelMembers",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "09/02/2023",
+    "FieldDisplayOrder": 2,
+    "FieldShowCondition": "panelMemberExclusions.arePanelMembersExcluded = \"Yes\"",
+    "PageID": "1.0"
+  }
+]
