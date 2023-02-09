@@ -168,6 +168,7 @@
   {"LiveFrom": "10/10/2019", "ID": "FL_dwpStates", "ListElementCode": "validityChallenge", "ListElement": "Validity challenge"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "supplementaryResponse", "ListElement": "Supplementary response"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "struckOut", "ListElement": "Struck out"},
+  {"LiveFrom": "03/10/2022", "ID": "FL_dwpStates", "ListElementCode": "setAsideGranted", "ListElement": "Set Aside Granted"},
   {"LiveFrom": "03/10/2022", "ID": "FL_dwpStates", "ListElementCode": "setAsideRefused", "ListElement": "Set Aside Refused"},
   {"LiveFrom": "23/11/2022", "ID": "FL_dwpStates", "ListElementCode": "setAsideRequested", "ListElement": "Set Aside Requested"},
   {"LiveFrom": "01/01/2018", "ID": "FL_dwpStates", "ListElementCode": "strikeOutActioned  ", "ListElement": "Strike-out actioned"},
