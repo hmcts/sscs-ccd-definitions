@@ -207,6 +207,16 @@
     "PageID": "1.0"
   },
   {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "panelMembersExclusions",
+    "ListElementCode": "arePanelMembersExclusions",
+    "ID": "updateListingRequirementsArePanelMembersExclusions",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/07/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
     "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "jointPartyIdentity",
     "ListElementCode": "nino",

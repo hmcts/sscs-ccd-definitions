@@ -1,3 +1,4 @@
 [
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "functionalTest", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "functionalTest", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "panelMembersExclusions", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
 ]
