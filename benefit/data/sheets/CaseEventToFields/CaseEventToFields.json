@@ -236,6 +236,42 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "LiveFrom": "06/10/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "panelMemberJudgeLabel",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "panelMembersExclusions.arePanelMembersReserved = \"Yes\"",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "06/10/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "panelMemberMedicalLabel",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "panelMembersExclusions.arePanelMembersReserved = \"Yes\"",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "06/10/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "panelMemberDisabilityLabel",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "panelMembersExclusions.arePanelMembersReserved = \"Yes\"",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 7,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CaseEventID": "adminUpdateEvent",
     "CaseFieldID": "urgentCase",
     "CaseTypeID": "Benefit",
