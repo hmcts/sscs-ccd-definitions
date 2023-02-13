@@ -485,7 +485,7 @@
   {"LiveFrom": "01/07/2022", "ID": "overrideFields", "ListElementCode": "autoList", "FieldType": "YesOrNo", "ElementLabel": "Should be Auto-listed", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/07/2022", "ID": "overrideFields", "ListElementCode": "hearingVenueEpimsIds", "FieldType": "Collection", "FieldTypeParameter": "hearingVenueEpimsId", "ElementLabel": "Hearing Venue Choices", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/10/2022", "ID": "reserveTo", "ListElementCode": "reservedJudge", "FieldType": "JudicialUser", "ElementLabel": "Reserved to Judge", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/02/2023", "ID": "panelMemberExclusions", "ListElementCode": "arePanelMemberExclusions", "FieldType": "YesOrNo", "ElementLabel": "Are Panel Members Excluded?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/02/2023", "ID": "panelMemberExclusions", "ListElementCode": "arePanelMembersExcluded", "FieldType": "YesOrNo", "ElementLabel": "Are Panel Members Excluded?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/02/2023", "ID": "panelMemberExclusions", "ListElementCode": "excludedPanelMembers", "FieldType": "Collection", "FieldTypeParameter": "JudicialUser", "ElementLabel": "Excluded Panel Member", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/02/2023", "ID": "panelMemberExclusions", "ListElementCode": "arePanelMembersReserved", "FieldType": "YesOrNo", "ElementLabel": "Are Panel Members Reserved?", "SecurityClassification": "PUBLIC"}
 ]

@@ -209,7 +209,7 @@
   {
     "CaseEventID": "updateListingRequirements",
     "CaseFieldID": "panelMemberExclusions",
-    "ListElementCode": "arePanelMemberExclusions",
+    "ListElementCode": "arePanelMembersExcluded",
     "ID": "updateListingRequirementsArePanelMembersExclusions",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/02/2023",
@@ -222,7 +222,7 @@
     "ListElementCode": "excludedPanelMembers",
     "ID": "updateListingRequirementsExcludedPanelMembers",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "panelMemberExclusions.arePanelMemberExclusions = \"Yes\"",
+    "FieldShowCondition": "panelMemberExclusions.arePanelMembersExcluded = \"Yes\"",
     "LiveFrom": "01/02/2023",
     "FieldDisplayOrder": 2,
     "PageID": "1.0"
