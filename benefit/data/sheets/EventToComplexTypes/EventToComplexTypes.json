@@ -208,8 +208,8 @@
   },
   {
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "panelMembersExclusions",
-    "ListElementCode": "arePanelMembersExclusions",
+    "CaseFieldID": "panelMemberExclusions",
+    "ListElementCode": "arePanelMemberExclusions",
     "ID": "updateListingRequirementsArePanelMembersExclusions",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/02/2023",
@@ -218,18 +218,18 @@
   },
   {
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "panelMembersExclusions",
+    "CaseFieldID": "panelMemberExclusions",
     "ListElementCode": "excludedPanelMembers",
     "ID": "updateListingRequirementsExcludedPanelMembers",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "panelMembersExclusions.arePanelMembersExclusions = \"Yes\"",
+    "FieldShowCondition": "panelMemberExclusions.arePanelMemberExclusions = \"Yes\"",
     "LiveFrom": "01/02/2023",
     "FieldDisplayOrder": 2,
     "PageID": "1.0"
   },
   {
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "panelMembersExclusions",
+    "CaseFieldID": "panelMemberExclusions",
     "ListElementCode": "arePanelMembersReserved",
     "ID": "updateListingRequirementsArePanelMembersReserved",
     "DisplayContext": "OPTIONAL",

@@ -227,7 +227,7 @@
   {
     "LiveFrom": "06/10/2022",
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "panelMembersExclusions",
+    "CaseFieldID": "panelMemberExclusions",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
     "PageDisplayOrder": 1,
@@ -241,7 +241,7 @@
     "CaseFieldID": "panel",
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
-    "FieldShowCondition": "panelMembersExclusions.arePanelMembersReserved = \"Yes\"",
+    "FieldShowCondition": "panelMemberExclusions.arePanelMembersReserved = \"Yes\"",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 5,
     "PageID": "1.0",
