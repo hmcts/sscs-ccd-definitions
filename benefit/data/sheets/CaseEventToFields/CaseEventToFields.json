@@ -149,6 +149,29 @@
     "PageLabel": "Update case"
   },
   {
+    "LiveFrom": "01/07/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "PageLabel": "Select Override Values"
+  },
+  {
+    "LiveFrom": "04/07/2022",
+    "CaseEventID": "addCaseOutcome",
+    "CaseFieldID": "caseOutcome",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CaseEventID": "adminUpdateEvent",
     "CaseFieldID": "directionResponse",
     "CaseTypeID": "Benefit",
@@ -159,6 +182,28 @@
     "PageID": "1.0"
   },
   {
+    "LiveFrom": "06/10/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "dwpIsOfficerAttending",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "04/07/2022",
+    "CaseEventID": "addCaseOutcome",
+    "CaseFieldID": "didPoAttend",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CaseEventID": "adminUpdateEvent",
     "CaseFieldID": "dwpRegionalCentre",
     "CaseTypeID": "Benefit",
@@ -167,6 +212,17 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
     "PageID": "1.0"
+  },
+  {
+    "LiveFrom": "06/10/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "reserveTo",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "adminUpdateEvent",
@@ -249,6 +305,26 @@
     "PageID": "1.0"
   },
   {
+    "LiveFrom": "05/07/2022",
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "caseOutcome",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 14,
+    "PageID": "1.0"
+  },
+  {
+    "LiveFrom": "05/07/2022",
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "didPoAttend",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 15,
+    "PageID": "1.0"
+  },
+  {
     "CaseEventID": "adjournCase",
     "CaseFieldID": "adjournCaseGenerateNotice",
     "CaseTypeID": "Benefit",
@@ -271,6 +347,19 @@
     "PageID": "panelMembersExcluded",
     "PageLabel": "Are panel members excluded?",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "06/07/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "amendReasons",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "[STATE]=\"readyToList\"",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "2.0",
+    "ShowSummaryChangeOption": "Y",
+    "PageLabel": "Amend Reason"
   },
   {
     "CaseEventID": "adjournCase",
@@ -471,7 +560,7 @@
   },
   {
     "CaseEventID": "adjournCase",
-    "CaseFieldID": "adjournCaseInterpreterLanguage",
+    "CaseFieldID": "adjournCaseInterpreterLanguageList",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "adjournCaseInterpreterRequired = \"Yes\"",

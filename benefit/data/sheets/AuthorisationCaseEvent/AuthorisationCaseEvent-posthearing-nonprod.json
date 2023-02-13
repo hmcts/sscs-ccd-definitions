@@ -1,12 +1,4 @@
 [
-  {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "CaseEventID": "handlingError", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "CaseEventID": "handlingError", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "updateListingRequirements", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "updateListingRequirements", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "updateListingRequirements", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "30/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "addCaseOutcome", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "30/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "addCaseOutcome", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
-  {"LiveFrom": "04/07/2022", "CaseTypeID": "Benefit", "CaseEventID": "addCaseOutcome", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "postHearingReview", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "postHearingReview", "AccessProfile": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "13/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "correctionGranted", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
@@ -60,8 +52,5 @@
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "permissionToAppealRequest", "AccessProfile": "caseworker-sscs-judge", "CRUD": "R"},
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "libertyToApplyRequest", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "libertyToApplyRequest", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "R"},
-  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "libertyToApplyRequest", "AccessProfile": "caseworker-sscs-judge", "CRUD": "R"},
-  {"LiveFrom": "10/06/2018", "CaseTypeID": "Benefit", "CaseEventID": "listingError", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "CaseEventID": "listingError", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
-  {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "CaseEventID": "listingError", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"}
+  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "libertyToApplyRequest", "AccessProfile": "caseworker-sscs-judge", "CRUD": "R"}
 ]

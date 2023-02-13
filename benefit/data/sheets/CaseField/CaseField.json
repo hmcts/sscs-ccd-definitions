@@ -235,7 +235,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseNextHearingListingDuration", "Label": "Duration length", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseNextHearingListingDurationUnits", "Label": "Minutes or sessions", "FieldType": "FixedList", "FieldTypeParameter": "FL_adjournCaseNextHearingDurationUnits", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseInterpreterRequired", "Label": "Is an interpreter required for the hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseInterpreterLanguage", "Label": "What language do they need to speak?", "FieldType": "FixedList", "FieldTypeParameter": "FL_languages", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseInterpreterLanguageList", "Label": "What language do they need to speak?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseNextHearingDateType", "Label": "When should the next hearing be?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_adjournCaseNextHearingDateType", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseNextHearingDateOrPeriod", "Label": "Provide date or period?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_adjournCaseNextHearingDateOrPeriod", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "adjournCaseNextHearingFirstAvailableDateAfterDate", "Label": "Provide date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
@@ -430,5 +430,14 @@
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "ID": "workBasketHearingEpimsId", "Label": "Hearing Venue", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingEpimsId", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "04/07/2022", "CaseTypeID": "Benefit", "ID": "caseOutcome", "Label": "Case Outcome", "FieldType": "FixedList", "FieldTypeParameter": "FL_caseOutcome", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "04/07/2022", "CaseTypeID": "Benefit", "ID": "didPoAttend", "Label": "Did PO Attend?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "workBasketHearingRoute", "Label": "Hearing Route", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_hearingRoute", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "workBasketHearingRoute", "Label": "Hearing Route", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_hearingRoute", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "activeHearingId", "Label": "Active Hearing ID", "FieldType": "Number","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "activeHearingVersionNumber", "Label": "Active Hearing Version Number", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/06/2022", "CaseTypeID": "Benefit", "ID": "overrideFields", "Label": "Overrides Listing Values", "FieldType": "overrideFields", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/06/2022", "CaseTypeID": "Benefit", "ID": "defaultListingValues", "Label": "Default Listing Values", "FieldType": "overrideFields", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "06/07/2022", "CaseTypeID": "Benefit", "ID": "amendReasons", "Label": "Amend Reason", "FieldType": "MultiSelectList", "FieldTypeParameter": "FL_amendReason", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "ID": "adjournmentInProgress", "Label": "Adjournment in progress?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "05/09/2022", "CaseTypeID": "Benefit", "ID": "unprocessedPostponement", "Label": "Unprocessed Postponement", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "05/09/2022", "CaseTypeID": "Benefit", "ID": "postponementEvent", "Label": "Postponement Event Type", "FieldType": "FixedList", "FieldTypeParameter": "eventType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "09/01/2023", "CaseTypeID": "Benefit", "ID": "reserveTo", "Label": "Reserve to", "FieldType": "reserveTo", "SecurityClassification": "PUBLIC"}
 ]
