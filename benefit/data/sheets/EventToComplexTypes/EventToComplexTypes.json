@@ -198,7 +198,7 @@
   },
   {
     "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "reservedTo",
+    "CaseFieldID": "reserveTo",
     "ListElementCode": "reservedJudge",
     "ID": "updateListingRequirementsReservedJudge",
     "DisplayContext": "OPTIONAL",
@@ -212,8 +212,62 @@
     "ListElementCode": "arePanelMembersExclusions",
     "ID": "updateListingRequirementsArePanelMembersExclusions",
     "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/07/2022",
+    "LiveFrom": "01/02/2023",
     "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "panelMembersExclusions",
+    "ListElementCode": "excludedPanelMembers",
+    "ID": "updateListingRequirementsExcludedPanelMembers",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "panelMembersExclusions.arePanelMembersExclusions = \"Yes\"",
+    "LiveFrom": "01/02/2023",
+    "FieldDisplayOrder": 2,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "panelMembersExclusions",
+    "ListElementCode": "arePanelMembersReserved",
+    "ID": "updateListingRequirementsArePanelMembersReserved",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/02/2023",
+    "FieldDisplayOrder": 3,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "panelMembersExclusions",
+    "ListElementCode": "reservedPanelMemberJudge",
+    "ID": "updateListingRequirementsReservedPanelMemberJudge",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "panelMembersExclusions.arePanelMembersReserved = \"Yes\"",
+    "LiveFrom": "01/02/2023",
+    "FieldDisplayOrder": 4,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "panelMembersExclusions",
+    "ListElementCode": "reservedPanelMemberMedicalMember",
+    "ID": "updateListingRequirementsReservedPanelMemberMedicalMember",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "panelMembersExclusions.arePanelMembersReserved = \"Yes\"",
+    "LiveFrom": "01/02/2023",
+    "FieldDisplayOrder": 5,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "panelMembersExclusions",
+    "ListElementCode": "reservedPanelMemberDisabilityQualifiedMember",
+    "ID": "updateListingRequirementsReservedPanelMemberDisabilityQualifiedMember",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "panelMembersExclusions.arePanelMembersReserved = \"Yes\"",
+    "LiveFrom": "01/02/2023",
+    "FieldDisplayOrder": 6,
     "PageID": "1.0"
   },
   {

@@ -229,7 +229,7 @@
     "CaseEventID": "updateListingRequirements",
     "CaseFieldID": "panelMembersExclusions",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "COMPLEX",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
