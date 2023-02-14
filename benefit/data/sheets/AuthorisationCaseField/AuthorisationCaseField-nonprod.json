@@ -1,3 +1,7 @@
 [
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "functionalTest", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "functionalTest", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/02/2023", "CaseTypeID": "Benefit", "CaseFieldID": "panelMemberExclusions", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/02/2023", "CaseTypeID": "Benefit", "CaseFieldID": "panelMemberExclusions", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
+  {"LiveFrom": "01/02/2023", "CaseTypeID": "Benefit", "CaseFieldID": "panelMemberExclusions", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "01/02/2023", "CaseTypeID": "Benefit", "CaseFieldID": "panelMemberExclusions", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
 ]

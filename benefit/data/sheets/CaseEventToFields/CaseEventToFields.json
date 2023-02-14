@@ -225,29 +225,6 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "LiveFrom": "06/10/2022",
-    "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "panelMemberExclusions",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "COMPLEX",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "06/10/2022",
-    "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "panel",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "READONLY",
-    "FieldShowCondition": "panelMemberExclusions.arePanelMembersReserved = \"Yes\"",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
     "CaseEventID": "adminUpdateEvent",
     "CaseFieldID": "urgentCase",
     "CaseTypeID": "Benefit",
