@@ -57,7 +57,7 @@
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "dateTimeCaseSentToGaps", "TabFieldDisplayOrder": 49, "FieldShowCondition": "dateCaseSentToGaps=\"\""},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "documentSentToDwp", "TabFieldDisplayOrder": 50},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "createdInGapsFrom", "TabFieldDisplayOrder": 51, "FieldShowCondition": "outcome=\"Do Not Show\""},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "reservedToJudge", "TabFieldDisplayOrder": 52},
+  {"LiveFrom": "", "CaseTypeID": "Benefit", "UserRole": "caseworker-sscs", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "reserveTo", "TabFieldDisplayOrder": 52},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "notListableProvideReasons", "TabFieldDisplayOrder": 53},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "isScottishCase", "TabFieldDisplayOrder": 54},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "reasonableAdjustments", "TabFieldDisplayOrder": 55},
