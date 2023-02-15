@@ -1,8 +1,4 @@
 [
-  {"LiveFrom": "06/07/2022", "ID": "FL_amendReason", "ListElementCode": "partyreq", "ListElement": "Party requested change"},
-  {"LiveFrom": "06/07/2022", "ID": "FL_amendReason", "ListElementCode": "judgereq", "ListElement": "Judge requested change"},
-  {"LiveFrom": "06/07/2022", "ID": "FL_amendReason", "ListElementCode": "adminreq", "ListElement": "Admin requested change"},
-  {"LiveFrom": "06/07/2022", "ID": "FL_amendReason", "ListElementCode": "adminerr", "ListElement": "Admin error"},
   {"LiveFrom": "05/10/2022", "ID": "FL_postHearingReviewType", "ListElementCode": "libertyToApply", "ListElement": "Liberty to Apply"},
   {"LiveFrom": "05/10/2022", "ID": "FL_postHearingReviewType", "ListElementCode": "permissionToAppeal", "ListElement": "Permission to Appeal"},
   {"LiveFrom": "05/10/2022", "ID": "FL_postHearingReviewType", "ListElementCode": "setAside", "ListElement": "Set Aside"},
@@ -26,5 +22,8 @@
   {"LiveFrom": "23/11/2022", "ID": "FL_postHearingRequestType", "ListElementCode": "correction", "ListElement": "Correction"},
   {"LiveFrom": "23/11/2022", "ID": "FL_postHearingRequestType", "ListElementCode": "statementOfReasons", "ListElement": "Statement of Reasons"},
   {"LiveFrom": "23/11/2022", "ID": "FL_requestFormat", "ListElementCode": "upload", "ListElement": "Upload request"},
-  {"LiveFrom": "23/11/2022", "ID": "FL_requestFormat", "ListElementCode": "generate", "ListElement": "Enter request details"}
+  {"LiveFrom": "23/11/2022", "ID": "FL_requestFormat", "ListElementCode": "generate", "ListElement": "Enter request details"},
+  {"LiveFrom": "11/01/2022", "ID": "ScannedDocumentType", "ListElementCode": "setAsideApplication", "ListElement": "Set aside application"},
+  {"LiveFrom": "11/01/2022", "ID": "documentType", "ListElementCode": "setAsideApplication", "ListElement": "Set aside application"},
+  {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "setAsideApplication", "ListElement": "Set aside application"}
 ]
