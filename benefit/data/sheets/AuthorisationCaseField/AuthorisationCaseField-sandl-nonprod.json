@@ -87,5 +87,5 @@
   {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "reserveTo", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
   {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "reserveTo", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "reserveTo", "UserRole": "caseworker-sscs-judge", "CRUD": "R"},
-  {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "reserveTo", "UserRole": "caseworker-sscs-registrar", "CRUD": "CRUD"}
+  {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "reserveTo", "UserRole": "caseworker-sscs-registrar", "CRUD": "R"}
 ]
