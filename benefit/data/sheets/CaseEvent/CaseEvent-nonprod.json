@@ -5,7 +5,7 @@
     "ID": "setHearingRoute",
     "Name": "Set Hearing Route",
     "Description": "Set Hearing Route",
-    "DisplayOrder": 999,
+    "DisplayOrder": 9990,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public"
@@ -16,13 +16,13 @@
     "ID": "issueGenericLetter",
     "Name": "Issue generic letter",
     "Description": "Issue generic letter",
-    "DisplayOrder": 200,
+    "DisplayOrder": 991,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public",
-    "ShowSummary": "Y"
+    "ShowSummary": "N"
   }
 ]
