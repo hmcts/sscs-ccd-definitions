@@ -122,6 +122,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 13,
     "PageID": "1.0",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "FieldShowCondition": "sendToAllParties = \"No\" AND sendToOtherParties = \"Yes\"",
     "PageLabel": " "
   },
@@ -134,6 +135,7 @@
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
     "PageID": "2.0",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "ShowSummaryChangeOption": "Y"
   },
   {
