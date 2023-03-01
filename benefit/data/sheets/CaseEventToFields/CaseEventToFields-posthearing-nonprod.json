@@ -197,5 +197,31 @@
     "PageID": "Correction",
     "PageLabel": "Correction",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "adminActionCorrection",
+    "CaseFieldID": "adminCorrectionType",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "21/03/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Type_Selection",
+    "PageLabel": "Correction Type Selection",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "adminActionCorrection",
+    "CaseFieldID": "previewDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "21/03/2022",
+    "CaseEventFieldLabel": "Corrected Document",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Corrected_Document_Staging",
+    "PageLabel": "Upload Corrected Document",
+    "PageShowCondition": "adminCorrectionType = \"headerCorrection\"",
+    "ShowSummaryChangeOption": "Y"
   }
 ]
