@@ -2108,6 +2108,27 @@
     "FieldDisplayOrder": 6
   },
   {
+    "CaseEventID": "processAudioVideo",
+    "CaseFieldID": "reserveTo",
+    "ListElementCode": "reservedDistrictTribunalJudge",
+    "ID": "processAudioVideoReserveToReservedDistrictTribunalJudge",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "15/02/2023",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "processAudioVideo",
+    "CaseFieldID": "reserveTo",
+    "ListElementCode": "reservedJudge",
+    "ID": "processAudioVideoReservedJudge",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "reserveTo.reservedDistrictTribunalJudge != \"Yes\"",
+    "LiveFrom": "08/02/2023",
+    "FieldDisplayOrder": 2,
+    "PageID": "1.0"
+  },
+  {
     "CaseEventID": "processReasonableAdjustment",
     "CaseFieldID": "reasonableAdjustmentsLetters",
     "ListElementCode": "appellant.sentOn",
@@ -4756,5 +4777,68 @@
     "PageLabel": "Type of hearing",
     "ShowSummaryChangeOption": "Y",
     "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\""
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "reserveTo",
+    "ListElementCode": "reservedDistrictTribunalJudge",
+    "ID": "directionIssuedReserveToReservedDistrictTribunalJudge",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "15/02/2023",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "reserveTo",
+    "ListElementCode": "reservedJudge",
+    "ID": "directionIssuedReservedJudge",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "reserveTo.reservedDistrictTribunalJudge != \"Yes\"",
+    "LiveFrom": "08/02/2023",
+    "FieldDisplayOrder": 2,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "decisionIssued",
+    "CaseFieldID": "reserveTo",
+    "ListElementCode": "reservedDistrictTribunalJudge",
+    "ID": "decisionIssuedReserveToReservedDistrictTribunalJudge",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "15/02/2023",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "decisionIssued",
+    "CaseFieldID": "reserveTo",
+    "ListElementCode": "reservedJudge",
+    "ID": "decisionIssuedReservedJudge",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "reserveTo.reservedDistrictTribunalJudge != \"Yes\"",
+    "LiveFrom": "08/02/2023",
+    "FieldDisplayOrder": 2,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "reserveTo",
+    "ListElementCode": "reservedDistrictTribunalJudge",
+    "ID": "actionPostponementRequestReserveToReservedDistrictTribunalJudge",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "15/02/2023",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "reserveTo",
+    "ListElementCode": "reservedJudge",
+    "ID": "actionPostponementRequestReservedJudge",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "reserveTo.reservedDistrictTribunalJudge != \"Yes\"",
+    "LiveFrom": "08/02/2023",
+    "FieldDisplayOrder": 2,
+    "PageID": "1.0"
   }
 ]
