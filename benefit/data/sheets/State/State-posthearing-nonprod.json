@@ -1,0 +1,3 @@
+[
+  {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "ID": "postHearing", "Name": "Post Hearing", "Description": "Issue with List assist Hearing", "DisplayOrder": 17, "TitleDisplay": "# ${[CASE_REFERENCE]}: ${appeal.appellant.name.lastName}"}
+]
