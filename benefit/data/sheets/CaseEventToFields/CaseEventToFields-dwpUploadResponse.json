@@ -199,6 +199,18 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "selectWhoReviewsCase",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "25/05/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 17,
+    "PageID": "1.0",
+    "FieldShowCondition": "appeal.benefitType.code=\"DoNotShow\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "elementsDisputedList",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
