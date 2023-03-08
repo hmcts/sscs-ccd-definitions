@@ -1467,7 +1467,8 @@
     "PostConditionState": "interlocutoryReviewState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
