@@ -72,7 +72,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sscsInterlocDirectionDocument", "Label": "Interloc Directions", "FieldType": "sscsInterlocDirectionDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tl1Form", "Label": "TL1 form", "FieldType": "tl1FormCT", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "directionDueDate", "Label": "Due date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reservedToJudge", "Label": "Reserved to (Judge):", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reservedToJudgeInterloc", "Label": "Reserved to (Interloc):", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "linkedCase", "Label": "Linked case(s)", "FieldType": "Collection", "FieldTypeParameter": "CaseLink", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "scannedDocuments", "Label": "Scanned Documents", "FieldType": "Collection", "FieldTypeParameter": "ScannedDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "audioVideoEvidence", "Label": "Evidence", "FieldType": "Collection", "FieldTypeParameter": "AudioVideoEvidence", "SecurityClassification": "PUBLIC"},
