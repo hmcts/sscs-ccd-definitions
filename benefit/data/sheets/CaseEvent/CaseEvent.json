@@ -2225,7 +2225,7 @@
     "Name": "Upload response",
     "Description": "Upload a response",
     "DisplayOrder": 176,
-    "PreConditionState(s)": "withDwp",
+    "PreConditionState(s)": "withDwp;readyToList;notListable",
     "PostConditionState": "responseReceived",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
