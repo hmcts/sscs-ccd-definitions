@@ -169,5 +169,18 @@
     "PageID": "Request_Staging",
     "PageLabel": "Request Document",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "postHearingRequest",
+    "CaseFieldID": "correction",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "23/11/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Correction",
+    "PageLabel": "Correction",
+    "PageShowCondition": "postHearingRequestType=\"correction\"",
+    "ShowSummaryChangeOption": "Y"
   }
 ]
