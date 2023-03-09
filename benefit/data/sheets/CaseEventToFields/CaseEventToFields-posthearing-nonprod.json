@@ -175,12 +175,27 @@
     "CaseFieldID": "correction",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
-    "LiveFrom": "23/11/2022",
+    "LiveFrom": "09/03/2023",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
     "PageID": "Correction",
     "PageLabel": "Correction",
     "PageShowCondition": "postHearingRequestType=\"correction\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateDocument",
+    "CaseEventID": "postHearingRequest",
+    "CaseFieldID": "bodyContent",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "correction.requestFormat = \"generate\"",
+    "LiveFrom": "09/03/2023",
+    "CaseEventFieldLabel": "Reason for Correction",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "Correction",
+    "PageLabel": "Correction",
     "ShowSummaryChangeOption": "Y"
   }
 ]
