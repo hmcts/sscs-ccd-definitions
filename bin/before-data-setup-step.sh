@@ -55,7 +55,7 @@ if [[ ${ENV} == "local" ]]; then
     EM_CCD_ORCHESTRATOR_URL="http://host.docker.internal:4623"
     SSCS_CCD_ORCHESTRATOR_URL="http://host.docker.internal:8070"
     TRIBUNALS_API_URL="http://host.docker.internal:8080"
-    TYA_NOTIFICATIONS_API_URL="http://host.docker.internal:8081"
+    TYA_NOTIFICATIONS_API_URL=${CCD_DEF_TYA_NOTIFICATIONS_API_URL:-http://host.docker.internal:8081}
     BULK_SCAN_API_URL="http://host.docker.internal:8090"
     BULK_SCAN_ORCHESTRATOR_URL="http://host.docker.internal:8099"
 elif [[ ${ENV} == "aat" || ${ENV} == "demo" || ${ENV} == "prod" || ${ENV} == "perftest" || ${ENV} == "ithc" ]]; then
