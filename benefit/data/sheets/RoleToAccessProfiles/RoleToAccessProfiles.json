@@ -1,6 +1,6 @@
 [
   {
-    "LiveFrom": "18/06/2019",
+    "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-dwpresponsewriter",
     "CaseAccessCategories": "personalIndependencePayment,carer'sAllowance,jobseeker’sAllowance,employmentAndSupportAllowance,disabilityLivingAllowance,universalCredit,industrialDeathBenefit,pensionCredit,retirementPension,childSupport,bereavementBenefit,industrialInjuriesDisablement,maternityAllowance,socialFund,incomeSupport,bereavementSupportPaymentScheme,attendanceAllowance",
@@ -10,7 +10,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "18/06/2019",
+    "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-systemupdate",
     "Authorisation": "",
@@ -19,7 +19,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "18/06/2019",
+    "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-clerk",
     "Authorisation": "",
@@ -28,7 +28,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "18/06/2019",
+    "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-judge",
     "Authorisation": "",
@@ -37,7 +37,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "18/06/2019",
+    "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-panelmember",
     "Authorisation": "",
@@ -46,7 +46,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "18/06/2019",
+    "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-superuser",
     "Authorisation": "",
@@ -55,7 +55,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "18/06/2019",
+    "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-registrar",
     "Authorisation": "",
@@ -64,7 +64,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "18/06/2019",
+    "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-anonymouscitizen",
     "Authorisation": "",
@@ -73,7 +73,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "18/06/2019",
+    "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-callagent",
     "Authorisation": "",
@@ -82,7 +82,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "18/06/2019",
+    "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-bulkscan",
     "Authorisation": "",
@@ -91,7 +91,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "18/06/2019",
+    "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-teamleader",
     "Authorisation": "",
@@ -100,7 +100,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "18/06/2019",
+    "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:citizen",
     "Authorisation": "",
@@ -109,13 +109,22 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "18/06/2019",
+    "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs",
     "CaseAccessCategories": "doNotRemove",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "caseworker-sscs",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/03/2023",
+    "CaseTypeID": "Benefit",
+    "RoleName": "[CREATOR]",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "[CREATOR]",
     "Disabled": "N"
   }
 ]
