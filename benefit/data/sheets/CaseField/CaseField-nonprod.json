@@ -1,4 +1,5 @@
 [
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "functionalTest", "Label": "From functional test", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/02/2023", "CaseTypeID": "Benefit", "ID": "panelMemberExclusions", "Label": "Panel member exclusions/reserve to", "FieldType": "panelMemberExclusions", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/02/2023", "CaseTypeID": "Benefit", "ID": "panelMemberExclusions", "Label": "Panel member exclusions/reserve to", "FieldType": "panelMemberExclusions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reservedToJudgeInterloc", "Label": "Reserved to (Interloc):", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"}
 ]
