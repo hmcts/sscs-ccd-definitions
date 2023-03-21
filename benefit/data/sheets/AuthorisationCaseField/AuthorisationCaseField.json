@@ -983,9 +983,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCaseTypeOfNextHearing", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCaseNextHearingVenue", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCaseNextHearingVenueSelected", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCasePanelMembersExcluded", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCaseDisabilityQualifiedPanelMemberName", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCaseMedicallyQualifiedPanelMemberName", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCasePanelMember1", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCasePanelMember2", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCasePanelMember3", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCaseOtherPanelMemberName", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCaseNextHearingListingDurationType", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCaseNextHearingListingDuration", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
@@ -1324,5 +1324,8 @@
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseFieldID": "adjournmentInProgress", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseFieldID": "adjournmentInProgress", "UserRole": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "reserveTo", "UserRole": "caseworker-sscs-clerk", "CRUD": "CRUD"},
-  {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "reserveTo", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"}
+  {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "reserveTo", "UserRole": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "reserveTo", "UserRole": "caseworker-sscs-registrar", "CRUD": "R"},
+  {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "reserveTo", "UserRole": "caseworker-sscs-judge", "CRUD": "R"},
+  {"LiveFrom": "10/03/2022", "CaseTypeID": "Benefit", "CaseFieldID": "reserveTo", "UserRole": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
 ]
