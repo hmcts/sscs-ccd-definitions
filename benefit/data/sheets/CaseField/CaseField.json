@@ -230,7 +230,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCasePanelMembersExcluded", "Label": "Are panel members excluded?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_panelMembersExcluded", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCasePanelMember1", "Label": "Panel Member 1", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCasePanelMember2", "Label": "Panel Member 2", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCasePanelMember3", "Label": "Panel Member 3", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCasePanelMember3", "Label": "Panel Member 3", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseDisabilityQualifiedPanelMemberName", "Label": "Name of the Disability Qualified Panel Member (DQPM)", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseMedicallyQualifiedPanelMemberName", "Label": "Name of the Medically Qualified Panel Member (MQPM)", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseOtherPanelMemberName", "Label": "Other", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
