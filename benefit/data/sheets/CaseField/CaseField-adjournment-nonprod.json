@@ -1,5 +1,0 @@
-[
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCasePanelMember1", "Label": "Panel Member 1", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCasePanelMember2", "Label": "Panel Member 2", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCasePanelMember3", "Label": "Panel Member 3", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"}
-]
