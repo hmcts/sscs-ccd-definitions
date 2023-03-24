@@ -1,5 +1,6 @@
 [
   {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "postHearingReview", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "postHearingReview", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "postHearingReview", "AccessProfile": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "13/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "correctionGranted", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "13/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "correctionGranted", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "R"},
