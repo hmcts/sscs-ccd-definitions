@@ -23,8 +23,5 @@
   {"LiveFrom": "08/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "permissionToAppeal", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "08/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "libertyToApply", "AccessProfile": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "08/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "libertyToApply", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "08/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "libertyToApply", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
-  {"LiveFrom": "24/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "generateUploadDocument", "AccessProfile": "caseworker-sscs-judge", "CRUD": "CRUD"},
-  {"LiveFrom": "24/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "generateUploadDocument", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "24/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "generateUploadDocument", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
+  {"LiveFrom": "08/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "libertyToApply", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"}
 ]
