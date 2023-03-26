@@ -114,7 +114,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "Notice_Staging",
     "PageLabel": "Notice Document",
-    "PageShowCondition": "postHearingReviewType=\"setAside\" AND setAside.action = \"refuse\"",
+    "PageShowCondition": "setAside.action = \"refuse\" OR correction.action = \"grant\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
