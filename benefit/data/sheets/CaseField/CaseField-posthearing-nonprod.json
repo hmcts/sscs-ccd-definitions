@@ -6,5 +6,6 @@
   {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "permissionToAppeal", "Label": "Permission to Appeal", "FieldType": "permissionToAppeal", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "libertyToApply", "Label": "Liberty to Apply", "FieldType": "libertyToApply", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "postHearingRequestType", "Label": "Post Hearing Request", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_postHearingRequestType", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "20/01/2023", "CaseTypeID": "Benefit", "ID": "issueFinalDecisionDate", "Label": "Issue final decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "20/01/2023", "CaseTypeID": "Benefit", "ID": "issueFinalDecisionDate", "Label": "Issue final decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "24/03/2023", "CaseTypeID": "Benefit", "ID": "generateUploadDocument", "Label": "Generate or Upload Document", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_generateUploadDocument", "SecurityClassification": "PUBLIC"}
 ]
