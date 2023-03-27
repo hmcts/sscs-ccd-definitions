@@ -33,7 +33,7 @@
     "LiveFrom": "13/10/2022",
     "CaseTypeID": "Benefit",
     "ID": "correctionGranted",
-    "Name": "Correction Granted",
+    "Name": "Post hearing application - \"Correction granted\"",
     "Description": "Correction Granted",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
