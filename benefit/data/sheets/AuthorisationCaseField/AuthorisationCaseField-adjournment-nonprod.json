@@ -1,5 +1,0 @@
-[
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCasePanelMember1", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCasePanelMember2", "UserRole": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCasePanelMember3", "UserRole": "caseworker-sscs", "CRUD": "CRUD"}
-]
