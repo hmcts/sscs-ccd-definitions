@@ -278,7 +278,7 @@
     "ID": "adminSendToReadyToList",
     "Name": "Admin - send to Ready to List",
     "DisplayOrder": 23,
-    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;responseReceived;validAppeal;voidState;withDwp",
+    "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;responseReceived;validAppeal;voidState;withDwp;handlingError",
     "PostConditionState": "readyToList",
     "SecurityClassification": "Public"
   },
