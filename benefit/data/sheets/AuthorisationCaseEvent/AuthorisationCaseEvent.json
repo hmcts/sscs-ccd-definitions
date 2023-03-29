@@ -49,6 +49,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToDraftArchived", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToHearing", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToHearing", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToHearing", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToHearing", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToIncompleteApplication", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseEventID": "adminSendToIncompleteApplication", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRU"},
