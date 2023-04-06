@@ -12,16 +12,6 @@
   {
     "LiveFrom": "18/03/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
-    "RoleName": "idam:caseworker-sscs-hmrcresponsewriter",
-    "CaseAccessCategories": "taxCredit,guardiansAllowance,tax-freeChildcare,homeResponsibilitiesProtection,childBenefit,30HoursFreeChildcare,guaranteedMinimumPension,nationalInsuranceCredits",
-    "Authorisation": "",
-    "ReadOnly": "N",
-    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-hmrcresponsewriter",
-    "Disabled": "N"
-  },
-  {
-    "LiveFrom": "18/03/2023",
-    "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:caseworker-sscs-systemupdate",
     "Authorisation": "",
     "ReadOnly": "N",
@@ -131,10 +121,11 @@
   {
     "LiveFrom": "18/03/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
-    "RoleName": "[CREATOR]",
+    "RoleName": "idam:caseworker-sscs-hmrcresponsewriter",
+    "CaseAccessCategories": "taxCredit,guardiansAllowance,tax-freeChildcare,homeResponsibilitiesProtection,childBenefit,30HoursFreeChildcare,guaranteedMinimumPension,nationalInsuranceCredits",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "[CREATOR]",
+    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-hmrcresponsewriter",
     "Disabled": "N"
   }
 ]
