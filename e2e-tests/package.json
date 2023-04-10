@@ -48,7 +48,7 @@
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-cucumber": "2.0.0",
     "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-jsdoc": "39.6.4",
+    "eslint-plugin-jsdoc": "40.3.0",
     "eslint-plugin-prettier": "4.2.1",
     "jasmine-core": "3.2.1",
     "jasmine-spec-reporter": "4.2.1",
