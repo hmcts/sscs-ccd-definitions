@@ -66,6 +66,33 @@
   },
   {
     "CaseEventID": "postHearingReview",
+    "CaseFieldID": "correctionGenerateNotice",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "correction.action = \"refuse\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "Correction",
+    "PageLabel": "Correction",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateNotice",
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "correctionBodyContent",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "correctionGenerateNotice = \"Yes\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "Correction",
+    "PageLabel": "Correction",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "postHearingReview",
     "CaseFieldID": "statementOfReasons",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
