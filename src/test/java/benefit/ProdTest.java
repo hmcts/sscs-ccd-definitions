@@ -1,11 +1,15 @@
 package benefit;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import org.hamcrest.MatcherAssert;
+import org.junit.jupiter.api.Test;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -13,10 +17,8 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-import org.junit.jupiter.api.Test;
+
+import static org.hamcrest.CoreMatchers.is;
 
 public class ProdTest {
     ObjectMapper mapper = new ObjectMapper()
@@ -31,9 +33,7 @@ public class ProdTest {
         List<String> masterIds = fixedListOnMaster.stream().map(FixedLists::getId).distinct().collect(Collectors.toList());
         masterIds.removeAll(prIds);
 
-        assertThat(masterIds)
-            .as("Changes to fixed list Id's from Production cannot be done without a data migration")
-            .isEqualTo(List.of());
+        MatcherAssert.assertThat("Changes to fixed list Id's from Production cannot be done without a data migration", masterIds, is(List.of()));
     }
 
     private List<FixedLists> getFixedLists(String path) throws IOException {
