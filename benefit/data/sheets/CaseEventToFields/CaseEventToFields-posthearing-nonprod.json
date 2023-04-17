@@ -106,6 +106,33 @@
   },
   {
     "CaseEventID": "postHearingReview",
+    "CaseFieldID": "statementOfReasonsGenerateNotice",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "statementOfReasons.action = \"refuse\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "Statement_Of_Reasons",
+    "PageLabel": "Statement of Reasons",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateNotice",
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "statementOfReasonsBodyContent",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "statementOfReasonsGenerateNotice = \"Yes\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "Statement_Of_Reasons",
+    "PageLabel": "Statement of Reasons",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "postHearingReview",
     "CaseFieldID": "permissionToAppeal",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
@@ -141,7 +168,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "Notice_Staging",
     "PageLabel": "Notice Document",
-    "PageShowCondition": "setAside.action = \"refuse\" OR setAside.action = \"grant\" OR correction.action = \"refuse\"",
+    "PageShowCondition": "setAside.action = \"refuse\" OR setAside.action = \"grant\" OR correction.action = \"refuse\" OR postHearingReviewType=\"statementOfReasons\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
