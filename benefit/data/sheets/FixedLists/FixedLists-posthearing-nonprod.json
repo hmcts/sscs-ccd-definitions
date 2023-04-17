@@ -11,8 +11,6 @@
   {"LiveFrom": "05/10/2022", "ID": "FL_actionCorrection", "ListElementCode": "refuse", "ListElement": "Refuse Correction Application"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionStatementOfReasons", "ListElementCode": "extendTime", "ListElement": "Extend Time"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionStatementOfReasons", "ListElementCode": "refuse", "ListElement": "Refuse Statement of Reasons Application"},
-  {"LiveFrom": "05/10/2022", "ID": "FL_actionStatementOfReasons", "ListElementCode": "issueDirections", "ListElement": "Issue directions"},
-  {"LiveFrom": "05/10/2022", "ID": "FL_actionStatementOfReasons", "ListElementCode": "write", "ListElement": "Write Statement of Reasons"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionPermissionToAppeal", "ListElementCode": "refuse", "ListElement": "Refuse Permission to Appeal Application"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionLibertyToApply", "ListElementCode": "refuse", "ListElement": "Refuse Liberty to Apply Application"},
   {"LiveFrom": "23/11/2022", "ID": "FL_postHearingRequestType", "ListElementCode": "libertyToApply", "ListElement": "Liberty to Apply"},
