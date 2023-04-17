@@ -203,7 +203,7 @@
     "CaseFieldID": "adminCorrectionType",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "LiveFrom": "21/03/2022",
+    "LiveFrom": "17/04/2023",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "Type_Selection",
@@ -215,13 +215,13 @@
     "CaseFieldID": "previewDocument",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "LiveFrom": "21/03/2022",
+    "LiveFrom": "17/04/2023",
     "CaseEventFieldLabel": "Corrected Document",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
     "PageID": "Corrected_Document_Staging",
     "PageLabel": "Upload Corrected Document",
-    "PageShowCondition": "adminCorrectionType = \"headerCorrection\"",
+    "PageShowCondition": "adminCorrectionType = \"headerCorrection\" AND finalDecisionNoticeGenerated = \"NO\"",
     "ShowSummaryChangeOption": "Y"
   }
 ]
