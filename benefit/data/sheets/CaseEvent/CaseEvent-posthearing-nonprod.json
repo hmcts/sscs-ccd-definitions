@@ -215,5 +215,42 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "postHearing",
     "SecurityClassification": "Public"
-  }
+  },
+  {
+    "LiveFrom": "21/03/2023",
+    "CaseTypeID": "Benefit",
+    "ID": "adminActionCorrection",
+    "Name": "Admin - action Correction",
+    "Description": "Admin - action Correction",
+    "DisplayOrder": 13,
+    "PreConditionState(s)": "dormantAppealState;postHearing",
+    "PostConditionState": "*",
+    "EventEnablingCondition": "hearingRoute=\"listAssist\"",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/03/2023",
+    "CaseTypeID": "Benefit",
+    "ID": "adminCorrectionBody",
+    "Name": "Admin Correction Body",
+    "Description": "Correction Body",
+    "DisplayOrder": 500,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "postHearing",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/03/2023",
+    "CaseTypeID": "Benefit",
+    "ID": "adminCorrectionHeader",
+    "Name": "Admin Correction Body",
+    "Description": "Correction Body",
+    "DisplayOrder": 500,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "dormantAppealState",
+    "SecurityClassification": "Public",
 ]
