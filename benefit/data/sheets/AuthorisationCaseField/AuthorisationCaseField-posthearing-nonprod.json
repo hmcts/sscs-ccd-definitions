@@ -49,4 +49,5 @@
   {"LiveFrom": "08/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "issueFinalDecisionDate", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "08/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "issueFinalDecisionDate", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "08/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "issueFinalDecisionDate", "AccessProfile": "caseworker-sscs-judge", "CRUD": "CRUD"}
+
 ]
