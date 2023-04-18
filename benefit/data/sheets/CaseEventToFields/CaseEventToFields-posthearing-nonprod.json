@@ -221,7 +221,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "Corrected_Document_Staging",
     "PageLabel": "Upload Corrected Document",
-    "PageShowCondition": "adminCorrectionType = \"headerCorrection\" AND finalDecisionNoticeGenerated = \"NO\"",
+    "PageShowCondition": "correction.adminCorrectionType = \"headerCorrection\" AND finalDecisionNoticeGenerated = \"NO\"",
     "ShowSummaryChangeOption": "Y"
   }
 ]
