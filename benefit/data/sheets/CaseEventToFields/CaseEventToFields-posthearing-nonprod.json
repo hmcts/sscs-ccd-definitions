@@ -212,6 +212,18 @@
   },
   {
     "CaseEventID": "adminActionCorrection",
+    "CaseFieldID": "finalDecisionNoticeGenerated",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "17/04/2023",
+    "CaseEventFieldLabel": "Final decision notice generated",
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Type_Selection",
+    "FieldShowCondition": "adminCorrectionType = \"hiddenField\""
+  },
+  {
+    "CaseEventID": "adminActionCorrection",
     "CaseFieldID": "previewDocument",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
