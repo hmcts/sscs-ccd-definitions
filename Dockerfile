@@ -2,7 +2,7 @@
 FROM hmctspublic.azurecr.io/ccd/definition-processor:latest as base
 
 # ----        Runtime image         ----
-FROM hmcts/ccd-definition-importer:latest as runtime
+FROM hmctspublic.azurecr.io/sscs/ccd-definition-importer:latest as runtime
 
 RUN apk add --no-cache curl jq zip unzip git
 COPY --from=base . .
