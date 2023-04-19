@@ -35,7 +35,7 @@ if [[ ${BRANCH_NAME} == "staging" ]]; then
 elif [[ ${BRANCH_NAME} =~ "PR" ]]; then
     LATEST_TAG="${BRANCH_NAME,,}-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
 elif [[ $BRANCH_NAME == "master" || $BRANCH_NAME == "demo" || $BRANCH_NAME == "ithc" || $BRANCH_NAME == "perftest" ]]; then
-   LATEST_TAG="aat-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
+   LATEST_TAG="staging-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
 else
   LATEST_TAG="This-is-probably-a-PR-so-fail-here-branch-name-is-${BRANCH_NAME}"
 fi
