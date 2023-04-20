@@ -15,6 +15,11 @@ RUN mkdir -p ${YARN_CACHE_FOLDER} && \
     chown -R 1001:1001 ${YARN_CACHE_FOLDER} && \
     chmod -R 777 ${YARN_CACHE_FOLDER}
 
+# Create node_modules folder and fix permissions
+RUN mkdir -p /node_modules && \
+    chown -R 1001:1001 /node_modules && \
+    chmod -R 777 /node_modules
+
 RUN apk add --no-cache curl jq zip unzip git
 COPY --from=base --chown=1001:1001 . .
 COPY --chown=1001:1001 ./benefit/data /data
