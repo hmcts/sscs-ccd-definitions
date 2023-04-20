@@ -2,6 +2,7 @@
 FROM hmctspublic.azurecr.io/ccd/definition-processor:pr-305-8872ea2 as base
 RUN yarn -v && echo 'initial base'
 USER root
+RUN usermod -s /bin/sh hmcts
 RUN corepack enable
 RUN yarn -v && echo 'base post corepack'
 # ----        Runtime image         ----
