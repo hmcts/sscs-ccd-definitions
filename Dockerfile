@@ -9,6 +9,12 @@ USER root
 RUN addgroup -g 1001 -S hmcts && \
     adduser -u 1001 -S hmcts -G hmcts -s /bin/sh
 
+# Set Yarn cache folder and fix permissions
+ENV YARN_CACHE_FOLDER=/opt/yarn_cache
+RUN mkdir -p ${YARN_CACHE_FOLDER} && \
+    chown -R 1001:1001 ${YARN_CACHE_FOLDER} && \
+    chmod -R 777 ${YARN_CACHE_FOLDER}
+
 RUN apk add --no-cache curl jq zip unzip git
 COPY --from=base --chown=1001:1001 . .
 COPY --chown=1001:1001 ./benefit/data /data
