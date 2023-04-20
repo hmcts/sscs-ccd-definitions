@@ -4,23 +4,27 @@ FROM hmcts/ccd-definition-processor:latest as base
 # ----        Runtime image         ----
 FROM hmcts/ccd-definition-importer:latest as runtime
 
+# Create hmcts user and group
+USER root
+RUN addgroup -g 1001 -S hmcts && \
+    adduser -u 1001 -S hmcts -G hmcts -s /bin/sh
+
 RUN apk add --no-cache curl jq zip unzip git
-COPY --from=base --chown=hmcts:hmcts . .
-COPY --chown=hmcts:hmcts ./benefit/data /data
-COPY --chown=hmcts:hmcts ./benefit/data/ccd-template.xlsx /opt/ccd-definition-processor/data
+COPY --from=base --chown=1001:1001 . .
+COPY --chown=1001:1001 ./benefit/data /data
+COPY --chown=1001:1001 ./benefit/data/ccd-template.xlsx /opt/ccd-definition-processor/data
 
 # ----        To pass through Jenkins pipeline         ----
 COPY package.json yarn.lock ./
-COPY --chown=hmcts:hmcts /benefit /
-ADD --chown=hmcts:hmcts ./config "/config"
-RUN chown -R hmcts:hmcts /data /config && \
+COPY --chown=1001:1001 /benefit /
+ADD --chown=1001:1001 ./config "/config"
+RUN chown -R 1001:1001 /data /config && \
     chmod -R 777 /data /config
 
-USER hmcts
+USER 1001
 RUN yarn install --production && yarn cache clean
-COPY --chown=hmcts:hmcts index.js ./
+COPY --chown=1001:1001 index.js ./
 ENV NODE_CONFIG_DIR="/config"
 CMD ["yarn", "start"]
 EXPOSE 3000
-
 
