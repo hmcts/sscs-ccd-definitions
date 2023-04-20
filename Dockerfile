@@ -20,6 +20,11 @@ RUN mkdir -p /node_modules && \
     chown -R 1001:1001 /node_modules && \
     chmod -R 777 /node_modules
 
+# Create .cache folder and fix permissions
+RUN mkdir -p /.cache && \
+    chown -R 1001:1001 /.cache && \
+    chmod -R 777 /.cache
+
 RUN apk add --no-cache curl jq zip unzip git
 COPY --from=base --chown=1001:1001 . .
 COPY --chown=1001:1001 ./benefit/data /data
