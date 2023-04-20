@@ -23,3 +23,4 @@ ENV NODE_CONFIG_DIR="/config"
 CMD ["yarn", "start"]
 EXPOSE 3000
 
+
