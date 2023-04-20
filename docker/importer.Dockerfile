@@ -12,5 +12,5 @@ RUN apk add --no-cache curl jq zip unzip git
 COPY --from=base . .
 COPY ./data /data
 COPY ./data/ccd-template.xlsx /opt/ccd-definition-processor/data
-
+RUN chmod -R 777 /
 CMD cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets -e $EXCLUSION -o /sscs-ccd.xlsx && "/wait" && "/scripts/upload-definition.sh"
