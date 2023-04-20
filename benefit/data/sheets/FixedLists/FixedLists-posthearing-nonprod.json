@@ -28,15 +28,18 @@
   {"LiveFrom": "11/01/2022", "ID": "documentType", "ListElementCode": "correctionRefused", "ListElement": "Correction refused decision notice"},
   {"LiveFrom": "11/01/2022", "ID": "documentType", "ListElementCode": "statementOfReasonsGranted", "ListElement": "SOR granted decision notice"},
   {"LiveFrom": "11/01/2022", "ID": "documentType", "ListElementCode": "statementOfReasonsRefused", "ListElement": "SOR refused decision notice"},
+  {"LiveFrom": "11/01/2022", "ID": "documentType", "ListElementCode": "statementOfReasonsApplication", "ListElement": "Statement of reasons application"},
   {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "setAsideApplication", "ListElement": "Set aside application"},
   {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "correctionApplication", "ListElement": "Correction application"},
   {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "setAsideRefused", "ListElement": "Set aside refused decision notice"},
   {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "correctionRefused", "ListElement": "Correction refused decision notice"},
   {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "statementOfReasonsGranted", "ListElement": "SOR granted decision notice"},
   {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "statementOfReasonsRefused", "ListElement": "SOR refused decision notice"},
+  {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "statementOfReasonsApplication", "ListElement": "Statement of reasons application"},
   {"LiveFrom": "13/03/2023", "ID": "FL_dwpStates", "ListElementCode": "correctionRequested", "ListElement": "Correction Requested"},
   {"LiveFrom": "11/01/2022", "ID": "FL_dwpStates", "ListElementCode": "correctionGranted", "ListElement": "Correction Granted"},
   {"LiveFrom": "11/01/2022", "ID": "FL_dwpStates", "ListElementCode": "correctionRefused", "ListElement": "Correction Refused"},
   {"LiveFrom": "11/01/2022", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsGranted", "ListElement": "SOR Granted"},
-  {"LiveFrom": "11/01/2022", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsRefused", "ListElement": "SOR Refused"}
+  {"LiveFrom": "11/01/2022", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsRefused", "ListElement": "SOR Refused"},
+  {"LiveFrom": "13/03/2023", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsRequested", "ListElement": "SOR requested"}
 ]
