@@ -1,5 +1,5 @@
 # ---- Base image - order important ----
-FROM hmctspublic.azurecr.io/ccd/definition-processor:latest as base
+FROM hmctspublic.azurecr.io/ccd/definition-processor:pr-305-8872ea2 as base
 
 # ----        Runtime image         ----
 FROM hmctspublic.azurecr.io/sscs/ccd-definition-importer:latest as runtime
