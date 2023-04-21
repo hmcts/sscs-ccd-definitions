@@ -4,7 +4,6 @@
 
 sscs-ccd.xlsx
 /releases/*
-*/releases/*
 */output/*
 .idea
 sscs-ccd-definitions.iml
