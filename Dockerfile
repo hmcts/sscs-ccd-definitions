@@ -37,6 +37,9 @@ ADD --chown=1001:1001 ./config "/config"
 RUN chown -R 1001:1001 /data /config && \
     chmod -R 777 /data /config
 
+# Update PATH for hmcts user
+ENV PATH="/usr/local/share/.config/yarn/global/node_modules/.bin:${PATH}"
+
 USER 1001
 RUN yarn
 
