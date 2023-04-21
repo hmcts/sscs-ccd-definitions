@@ -15,6 +15,7 @@ COPY /benefit /
 ADD ./config "/config"
 RUN yarn install && yarn cache clean
 COPY index.js ./
+RUN mkdir .yarn/cache
 ENV NODE_CONFIG_DIR="/config"
 CMD ["yarn", "start"]
 EXPOSE 3000
