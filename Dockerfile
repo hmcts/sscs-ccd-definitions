@@ -8,9 +8,9 @@ COPY --from=base . .
 COPY ./benefit/data /data
 COPY ./benefit/data/ccd-template.xlsx /opt/ccd-definition-processor/data
 WORKDIR /opt/app
-COPY package.json yarn.lock .yarnrc.yml / 
+COPY package.json yarn.lock .yarnrc.yml ./ 
 ADD .yarn .yarn
-RUN pwd && ls -la
+RUN pwd && ls
 COPY /benefit /
 ADD ./config "/config"
 RUN yarn install && yarn cache clean
