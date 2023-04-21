@@ -44,10 +44,7 @@
     "sonar-scanner": "^3.1.0"
   },
   "resolutions": {
-    "codeceptjs/**/mocha": "^10.0.0",
-    "request/**/http-signature": "^1.3.6",
-    "request/**/qs": "^6.11.0",
-    "@hmcts/nodejs-healthcheck/**/superagent": "^8.0.6",
     "@sideway/formula": "^3.0.1"
-  }
+  },
+  "packageManager": "yarn@3.5.0"
 }
