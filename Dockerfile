@@ -15,6 +15,16 @@ RUN mkdir -p ${YARN_CACHE_FOLDER} && \
     chown -R 1001:1001 ${YARN_CACHE_FOLDER} && \
     chmod -R 777 ${YARN_CACHE_FOLDER}
 
+# Set HOME directory for hmcts user and fix permissions
+ENV HOME=/home/hmcts
+RUN chown -R 1001:1001 ${HOME} && \
+    chmod -R 777 ${HOME}
+
+# Set WORKDIR for the application and fix permissions
+WORKDIR /app
+RUN chown -R 1001:1001 /app && \
+    chmod -R 777 /app
+
 RUN apk add --no-cache curl jq zip unzip git
 COPY --from=base --chown=1001:1001 . .
 COPY --chown=1001:1001 ./benefit/data /data
@@ -28,12 +38,5 @@ RUN chown -R 1001:1001 /data /config && \
     chmod -R 777 /data /config
 
 USER 1001
-RUN yarn install --production --cache-folder ${YARN_CACHE_FOLDER} && \
-    mkdir -p /opt/yarn_cache/v6/.tmp && \
-    chmod -R 777 /opt/yarn_cache/v6/.tmp && \
-    yarn cache clean
-COPY --chown=1001:1001 index.js ./
-ENV NODE_CONFIG_DIR="/config"
-CMD ["yarn", "start"]
-EXPOSE 3000
+RUN yarn
 
