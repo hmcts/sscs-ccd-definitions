@@ -38,7 +38,7 @@ RUN chown -R 1001:1001 /data /config && \
     chmod -R 777 /data /config
 
 USER 1001
-RUN yarn install --production && yarn cache clean
+RUN yarn install --production --cache-folder ${YARN_CACHE_FOLDER} && yarn cache clean --cache-folder ${YARN_CACHE_FOLDER}
 COPY --chown=1001:1001 index.js ./
 ENV NODE_CONFIG_DIR="/config"
 CMD ["yarn", "start"]
