@@ -1,16 +1,16 @@
 [
   {
-    "LiveFrom": "05/04/2023",
+    "LiveFrom": "01/04/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:caseworker-sscs-dwpresponsewriter",
     "CaseAccessCategories": "personalIndependencePayment,carer'sAllowance,jobseeker’sAllowance,employmentAndSupportAllowance,disabilityLivingAllowance,universalCredit,industrialDeathBenefit,pensionCredit,retirementPension,childSupport,bereavementBenefit,industrialInjuriesDisablement,maternityAllowance,socialFund,incomeSupport,bereavementSupportPaymentScheme,attendanceAllowance",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-dwpresponsewriter",
+    "AccessProfiles": "caseworker,caseworker-sscs-dwpresponsewriter",
     "Disabled": "N"
   },
   {
-    "LiveFrom": "05/04/2023",
+    "LiveFrom": "01/04/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:caseworker-sscs-systemupdate",
     "Authorisation": "",
@@ -19,7 +19,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "05/04/2023",
+    "LiveFrom": "01/04/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:caseworker-sscs-clerk",
     "Authorisation": "",
@@ -28,7 +28,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "05/04/2023",
+    "LiveFrom": "01/04/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:caseworker-sscs-judge",
     "Authorisation": "",
@@ -37,7 +37,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "05/04/2023",
+    "LiveFrom": "01/04/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:caseworker-sscs-panelmember",
     "Authorisation": "",
@@ -46,7 +46,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "05/04/2023",
+    "LiveFrom": "01/04/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:caseworker-sscs-superuser",
     "Authorisation": "",
@@ -55,7 +55,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "05/04/2023",
+    "LiveFrom": "01/04/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:caseworker-sscs-registrar",
     "Authorisation": "",
@@ -64,7 +64,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "05/04/2023",
+    "LiveFrom": "01/04/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:caseworker-sscs-anonymouscitizen",
     "Authorisation": "",
@@ -73,7 +73,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "05/04/2023",
+    "LiveFrom": "01/04/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:caseworker-sscs-callagent",
     "Authorisation": "",
@@ -82,7 +82,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "05/04/2023",
+    "LiveFrom": "01/04/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:caseworker-sscs-bulkscan",
     "Authorisation": "",
@@ -91,7 +91,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "05/04/2023",
+    "LiveFrom": "01/04/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:caseworker-sscs-teamleader",
     "Authorisation": "",
@@ -100,7 +100,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "05/04/2023",
+    "LiveFrom": "01/04/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:citizen",
     "Authorisation": "",
@@ -109,7 +109,7 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "05/04/2023",
+    "LiveFrom": "01/04/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:caseworker-sscs",
     "CaseAccessCategories": "doNotRemove",
@@ -119,13 +119,13 @@
     "Disabled": "N"
   },
   {
-    "LiveFrom": "05/04/2023",
+    "LiveFrom": "01/04/2023",
     "CaseTypeID": "SSCS_ExceptionRecord",
     "RoleName": "idam:caseworker-sscs-hmrcresponsewriter",
     "CaseAccessCategories": "taxCredit,guardiansAllowance,tax-freeChildcare,homeResponsibilitiesProtection,childBenefit,30HoursFreeChildcare,guaranteedMinimumPension,nationalInsuranceCredits",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-hmrcresponsewriter",
+    "AccessProfiles": "caseworker,caseworker-sscs-hmrcresponsewriter",
     "Disabled": "N"
   }
 ]
