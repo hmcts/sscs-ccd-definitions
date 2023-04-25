@@ -1,0 +1,11 @@
+[
+  {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "postHearingReviewType", "Label": "Action Post Hearing Application", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_postHearingReviewType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "setAside", "Label": "Set Aside", "FieldType": "setAside", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "correction", "Label": "Correction", "FieldType": "correction", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "statementOfReasons", "Label": "Statement of Reasons", "FieldType": "statementOfReasons", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "permissionToAppeal", "Label": "Permission to Appeal", "FieldType": "permissionToAppeal", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "libertyToApply", "Label": "Liberty to Apply", "FieldType": "libertyToApply", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "postHearingRequestType", "Label": "Post Hearing Request", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_postHearingRequestType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/01/2023", "CaseTypeID": "Benefit", "ID": "issueFinalDecisionDate", "Label": "Issue final decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "09/03/2023", "CaseTypeID": "Benefit", "ID": "bodyContentCorrection", "Label": "Body content", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+]

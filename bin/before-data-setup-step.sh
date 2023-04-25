@@ -5,7 +5,7 @@ ENV=${2}
 LIKE_PROD=${3:-${ENV}}
 
 RUN_DIR=`pwd`
-COMMON_VERSION=$(cat ${RUN_DIR}/benefit/SSCS_COMMON_VERSION.txt)
+TAG_VERSION=$(cat ${RUN_DIR}/${TYPE}/VERSION.yaml | awk '{print $2}')
 
 if [ -z "${TYPE}" ] || [ -z "${ENV}" ]; then
     echo "Usage create-xlsx.sh [type] [env]"
@@ -28,10 +28,14 @@ echo "SUBSCRIPTION is $SUBSCRIPTION"
 #az acr login --name hmctspublic --subscription 8999dec3-0104-4a27-94ee-6588559729d1
 #LATEST_TAG=$(az acr repository show-tags -n hmctspublic --repository sscs/ccd-definitions --subscription 8999dec3-0104-4a27-94ee-6588559729d1 --orderby time_desc -o tsv --query "[]")
 
+echo "Processing for branch $BRANCH_NAME"
+
 if [[ ${BRANCH_NAME} == "staging" ]]; then
   LATEST_TAG="$BRANCH_NAME-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
+elif [[ ${BRANCH_NAME} =~ "PR" ]]; then
+    LATEST_TAG="${BRANCH_NAME,,}-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
 elif [[ $BRANCH_NAME == "master" || $BRANCH_NAME == "demo" || $BRANCH_NAME == "ithc" || $BRANCH_NAME == "perftest" ]]; then
-   LATEST_TAG="aat-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
+   LATEST_TAG="staging-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
 else
   LATEST_TAG="This-is-probably-a-PR-so-fail-here-branch-name-is-${BRANCH_NAME}"
 fi
@@ -59,14 +63,14 @@ elif [[ ${ENV} == "aat" || ${ENV} == "demo" || ${ENV} == "prod" || ${ENV} == "pe
     TRIBUNALS_API_URL="http://sscs-tribunals-api-${ENV}.service.core-compute-${ENV}.internal"
     TYA_NOTIFICATIONS_API_URL="http://sscs-tya-notif-${ENV}.service.core-compute-${ENV}.internal"
     BULK_SCAN_API_URL="http://sscs-bulk-scan-${ENV}.service.core-compute-${ENV}.internal"
-    BULK_SCAN_ORCHESTRATOR_URL="http://sscs-bulk-scan-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
+    BULK_SCAN_ORCHESTRATOR_URL="http://bulk-scan-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
 else
         echo "${ENV} not recognised"
         exit 1
 fi
 
 if [[ ${ENV} == "demo" || ${ENV} == "ithc" ]]; then
-    EM_CCD_ORCHESTRATOR_URL="http://em-ccdorc-demo.service.core-compute-demo.internal/"
+    EM_CCD_ORCHESTRATOR_URL="http://em-ccd-orchestrator-demo.service.core-compute-demo.internal/"
 elif [[ ${ENV} == "aat" || ${ENV} == "perftest" || ${ENV} == "prod" ]]; then
     EM_CCD_ORCHESTRATOR_URL="http://em-ccd-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
 fi
@@ -120,19 +124,6 @@ case ${ENV} in
     exit 1 ;;
 esac
 
-if [[ ${ENV} == "prod" ]]; then
-    FIXED_LISTS_SUFFIX="PROD"
-else
-    FIXED_LISTS_SUFFIX="AAT"
-fi
-
-if [[ ${TYPE} == "benefit" ]]; then
-  PIP_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/pip-decision-notice-questions.txt)
-  ESA_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/esa-decision-notice-questions.txt)
-  UC_DECISION_NOTICE_QUESTIONS=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/uc-decision-notice-questions.txt)
-  LANGUAGES=$(curl https://raw.githubusercontent.com/hmcts/sscs-common/$COMMON_VERSION/src/main/resources/reference-data/languages.txt)
-fi
-
 UPPERCASE_ENV=$(printf '%s\n' "${ENV}" | awk '{ print toupper($0) }')
 
 if [[ ${ENV} == "prod" || ${LIKE_PROD} == "prod" ]]; then
@@ -155,10 +146,7 @@ docker run -i --rm --name json2xlsx \
   -e "CCD_DEF_MYA_LINK=${MYA_LINK}" \
   -e "CCD_DEF_MYA_REPRESENTATIVE_LINK=${MYA_REPRESENTATIVE_LINK}" \
   -e "CCD_DEF_MYA_APPOINTEE_LINK=${MYA_APPOINTEE_LINK}" \
-  -e "CCD_DEF_PIP_DECISION_NOTICE_QUESTIONS=${PIP_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_ESA_DECISION_NOTICE_QUESTIONS=${ESA_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_UC_DECISION_NOTICE_QUESTIONS=${UC_DECISION_NOTICE_QUESTIONS}" \
-  -e "CCD_DEF_LANGUAGES=${LANGUAGES}" \
-  -e "CCD_DEF_E=${UPPERCASE_ENV}" \
+  -e "CCD_DEF_ENV=${UPPERCASE_ENV}" \
+  -e "CCD_DEF_VERSION=${TAG_VERSION}" \
   hmctspublic.azurecr.io/sscs/ccd-definitions:${LATEST_TAG} \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_${UPPERCASE_ENV}.xlsx"

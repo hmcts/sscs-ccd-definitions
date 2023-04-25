@@ -172,14 +172,14 @@ For example large AuthorisationCaseField.json file presented below:
         "LiveFrom": "01/01/2017",
         "CaseTypeID": "Benefit",
         "CaseFieldID": "appeal",
-        "UserRole": "caseworker-sscs-clerk",
+        "AccessProfile": "caseworker-sscs-clerk",
         "CRUD": "CRU"
       },
       {
         "LiveFrom": "01/01/2017",
         "CaseTypeID": "Benefit",
         "CaseFieldID": "appeal",
-        "UserRole": "caseworker-sscs-judge",
+        "AccessProfile": "caseworker-sscs-judge",
         "CRUD": "CRU"
       }
     ]
@@ -190,7 +190,7 @@ can be split into clerk.json file presented below:
         "LiveFrom": "01/01/2017",
         "CaseTypeID": "DRAFT",
         "CaseFieldID": "appeal",
-        "UserRole": "caseworker-sscs-clerk",
+        "AccessProfile": "caseworker-sscs-clerk",
         "CRUD": "CRU"
       }
     ]
@@ -202,7 +202,7 @@ and judge.json file presented below:
         "LiveFrom": "01/01/2017",
         "CaseTypeID": "DRAFT",
         "CaseFieldID": "appeal",
-        "UserRole": "caseworker-sscs-judge",
+        "AccessProfile": "caseworker-sscs-judge",
         "CRUD": "CRU"
       }
     ]
