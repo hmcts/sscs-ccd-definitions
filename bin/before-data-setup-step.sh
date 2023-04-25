@@ -133,7 +133,6 @@ else
 fi
 
 docker run -i --rm --name json2xlsx \
-  -u $(id -u):$(id -g) \
   -v $(pwd)/src/test/resources/ccd_definition:/tmp \
   -e "CCD_DEF_EM_CCD_ORCHESTRATOR_URL=${EM_CCD_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL=${SSCS_CCD_ORCHESTRATOR_URL}" \
