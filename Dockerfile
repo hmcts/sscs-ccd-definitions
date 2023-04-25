@@ -1,6 +1,8 @@
 # ---- Base image - order important ----
 FROM hmctspublic.azurecr.io/ccd/definition-processor:latest as base
-
+USER root
+RUN usermod -u 1000 hmcts && \
+    groupmod -g 1000 hmcts
 # ----        Runtime image         ----
 FROM hmctspublic.azurecr.io/ccd/definition-importer:latest as runtime
 RUN apk add --no-cache curl jq zip unzip git
