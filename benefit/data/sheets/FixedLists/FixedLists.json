@@ -519,6 +519,7 @@
   {"LiveFrom": "01/01/2018", "ID": "correspondenceType", "ListElementCode": "Sms", "ListElement": "SMS"},
   {"LiveFrom": "01/01/2018", "ID": "FL_createdInGapsFrom", "ListElementCode": "validAppeal", "ListElement": "No"},
   {"LiveFrom": "01/01/2018", "ID": "FL_createdInGapsFrom", "ListElementCode": "readyToList", "ListElement": "Yes"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "DisplayOrder" : "17","ListElementCode": "ConfirmPanelAndListingDirections", "ListElement": "Confirm panel and listing directions"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "DisplayOrder" : "16","ListElementCode": "confirmPanelCompositionAndListingDirections", "ListElement": "Confirm panel composition and listing directions"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "DisplayOrder" : "14","ListElementCode": "reviewPostponementRequest", "ListElement": "Review hearing postponement request"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "DisplayOrder" : "14","ListElementCode": "timeExtension", "ListElement": "Time extension"},
