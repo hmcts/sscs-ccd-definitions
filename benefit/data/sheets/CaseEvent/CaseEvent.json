@@ -1292,6 +1292,21 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "issueGenericLetter",
+    "Name": "Issue generic letter",
+    "Description": "Issue generic letter",
+    "DisplayOrder": 991,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "jointPartyAdded",
     "Name": "Joint Party Added",
     "Description": "Joint Party has been registered on case",
