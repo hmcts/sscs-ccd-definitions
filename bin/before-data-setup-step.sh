@@ -132,6 +132,7 @@ else
   excludedFilenamePatterns="-e *-prod.json,*-shuttered.json"
 fi
 
+sudo chown -R 1000:1000 $(pwd)/src/test/resources/ccd_definition
 docker volume create json2xlsx_data
 docker run -i --rm --name json2xlsx \
   --user 1000:1000 \
