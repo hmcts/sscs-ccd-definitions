@@ -132,11 +132,10 @@ else
   excludedFilenamePatterns="-e *-prod.json,*-shuttered.json"
 fi
 
-sudo chown -R 1000:1000 $(pwd)/src/test/resources/ccd_definition
 docker volume create json2xlsx_data
 docker run -i --rm --name json2xlsx \
   --user 1000:1000 \
-  -v $(pwd)/src/test/resources/ccd_definition:/tmp:rw \
+  -v json2xlsx_data:/tmp \
   -e "CCD_DEF_EM_CCD_ORCHESTRATOR_URL=${EM_CCD_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL=${SSCS_CCD_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_TRIBUNALS_API_URL=${TRIBUNALS_API_URL}" \
@@ -153,3 +152,10 @@ docker run -i --rm --name json2xlsx \
   hmctspublic.azurecr.io/sscs/ccd-definitions:${LATEST_TAG} \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_${UPPERCASE_ENV}.xlsx"
 
+# Copy the output file from the Docker volume to the host directory
+output_file="CCD_${CASE_TYPE_XLSX_NAME}Definition_${UPPERCASE_ENV}.xlsx"
+docker create --name temp_container -v json2xlsx_data:/tmp busybox
+docker cp temp_container:/tmp/${output_file} $(pwd)/src/test/resources/ccd_definition/
+docker rm temp_container
+# Remove the Docker volume
+docker volume rm json2xlsx_data
