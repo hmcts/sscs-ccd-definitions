@@ -132,9 +132,10 @@ else
   excludedFilenamePatterns="-e *-prod.json,*-shuttered.json"
 fi
 
+docker volume create json2xlsx_data
 docker run -i --rm --name json2xlsx \
-  -u $(id -u):$(id -g) \
-  -v $(pwd)/src/test/resources/ccd_definition:/tmp \
+  --user 1000:1000 \
+  -v json2xlsx_data:/tmp \
   -e "CCD_DEF_EM_CCD_ORCHESTRATOR_URL=${EM_CCD_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL=${SSCS_CCD_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_TRIBUNALS_API_URL=${TRIBUNALS_API_URL}" \
@@ -150,3 +151,4 @@ docker run -i --rm --name json2xlsx \
   -e "CCD_DEF_VERSION=${TAG_VERSION}" \
   hmctspublic.azurecr.io/sscs/ccd-definitions:${LATEST_TAG} \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_${UPPERCASE_ENV}.xlsx"
+
