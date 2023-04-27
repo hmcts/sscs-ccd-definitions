@@ -135,7 +135,7 @@ fi
 docker volume create json2xlsx_data
 docker run -i --rm --name json2xlsx \
   --user 1000:1000 \
-  -v json2xlsx_data:/tmp \
+  -v $(pwd)/src/test/resources/ccd_definition:/tmp \
   -e "CCD_DEF_EM_CCD_ORCHESTRATOR_URL=${EM_CCD_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL=${SSCS_CCD_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_TRIBUNALS_API_URL=${TRIBUNALS_API_URL}" \
