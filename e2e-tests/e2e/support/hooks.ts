@@ -1,13 +1,19 @@
 import { After, Status } from '@cucumber/cucumber';
-import { browser } from 'protractor';
+import { browser, protractor } from 'protractor';
 import { Logger } from '@hmcts/nodejs-logging';
 
 const logger = Logger.getLogger('hooks.ts');
 const LOG_LEVEL_ERROR_THRESHOLD = 900;
 const MIME_TYPE_PNG = 'image/png';
 
+interface LogEntry {
+  level: {
+    value: number;
+  };
+}
+
 // This hook runs after each scenario
-After(async function (scenario) {
+After(async function (this: any, scenario: any) {
   logger.info(`Scenario results are ${scenario.result.status}`);
 
   // If the scenario has failed, capture a screenshot and browser error logs
@@ -18,8 +24,8 @@ After(async function (scenario) {
     await this.attach(decodedImage, MIME_TYPE_PNG);
 
     // Fetch browser logs and filter for errors
-    const browserLog = await browser.manage().logs().get('browser');
-    const browserErrorLogs = [];
+    const browserLog = await browser.manage().logs().get(protractor.logging.Type.BROWSER);
+    const browserErrorLogs: LogEntry[] = [];
     for (const logEntry of browserLog) {
       if (logEntry.level.value > LOG_LEVEL_ERROR_THRESHOLD) {
         browserErrorLogs.push(logEntry);
@@ -34,4 +40,5 @@ After(async function (scenario) {
     }
   }
 });
+
 
