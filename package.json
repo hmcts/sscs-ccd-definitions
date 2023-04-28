@@ -28,6 +28,7 @@
     "puppeteer": "^19.2.2"
   },
   "devDependencies": {
+    "@cucumber/cucumber": "8.5",
     "@hmcts/eslint-config": "^1.4.0",
     "chai": "^4.3.6",
     "eslint": "^8.26.0",
