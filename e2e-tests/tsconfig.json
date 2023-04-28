@@ -2,5 +2,9 @@
   "files": [],
   "include": [],
   "exclude": ["node_modules", ".yarn/**"],
-  "references": [{ "path": "./e2e"}]
+  "references": [{ "path": "./e2e"}],
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
+  }
 }
