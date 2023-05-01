@@ -448,4 +448,16 @@
   {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "statementOfReasons", "Label": "Statement of Reasons", "FieldType": "statementOfReasons", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "permissionToAppeal", "Label": "Permission to Appeal", "FieldType": "permissionToAppeal", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "libertyToApply", "Label": "Liberty to Apply", "FieldType": "libertyToApply", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "genericLetterText", "Label": "Add letter text", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hasJointParty", "Label": "Joint party toggle", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hasRepresentative", "Label": "Send to all parties", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hasOtherParties", "Label": "Send to all parties", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToAllParties", "Label": "Send to all parties", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToApellant", "Label": "Appellant (or Appointee)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToRepresentative", "Label": "Representative", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToJointParty", "Label": "Joint party", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToOtherParties", "Label": "Other parties", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "otherPartySelection", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "otherPartySelection", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "documentSelection", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "documentSelectionList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "addDocuments", "Label": "Do you want to add any documents?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
