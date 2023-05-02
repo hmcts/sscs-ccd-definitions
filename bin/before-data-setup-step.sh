@@ -35,7 +35,7 @@ if [[ ${BRANCH_NAME} == "staging" ]]; then
 elif [[ ${BRANCH_NAME} =~ "PR" ]]; then
     LATEST_TAG="${BRANCH_NAME,,}-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
 elif [[ $BRANCH_NAME == "master" || $BRANCH_NAME == "demo" || $BRANCH_NAME == "ithc" || $BRANCH_NAME == "perftest" ]]; then
-   LATEST_TAG="aat-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
+   LATEST_TAG="staging-${COMMIT_LABEL}-$LAST_COMMIT_TIMESTAMP"
 else
   LATEST_TAG="This-is-probably-a-PR-so-fail-here-branch-name-is-${BRANCH_NAME}"
 fi
@@ -63,7 +63,7 @@ elif [[ ${ENV} == "aat" || ${ENV} == "demo" || ${ENV} == "prod" || ${ENV} == "pe
     TRIBUNALS_API_URL="http://sscs-tribunals-api-${ENV}.service.core-compute-${ENV}.internal"
     TYA_NOTIFICATIONS_API_URL="http://sscs-tya-notif-${ENV}.service.core-compute-${ENV}.internal"
     BULK_SCAN_API_URL="http://sscs-bulk-scan-${ENV}.service.core-compute-${ENV}.internal"
-    BULK_SCAN_ORCHESTRATOR_URL="http://sscs-bulk-scan-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
+    BULK_SCAN_ORCHESTRATOR_URL="http://bulk-scan-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
 else
         echo "${ENV} not recognised"
         exit 1
@@ -132,9 +132,10 @@ else
   excludedFilenamePatterns="-e *-prod.json,*-shuttered.json"
 fi
 
+docker volume create json2xlsx_data
 docker run -i --rm --name json2xlsx \
-  -u $(id -u):$(id -g) \
-  -v $(pwd)/src/test/resources/ccd_definition:/tmp \
+  --user 1000:1000 \
+  -v json2xlsx_data:/tmp \
   -e "CCD_DEF_EM_CCD_ORCHESTRATOR_URL=${EM_CCD_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL=${SSCS_CCD_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_TRIBUNALS_API_URL=${TRIBUNALS_API_URL}" \
@@ -150,3 +151,11 @@ docker run -i --rm --name json2xlsx \
   -e "CCD_DEF_VERSION=${TAG_VERSION}" \
   hmctspublic.azurecr.io/sscs/ccd-definitions:${LATEST_TAG} \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_${UPPERCASE_ENV}.xlsx"
+
+# Copy the output file from the Docker volume to the host directory
+output_file="CCD_${CASE_TYPE_XLSX_NAME}Definition_${UPPERCASE_ENV}.xlsx"
+docker create --name temp_container -v json2xlsx_data:/tmp busybox
+docker cp temp_container:/tmp/${output_file} $(pwd)/src/test/resources/ccd_definition/
+docker rm temp_container
+# Remove the Docker volume
+docker volume rm json2xlsx_data

@@ -80,5 +80,25 @@
     "LiveFrom": "23/11/2022",
     "FieldDisplayOrder": 1,
     "PageID": "Set_Aside"
+  },
+  {
+    "CaseEventID": "postHearingRequest",
+    "CaseFieldID": "correction",
+    "ListElementCode": "requestFormat",
+    "ID": "postHearingRequestCorrectionRequestFormat",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "08/03/2023",
+    "FieldDisplayOrder": 1,
+    "PageID": "Correction"
+  },
+  {
+    "CaseEventID": "postHearingRequest",
+    "CaseFieldID": "statementOfReasons",
+    "ListElementCode": "requestFormat",
+    "ID": "postHearingRequestStatementOfReasonsRequestFormat",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "08/03/2023",
+    "FieldDisplayOrder": 1,
+    "PageID": "Statement_Of_Reasons"
   }
 ]
