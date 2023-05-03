@@ -4,7 +4,6 @@
 
 sscs-ccd.xlsx
 /releases/*
-*/releases/*
 */output/*
 .idea
 sscs-ccd-definitions.iml
@@ -12,3 +11,10 @@ Change History.json
 .DS_Store
 /bin/venues.csv
 /node_modules/
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
