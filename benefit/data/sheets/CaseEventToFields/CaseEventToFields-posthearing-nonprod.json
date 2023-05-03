@@ -66,6 +66,33 @@
   },
   {
     "CaseEventID": "postHearingReview",
+    "CaseFieldID": "correctionGenerateNotice",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "correction.action = \"refuse\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "Correction",
+    "PageLabel": "Correction",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateNotice",
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "correctionBodyContent",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "correctionGenerateNotice = \"Yes\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "Correction",
+    "PageLabel": "Correction",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "postHearingReview",
     "CaseFieldID": "statementOfReasons",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
@@ -75,6 +102,33 @@
     "PageID": "Statement_Of_Reasons",
     "PageLabel": "Statement of Reasons",
     "PageShowCondition": "postHearingReviewType=\"statementOfReasons\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "statementOfReasonsGenerateNotice",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "statementOfReasons.action = \"*\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "Statement_Of_Reasons",
+    "PageLabel": "Statement of Reasons",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateNotice",
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "statementOfReasonsBodyContent",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "statementOfReasons.action = \"*\" AND statementOfReasonsGenerateNotice = \"Yes\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "Statement_Of_Reasons",
+    "PageLabel": "Statement of Reasons",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -114,7 +168,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "Notice_Staging",
     "PageLabel": "Notice Document",
-    "PageShowCondition": "setAside.action = \"refuse\" OR setAside.action = \"grant\"",
+    "PageShowCondition": "setAside.action = \"refuse\" OR setAside.action = \"grant\" OR correction.action = \"refuse\" OR postHearingReviewType=\"statementOfReasons\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -159,19 +213,6 @@
   },
   {
     "CaseEventID": "postHearingRequest",
-    "CaseFieldID": "previewDocument",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "23/11/2022",
-    "CaseEventFieldLabel": "Request Document",
-    "PageDisplayOrder": 30,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "Request_Staging",
-    "PageLabel": "Request Document",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "postHearingRequest",
     "CaseFieldID": "correction",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
@@ -186,7 +227,7 @@
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateDocument",
     "CaseEventID": "postHearingRequest",
-    "CaseFieldID": "bodyContentCorrection",
+    "CaseFieldID": "correctionBodyContent",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "correction.requestFormat = \"generate\"",
@@ -234,6 +275,47 @@
     "PageID": "Corrected_Document_Staging",
     "PageLabel": "Upload Corrected Document",
     "PageShowCondition": "adminCorrectionType = \"headerCorrection\" AND finalDecisionNoticeGenerated = \"No\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "postHearingRequest",
+    "CaseFieldID": "statementOfReasons",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "09/03/2023",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Statement_Of_Reasons",
+    "PageLabel": "Statement of Reasons",
+    "PageShowCondition": "postHearingRequestType=\"statementOfReasons\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateDocument",
+    "CaseEventID": "postHearingRequest",
+    "CaseFieldID": "statementOfReasonsBodyContent",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "statementOfReasons.requestFormat = \"generate\"",
+    "LiveFrom": "09/03/2023",
+    "CaseEventFieldLabel": "Reason for Statement Of Reasons",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "Statement_Of_Reasons",
+    "PageLabel": "Statement of Reasons",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "postHearingRequest",
+    "CaseFieldID": "previewDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "23/11/2022",
+    "CaseEventFieldLabel": "Request Document",
+    "PageDisplayOrder": 30,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Request_Staging",
+    "PageLabel": "Request Document",
     "ShowSummaryChangeOption": "Y"
   }
 ]

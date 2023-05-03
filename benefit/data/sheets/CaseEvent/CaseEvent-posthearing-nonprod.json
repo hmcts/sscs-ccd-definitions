@@ -49,19 +49,7 @@
     "Description": "Correction Refused",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "13/10/2022",
-    "CaseTypeID": "Benefit",
-    "ID": "correctionSendToJudge",
-    "Name": "Correction - Send to Judge",
-    "Description": "Correction - Send to Judge",
-    "DisplayOrder": 500,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
@@ -73,7 +61,7 @@
     "Description": "SOR Extend Time",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "postHearing",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
@@ -85,7 +73,7 @@
     "Description": "SOR Refused",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
@@ -121,7 +109,7 @@
     "Description": "Set Aside Granted",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "notListable",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
@@ -133,7 +121,7 @@
     "Description": "Set Aside Refused",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
