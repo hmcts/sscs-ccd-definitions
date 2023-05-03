@@ -101,5 +101,4 @@
   {"LiveFrom": "13/01/2022", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-hmrcresponsewriter", "CaseFieldID": "workBasketHearingDate", "Label": "Hearing Date", "DisplayOrder": 19},
   {"LiveFrom": "13/01/2022", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-hmrcresponsewriter", "CaseFieldID": "workBasketHearingEpimsId", "Label": "Hearing Venue", "DisplayOrder": 21},
   {"LiveFrom": "13/01/2022", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-hmrcresponsewriter", "CaseFieldID": "hearingRoute", "Label": "Hearing Route", "DisplayOrder": 22}
-
 ]
