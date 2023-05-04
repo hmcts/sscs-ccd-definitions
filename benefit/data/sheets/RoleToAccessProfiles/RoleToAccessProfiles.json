@@ -126,5 +126,15 @@
     "ReadOnly": "N",
     "AccessProfiles": "[CREATOR]",
     "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/03/2023",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-hmrcresponsewriter",
+    "CaseAccessCategories": "taxCredit,guardiansAllowance,tax-freeChildcare,homeResponsibilitiesProtection,childBenefit,30HoursFreeChildcare,guaranteedMinimumPension,nationalInsuranceCredits",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-hmrcresponsewriter",
+    "Disabled": "N"
   }
 ]
