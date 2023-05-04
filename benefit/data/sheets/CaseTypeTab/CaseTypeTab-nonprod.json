@@ -1,4 +1,0 @@
-[
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "pcqId", "TabFieldDisplayOrder": 31},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "cam_fields", "TabLabel": "CAM Fields", "TabDisplayOrder": 29, "CaseFieldID": "SearchCriteria", "TabFieldDisplayOrder": 7}
-]
