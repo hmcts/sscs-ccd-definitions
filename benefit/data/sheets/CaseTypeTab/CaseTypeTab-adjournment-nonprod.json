@@ -1,6 +1,4 @@
 [
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "summary_sscs", "TabLabel": "Summary", "TabDisplayOrder": 1, "CaseFieldID": "pcqId", "TabFieldDisplayOrder": 31},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "cam_fields", "TabLabel": "CAM Fields", "TabDisplayOrder": 29, "CaseFieldID": "SearchCriteria", "TabFieldDisplayOrder": 7},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "panelMemberExclusions", "TabFieldDisplayOrder": 11},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "panel", "TabFieldDisplayOrder": 12, "FieldShowCondition": "panelMemberExclusions.arePanelMembersReserved=\"Yes\""},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_clerk", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "panelMemberExclusions", "TabFieldDisplayOrder": 11},
