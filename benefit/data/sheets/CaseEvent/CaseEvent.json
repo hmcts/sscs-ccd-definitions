@@ -1370,7 +1370,8 @@
     "DisplayOrder": 1040,
     "PreConditionState(s)": "*",
     "PostConditionState": "listingError",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "10/06/2022",
@@ -2282,7 +2283,8 @@
     "PostConditionState": "validAppeal",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
