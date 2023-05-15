@@ -188,6 +188,17 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
+    "CaseFieldID": "dwpIsOfficerAttending",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "25/05/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 16,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "elementsDisputedList",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -398,6 +409,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "otherParties",
     "CaseTypeID": "Benefit",

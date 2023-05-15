@@ -1,0 +1,9 @@
+[
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "postHearing", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "postHearing", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "27/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "postHearing", "AccessProfile": "citizen", "CRUD": "R"},
+  {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "postHearing", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "postHearing", "AccessProfile": "caseworker-sscs-judge", "CRUD": "RU"},
+  {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "postHearing", "AccessProfile": "caseworker-sscs-registrar", "CRUD": "RU"},
+  {"LiveFrom": "25/06/2019", "CaseTypeID": "Benefit", "CaseStateID": "postHearing", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "RU"}
+]

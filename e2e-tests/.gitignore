@@ -1,0 +1,17 @@
+functional-output/
+node_modules/
+.idea/
+yarn-error.log
+.DS_Store
+.vscode/
+dist/
+*.iml
+reports/
+protractorFailuresReport/
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

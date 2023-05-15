@@ -149,6 +149,29 @@
     "PageLabel": "Update case"
   },
   {
+    "LiveFrom": "01/07/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y",
+    "PageLabel": "Select Override Values"
+  },
+  {
+    "LiveFrom": "04/07/2022",
+    "CaseEventID": "addCaseOutcome",
+    "CaseFieldID": "caseOutcome",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CaseEventID": "adminUpdateEvent",
     "CaseFieldID": "directionResponse",
     "CaseTypeID": "Benefit",
@@ -159,6 +182,28 @@
     "PageID": "1.0"
   },
   {
+    "LiveFrom": "06/10/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "dwpIsOfficerAttending",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "04/07/2022",
+    "CaseEventID": "addCaseOutcome",
+    "CaseFieldID": "didPoAttend",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CaseEventID": "adminUpdateEvent",
     "CaseFieldID": "dwpRegionalCentre",
     "CaseTypeID": "Benefit",
@@ -167,6 +212,17 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
     "PageID": "1.0"
+  },
+  {
+    "LiveFrom": "06/10/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "reserveTo",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "adminUpdateEvent",
@@ -249,6 +305,26 @@
     "PageID": "1.0"
   },
   {
+    "LiveFrom": "05/07/2022",
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "caseOutcome",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 14,
+    "PageID": "1.0"
+  },
+  {
+    "LiveFrom": "05/07/2022",
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "didPoAttend",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 15,
+    "PageID": "1.0"
+  },
+  {
     "CaseEventID": "adjournCase",
     "CaseFieldID": "adjournCaseGenerateNotice",
     "CaseTypeID": "Benefit",
@@ -271,6 +347,19 @@
     "PageID": "panelMembersExcluded",
     "PageLabel": "Are panel members excluded?",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "06/07/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "amendReasons",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "[STATE]=\"readyToList\"",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "2.0",
+    "ShowSummaryChangeOption": "Y",
+    "PageLabel": "Amend Reason"
   },
   {
     "CaseEventID": "adjournCase",
@@ -470,7 +559,7 @@
   },
   {
     "CaseEventID": "adjournCase",
-    "CaseFieldID": "adjournCaseInterpreterLanguage",
+    "CaseFieldID": "adjournCaseInterpreterLanguageList",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "adjournCaseInterpreterRequired = \"Yes\"",
@@ -2611,6 +2700,17 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CaseEventID": "validSendToInterloc",
+    "CaseFieldID": "interlocReferralReason",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "10/10/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=interlocReferral",
     "CaseEventID": "validSendToInterloc",
     "CaseFieldID": "postponementRequestDetails",
@@ -4198,5 +4298,156 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
     "PageLabel": "Amend Panel Doctor Specialism"
+  },
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "sendToAllParties",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "PageLabel": "Issue generic letter",
+    "ShowSummaryChangeOption": "N"
+  },
+
+  {
+    "LiveFrom": "01/01/2018", 
+    "CaseTypeID": "Benefit", 
+    "CaseEventID": "issueGenericLetter", 
+    "CaseFieldID": "hasJointParty", 
+    "PageFieldDisplayOrder": 3, 
+    "DisplayContext": "READONLY", 
+    "PageDisplayOrder": 28, 
+    "PageID": "1.0",
+    "FieldShowCondition": "sendToAllParties=\"DUMMY_VALUE_TO_HIDE_FIELD\"", 
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018", 
+    "CaseTypeID": "Benefit", 
+    "CaseEventID": "issueGenericLetter", 
+    "CaseFieldID": "hasOtherParties", 
+    "PageFieldDisplayOrder": 3, 
+    "DisplayContext": "READONLY", 
+    "PageDisplayOrder": 28, 
+    "PageID": "1.0",
+    "FieldShowCondition": "sendToAllParties=\"DUMMY_VALUE_TO_HIDE_FIELD\"", 
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018", 
+    "CaseTypeID": "Benefit", 
+    "CaseEventID": "issueGenericLetter", 
+    "CaseFieldID": "hasRepresentative", 
+    "PageFieldDisplayOrder": 3, 
+    "DisplayContext": "READONLY", 
+    "PageDisplayOrder": 28, 
+    "PageID": "1.0",
+    "FieldShowCondition": "sendToAllParties=\"DUMMY_VALUE_TO_HIDE_FIELD\"", 
+    "ShowSummaryChangeOption": "N"
+  }, 
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "sendToApellant",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 9,
+    "PageID": "1.0",
+    "PageLabel": "Issue generic letter",
+    "FieldShowCondition": "sendToAllParties = \"No\"",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "sendToRepresentative",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 10,
+    "PageID": "1.0",
+    "PageLabel": "Issue generic letter",
+    "FieldShowCondition": "sendToAllParties = \"No\" AND hasRepresentative = \"Yes\"",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "sendToJointParty",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 11,
+    "PageID": "1.0",
+    "PageLabel": "Issue generic letter",
+    "FieldShowCondition": "sendToAllParties = \"No\" AND hasJointParty = \"Yes\"",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "sendToOtherParties",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 12,
+    "PageID": "1.0",
+    "PageLabel": "Issue generic letter",
+    "FieldShowCondition": "sendToAllParties = \"No\" AND hasOtherParties = \"Yes\"",
+    "ShowSummaryChangeOption": "N"
+  },
+
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "otherPartySelection",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 13,
+    "PageID": "1.0",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "FieldShowCondition": "sendToAllParties = \"No\" AND sendToOtherParties = \"Yes\"",
+    "PageLabel": " "
+  },
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "addDocuments",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "2.0",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "documentSelection",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "2.0",
+    "FieldShowCondition": "addDocuments = \"Yes\"",
+    "PageLabel": " ",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "genericLetterText",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "3.0",
+    "ShowSummaryChangeOption": "Y"
   }
 ]

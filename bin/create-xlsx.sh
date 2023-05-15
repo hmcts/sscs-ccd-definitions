@@ -63,14 +63,14 @@ elif [ ${ENV} == "aat" ] || [ ${ENV} == "demo" ] || [ ${ENV} == "prod" ] || [ ${
     TRIBUNALS_API_URL="http://sscs-tribunals-api-${ENV}.service.core-compute-${ENV}.internal"
     TYA_NOTIFICATIONS_API_URL="http://sscs-tya-notif-${ENV}.service.core-compute-${ENV}.internal"
     BULK_SCAN_API_URL="http://sscs-bulk-scan-${ENV}.service.core-compute-${ENV}.internal"
-    BULK_SCAN_ORCHESTRATOR_URL="http://sscs-bulk-scan-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
+    BULK_SCAN_ORCHESTRATOR_URL="http://bulk-scan-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
 else
         echo "${ENV} not recognised"
         exit 1
 fi
 
 if [ ${ENV} == "demo" ] || [ ${ENV} == "ithc" ]; then
-    EM_CCD_ORCHESTRATOR_URL="http://em-ccdorc-demo.service.core-compute-demo.internal/"
+    EM_CCD_ORCHESTRATOR_URL="http://em-ccd-orchestrator-demo.service.core-compute-demo.internal/"
 elif [ ${ENV} == "aat" ] || [ ${ENV} == "perftest" ] || [ ${ENV} == "prod" ]; then
     EM_CCD_ORCHESTRATOR_URL="http://em-ccd-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
 fi
