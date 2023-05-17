@@ -669,6 +669,7 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_titles", "ListElementCode": "mrs", "ListElement": "Mrs"},
   {"LiveFrom": "01/01/2018", "ID": "FL_titles", "ListElementCode": "mr", "ListElement": "Mr"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeWelsh", "ListElementCode": "appellantEvidence", "ListElement": "Appellant evidence"},
+  {"LiveFrom": "01/01/2018", "ID": "documentTypeWelsh", "ListElementCode": "confidentialityRequest", "ListElement": "Confidentiality request"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeWelsh", "ListElementCode": "Decision Notice", "ListElement": "Decision Notice"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeWelsh", "ListElementCode": "Direction Notice", "ListElement": "Directions Notice"},
   {"LiveFrom": "01/01/2018", "ID": "documentTypeWelsh", "ListElementCode": "sscs1", "ListElement": "SSCS1"},
