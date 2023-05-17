@@ -46,6 +46,19 @@
   },
   {
     "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocumentTypes",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "21/08/2021",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0",
+    "PageLabel": "Handle Further Evidence",
+    "FieldShowCondition": "[STATE]=\"DoNotShow\"",
+    "Publish": "Y"
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
     "CaseFieldID": "showPostponementDetailsPage",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -78,6 +91,20 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Manage Welsh Doc(s)"
+  },
+  {
+    "CaseEventID": "manageWelshDocuments",
+    "CaseFieldID": "uploadedWelshDocumentTypes",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "21/08/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "PageLabel": "Manage Welsh Doc(s)",
+    "FieldShowCondition": "[STATE]=\"DoNotShow\"",
+    "Publish": "Y",
+    "PublishAs": "scannedDocumentTypes"
   },
   {
     "CaseEventID": "addHearing",
@@ -3219,6 +3246,20 @@
     "PageID": "1.0",
     "PageLabel": "Upload Welsh documents",
     "PageDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "uploadWelshDocument",
+    "CaseFieldID": "uploadedWelshDocumentTypes",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "21/08/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0",
+    "PageLabel": "Upload Welsh documents",
+    "FieldShowCondition": "[STATE]=\"DoNotShow\"",
+    "Publish": "Y",
+    "PublishAs": "scannedDocumentTypes"
   },
   {
     "LiveFrom": "19/11/2019",
