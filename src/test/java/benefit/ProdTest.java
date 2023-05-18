@@ -1,5 +1,7 @@
 package benefit;
 
+import static org.hamcrest.CoreMatchers.is;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -16,8 +18,6 @@ import lombok.Setter;
 import lombok.ToString;
 import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.Test;
-
-import static org.hamcrest.CoreMatchers.is;
 
 public class ProdTest {
     ObjectMapper mapper = new ObjectMapper()
