@@ -465,6 +465,7 @@
     "RetainHiddenValue": "Yes"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEventAdjournCasePopulateVenueDropdown",
     "CaseEventID": "adjournCase",
     "CaseFieldID": "adjournCaseTypeOfNextHearing",
     "CaseTypeID": "Benefit",
