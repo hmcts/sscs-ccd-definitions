@@ -279,5 +279,32 @@
     "PageID": "Request_Staging",
     "PageLabel": "Request Document",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "sORWrite",
+    "CaseFieldID": "writeStatementOfReasonsGenerateNotice",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "18/05/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "Write_Statement_Of_Reasons",
+    "PageLabel": "Statement of Reasons",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateDocument",
+    "CaseEventID": "sORWrite",
+    "CaseFieldID": "writeStatementOfReasonsBodyContent",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "writeStatementOfReasonsGenerateNotice = \"Yes\"",
+    "LiveFrom": "18/05/2023",
+    "CaseEventFieldLabel": "Body Content",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "Write_Statement_Of_Reasons",
+    "PageLabel": "Statement of Reasons",
+    "ShowSummaryChangeOption": "Y"
   }
 ]

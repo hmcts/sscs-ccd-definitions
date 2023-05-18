@@ -46,5 +46,10 @@
   {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "correctionGenerateNotice", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "correctionBodyContent", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsGenerateNotice", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsBodyContent", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsBodyContent", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "writeStatementOfReasonsGenerateNotice", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "writeStatementOfReasonsGenerateNotice", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "writeStatementOfReasonsBodyContent", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "writeStatementOfReasonsBodyContent", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"}
+
 ]
