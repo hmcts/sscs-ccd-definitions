@@ -11,7 +11,8 @@
     "PageLabel": "Set Hearing Route",
     "ShowSummaryChangeOption": "Y"
   },
-  {    "CaseEventID": "adjournCase",
+  {
+    "CaseEventID": "adjournCase",
     "CaseFieldID": "adjournCaseTypeOfNextHearing",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
