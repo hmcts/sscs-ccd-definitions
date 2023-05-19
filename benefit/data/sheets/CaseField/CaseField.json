@@ -227,6 +227,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseTypeOfNextHearing", "Label": "Confirm the format of the next hearing", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_adjournCaseTypeOfHearing", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCaseNextHearingVenue", "Label": "Where should the next hearing be listed?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_adjournCaseNextHearingVenue", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCasePanelMembersExcluded", "Label": "Are panel members excluded?", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_panelMembersExcluded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/08/2019", "CaseTypeID": "Benefit", "ID": "adjournCaseNextHearingVenueSelected", "Label": "Specify the venue", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingEpimsId", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCasePanelMember1", "Label": "Panel Member 1", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCasePanelMember2", "Label": "Panel Member 2", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "adjournCasePanelMember3", "Label": "Panel Member 3", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"},
