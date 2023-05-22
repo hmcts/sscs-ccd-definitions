@@ -123,20 +123,6 @@
     "PageID": "1.0",
     "PageLabel": "Language Preference Welsh",
     "RetainHiddenValue": "Yes",
-    "Publish": "Y",
-  },
-  {
-    "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "dwpEditedEvidenceReason",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 10,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dwpEditedEvidenceReason=\"DONOTSSHOW\"",
-    "RetainHiddenValue": "Yes",
     "Publish": "Y"
   }
 ]
