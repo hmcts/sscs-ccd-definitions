@@ -54,7 +54,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "dwpUploadResponse",
