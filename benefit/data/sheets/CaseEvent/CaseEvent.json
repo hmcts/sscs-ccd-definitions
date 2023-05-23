@@ -34,7 +34,8 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "ShowSummary": "N",
     "ShowEventNotes": "Y",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "19/11/2019",
@@ -2107,7 +2108,8 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
-    "ShowEventNotes": "Y"
+    "ShowEventNotes": "Y",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2383,7 +2385,8 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/09/2021",
