@@ -1,0 +1,3 @@
+[
+  {"LiveFrom": "22/05/2023", "CaseTypeID": "Benefit", "ID": "workType", "Label": "Work Type", "HintText": "Select a work type e.g. Pre Hearing Work", "FieldType": "FixedList", "FieldTypeParameter": "FL_workType", "SecurityClassification": "PUBLIC"}
+]

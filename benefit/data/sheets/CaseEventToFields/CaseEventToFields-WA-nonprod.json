@@ -1,0 +1,13 @@
+[
+  {
+    "CaseEventID": "tcwReferToJudge",
+    "CaseFieldID": "workType",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "22/05/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 10,
+    "PageID": "1.0",
+    "PageLabel": "Work type"
+  }
+]
