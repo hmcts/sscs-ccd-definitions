@@ -8,6 +8,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 10,
     "PageID": "1.0",
-    "PageLabel": "Work type"
+    "PageLabel": "Work type",
+    "Publish": "Y",
+    "PublishAs": "workType"
   }
 ]
