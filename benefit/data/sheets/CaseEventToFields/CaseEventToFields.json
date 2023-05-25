@@ -492,7 +492,7 @@
   },
   {
     "CaseEventID": "adjournCase",
-    "CaseFieldID": "adjournCaseNextHearingVenueSelected1",
+    "CaseFieldID": "adjournCaseNextHearingVenueSelected",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "adjournCaseNextHearingVenue = \"somewhereElse\"",
