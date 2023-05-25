@@ -29,5 +29,55 @@
     "LiveFrom": "01/02/2023",
     "FieldDisplayOrder": 3,
     "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "adjournCaseNextHearingListingDuration",
+    "ID": "updateListingRequirementsOverrideFieldsAdjournCaseNextHearingListingDuration",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/05/2023",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "adjournCaseNextHearingListingDurationUnits",
+    "ID": "updateListingRequirementsOverrideFieldsAdjournCaseNextHearingListingDurationUnits",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/05/2023",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "adjournCaseInterpreterLanguageList",
+    "ID": "updateListingRequirementsOverrideFieldsAdjournCaseInterpreterLanguageList",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/05/2023",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "hearingRoute",
+    "ID": "updateListingRequirementsOverrideFieldsHearingRoute",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/05/2023",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "overrideFields",
+    "ListElementCode": "hearingState",
+    "ID": "updateListingRequirementsOverrideFieldsHearingState",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/05/2023",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
   }
 ]
