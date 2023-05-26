@@ -2873,7 +2873,8 @@
     "PageID": "1.0",
     "PageLabel": "Select who should review this case",
     "ShowSummaryChangeOption": "Y",
-    "Publish": "Y"
+    "Publish": "Y",
+    "PublishAs": "action"
   },
   {
     "CaseEventID": "validSendToInterloc",
@@ -2934,7 +2935,9 @@
     "PageID": "1.0",
     "FieldShowCondition": "issueCode=\"doNotUse\"",
     "PageLabel": "Hmcts review response",
-    "ShowSummaryChangeOption": "N"
+    "ShowSummaryChangeOption": "N",
+    "Publish": "Y",
+    "PublishAs": "action"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
