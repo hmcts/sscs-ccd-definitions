@@ -32,17 +32,6 @@
   },
   {
     "CaseEventID": "postHearingReview",
-    "CaseFieldID": "correction",
-    "ListElementCode": "generateUploadDocument",
-    "ID": "postHearingReviewCorrectionGenerateUploadDocument",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "correction.action = \"grant\"",
-    "LiveFrom": "05/10/2022",
-    "FieldDisplayOrder": 2,
-    "PageID": "Correction"
-  },
-  {
-    "CaseEventID": "postHearingReview",
     "CaseFieldID": "statementOfReasons",
     "ListElementCode": "action",
     "ID": "postHearingReviewStatementOfReasonsAction",
