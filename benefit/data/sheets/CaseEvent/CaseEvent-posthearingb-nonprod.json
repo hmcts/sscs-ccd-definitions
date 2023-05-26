@@ -8,6 +8,7 @@
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
     "PostConditionState": "postHearing",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
   {
@@ -19,6 +20,7 @@
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
     "PostConditionState": "postHearing",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
   {
