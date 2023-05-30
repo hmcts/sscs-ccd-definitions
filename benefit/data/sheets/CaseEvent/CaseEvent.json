@@ -1854,7 +1854,7 @@
     "Name": "Send to interloc",
     "Description": "Send a case to a judge for review",
     "DisplayOrder": 1450,
-    "PreConditionState(s)": "appealCreated;closed;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;interlocutoryReviewState;incompleteApplicationInformationReqsted;notListable;handlingError",
+    "PreConditionState(s)": "appealCreated;closed;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;interlocutoryReviewState;incompleteApplicationInformationReqsted;notListable;handlingError;postHearing",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
