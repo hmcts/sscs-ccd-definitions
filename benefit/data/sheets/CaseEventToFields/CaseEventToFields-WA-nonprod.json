@@ -11,5 +11,19 @@
     "PageLabel": "Work type",
     "Publish": "Y",
     "PublishAs": "workType"
+  },
+  {
+    "CaseEventID": "createBundle",
+    "CaseFieldID": "panel",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "30/05/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Create Bundle",
+    "FieldShowCondition": "[STATE]=\"DoNotShow\"",
+    "Publish": "Y",
+    "PublishAs": "panel"
   }
 ]
