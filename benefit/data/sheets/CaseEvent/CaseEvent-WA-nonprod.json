@@ -33,5 +33,16 @@
       "PostConditionState": "*",
       "SecurityClassification": "Public",
       "Publish": "Y"
+    },
+    {
+      "LiveFrom": "01/01/2018",
+      "CaseTypeID": "Benefit",
+      "ID": "updateHearingDetailsRequired",
+      "Name": "Update Hearing Details",
+      "DisplayOrder": 9998,
+      "PreConditionState(s)": "*",
+      "PostConditionState": "*",
+      "SecurityClassification": "Public",
+      "Publish": "Y"
     }
 ]
