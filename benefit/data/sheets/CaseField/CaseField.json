@@ -168,7 +168,7 @@
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "decisionType", "Label": "Decision type", "FieldType": "FixedList", "FieldTypeParameter": "FL_decisionTypes", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "selectWhoReviewsCase", "Label": "Select who should review this case", "FieldType": "DynamicList", "FieldTypeParameter": "FL_selectWhoReviewsCase", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "directionType", "Label": "Direction type", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "selectPartiesDirectionsNotice", "Label": "Select parties who are to receive this notice", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "selectPartiesDirectionsNotice", "Label": "Select parties who are to receive this notice", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "directionTypeDl", "Label": "Direction type", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "extensionNextEvent", "Label": "What should happen next?", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "extensionNextEventDl", "Label": "What should happen next?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},

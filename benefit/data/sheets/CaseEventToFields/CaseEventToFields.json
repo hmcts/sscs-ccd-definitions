@@ -2255,14 +2255,13 @@
     "CaseEventID": "directionIssued",
     "CaseFieldID": "selectPartiesDirectionsNotice",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "READONLY",
     "FieldShowCondition": "confidentialityType=\"confidential\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
     "PageID": "1.0",
-    "PageLabel": "Issue direction",
-    "RetainHiddenValue": "Yes"
+    "PageLabel": "Issue direction"
   },
   {
     "CaseEventID": "directionIssued",
