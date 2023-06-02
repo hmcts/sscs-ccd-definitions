@@ -13,6 +13,20 @@
     "PublishAs": "workType"
   },
   {
+    "CaseEventID": "validSendToInterloc",
+    "CaseFieldID": "workType",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "02/06/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "1.0",
+    "PageLabel": "Work type",
+    "FieldShowCondition": "[STATE]=\"DoNotShow\"",
+    "Publish": "Y",
+    "PublishAs": "workType"
+  },
+  {
     "CaseEventID": "createBundle",
     "CaseFieldID": "panel",
     "CaseTypeID": "Benefit",
