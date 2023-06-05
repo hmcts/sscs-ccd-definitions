@@ -108,7 +108,7 @@
     "LiveFrom": "13/10/2022",
     "CaseTypeID": "Benefit",
     "ID": "postHearingAppSorWritten",
-    "Name": "Post hearing application - SOR written",
+    "Name": "Post hearing app - SOR written",
     "Description": "Post hearing application - SOR written",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
