@@ -282,7 +282,7 @@
   },
   {
     "CaseEventID": "sORWrite",
-    "CaseFieldID": "writeStatementOfReasonsGenerateNotice",
+    "CaseFieldID": "generateNotice",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "18/05/2023",
@@ -295,10 +295,10 @@
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateDocument",
     "CaseEventID": "sORWrite",
-    "CaseFieldID": "writeStatementOfReasonsBodyContent",
+    "CaseFieldID": "bodyContent",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "writeStatementOfReasonsGenerateNotice = \"Yes\"",
+    "FieldShowCondition": "generateNotice = \"Yes\"",
     "LiveFrom": "18/05/2023",
     "CaseEventFieldLabel": "Body Content",
     "PageDisplayOrder": 1,
