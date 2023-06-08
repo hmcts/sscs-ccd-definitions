@@ -45,15 +45,15 @@
       "SecurityClassification": "Public",
       "Publish": "Y"
     },
-    {
-      "LiveFrom": "01/01/2018",
-      "CaseTypeID": "Benefit",
-      "ID": "ftaResponseOverdue",
-      "Name": "FTA Response Overdue",
-      "DisplayOrder": 9999,
-      "PreConditionState(s)": "*",
-      "PostConditionState": "*",
-      "SecurityClassification": "Public",
-      "Publish": "Y"
-    }
+      {
+        "LiveFrom": "01/01/2018",
+        "CaseTypeID": "Benefit",
+        "ID": "ftaResponseOverdue",
+        "Name": "FTA Response Overdue",
+        "DisplayOrder": 9999,
+        "PreConditionState(s)": "*",
+        "PostConditionState": "*",
+        "SecurityClassification": "Public",
+        "Publish": "Y"
+      }
 ]
