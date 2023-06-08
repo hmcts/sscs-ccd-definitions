@@ -1834,8 +1834,7 @@
     "PreConditionState(s)": "validAppeal",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public",
-    "Publish": "Y"
+    "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "01/01/2018",
