@@ -1651,7 +1651,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Interloc referral"
+    "PageLabel": "Interloc referral",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "nonCompliantSendToInterloc",
@@ -3005,7 +3006,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 17,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
