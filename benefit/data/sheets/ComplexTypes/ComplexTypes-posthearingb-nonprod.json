@@ -1,0 +1,5 @@
+[
+  {"LiveFrom": "05/10/2022", "ID": "permissionToAppeal", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionPermissionToAppeal", "ElementLabel": "Action Permission to Appeal Application", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "05/10/2022", "ID": "libertyToApply", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionLibertyToApply", "ElementLabel": "Action Liberty to Apply Application", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "09/05/2023", "ID": "libertyToApply", "ListElementCode": "requestFormat", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_requestFormat", "ElementLabel": "Upload or enter details of your post hearing request", "SecurityClassification": "PUBLIC"}
+]

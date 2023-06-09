@@ -1,0 +1,83 @@
+[
+  {
+    "CaseEventID": "postHearingRequest",
+    "CaseFieldID": "libertyToApply",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "09/03/2023",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Liberty_To_Apply",
+    "PageLabel": "Liberty to Apply",
+    "PageShowCondition": "postHearingRequestType=\"libertyToApply\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateDocument",
+    "CaseEventID": "postHearingRequest",
+    "CaseFieldID": "libertyToApplyBodyContent",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "libertyToApply.requestFormat = \"generate\"",
+    "LiveFrom": "09/03/2023",
+    "CaseEventFieldLabel": "Reason for Liberty to Apply",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "Liberty_To_Apply",
+    "PageLabel": "Liberty to Apply",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "libertyToApply",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Liberty_To_Apply",
+    "PageLabel": "Liberty to Apply",
+    "PageShowCondition": "postHearingReviewType=\"libertyToApply\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "libertyToApplyGenerateNotice",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "libertyToApply.action = \"refuse\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "Liberty_To_Apply",
+    "PageLabel": "Liberty to Apply",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateNotice",
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "libertyToApplyBodyContent",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "libertyToApplyGenerateNotice = \"Yes\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "Liberty to Apply",
+    "PageLabel": "Liberty to Apply",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "permissionToAppeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Permission_To_Appeal",
+    "PageLabel": "Permission to Appeal",
+    "PageShowCondition": "postHearingReviewType=\"permissionToAppeal\"",
+    "ShowSummaryChangeOption": "Y"
+  }
+]
