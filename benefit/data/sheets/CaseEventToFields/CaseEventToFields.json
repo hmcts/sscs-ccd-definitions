@@ -1736,6 +1736,20 @@
     "PageLabel": "Sent to FTA state"
   },
   {
+    "CaseEventID": "sendToDwp",
+    "CaseFieldID": "caseManagementCategory",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "[STATE]=\"doNotUse\"",
+    "RetainHiddenValue": "Yes",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Sent to FTA state",
+    "Publish": "Y"
+  },
+  {
     "CaseEventID": "subscriptionUpdated",
     "CaseFieldID": "subscriptions",
     "CaseTypeID": "Benefit",
