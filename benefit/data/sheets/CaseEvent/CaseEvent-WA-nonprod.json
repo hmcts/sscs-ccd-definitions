@@ -11,49 +11,49 @@
     "SecurityClassification": "Public",
     "Publish": "Y"
   },
-    {
-      "LiveFrom": "01/01/2018",
-      "CaseTypeID": "Benefit",
-      "ID": "createBundleAndAllocateCaseRolesRequired",
-      "Name": "Bundle and Case Roles Required",
-      "Description": "Create a bundle in the case",
-      "DisplayOrder": 9996,
-      "PreConditionState(s)": "*",
-      "PostConditionState": "*",
-      "SecurityClassification": "Public",
-      "Publish": "Y"
-    },
-    {
-      "LiveFrom": "01/01/2018",
-      "CaseTypeID": "Benefit",
-      "ID": "reviewOutstandingDraftDecisionRequired",
-      "Name": "Draft Decision Required",
-      "DisplayOrder": 9997,
-      "PreConditionState(s)": "*",
-      "PostConditionState": "*",
-      "SecurityClassification": "Public",
-      "Publish": "Y"
-    },
-    {
-      "LiveFrom": "01/01/2018",
-      "CaseTypeID": "Benefit",
-      "ID": "updateHearingDetailsRequired",
-      "Name": "Update Hearing Details",
-      "DisplayOrder": 9998,
-      "PreConditionState(s)": "*",
-      "PostConditionState": "*",
-      "SecurityClassification": "Public",
-      "Publish": "Y"
-    },
-      {
-        "LiveFrom": "01/01/2018",
-        "CaseTypeID": "Benefit",
-        "ID": "ftaResponseOverdue",
-        "Name": "FTA Response Overdue",
-        "DisplayOrder": 9999,
-        "PreConditionState(s)": "*",
-        "PostConditionState": "*",
-        "SecurityClassification": "Public",
-        "Publish": "Y"
-      }
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "createBundleAndAllocateCaseRolesRequired",
+    "Name": "Bundle and Case Roles Required",
+    "Description": "Create a bundle in the case",
+    "DisplayOrder": 9996,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "reviewOutstandingDraftDecisionRequired",
+    "Name": "Draft Decision Required",
+    "DisplayOrder": 9997,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "updateHearingDetailsRequired",
+    "Name": "Update Hearing Details",
+    "DisplayOrder": 9998,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "ftaResponseOverdue",
+    "Name": "FTA Response Overdue",
+    "DisplayOrder": 9999,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
+  }
 ]
