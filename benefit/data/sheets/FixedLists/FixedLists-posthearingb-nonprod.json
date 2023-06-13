@@ -1,8 +1,22 @@
 [
-  {"LiveFrom": "11/01/2022", "ID": "ScannedDocumentType", "ListElementCode": "libertyToApplyApplication", "ListElement": "Liberty to Apply application"},
+  {"LiveFrom": "05/10/2022", "ID": "FL_postHearingReviewType", "ListElementCode": "libertyToApply", "ListElement": "Liberty to Apply"},
+  {"LiveFrom": "05/10/2022", "ID": "FL_postHearingReviewType", "ListElementCode": "permissionToAppeal", "ListElement": "Permission to Appeal"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_postHearingRequestType", "ListElementCode": "libertyToApply", "ListElement": "Liberty to Apply"},
+  {"LiveFrom": "23/11/2022", "ID": "FL_postHearingRequestType", "ListElementCode": "permissionToAppeal", "ListElement": "Permission to Appeal"},
+  {"LiveFrom": "05/10/2022", "ID": "FL_actionPermissionToAppeal", "ListElementCode": "refuse", "ListElement": "Refuse Permission to Appeal Application"},
+  {"LiveFrom": "05/10/2022", "ID": "FL_actionLibertyToApply", "ListElementCode": "refuse", "ListElement": "Refuse Liberty to Apply Application"},
+  {"LiveFrom": "05/10/2022", "ID": "FL_actionLibertyToApply", "ListElementCode": "grant", "ListElement": "Grant Liberty to Apply Application"},
+  {"LiveFrom": "05/05/2023", "ID": "ScannedDocumentType", "ListElementCode": "libertyToApplyApplication", "ListElement": "Liberty to Apply application"},
   {"LiveFrom": "11/01/2022", "ID": "ScannedDocumentType", "ListElementCode": "permissionToAppealApplication", "ListElement": "Permission to Appeal application"},
-  {"LiveFrom": "11/01/2022", "ID": "documentType", "ListElementCode": "libertyToApplyApplication", "ListElement": "Liberty to Apply application"},
+  {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "libertyToApplyGranted", "ListElement": "Liberty to Apply granted decision notice"},
+  {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "libertyToApplyRefused", "ListElement": "Liberty to Apply refused decision notice"},
+  {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "libertyToApplyApplication", "ListElement": "Liberty to Apply application"},
   {"LiveFrom": "11/01/2022", "ID": "documentType", "ListElementCode": "permissionToAppealApplication", "ListElement": "Permission to Appeal application"},
-  {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "libertyToApplyApplication", "ListElement": "Liberty to Apply application"},
-  {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "permissionToAppealApplication", "ListElement": "Permission to Appeal application"}
+  {"LiveFrom": "05/05/2023", "ID": "documentTypeWelsh", "ListElementCode": "libertyToApplyGranted", "ListElement": "Liberty to Apply granted decision notice"},
+  {"LiveFrom": "05/05/2023", "ID": "documentTypeWelsh", "ListElementCode": "libertyToApplyRefused", "ListElement": "Liberty to Apply refused decision notice"},
+  {"LiveFrom": "05/05/2023", "ID": "documentTypeWelsh", "ListElementCode": "libertyToApplyApplication", "ListElement": "Liberty to Apply application"},
+  {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "permissionToAppealApplication", "ListElement": "Permission to Appeal application"},
+  {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "libertyToApplyGranted", "ListElement": "Liberty to Apply Granted"},
+  {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "libertyToApplyRefused", "ListElement": "Liberty to Apply Refused"},
+  {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "libertyToApplyRequested", "ListElement": "Liberty to Apply requested"}
 ]
