@@ -2727,7 +2727,8 @@
     "PageID": "1.0",
     "PageLabel": "Select who should review this case",
     "ShowSummaryChangeOption": "Y",
-    "Publish": "Y"
+    "Publish": "Y",
+    "PublishAs": "reviewBy"
   },
   {
     "CaseEventID": "validSendToInterloc",
@@ -3007,7 +3008,8 @@
     "PageFieldDisplayOrder": 17,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "Publish": "Y"
+    "Publish": "Y",
+    "PublishAs": "reviewBy"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -3567,7 +3569,9 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "updateNotListableInterlocReview",
     "PageLabel": "Interlocutory review",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "Publish": "Y",
+    "PublishAs": "reviewBy"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
