@@ -2712,7 +2712,9 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Select who should review this case",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "PublishAs": "action",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "validSendToInterloc",
