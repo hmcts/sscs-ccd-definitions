@@ -10,7 +10,7 @@
     "lint": "echo lint",
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
-    "test:functional": "cd e2e-tests && yarn test:previewfunctional",
+    "test:functional": "cd e2e-tests",
     "start": "node index.js",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
