@@ -15,7 +15,7 @@
     "test:local": "yarn build && cross-env NODE_ENV=development protractor ./dist/e2e/features.parallel.conf.js --cucumberOpts.tags=~@wip --cucumberOpts.tags=@nightly-test",
     "test:aat": "yarn build && cross-env NODE_ENV=aat protractor ./dist/e2e/features.parallel.conf.js --cucumberOpts.tags=~@wip --cucumberOpts.tags=@nightly-test",
     "test:fullfunctional": "yarn build && cross-env NODE_ENV=test protractor ./dist/e2e/features.parallel.conf.js --cucumberOpts.tags=~@wip --cucumberOpts.tags=@nightly-test",
-    "test:previewfunctional": "cross-env NODE_ENV=test protractor ./dist/e2e/features.parallel.conf.js --cucumberOpts.tags=~@wip --cucumberOpts.tags=@preview-test-do-not-run",
+    "test:previewfunctional": "cross-env NODE_ENV=test protractor ./dist/e2e/features.parallel.conf.js --cucumberOpts.tags=~@wip --cucumberOpts.tags=@preview-test",
     "test:crossbrowser": "cross-env NODE_ENV=test-crossbrowser protractor ./dist/e2e/features.crossbrowser.conf.js --cucumberOpts.tags=~@wip --cucumberOpts.tags='@crossbrowser' --cucumberOpts.tags=~@OnlyIfSaveAndContinueIsEnabled",
     "test:prod": "yarn build && cross-env NODE_ENV=test protractor ./dist/e2e/features.parallel.conf.js --cucumberOpts.tags=~@wip --cucumberOpts.tags=@nightly-test --cucumberOpts.tags=~@issue-decision --cucumberOpts.tags=~@uc --cucumberOpts.tags=~@reinstatement --cucumberOpts.tags=~@bundle",
     "test:a11y": "cross-env NODE_ENV=test protractor ./dist/e2e/features.a11y.conf.js --cucumberOpts.tags=~@wip --cucumberOpts.tags=@a11y",

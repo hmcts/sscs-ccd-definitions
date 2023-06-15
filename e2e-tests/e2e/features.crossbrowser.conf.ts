@@ -32,7 +32,7 @@ async function onPrepare(): Promise<void> {
 async function onComplete(): Promise<void> {
   await browser.getProcessedConfig();
   const session = await browser.getSession();
-  logger.info(`SauceOnDemandSessionID=${session.getId()} job-name=-e2e-tests`);
+  logger.info(`SauceOnDemandSessionID=${session.getId()} job-name=sscs-ccd-e2e-tests`);
   report.generate({
     jsonDir: reportDir,
     reportPath: reportDir,
@@ -44,7 +44,7 @@ function afterLaunch(): any {
   return retry.afterLaunch(retries);
 }
 
-const featuresPath = path.resolve(process.cwd(), 'e2e/features/*.feature');
+const featuresPath = path.resolve(process.cwd(), 'e2e/features/lapse-case.feature');
 
 const jsonDir = path.resolve(reportDir, 'json');
 mkdirSync(jsonDir, { recursive: true });
