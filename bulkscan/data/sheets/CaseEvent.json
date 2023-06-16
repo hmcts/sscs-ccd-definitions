@@ -7,7 +7,8 @@
     "Description": "Create an exception record",
     "DisplayOrder": 1,
     "PostConditionState": "ScannedRecordReceived",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
