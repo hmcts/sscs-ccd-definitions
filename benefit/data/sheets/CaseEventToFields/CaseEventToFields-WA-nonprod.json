@@ -1,0 +1,16 @@
+[
+  {
+    "CaseEventID": "directionDueToday",
+    "CaseFieldID": "directionTypeDl",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Direction Due Today",
+    "FieldShowCondition": "[STATE]=\"doNotUse\"",
+    "RetainHiddenValue": "Yes",
+    "Publish": "Y"
+  }
+]
