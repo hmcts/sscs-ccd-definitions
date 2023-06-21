@@ -4080,7 +4080,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Action Postponement Request"
+    "PageLabel": "Action Postponement Request",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "actionPostponementRequest",
