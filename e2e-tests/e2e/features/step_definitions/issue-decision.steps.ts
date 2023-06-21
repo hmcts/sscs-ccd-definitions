@@ -119,8 +119,8 @@ When('I test final decision', async function () {
 });
 
 When('I issue a final decision generate decision no', async function () {
-  await anyCcdPage.clickContinue();
   await anyCcdPage.clickSubmit();
+  // await anyCcdPage.clickSubmit();
   expect(await anyCcdPage.contentContains('Decision in favour of appellant')).to.equal(true);
 });
 
