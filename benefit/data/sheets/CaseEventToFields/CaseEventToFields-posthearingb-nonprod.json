@@ -8,7 +8,7 @@
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
     "PageID": "Liberty_To_Apply",
-    "PageLabel": "Liberty_to_Apply",
+    "PageLabel": "Liberty to Apply",
     "PageShowCondition": "postHearingRequestType=\"libertyToApply\"",
     "ShowSummaryChangeOption": "Y"
   },
@@ -63,7 +63,7 @@
     "LiveFrom": "05/10/2022",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 3,
-    "PageID": "Liberty_to_Apply",
+    "PageID": "Liberty_To_Apply",
     "PageLabel": "Liberty to Apply",
     "ShowSummaryChangeOption": "Y"
   },
