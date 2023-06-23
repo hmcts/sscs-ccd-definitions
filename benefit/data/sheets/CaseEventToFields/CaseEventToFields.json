@@ -1649,7 +1649,7 @@
     "PageLabel": "Panel"
   },
   {
-    "CaseEventID": "requestInfoIncompleteApplication",
+    "CaseEventID": "requestForInformation",
     "CaseFieldID": "informationFromAppellant",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -1661,7 +1661,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CaseEventID": "requestInfoIncompleteApplication",
+    "CaseEventID": "requestForInformation",
     "CaseFieldID": "informationFromPartySelected",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -1672,7 +1672,7 @@
     "PageID": "1.0"
   },
   {
-    "CaseEventID": "requestInfoIncompleteApplication",
+    "CaseEventID": "requestForInformation",
     "CaseFieldID": "infoRequests",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -1683,7 +1683,7 @@
     "PageID": "1.0"
   },
   {
-    "CaseEventID": "requestInfoIncompleteApplication",
+    "CaseEventID": "requestForInformation",
     "CaseFieldID": "responseRequired",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -1693,7 +1693,7 @@
     "PageID": "1.0"
   },
   {
-    "CaseEventID": "requestInfoIncompleteApplication",
+    "CaseEventID": "requestForInformation",
     "CaseFieldID": "directionDueDate",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
@@ -2182,13 +2182,187 @@
   },
   {
     "CaseEventID": "directionIssued",
+    "CaseFieldID": "confidentialityType",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "PageLabel": "Issue direction"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "hasRepresentative",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 99,
+    "PageID": "1.0",
+    "FieldShowCondition": "confidentialityType=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "PageLabel": "Issue direction"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "hasOtherPartyRep",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 99,
+    "PageID": "1.0",
+    "FieldShowCondition": "confidentialityType=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "PageLabel": "Issue direction"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "hasOtherPartyAppointee",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 99,
+    "PageID": "1.0",
+    "FieldShowCondition": "confidentialityType=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "PageLabel": "Issue direction"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "hasOtherParties",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 99,
+    "PageID": "1.0",
+    "FieldShowCondition": "confidentialityType=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "PageLabel": "Issue direction"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "hasJointParty",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 99,
+    "PageID": "1.0",
+    "FieldShowCondition": "confidentialityType=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "PageLabel": "Issue direction"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "selectPartiesDirectionsNotice",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "confidentialityType=\"confidential\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "1.0",
+    "PageLabel": "Issue direction"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "sendDirectionNoticeToFTA",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "confidentialityType=\"confidential\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "1.0",
+    "PageLabel": "Issue direction",
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "sendDirectionNoticeToRepresentative",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "confidentialityType=\"confidential\" AND hasRepresentative = \"Yes\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0",
+    "PageLabel": "Issue direction",
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "sendDirectionNoticeToOtherPartyRep",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "confidentialityType=\"confidential\" AND hasOtherPartyRep = \"Yes\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
+    "PageID": "1.0",
+    "PageLabel": "Issue direction",
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "sendDirectionNoticeToOtherPartyAppointee",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "confidentialityType=\"confidential\" AND hasOtherPartyAppointee = \"Yes\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 7,
+    "PageID": "1.0",
+    "PageLabel": "Issue direction",
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "sendDirectionNoticeToOtherParty",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "confidentialityType=\"confidential\" AND hasOtherParties = \"Yes\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 8,
+    "PageID": "1.0",
+    "PageLabel": "Issue direction",
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "sendDirectionNoticeToJointParty",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "confidentialityType=\"confidential\" AND hasJointParty = \"Yes\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 9,
+    "PageID": "1.0",
+    "PageLabel": "Issue direction",
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "sendDirectionNoticeToAppellantOrAppointee",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "confidentialityType=\"confidential\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 10,
+    "PageID": "1.0",
+    "PageLabel": "Issue direction",
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "directionIssued",
     "CaseFieldID": "directionDueDate",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "directionTypeDl!=\"refuseExtension\" AND directionTypeDl!=\"refuseHearingRecordingRequest\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 11,
     "PageID": "1.0",
     "PageLabel": "Issue direction",
     "RetainHiddenValue": "Yes"
@@ -2200,7 +2374,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 12,
     "PageID": "1.0",
     "PageLabel": "Issue direction",
     "ShowSummaryChangeOption": "Y"
@@ -2213,7 +2387,7 @@
     "FieldShowCondition": "bodyContent=\"doNotUse\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
+    "PageFieldDisplayOrder": 13,
     "PageID": "1.0",
     "PageLabel": "Issue direction",
     "RetainHiddenValue": "Yes"
@@ -2226,7 +2400,7 @@
     "FieldShowCondition": "createdInGapsFrom!=\"readyToList\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
+    "PageFieldDisplayOrder": 14,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2238,7 +2412,7 @@
     "FieldShowCondition": "directionTypeDl=\"refuseExtension\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 6,
+    "PageFieldDisplayOrder": 15,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2249,7 +2423,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 7,
+    "PageFieldDisplayOrder": 16,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2261,7 +2435,7 @@
     "FieldShowCondition": "generateNotice=\"No\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 8,
+    "PageFieldDisplayOrder": 17,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2273,7 +2447,7 @@
     "FieldShowCondition": "generateNotice=\"Yes\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 9,
+    "PageFieldDisplayOrder": 18,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2285,7 +2459,7 @@
     "FieldShowCondition": "generateNotice=\"Yes\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 10,
+    "PageFieldDisplayOrder": 19,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2297,7 +2471,7 @@
     "FieldShowCondition": "generateNotice=\"Yes\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 11,
+    "PageFieldDisplayOrder": 20,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2309,7 +2483,7 @@
     "FieldShowCondition": "generateNotice=\"Yes\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 12,
+    "PageFieldDisplayOrder": 21,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2320,7 +2494,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 13,
+    "PageFieldDisplayOrder": 22,
     "PageID": "2.0",
     "PageLabel": "Issue direction",
     "PageShowCondition": "generateNotice=\"Yes\""
@@ -2698,6 +2872,17 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Select who should review this case",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "validSendToInterloc",
+    "CaseFieldID": "interlocReferralReason",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "10/10/2019",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -4288,5 +4473,156 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
     "PageLabel": "Amend Panel Doctor Specialism"
+  },
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "sendToAllParties",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "1.0",
+    "PageLabel": "Issue generic letter",
+    "ShowSummaryChangeOption": "N"
+  },
+
+  {
+    "LiveFrom": "01/01/2018", 
+    "CaseTypeID": "Benefit", 
+    "CaseEventID": "issueGenericLetter", 
+    "CaseFieldID": "hasJointParty", 
+    "PageFieldDisplayOrder": 3, 
+    "DisplayContext": "READONLY", 
+    "PageDisplayOrder": 28, 
+    "PageID": "1.0",
+    "FieldShowCondition": "sendToAllParties=\"DUMMY_VALUE_TO_HIDE_FIELD\"", 
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018", 
+    "CaseTypeID": "Benefit", 
+    "CaseEventID": "issueGenericLetter", 
+    "CaseFieldID": "hasOtherParties", 
+    "PageFieldDisplayOrder": 3, 
+    "DisplayContext": "READONLY", 
+    "PageDisplayOrder": 28, 
+    "PageID": "1.0",
+    "FieldShowCondition": "sendToAllParties=\"DUMMY_VALUE_TO_HIDE_FIELD\"", 
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018", 
+    "CaseTypeID": "Benefit", 
+    "CaseEventID": "issueGenericLetter", 
+    "CaseFieldID": "hasRepresentative", 
+    "PageFieldDisplayOrder": 3, 
+    "DisplayContext": "READONLY", 
+    "PageDisplayOrder": 28, 
+    "PageID": "1.0",
+    "FieldShowCondition": "sendToAllParties=\"DUMMY_VALUE_TO_HIDE_FIELD\"", 
+    "ShowSummaryChangeOption": "N"
+  }, 
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "sendToApellant",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 9,
+    "PageID": "1.0",
+    "PageLabel": "Issue generic letter",
+    "FieldShowCondition": "sendToAllParties = \"No\"",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "sendToRepresentative",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 10,
+    "PageID": "1.0",
+    "PageLabel": "Issue generic letter",
+    "FieldShowCondition": "sendToAllParties = \"No\" AND hasRepresentative = \"Yes\"",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "sendToJointParty",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 11,
+    "PageID": "1.0",
+    "PageLabel": "Issue generic letter",
+    "FieldShowCondition": "sendToAllParties = \"No\" AND hasJointParty = \"Yes\"",
+    "ShowSummaryChangeOption": "N"
+  },
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "sendToOtherParties",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 12,
+    "PageID": "1.0",
+    "PageLabel": "Issue generic letter",
+    "FieldShowCondition": "sendToAllParties = \"No\" AND hasOtherParties = \"Yes\"",
+    "ShowSummaryChangeOption": "N"
+  },
+
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "otherPartySelection",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 13,
+    "PageID": "1.0",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "FieldShowCondition": "sendToAllParties = \"No\" AND sendToOtherParties = \"Yes\"",
+    "PageLabel": " "
+  },
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "addDocuments",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "2.0",
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "documentSelection",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "2.0",
+    "FieldShowCondition": "addDocuments = \"Yes\"",
+    "PageLabel": " ",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "issueGenericLetter",
+    "CaseFieldID": "genericLetterText",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 3,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "3.0",
+    "ShowSummaryChangeOption": "Y"
   }
 ]
