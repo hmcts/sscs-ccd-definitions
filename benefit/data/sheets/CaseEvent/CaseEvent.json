@@ -2520,7 +2520,6 @@
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;notListable;handlingError",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "SecurityClassification": "Public"
