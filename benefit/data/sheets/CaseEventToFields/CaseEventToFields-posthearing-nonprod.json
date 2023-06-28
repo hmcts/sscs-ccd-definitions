@@ -239,16 +239,17 @@
     "FieldShowCondition": "adminCorrectionType = \"hiddenField\""
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=previewDecisionNotice",
     "CaseEventID": "adminActionCorrection",
-    "CaseFieldID": "previewDocument",
+    "CaseFieldID": "writeFinalDecisionPreviewDocument",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "17/04/2023",
     "CaseEventFieldLabel": "Corrected Document",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
-    "PageID": "Corrected_Document_Staging",
-    "PageLabel": "Upload Corrected Document",
+    "PageID": "previewDecisionNotice",
+    "PageLabel": "Preview Decision Notice",
     "PageShowCondition": "adminCorrectionType = \"headerCorrection\"",
     "ShowSummaryChangeOption": "Y"
   },
