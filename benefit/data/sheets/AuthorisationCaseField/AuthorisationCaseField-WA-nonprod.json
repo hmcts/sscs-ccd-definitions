@@ -1,0 +1,7 @@
+[
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "scannedDocumentTypes", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "scannedDocumentTypes", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "scannedDocumentTypes", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "scannedDocumentTypes", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "uploadedWelshDocumentTypes", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
+]
