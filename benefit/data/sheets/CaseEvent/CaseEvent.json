@@ -654,8 +654,6 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public",
-    "Publish": "Y"
     "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
     "Publish": "Y"
@@ -1266,7 +1264,6 @@
     "PostConditionState": "*",
     "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
-    "Publish": "Y",
     "Publish": "Y"
   },
   {
@@ -1987,8 +1984,6 @@
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public",
-    "Publish": "Y"
     "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
     "Publish": "Y"
