@@ -71,6 +71,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sscsStrikeOutDocument", "Label": "Interloc strike out information", "FieldType": "sscsStrikeOutDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sscsInterlocDirectionDocument", "Label": "Interloc Directions", "FieldType": "sscsInterlocDirectionDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tl1Form", "Label": "TL1 form", "FieldType": "tl1FormCT", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "confidentialityType", "Label": " ", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_confidentialityType", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "directionDueDate", "Label": "Due date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reservedToJudge", "Label": "Reserved to (Judge):", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "linkedCase", "Label": "Linked case(s)", "FieldType": "Collection", "FieldTypeParameter": "CaseLink", "SecurityClassification": "PUBLIC"},
@@ -167,6 +168,7 @@
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "decisionType", "Label": "Decision type", "FieldType": "FixedList", "FieldTypeParameter": "FL_decisionTypes", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "selectWhoReviewsCase", "Label": "Select who should review this case", "FieldType": "DynamicList", "FieldTypeParameter": "FL_selectWhoReviewsCase", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "directionType", "Label": "Direction type", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "selectPartiesDirectionsNotice", "Label": "Select parties who are to receive this notice", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "directionTypeDl", "Label": "Direction type", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "extensionNextEvent", "Label": "What should happen next?", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/09/2019", "CaseTypeID": "Benefit", "ID": "extensionNextEventDl", "Label": "What should happen next?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
@@ -448,6 +450,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hasJointParty", "Label": "Joint party toggle", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hasRepresentative", "Label": "Send to all parties", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hasOtherParties", "Label": "Send to all parties", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hasOtherPartyRep", "Label": "Send to all parties", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "hasOtherPartyAppointee", "Label": "Send to all parties", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToAllParties", "Label": "Send to all parties", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToApellant", "Label": "Appellant (or Appointee)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToRepresentative", "Label": "Representative", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -455,5 +459,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendToOtherParties", "Label": "Other parties", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "otherPartySelection", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "otherPartySelection", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "documentSelection", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "documentSelectionList", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "addDocuments", "Label": "Do you want to add any documents?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "addDocuments", "Label": "Do you want to add any documents?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendDirectionNoticeToFTA", "Label": "FTA", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendDirectionNoticeToRepresentative", "Label": "Representative", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendDirectionNoticeToOtherPartyRep", "Label": "Other Party Rep", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendDirectionNoticeToOtherPartyAppointee", "Label": "Other Party Appointee", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendDirectionNoticeToOtherParty", "Label": "Other Party", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendDirectionNoticeToJointParty", "Label": "Joint Party", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendDirectionNoticeToAppellantOrAppointee", "Label": "Appellant or Appointee", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
