@@ -434,7 +434,9 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "Y"
+
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2121,8 +2123,6 @@
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "Publish": "Y"
-=======
     "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
     "Publish": "Y"
