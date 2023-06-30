@@ -2079,20 +2079,6 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CaseEventID": "appealCreated",
-    "CaseFieldID": "dwpDueDate",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "READONLY",
-    "FieldShowCondition": "[STATE]=\"doNotUse\"",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
-    "PageID": "1.0",
-    "PageLabel": "FTA response due date",
-    "RetainHiddenValue": "Yes",
-    "Publish": "Y"
-  },
-  {
     "CaseEventID": "validAppealCreated",
     "CaseFieldID": "appeal",
     "CaseTypeID": "Benefit",
