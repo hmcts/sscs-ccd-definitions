@@ -1,9 +1,7 @@
 # ---- Base image - order important ----
-FROM hmctspublic.azurecr.io/ccd/definition-processor:pr-305-8872ea2 as base
+FROM hmctspublic.azurecr.io/ccd/definition-processor:latest as base
 
 # ----        Runtime image         ----
-FROM hmcts/ccd-definition-importer:latest as runtime
-
 FROM hmctspublic.azurecr.io/ccd/definition-importer:latest as runtime
 # ---- To build non prod version image, pass --build-arg exclude=prod
 ARG exclude=nonprod
