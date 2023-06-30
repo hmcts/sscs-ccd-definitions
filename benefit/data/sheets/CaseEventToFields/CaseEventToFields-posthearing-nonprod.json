@@ -133,32 +133,6 @@
   },
   {
     "CaseEventID": "postHearingReview",
-    "CaseFieldID": "permissionToAppeal",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "COMPLEX",
-    "LiveFrom": "05/10/2022",
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "Permission_To_Appeal",
-    "PageLabel": "Permission to Appeal",
-    "PageShowCondition": "postHearingReviewType=\"permissionToAppeal\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "postHearingReview",
-    "CaseFieldID": "libertyToApply",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "COMPLEX",
-    "LiveFrom": "05/10/2022",
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "Liberty_To_Apply",
-    "PageLabel": "Liberty to Apply",
-    "PageShowCondition": "postHearingReviewType=\"libertyToApply\"",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "postHearingReview",
     "CaseFieldID": "previewDocument",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
