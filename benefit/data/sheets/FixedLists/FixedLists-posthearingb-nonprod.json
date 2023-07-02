@@ -39,7 +39,4 @@
   {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "decisionRemade", "ListElement": "Decision Remade"},
   {"LiveFrom": "01/09/2021", "ID": "FL_actionSendToFirstTier", "ListElementCode": "remade", "ListElement": "Remade"},
   {"LiveFrom": "01/09/2021", "ID": "FL_actionSendToFirstTier", "ListElementCode": "refused", "ListElement": "Refused"}
-  {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "permissionToAppealGranted", "ListElement": "Permission to Appeal Granted"},
-  {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "permissionToAppealRefused", "ListElement": "Permission to Appeal Refused"},
-  {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "permissionToAppealRequested", "ListElement": "Permission to Appeal Requested"}
 ]
