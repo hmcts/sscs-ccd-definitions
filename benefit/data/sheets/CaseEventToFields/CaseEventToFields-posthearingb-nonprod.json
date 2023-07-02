@@ -79,5 +79,32 @@
     "PageLabel": "Permission to Appeal",
     "PageShowCondition": "postHearingReviewType=\"permissionToAppeal\"",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "permissionToAppealGenerateNotice",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "permissionToAppeal.action = \"grant\" OR permissionToAppeal.action = \"refuse\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "Permission_To_Appeal",
+    "PageLabel": "Permission to Appeal",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateNotice",
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "permissionToAppealBodyContent",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "permissionToAppealGenerateNotice = \"Yes\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "Permission_To_Appeal",
+    "PageLabel": "Permission to Appeal",
+    "ShowSummaryChangeOption": "Y"
   }
 ]
