@@ -45,7 +45,7 @@
     "CaseFieldID": "libertyToApplyGenerateNotice",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "libertyToApply.action = \"refuse\"",
+    "FieldShowCondition": "libertyToApply.action = \"grant\" OR libertyToApply.action = \"refuse\"",
     "LiveFrom": "05/10/2022",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
@@ -63,7 +63,7 @@
     "LiveFrom": "05/10/2022",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 3,
-    "PageID": "Liberty to Apply",
+    "PageID": "Liberty_To_Apply",
     "PageLabel": "Liberty to Apply",
     "ShowSummaryChangeOption": "Y"
   },
