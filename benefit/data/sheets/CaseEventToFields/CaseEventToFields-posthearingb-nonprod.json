@@ -68,16 +68,16 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CaseEventID": "postHearingReview",
+    "CaseEventID": "postHearingRequest",
     "CaseFieldID": "permissionToAppeal",
     "CaseTypeID": "Benefit",
     "DisplayContext": "COMPLEX",
-    "LiveFrom": "05/10/2022",
+    "LiveFrom": "04/07/2023",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 1,
     "PageID": "Permission_To_Appeal",
     "PageLabel": "Permission to Appeal",
-    "PageShowCondition": "postHearingReviewType=\"permissionToAppeal\"",
+    "PageShowCondition": "postHearingRequestType=\"permissionToAppeal\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
