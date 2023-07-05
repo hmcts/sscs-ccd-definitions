@@ -955,6 +955,6 @@
   {"LiveFrom": "04/07/2022", "ID": "FL_caseOutcome", "ListElementCode": "63", "ListElement": "Decision Reserved"},
   {"LiveFrom": "04/07/2022", "ID": "FL_caseOutcome", "ListElementCode": "10", "ListElement": "Decision in favour of Appellant"},
   {"LiveFrom": "04/07/2022", "ID": "FL_caseOutcome", "ListElementCode": "39", "ListElement": "% Disablement Increased <80%, No Benefit award"},
-  {"LiveFrom": "04/07/2022", "ID": "FL_confidentialityType", "ListElementCode": "general", "ListElement": "General"},
-  {"LiveFrom": "04/07/2022", "ID": "FL_confidentialityType", "ListElementCode": "confidential", "ListElement": "Confidential"}
+  {"LiveFrom": "04/07/2022", "ID": "FL_confidentialityType", "ListElementCode": "general", "ListElement": "Send to all parties"},
+  {"LiveFrom": "04/07/2022", "ID": "FL_confidentialityType", "ListElementCode": "confidential", "ListElement": "Select specific recipients"}
 ]

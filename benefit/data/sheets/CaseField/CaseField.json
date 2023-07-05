@@ -71,7 +71,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sscsStrikeOutDocument", "Label": "Interloc strike out information", "FieldType": "sscsStrikeOutDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sscsInterlocDirectionDocument", "Label": "Interloc Directions", "FieldType": "sscsInterlocDirectionDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tl1Form", "Label": "TL1 form", "FieldType": "tl1FormCT", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "confidentialityType", "Label": "Confidentiality", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_confidentialityType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "confidentialityType", "Label": " ", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_confidentialityType", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "directionDueDate", "Label": "Due date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reservedToJudge", "Label": "Reserved to (Judge):", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "linkedCase", "Label": "Linked case(s)", "FieldType": "Collection", "FieldTypeParameter": "CaseLink", "SecurityClassification": "PUBLIC"},
