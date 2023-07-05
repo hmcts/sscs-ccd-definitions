@@ -142,7 +142,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "Notice_Staging",
     "PageLabel": "Notice Document",
-    "PageShowCondition": "setAside.action = \"refuse\" OR setAside.action = \"grant\" OR correction.action = \"refuse\" OR postHearingReviewType=\"statementOfReasons\"",
+    "PageShowCondition": "setAside.action = \"refuse\" OR setAside.action = \"grant\" OR correction.action = \"refuse\" OR postHearingReviewType=\"statementOfReasons\" OR postHearingReviewType=\"libertyToApply\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
