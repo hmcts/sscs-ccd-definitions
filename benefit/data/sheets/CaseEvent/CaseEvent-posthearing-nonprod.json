@@ -114,6 +114,7 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "EventEnablingCondition": "hearingRoute=\"listAssist\"",
     "SecurityClassification": "Public"
   },
   {
@@ -173,6 +174,7 @@
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
     "PostConditionState": "postHearing",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
   {
@@ -184,6 +186,7 @@
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
     "PostConditionState": "postHearing",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
   {
@@ -195,28 +198,7 @@
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
     "PostConditionState": "postHearing",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "23/11/2022",
-    "CaseTypeID": "Benefit",
-    "ID": "permissionToAppealRequest",
-    "Name": "Permission to Appeal Request",
-    "Description": "Permission to Appeal Request",
-    "DisplayOrder": 500,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "postHearing",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "23/11/2022",
-    "CaseTypeID": "Benefit",
-    "ID": "libertyToApplyRequest",
-    "Name": "Liberty to Apply Request",
-    "Description": "Liberty to Apply Request",
-    "DisplayOrder": 500,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "postHearing",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   }
 ]
