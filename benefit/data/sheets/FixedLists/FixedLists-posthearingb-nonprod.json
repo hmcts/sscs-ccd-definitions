@@ -5,6 +5,7 @@
   {"LiveFrom": "23/11/2022", "ID": "FL_postHearingRequestType", "ListElementCode": "permissionToAppeal", "ListElement": "Permission to Appeal"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionPermissionToAppeal", "ListElementCode": "grant", "ListElement": "Grant Permission to Appeal Application"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionPermissionToAppeal", "ListElementCode": "refuse", "ListElement": "Refuse Permission to Appeal Application"},
+  {"LiveFrom": "05/10/2022", "ID": "FL_actionPermissionToAppeal", "ListElementCode": "review", "ListElement": "Review and set aside application"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionLibertyToApply", "ListElementCode": "grant", "ListElement": "Grant Liberty to Apply Application"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionLibertyToApply", "ListElementCode": "refuse", "ListElement": "Refuse Liberty to Apply Application"},
   {"LiveFrom": "05/05/2023", "ID": "ScannedDocumentType", "ListElementCode": "libertyToApplyApplication", "ListElement": "Liberty to Apply application"},
