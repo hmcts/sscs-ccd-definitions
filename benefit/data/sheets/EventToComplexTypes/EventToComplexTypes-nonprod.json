@@ -7,7 +7,6 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/02/2023",
     "FieldDisplayOrder": 1,
-    "RetainHiddenValue": "Yes",
     "PageID": "1.0"
   },
   {
@@ -30,7 +29,6 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/02/2023",
     "FieldDisplayOrder": 3,
-    "RetainHiddenValue": "Yes",
     "PageID": "1.0"
   },
   {
