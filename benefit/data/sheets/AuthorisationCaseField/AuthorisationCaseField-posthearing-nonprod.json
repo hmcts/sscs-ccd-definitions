@@ -36,7 +36,7 @@
   {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsGenerateNotice", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsBodyContent", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "writeFinalDecisionLabelCorrection", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "writeFinalDecisionIdamSurname", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionGeneratedDate", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionNoticeGenerated", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionIdamSurname", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionIssuedDate", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionGeneratedDate", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
 ]
