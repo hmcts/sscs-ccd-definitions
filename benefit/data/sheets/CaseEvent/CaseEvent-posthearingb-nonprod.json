@@ -46,5 +46,17 @@
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "07/07/2023",
+    "CaseTypeID": "Benefit",
+    "ID": "decisionRemade",
+    "Name": "Send to First Tier",
+    "Description": "Send to First Tier",
+    "DisplayOrder": 10000,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "dormantAppealState",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public"
   }
 ]

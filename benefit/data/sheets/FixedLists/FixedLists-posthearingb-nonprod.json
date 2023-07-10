@@ -18,5 +18,6 @@
   {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "permissionToAppealApplication", "ListElement": "Permission to Appeal application"},
   {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "libertyToApplyGranted", "ListElement": "Liberty to Apply Granted"},
   {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "libertyToApplyRefused", "ListElement": "Liberty to Apply Refused"},
-  {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "libertyToApplyRequested", "ListElement": "Liberty to Apply requested"}
+  {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "libertyToApplyRequested", "ListElement": "Liberty to Apply requested"},
+  {"LiveFrom": "07/07/2023", "ID": "FL_remade", "ListElementCode": "Remake decision", "ListElement": "Select to Remake decision"}
 ]

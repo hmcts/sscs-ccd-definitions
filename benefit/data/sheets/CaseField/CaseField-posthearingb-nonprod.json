@@ -2,5 +2,6 @@
   {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "permissionToAppeal", "Label": "Permission to Appeal", "FieldType": "permissionToAppeal", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "30/01/2023", "CaseTypeID": "Benefit", "ID": "libertyToApply", "Label": "Liberty to Apply", "FieldType": "libertyToApply", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/05/2023", "CaseTypeID": "Benefit", "ID": "libertyToApplyGenerateNotice", "Label": "Generate notice?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "09/05/2023", "CaseTypeID": "Benefit", "ID": "libertyToApplyBodyContent", "Label": "Body content", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "09/05/2023", "CaseTypeID": "Benefit", "ID": "libertyToApplyBodyContent", "Label": "Body content", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "decisionRemade", "Label": "Remade", "FieldType": "FixedList", "FieldTypeParameter": "FL_remade", "SecurityClassification": "PUBLIC"}
 ]
