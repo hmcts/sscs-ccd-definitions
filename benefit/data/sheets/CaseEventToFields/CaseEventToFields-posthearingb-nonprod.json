@@ -84,21 +84,33 @@
     "LiveFrom": "07/07/2023",
     "CaseTypeID": "Benefit",
     "CaseEventID": "decisionRemade",
+    "CaseFieldID": "remadeList",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "MANDATORY",
+    "PageID": "1.0",
+    "PageDisplayOrder": 1,
+    "CaseEventFieldLabel": "Decision"
+  },
+  {
+    "LiveFrom": "07/07/2023",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "decisionRemade",
     "CaseFieldID": "decisionRemade",
     "PageFieldDisplayOrder": 1,
-    "DisplayContext": "OPTIONAL",
-    "PageID": "1.0",
-    "PageDisplayOrder": 1
+    "DisplayContext": "MANDATORY",
+    "PageID": "2.0",
+    "PageDisplayOrder": 2,
+    "CaseEventFieldLabel": "Decision"
   },
   {
     "CaseEventID": "decisionRemade",
-    "CaseFieldID": "previewDocument",
+    "CaseFieldID": "remadeDocument",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
+    "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
-    "PageID": "1.0",
+    "PageID": "2.0",
     "ShowSummaryChangeOption": "Y"
   }
 
