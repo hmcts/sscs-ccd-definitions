@@ -40,5 +40,48 @@
     "LiveFrom": "01/05/2023",
     "FieldDisplayOrder": 4,
     "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "mockPanelMemberExclusions",
+    "ListElementCode": "mockArePanelMembersExcluded",
+    "ID": "updateListingRequirementsMockArePanelMembersExcluded",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/02/2023",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "mockPanelMemberExclusions",
+    "ListElementCode": "mockExcludedPanelMembers",
+    "ID": "updateListingRequirementsMockExcludedPanelMembers",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/02/2023",
+    "FieldDisplayOrder": 2,
+    "FieldShowCondition": "mockPanelMemberExclusions.mockArePanelMembersExcluded = \"Yes\"",
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "mockPanelMemberExclusions",
+    "ListElementCode": "mockExcludedPanelMembers.idamId",
+    "ID": "updateListingRequirementsMockExcludedPanelMembers",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/02/2023",
+    "FieldDisplayOrder": 2,
+    "FieldShowCondition": "mockPanelMemberExclusions.mockArePanelMembersExcluded = \"Yes\"",
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "mockPanelMemberExclusions",
+    "ListElementCode": "mockExcludedPanelMembers.personalCode",
+    "ID": "updateListingRequirementsMockExcludedPanelMembers",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/02/2023",
+    "FieldDisplayOrder": 2,
+    "FieldShowCondition": "mockPanelMemberExclusions.mockArePanelMembersExcluded = \"Yes\"",
+    "PageID": "1.0"
   }
 ]
