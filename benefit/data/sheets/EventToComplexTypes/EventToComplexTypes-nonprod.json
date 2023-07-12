@@ -23,6 +23,28 @@
   {
     "CaseEventID": "updateListingRequirements",
     "CaseFieldID": "panelMemberExclusions",
+    "ListElementCode": "excludedPanelMembers.idamId",
+    "ID": "updateListingRequirementsExcludedPanelMembers",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "panelMemberExclusions.arePanelMembersExcluded = \"Yes\"",
+    "LiveFrom": "01/02/2023",
+    "FieldDisplayOrder": 2,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "panelMemberExclusions",
+    "ListElementCode": "excludedPanelMembers",
+    "ID": "updateListingRequirementsExcludedPanelMembers.personalCode",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "panelMemberExclusions.arePanelMembersExcluded = \"Yes\"",
+    "LiveFrom": "01/02/2023",
+    "FieldDisplayOrder": 2,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "panelMemberExclusions",
     "ListElementCode": "arePanelMembersReserved",
     "ID": "updateListingRequirementsArePanelMembersReserved",
     "DisplayContext": "OPTIONAL",
