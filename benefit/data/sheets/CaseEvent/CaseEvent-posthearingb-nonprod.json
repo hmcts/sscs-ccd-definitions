@@ -39,7 +39,7 @@
     "LiveFrom": "09/05/2023",
     "CaseTypeID": "Benefit",
     "ID": "setAsideReview",
-    "Name": "Permission to appeal remade",
+    "Name": "Permission to Appeal Remade",
     "Description": "Permission to appeal decision remade",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
