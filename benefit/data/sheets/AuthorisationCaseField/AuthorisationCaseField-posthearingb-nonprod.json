@@ -13,6 +13,8 @@
   {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "libertyToApply", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
   {"LiveFrom": "09/05/2023", "CaseTypeID": "Benefit", "CaseFieldID": "libertyToApplyGenerateNotice", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "09/05/2023", "CaseTypeID": "Benefit", "CaseFieldID": "libertyToApplyBodyContent", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "libertyToApplySignedBy", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "libertyToApplySignedRole", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "09/05/2023", "CaseTypeID": "Benefit", "CaseFieldID": "permissionToAppealGenerateNotice", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "09/05/2023", "CaseTypeID": "Benefit", "CaseFieldID": "permissionToAppealBodyContent", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
 ]
