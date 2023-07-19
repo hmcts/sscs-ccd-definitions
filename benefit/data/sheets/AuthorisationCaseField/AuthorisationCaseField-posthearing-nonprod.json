@@ -33,6 +33,10 @@
   {"LiveFrom": "08/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "issueFinalDecisionDate", "AccessProfile": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "correctionGenerateNotice", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "correctionBodyContent", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "correctionSignedBy", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "correctionSignedRole", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsGenerateNotice", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsBodyContent", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsBodyContent", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsSignedBy", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsSignedRole", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
 ]
