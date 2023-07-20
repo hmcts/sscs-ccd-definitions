@@ -17,5 +17,5 @@
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "libertyToApplyRequest", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "libertyToApplyRequest", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "R"},
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "libertyToApplyRequest", "AccessProfile": "caseworker-sscs-judge", "CRUD": "R"},
-  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "setAsideReview", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "reviewAndSetAside", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
 ]
