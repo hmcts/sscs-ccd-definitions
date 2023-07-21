@@ -361,6 +361,32 @@
   },
   {
     "CaseEventID": "sORWrite",
+    "CaseFieldID": "signedBy",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "generateNotice = \"Yes\"",
+    "LiveFrom": "21/07/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "Write_Statement_Of_Reasons",
+    "PageLabel": "Statement of Reasons",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "sORWrite",
+    "CaseFieldID": "signedRole",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "generateNotice = \"Yes\"",
+    "LiveFrom": "21/07/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "Write_Statement_Of_Reasons",
+    "PageLabel": "Statement of Reasons",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "sORWrite",
     "CaseFieldID": "previewDocument",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
