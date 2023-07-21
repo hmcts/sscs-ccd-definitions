@@ -13,10 +13,7 @@
   {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "libertyToApply", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
   {"LiveFrom": "09/05/2023", "CaseTypeID": "Benefit", "CaseFieldID": "libertyToApplyGenerateNotice", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "09/05/2023", "CaseTypeID": "Benefit", "CaseFieldID": "libertyToApplyBodyContent", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseFieldID": "decisionRemade", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseFieldID": "decisionRemade", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseFieldID": "remadeList", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseFieldID": "remadeList", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
-  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseFieldID": "remadeDocument", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseFieldID": "remadeDocument", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"}
+  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseFieldID": "remadeList", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"}
+
 ]

@@ -58,5 +58,18 @@
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "07/07/2023",
+    "CaseTypeID": "Benefit",
+    "ID": "upperTribunalDecision",
+    "Name": "Upper Tribunal Decision",
+    "Description": "Upper Tribunal Decision",
+    "DisplayOrder": 10050,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "dormantAppealState",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "Y"
   }
 ]
