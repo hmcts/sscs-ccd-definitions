@@ -16,5 +16,7 @@
   {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "libertyToApplySignedBy", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "libertyToApplySignedRole", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "09/05/2023", "CaseTypeID": "Benefit", "CaseFieldID": "permissionToAppealGenerateNotice", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "09/05/2023", "CaseTypeID": "Benefit", "CaseFieldID": "permissionToAppealBodyContent", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "09/05/2023", "CaseTypeID": "Benefit", "CaseFieldID": "permissionToAppealBodyContent", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "permissionToAppealSignedBy", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "permissionToAppealSignedRole", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
 ]
