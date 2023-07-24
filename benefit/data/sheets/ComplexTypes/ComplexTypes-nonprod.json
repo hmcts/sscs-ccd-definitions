@@ -7,9 +7,5 @@
   {"LiveFrom": "01/05/2023", "ID": "overrideFields", "ListElementCode": "adjournCaseNextHearingListingDurationUnits", "FieldType": "FixedList", "FieldTypeParameter": "FL_adjournCaseNextHearingDurationUnits", "ElementLabel": "Minutes or sessions", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/05/2023", "ID": "overrideFields", "ListElementCode": "adjournCaseInterpreterLanguageList", "FieldType": "DynamicList", "ElementLabel": "What language do they need to speak?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/05/2023", "ID": "overrideFields", "ListElementCode": "hearingRoute", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_hearingRoute",  "ElementLabel": "Hearing Route", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/05/2023", "ID": "overrideFields", "ListElementCode": "hearingState", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingState", "ElementLabel": "Hearing State", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/02/2023", "ID": "mockJudicialUser", "ListElementCode": "idamId", "FieldType": "Text", "ElementLabel": "Mock IdamID", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/02/2023", "ID": "mockJudicialUser", "ListElementCode": "personalCode", "FieldType": "Text", "ElementLabel": "Mock Personal Code", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/02/2023", "ID": "mockPanelMemberExclusions", "ListElementCode": "mockArePanelMembersExcluded", "FieldType": "YesOrNo", "ElementLabel": "Mock Are Panel Members Excluded?", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/02/2023", "ID": "mockPanelMemberExclusions", "ListElementCode": "mockExcludedPanelMembers", "FieldType": "Collection", "FieldTypeParameter": "mockJudicialUser", "ElementLabel": "Mock Excluded Panel Member", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/05/2023", "ID": "overrideFields", "ListElementCode": "hearingState", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingState", "ElementLabel": "Hearing State", "SecurityClassification": "PUBLIC"}
 ]

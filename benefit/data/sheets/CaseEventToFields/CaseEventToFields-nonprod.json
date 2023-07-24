@@ -21,16 +21,5 @@
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "LiveFrom": "06/10/2022",
-    "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "mockPanelMemberExclusions",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "COMPLEX",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 5,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
   }
 ]
