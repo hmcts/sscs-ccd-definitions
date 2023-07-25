@@ -131,7 +131,7 @@ docker run \
   -e "CCD_DEF_MYA_APPOINTEE_LINK=${MYA_APPOINTEE_LINK}" \
   -e "CCD_DEF_ENV=${CCD_ENV}" \
   -e "CCD_DEF_VERSION=${VERSION}" \
-  -e "USER_ROLES=citizen, caseworker-sscs, caseworker-sscs-systemupdate, caseworker-sscs-anonymouscitizen, caseworker-sscs-callagent, caseworker-sscs-judge, caseworker-sscs-clerk, caseworker-sscs-dwpresponsewriter, caseworker-sscs-registrar, caseworker-sscs-superuser, caseworker-sscs-teamleader, caseworker-sscs-panelmember, caseworker-sscs-bulkscan, caseworker-sscs-pcqextractor" \
+  -e "USER_ROLES=citizen, caseworker-sscs, caseworker-sscs-systemupdate, caseworker-sscs-anonymouscitizen, caseworker-sscs-callagent, caseworker-sscs-judge, caseworker-sscs-judge-salaried, caseworker-sscs-clerk, caseworker-sscs-dwpresponsewriter, caseworker-sscs-registrar, caseworker-sscs-superuser, caseworker-sscs-teamleader, caseworker-sscs-panelmember, caseworker-sscs-bulkscan, caseworker-sscs-pcqextractor" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:${VERSION}
 
 echo Finished
