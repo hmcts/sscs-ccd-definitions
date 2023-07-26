@@ -1,3 +1,4 @@
+// @ts-ignore
 import { browser, by, element } from 'protractor';
 import { AnyPage } from './any.page';
 import { AnyCcdFormPage } from './any-ccd-form.page';
@@ -5,6 +6,7 @@ import { generateNINumber } from '../helpers/ni-generator';
 import { expect } from 'chai';
 import { Logger } from '@hmcts/nodejs-logging';
 
+// @ts-ignore
 import * as remote from 'selenium-webdriver/remote';
 
 const logger = Logger.getLogger('dwpresponse.page.ts');
