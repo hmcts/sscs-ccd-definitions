@@ -50,12 +50,12 @@
   {
     "LiveFrom": "07/07/2023",
     "CaseTypeID": "Benefit",
-    "ID": "decisionRemade",
+    "ID": "sendToFirstTier",
     "Name": "Send to First Tier",
     "Description": "Send to First Tier",
     "DisplayOrder": 10000,
     "PreConditionState(s)": "withUT",
-    "PostConditionState": "dormantAppealState",
+    "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
     "SecurityClassification": "Public"

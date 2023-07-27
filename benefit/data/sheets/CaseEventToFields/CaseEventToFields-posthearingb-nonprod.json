@@ -83,25 +83,25 @@
   {
     "LiveFrom": "07/07/2023",
     "CaseTypeID": "Benefit",
-    "CaseEventID": "decisionRemade",
-    "CaseFieldID": "remadeList",
+    "CaseEventID": "sendToFirstTier",
+    "CaseFieldID": "sendToFirstTier",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "MANDATORY",
-    "PageID": "1.0",
-    "PageDisplayOrder": 1,
-    "CaseEventFieldLabel": "Decision"
+    "PageID": "Send_To_First_Tier",
+    "PageLabel": "Send to First Tier",
+    "PageDisplayOrder": 1
   },
   {
-    "CaseEventID": "decisionRemade",
+    "CaseEventID": "sendToFirstTier",
     "CaseFieldID": "previewDocument",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "remadeList = \"Remade\""
+    "PageID": "Send_To_First_Tier",
+    "PageLabel": "Send to First Tier",
+    "CaseEventFieldLabel": "Upload file below:",
+    "ShowSummaryChangeOption": "Y"
   }
-
 ]
