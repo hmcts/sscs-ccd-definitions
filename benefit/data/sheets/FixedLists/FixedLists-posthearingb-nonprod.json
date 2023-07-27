@@ -21,6 +21,6 @@
   {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "libertyToApplyRequested", "ListElement": "Liberty to Apply requested"},
   {"LiveFrom": "01/09/2021", "ID": "FL_actionSendToFirstTier", "ListElementCode": "remade", "ListElement": "Remade"},
   {"LiveFrom": "01/09/2021", "ID": "FL_actionSendToFirstTier", "ListElementCode": "refused", "ListElement": "Refused"},
-  {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "upperTribunalsDecisionRemade", "ListElement": "Upper Tribunals decision remade"},
-  {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "upperTribunalsDecisionRefused", "ListElement": "Upper Tribunals decision refused"}
+  {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "upperTribunalsDecisionRemade", "ListElement": "Upper Tribunals Decision Remade"},
+  {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "upperTribunalsDecisionRefused", "ListElement": "Upper Tribunals Decision Refused"}
 ]
