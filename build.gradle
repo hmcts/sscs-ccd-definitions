@@ -39,7 +39,7 @@ pmd {
 // region test coverage
 
 jacoco {
-    toolVersion = "0.8.8"
+    toolVersion = "0.8.10"
 }
 
 jacocoTestReport {
@@ -73,16 +73,16 @@ dependencies {
     testImplementation group: 'org.junit.vintage', name: 'junit-vintage-engine'
 
 
-    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.23.1'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.24.2'
 
-    testImplementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.14.1'
-    testImplementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jdk8', version: '2.14.1'
-    testImplementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+    testImplementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.14.3'
+    testImplementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jdk8', version: '2.14.3'
+    testImplementation group: 'commons-io', name: 'commons-io', version: '2.13.0'
     testImplementation group: 'com.github.hmcts', name: 'befta-fw', version: '8.7.11', {
         exclude group: 'junit', module: 'junit'
     }
 
     testRuntimeOnly group: 'org.glassfish', name: 'jakarta.el', version: '4.0.2'
-    testImplementation group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
-    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    testImplementation group: 'org.projectlombok', name: 'lombok', version: '1.18.28'
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.28'
 }
