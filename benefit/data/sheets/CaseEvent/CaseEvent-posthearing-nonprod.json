@@ -95,7 +95,7 @@
     "ID": "sORWrite",
     "Name": "Write SOR",
     "Description": "Write SOR",
-    "DisplayOrder": 500,
+    "DisplayOrder": 1855,
     "PreConditionState(s)": "postHearing;dormantAppealState",
     "PostConditionState": "dormantAppealState",
     "EventEnablingCondition": "hearingRoute=\"listAssist\"",
