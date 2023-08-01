@@ -260,10 +260,11 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "18/05/2023",
+    "CaseEventFieldLabel": "Generate statement of reasons?",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
     "PageID": "Write_Statement_Of_Reasons",
-    "PageLabel": "Statement of Reasons",
+    "PageLabel": "Write Statement of Reasons",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -278,7 +279,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
     "PageID": "Write_Statement_Of_Reasons",
-    "PageLabel": "Statement of Reasons",
+    "PageLabel": "Write Statement of Reasons",
     "ShowSummaryChangeOption": "Y"
   },
   {
