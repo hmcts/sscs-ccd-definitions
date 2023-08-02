@@ -53,7 +53,7 @@
     "ID": "getFirstTierDocuments",
     "Name": "Get first tier documents",
     "Description": "Get first tier documents",
-    "DisplayOrder": 500,
+    "DisplayOrder": 835,
     "PreConditionState(s)": "dormantAppealState;postHearing",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
