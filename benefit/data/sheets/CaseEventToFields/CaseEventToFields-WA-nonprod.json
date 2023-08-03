@@ -82,5 +82,18 @@
     "PageLabel": "Language Preference Welsh",
     "RetainHiddenValue": "Yes",
     "Publish": "Y"
+  },
+  {
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "daysToHearing",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "[STATE]=\"doNotUse\"",
+    "LiveFrom": "01/09/2021",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 9,
+    "PageID": "1.0",
+    "PageLabel": "Action Postponement Request",
+    "Publish": "Y"
   }
 ]
