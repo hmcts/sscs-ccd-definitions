@@ -38,5 +38,6 @@
   {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "writeFinalDecisionLabelCorrection", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionIdamSurname", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionIssuedDate", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionGeneratedDate", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionGeneratedDate", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionHeldBefore", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
 ]
