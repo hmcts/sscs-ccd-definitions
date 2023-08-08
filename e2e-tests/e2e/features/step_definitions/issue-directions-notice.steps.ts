@@ -15,6 +15,7 @@ When('I allow the appeal to proceed', async function () {
   await anyCcdPage.clickContinue();
   await anyCcdPage.waitForElement(by.xpath('//span[contains(text(),"Preview Document")]'));
   await anyCcdPage.clickSubmit();
+  await anyCcdPage.waitForElement(by.xpath('//span[contains(text(),"Check your answers")]'));
   await anyCcdPage.clickSubmit();
 });
 
