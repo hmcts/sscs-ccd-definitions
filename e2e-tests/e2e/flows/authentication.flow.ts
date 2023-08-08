@@ -4,6 +4,8 @@ import config from 'config';
 import { Logger } from '@hmcts/nodejs-logging';
 
 const logger = Logger.getLogger('authentication.flow');
+
+const ccdGatewayUrl: string = config.get('ccd.gatewayUrl');
 const ccdWebUrl: string = config.get('ccd.webUrl');
 
 export class AuthenticationFlow {
@@ -15,6 +17,7 @@ export class AuthenticationFlow {
     logger.info(`Signed out of user ${this.userName}`);
     await browser.waitForAngularEnabled(false);
     await browser.driver.manage().deleteAllCookies();
+        await browser.get(`${ccdGatewayUrl}/logout`);
     console.log(`We url to load on the browser is   ########################### ${ccdWebUrl}`);
     await browser.get(`${ccdWebUrl}/`);
     await this.idamSignInPage.waitUntilLoaded();
