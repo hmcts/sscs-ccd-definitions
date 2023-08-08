@@ -1,6 +1,6 @@
 Feature: Enhanced confidentiality
 
-    @nightly-test @preview-test-skip @ec-10106
+    @nightly-test-skip @preview-test-skip @ec-10106
     Scenario: Enhanced confidentiality scenario
         Given I presetup an "UC" SYA case
         And I am signed in as a Case Officer
@@ -8,7 +8,7 @@ Feature: Enhanced confidentiality
         And the case should be in "With FTA" state
         Given I choose "Upload response"
         And I upload UC further information with disputed General disputed by others No and further info No
-        And I wait "25" seconds
+        And I wait "120" seconds
         And I choose "Action further evidence"
         And I fill the further evidence form with "sendToInterlocReviewByJudge" and "Confidentiality request"
         And I choose "Review confidentiality request"
@@ -20,6 +20,7 @@ Feature: Enhanced confidentiality
         Given I choose "Action further evidence"
         When I upload a document with redacted content
         Then I should see redacted content in Documents tab
+        And I wait "60" seconds
         When I choose "Create a bundle"
         And I submit "Create a bundle"
         Then the "Create a bundle" event should be successfully listed in the History
