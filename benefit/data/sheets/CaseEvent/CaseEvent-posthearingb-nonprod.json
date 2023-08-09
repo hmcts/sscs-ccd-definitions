@@ -97,5 +97,33 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public",
     "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "15/06/2023",
+    "CaseTypeID": "Benefit",
+    "ID": "getFirstTierDocuments",
+    "Name": "Get first tier documents",
+    "Description": "Get first tier documents",
+    "DisplayOrder": 835,
+    "PreConditionState(s)": "dormantAppealState;postHearing",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "19/06/2023",
+    "CaseTypeID": "Benefit",
+    "ID": "bundleCreatedForUpperTribunal",
+    "Name": "Bundle created for UT",
+    "Description": "Bundle created for Upper Tribunal",
+    "DisplayOrder": 500,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "withUpperTribunal",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public"
   }
 ]
