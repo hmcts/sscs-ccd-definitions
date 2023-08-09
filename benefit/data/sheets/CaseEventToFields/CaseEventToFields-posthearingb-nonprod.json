@@ -134,5 +134,16 @@
     "PageID": "Permission_To_Appeal",
     "PageLabel": "Permission to Appeal",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "LiveFrom": "07/07/2023",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "sendToFirstTier",
+    "CaseFieldID": "sendToFirstTier",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "MANDATORY",
+    "PageID": "Send_To_First_Tier",
+    "PageLabel": "Send to First Tier",
+    "PageDisplayOrder": 1
   }
 ]

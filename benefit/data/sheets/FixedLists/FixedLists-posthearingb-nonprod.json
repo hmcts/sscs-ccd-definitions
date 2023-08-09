@@ -15,6 +15,8 @@
   {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "permissionToAppealGranted", "ListElement": "Permission to Appeal granted decision notice"},
   {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "permissionToAppealRefused", "ListElement": "Permission to Appeal refused decision notice"},
   {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "permissionToAppealApplication", "ListElement": "Permission to Appeal application"},
+  {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "upperTribunalsDecisionRemade", "ListElement": "Upper Tribunals Decision Remade Notice"},
+  {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "upperTribunalsDecisionRefused", "ListElement": "Upper Tribunals Decision Refused Notice"},
   {"LiveFrom": "05/05/2023", "ID": "documentTypeWelsh", "ListElementCode": "libertyToApplyGranted", "ListElement": "Liberty to Apply granted decision notice"},
   {"LiveFrom": "05/05/2023", "ID": "documentTypeWelsh", "ListElementCode": "libertyToApplyRefused", "ListElement": "Liberty to Apply refused decision notice"},
   {"LiveFrom": "05/05/2023", "ID": "documentTypeWelsh", "ListElementCode": "libertyToApplyApplication", "ListElement": "Liberty to Apply application"},
@@ -26,5 +28,7 @@
   {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "libertyToApplyRequested", "ListElement": "Liberty to Apply requested"},
   {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "permissionToAppealGranted", "ListElement": "Permission to Appeal Granted"},
   {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "permissionToAppealRefused", "ListElement": "Permission to Appeal Refused"},
-  {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "permissionToAppealRequested", "ListElement": "Permission to Appeal requested"}
+  {"LiveFrom": "05/05/2023", "ID": "FL_dwpStates", "ListElementCode": "permissionToAppealRequested", "ListElement": "Permission to Appeal requested"},
+  {"LiveFrom": "01/09/2021", "ID": "FL_actionSendToFirstTier", "ListElementCode": "remade", "ListElement": "Remade"},
+  {"LiveFrom": "01/09/2021", "ID": "FL_actionSendToFirstTier", "ListElementCode": "refused", "ListElement": "Refused"}
 ]
