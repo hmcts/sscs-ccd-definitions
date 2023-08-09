@@ -10,6 +10,16 @@
     "PageID": "Permission_To_Appeal"
   },
   {
+    "CaseEventID": "postHearingRequest",
+    "CaseFieldID": "permissionToAppeal",
+    "ListElementCode": "requestFormat",
+    "ID": "postHearingRequestPermissionToAppealRequestFormat",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "08/03/2023",
+    "FieldDisplayOrder": 1,
+    "PageID": "Permission_To_Appeal"
+  },
+  {
     "CaseEventID": "postHearingReview",
     "CaseFieldID": "libertyToApply",
     "ListElementCode": "action",
