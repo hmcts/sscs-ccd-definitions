@@ -68,6 +68,34 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CaseEventID": "postHearingRequest",
+    "CaseFieldID": "permissionToAppeal",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "04/07/2023",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Permission_To_Appeal",
+    "PageLabel": "Permission to Appeal",
+    "PageShowCondition": "postHearingRequestType=\"permissionToAppeal\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateDocument",
+    "CaseEventID": "postHearingRequest",
+    "CaseFieldID": "permissionToAppealBodyContent",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "permissionToAppeal.requestFormat = \"generate\"",
+    "LiveFrom": "09/03/2023",
+    "CaseEventFieldLabel": "Reason for Permission to Appeal",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "Permission_To_Appeal",
+    "PageLabel": "Permission to Appeal",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CaseEventID": "postHearingReview",
     "CaseFieldID": "libertyToApplySignedBy",
     "CaseTypeID": "Benefit",
@@ -158,5 +186,15 @@
     "PageID": "Permission_To_Appeal",
     "PageLabel": "Permission to Appeal",
     "ShowSummaryChangeOption": "Y"
+  },
+    "LiveFrom": "07/07/2023",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "sendToFirstTier",
+    "CaseFieldID": "sendToFirstTier",
+    "PageFieldDisplayOrder": 1,
+    "DisplayContext": "MANDATORY",
+    "PageID": "Send_To_First_Tier",
+    "PageLabel": "Send to First Tier",
+    "PageDisplayOrder": 1
   }
 ]
