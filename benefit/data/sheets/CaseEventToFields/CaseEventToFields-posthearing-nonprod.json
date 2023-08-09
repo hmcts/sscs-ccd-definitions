@@ -142,7 +142,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "Notice_Staging",
     "PageLabel": "Notice Document",
-    "PageShowCondition": "setAside.action = \"refuse\" OR setAside.action = \"grant\" OR correction.action = \"refuse\" OR postHearingReviewType=\"statementOfReasons\"",
+    "PageShowCondition": "setAside.action = \"refuse\" OR setAside.action = \"grant\" OR correction.action = \"refuse\" OR postHearingReviewType=\"statementOfReasons\" OR postHearingReviewType=\"libertyToApply\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -252,6 +252,47 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "Request_Staging",
     "PageLabel": "Request Document",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "sORWrite",
+    "CaseFieldID": "generateNotice",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "18/05/2023",
+    "CaseEventFieldLabel": "Generate statement of reasons?",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "Write_Statement_Of_Reasons",
+    "PageLabel": "Write Statement of Reasons",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateDocument",
+    "CaseEventID": "sORWrite",
+    "CaseFieldID": "bodyContent",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "generateNotice = \"Yes\"",
+    "LiveFrom": "18/05/2023",
+    "CaseEventFieldLabel": "Body Content",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "Write_Statement_Of_Reasons",
+    "PageLabel": "Write Statement of Reasons",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "sORWrite",
+    "CaseFieldID": "previewDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "18/05/2023",
+    "CaseEventFieldLabel": "SOR Document",
+    "PageDisplayOrder": 30,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "SOR_Staging",
+    "PageLabel": "SOR Document",
     "ShowSummaryChangeOption": "Y"
   }
 ]
