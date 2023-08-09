@@ -46,5 +46,32 @@
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "07/07/2023",
+    "CaseTypeID": "Benefit",
+    "ID": "sendToFirstTier",
+    "Name": "Send to First Tier",
+    "Description": "Send to First Tier",
+    "DisplayOrder": 1415,
+    "PreConditionState(s)": "withUT",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "07/07/2023",
+    "CaseTypeID": "Benefit",
+    "ID": "upperTribunalDecision",
+    "Name": "Upper Tribunal Decision",
+    "Description": "Upper Tribunal Decision",
+    "DisplayOrder": 500,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "dormantAppealState",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "Y"
   }
 ]
