@@ -1,0 +1,9 @@
+[
+  {"LiveFrom": "20/06/2023", "CaseTypeID": "Benefit", "CaseStateID": "withUpperTribunal", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "20/06/2023", "CaseTypeID": "Benefit", "CaseStateID": "withUpperTribunal", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "20/06/2023", "CaseTypeID": "Benefit", "CaseStateID": "withUpperTribunal", "AccessProfile": "citizen", "CRUD": "R"},
+  {"LiveFrom": "20/06/2023", "CaseTypeID": "Benefit", "CaseStateID": "withUpperTribunal", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "20/06/2023", "CaseTypeID": "Benefit", "CaseStateID": "withUpperTribunal", "AccessProfile": "caseworker-sscs-judge", "CRUD": "RU"},
+  {"LiveFrom": "20/06/2023", "CaseTypeID": "Benefit", "CaseStateID": "withUpperTribunal", "AccessProfile": "caseworker-sscs-registrar", "CRUD": "RU"},
+  {"LiveFrom": "20/06/2023", "CaseTypeID": "Benefit", "CaseStateID": "withUpperTribunal", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "RU"}
+]
