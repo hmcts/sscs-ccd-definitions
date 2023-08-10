@@ -14,7 +14,7 @@ When('I allow the appeal to proceed', async function () {
   await anyCcdPage.fillValues('signedRole', 'This is a test signed role content');
   await anyCcdPage.clickSubmit();
   await anyCcdPage.waitForElement(by.xpath('//span[contains(text(),"Preview Document")]'));
-  await anyCcdPage.clickContinue();
+  await anyCcdPage.clickSubmit();
   await anyCcdPage.clickSubmit();
 });
 
