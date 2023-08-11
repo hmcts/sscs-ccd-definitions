@@ -146,6 +146,7 @@
     "PageLabel": "Reserve to interloc - Judge",
     "ShowSummaryChangeOption": "Y"
   },
+  {
     "CaseEventID": "postHearingReview",
     "CaseFieldID": "permissionToAppealGenerateNotice",
     "CaseTypeID": "Benefit",
