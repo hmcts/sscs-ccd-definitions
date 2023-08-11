@@ -80,7 +80,9 @@
     "DisplayOrder": 1281,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "SecurityClassification": "Public"
   },
+  {
     "LiveFrom": "07/07/2023",
     "CaseTypeID": "Benefit",
     "ID": "sendToFirstTier",
