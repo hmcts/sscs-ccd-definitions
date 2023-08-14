@@ -1,3 +1,3 @@
 [
-  {"LiveFrom": "20/06/2022", "CaseTypeID": "Benefit", "ID": "withUpperTribunal", "Name": "With Upper Tribunal", "Description": "With Upper Tribunal", "DisplayOrder": 18, "TitleDisplay": "# ${[CASE_REFERENCE]}: ${appeal.appellant.name.lastName}"}
+  {"LiveFrom": "20/06/2022", "CaseTypeID": "Benefit", "ID": "withUT", "Name": "With Upper Tribunal", "Description": "With Upper Tribunal", "DisplayOrder": 18, "TitleDisplay": "# ${[CASE_REFERENCE]}: ${appeal.appellant.name.lastName}"}
 ]
