@@ -95,5 +95,18 @@
     "PageID": "1.0",
     "PageLabel": "Action Postponement Request",
     "Publish": "Y"
+  },
+  {
+    "CaseEventID": "sORRequest",
+    "CaseFieldID": "sscsHearingRecordings",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "16/08/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "SOR Request",
+    "FieldShowCondition": "[STATE]=\"DoNotUse\"",
+    "Publish": "Y"
   }
 ]
