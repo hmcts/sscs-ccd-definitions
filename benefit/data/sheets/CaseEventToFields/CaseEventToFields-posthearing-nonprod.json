@@ -29,7 +29,7 @@
     "CaseFieldID": "generateNotice",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "setAside.action = \"refuse\" OR setAside.action = \"grant\"",
+    "FieldShowCondition": "setAside.action = \"grant\" OR setAside.action = \"refuse\"",
     "LiveFrom": "05/10/2022",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
