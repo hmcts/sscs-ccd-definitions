@@ -19,6 +19,7 @@
   {"LiveFrom": "11/01/2022", "ID": "ScannedDocumentType", "ListElementCode": "statementOfReasonsApplication", "ListElement": "SOR application"},
   {"LiveFrom": "11/01/2022", "ID": "documentType", "ListElementCode": "setAsideApplication", "ListElement": "Set aside application"},
   {"LiveFrom": "11/01/2022", "ID": "documentType", "ListElementCode": "correctionApplication", "ListElement": "Correction application"},
+  {"LiveFrom": "11/01/2022", "ID": "documentType", "ListElementCode": "setAsideGranted", "ListElement": "Set aside granted decision notice"},
   {"LiveFrom": "11/01/2022", "ID": "documentType", "ListElementCode": "setAsideRefused", "ListElement": "Set aside refused decision notice"},
   {"LiveFrom": "11/01/2022", "ID": "documentType", "ListElementCode": "correctionRefused", "ListElement": "Correction refused decision notice"},
   {"LiveFrom": "11/01/2022", "ID": "documentType", "ListElementCode": "statementOfReasonsGranted", "ListElement": "SOR granted decision notice"},
@@ -27,6 +28,7 @@
   {"LiveFrom": "11/01/2022", "ID": "documentType", "ListElementCode": "statementOfReasons", "ListElement": "Statement of Reasons"},
   {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "setAsideApplication", "ListElement": "Set aside application"},
   {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "correctionApplication", "ListElement": "Correction application"},
+  {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "setAsideGranted", "ListElement": "Set aside granted decision notice"},
   {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "setAsideRefused", "ListElement": "Set aside refused decision notice"},
   {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "correctionRefused", "ListElement": "Correction refused decision notice"},
   {"LiveFrom": "11/01/2022", "ID": "documentTypeWelsh", "ListElementCode": "statementOfReasonsGranted", "ListElement": "SOR granted decision notice"},
@@ -38,6 +40,9 @@
   {"LiveFrom": "11/01/2022", "ID": "FL_dwpStates", "ListElementCode": "correctionRefused", "ListElement": "Correction Refused"},
   {"LiveFrom": "11/01/2022", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsGranted", "ListElement": "SOR Granted"},
   {"LiveFrom": "11/01/2022", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsRefused", "ListElement": "SOR Refused"},
-  {"LiveFrom": "13/03/2023", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsRequested", "ListElement": "SOR Requested"},
-  {"LiveFrom": "13/03/2023", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsIssued", "ListElement": "SOR Issued"}
+  {"LiveFrom": "13/03/2023", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsRequested", "ListElement": "SOR requested"},
+  {"LiveFrom": "13/03/2023", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsIssued", "ListElement": "SOR Issued"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "reviewSetAsideApplication", "ListElement": "Review set aside application"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "reviewCorrectionApplication", "ListElement": "Review correction application"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "reviewStatementOfReasonsApplication", "ListElement": "Review statement of reasons application"}
 ]
