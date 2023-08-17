@@ -36,7 +36,7 @@
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-dwpresponsewriter", "CaseFieldID": "workBasketHearingEpimsId", "Label": "Hearing Venue", "DisplayOrder": 21},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-judge", "CaseFieldID": "interlocReviewState", "Label": "Review state", "DisplayOrder": 1},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-judge", "CaseFieldID": "urgentCase", "Label": "Is case urgent?", "DisplayOrder": 2},
-  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-judge", "CaseFieldID": "reservedToJudgeInterloc", "Label": "Reserved to", "DisplayOrder": 3},
+  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-judge", "CaseFieldID": "reservedToJudgeInterloc", "Label": "Reserved to (Interloc)", "DisplayOrder": 3},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-judge", "CaseFieldID": "region", "Label": "Regional centre", "DisplayOrder": 4},
   {"LiveFrom": "11/11/2021", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-judge", "CaseFieldID": "benefitCode", "Label": "Benefit code", "DisplayOrder": 5},
   {"LiveFrom": "11/11/2021", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-judge", "CaseFieldID": "issueCode", "Label": "Issue code", "DisplayOrder": 6},
