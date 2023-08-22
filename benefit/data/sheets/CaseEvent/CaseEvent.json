@@ -5,9 +5,10 @@
     "ID": "secondHearingHoldingReminder",
     "Name": "2nd Hearing Holding Reminder",
     "Description": "Second holding email when hearing not booked",
-    "DisplayOrder": 1,
+    "DisplayOrder": 10,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -16,9 +17,10 @@
     "ID": "thirdHearingHoldingReminder",
     "Name": "3rd Hearing Holding Reminder",
     "Description": "Third holding email when hearing not booked",
-    "DisplayOrder": 2,
+    "DisplayOrder": 20,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -27,7 +29,7 @@
     "ID": "abateCase",
     "Name": "Abate case",
     "Description": "Abate the case",
-    "DisplayOrder": 3,
+    "DisplayOrder": 30,
     "PreConditionState(s)": "notListable",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
@@ -41,7 +43,7 @@
     "CaseTypeID": "Benefit",
     "ID": "dwpActionDirection",
     "Name": "Action direction",
-    "DisplayOrder": 4,
+    "DisplayOrder": 40,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -54,13 +56,15 @@
     "ID": "actionFurtherEvidence",
     "Name": "Action further evidence",
     "Description": "Action further evidence",
-    "DisplayOrder": 5,
+    "DisplayOrder": 50,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -68,12 +72,13 @@
     "ID": "actionHearingRecordingRequest",
     "Name": "Action hearing recording req",
     "Description": "Action hearing recording request",
-    "DisplayOrder": 6,
+    "DisplayOrder": 60,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -81,7 +86,7 @@
     "CaseTypeID": "Benefit",
     "ID": "dwpActionRepAdded",
     "Name": "Action new representative",
-    "DisplayOrder": 7,
+    "DisplayOrder": 70,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -94,14 +99,16 @@
     "ID": "actionPostponementRequest",
     "Name": "Action Postponement Request",
     "Description": "Action Postponement Request",
-    "DisplayOrder": 8,
+    "DisplayOrder": 80,
     "EventEnablingCondition": "unprocessedPostponementRequest=\"Yes\" AND interlocReviewState!=\"none\" AND interlocReviewState!=\"awaitingAdminAction\" AND interlocReviewState!=\"welshTranslation\" AND interlocReviewState!=\"\"",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -109,10 +116,11 @@
     "ID": "actionStrikeOut",
     "Name": "Action strikeout",
     "Description": "Action strikeout",
-    "DisplayOrder": 9,
+    "DisplayOrder": 90,
     "PreConditionState(s)": "dormantAppealState",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -121,9 +129,10 @@
     "ID": "addSCnumber",
     "Name": "Add / update SC number",
     "Description": "Add a SC number to the case",
-    "DisplayOrder": 10,
+    "DisplayOrder": 100,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -132,10 +141,11 @@
     "ID": "addNote",
     "Name": "Add a note",
     "Description": "The online hearing has resolved the case",
-    "DisplayOrder": 11,
+    "DisplayOrder": 110,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
     "ShowSummary": "N"
   },
@@ -145,10 +155,11 @@
     "ID": "addRepresentative",
     "Name": "Add a representative",
     "Description": "Add a rep or supporters details to a case",
-    "DisplayOrder": 12,
+    "DisplayOrder": 120,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -157,9 +168,10 @@
     "ID": "addHearing",
     "Name": "Add a hearing",
     "Description": "Add a hearing to the case",
-    "DisplayOrder": 13,
+    "DisplayOrder": 130,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
     "Publish": "Y"
   },
@@ -169,7 +181,7 @@
     "ID": "adminRestoreCases",
     "Name": "Admin - Restore cases",
     "Description": "Admin - Restore cases",
-    "DisplayOrder": 14,
+    "DisplayOrder": 140,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "ShowEventNotes": "N",
@@ -182,9 +194,10 @@
     "ID": "addCaseOutcome",
     "Name": "Add case outcome",
     "Description": "Add a case outcome",
-    "DisplayOrder": 14,
+    "DisplayOrder": 141,
     "PreConditionState(s)": "dormantAppealState;hearing;readyToList",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -193,9 +206,10 @@
     "ID": "adminSendToAppealCreated",
     "Name": "Admin - send to Appeal Created",
     "Description": "Deprecated - Admin - send to Appeal Created",
-    "DisplayOrder": 15,
+    "DisplayOrder": 150,
     "PreConditionState(s)": "dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp;handlingError",
     "PostConditionState": "appealCreated",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -203,10 +217,11 @@
     "CaseTypeID": "Benefit",
     "ID": "adminSendToDormantAppealState",
     "Name": "Admin - send to Dormant",
-    "DisplayOrder": 16,
+    "DisplayOrder": 160,
     "PreConditionState(s)": "appealCreated;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp;notListable;handlingError",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -215,9 +230,10 @@
     "ID": "adminSendToDraft",
     "Description": "Deprecated - Admin - send to Draft",
     "Name": "Admin - send to Draft",
-    "DisplayOrder": 17,
+    "DisplayOrder": 170,
     "PreConditionState(s)": "appealCreated;dormantAppealState;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp;handlingError",
     "PostConditionState": "draft",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -226,9 +242,10 @@
     "ID": "adminSendToDraftArchived",
     "Description": "Deprecated - Admin - send to Draft Archived",
     "Name": "Admin - send to Draft Archived",
-    "DisplayOrder": 18,
+    "DisplayOrder": 180,
     "PreConditionState(s)": "appealCreated;dormantAppealState;draft;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp;handlingError",
     "PostConditionState": "draftArchived",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -236,9 +253,10 @@
     "CaseTypeID": "Benefit",
     "ID": "adminSendToHearing",
     "Name": "Admin - send to Hearing",
-    "DisplayOrder": 19,
+    "DisplayOrder": 190,
     "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp;notListable;handlingError",
     "PostConditionState": "hearing",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -246,9 +264,10 @@
     "CaseTypeID": "Benefit",
     "ID": "adminSendToIncompleteApplication",
     "Name": "Admin - send to Incomplete App",
-    "DisplayOrder": 20,
+    "DisplayOrder": 200,
     "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp;notListable;handlingError",
     "PostConditionState": "incompleteApplication",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -256,9 +275,10 @@
     "CaseTypeID": "Benefit",
     "ID": "adminSendToIncompleteApplicationInformationReqsted",
     "Name": "Admin - send to Info Req'd",
-    "DisplayOrder": 21,
+    "DisplayOrder": 210,
     "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp;notListable;handlingError",
     "PostConditionState": "incompleteApplicationInformationReqsted",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -266,11 +286,12 @@
     "CaseTypeID": "Benefit",
     "ID": "adminSendToInterlocutoryReviewState",
     "Name": "Admin - send to Interloc",
-    "DisplayOrder": 22,
+    "DisplayOrder": 220,
     "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;readyToList;responseReceived;validAppeal;voidState;withDwp;notListable;handlingError",
     "PostConditionState": "interlocutoryReviewState",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -278,9 +299,10 @@
     "CaseTypeID": "Benefit",
     "ID": "adminSendToReadyToList",
     "Name": "Admin - send to Ready to List",
-    "DisplayOrder": 23,
+    "DisplayOrder": 230,
     "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;responseReceived;validAppeal;voidState;withDwp;handlingError",
     "PostConditionState": "readyToList",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -288,9 +310,10 @@
     "CaseTypeID": "Benefit",
     "ID": "adminSendTorRsponseReceived",
     "Name": "Admin - send to Response Rec'd",
-    "DisplayOrder": 24,
+    "DisplayOrder": 240,
     "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;validAppeal;voidState;withDwp;notListable;handlingError",
     "PostConditionState": "responseReceived",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -298,9 +321,10 @@
     "CaseTypeID": "Benefit",
     "ID": "adminSendToValidAppeal",
     "Name": "Admin - send to Valid",
-    "DisplayOrder": 25,
+    "DisplayOrder": 250,
     "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;voidState;withDwp;notListable;handlingError",
     "PostConditionState": "validAppeal",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -308,10 +332,11 @@
     "CaseTypeID": "Benefit",
     "ID": "adminSendToVoidState",
     "Name": "Admin - send to Void",
-    "DisplayOrder": 26,
+    "DisplayOrder": 260,
     "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;withDwp;notListable;handlingError",
     "PostConditionState": "voidState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -319,10 +344,11 @@
     "CaseTypeID": "Benefit",
     "ID": "adminSendToWithDwp",
     "Name": "Admin - send to With FTA",
-    "DisplayOrder": 27,
+    "DisplayOrder": 270,
     "PreConditionState(s)": "appealCreated;dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;notListable;handlingError",
     "PostConditionState": "withDwp",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -330,9 +356,10 @@
     "CaseTypeID": "Benefit",
     "ID": "adminUpdateEvent",
     "Name": "Admin - update event",
-    "DisplayOrder": 28,
+    "DisplayOrder": 280,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -341,11 +368,12 @@
     "ID": "adminAppealWithdrawn",
     "Name": "Admin Appeal Withdrawn",
     "Description": "Admin Appeal Withdrawn",
-    "DisplayOrder": 29,
+    "DisplayOrder": 290,
     "PreConditionState(s)": "appealCreated;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp;notListable;handlingError",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -354,9 +382,10 @@
     "ID": "judgeDecisionAdmitAppeal",
     "Name": "Admit appeal (Judge)",
     "Description": "Deprecated - Admit appeal (Judge)",
-    "DisplayOrder": 30,
+    "DisplayOrder": 300,
     "PreConditionState(s)": "interlocutoryReviewState",
     "PostConditionState": "appealCreated",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -365,9 +394,10 @@
     "ID": "tcwDecisionAdmitAppeal",
     "Name": "Admit appeal (TCW)",
     "Description": "Deprecated - Admit appeal (TCW)",
-    "DisplayOrder": 31,
+    "DisplayOrder": 310,
     "PreConditionState(s)": "interlocutoryReviewState",
     "PostConditionState": "appealCreated",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -376,7 +406,7 @@
     "ID": "editBundle",
     "Name": "Amend a bundle",
     "Description": "Amend a bundle in the case",
-    "DisplayOrder": 32,
+    "DisplayOrder": 320,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
@@ -390,9 +420,10 @@
     "ID": "amendNote",
     "Name": "Amend a note",
     "Description": "Amending a note",
-    "DisplayOrder": 33,
+    "DisplayOrder": 330,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -401,11 +432,13 @@
     "ID": "amendDueDate",
     "Name": "Amend due date",
     "Description": "Amend due date",
-    "DisplayOrder": 34,
+    "DisplayOrder": 340,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "Y"
+
   },
   {
     "LiveFrom": "01/01/2018",
@@ -413,11 +446,12 @@
     "ID": "amendElementsIssues",
     "Name": "Amend elements/issues",
     "Description": "Amend elements or issues",
-    "DisplayOrder": 35,
+    "DisplayOrder": 350,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
     "ShowSummary": "Y"
   },
@@ -427,7 +461,7 @@
     "ID": "interlocReviewStateAmend",
     "Name": "Amend interloc review state",
     "Description": "Ability to amend interloc review state flag",
-    "DisplayOrder": 36,
+    "DisplayOrder": 360,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -439,7 +473,7 @@
     "ID": "panelDoctorSpecialismAmend",
     "Name": "Amend panel doctor specialism",
     "Description": "Ability to amend panel doctor specialism",
-    "DisplayOrder": 37,
+    "DisplayOrder": 370,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "EventEnablingCondition": "appeal.benefitType.code=\"industrialInjuriesDisablement\" OR appeal.benefitType.code=\"industrialDeathBenefit\"",
@@ -452,10 +486,12 @@
     "ID": "appealCreated",
     "Name": "Appeal created",
     "Description": "Deprecated - Admin - Appeal created in CCD",
-    "DisplayOrder": 37,
+    "DisplayOrder": 371,
     "PostConditionState": "appealCreated",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -463,12 +499,14 @@
     "ID": "appealDormant",
     "Name": "Appeal dormant",
     "Description": "Dormant appeal - no notification",
-    "DisplayOrder": 38,
+    "DisplayOrder": 380,
     "PreConditionState(s)": "*",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -476,11 +514,12 @@
     "ID": "appealLapsed",
     "Name": "Appeal lapsed",
     "Description": "Notification about appeal lapsed sent",
-    "DisplayOrder": 39,
+    "DisplayOrder": 390,
     "PreConditionState(s)": "*",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -489,10 +528,11 @@
     "ID": "appealReceived",
     "Name": "Appeal received",
     "Description": "Notification that an appeal has been received",
-    "DisplayOrder": 40,
+    "DisplayOrder": 400,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -501,7 +541,7 @@
     "ID": "dwpAppealRegistered",
     "Name": "Appeal registered (FTA)",
     "Description": "Appeal successfully registered on PIP CS",
-    "DisplayOrder": 41,
+    "DisplayOrder": 410,
     "PreConditionState(s)": "withDwp",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -514,10 +554,11 @@
     "ID": "appealToProceed",
     "Name": "Appeal to proceed",
     "Description": "Appeal to proceed doesn't do bulk scan validation as this is done as part of the issueDirection",
-    "DisplayOrder": 42,
+    "DisplayOrder": 420,
     "PreConditionState(s)": "interlocutoryReviewState",
     "PostConditionState": "validAppeal",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -525,11 +566,12 @@
     "CaseTypeID": "Benefit",
     "ID": "judgeDecisionAppealToProceed",
     "Name": "Appeal to proceed",
-    "DisplayOrder": 43,
+    "DisplayOrder": 430,
     "PreConditionState(s)": "interlocutoryReviewState",
     "PostConditionState": "validAppeal",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -537,11 +579,12 @@
     "CaseTypeID": "Benefit",
     "ID": "tcwDecisionAppealToProceed",
     "Name": "Appeal to proceed",
-    "DisplayOrder": 44,
+    "DisplayOrder": 440,
     "PreConditionState(s)": "interlocutoryReviewState",
     "PostConditionState": "validAppeal",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -550,12 +593,14 @@
     "ID": "appealWithdrawn",
     "Name": "Appeal withdrawn",
     "Description": "Notification that an appeal has been withdrawn",
-    "DisplayOrder": 45,
+    "DisplayOrder": 450,
     "PreConditionState(s)": "*",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -563,7 +608,7 @@
     "ID": "draftArchived",
     "Name": "Archive Draft appeal",
     "Description": "Draft appeal in CCD",
-    "DisplayOrder": 46,
+    "DisplayOrder": 460,
     "PreConditionState(s)": "draft",
     "PostConditionState": "draftArchived",
     "SecurityClassification": "Public",
@@ -575,10 +620,11 @@
     "ID": "assignToJudge",
     "Name": "Assign panel to online hearing",
     "Description": "Assign Judge, Medical member and Disability qualified member",
-    "DisplayOrder": 47,
+    "DisplayOrder": 470,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -587,7 +633,7 @@
     "ID": "associateCase",
     "Name": "Associate case",
     "Description": "Soft links two cases - automatically based on NINO",
-    "DisplayOrder": 48,
+    "DisplayOrder": 480,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -600,9 +646,10 @@
     "ID": "attachRoboticsJson",
     "Name": "Attach robotics jSON",
     "Description": "The Robotics JSON has been attached to the case",
-    "DisplayOrder": 49,
+    "DisplayOrder": 490,
     "PreConditionState(s)": "appealCreated",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -611,11 +658,13 @@
     "ID": "attachScannedDocs",
     "Name": "Attach scanned docs",
     "Description": "Attach scanned docs",
-    "DisplayOrder": 50,
+    "DisplayOrder": 500,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -623,7 +672,7 @@
     "ID": "dwpCaseInProgress",
     "Name": "Case in-progress",
     "Description": "Flag case as in-progress",
-    "DisplayOrder": 51,
+    "DisplayOrder": 510,
     "PreConditionState(s)": "withDwp",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -635,9 +684,10 @@
     "CaseTypeID": "Benefit",
     "ID": "CCD_ADMIN",
     "Name": "CCD Admin",
-    "DisplayOrder": 52,
+    "DisplayOrder": 520,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "PUBLIC",
     "ShowSummary": "Yes"
   },
@@ -646,10 +696,11 @@
     "CaseTypeID": "Benefit",
     "ID": "dwpChallengeValidity",
     "Name": "Challenge validity",
-    "DisplayOrder": 53,
+    "DisplayOrder": 530,
     "PreConditionState(s)": "withDwp",
     "PostConditionState": "withDwp",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
     "ShowSummary": "Y"
   },
@@ -658,10 +709,11 @@
     "CaseTypeID": "Benefit",
     "ID": "cloneBundle",
     "Name": "Clone bundle",
-    "DisplayOrder": 54,
+    "DisplayOrder": 540,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_EM_CCD_ORCHESTRATOR_URL}/api/clone-ccd-bundles",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
     "ShowSummary": "Y"
   },
@@ -670,11 +722,12 @@
     "CaseTypeID": "Benefit",
     "ID": "confirmLapsed",
     "Name": "Confirm lapsed",
-    "DisplayOrder": 55,
+    "DisplayOrder": 550,
     "PreConditionState(s)": "hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;notListable;readyToList;responseReceived;validAppeal;withDwp;handlingError",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
     "ShowSummary": "Y"
   },
@@ -684,12 +737,13 @@
     "ID": "confirmPanelComposition",
     "Name": "Confirm panel composition",
     "Description": "Confirm panel composition",
-    "DisplayOrder": 56,
+    "DisplayOrder": 560,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "EventEnablingCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\"",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -698,9 +752,10 @@
     "ID": "cohAnswersSubmitted",
     "Name": "COR answers submitted",
     "Description": "The appellant has submitted their answers",
-    "DisplayOrder": 56,
+    "DisplayOrder": 565,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -709,9 +764,10 @@
     "ID": "cohQuestionDeadlineExtensionDenied",
     "Name": "COR deadline extension denied",
     "Description": "The request for the deadline to answer the questions to be extended has been denied",
-    "DisplayOrder": 57,
+    "DisplayOrder": 570,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -720,9 +776,10 @@
     "ID": "cohQuestionDeadlineExtensionGranted",
     "Name": "COR deadline extension granted",
     "Description": "The request for the deadline to answer the questions to be extended has been granted",
-    "DisplayOrder": 58,
+    "DisplayOrder": 580,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -731,9 +788,10 @@
     "ID": "cohDecisionRejected",
     "Name": "COR decision rejected",
     "Description": "The decision has been rejected",
-    "DisplayOrder": 59,
+    "DisplayOrder": 590,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -742,9 +800,10 @@
     "ID": "cohContinuousOnlineHearingRelisted",
     "Name": "COR online hearing relisted",
     "Description": "The online hearing has been relisted to an oral hearing",
-    "DisplayOrder": 60,
+    "DisplayOrder": 600,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -753,9 +812,10 @@
     "ID": "cohDecisionIssued",
     "Name": "COR preliminary view issued",
     "Description": "The tribunal have issued their preliminary view",
-    "DisplayOrder": 61,
+    "DisplayOrder": 610,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -764,9 +824,10 @@
     "ID": "cohQuestionDeadlineElapsed",
     "Name": "COR question deadline elapsed",
     "Description": "The deadline for the appellant to answer the round of questions has expired",
-    "DisplayOrder": 62,
+    "DisplayOrder": 620,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -775,9 +836,10 @@
     "ID": "cohQuestionDeadlineReminder",
     "Name": "COR question deadline reminder",
     "Description": "The appellant has been sent a reminder to answer the questions",
-    "DisplayOrder": 63,
+    "DisplayOrder": 630,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -786,9 +848,10 @@
     "ID": "cohQuestionDeadlineExtended",
     "Name": "COR question dealine extended",
     "Description": "The deadline for the appellant to answer the round of questions been extended",
-    "DisplayOrder": 64,
+    "DisplayOrder": 640,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -797,9 +860,10 @@
     "ID": "cohQuestionRoundIssued",
     "Name": "COR question round issued",
     "Description": "A round of questions has been issued to the appellant",
-    "DisplayOrder": 65,
+    "DisplayOrder": 650,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -808,13 +872,14 @@
     "ID": "createBundle",
     "Name": "Create a bundle",
     "Description": "Create a bundle in the case",
-    "DisplayOrder": 66,
+    "DisplayOrder": 660,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -822,7 +887,7 @@
     "ID": "createEditedBundle",
     "Name": "Create an edited bundle",
     "Description": "Create an edited bundle in the case",
-    "DisplayOrder": 67,
+    "DisplayOrder": 670,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
@@ -835,8 +900,9 @@
     "ID": "createDraft",
     "Name": "Create Draft appeal",
     "Description": "Draft appeal in CCD",
-    "DisplayOrder": 68,
+    "DisplayOrder": 680,
     "PostConditionState": "draft",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -845,9 +911,10 @@
     "ID": "panelUpdate",
     "Name": "Create/update Panel",
     "Description": "Add Judge, Medical member and Disability qualified member",
-    "DisplayOrder": 69,
+    "DisplayOrder": 690,
     "PreConditionState(s)": "appealCreated;voidState;interlocutoryReviewState",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -856,7 +923,7 @@
     "ID": "deathOfAppellant",
     "Name": "Death of appellant",
     "Description": "Record the death of an appellant",
-    "DisplayOrder": 69,
+    "DisplayOrder": 695,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
@@ -871,7 +938,7 @@
     "ID": "deathOfAppellantActioned",
     "Name": "Death of appellant actioned",
     "Description": "Action the death of an appellant",
-    "DisplayOrder": 69,
+    "DisplayOrder": 697,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
@@ -885,9 +952,10 @@
     "ID": "logDocsToDwp",
     "Name": "Decisions/directions to FTA",
     "Description": "Log sending decisions or directions to FTA",
-    "DisplayOrder": 70,
+    "DisplayOrder": 700,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -896,12 +964,14 @@
     "ID": "draftToIncompleteApplication",
     "Name": "Draft to incomplete appeal",
     "Description": "Convert draft case to incomplete application received",
-    "DisplayOrder": 70,
+    "DisplayOrder": 701,
     "PreConditionState(s)": "draft",
     "PostConditionState": "incompleteApplication",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -909,12 +979,13 @@
     "ID": "draftToNonCompliant",
     "Name": "Draft to non-compliant appeal",
     "Description": "Convert draft case to non-compliant appeal",
-    "DisplayOrder": 70,
+    "DisplayOrder": 702,
     "PreConditionState(s)": "draft",
     "PostConditionState": "interlocutoryReviewState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -923,11 +994,12 @@
     "ID": "draftToValidAppealCreated",
     "Name": "Draft to valid appeal created",
     "Description": "Convert draft case to new valid appeal",
-    "DisplayOrder": 70,
+    "DisplayOrder": 703,
     "PreConditionState(s)": "draft",
     "PostConditionState": "validAppeal",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -936,10 +1008,11 @@
     "ID": "dwpActionWithdrawal",
     "Name": "FTA Action Withdrawal",
     "Description": "FTA Action Withdrawal",
-    "DisplayOrder": 71,
+    "DisplayOrder": 710,
     "PreConditionState(s)": "dormantAppealState",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -947,10 +1020,11 @@
     "CaseTypeID": "Benefit",
     "ID": "dwpDirectionResponse",
     "Name": "FTA direction response",
-    "DisplayOrder": 72,
+    "DisplayOrder": 720,
     "PreConditionState(s)": "withDwp",
     "PostConditionState": "responseReceived",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -959,7 +1033,7 @@
     "ID": "dwpRaiseException",
     "Name": "FTA Raise an exception",
     "Description": "Raise an exception",
-    "DisplayOrder": 73,
+    "DisplayOrder": 730,
     "PreConditionState(s)": "withDwp",
     "PostConditionState": "notListable",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
@@ -973,7 +1047,7 @@
     "ID": "dwpRequestHearingRecording",
     "Name": "FTA Request hearing recording",
     "Description": "Request a hearing recording",
-    "DisplayOrder": 74,
+    "DisplayOrder": 740,
     "PreConditionState(s)": "hearing;readyToList;dormantAppealState",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
@@ -988,9 +1062,10 @@
     "ID": "dwpResponseLateReminder",
     "Name": "FTA Response Late Reminder",
     "Description": "Holding email when FTA has not responded in time",
-    "DisplayOrder": 75,
+    "DisplayOrder": 750,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -999,10 +1074,11 @@
     "ID": "evidenceReceived",
     "Name": "Evidence received",
     "Description": "Notification that evidence has been received",
-    "DisplayOrder": 76,
+    "DisplayOrder": 760,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1011,9 +1087,10 @@
     "ID": "evidenceReminder",
     "Name": "Evidence reminder",
     "Description": "2 days after submission",
-    "DisplayOrder": 77,
+    "DisplayOrder": 770,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1022,10 +1099,11 @@
     "ID": "furtherEvidenceHandledOffline",
     "Name": "FE handled offline",
     "Description": "Further evidence handled offline",
-    "DisplayOrder": 78,
+    "DisplayOrder": 780,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1034,9 +1112,10 @@
     "ID": "finalHearingHoldingReminder",
     "Name": "Final Hearing Holding Reminder",
     "Description": "Final holding email when hearing not booked",
-    "DisplayOrder": 79,
+    "DisplayOrder": 790,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1045,11 +1124,12 @@
     "ID": "feNoAction",
     "Name": "Further Evidence - No Action",
     "Description": "Further Evidence - No Action",
-    "DisplayOrder": 80,
+    "DisplayOrder": 800,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1058,7 +1138,7 @@
     "ID": "dwpEvidenceInProgress",
     "Name": "Further evidence in progress",
     "Description": "Further evidence is being considered",
-    "DisplayOrder": 81,
+    "DisplayOrder": 810,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -1071,12 +1151,13 @@
     "ID": "createAppealPDF",
     "Name": "Generate appeal PDF",
     "Description": "Creates an appeal PDF if it's missing",
-    "DisplayOrder": 82,
+    "DisplayOrder": 820,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "EventEnablingCondition": "appeal.benefitType.code!=\"childSupport\" AND appeal.benefitType.code!=\"taxCredit\"  AND appeal.benefitType.code!=\"guardiansAllowance\"  AND appeal.benefitType.code!=\"taxFreeChildcare\"  AND appeal.benefitType.code!=\"homeResponsibilitiesProtection\"  AND appeal.benefitType.code!=\"childBenefit\"  AND appeal.benefitType.code!=\"thirtyHoursFreeChildcare\"  AND appeal.benefitType.code!=\"guaranteedMinimumPension\"  AND appeal.benefitType.code!=\"nationalInsuranceCredits\"",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1085,11 +1166,12 @@
     "ID": "generateCoversheet",
     "Name": "Generate coversheet",
     "Description": "Generates a coversheet",
-    "DisplayOrder": 83,
+    "DisplayOrder": 830,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1098,9 +1180,10 @@
     "ID": "handleEvidence",
     "Name": "Handle supplementary evidence",
     "Description": "Handle supplementary evidence",
-    "DisplayOrder": 84,
+    "DisplayOrder": 840,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1109,10 +1192,11 @@
     "ID": "hearingAdjourned",
     "Name": "Hearing adjourned",
     "Description": "Notification that the hearing has been adjourned",
-    "DisplayOrder": 85,
+    "DisplayOrder": 850,
     "PreConditionState(s)": "*",
     "PostConditionState": "readyToList",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1121,10 +1205,11 @@
     "ID": "hearingBooked",
     "Name": "Hearing booked",
     "Description": "Notification about a hearing being booked",
-    "DisplayOrder": 86,
+    "DisplayOrder": 860,
     "PreConditionState(s)": "*",
     "PostConditionState": "hearing",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1133,9 +1218,10 @@
     "ID": "hearingHoldingReminder",
     "Name": "Hearing Holding Reminder",
     "Description": "Holding email when hearing not booked",
-    "DisplayOrder": 87,
+    "DisplayOrder": 870,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1144,11 +1230,12 @@
     "ID": "hearingPostponed",
     "Name": "Hearing postponed",
     "Description": "Notification that a hearing has been postponed",
-    "DisplayOrder": 88,
+    "DisplayOrder": 880,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1157,9 +1244,10 @@
     "ID": "hearingReminder",
     "Name": "Hearing reminder",
     "Description": "1 day out and 1 week out",
-    "DisplayOrder": 89,
+    "DisplayOrder": 890,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1168,11 +1256,13 @@
     "ID": "incompleteApplicationReceived",
     "Name": "Incomplete application rec'd",
     "Description": "Incomplete application received",
-    "DisplayOrder": 90,
+    "DisplayOrder": 900,
     "PostConditionState": "incompleteApplication",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1180,10 +1270,12 @@
     "ID": "interlocInformationReceivedActionFurtherEvidence",
     "Name": "Info received further evidence",
     "Description": "Information received",
-    "DisplayOrder": 91,
+    "DisplayOrder": 910,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1191,11 +1283,13 @@
     "ID": "interlocInformationReceived",
     "Name": "Information received",
     "Description": "Information received",
-    "DisplayOrder": 92,
+    "DisplayOrder": 920,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1203,12 +1297,13 @@
     "ID": "issueAdjournmentNotice",
     "Name": "Issue adjournment notice",
     "Description": "Send an adjournment notice",
-    "DisplayOrder": 93,
+    "DisplayOrder": 930,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1217,11 +1312,12 @@
     "ID": "decisionIssued",
     "Name": "Issue interlocutory decision",
     "Description": "Send an interlocutory decision notice",
-    "DisplayOrder": 94,
+    "DisplayOrder": 940,
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;notListable;handlingError",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1230,10 +1326,11 @@
     "ID": "judgeDirectionIssued",
     "Name": "Issue direction (Judge)",
     "Description": "Issue direction (Judge)",
-    "DisplayOrder": 95,
+    "DisplayOrder": 950,
     "PreConditionState(s)": "interlocutoryReviewState",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1242,10 +1339,11 @@
     "ID": "tcwDirectionIssued",
     "Name": "Issue direction (TCW)",
     "Description": "Issue direction (TCW)",
-    "DisplayOrder": 96,
+    "DisplayOrder": 960,
     "PreConditionState(s)": "interlocutoryReviewState",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1254,12 +1352,13 @@
     "ID": "directionIssued",
     "Name": "Issue directions notice",
     "Description": "Send a directions notice",
-    "DisplayOrder": 97,
+    "DisplayOrder": 970,
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;notListable;handlingError",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1268,7 +1367,7 @@
     "ID": "issueFinalDecision",
     "Name": "Issue final decision",
     "Description": "Issue a final decision notice for a case",
-    "DisplayOrder": 98,
+    "DisplayOrder": 980,
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;notListable;handlingError",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
@@ -1284,11 +1383,28 @@
     "ID": "issueFurtherEvidence",
     "Name": "Issue further evidence",
     "Description": "Issue further evidence",
-    "DisplayOrder": 99,
+    "DisplayOrder": 990,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "issueGenericLetter",
+    "Name": "Issue generic letter",
+    "Description": "Issue generic letter",
+    "DisplayOrder": 991,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1296,7 +1412,7 @@
     "ID": "jointPartyAdded",
     "Name": "Joint Party Added",
     "Description": "Joint Party has been registered on case",
-    "DisplayOrder": 100,
+    "DisplayOrder": 1000,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
@@ -1310,7 +1426,7 @@
     "ID": "dwpLapseCase",
     "Name": "Lapse appeal",
     "Description": "Revise decision",
-    "DisplayOrder": 101,
+    "DisplayOrder": 1010,
     "PreConditionState(s)": "hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;notListable;readyToList;responseReceived;validAppeal;withDwp;handlingError",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
@@ -1324,7 +1440,7 @@
     "ID": "hmctsLapseCase",
     "Name": "Lapse case",
     "Description": "Lapse case",
-    "DisplayOrder": 102,
+    "DisplayOrder": 1020,
     "PreConditionState(s)": "responseReceived",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
@@ -1338,10 +1454,11 @@
     "ID": "linkACase",
     "Name": "Link a case",
     "Description": "Link a case - hard link - if cases need to be heard together",
-    "DisplayOrder": 103,
+    "DisplayOrder": 1030,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1350,10 +1467,12 @@
     "ID": "listingError",
     "Name": "Listing Error",
     "Description": "A listing Error has occurred",
-    "DisplayOrder": 104,
+    "DisplayOrder": 1040,
     "PreConditionState(s)": "*",
     "PostConditionState": "listingError",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "10/06/2022",
@@ -1361,9 +1480,10 @@
     "ID": "handlingError",
     "Name": "Handling Error",
     "Description": "A handling Error has occurred",
-    "DisplayOrder": 105,
+    "DisplayOrder": 1050,
     "PreConditionState(s)": "*",
     "PostConditionState": "handlingError",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1372,9 +1492,10 @@
     "ID": "sentToJudge",
     "Name": "Log sending to judge",
     "Description": "The online hearing has resolved the case",
-    "DisplayOrder": 106,
+    "DisplayOrder": 1060,
     "PreConditionState(s)": "interlocutoryReviewState",
     "PostConditionState": "interlocutoryReviewState",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1383,9 +1504,10 @@
     "ID": "manageAudioVideo",
     "Name": "Manage audio/video evidence",
     "Description": "Manage audio video unprocessed list",
-    "DisplayOrder": 107,
+    "DisplayOrder": 1070,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1394,11 +1516,12 @@
     "ID": "manageDwpDocuments",
     "Name": "Manage FTA document(s)",
     "Description": "Manage FTA document(s)",
-    "DisplayOrder": 108,
+    "DisplayOrder": 1080,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1406,10 +1529,11 @@
     "CaseTypeID": "Benefit",
     "ID": "makeCaseUrgent",
     "Name": "Mark case as urgent",
-    "DisplayOrder": 109,
+    "DisplayOrder": 1090,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1418,9 +1542,10 @@
     "ID": "moveToAppealCreated",
     "Name": "Move to appeal created",
     "Description": "Deprecated - Moves case to appeal created",
-    "DisplayOrder": 110,
+    "DisplayOrder": 1100,
     "PreConditionState(s)": "validAppeal",
     "PostConditionState": "appealCreated",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1429,9 +1554,10 @@
     "ID": "citizenRequestHearingRecording",
     "Name": "MYA Request hearing recording",
     "Description": "Request a hearing recording",
-    "DisplayOrder": 111,
+    "DisplayOrder": 1110,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1440,9 +1566,10 @@
     "ID": "manageScannedDocuments",
     "Name": "Manage Unprocessed Corres",
     "Description": "Manage unprocessed correspondence",
-    "DisplayOrder": 112,
+    "DisplayOrder": 1120,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1451,7 +1578,7 @@
     "ID": "dwpNoAction",
     "Name": "No action",
     "Description": "Take no action",
-    "DisplayOrder": 113,
+    "DisplayOrder": 1130,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -1464,10 +1591,11 @@
     "ID": "nonCompliant",
     "Name": "Non-compliant appeal",
     "Description": "Non-compliant appeal",
-    "DisplayOrder": 114,
+    "DisplayOrder": 1140,
     "PostConditionState": "interlocutoryReviewState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1476,7 +1604,7 @@
     "ID": "dwpNotAbleToRegister",
     "Name": "Not able to register",
     "Description": "Case can't be registered on DRS",
-    "DisplayOrder": 115,
+    "DisplayOrder": 1150,
     "PreConditionState(s)": "withDwp",
     "PostConditionState": "interlocutoryReviewState",
     "SecurityClassification": "Public",
@@ -1488,7 +1616,7 @@
     "ID": "notListable",
     "Name": "Not listable",
     "Description": "Case is not listable",
-    "DisplayOrder": 116,
+    "DisplayOrder": 1160,
     "PreConditionState(s)": "*",
     "PostConditionState": "notListable",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
@@ -1502,9 +1630,10 @@
     "ID": "notificationSent",
     "Name": "Notification sent",
     "Description": "Notification sent via Gov Notify",
-    "DisplayOrder": 117,
+    "DisplayOrder": 1170,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1513,11 +1642,12 @@
     "ID": "postponementRequest",
     "Name": "Postponement request",
     "Description": "Postponement request",
-    "DisplayOrder": 119,
+    "DisplayOrder": 1190,
     "PreConditionState(s)": "hearing",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1526,12 +1656,13 @@
     "ID": "processAudioVideo",
     "Name": "Process audio/video evidence",
     "Description": "Issue a direction notice based on audio and video evidence",
-    "DisplayOrder": 120,
+    "DisplayOrder": 1200,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1540,11 +1671,12 @@
     "ID": "processReasonableAdjustment",
     "Name": "Process reasonable adjustment",
     "Description": "Process reasonable adjustment",
-    "DisplayOrder": 121,
+    "DisplayOrder": 1210,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1553,7 +1685,7 @@
     "ID": "provideAppointeeDetails",
     "Name": "Provide appointee details",
     "Description": "Provide appointee details for case",
-    "DisplayOrder": 122,
+    "DisplayOrder": 1220,
     "PreConditionState(s)": "notListable;dormantAppealState",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
@@ -1568,10 +1700,11 @@
     "ID": "corDecision",
     "Name": "Online hearing decision made",
     "Description": "The online hearing has resolved the case",
-    "DisplayOrder": 123,
+    "DisplayOrder": 1230,
     "PreConditionState(s)": "*",
     "PostConditionState": "dormantAppealState",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1580,10 +1713,11 @@
     "ID": "reinstateAppeal",
     "Name": "Re-open appeal",
     "Description": "Reinstate case to interloc state",
-    "DisplayOrder": 124,
+    "DisplayOrder": 1240,
     "PreConditionState(s)": "dormantAppealState",
     "PostConditionState": "interlocutoryReviewState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1592,14 +1726,16 @@
     "ID": "readyToList",
     "Name": "Ready to list",
     "Description": "Makes an appeal ready to list",
-    "DisplayOrder": 125,
+    "DisplayOrder": 1250,
     "PreConditionState(s)": "*",
     "PostConditionState": "readyToList",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1607,12 +1743,13 @@
     "ID": "reissueDocument",
     "Name": "Reissue document",
     "Description": "Reissue document",
-    "DisplayOrder": 126,
+    "DisplayOrder": 1260,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1621,28 +1758,31 @@
     "ID": "reissueFurtherEvidence",
     "Name": "Reissue further evidence",
     "Description": "Reissue further evidence",
-    "DisplayOrder": 127,
+    "DisplayOrder": 1270,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
-    "ID": "requestInfoIncompleteApplication",
+    "ID": "requestForInformation",
     "Name": "Request info from party",
     "Description": "Request info from party",
-    "DisplayOrder": 128,
+    "DisplayOrder": 1280,
     "PreConditionState(s)": "appealCreated;closed;dormantAppealState;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;withDwp;notListable;handlingError",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
-    "ShowSummary": "Y"
+    "ShowSummary": "Y",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "22/10/2019",
@@ -1650,7 +1790,7 @@
     "ID": "dwpRequestTimeExtension",
     "Name": "Request time extension",
     "Description": "Request time extension",
-    "DisplayOrder": 129,
+    "DisplayOrder": 1290,
     "PreConditionState(s)": "interlocutoryReviewState;appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;notListable;handlingError",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
@@ -1664,10 +1804,11 @@
     "ID": "removeLinkForCase",
     "Name": "Remove a case link",
     "Description": "Remove a case - hard link (linkACase)",
-    "DisplayOrder": 130,
+    "DisplayOrder": 1300,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1676,10 +1817,11 @@
     "ID": "resendAppealCreated",
     "Name": "Resend appeal rec'd message",
     "Description": "Deprecated - Admin - Re-sends the appeal received notification",
-    "DisplayOrder": 131,
+    "DisplayOrder": 1310,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1688,12 +1830,14 @@
     "ID": "resendCaseToGAPS2",
     "Name": "Resend case to GAPS 2",
     "Description": "Re-sends the case to GAPS 2",
-    "DisplayOrder": 132,
+    "DisplayOrder": 1320,
     "PreConditionState(s)": "appealCreated;hearing;readyToList;responseReceived;validAppeal;voidState;withDwp;notListable;handlingError",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1701,10 +1845,11 @@
     "ID": "resendToDwp",
     "Name": "Resend to FTA via bulk print",
     "Description": "Resend case to FTa via bulk print",
-    "DisplayOrder": 133,
+    "DisplayOrder": 1330,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1713,10 +1858,11 @@
     "ID": "responseReceived",
     "Name": "Response received",
     "Description": "Notification that FTA have responded to the appeal",
-    "DisplayOrder": 134,
+    "DisplayOrder": 1340,
     "PreConditionState(s)": "*",
     "PostConditionState": "responseReceived",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1725,7 +1871,7 @@
     "ID": "hmctsResponseReviewed",
     "Name": "Response reviewed",
     "Description": "FTA response has been reviewed",
-    "DisplayOrder": 135,
+    "DisplayOrder": 1350,
     "PreConditionState(s)": "responseReceived;interlocutoryReviewState",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
@@ -1733,7 +1879,8 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
     "SecurityClassification": "Public",
     "ShowSummary": "N",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1741,7 +1888,7 @@
     "ID": "reviewConfidentialityRequest",
     "Name": "Review confidentiality request",
     "Description": "Review confidentiality request",
-    "DisplayOrder": 136,
+    "DisplayOrder": 1360,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -1757,10 +1904,11 @@
     "ID": "reviewPhmeRequest",
     "Name": "Review PHE request",
     "Description": "Review PHE request",
-    "DisplayOrder": 138,
+    "DisplayOrder": 1380,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1769,11 +1917,13 @@
     "ID": "interlocSendToTcw",
     "Name": "Send case to TCW",
     "Description": "Send case to TCW",
-    "DisplayOrder": 139,
+    "DisplayOrder": 1390,
     "PreConditionState(s)": "interlocutoryReviewState",
     "PostConditionState": "interlocutoryReviewState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1781,9 +1931,10 @@
     "ID": "sendFurtherEvidenceError",
     "Name": "Send further evidence error",
     "Description": "Send further evidence error",
-    "DisplayOrder": 140,
+    "DisplayOrder": 1400,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1792,11 +1943,13 @@
     "ID": "sendToAdmin",
     "Name": "Send to admin",
     "Description": "Return the case to an admin with a note",
-    "DisplayOrder": 141,
+    "DisplayOrder": 1410,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1804,10 +1957,11 @@
     "ID": "sendToDwp",
     "Name": "Send to FTA",
     "Description": "Send to FTA",
-    "DisplayOrder": 142,
+    "DisplayOrder": 1420,
     "PreConditionState(s)": "validAppeal",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1816,9 +1970,10 @@
     "ID": "sendToDwpError",
     "Name": "Send to FTA error",
     "Description": "Flag error to Send to FTA",
-    "DisplayOrder": 143,
+    "DisplayOrder": 1430,
     "PreConditionState(s)": "validAppeal",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1827,10 +1982,11 @@
     "ID": "sendToDwpOffline",
     "Name": "Send to FTA offline",
     "Description": "Log manually sending a case to FTA",
-    "DisplayOrder": 144,
+    "DisplayOrder": 1440,
     "PreConditionState(s)": "validAppeal",
     "PostConditionState": "withDwp",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1839,12 +1995,14 @@
     "ID": "validSendToInterloc",
     "Name": "Send to interloc",
     "Description": "Send a case to a judge for review",
-    "DisplayOrder": 145,
+    "DisplayOrder": 1450,
     "PreConditionState(s)": "appealCreated;closed;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;interlocutoryReviewState;incompleteApplicationInformationReqsted;notListable;handlingError",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1852,10 +2010,11 @@
     "ID": "nonCompliantSendToInterloc",
     "Name": "Send to interloc - pre-valid",
     "Description": "Send a case to a judge for review",
-    "DisplayOrder": 146,
+    "DisplayOrder": 1460,
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted",
     "PostConditionState": "interlocutoryReviewState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1864,10 +2023,11 @@
     "ID": "tcwReferToJudge",
     "Name": "Send to Judge",
     "Description": "Send to Judge",
-    "DisplayOrder": 147,
+    "DisplayOrder": 1470,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1876,18 +2036,21 @@
     "ID": "sendToRoboticsError",
     "Name": "Send to robotics error",
     "Description": "Flag error to Send to robotics",
-    "DisplayOrder": 148,
+    "DisplayOrder": 1480,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "11/11/2019",
     "CaseTypeID": "Benefit",
     "ID": "sendValidCaseToInterloc",
     "Name": "Send valid case to interloc",
-    "DisplayOrder": 149,
+    "DisplayOrder": 1490,
     "PreConditionState(s)": "withDwp",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
     "ShowSummary": "Y"
   },
@@ -1897,9 +2060,10 @@
     "ID": "sentToDwp",
     "Name": "Sent to FTA",
     "Description": "Case sent to FTA",
-    "DisplayOrder": 150,
+    "DisplayOrder": 1500,
     "PreConditionState(s)": "*",
     "PostConditionState": "withDwp",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1907,7 +2071,7 @@
     "CaseTypeID": "Benefit",
     "ID": "asyncStitchingComplete",
     "Name": "Stitching bundle complete",
-    "DisplayOrder": 151,
+    "DisplayOrder": 1510,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -1920,10 +2084,11 @@
     "ID": "stopBulkPrintForReasonableAdjustment",
     "Name": "Stop bulk print",
     "Description": "Stop a bulk print request for a reasonable adjustment",
-    "DisplayOrder": 152,
+    "DisplayOrder": 1520,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1932,9 +2097,10 @@
     "ID": "judgeDecisionStrikeout",
     "Name": "Strike out (Judge)",
     "Description": "Strike out (Judge)",
-    "DisplayOrder": 153,
+    "DisplayOrder": 1530,
     "PreConditionState(s)": "interlocutoryReviewState",
     "PostConditionState": "dormantAppealState",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1943,9 +2109,10 @@
     "ID": "tcwDecisionStrikeOut",
     "Name": "Strike out (TCW)",
     "Description": "Strike out (TCW)",
-    "DisplayOrder": 154,
+    "DisplayOrder": 1540,
     "PreConditionState(s)": "interlocutoryReviewState",
     "PostConditionState": "dormantAppealState",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -1954,12 +2121,14 @@
     "ID": "struckOut",
     "Name": "Strike out case",
     "Description": "Strike out due to no response",
-    "DisplayOrder": 155,
+    "DisplayOrder": 1550,
     "PreConditionState(s)": "*",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1967,13 +2136,14 @@
     "ID": "dwpSupplementaryResponse",
     "Name": "Supplementary response",
     "Description": "An additional response from FTA",
-    "DisplayOrder": 156,
+    "DisplayOrder": 1560,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -1981,9 +2151,10 @@
     "ID": "SYSTEM_MAINTENANCE",
     "Name": "System Maintenance",
     "Description": "Maintenance updates to cases, made automatically by the system",
-    "DisplayOrder": 157,
+    "DisplayOrder": 1570,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
     "ShowSummary": "Y"
   },
@@ -1993,9 +2164,10 @@
     "ID": "unassignToJudge",
     "Name": "Unassign judge",
     "Description": "Unassign Judge",
-    "DisplayOrder": 158,
+    "DisplayOrder": 1580,
     "PreConditionState(s)": "appealCreated;voidState;interlocutoryReviewState",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "PUBLIC"
   },
   {
@@ -2004,9 +2176,10 @@
     "ID": "updateCaseOnly",
     "Name": "Update case only",
     "Description": "Simply update case data with no callbacks afterwards",
-    "DisplayOrder": 159,
+    "DisplayOrder": 1590,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2015,9 +2188,10 @@
     "ID": "updateDraft",
     "Name": "Update draft appeal",
     "Description": "Draft appeal in CCD",
-    "DisplayOrder": 160,
+    "DisplayOrder": 1600,
     "PreConditionState(s)": "draft",
     "PostConditionState": "draft",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2026,9 +2200,10 @@
     "ID": "eventsUpdates",
     "Name": "Update events",
     "Description": "Update Events Data for Notifications",
-    "DisplayOrder": 161,
+    "DisplayOrder": 1610,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2037,13 +2212,15 @@
     "ID": "updateListingRequirements",
     "Name": "Update Listing Requirements",
     "Description": "Update Listing Requirements for a case",
-    "DisplayOrder": 161,
+    "DisplayOrder": 1610,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2051,9 +2228,10 @@
     "ID": "updateHearingType",
     "Name": "Update hearing type",
     "Description": "Update Hearing Type",
-    "DisplayOrder": 162,
+    "DisplayOrder": 1620,
     "PreConditionState(s)": "appealCreated;voidState;interlocutoryReviewState;validAppeal;readyToList;responseReceived;notListable;handlingError",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "PUBLIC"
   },
   {
@@ -2062,9 +2240,10 @@
     "ID": "updateIncompleteApplication",
     "Name": "Update incomplete application",
     "Description": "Update incomplete application",
-    "DisplayOrder": 163,
+    "DisplayOrder": 1630,
     "PreConditionState(s)": "incompleteApplication",
     "PostConditionState": "incompleteApplication",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2073,7 +2252,7 @@
     "ID": "updateNotListable",
     "Name": "Update not listable case",
     "Description": "Update not listable case",
-    "DisplayOrder": 164,
+    "DisplayOrder": 1640,
     "PreConditionState(s)": "notListable",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
@@ -2087,12 +2266,13 @@
     "ID": "updateOtherPartyData",
     "Name": "Update other party data",
     "Description": "Update other party data",
-    "DisplayOrder": 165,
+    "DisplayOrder": 1650,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "EventEnablingCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\"",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2101,12 +2281,13 @@
     "ID": "updateReasonableAdjustment",
     "Name": "Update reasonable adjustment",
     "Description": "Update reasonable adjustment",
-    "DisplayOrder": 166,
+    "DisplayOrder": 1660,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2115,11 +2296,12 @@
     "ID": "subscriptionUpdated",
     "Name": "Update subscription",
     "Description": "Update Subscription",
-    "DisplayOrder": 167,
+    "DisplayOrder": 1670,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2128,11 +2310,12 @@
     "ID": "caseUpdated",
     "Name": "Update to case data",
     "Description": "Automatic update of data from GAPS 2 - no notification",
-    "DisplayOrder": 168,
+    "DisplayOrder": 1680,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
     "Publish": "Y"
   },
@@ -2142,11 +2325,12 @@
     "ID": "updateUCB",
     "Name": "Update UCB flag",
     "Description": "Update Unacceptable Customer Behaviour flag",
-    "DisplayOrder": 169,
+    "DisplayOrder": 1690,
     "PreConditionState(s)": "readyToList;hearing;notListable;responseReceived",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2155,9 +2339,10 @@
     "ID": "uploadCorDocument",
     "Name": "Upload Cor document",
     "Description": "Upload cor document",
-    "DisplayOrder": 170,
+    "DisplayOrder": 1700,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2166,10 +2351,12 @@
     "ID": "uploadDocument",
     "Name": "Upload document",
     "Description": "Upload document",
-    "DisplayOrder": 171,
+    "DisplayOrder": 1710,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2177,11 +2364,13 @@
     "ID": "uploadDocumentFurtherEvidence",
     "Name": "Upload document FE",
     "Description": "Upload document Further Evidence",
-    "DisplayOrder": 172,
+    "DisplayOrder": 1720,
     "PreConditionState(s)": "appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;voidState;withDwp;notListable;handlingError",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2189,9 +2378,10 @@
     "ID": "uploadDraftCorDocument",
     "Name": "Upload draft Cor document",
     "Description": "Upload cor document",
-    "DisplayOrder": 173,
+    "DisplayOrder": 1730,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2200,9 +2390,10 @@
     "ID": "uploadDraftDocument",
     "Name": "Upload draft document",
     "Description": "Upload document",
-    "DisplayOrder": 174,
+    "DisplayOrder": 1740,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2211,7 +2402,7 @@
     "ID": "uploadFurtherEvidence",
     "Name": "Upload further evidence",
     "Description": "Upload further evidence for pre-valid interloc",
-    "DisplayOrder": 175,
+    "DisplayOrder": 1750,
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
@@ -2225,7 +2416,7 @@
     "ID": "dwpUploadResponse",
     "Name": "Upload response",
     "Description": "Upload a response",
-    "DisplayOrder": 176,
+    "DisplayOrder": 1760,
     "PreConditionState(s)": "withDwp;readyToList;notListable",
     "PostConditionState": "responseReceived",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
@@ -2233,7 +2424,8 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
-    "ShowEventNotes": "N"
+    "ShowEventNotes": "N",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2241,7 +2433,7 @@
     "ID": "uploadHearingRecording",
     "Name": "Upload hearing recording",
     "Description": "Upload the hearing recording",
-    "DisplayOrder": 177,
+    "DisplayOrder": 1770,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
@@ -2256,11 +2448,13 @@
     "ID": "validAppealCreated",
     "Name": "Valid appeal created",
     "Description": "A new valid appeal",
-    "DisplayOrder": 178,
+    "DisplayOrder": 1780,
     "PostConditionState": "validAppeal",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2268,13 +2462,14 @@
     "ID": "interlocValidAppeal",
     "Name": "Validate appeal",
     "Description": "Makes an appeal valid",
-    "DisplayOrder": 179,
+    "DisplayOrder": 1790,
     "PreConditionState(s)": "interlocutoryReviewState",
     "PostConditionState": "validAppeal",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_BULK_SCAN_API_URL}/validate-record",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2283,13 +2478,14 @@
     "ID": "validAppeal",
     "Name": "Validate appeal",
     "Description": "Validate appeal",
-    "DisplayOrder": 180,
+    "DisplayOrder": 1800,
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState",
     "PostConditionState": "validAppeal",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "RetriesTimeoutURLSubmittedEvent": "5,5",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
     "ShowSummary": "Y"
   },
@@ -2299,11 +2495,13 @@
     "ID": "voidCase",
     "Name": "Void case",
     "Description": "Voids the case",
-    "DisplayOrder": 181,
+    "DisplayOrder": 1810,
     "PreConditionState(s)": "*",
     "PostConditionState": "voidState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2311,9 +2509,10 @@
     "ID": "voidIncompleteApplication",
     "Name": "Void incomplete appeal",
     "Description": "Void non-valid appeal (Deprecated)",
-    "DisplayOrder": 182,
+    "DisplayOrder": 1820,
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted",
     "PostConditionState": "voidState",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2322,9 +2521,10 @@
     "ID": "interlocVoidAppeal",
     "Name": "Void non-valid case",
     "Description": "Voids the case (Deprecated)",
-    "DisplayOrder": 183,
+    "DisplayOrder": 1830,
     "PreConditionState(s)": "interlocutoryReviewState",
     "PostConditionState": "voidState",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2333,7 +2533,7 @@
     "ID": "adjournCase",
     "Name": "Write adjournment notice",
     "Description": "Write adjournment notice",
-    "DisplayOrder": 184,
+    "DisplayOrder": 1840,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
@@ -2348,7 +2548,7 @@
     "ID": "writeFinalDecision",
     "Name": "Write final decision",
     "Description": "Write a final decision notice for a case",
-    "DisplayOrder": 185,
+    "DisplayOrder": 1850,
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;notListable;handlingError",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
@@ -2362,13 +2562,14 @@
     "ID": "actionPostponementRequestWelsh",
     "Name": "Welsh- Action Postponement Req",
     "Description": "Welsh- Action Postponement Req",
-    "DisplayOrder": 186,
+    "DisplayOrder": 1860,
     "EventEnablingCondition": "unprocessedPostponementRequest=\"Yes\" AND interlocReviewState!=\"none\" AND interlocReviewState!=\"awaitingAdminAction\" AND interlocReviewState!=\"welshTranslation\" AND interlocReviewState!=\"\"",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2377,13 +2578,14 @@
     "ID": "createWelshNotice",
     "Name": "Welsh - create notice",
     "Description": "Welsh - create notice",
-    "DisplayOrder": 187,
+    "DisplayOrder": 1870,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "EventEnablingCondition": "languagePreferenceWelsh=\"Yes\"",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2392,14 +2594,16 @@
     "ID": "cancelTranslations",
     "Name": "Welsh - cancel translations",
     "Description": "Welsh - cancel translations",
-    "DisplayOrder": 188,
+    "DisplayOrder": 1880,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "EventEnablingCondition": "languagePreferenceWelsh=\"Yes\"",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2407,11 +2611,12 @@
     "ID": "issueAdjournmentNoticeWelsh",
     "Name": "Welsh - adjournment notice",
     "Description": "Send a welsh adjournment notice",
-    "DisplayOrder": 189,
+    "DisplayOrder": 1890,
     "PreConditionState(s)": "hearing",
     "PostConditionState": "readyToList",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2420,11 +2625,12 @@
     "ID": "decisionIssuedWelsh",
     "Name": "Welsh - issue decision",
     "Description": "Send a welsh decision notice",
-    "DisplayOrder": 190,
+    "DisplayOrder": 1900,
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;notListable;handlingError",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2433,12 +2639,13 @@
     "ID": "directionIssuedWelsh",
     "Name": "Welsh - issue direction",
     "Description": "Send a welsh directions notice",
-    "DisplayOrder": 191,
+    "DisplayOrder": 1910,
     "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;notListable;handlingError",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2447,7 +2654,7 @@
     "ID": "issueFinalDecisionWelsh",
     "Name": "Welsh - issue final decision",
     "Description": "Issue a Welsh final decision notice",
-    "DisplayOrder": 192,
+    "DisplayOrder": 1920,
     "PreConditionState(s)": "dormantAppealState",
     "PostConditionState": "dormantAppealState",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
@@ -2461,9 +2668,10 @@
     "ID": "manageWelshDocuments",
     "Name": "Welsh – manage Welsh doc(s)",
     "Description": "Manage Welsh document(s)",
-    "DisplayOrder": 193,
+    "DisplayOrder": 1930,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2472,12 +2680,13 @@
     "ID": "markDocumentsForTranslation",
     "Name": "Welsh - mark docs for trans",
     "Description": "Mark documents for translation",
-    "DisplayOrder": 194,
+    "DisplayOrder": 1940,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "EventEnablingCondition": "languagePreferenceWelsh=\"Yes\"",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2486,12 +2695,13 @@
     "ID": "processAudioVideoWelsh",
     "Name": "Welsh - process A/V evidence",
     "Description": "Issue a Welsh direction notice based on audio and video evidence",
-    "DisplayOrder": 195,
+    "DisplayOrder": 1950,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2500,12 +2710,14 @@
     "ID": "requestTranslationFromWLU",
     "Name": "Welsh - request translations",
     "Description": "Request translation from WLU",
-    "DisplayOrder": 196,
+    "DisplayOrder": 1960,
     "EventEnablingCondition": "languagePreferenceWelsh=\"Yes\"",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2017",
@@ -2513,10 +2725,11 @@
     "ID": "updateWelshPreference",
     "Name": "Welsh - update lang preference",
     "Description": "Update Welsh Preference",
-    "DisplayOrder": 197,
+    "DisplayOrder": 1970,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2525,14 +2738,16 @@
     "ID": "uploadWelshDocument",
     "Name": "Welsh - upload translated doc",
     "Description": "Upload Welsh translated documents",
-    "DisplayOrder": 198,
+    "DisplayOrder": 1980,
     "EventEnablingCondition": "languagePreferenceWelsh=\"Yes\"",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
-    "SecurityClassification": "Public"
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2540,9 +2755,10 @@
     "ID": "reinstateVoidAppeal",
     "Name": "Reinstate case",
     "Description": "Deprecated - Resinstates a Void case to valid",
-    "DisplayOrder": 199,
+    "DisplayOrder": 1990,
     "PreConditionState(s)": "voidState",
     "PostConditionState": "appealCreated",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
@@ -2551,30 +2767,33 @@
     "ID": "migrateCase",
     "Name": "Migrate Case",
     "Description": "Migrate Case",
-    "DisplayOrder": 996,
+    "DisplayOrder": 9960,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
   {
-      "LiveFrom": "01/01/2018",
-      "CaseTypeID": "Benefit",
-      "ID": "createWithDwpTestCase",
-      "Name": "Create with FTA test test",
-      "Description": "Create a test case in withDwp state",
-      "DisplayOrder": 997,
-      "PostConditionState": "withDwp",
-      "SecurityClassification": "Public"
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "createWithDwpTestCase",
+    "Name": "Create with FTA test test",
+    "Description": "Create a test case in withDwp state",
+    "DisplayOrder": 9970,
+    "PostConditionState": "withDwp",
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public"
   },
   {
-      "LiveFrom": "01/01/2018",
-      "CaseTypeID": "Benefit",
-      "ID": "createResponseReceivedTestCase",
-      "Name": "Create response received test",
-      "Description": "Create a test case in responseReceived state",
-      "DisplayOrder": 998,
-      "PostConditionState": "responseReceived",
-      "SecurityClassification": "Public"
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "createResponseReceivedTestCase",
+    "Name": "Create response received test",
+    "Description": "Create a test case in responseReceived state",
+    "DisplayOrder": 9980,
+    "PostConditionState": "responseReceived",
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2582,8 +2801,9 @@
     "ID": "createTestCase",
     "Name": "Create test case",
     "Description": "Create a test case in validAppealCreated state",
-    "DisplayOrder": 999,
+    "DisplayOrder": 9990,
     "PostConditionState": "validAppeal",
+    "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   }
 ]
