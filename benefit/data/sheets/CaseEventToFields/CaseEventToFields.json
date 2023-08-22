@@ -32,8 +32,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
     "PageID": "1.0",
-    "PageLabel": "Handle Further Evidence",
-    "Publish": "Y"
+    "PageLabel": "Handle Further Evidence"
   },
   {
     "CaseEventID": "actionFurtherEvidence",
@@ -45,6 +44,19 @@
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
     "PageLabel": "Handle Further Evidence"
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "scannedDocumentTypes",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "21/08/2021",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0",
+    "PageLabel": "Handle Further Evidence",
+    "FieldShowCondition": "[STATE]=\"DoNotShow\"",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "actionFurtherEvidence",
