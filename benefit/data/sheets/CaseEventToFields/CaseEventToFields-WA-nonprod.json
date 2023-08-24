@@ -108,5 +108,83 @@
     "PageLabel": "SOR Request",
     "FieldShowCondition": "[STATE]=\"DoNotUse\"",
     "Publish": "Y"
+  },
+  {
+    "CaseEventID": "validSendToInterloc",
+    "CaseFieldID": "issueFinalDecisionDate",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "24/08/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Send to Interloc",
+    "FieldShowCondition": "[STATE]=\"DoNotUse\"",
+    "Publish": "Y"
+  },
+  {
+    "CaseEventID": "setAsideRefused",
+    "CaseFieldID": "issueFinalDecisionDate",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "24/08/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Set Aside Refused",
+    "FieldShowCondition": "[STATE]=\"DoNotUse\"",
+    "Publish": "Y"
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "issueFinalDecisionDate",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "24/08/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Action Further Evidence",
+    "FieldShowCondition": "[STATE]=\"DoNotUse\"",
+    "Publish": "Y"
+  },
+  {
+    "CaseEventID": "validSendToInterloc",
+    "CaseFieldID": "issueInterlocDecisionDate",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "24/08/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Send to Interloc",
+    "FieldShowCondition": "[STATE]=\"DoNotUse\"",
+    "Publish": "Y"
+  },
+  {
+    "CaseEventID": "setAsideRefused",
+    "CaseFieldID": "issueInterlocDecisionDate",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "24/08/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Set Aside Refused",
+    "FieldShowCondition": "[STATE]=\"DoNotUse\"",
+    "Publish": "Y"
+  },
+  {
+    "CaseEventID": "actionFurtherEvidence",
+    "CaseFieldID": "issueInterlocDecisionDate",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "24/08/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Action Further Evidence",
+    "FieldShowCondition": "[STATE]=\"DoNotUse\"",
+    "Publish": "Y"
   }
 ]
