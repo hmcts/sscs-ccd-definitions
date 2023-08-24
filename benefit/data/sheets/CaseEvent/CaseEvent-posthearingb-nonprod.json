@@ -39,7 +39,7 @@
     "LiveFrom": "09/05/2023",
     "CaseTypeID": "Benefit",
     "ID": "reviewAndSetAside",
-    "Name": "Permission to Appeal Remade",
+    "Name": "PTA decision remade",
     "Description": "Permission to appeal decision remade",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
