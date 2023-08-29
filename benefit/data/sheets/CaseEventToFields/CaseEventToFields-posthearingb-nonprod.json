@@ -187,6 +187,7 @@
     "PageLabel": "Permission to Appeal",
     "ShowSummaryChangeOption": "Y"
   },
+  {
     "LiveFrom": "07/07/2023",
     "CaseTypeID": "Benefit",
     "CaseEventID": "sendToFirstTier",
