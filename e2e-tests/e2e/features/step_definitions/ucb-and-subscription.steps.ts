@@ -249,7 +249,7 @@ Then('I subscribed to all parties to {string}', async function (isSubscribed) {
     );
     await anyCcdPage.setValueByElementId('subscriptions_supporterSubscription_mobile', '01234567890');
   }
-  await anyCcdPage.clickContinue();
+  await anyCcdPage.clickSubmit();
   await anyCcdPage.clickSubmit();
   await anyCcdPage.clickTab('Subscriptions');
 
