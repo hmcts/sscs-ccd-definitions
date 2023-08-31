@@ -4,7 +4,6 @@
   {"LiveFrom": "05/10/2022", "ID": "FL_postHearingReviewType", "ListElementCode": "statementOfReasons", "ListElement": "Statement of Reasons (Out of Time)"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionSetAside", "ListElementCode": "grant", "ListElement": "Grant Set Aside Application"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionSetAside", "ListElementCode": "refuse", "ListElement": "Refuse Set Aside Application"},
-  {"LiveFrom": "05/10/2022", "ID": "FL_actionCorrection", "ListElementCode": "grant", "ListElement": "Grant Correction Application"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionCorrection", "ListElementCode": "refuse", "ListElement": "Refuse Correction Application"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionStatementOfReasons", "ListElementCode": "extendTime", "ListElement": "Extend Time"},
   {"LiveFrom": "05/10/2022", "ID": "FL_actionStatementOfReasons", "ListElementCode": "refuse", "ListElement": "Refuse Statement of Reasons Application"},
