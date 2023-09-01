@@ -1,9 +1,9 @@
-[git
+[
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "scannedDocumentTypes", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "scannedDocumentTypes", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "scannedDocumentTypes", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "scannedDocumentTypes", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRU"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "uploadedWelshDocumentTypes", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "uploadedWelshDocumentTypes", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "caseNamePublic", "AccessProfile": "caseworker-wa-task-configuration", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "caseManagementCategory", "AccessProfile": "caseworker-wa-task-configuration", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "regionalProcessingCenter", "AccessProfile": "caseworker-wa-task-configuration", "CRUD": "R"},
