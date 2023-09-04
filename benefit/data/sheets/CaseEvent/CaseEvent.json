@@ -2517,7 +2517,7 @@
     "Name": "Write final decision",
     "Description": "Write a final decision notice for a case",
     "DisplayOrder": 1850,
-    "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;notListable;handlingError;listingError;postHearing",
+    "PreConditionState(s)": "incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;appealCreated;dormantAppealState;hearing;readyToList;responseReceived;validAppeal;withDwp;notListable;handlingError;listingError;postHearing;withUT",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
