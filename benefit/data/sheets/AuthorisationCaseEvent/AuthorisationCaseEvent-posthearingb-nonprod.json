@@ -22,5 +22,9 @@
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "sendToFirstTier", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "sendToFirstTier", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "upperTribunalDecision", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "upperTribunalDecision", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"}
+  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "upperTribunalDecision", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+  {"LiveFrom": "31/08/2023", "CaseTypeID": "Benefit", "CaseEventID": "remitToFirstTier", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "31/08/2023", "CaseTypeID": "Benefit", "CaseEventID": "remitToFirstTier", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "upperTribunalDecisionRemitted", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "upperTribunalDecisionRemitted", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"}
 ]

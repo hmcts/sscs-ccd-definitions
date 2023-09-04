@@ -125,5 +125,33 @@
     "PostConditionState": "withUpperTribunal",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "31/08/2023",
+    "CaseTypeID": "Benefit",
+    "ID": "remitToFirstTier",
+    "Name": "Remit to First Tier",
+    "Description": "Remit to First Tier Tribunal",
+    "DisplayOrder": 1275,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y"
+  },
+  {
+    "LiveFrom": "01/09/2023",
+    "CaseTypeID": "Benefit",
+    "ID": "upperTribunalDecisionRemitted",
+    "Name": "Upper Tribunal Decision",
+    "Description": "Upper Tribunal Decision",
+    "DisplayOrder": 500,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "notListable",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "Y"
   }
 ]

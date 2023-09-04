@@ -17,6 +17,7 @@
   {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "permissionToAppealApplication", "ListElement": "Permission to Appeal application"},
   {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "upperTribunalsDecisionRemade", "ListElement": "Upper Tribunals Decision Remade Notice"},
   {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "upperTribunalsDecisionRefused", "ListElement": "Upper Tribunals Decision Refused Notice"},
+  {"LiveFrom": "05/05/2023", "ID": "documentType", "ListElementCode": "upperTribunalsDecisionRemitted", "ListElement": "Upper Tribunals Decision Remitted Notice"},
   {"LiveFrom": "05/05/2023", "ID": "documentTypeWelsh", "ListElementCode": "libertyToApplyGranted", "ListElement": "Liberty to Apply granted decision notice"},
   {"LiveFrom": "05/05/2023", "ID": "documentTypeWelsh", "ListElementCode": "libertyToApplyRefused", "ListElement": "Liberty to Apply refused decision notice"},
   {"LiveFrom": "05/05/2023", "ID": "documentTypeWelsh", "ListElementCode": "libertyToApplyApplication", "ListElement": "Liberty to Apply application"},
