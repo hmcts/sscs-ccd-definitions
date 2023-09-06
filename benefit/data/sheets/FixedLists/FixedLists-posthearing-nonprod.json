@@ -44,5 +44,6 @@
   {"LiveFrom": "13/03/2023", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsIssued", "ListElement": "SOR Issued"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "reviewSetAsideApplication", "ListElement": "Review set aside application"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "reviewCorrectionApplication", "ListElement": "Review correction application"},
-  {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "reviewStatementOfReasonsApplication", "ListElement": "Review statement of reasons application"}
+  {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "statementOfReasonsApplication", "ListElement": "Statement of reasons application"},
+  {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "lateStatementOfReasonsApplication", "ListElement": "Late statement of reasons application"}
 ]

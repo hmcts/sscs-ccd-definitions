@@ -125,5 +125,16 @@
     "PostConditionState": "withUT",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/11/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "postHearingOther",
+    "Name": "Post hearing Other",
+    "Description": "Post hearing application 'Other'",
+    "DisplayOrder": 500,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "postHearing",
+    "SecurityClassification": "Public"
   }
 ]
