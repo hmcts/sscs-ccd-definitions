@@ -5,7 +5,7 @@ Feature: Update subscriptions
     Given I presetup an "UC" SYA case
     And I am signed in as a Case Officer
     When I navigate to an existing case
-    Then the case should be in "With FTA" state
+    Then the case should end in "With FTA" state
     And I choose "Update subscription"
 
   Scenario: Update Subscription - Yes

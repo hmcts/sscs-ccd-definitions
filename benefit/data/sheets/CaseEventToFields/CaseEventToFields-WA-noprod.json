@@ -1,0 +1,17 @@
+[
+  {
+    "CaseEventID": "updateNotListable",
+    "CaseFieldID": "interlocReviewState",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "FieldShowCondition": "[STATE]=\"doNotUse\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
+    "PageID": "updateNotListableInterlocReview",
+    "PageLabel": "Interlocutory review",
+    "ShowSummaryChangeOption": "N",
+    "Publish": "Y",
+    "PublishAs": "action"
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "LiveFrom": "18/03/2023",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-wa-task-configuration",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker,caseworker-wa-task-configuration",
+    "Disabled": "N"
+  }
+]

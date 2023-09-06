@@ -533,7 +533,6 @@
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "DisplayOrder" : "14","ListElementCode": "timeExtension", "ListElement": "Time extension"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "DisplayOrder" : "13", "ListElementCode": "reviewAudioVideoEvidence", "ListElement": "Review A/V evidence"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "DisplayOrder" : "15","ListElementCode": "rejectHearingRecordingRequest", "ListElement": "Reject hearing recording request"},
-  {"LiveFrom": "07/12/2022", "ID": "FL_interlocReferralReason", "DisplayOrder" : "12","ListElementCode": "postHearingRequest", "ListElement": "Post Hearing Request"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "DisplayOrder" : "11","ListElementCode": "phmeRequest", "ListElement": "PHE request"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "DisplayOrder" : "10","ListElementCode": "over300Pages", "ListElement": "Over 300 pages"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "DisplayOrder" : "9","ListElementCode": "over13months", "ListElement": "Over 13 months"},
@@ -954,5 +953,7 @@
   {"LiveFrom": "04/07/2022", "ID": "FL_caseOutcome", "ListElementCode": "8", "ListElement": "Decision Revised Against Appellant"},
   {"LiveFrom": "04/07/2022", "ID": "FL_caseOutcome", "ListElementCode": "63", "ListElement": "Decision Reserved"},
   {"LiveFrom": "04/07/2022", "ID": "FL_caseOutcome", "ListElementCode": "10", "ListElement": "Decision in favour of Appellant"},
-  {"LiveFrom": "04/07/2022", "ID": "FL_caseOutcome", "ListElementCode": "39", "ListElement": "% Disablement Increased <80%, No Benefit award"}
+  {"LiveFrom": "04/07/2022", "ID": "FL_caseOutcome", "ListElementCode": "39", "ListElement": "% Disablement Increased <80%, No Benefit award"},
+  {"LiveFrom": "04/07/2022", "ID": "FL_confidentialityType", "ListElementCode": "general", "ListElement": "Send to all parties"},
+  {"LiveFrom": "04/07/2022", "ID": "FL_confidentialityType", "ListElementCode": "confidential", "ListElement": "Select specific recipients"}
 ]
