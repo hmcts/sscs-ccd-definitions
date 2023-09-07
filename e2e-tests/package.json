@@ -70,6 +70,6 @@
   },
   "packageManager": "yarn@3.5.0",
   "devDependencies": {
-    "@cucumber/cucumber": "8.5.3"
+    "@cucumber/cucumber": "8.11.1"
   }
 }
