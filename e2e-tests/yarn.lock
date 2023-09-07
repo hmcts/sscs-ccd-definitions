@@ -1609,14 +1609,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colors@npm:1.1.2":
-  version: 1.1.2
-  resolution: "colors@npm:1.1.2"
-  checksum: 1f73a78b9a40c6658ed58d0aca6b71164bc301fa5766a7a2cad8cecdb5b7856dab089039def5d6137f9735e23689d2454050e962b5ca0432aa6f273e4fa6a92e
-  languageName: node
-  linkType: hard
-
-"colors@npm:^1.1.2":
+"colors@npm:1.4.0, colors@npm:^1.1.2":
   version: 1.4.0
   resolution: "colors@npm:1.4.0"
   checksum: 98aa2c2418ad87dedf25d781be69dc5fc5908e279d9d30c34d8b702e586a0474605b3a189511482b9d5ed0d20c867515d22749537f7bc546256c6014f3ebdcec
@@ -2140,7 +2133,7 @@ __metadata:
     eslint-plugin-jsdoc: 39.6.4
     eslint-plugin-prettier: 4.2.1
     jasmine-core: 3.2.1
-    jasmine-spec-reporter: 4.2.1
+    jasmine-spec-reporter: 7.0.0
     moment: 2.29.4
     multiple-cucumber-html-reporter: ^3.0.2
     path: 0.12.7
@@ -3852,12 +3845,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jasmine-spec-reporter@npm:4.2.1":
-  version: 4.2.1
-  resolution: "jasmine-spec-reporter@npm:4.2.1"
+"jasmine-spec-reporter@npm:7.0.0":
+  version: 7.0.0
+  resolution: "jasmine-spec-reporter@npm:7.0.0"
   dependencies:
-    colors: 1.1.2
-  checksum: 4f8e2dea4f5e78a3522305b63547c2f9746aeb75d2c8494fbda776f64c6092f46d3ee5a1946198af2e15355c2c72225679a53bfa224d54e8eee3e8ed5084c7f3
+    colors: 1.4.0
+  checksum: d5dd5ee26aad98158653776111231889b21b6cffa136d712a814058ad099301045fa2b95f887fcdeaa20e2a82c3896ffd43b47e25190ddfc921782b09088224e
   languageName: node
   linkType: hard
 
