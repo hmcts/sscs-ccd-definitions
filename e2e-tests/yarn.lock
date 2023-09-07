@@ -577,10 +577,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chai@npm:4.1.6":
-  version: 4.1.6
-  resolution: "@types/chai@npm:4.1.6"
-  checksum: 3824157a02229b7d168bd5f8740c764475c436a94fd2f7d4b98e0ecc75cd9cb59cf62b81cb343ce7775c0547d71dedc0bf3197dffc763d5b46cd70a40e30b35c
+"@types/chai@npm:4.3.6":
+  version: 4.3.6
+  resolution: "@types/chai@npm:4.3.6"
+  checksum: 32a6c18bf53fb3dbd89d1bfcadb1c6fd45cc0007c34e436393cc37a0a5a556f9e6a21d1e8dd71674c40cc36589d2f30bf4d9369d7787021e54d6e997b0d7300a
   languageName: node
   linkType: hard
 
@@ -1370,17 +1370,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chai@npm:4.2.0":
-  version: 4.2.0
-  resolution: "chai@npm:4.2.0"
+"chai@npm:4.3.8":
+  version: 4.3.8
+  resolution: "chai@npm:4.3.8"
   dependencies:
     assertion-error: ^1.1.0
     check-error: ^1.0.2
-    deep-eql: ^3.0.1
+    deep-eql: ^4.1.2
     get-func-name: ^2.0.0
-    pathval: ^1.1.0
+    loupe: ^2.3.1
+    pathval: ^1.1.1
     type-detect: ^4.0.5
-  checksum: 47881a30dabb6bad94db8a4ee5c914e9eff21113e721c25f8c210f52f211fa5539b3da9558884ecf16e0bab8548c9c590e9c952cb28b213f953cb152d61b4f34
+  checksum: 29e0984ed13308319cadc35437c8ef0a3e271544d226c991bf7e3b6d771bf89707321669e11d05e362bc0ad0bd26585079b989d1032f3c106e3bb95d7f079cce
   languageName: node
   linkType: hard
 
@@ -1951,12 +1952,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deep-eql@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "deep-eql@npm:3.0.1"
+"deep-eql@npm:^4.1.2":
+  version: 4.1.3
+  resolution: "deep-eql@npm:4.1.3"
   dependencies:
     type-detect: ^4.0.0
-  checksum: 4f4c9fb79eb994fb6e81d4aa8b063adc40c00f831588aa65e20857d5d52f15fb23034a6576ecf886f7ff6222d5ae42e71e9b7d57113e0715b1df7ea1e812b125
+  checksum: 7f6d30cb41c713973dc07eaadded848b2ab0b835e518a88b91bea72f34e08c4c71d167a722a6f302d3a6108f05afd8e6d7650689a84d5d29ec7fe6220420397f
   languageName: node
   linkType: hard
 
@@ -2120,14 +2121,14 @@ __metadata:
     "@hmcts/eslint-config": 1.4.0
     "@hmcts/nodejs-logging": 4.0.4
     "@sinonjs/fake-timers": ^10.0.2
-    "@types/chai": 4.1.6
+    "@types/chai": 4.3.6
     "@types/config": 3.3.0
     "@types/jasmine": 4.3.1
     "@types/node": 18.11.17
     "@typescript-eslint/eslint-plugin": 5.46.1
     "@typescript-eslint/parser": 5.46.1
     axe-core: 4.6.3
-    chai: 4.2.0
+    chai: 4.3.8
     chai-as-promised: 7.1.1
     codelyzer: 4.5.0
     config: ^3.3.8
@@ -4195,6 +4196,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"loupe@npm:^2.3.1":
+  version: 2.3.6
+  resolution: "loupe@npm:2.3.6"
+  dependencies:
+    get-func-name: ^2.0.0
+  checksum: cc83f1b124a1df7384601d72d8d1f5fe95fd7a8185469fec48bb2e4027e45243949e7a013e8d91051a138451ff0552310c32aa9786e60b6a30d1e801bdc2163f
+  languageName: node
+  linkType: hard
+
 "lower-case@npm:^1.1.1":
   version: 1.1.4
   resolution: "lower-case@npm:1.1.4"
@@ -4799,7 +4809,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pathval@npm:^1.1.0":
+"pathval@npm:^1.1.1":
   version: 1.1.1
   resolution: "pathval@npm:1.1.1"
   checksum: 090e3147716647fb7fb5b4b8c8e5b55e5d0a6086d085b6cd23f3d3c01fcf0ff56fd3cc22f2f4a033bd2e46ed55d61ed8379e123b42afe7d531a2a5fc8bb556d6
