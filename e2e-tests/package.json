@@ -37,7 +37,7 @@
     "@types/node": "18.11.17",
     "@typescript-eslint/eslint-plugin": "5.46.1",
     "@typescript-eslint/parser": "5.46.1",
-    "axe-core": "4.6.3",
+    "axe-core": "4.8.0",
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
     "codelyzer": "4.5.0",
