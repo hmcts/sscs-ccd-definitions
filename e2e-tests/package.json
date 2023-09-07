@@ -61,7 +61,7 @@
     "protractor-cucumber-framework": "9.0.0",
     "protractor-retry": "2.0.1",
     "puppeteer": "^19.11.1",
-    "request-promise": "4.2.5",
+    "request-promise": "4.2.6",
     "rxjs": "7.8.0",
     "selenium-webdriver": "4.8.1",
     "ts-loader": "5.2.2",

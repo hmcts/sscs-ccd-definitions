@@ -2150,7 +2150,7 @@ __metadata:
     protractor-cucumber-framework: 9.0.0
     protractor-retry: 2.0.1
     puppeteer: ^19.11.1
-    request-promise: 4.2.5
+    request-promise: 4.2.6
     rxjs: 7.8.0
     selenium-webdriver: 4.8.1
     ts-loader: 5.2.2
@@ -5256,28 +5256,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"request-promise-core@npm:1.1.3":
-  version: 1.1.3
-  resolution: "request-promise-core@npm:1.1.3"
+"request-promise-core@npm:1.1.4":
+  version: 1.1.4
+  resolution: "request-promise-core@npm:1.1.4"
   dependencies:
-    lodash: ^4.17.15
+    lodash: ^4.17.19
   peerDependencies:
     request: ^2.34
-  checksum: 8572b5dd21c8927b85d78c4d7ea8a3c9438b10100143372e0e6b90a55fb98f4119a6e57df6f7adc213432b50712b0a8039e32fb0673c0243cdd14ddef3f5ef68
+  checksum: c798bafd552961e36fbf5023b1d081e81c3995ab390f1bc8ef38a711ba3fe4312eb94dbd61887073d7356c3499b9380947d7f62faa805797c0dc50f039425699
   languageName: node
   linkType: hard
 
-"request-promise@npm:4.2.5":
-  version: 4.2.5
-  resolution: "request-promise@npm:4.2.5"
+"request-promise@npm:4.2.6":
+  version: 4.2.6
+  resolution: "request-promise@npm:4.2.6"
   dependencies:
     bluebird: ^3.5.0
-    request-promise-core: 1.1.3
+    request-promise-core: 1.1.4
     stealthy-require: ^1.1.1
     tough-cookie: ^2.3.3
   peerDependencies:
     request: ^2.34
-  checksum: d4d4934cf51b4cac6a49e3433b1b29ac6f6bf8ec7561cf19ac61c2445c6ba895bee67d98647e7d61badf83664a06166c675a5777990f33ca4f709076beef3e9e
+  checksum: 1856c718cb4b888db8b6a206537ecac47390ea4fbdaef00da9a6169a03dd66a95c38493713f927f78a19bfeb28dcb28f5d20f6ab927d644d9e0626847d808f9f
   languageName: node
   linkType: hard
 
