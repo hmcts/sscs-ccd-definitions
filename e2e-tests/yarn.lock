@@ -19,6 +19,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@angular/compiler@npm:9.0.0":
+  version: 9.0.0
+  resolution: "@angular/compiler@npm:9.0.0"
+  peerDependencies:
+    tslib: ^1.10.0
+  checksum: 95f6188eac71c7cd0c6bd58c667be899ed126763b4125b8d5a950b25b58e7f496ad4d15af66f7db1c8b87ca30f945b8ef6d88dda8511fd2ac30ef99a730d7c67
+  languageName: node
+  linkType: hard
+
 "@angular/core@npm:11.2.14":
   version: 11.2.14
   resolution: "@angular/core@npm:11.2.14"
@@ -28,6 +37,17 @@ __metadata:
     rxjs: ^6.5.3
     zone.js: ^0.10.2 || ^0.11.3
   checksum: 8dd40d6c90246726e8b6c1bf715e7ea688da7ea71da5742737d2d04ce85ccc5378e00a6aa2d796bcfaa82d11e4677b551ceda347a76242e7b0feea09e1a2e92f
+  languageName: node
+  linkType: hard
+
+"@angular/core@npm:9.0.0":
+  version: 9.0.0
+  resolution: "@angular/core@npm:9.0.0"
+  peerDependencies:
+    rxjs: ^6.5.3
+    tslib: ^1.10.0
+    zone.js: ~0.10.2
+  checksum: 2bb890ad57372f06fcbcfff3895d2e97ef3ca33caafda092ba977f36c1d4bb8a37f047d968566f6ae569d82ea9cdb6c109282848d343d339e594bc7e800c8be1
   languageName: node
   linkType: hard
 
@@ -924,10 +944,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"app-root-path@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "app-root-path@npm:2.1.0"
-  checksum: 2e67a94573ff2967a83c686d614142534aea2a1ac52492428d091ee673c6a46704f5332de01ae4460c6b522cc1a0906792b28796d7db3fc9c3819b111feb5eac
+"app-root-path@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "app-root-path@npm:3.1.0"
+  checksum: e3db3957aee197143a0f6c75e39fe89b19e7244f28b4f2944f7276a9c526d2a7ab2d115b4b2d70a51a65a9a3ca17506690e5b36f75a068a7e5a13f8c092389ba
   languageName: node
   linkType: hard
 
@@ -942,6 +962,16 @@ __metadata:
   version: 2.0.1
   resolution: "argparse@npm:2.0.1"
   checksum: 83644b56493e89a254bae05702abf3a1101b4fa4d0ca31df1c9985275a5a5bd47b3c27b7fa0b71098d41114d8ca000e6ed90cad764b306f8a503665e4d517ced
+  languageName: node
+  linkType: hard
+
+"aria-query@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "aria-query@npm:3.0.0"
+  dependencies:
+    ast-types-flow: 0.0.7
+    commander: ^2.11.0
+  checksum: 52861d7d31321a23f27e5f95a437ddafd20e5eee03ff6e4319eeb1e98dce103f03ccaea34acb5bf2810580f71a9ac1658200fa3d49435279e99df2908f213f1b
   languageName: node
   linkType: hard
 
@@ -1069,6 +1099,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ast-types-flow@npm:0.0.7":
+  version: 0.0.7
+  resolution: "ast-types-flow@npm:0.0.7"
+  checksum: a26dcc2182ffee111cad7c471759b0bda22d3b7ebacf27c348b22c55f16896b18ab0a4d03b85b4020dce7f3e634b8f00b593888f622915096ea1927fa51866c4
+  languageName: node
+  linkType: hard
+
 "async@npm:~1.0.0":
   version: 1.0.0
   resolution: "async@npm:1.0.0"
@@ -1117,6 +1154,15 @@ __metadata:
   version: 4.6.2
   resolution: "axe-core@npm:4.6.2"
   checksum: 81523eeaf101a3a129545a936d448d235ecf1f8c0daccdee224d29f63bec716fa38cf1a65c8462548b1f995624277eed790d9d9977ae40ba692c4cadf1196403
+  languageName: node
+  linkType: hard
+
+"axobject-query@npm:2.0.2":
+  version: 2.0.2
+  resolution: "axobject-query@npm:2.0.2"
+  dependencies:
+    ast-types-flow: 0.0.7
+  checksum: 0d3c64a8277711fe543624e0d114d661a2b3b451dd796116dc963893ac77f8dd7df42fdf5bbf37a1234adfa6f2196ee3bd0096407e133bce547c2a725f4288ee
   languageName: node
   linkType: hard
 
@@ -1542,21 +1588,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"codelyzer@npm:4.5.0":
-  version: 4.5.0
-  resolution: "codelyzer@npm:4.5.0"
+"codelyzer@npm:6.0.2":
+  version: 6.0.2
+  resolution: "codelyzer@npm:6.0.2"
   dependencies:
-    app-root-path: ^2.1.0
-    css-selector-tokenizer: ^0.7.0
+    "@angular/compiler": 9.0.0
+    "@angular/core": 9.0.0
+    app-root-path: ^3.0.0
+    aria-query: ^3.0.0
+    axobject-query: 2.0.2
+    css-selector-tokenizer: ^0.7.1
     cssauron: ^1.4.0
+    damerau-levenshtein: ^1.0.4
+    rxjs: ^6.5.3
     semver-dsl: ^1.0.1
     source-map: ^0.5.7
-    sprintf-js: ^1.1.1
+    sprintf-js: ^1.1.2
+    tslib: ^1.10.0
+    zone.js: ~0.10.3
   peerDependencies:
-    "@angular/compiler": ">=2.3.1 <8.0.0 || >7.0.0-beta <8.0.0"
-    "@angular/core": ">=2.3.1 <8.0.0 || >7.0.0-beta <8.0.0"
-    tslint: ^5.0.0
-  checksum: 58d2bfb0d2673aec49dc4921694db40ddaa1977edb13d3e78d2d2d7cde59f0f9847b89facd373c724cdaf862ebd8c032fd176a305f9353b58e06a0bfbf450854
+    "@angular/compiler": ">=2.3.1 <13.0.0 || ^12.0.0-next || ^12.1.0-next || ^12.2.0-next"
+    "@angular/core": ">=2.3.1 <13.0.0 || ^12.0.0-next || ^12.1.0-next || ^12.2.0-next"
+    tslint: ^5.0.0 || ^6.0.0
+  checksum: 8f9f20f2196ccf6c0e549fd894c37ec707c54e01f9afc795c13452b4abc6f72890293a9ebff22f93241e3d9db4f982566fca4d12eca5b77e9cd4f9553767c5a4
   languageName: node
   linkType: hard
 
@@ -1643,6 +1697,13 @@ __metadata:
   version: 9.3.0
   resolution: "commander@npm:9.3.0"
   checksum: d421ce66fee25792a1470c69aa8d1b86434bf873a96483aa92c8267f81a6f20c6f7c426f5e82f88ac50a8ec4855d3f2787aebcdef8aa559e1080a2337a95a217
+  languageName: node
+  linkType: hard
+
+"commander@npm:^2.11.0":
+  version: 2.20.3
+  resolution: "commander@npm:2.20.3"
+  checksum: ab8c07884e42c3a8dbc5dd9592c606176c7eb5c1ca5ff274bcf907039b2c41de3626f684ea75ccf4d361ba004bbaff1f577d5384c155f3871e456bdf27becf9e
   languageName: node
   linkType: hard
 
@@ -1773,14 +1834,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-selector-tokenizer@npm:^0.7.0":
-  version: 0.7.0
-  resolution: "css-selector-tokenizer@npm:0.7.0"
+"css-selector-tokenizer@npm:^0.7.1":
+  version: 0.7.3
+  resolution: "css-selector-tokenizer@npm:0.7.3"
   dependencies:
-    cssesc: ^0.1.0
-    fastparse: ^1.1.1
-    regexpu-core: ^1.0.0
-  checksum: 4d648369d605c9b130dd5db8e1f020d8063798a0ab413dfc3a935d500130026060e53c24127cd4b3aeb6d9154b8c4f77491b9719aa15358174f4d6c6c370a118
+    cssesc: ^3.0.0
+    fastparse: ^1.1.2
+  checksum: 92560a9616a8bc073b88c678aa04f22c599ac23c5f8587e60f4861069e2d5aeb37b722af581ae3c5fbce453bed7a893d9c3e06830912e6d28badc3b8b99acd24
   languageName: node
   linkType: hard
 
@@ -1793,12 +1853,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssesc@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "cssesc@npm:0.1.0"
+"cssesc@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "cssesc@npm:3.0.0"
   bin:
     cssesc: bin/cssesc
-  checksum: 9e0e807039461c7c51154b90dabf04de596b8d5a29dbf9e5e33eb51abd3501190e85d37187f5e12e477ecc5d1f2d320024637199aa9f6bfeb78ae57974846c05
+  checksum: f8c4ababffbc5e2ddf2fa9957dda1ee4af6048e22aeda1869d0d00843223c1b13ad3f5d88b51caa46c994225eacb636b764eb807a8883e2fb6f99b4f4e8c48b2
   languageName: node
   linkType: hard
 
@@ -1877,6 +1937,13 @@ __metadata:
     es5-ext: ^0.10.50
     type: ^1.0.1
   checksum: 49ca0639c7b822db670de93d4fbce44b4aa072cd848c76292c9978a8cd0fff1028763020ff4b0f147bd77bfe29b4c7f82e0f71ade76b2a06100543cdfd948d19
+  languageName: node
+  linkType: hard
+
+"damerau-levenshtein@npm:^1.0.4":
+  version: 1.0.8
+  resolution: "damerau-levenshtein@npm:1.0.8"
+  checksum: d240b7757544460ae0586a341a53110ab0a61126570ef2d8c731e3eab3f0cb6e488e2609e6a69b46727635de49be20b071688698744417ff1b6c1d7ccd03e0de
   languageName: node
   linkType: hard
 
@@ -2129,7 +2196,7 @@ __metadata:
     axe-core: 4.6.3
     chai: 4.2.0
     chai-as-promised: 7.1.1
-    codelyzer: 4.5.0
+    codelyzer: 6.0.2
     config: ^3.3.8
     cross-env: 4.0.0
     cucumber: ^6.0.7
@@ -2761,10 +2828,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fastparse@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "fastparse@npm:1.1.1"
-  checksum: d2b6f8be94816f6d1ddc9c963068e615917bc89d47346eeae3dac2d170f02782a8a2d0bd6458b1517b1e918bc297aae2502152820aa75a27c9e37d557e75548c
+"fastparse@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "fastparse@npm:1.1.2"
+  checksum: c4d199809dc4e8acafeb786be49481cc9144de296e2d54df4540ccfd868d0df73afc649aba70a748925eb32bbc4208b723d6288adf92382275031a8c7e10c0aa
   languageName: node
   linkType: hard
 
@@ -3917,15 +3984,6 @@ __metadata:
   version: 3.1.0
   resolution: "jsdoc-type-pratt-parser@npm:3.1.0"
   checksum: 2f437b57621f1e481918165f6cf0e48256628a9e510d8b3f88a2ab667bf2128bf8b94c628b57c43e78f555ca61983e9c282814703840dc091d2623992214a061
-  languageName: node
-  linkType: hard
-
-"jsesc@npm:~0.5.0":
-  version: 0.5.0
-  resolution: "jsesc@npm:0.5.0"
-  bin:
-    jsesc: bin/jsesc
-  checksum: b8b44cbfc92f198ad972fba706ee6a1dfa7485321ee8c0b25f5cedd538dcb20cde3197de16a7265430fce8277a12db066219369e3d51055038946039f6e20e17
   languageName: node
   linkType: hard
 
@@ -5153,13 +5211,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerate@npm:^1.2.1":
-  version: 1.4.0
-  resolution: "regenerate@npm:1.4.0"
-  checksum: 8b74ff9d6becc577eecf59ce6eb969c1ce4e6fdabf262d024decd59757741a4598d867cde10dc4ef7ca2a1a415bbf05ddda839cd046050c909117966e118bd5b
-  languageName: node
-  linkType: hard
-
 "regenerator-runtime@npm:^0.13.11":
   version: 0.13.11
   resolution: "regenerator-runtime@npm:0.13.11"
@@ -5210,35 +5261,6 @@ __metadata:
   version: 3.2.0
   resolution: "regexpp@npm:3.2.0"
   checksum: a78dc5c7158ad9ddcfe01aa9144f46e192ddbfa7b263895a70a5c6c73edd9ce85faf7c0430e59ac38839e1734e275b9c3de5c57ee3ab6edc0e0b1bdebefccef8
-  languageName: node
-  linkType: hard
-
-"regexpu-core@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "regexpu-core@npm:1.0.0"
-  dependencies:
-    regenerate: ^1.2.1
-    regjsgen: ^0.2.0
-    regjsparser: ^0.1.4
-  checksum: dba4513f73e918dd56bf3eef6fd513024008639c4a4e57be0bdd22f158a5c923fa7e67589d5cd2171ba73ac72d3c99af421dd5f0110797a531b31c21fbc32893
-  languageName: node
-  linkType: hard
-
-"regjsgen@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "regjsgen@npm:0.2.0"
-  checksum: 1f3ae570151e2c29193cdc5a5890c0b83cd8c5029ed69315b0ea303bc2644f9ab5d536d2288fd9b70293fd351d7dd7fc1fc99ebe24554015c894dbce883bcf2b
-  languageName: node
-  linkType: hard
-
-"regjsparser@npm:^0.1.4":
-  version: 0.1.5
-  resolution: "regjsparser@npm:0.1.5"
-  dependencies:
-    jsesc: ~0.5.0
-  bin:
-    regjsparser: bin/parser
-  checksum: 1feba2f3f2d4f1ef9f5f4e0f20c827cf866d4f65c51502eb64db4d4dd9c656f8c70f6c79537c892bf0fc9592c96f732519f7d8ad4a82f3b622756118ac737970
   languageName: node
   linkType: hard
 
@@ -5463,6 +5485,15 @@ __metadata:
   dependencies:
     tslib: ^2.1.0
   checksum: 61b4d4fd323c1043d8d6ceb91f24183b28bcf5def4f01ca111511d5c6b66755bc5578587fe714ef5d67cf4c9f2e26f4490d4e1d8cabf9bd5967687835e9866a2
+  languageName: node
+  linkType: hard
+
+"rxjs@npm:^6.5.3":
+  version: 6.6.7
+  resolution: "rxjs@npm:6.6.7"
+  dependencies:
+    tslib: ^1.9.0
+  checksum: bc334edef1bb8bbf56590b0b25734ba0deaf8825b703256a93714308ea36dff8a11d25533671adf8e104e5e8f256aa6fdfe39b2e248cdbd7a5f90c260acbbd1b
   languageName: node
   linkType: hard
 
@@ -5823,10 +5854,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sprintf-js@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "sprintf-js@npm:1.1.1"
-  checksum: 3e283f3c06b93bdab2b1fcdffd320dedb0db1a3582da6a3ca1edb6a157311503b7eafe2e6f1de4467060dce028220ac350b111d1796cd28bab725afb72fc7e0c
+"sprintf-js@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "sprintf-js@npm:1.1.2"
+  checksum: d4bb46464632b335e5faed381bd331157e0af64915a98ede833452663bc672823db49d7531c32d58798e85236581fb7342fd0270531ffc8f914e186187bf1c90
   languageName: node
   linkType: hard
 
@@ -6359,7 +6390,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.8.1":
+"tslib@npm:^1.10.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
@@ -7027,5 +7058,12 @@ __metadata:
     property-expr: ^2.0.4
     toposort: ^2.0.2
   checksum: 43a16786b47cc910fed4891cebdd89df6d6e31702e9462e8f969c73eac88551ce750732608012201ea6b93802c8847cb0aa27b5d57370640f4ecf30f9f97d4b0
+  languageName: node
+  linkType: hard
+
+"zone.js@npm:~0.10.3":
+  version: 0.10.3
+  resolution: "zone.js@npm:0.10.3"
+  checksum: 69e0194b377dff8eb5ce7fa202334a0e0bd0a530f3bbd61b5b2a53af29fd67f058d47aa1cdd8a340cdf9e59f3b7c0d01dbd87d5f1563bcfb5dd6b2c761b21590
   languageName: node
   linkType: hard
