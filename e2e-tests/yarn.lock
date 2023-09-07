@@ -591,10 +591,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jasmine@npm:4.3.1":
-  version: 4.3.1
-  resolution: "@types/jasmine@npm:4.3.1"
-  checksum: d31fc78f7e70ed4aed20fa59400be3de9f204c473a7755aba29df90eb7d9d19d4b04b821a07e30732e67ef6021c8191eb259211264e287c053832c1940ae6e71
+"@types/jasmine@npm:4.3.5":
+  version: 4.3.5
+  resolution: "@types/jasmine@npm:4.3.5"
+  checksum: 33839af6efd42bed948cb49de117821649de952228b3bf4743af09ef9d1736a6e9e9500750f04ffa74e308f00781f697092dadde4e038e2f041e741b087ceb9b
   languageName: node
   linkType: hard
 
@@ -2122,7 +2122,7 @@ __metadata:
     "@sinonjs/fake-timers": ^10.0.2
     "@types/chai": 4.1.6
     "@types/config": 3.3.0
-    "@types/jasmine": 4.3.1
+    "@types/jasmine": 4.3.5
     "@types/node": 18.11.17
     "@typescript-eslint/eslint-plugin": 5.46.1
     "@typescript-eslint/parser": 5.46.1
