@@ -2153,7 +2153,7 @@ __metadata:
     request-promise: 4.2.5
     rxjs: 7.8.0
     selenium-webdriver: 4.8.1
-    ts-loader: 5.2.2
+    ts-loader: 5.4.5
     ts-node: 10.9.1
     typescript: 5.0.2
   languageName: unknown
@@ -6294,9 +6294,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-loader@npm:5.2.2":
-  version: 5.2.2
-  resolution: "ts-loader@npm:5.2.2"
+"ts-loader@npm:5.4.5":
+  version: 5.4.5
+  resolution: "ts-loader@npm:5.4.5"
   dependencies:
     chalk: ^2.3.0
     enhanced-resolve: ^4.0.0
@@ -6305,7 +6305,7 @@ __metadata:
     semver: ^5.0.1
   peerDependencies:
     typescript: "*"
-  checksum: 3cdfda467b44991e4bee3e9e9895301c79160932ab935bc7800a70996d8ebb4a915d71a350a9d770a51e4e07b60ee4a44acc12408b6a9c72fb3ff6d12612bb98
+  checksum: 87b77b91062c97cd7b89067df5531a0c2657480eabe40746f826ff4571e68ec2f399b73706dcdd58555879547f8f0c359b5ae3c618668df877a920f2c91328ac
   languageName: node
   linkType: hard
 
