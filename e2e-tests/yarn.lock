@@ -2139,7 +2139,7 @@ __metadata:
     eslint-plugin-import: 2.26.0
     eslint-plugin-jsdoc: 39.6.4
     eslint-plugin-prettier: 4.2.1
-    jasmine-core: 3.2.1
+    jasmine-core: 5.1.1
     jasmine-spec-reporter: 4.2.1
     moment: 2.29.4
     multiple-cucumber-html-reporter: ^3.0.2
@@ -3838,10 +3838,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jasmine-core@npm:3.2.1":
-  version: 3.2.1
-  resolution: "jasmine-core@npm:3.2.1"
-  checksum: d245e3d43a0943bb60497be716df4e26ff4bb1a59051b410634ea08b96b6c6259e7ea4d9652405432ba147cb1d0297877a92470f4c4f0c5ba3f65c9635eef450
+"jasmine-core@npm:5.1.1":
+  version: 5.1.1
+  resolution: "jasmine-core@npm:5.1.1"
+  checksum: 84f1b3a0af7769c9bd514cdde1e366e7798a0b1110efa5a09157c653c53cdad77e1c84bffd5cafe07649c9dba7141cd602c444ac37813f111f8f5b5e3f8f6c99
   languageName: node
   linkType: hard
 
