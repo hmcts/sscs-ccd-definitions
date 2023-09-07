@@ -2930,14 +2930,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:^11.1.0":
-  version: 11.1.0
-  resolution: "fs-extra@npm:11.1.0"
+"fs-extra@npm:^11.1.1":
+  version: 11.1.1
+  resolution: "fs-extra@npm:11.1.1"
   dependencies:
     graceful-fs: ^4.2.0
     jsonfile: ^6.0.1
     universalify: ^2.0.0
-  checksum: 5ca476103fa1f5ff4a9b3c4f331548f8a3c1881edaae323a4415d3153b5dc11dc6a981c8d1dd93eec8367ceee27b53f8bd27eecbbf66ffcdd04927510c171e7f
+  checksum: fb883c68245b2d777fbc1f2082c9efb084eaa2bbf9fddaa366130d196c03608eebef7fb490541276429ee1ca99f317e2d73e96f5ca0999eefedf5a624ae1edfd
   languageName: node
   linkType: hard
 
@@ -4230,10 +4230,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:^3.1.1":
-  version: 3.2.0
-  resolution: "luxon@npm:3.2.0"
-  checksum: 9a54fc68f1735259095299616c7d01967fb52a9c3500c6b31f97c477574122c62dc0f119d13abc04daaf545e1b8f37a63642b45cd04a240ff59987ceb6ec02c0
+"luxon@npm:^3.3.0":
+  version: 3.4.3
+  resolution: "luxon@npm:3.4.3"
+  checksum: 3eade81506224d038ed24035a0cd0dd4887848d7eba9361dce9ad8ef81380596a68153240be3988721f9690c624fb449fcf8fd8c3fc0681a6a8496faf48e92a3
   languageName: node
   linkType: hard
 
@@ -4425,17 +4425,17 @@ __metadata:
   linkType: hard
 
 "multiple-cucumber-html-reporter@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "multiple-cucumber-html-reporter@npm:3.0.2"
+  version: 3.4.0
+  resolution: "multiple-cucumber-html-reporter@npm:3.4.0"
   dependencies:
     find: ^0.3.0
-    fs-extra: ^11.1.0
+    fs-extra: ^11.1.1
     jsonfile: ^6.1.0
     lodash: ^4.17.21
-    luxon: ^3.1.1
-    open: ^8.4.0
+    luxon: ^3.3.0
+    open: ^8.4.2
     uuid: ^9.0.0
-  checksum: 66d4cebbe93563857c9d4a1ee0151df6e8308b9803853b87b58ca5d68bb1d7c9526a202da8ca936c4ef283310330d1f2a22109c08492ea3226cf57b2cd32aceb
+  checksum: 4973fc9437afe211e9d09f0e579d6e6e647daf018ca2247dd27153f6af2926938abb29f07982dc9c3175005b0f68c8a5142cd4041308e574a28041af2ddef219
   languageName: node
   linkType: hard
 
@@ -4628,14 +4628,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"open@npm:^8.4.0":
-  version: 8.4.0
-  resolution: "open@npm:8.4.0"
+"open@npm:^8.4.2":
+  version: 8.4.2
+  resolution: "open@npm:8.4.2"
   dependencies:
     define-lazy-prop: ^2.0.0
     is-docker: ^2.1.1
     is-wsl: ^2.2.0
-  checksum: e9545bec64cdbf30a0c35c1bdc310344adf8428a117f7d8df3c0af0a0a24c513b304916a6d9b11db0190ff7225c2d578885080b761ed46a3d5f6f1eebb98b63c
+  checksum: 6388bfff21b40cb9bd8f913f9130d107f2ed4724ea81a8fd29798ee322b361ca31fa2cdfb491a5c31e43a3996cfe9566741238c7a741ada8d7af1cb78d85cf26
   languageName: node
   linkType: hard
 
