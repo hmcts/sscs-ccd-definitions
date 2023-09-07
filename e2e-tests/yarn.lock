@@ -5,29 +5,29 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@angular/compiler@npm:15.2.8":
-  version: 15.2.8
-  resolution: "@angular/compiler@npm:15.2.8"
+"@angular/compiler@npm:16.2.4":
+  version: 16.2.4
+  resolution: "@angular/compiler@npm:16.2.4"
   dependencies:
     tslib: ^2.3.0
   peerDependencies:
-    "@angular/core": 15.2.8
+    "@angular/core": 16.2.4
   peerDependenciesMeta:
     "@angular/core":
       optional: true
-  checksum: 77e5331e3ab33de3871a91f5bfdbc51641300a53071cec049d3d59c75b2dd4864cb8040826948cc3c239dd077acca17e90c29f321022b2a5d7d3c4ca8c7ace78
+  checksum: 835c08d9116666888dd4a74bdd6ab6d8344d7f711bb8fad3bbf9dd332c7470f854780aae4e2075214ba014c8679e2cbc92893fc38897ff6507de30711a4a5e86
   languageName: node
   linkType: hard
 
-"@angular/core@npm:11.2.14":
-  version: 11.2.14
-  resolution: "@angular/core@npm:11.2.14"
+"@angular/core@npm:16.2.4":
+  version: 16.2.4
+  resolution: "@angular/core@npm:16.2.4"
   dependencies:
-    tslib: ^2.0.0
+    tslib: ^2.3.0
   peerDependencies:
-    rxjs: ^6.5.3
-    zone.js: ^0.10.2 || ^0.11.3
-  checksum: 8dd40d6c90246726e8b6c1bf715e7ea688da7ea71da5742737d2d04ce85ccc5378e00a6aa2d796bcfaa82d11e4677b551ceda347a76242e7b0feea09e1a2e92f
+    rxjs: ^6.5.3 || ^7.4.0
+    zone.js: ~0.13.0
+  checksum: 7cf8372ba94adca199ade9fa516bbc9b7ed2e94fc221deb38f15da9d76589998468496168fe2b763401331d02ceac2f98c1eed060b235c4058c9b9d906d86dcb
   languageName: node
   linkType: hard
 
@@ -2110,8 +2110,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "e2e-tests@workspace:."
   dependencies:
-    "@angular/compiler": 15.2.8
-    "@angular/core": 11.2.14
+    "@angular/compiler": 16.2.4
+    "@angular/core": 16.2.4
     "@axe-core/webdriverjs": 4.5.2
     "@cucumber/cucumber": 8.5.3
     "@cucumber/messages": 21.0.1
@@ -6363,13 +6363,6 @@ __metadata:
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.0.0":
-  version: 2.4.0
-  resolution: "tslib@npm:2.4.0"
-  checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
   languageName: node
   linkType: hard
 
