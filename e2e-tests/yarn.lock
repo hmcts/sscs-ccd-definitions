@@ -236,15 +236,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cucumber/messages@npm:21.0.1":
-  version: 21.0.1
-  resolution: "@cucumber/messages@npm:21.0.1"
+"@cucumber/messages@npm:22.0.0":
+  version: 22.0.0
+  resolution: "@cucumber/messages@npm:22.0.0"
   dependencies:
-    "@types/uuid": 8.3.4
+    "@types/uuid": 9.0.1
     class-transformer: 0.5.1
     reflect-metadata: 0.1.13
     uuid: 9.0.0
-  checksum: 01849f35bb38593a3833174e141b78b576e70128be015ebd2e61a86cf0c0e4e43a15ff38ce2a3c6404b5e99dc9cd6b269b8bcb4d014f2e023bf968fe70fdc867
+  checksum: e9e8f3bda063ad87c23e2e5daed9e2965fb3e65c08ad5d27213d0f63d0e12574b27b2834d9360f958ad4418f7f5f22f5d78d63e45da52356ee8dfeaa3153e56c
   languageName: node
   linkType: hard
 
@@ -651,6 +651,13 @@ __metadata:
   version: 8.3.4
   resolution: "@types/uuid@npm:8.3.4"
   checksum: 6f11f3ff70f30210edaa8071422d405e9c1d4e53abbe50fdce365150d3c698fe7bbff65c1e71ae080cbfb8fded860dbb5e174da96fdbbdfcaa3fb3daa474d20f
+  languageName: node
+  linkType: hard
+
+"@types/uuid@npm:9.0.1":
+  version: 9.0.1
+  resolution: "@types/uuid@npm:9.0.1"
+  checksum: c472b8a77cbeded4bc529220b8611afa39bd64677f507838f8083d8aac8033b1f88cb9ddaa2f8589e0dcd2317291d0f6e1379f82d5ceebd6f74f3b4825288e00
   languageName: node
   linkType: hard
 
@@ -2114,7 +2121,7 @@ __metadata:
     "@angular/core": 11.2.14
     "@axe-core/webdriverjs": 4.5.2
     "@cucumber/cucumber": 8.5.3
-    "@cucumber/messages": 21.0.1
+    "@cucumber/messages": 22.0.0
     "@cucumber/pretty-formatter": 1.0.0
     "@faker-js/faker": 7.6.0
     "@hmcts/eslint-config": 1.4.0
