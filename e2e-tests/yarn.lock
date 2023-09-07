@@ -260,18 +260,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cucumber/messages@npm:^20.0.0":
-  version: 20.0.0
-  resolution: "@cucumber/messages@npm:20.0.0"
-  dependencies:
-    "@types/uuid": 8.3.4
-    class-transformer: 0.5.1
-    reflect-metadata: 0.1.13
-    uuid: 9.0.0
-  checksum: b1ef3a22909dc169a5575bd66e0e9d95fa21ca643b48c5783e66c7287cd54703e80f770f4fb49f333c1caad888676d2c192ee0d376abc606b8d1410c1e144c86
-  languageName: node
-  linkType: hard
-
 "@cucumber/pretty-formatter@npm:1.0.0":
   version: 1.0.0
   resolution: "@cucumber/pretty-formatter@npm:1.0.0"
@@ -398,6 +386,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@noble/hashes@npm:^1.1.5":
+  version: 1.3.2
+  resolution: "@noble/hashes@npm:1.3.2"
+  checksum: fe23536b436539d13f90e4b9be843cc63b1b17666a07634a2b1259dded6f490be3d050249e6af98076ea8f2ea0d56f578773c2197f2aa0eeaa5fba5bc18ba474
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -425,6 +420,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@paralleldrive/cuid2@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "@paralleldrive/cuid2@npm:2.2.2"
+  dependencies:
+    "@noble/hashes": ^1.1.5
+  checksum: f7f6ac70e0268ec2c72e555719240d5c2c9a859ce541ac1c637eed3f3ee971b42881d299dedafbded53e7365b9e98176c5a31c442c1112f7e9e7306f2fd0ecbb
+  languageName: node
+  linkType: hard
+
 "@puppeteer/browsers@npm:0.5.0":
   version: 0.5.0
   resolution: "@puppeteer/browsers@npm:0.5.0"
@@ -448,70 +452,72 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@serenity-js/assertions@npm:3.0.0-rc.38":
-  version: 3.0.0-rc.38
-  resolution: "@serenity-js/assertions@npm:3.0.0-rc.38"
+"@serenity-js/assertions@npm:3.10.1":
+  version: 3.10.1
+  resolution: "@serenity-js/assertions@npm:3.10.1"
   dependencies:
-    "@serenity-js/core": 3.0.0-rc.38
-    tiny-types: ^1.19.0
-  checksum: e5e2dda28a0ec8f622fa62113866c91e742ff1c179994719a3b516d951872a7a7e58895c46db587f02c07f102d50b199c96ea8f54b94308040d73278f2700dd3
+    "@serenity-js/core": 3.10.1
+    tiny-types: ^1.20.0
+  checksum: 206f4838bd839163e167b316b3d64047bf9055db01d51b51ced1f7be04c99f7c912b97a28854135a2c33376fbea3b0354e0d531d28fdfb7892a14bc84f4dc563
   languageName: node
   linkType: hard
 
-"@serenity-js/core@npm:3.0.0-rc.38, @serenity-js/core@npm:^3.0.0-rc.37":
-  version: 3.0.0-rc.38
-  resolution: "@serenity-js/core@npm:3.0.0-rc.38"
+"@serenity-js/core@npm:3.10.1, @serenity-js/core@npm:^3.10.1":
+  version: 3.10.1
+  resolution: "@serenity-js/core@npm:3.10.1"
   dependencies:
-    cuid: ^2.1.8
+    "@paralleldrive/cuid2": ^2.2.2
+    chalk: ^4.1.2
     diff: ^5.1.0
     error-stack-parser: 2.1.4
-    fast-glob: ^3.2.12
+    fast-glob: ^3.3.1
     filenamify: ^4.3.0
-    graceful-fs: ^4.2.10
+    graceful-fs: ^4.2.11
     moment: ^2.29.4
-    semver: ^7.3.8
-    tiny-types: ^1.19.0
+    semver: ^7.5.4
+    tiny-types: ^1.20.0
     upath: ^2.0.1
     validate-npm-package-name: ^5.0.0
-  checksum: ee3816a07e9277cd192651c07cc196c9b2c8cc7c02992e4c0fbfedf7a61a36cf601d11380fe69f0dc103c94c7184a8c309db2613781af8f9066812dc45d60a6f
+  checksum: ba11c8d813db1ae595cd48c15a94e1b60a1c4b4560463b888ec406435f1fc7c3315e9d19233e8952944b09d7d36106a1b8a2a3f4b11bb9a7399fccb71a69a84d
   languageName: node
   linkType: hard
 
-"@serenity-js/cucumber@npm:^3.0.0-rc.37":
-  version: 3.0.0-rc.38
-  resolution: "@serenity-js/cucumber@npm:3.0.0-rc.38"
+"@serenity-js/cucumber@npm:^3.10.1":
+  version: 3.10.1
+  resolution: "@serenity-js/cucumber@npm:3.10.1"
   dependencies:
-    "@cucumber/messages": ^20.0.0
-    "@serenity-js/core": 3.0.0-rc.38
+    "@cucumber/messages": 21.0.1
+    "@serenity-js/core": 3.10.1
     cli-table3: ^0.6.3
     gherkin: 5.1.0
-    tiny-types: ^1.19.0
+    tiny-types: ^1.20.0
   peerDependencies:
-    "@cucumber/cucumber": ^7.3.2 || ^8.5.0
+    "@cucumber/cucumber": ^7.3.2 || ^8.5.0 || ^9.1.0
     cucumber: ^1.3.3 || ^2.3.1 || ^3.2.1 || ^4.2.1 || ^5.0.0 || ^6.0.0
   peerDependenciesMeta:
     "@cucumber/cucumber":
       optional: true
     cucumber:
       optional: true
-  checksum: 1d4e8d932ed9c6b6b7c4b0432d0048a43321cba02f63b2892fb41dc895cf2c8a2949f69fa0f270517c599c1525a76544d520be8655f57b143259136700b8e73b
+  checksum: 71438dd7327c130ba6032617a12db360fcaa2e3bc054dee0798e465c1cdd7c4c4b45b01f9989ed8a42bb3e6b6073f8625ae4134baf2adc92e58a7baaf338975a
   languageName: node
   linkType: hard
 
-"@serenity-js/protractor@npm:^3.0.0-rc.37":
-  version: 3.0.0-rc.38
-  resolution: "@serenity-js/protractor@npm:3.0.0-rc.38"
+"@serenity-js/protractor@npm:^3.10.1":
+  version: 3.10.1
+  resolution: "@serenity-js/protractor@npm:3.10.1"
   dependencies:
-    "@serenity-js/assertions": 3.0.0-rc.38
-    "@serenity-js/core": 3.0.0-rc.38
-    deepmerge: ^4.2.2
+    "@serenity-js/core": 3.10.1
+    "@serenity-js/web": 3.10.1
+    deepmerge: ^4.3.1
     query-selector-shadow-dom: ^1.0.1
     selenium-webdriver: ^3.6.0
-    tiny-types: ^1.19.0
+    tiny-types: ^1.20.0
   peerDependencies:
-    "@serenity-js/cucumber": ^3.0.0-rc
-    "@serenity-js/jasmine": ^3.0.0-rc
-    "@serenity-js/mocha": ^3.0.0-rc
+    "@serenity-js/cucumber": ^3.0.0
+    "@serenity-js/jasmine": ^3.0.0
+    "@serenity-js/mocha": ^3.0.0
+    "@serenity-js/web": ^3.0.0
     protractor: ^5.0.0 || ^7.0.0
   peerDependenciesMeta:
     "@serenity-js/cucumber":
@@ -520,7 +526,18 @@ __metadata:
       optional: true
     "@serenity-js/mocha":
       optional: true
-  checksum: 12d9e35037c64aa840f6fa0ac910ceae0319148fe78b16e05196a1f002c7b6ac0b35c1dff01cfab1867558d7d3771aa299cb3ee457a861144810aa776cc1fb2a
+  checksum: 0524244dc88b99282343eb9730e7291ebe97280076b12f92ac98f810428c82f96cd970bccfe3010366153d347d71d04dd68aa5a3b7bb80f8b2be6073748ff5d0
+  languageName: node
+  linkType: hard
+
+"@serenity-js/web@npm:3.10.1":
+  version: 3.10.1
+  resolution: "@serenity-js/web@npm:3.10.1"
+  dependencies:
+    "@serenity-js/assertions": 3.10.1
+    "@serenity-js/core": 3.10.1
+    tiny-types: ^1.20.0
+  checksum: 9ef1eb67a84676739862cb14f31d0d39e8a87161410cd86d31756b076bd0436a339d46bce37af54b73642d2cf9c085370b54650c268cdfabe7f6636e94cf5994
   languageName: node
   linkType: hard
 
@@ -1856,13 +1873,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cuid@npm:^2.1.8":
-  version: 2.1.8
-  resolution: "cuid@npm:2.1.8"
-  checksum: 12b85b3f5150a6f0b9e4f345c8d98299d74647419151751fa1132f6702fe2b5388ceceb1c9b49bad7cab1b3ac033c7cedea8ffc034930f90005b8a4345025288
-  languageName: node
-  linkType: hard
-
 "cycle@npm:1.0.x":
   version: 1.0.3
   resolution: "cycle@npm:1.0.3"
@@ -1967,10 +1977,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:^4.2.2":
-  version: 4.2.2
-  resolution: "deepmerge@npm:4.2.2"
-  checksum: a8c43a1ed8d6d1ed2b5bf569fa4c8eb9f0924034baf75d5d406e47e157a451075c4db353efea7b6bcc56ec48116a8ce72fccf867b6e078e7c561904b5897530b
+"deepmerge@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "deepmerge@npm:4.3.1"
+  checksum: 2024c6a980a1b7128084170c4cf56b0fd58a63f2da1660dcfe977415f27b17dbe5888668b59d0b063753f3220719d5e400b7f113609489c90160bb9a5518d052
   languageName: node
   linkType: hard
 
@@ -2147,7 +2157,7 @@ __metadata:
     prettier: 2.8.1
     protractor: 7.0.0
     protractor-beautiful-reporter: 1.3.6
-    protractor-cucumber-framework: 9.0.0
+    protractor-cucumber-framework: 9.7.0
     protractor-retry: 2.0.1
     puppeteer: ^19.11.1
     request-promise: 4.2.5
@@ -2734,7 +2744,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.2.9":
   version: 3.2.12
   resolution: "fast-glob@npm:3.2.12"
   dependencies:
@@ -2744,6 +2754,19 @@ __metadata:
     merge2: ^1.3.0
     micromatch: ^4.0.4
   checksum: 0b1990f6ce831c7e28c4d505edcdaad8e27e88ab9fa65eedadb730438cfc7cde4910d6c975d6b7b8dc8a73da4773702ebcfcd6e3518e73938bb1383badfe01c2
+  languageName: node
+  linkType: hard
+
+"fast-glob@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "fast-glob@npm:3.3.1"
+  dependencies:
+    "@nodelib/fs.stat": ^2.0.2
+    "@nodelib/fs.walk": ^1.2.3
+    glob-parent: ^5.1.2
+    merge2: ^1.3.0
+    micromatch: ^4.0.4
+  checksum: b6f3add6403e02cf3a798bfbb1183d0f6da2afd368f27456010c0bc1f9640aea308243d4cb2c0ab142f618276e65ecb8be1661d7c62a7b4e5ba774b9ce5432e5
   languageName: node
   linkType: hard
 
@@ -3178,10 +3201,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.2.10":
-  version: 4.2.10
-  resolution: "graceful-fs@npm:4.2.10"
-  checksum: 3f109d70ae123951905d85032ebeae3c2a5a7a997430df00ea30df0e3a6c60cf6689b109654d6fdacd28810a053348c4d14642da1d075049e6be1ba5216218da
+"graceful-fs@npm:^4.2.11":
+  version: 4.2.11
+  resolution: "graceful-fs@npm:4.2.11"
+  checksum: ac85f94da92d8eb6b7f5a8b20ce65e43d66761c55ce85ac96df6865308390da45a8d3f0296dd3a663de65d30ba497bd46c696cc1e248c72b13d6d567138a4fc7
   languageName: node
   linkType: hard
 
@@ -4922,15 +4945,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"protractor-cucumber-framework@npm:9.0.0":
-  version: 9.0.0
-  resolution: "protractor-cucumber-framework@npm:9.0.0"
+"protractor-cucumber-framework@npm:9.7.0":
+  version: 9.7.0
+  resolution: "protractor-cucumber-framework@npm:9.7.0"
   dependencies:
-    "@serenity-js/core": ^3.0.0-rc.37
-    "@serenity-js/cucumber": ^3.0.0-rc.37
-    "@serenity-js/protractor": ^3.0.0-rc.37
+    "@serenity-js/core": ^3.10.1
+    "@serenity-js/cucumber": ^3.10.1
+    "@serenity-js/protractor": ^3.10.1
   peerDependencies:
-    "@cucumber/cucumber": ^7.3.2 || ^8.0.0
+    "@cucumber/cucumber": ^7.3.2 || ^8.0.0 || ^9.0.0
     cucumber: ^1.3.3 || ^2.3.1 || ^3.2.1 || ^4.2.1 || ^5.0.0 || ^6.0.0
     protractor: ^5.0.0 || ^7.0.0
   peerDependenciesMeta:
@@ -4938,7 +4961,7 @@ __metadata:
       optional: true
     cucumber:
       optional: true
-  checksum: fdcfca244305f51e6e63cbf7b7c15d55d18f701f9d9cd20920ed1a84785ebe12fd2459cb498fe5001773b9057706cb795b169e01c9e7742d3b418921fea1c267
+  checksum: 134f1b3b315e01bc44b601199a820fb2e4f0255f89b94eb3f38148a54ad462cfe4574bd425d0456ee70907ad015de2ea84427f5a77eddd8ad670f6113f708aff
   languageName: node
   linkType: hard
 
@@ -5602,6 +5625,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"semver@npm:^7.5.4":
+  version: 7.5.4
+  resolution: "semver@npm:7.5.4"
+  dependencies:
+    lru-cache: ^6.0.0
+  bin:
+    semver: bin/semver.js
+  checksum: 12d8ad952fa353b0995bf180cdac205a4068b759a140e5d3c608317098b3575ac2f1e09182206bf2eb26120e1c0ed8fb92c48c592f6099680de56bb071423ca3
+  languageName: node
+  linkType: hard
+
 "serialize-error@npm:^4.1.0":
   version: 4.1.0
   resolution: "serialize-error@npm:4.1.0"
@@ -6162,10 +6196,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tiny-types@npm:^1.19.0":
-  version: 1.19.0
-  resolution: "tiny-types@npm:1.19.0"
-  checksum: b8095aa29daf4ec22915275f14a5af25ae93aec2bbf7953214b98ce868537ba18fb45d3e03e12a7b41baa02afad5f46dbd4afb09b20ceacdbf276049d894a0a6
+"tiny-types@npm:^1.20.0":
+  version: 1.20.0
+  resolution: "tiny-types@npm:1.20.0"
+  checksum: b15f971f6f01971904fe3a98e170da7d9cf68c8efc5b7116fe2bad5f83368aa3ded725785d611edc477765ca2d01072bb127485cb0af4e7fcb853242cca64dc3
   languageName: node
   linkType: hard
 
