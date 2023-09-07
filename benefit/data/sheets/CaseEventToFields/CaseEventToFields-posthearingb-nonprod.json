@@ -175,12 +175,12 @@
   {
     "LiveFrom": "01/09/2023",
     "CaseTypeID": "Benefit",
-    "CaseEventID": "remitToFirstTier",
-    "CaseFieldID": "remitToFirstTier",
+    "CaseEventID": "remitFromUpperTribunal",
+    "CaseFieldID": "remitFromUpperTribunal",
     "PageFieldDisplayOrder": 1,
     "DisplayContext": "MANDATORY",
-    "PageID": "Remit_To_First_Tier",
-    "PageLabel": "Remit to First Tier",
+    "PageID": "Remit_From_Upper_Tribunal",
+    "PageLabel": "Remit from UT",
     "PageDisplayOrder": 1
   }
 ]

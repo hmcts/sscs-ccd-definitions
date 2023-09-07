@@ -129,9 +129,9 @@
   {
     "LiveFrom": "31/08/2023",
     "CaseTypeID": "Benefit",
-    "ID": "remitToFirstTier",
-    "Name": "Remit to First Tier",
-    "Description": "Remit to First Tier Tribunal",
+    "ID": "remitFromUpperTribunal",
+    "Name": "Remit from UT",
+    "Description": "Remit from Upper Tribunal",
     "DisplayOrder": 1275,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",

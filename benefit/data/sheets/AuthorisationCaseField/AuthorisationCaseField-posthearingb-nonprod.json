@@ -23,8 +23,8 @@
   {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "sendToFirstTier", "AccessProfile": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "sendToFirstTier", "AccessProfile": "caseworker-sscs-dwpresponsewriter", "CRUD": "CRUD"},
   {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "sendToFirstTier", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
-  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "remitToFirstTier", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "remitToFirstTier", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
-  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "remitToFirstTier", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "remitToFirstTier", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"}
+  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "remitFromUpperTribunal", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "remitFromUpperTribunal", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseFieldID": "remitFromUpperTribunal", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "remitFromUpperTribunal", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"}
 ]
