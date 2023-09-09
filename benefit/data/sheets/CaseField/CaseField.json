@@ -76,6 +76,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reservedToJudge", "Label": "Reserved to (Judge):", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "linkedCase", "Label": "Linked case(s)", "FieldType": "Collection", "FieldTypeParameter": "CaseLink", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "scannedDocuments", "Label": "Scanned Documents", "FieldType": "Collection", "FieldTypeParameter": "ScannedDocument", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "scannedDocumentTypes", "Label": "Scanned Document Types", "FieldType": "MultiSelectList", "FieldTypeParameter": "ScannedDocumentType", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "audioVideoEvidence", "Label": "Evidence", "FieldType": "Collection", "FieldTypeParameter": "AudioVideoEvidence", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "evidenceHandled", "Label": "Further evidence handled", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "originalSender", "Label": "Original Sender", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
