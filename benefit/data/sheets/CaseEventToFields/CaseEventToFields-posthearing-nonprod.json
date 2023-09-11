@@ -305,19 +305,6 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateDocument",
-    "CaseEventID": "adminActionCorrection",
-    "CaseFieldID": "finalDecisionNoticeGenerated",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "READONLY",
-    "LiveFrom": "17/04/2023",
-    "CaseEventFieldLabel": "Final decision notice generated",
-    "PageDisplayOrder": 3,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "Type_Selection",
-    "FieldShowCondition": "adminCorrectionType = \"hiddenField\""
-  },
-  {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=previewDecisionNotice",
     "CaseEventID": "adminActionCorrection",
     "CaseFieldID": "writeFinalDecisionPreviewDocument",
