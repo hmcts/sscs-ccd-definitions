@@ -344,6 +344,19 @@
     "PageLabel": "Issue direction",
     "ShowSummaryChangeOption": "Y"
   },
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "writeFinalDecisionLabelCorrection",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "typeOfAppeal",
+    "PageLabel": "Type of appeal",
+    "FieldShowCondition": "[STATE]=\"dormantAppealState\" OR [STATE]=\"postHearing\"",
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
+  },
   {
     "CaseEventID": "sORWrite",
     "CaseFieldID": "generateNotice",
