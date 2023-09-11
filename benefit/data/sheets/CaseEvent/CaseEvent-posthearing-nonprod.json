@@ -39,7 +39,7 @@
     "Description": "Correction Granted",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
