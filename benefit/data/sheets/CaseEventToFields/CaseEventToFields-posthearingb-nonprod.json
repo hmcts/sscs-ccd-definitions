@@ -139,7 +139,7 @@
     "CaseFieldID": "permissionToAppealGenerateNotice",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "permissionToAppeal.action = \"refuse\"",
+    "FieldShowCondition": "permissionToAppeal.action = \"grant\" OR permissionToAppeal.action = \"refuse\" OR permissionToAppeal.action = \"review\"",
     "LiveFrom": "05/10/2022",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
