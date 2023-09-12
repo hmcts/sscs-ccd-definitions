@@ -47,5 +47,6 @@
   {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsSignedBy", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsSignedRole", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "22/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "adminCorrectionType", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
-  {"LiveFrom": "22/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "adminCorrectionType", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"}
+  {"LiveFrom": "22/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "adminCorrectionType", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "correctionFinalDecisionInProgress", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
 ]
