@@ -204,7 +204,7 @@
     "Name": "Admin - send to Appeal Created",
     "Description": "Deprecated - Admin - send to Appeal Created",
     "DisplayOrder": 150,
-    "PreConditionState(s)": "dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp;handlingError",
+    "PreConditionState(s)": "dormantAppealState;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp;handlingError;listingError;postHearing;withUT",
     "PostConditionState": "appealCreated",
     "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
@@ -215,7 +215,7 @@
     "ID": "adminSendToDormantAppealState",
     "Name": "Admin - send to Dormant",
     "DisplayOrder": 160,
-    "PreConditionState(s)": "appealCreated;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp;notListable;handlingError",
+    "PreConditionState(s)": "appealCreated;draft;draftArchived;hearing;incompleteApplication;incompleteApplicationInformationReqsted;interlocutoryReviewState;readyToList;responseReceived;validAppeal;voidState;withDwp;notListable;handlingError;listingError;postHearing;withUT",
     "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "ShowEventNotes": "Y",
