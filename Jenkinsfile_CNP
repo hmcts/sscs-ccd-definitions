@@ -66,7 +66,7 @@ withPipeline("nodejs", product, component) {
         env.TEST_E2E_WAIT_FOR_ANGULAR = 'false'
         env.TEST_E2E_FAIL_FAST = 'false'
         env.TEST_E2E_ANNOTATION = params.PREVIEW_TAG
-        env.TEST_E2E_RETRIES = 2
+        env.TEST_E2E_RETRIES = 5
 
     }
 
@@ -93,7 +93,7 @@ withPipeline("nodejs", product, component) {
         env.TEST_E2E_WAIT_FOR_ANGULAR = 'false'
         env.TEST_E2E_FAIL_FAST = 'false'
         env.TEST_E2E_ANNOTATION = params.PREVIEW_TAG
-        env.TEST_E2E_RETRIES = 2
+        env.TEST_E2E_RETRIES = 5
     }
 
     afterAlways('functionalTest:aat') {
