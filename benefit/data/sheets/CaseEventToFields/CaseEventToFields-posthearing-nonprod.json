@@ -333,6 +333,17 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "prePostHearing",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Issue direction",
+    "ShowSummaryChangeOption": "Y"
+  },
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "writeFinalDecisionLabelCorrection",
     "CaseTypeID": "Benefit",
