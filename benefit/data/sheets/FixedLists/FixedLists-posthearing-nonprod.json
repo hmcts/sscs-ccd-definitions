@@ -46,8 +46,10 @@
   {"LiveFrom": "13/03/2023", "ID": "FL_dwpStates", "ListElementCode": "correctionRequested", "ListElement": "Correction Requested"},
   {"LiveFrom": "11/01/2022", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsGranted", "ListElement": "SOR Granted"},
   {"LiveFrom": "11/01/2022", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsRefused", "ListElement": "SOR Refused"},
-  {"LiveFrom": "13/03/2023", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsRequested", "ListElement": "SOR requested"},
+  {"LiveFrom": "13/03/2023", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsRequested", "ListElement": "SOR Requested"},
   {"LiveFrom": "13/03/2023", "ID": "FL_dwpStates", "ListElementCode": "statementOfReasonsIssued", "ListElement": "SOR Issued"},
+  {"LiveFrom": "13/03/2023", "ID": "FL_prePostHearing", "ListElementCode": "pre", "ListElement": "Pre Hearing"},
+  {"LiveFrom": "13/03/2023", "ID": "FL_prePostHearing", "ListElementCode": "post", "ListElement": "Post Hearing"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "reviewSetAsideApplication", "ListElement": "Review set aside application"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "reviewCorrectionApplication", "ListElement": "Review correction application"},
   {"LiveFrom": "01/01/2018", "ID": "FL_interlocReferralReason", "ListElementCode": "reviewStatementOfReasonsApplication", "ListElement": "Review statement of reasons application"}
