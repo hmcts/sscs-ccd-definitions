@@ -210,8 +210,9 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=verifyNotice",
     "CaseEventID": "postHearingReview",
-    "CaseFieldID": "previewDocument",
+    "CaseFieldID": "postHearingPreviewDocument",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "05/10/2022",
@@ -220,7 +221,6 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "Notice_Staging",
     "PageLabel": "Notice Document",
-    "PageShowCondition": "setAside.action = \"refuse\" OR setAside.action = \"grant\" OR correction.action = \"refuse\" OR postHearingReviewType=\"statementOfReasons\" OR postHearingReviewType=\"libertyToApply\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
@@ -331,6 +331,32 @@
     "PageID": "Request_Staging",
     "PageLabel": "Request Document",
     "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "directionIssued",
+    "CaseFieldID": "prePostHearing",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Issue direction",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "writeFinalDecisionLabelCorrection",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "typeOfAppeal",
+    "PageLabel": "Type of appeal",
+    "FieldShowCondition": "[STATE]=\"dormantAppealState\" OR [STATE]=\"postHearing\"",
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "sORWrite",
