@@ -12,6 +12,8 @@
   {"LiveFrom": "13/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "sORRefused", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "sORRefused", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "13/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "sORWrite", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
+  {"LiveFrom": "13/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "sORWrite", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
+  {"LiveFrom": "13/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "sORWrite", "AccessProfile": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "sORWrite", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "02/06/2023", "CaseTypeID": "Benefit", "CaseEventID": "postHearingAppSorWritten", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "06/10/2022", "CaseTypeID": "Benefit", "CaseEventID": "postHearingAppSorWritten", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
