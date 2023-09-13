@@ -162,6 +162,32 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "permissionToAppealSignedBy",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "permissionToAppealGenerateNotice = \"Yes\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "Permission_To_Appeal",
+    "PageLabel": "Permission to Appeal",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "permissionToAppealSignedRole",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "permissionToAppealGenerateNotice = \"Yes\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "Permission_To_Appeal",
+    "PageLabel": "Permission to Appeal",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "LiveFrom": "07/07/2023",
     "CaseTypeID": "Benefit",
     "CaseEventID": "sendToFirstTier",
