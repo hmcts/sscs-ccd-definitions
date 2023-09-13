@@ -210,8 +210,9 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=verifyNotice",
     "CaseEventID": "postHearingReview",
-    "CaseFieldID": "previewDocument",
+    "CaseFieldID": "postHearingPreviewDocument",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "05/10/2022",
@@ -220,7 +221,6 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "Notice_Staging",
     "PageLabel": "Notice Document",
-    "PageShowCondition": "setAside.action = \"refuse\" OR setAside.action = \"grant\" OR correction.action = \"refuse\" OR postHearingReviewType=\"statementOfReasons\" OR postHearingReviewType=\"libertyToApply\"",
     "ShowSummaryChangeOption": "Y"
   },
   {
