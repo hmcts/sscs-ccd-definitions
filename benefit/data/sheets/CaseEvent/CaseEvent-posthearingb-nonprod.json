@@ -39,8 +39,8 @@
     "LiveFrom": "09/05/2023",
     "CaseTypeID": "Benefit",
     "ID": "reviewAndSetAside",
-    "Name": "Permission to Appeal Remade",
-    "Description": "Permission to appeal decision remade",
+    "Name": "PTA Decision Remade",
+    "Description": "Permission to Appeal Decision Remade",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
     "PostConditionState": "dormantAppealState",
@@ -134,7 +134,7 @@
     "Description": "Bundle created for Upper Tribunal",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "withUpperTribunal",
+    "PostConditionState": "withUT",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   }
