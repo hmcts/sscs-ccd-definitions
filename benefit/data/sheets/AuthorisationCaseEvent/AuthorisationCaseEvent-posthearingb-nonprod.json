@@ -27,5 +27,6 @@
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "reserveToInterlocJudge", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "reserveToInterlocJudge", "AccessProfile": "caseworker-sscs-registrar", "CRUD": "CRUD"},
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "reserveToInterlocJudge", "AccessProfile": "caseworker-sscs-judge", "CRUD": "CRUD"},
-  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "reserveToInterlocJudge", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"}
+  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "reserveToInterlocJudge", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
+  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "reserveToInterlocJudge", "AccessProfile": "caseworker-sscs", "CRUD": "R"}
 ]
