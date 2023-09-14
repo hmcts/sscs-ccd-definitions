@@ -38,6 +38,14 @@
   {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "correctionSignedRole", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsGenerateNotice", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsBodyContent", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "writeFinalDecisionLabelCorrection", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionIdamSurname", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionIssuedDate", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionGeneratedDate", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionHeldBefore", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionHeldAt", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsSignedBy", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsSignedRole", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "statementOfReasonsSignedRole", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "12/04/2023", "CaseTypeID": "Benefit", "CaseFieldID": "prePostHearing", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "postHearingPreviewDocument", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
 ]

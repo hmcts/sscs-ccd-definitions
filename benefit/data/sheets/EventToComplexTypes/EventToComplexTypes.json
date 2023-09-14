@@ -1001,9 +1001,9 @@
   {
     "CaseEventID": "caseUpdated",
     "CaseFieldID": "appeal",
-    "ListElementCode": "hearingOptions.languages",
+    "ListElementCode": "hearingOptions.languagesList",
     "ID": "appealHearingOptionsLanguages",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 43,
     "PageID": "1.0",
