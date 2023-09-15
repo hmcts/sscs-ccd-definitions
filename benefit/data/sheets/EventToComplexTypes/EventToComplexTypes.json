@@ -889,6 +889,16 @@
   {
     "CaseEventID": "caseUpdated",
     "CaseFieldID": "appeal",
+    "ListElementCode": "benefitType.descriptionSelection",
+    "ID": "appealBenefitTypeDescriptionSelection",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 32,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "appeal",
     "ListElementCode": "hearingType",
     "ID": "appealHearingType",
     "DisplayContext": "OPTIONAL",
