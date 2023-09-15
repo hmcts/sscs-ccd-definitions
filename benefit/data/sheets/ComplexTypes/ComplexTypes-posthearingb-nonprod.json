@@ -5,7 +5,8 @@
   {"LiveFrom": "09/05/2023", "ID": "libertyToApply", "ListElementCode": "requestFormat", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_requestFormat", "ElementLabel": "Upload or enter details of your post hearing request", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/05/2023", "ID": "sendToFirstTier", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionSendToFirstTier", "ElementLabel": "Decision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "09/05/2023", "ID": "sendToFirstTier", "ListElementCode": "decisionDocument", "FieldType": "Document", "ElementLabel": "Decision Document", "FieldTypeParameter": "FL_actionSendToFirstTier", "HintText": "All documents must be PDF formatted", "RegularExpression": ".pdf", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "judicialUserPanel", "ListElementCode": "assignedTo", "FieldType": "JudicialUser", "ElementLabel": "Judge", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "judicialUserPanel", "ListElementCode": "medicalMember", "FieldType": "JudicialUser", "ElementLabel": "Medical member", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "judicialUserPanel", "ListElementCode": "disabilityQualifiedMember", "FieldType": "JudicialUser", "ElementLabel": "Disability qualified member", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "judicialUserPanel", "ListElementCode": "assignedTo", "FieldType": "YesOrNo", "ElementLabel": "Judge", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "judicialUserPanel", "ListElementCode": "medicalMember", "FieldType": "YesOrNo", "ElementLabel": "Medical member", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "judicialUserPanel", "ListElementCode": "disabilityQualifiedMember", "FieldType": "YesOrNo", "ElementLabel": "Disability qualified member", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "panel", "FieldType": "judicialUserPanel", "ElementLabel": "Panel", "SecurityClassification": "PUBLIC"}
 ]
