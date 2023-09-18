@@ -92,6 +92,8 @@
     "DisplayOrder": 1415,
     "PreConditionState(s)": "withUT",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
+    "ShowSummary": "N",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
@@ -123,8 +125,8 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
     "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "Y"
+    "ShowEventNotes": "Y",
+    "ShowSummary": "N"
   },
   {
     "LiveFrom": "19/06/2023",
