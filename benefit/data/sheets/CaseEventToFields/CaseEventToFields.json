@@ -2935,9 +2935,7 @@
     "PageID": "1.0",
     "FieldShowCondition": "issueCode=\"doNotUse\"",
     "PageLabel": "Hmcts review response",
-    "ShowSummaryChangeOption": "N",
-    "Publish": "Y",
-    "PublishAs": "action"
+    "ShowSummaryChangeOption": "N"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -3155,7 +3153,9 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 17,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "Publish": "Y",
+    "PublishAs": "action"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
