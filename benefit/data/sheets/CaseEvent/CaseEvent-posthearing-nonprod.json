@@ -188,6 +188,8 @@
     "PreConditionState(s)": "dormantAppealState;postHearing;withUT",
     "PostConditionState": "*",
     "EventEnablingCondition": "hearingRoute=\"listAssist\"",
+    "ShowEventNotes": "Y",
+    "ShowSummary": "N",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
@@ -214,6 +216,7 @@
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
     "PostConditionState": "dormantAppealState",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   }
 ]
