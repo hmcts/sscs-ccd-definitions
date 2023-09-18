@@ -6,5 +6,8 @@
   {"LiveFrom": "23/11/2022", "ID": "correction", "ListElementCode": "requestFormat", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_requestFormat", "ElementLabel": "Upload or enter details of your post hearing request", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "23/11/2022", "ID": "correction", "ListElementCode": "correctionFinalDecisionInProgress", "FieldType": "YesOrNo", "ElementLabel": "Correction in progress?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "05/10/2022", "ID": "statementOfReasons", "ListElementCode": "action", "FieldType": "FixedList", "FieldTypeParameter": "FL_actionStatementOfReasons", "ElementLabel": "Action Statement of Reasons Application", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "23/11/2022", "ID": "statementOfReasons", "ListElementCode": "requestFormat", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_requestFormat", "ElementLabel": "Upload or enter details of your post hearing request", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "23/11/2022", "ID": "statementOfReasons", "ListElementCode": "requestFormat", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_requestFormat", "ElementLabel": "Upload or enter details of your post hearing request", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "judicialUserPanel", "ListElementCode": "assignedTo", "FieldType": "YesOrNo", "ElementLabel": "Assigned to", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/02/2023", "ID": "judicialUserPanel", "ListElementCode": "panelMembers", "FieldType": "Collection", "FieldTypeParameter": "JudicialUser", "ElementLabel": "Panel Members", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "panel", "FieldType": "judicialUserPanel", "ElementLabel": "Panel", "SecurityClassification": "PUBLIC"}
 ]
