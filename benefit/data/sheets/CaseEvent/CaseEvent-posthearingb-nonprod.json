@@ -92,6 +92,8 @@
     "DisplayOrder": 1281,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
+    "ShowSummary": "N",
     "SecurityClassification": "Public"
   },
   {
