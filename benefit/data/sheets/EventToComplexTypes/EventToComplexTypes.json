@@ -874,6 +874,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 32,
+    "FieldShowCondition": "benefitType=\"DO_NOT_SHOW\"",
     "PageID": "1.0"
   },
   {
@@ -884,6 +885,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 32,
+    "FieldShowCondition": "benefitType=\"DO_NOT_SHOW\"",
     "PageID": "1.0"
   },
   {
