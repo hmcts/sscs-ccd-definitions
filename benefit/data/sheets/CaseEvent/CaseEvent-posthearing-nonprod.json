@@ -24,6 +24,8 @@
     "PreConditionState(s)": "dormantAppealState;postHearing",
     "PostConditionState": "*",
     "EventEnablingCondition": "hearingRoute=\"listAssist\"",
+    "ShowEventNotes": "Y",
+    "ShowSummary": "N",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
@@ -80,18 +82,6 @@
   {
     "LiveFrom": "13/10/2022",
     "CaseTypeID": "Benefit",
-    "ID": "sORIssueDirections",
-    "Name": "SOR Issue Directions",
-    "Description": "SOR Issue Directions",
-    "DisplayOrder": 500,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "13/10/2022",
-    "CaseTypeID": "Benefit",
     "ID": "sORWrite",
     "Name": "Write SOR",
     "Description": "Write SOR",
@@ -137,18 +127,6 @@
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
     "PostConditionState": "dormantAppealState",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "13/10/2022",
-    "CaseTypeID": "Benefit",
-    "ID": "setAsideIssueDirections",
-    "Name": "Set Aside - Issue Directions",
-    "Description": "Set Aside - Issue Directions",
-    "DisplayOrder": 500,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
