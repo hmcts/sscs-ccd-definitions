@@ -128,7 +128,7 @@
   {"LiveFrom": "", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "historicSscsInterlocDirectionDocs", "TabFieldDisplayOrder": 12},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "sscsWelshDocuments", "TabFieldDisplayOrder": 13},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "appealDocuments_sscs", "TabLabel": "Documents", "TabDisplayOrder": 7, "CaseFieldID": "dwpReleasedHearings", "TabFieldDisplayOrder": 14},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "hearingsInfo_sscs", "TabLabel": "Panel and Hearings", "TabDisplayOrder": 8, "CaseFieldID": "isConfidentialCaseLabel", "TabShowCondition": "panel=\"*\"", "TabFieldDisplayOrder": 1, "FieldShowCondition": "isConfidentialCase =\"Yes\""},
+  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "hearingsInfo_sscs", "TabLabel": "Panel and Hearings", "TabDisplayOrder": 8, "CaseFieldID": "isConfidentialCaseLabel", "TabFieldDisplayOrder": 1, "FieldShowCondition": "isConfidentialCase =\"Yes\""},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "hearingsInfo_sscs", "TabLabel": "Panel and Hearings", "TabDisplayOrder": 8, "CaseFieldID": "panel", "TabFieldDisplayOrder": 3},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs", "TabID": "hearingsInfo_sscs", "TabLabel": "Panel and Hearings", "TabDisplayOrder": 8, "CaseFieldID": "hearings", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "interlocDocs_sscs", "TabLabel": "Interloc Documents", "TabDisplayOrder": 9, "CaseFieldID": "isConfidentialCaseLabel", "TabShowCondition": "interlocDecisionInfo=\"*\"",  "TabFieldDisplayOrder": 1, "FieldShowCondition": "isConfidentialCase =\"Yes\""},
@@ -261,7 +261,7 @@
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "elements_and_issues", "TabLabel": "Elements and issues", "TabDisplayOrder": 23, "CaseFieldID": "elementsDisputedChildDisabled", "TabFieldDisplayOrder": 8},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "elements_and_issues", "TabLabel": "Elements and issues", "TabDisplayOrder": 23, "CaseFieldID": "elementsDisputedLimitedWork", "TabFieldDisplayOrder": 9},
 
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "isConfidentialCaseLabel", "TabFieldDisplayOrder": 1, "TabShowCondition": "defaultListingValues=\"*\"",  "FieldShowCondition": "isConfidentialCase =\"Yes\""},
+  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "isConfidentialCaseLabel", "TabFieldDisplayOrder": 1, "FieldShowCondition": "isConfidentialCase =\"Yes\""},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs-judge", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "defaultListingValues", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "dwpIsOfficerAttending", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "overrideFields", "TabFieldDisplayOrder": 3},
