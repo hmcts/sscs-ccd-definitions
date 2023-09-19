@@ -4269,7 +4269,7 @@
     "CaseFieldID": "reservedToJudgeInterloc",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "actionPostponementRequestSelected=\"grant\" OR actionPostponementRequestSelected=\"refuse\"",
+    "FieldShowCondition": "actionPostponementRequestSelected=\"sendToJudge\" OR actionPostponementRequestSelected=\"grant\" OR actionPostponementRequestSelected=\"refuse\"",
     "LiveFrom": "01/09/2021",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
