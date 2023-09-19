@@ -89,8 +89,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Add hearing details",
-    "ShowSummaryChangeOption": "N",
-    "RetainHiddenValue": "Yes"
+    "ShowSummaryChangeOption": "N"
   },
   {
     "CaseEventID": "addNote",
