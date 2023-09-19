@@ -7,7 +7,8 @@
     "Description": "Create an exception record",
     "DisplayOrder": 1,
     "PostConditionState": "ScannedRecordReceived",
-    "SecurityClassification": "Public"
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -20,7 +21,7 @@
     "PostConditionState": "ScannedRecordAttachedToCase",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL}/callback/attach_case",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N",
+    "ShowEventNotes": "Y",
     "CanSaveDraft": "N"
   },
   {
@@ -35,7 +36,7 @@
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL}/callback/create-new-case",
     "RetriesTimeoutURLAboutToSubmitEvent": 30,
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N",
+    "ShowEventNotes": "Y",
     "CanSaveDraft": "N"
   },
   {
@@ -48,7 +49,7 @@
     "PreConditionState(s)": "ScannedRecordReceived",
     "PostConditionState": "ScannedRecordRejected",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N",
+    "ShowEventNotes": "Y",
     "CanSaveDraft": "N"
   },
   {
@@ -61,7 +62,7 @@
     "PreConditionState(s)": "ScannedRecordReceived",
     "PostConditionState": "ScannedRecordManuallyHandled",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N",
+    "ShowEventNotes": "Y",
     "CanSaveDraft": "N"
   },
   {
@@ -74,7 +75,7 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
-    "ShowEventNotes": "N",
+    "ShowEventNotes": "Y",
     "CanSaveDraft": "N"
   }
 ]

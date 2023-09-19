@@ -9,7 +9,7 @@ Then('I should update case with a valid nino', async function () {
   await anyCcdFormPage.setTextFiledValueNull('appeal_appellant_identity_nino');
   await anyCcdFormPage.setValueByElementId('appeal_appellant_identity_nino', 'SK982165A');
 
-  await anyCcdPage.clickContinue();
+  await anyCcdPage.clickSubmit();
   await anyCcdPage.clickSubmit();
 });
 

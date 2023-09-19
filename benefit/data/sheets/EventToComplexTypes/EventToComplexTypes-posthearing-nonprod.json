@@ -41,26 +41,6 @@
     "PageID": "Statement_Of_Reasons"
   },
   {
-    "CaseEventID": "postHearingReview",
-    "CaseFieldID": "permissionToAppeal",
-    "ListElementCode": "action",
-    "ID": "postHearingReviewPermissionToAppealAction",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "05/10/2022",
-    "FieldDisplayOrder": 1,
-    "PageID": "Permission_To_Appeal"
-  },
-  {
-    "CaseEventID": "postHearingReview",
-    "CaseFieldID": "libertyToApply",
-    "ListElementCode": "action",
-    "ID": "postHearingReviewLibertyToApplyAction",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "05/10/2022",
-    "FieldDisplayOrder": 1,
-    "PageID": "Liberty_To_Apply"
-  },
-  {
     "CaseEventID": "postHearingRequest",
     "CaseFieldID": "setAside",
     "ListElementCode": "requestFormat",
