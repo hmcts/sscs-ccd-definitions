@@ -1,4 +1,6 @@
 [
+  {"LiveFrom": "01/01/2018", "ID": "judicialUserPanel", "ListElementCode": "assignedTo", "FieldType": "YesOrNo", "ElementLabel": "Assigned to", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/02/2023", "ID": "judicialUserPanel", "ListElementCode": "panelMembers", "FieldType": "Collection", "FieldTypeParameter": "JudicialUser", "ElementLabel": "Panel Members", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "dateRange", "ListElementCode": "start", "FieldType": "Date", "ElementLabel": "Start Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "dateRange", "ListElementCode": "end", "FieldType": "Date", "ElementLabel": "End Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingOptions", "ListElementCode": "wantsToAttend", "FieldType": "YesOrNo", "ElementLabel": "Wants To Attend", "SecurityClassification": "PUBLIC"},
