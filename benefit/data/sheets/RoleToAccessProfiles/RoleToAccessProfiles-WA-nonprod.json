@@ -7,5 +7,14 @@
     "ReadOnly": "N",
     "AccessProfiles": "caseworker,caseworker-wa-task-configuration",
     "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/03/2023",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-ras-validation",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker,caseworker-ras-validation",
+    "Disabled": "N"
   }
 ]
