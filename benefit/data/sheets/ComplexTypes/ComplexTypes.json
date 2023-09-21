@@ -1,4 +1,6 @@
 [
+  {"LiveFrom": "01/01/2018", "ID": "judicialUserPanel", "ListElementCode": "assignedTo", "FieldType": "JudicialUser", "ElementLabel": "Judge", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/02/2023", "ID": "judicialUserPanel", "ListElementCode": "panelMembers", "FieldType": "Collection", "FieldTypeParameter": "JudicialUser", "ElementLabel": "Panel Members", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "dateRange", "ListElementCode": "start", "FieldType": "Date", "ElementLabel": "Start Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "dateRange", "ListElementCode": "end", "FieldType": "Date", "ElementLabel": "End Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingOptions", "ListElementCode": "wantsToAttend", "FieldType": "YesOrNo", "ElementLabel": "Wants To Attend", "SecurityClassification": "PUBLIC"},
@@ -100,7 +102,6 @@
   {"LiveFrom": "01/01/2018", "ID": "venue", "ListElementCode": "address", "FieldType": "address", "ElementLabel": "Venue Address", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "venue", "ListElementCode": "googleMapLink", "FieldType": "Text", "ElementLabel": "Venue Map Link", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "venue", "FieldType": "venue", "ElementLabel": "Venue", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "judge", "FieldType": "Text", "ElementLabel": "Judge", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "hearingDate", "FieldType": "Date", "ElementLabel": "Date", "SecurityClassification": "PUBLIC", "FieldShowCondition": "start=\"\""},
   {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "time", "FieldType": "Text", "ElementLabel": "Time", "HintText": "(24hr e.g. 13:25)", "SecurityClassification": "PUBLIC", "FieldShowCondition": "start=\"\""},
   {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "postponedDate", "FieldType": "Date", "ElementLabel": "Postponement date", "SecurityClassification": "PUBLIC"},
