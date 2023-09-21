@@ -84,6 +84,19 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "09/05/2023",
+    "CaseTypeID": "Benefit",
+    "ID": "reserveToInterlocJudge",
+    "Name": "Reserve to interloc - Judge",
+    "Description": "Reserve to interloc - Judge",
+    "DisplayOrder": 1281,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowEventNotes": "Y",
+    "ShowSummary": "N",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "07/07/2023",
     "CaseTypeID": "Benefit",
     "ID": "sendToFirstTier",
