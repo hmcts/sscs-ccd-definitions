@@ -19,5 +19,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "processingVenue", "AccessProfile": "caseworker-wa-task-configuration", "CRUD": "R"},
   {"LiveFrom": "30/08/2022", "CaseTypeID": "Benefit", "CaseFieldID": "daysToHearing", "AccessProfile": "caseworker-sscs-judge", "CRUD": "CRUD"},
   {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseFieldID": "daysToHearing", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
-  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseFieldID": "daysToHearing", "AccessProfile": "caseworker-sscs-registrar", "CRUD": "CRUD"}
+  {"LiveFrom": "22/10/2019", "CaseTypeID": "Benefit", "CaseFieldID": "daysToHearing", "AccessProfile": "caseworker-sscs-registrar", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "assignedCaseRoles", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "assignedCaseRoles", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "assignedCaseRoles", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "assignedCaseRoles", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRU"}
 ]
