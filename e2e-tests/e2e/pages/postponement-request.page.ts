@@ -25,7 +25,7 @@ export class PostponementRequestPage extends AnyPage {
       await element(by.id('bodyContent')).sendKeys(
         'We would like to delay the hearing, since the Judge cannot attend this day.'
       );
-      await element(by.id('reservedToJudge')).sendKeys('Reserve to judge');
+      await element(by.id('reservedToJudgeInterloc')).sendKeys('Reserve to judge');
       await element(by.id('signedBy')).sendKeys('Mr Penworthy');
       await element(by.id('signedRole')).sendKeys('CTSC');
       if (action === 'Grant Postponement') {
