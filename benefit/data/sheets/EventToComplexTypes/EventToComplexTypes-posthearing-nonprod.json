@@ -69,5 +69,17 @@
     "LiveFrom": "08/03/2023",
     "FieldDisplayOrder": 1,
     "PageID": "Statement_Of_Reasons"
+  },
+  {
+    "CaseEventID": "setAsideRefused",
+    "CaseFieldID": "setAside",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "23/08/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "FieldShowCondition": "[STATE]=\"DoNotUse\"",
+    "Publish": "Y"
   }
 ]
