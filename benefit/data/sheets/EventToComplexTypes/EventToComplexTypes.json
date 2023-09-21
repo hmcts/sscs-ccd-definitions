@@ -4770,7 +4770,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "mrnDetails",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 2,
     "PageID": "1.0"
@@ -4815,7 +4815,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 3,
     "PageID": "1.0"
@@ -4824,7 +4824,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant.name",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 1,
     "PageID": "1.0"
@@ -4869,7 +4869,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant.identity",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 2,
     "PageID": "1.0"
@@ -4896,7 +4896,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant.address",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 3,
     "PageID": "1.0"
@@ -4968,7 +4968,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant.contact",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 4,
     "PageID": "1.0"
@@ -5013,7 +5013,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant.appointee",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 6,
     "PageID": "1.0"
@@ -5022,7 +5022,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant.appointee.name",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 1,
     "PageID": "1.0"
@@ -5067,7 +5067,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant.appointee.identity",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 2,
     "PageID": "1.0"
@@ -5094,7 +5094,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant.appointee.address",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 3,
     "PageID": "1.0"
@@ -5166,7 +5166,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant.appointee.contact",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 4,
     "PageID": "1.0"
@@ -5238,7 +5238,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant.role",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 9,
     "PageID": "1.0"
@@ -5274,7 +5274,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "benefitType",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 4,
     "PageID": "1.0"
@@ -5310,7 +5310,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "hearingSubtype",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 6,
     "PageID": "1.0"
@@ -5364,7 +5364,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "hearingOptions",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 7,
     "PageID": "1.0"
@@ -5436,7 +5436,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "hearingOptions.excludeDates",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 8,
     "PageID": "1.0"
@@ -5499,7 +5499,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "appealReasons",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 8,
     "PageID": "1.0"
@@ -5508,7 +5508,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "appealReasons.reasons",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 1,
     "PageID": "1.0"
@@ -5535,7 +5535,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "supporter",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 9,
     "PageID": "1.0"
@@ -5544,7 +5544,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "supporter.name",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 1,
     "PageID": "1.0"
@@ -5589,7 +5589,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "supporter.contact",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 2,
     "PageID": "1.0"
@@ -5625,7 +5625,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "rep",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 10,
     "PageID": "1.0"
@@ -5634,7 +5634,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "rep.identity",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 1,
     "PageID": "1.0"
@@ -5679,7 +5679,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "rep.name",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 4,
     "PageID": "1.0"
@@ -5724,7 +5724,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "rep.address",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 5,
     "PageID": "1.0"
@@ -5796,7 +5796,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "ListElementCode": "rep.contact",
-    "DisplayContext": "COMPLEX",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "FieldDisplayOrder": 6,
     "PageID": "1.0"
