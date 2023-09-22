@@ -1624,7 +1624,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Interloc referral"
+    "PageLabel": "Interloc referral",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "nonCompliantSendToInterloc",
