@@ -9,7 +9,8 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "Type_Selection",
     "PageLabel": "Application Type Selection",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "postHearingReview",
