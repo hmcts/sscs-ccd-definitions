@@ -12,7 +12,7 @@
     "Publish": "Y"
   },
   {
-    "CaseEventID": "appealCreated",
+    "CaseEventID": "sentToDwp",
     "CaseFieldID": "dwpDueDate",
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
