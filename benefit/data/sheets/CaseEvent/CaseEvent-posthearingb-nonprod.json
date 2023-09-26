@@ -19,7 +19,7 @@
     "Description": "Permission to Appeal Granted",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "*",
+    "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public"
   },
@@ -29,6 +29,18 @@
     "ID": "permissionToAppealRefused",
     "Name": "Permission to Appeal Refused",
     "Description": "Permission to Appeal Refused",
+    "DisplayOrder": 500,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "dormantAppealState",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "09/05/2023",
+    "CaseTypeID": "Benefit",
+    "ID": "reviewAndSetAside",
+    "Name": "PTA Decision Remade",
+    "Description": "Permission to Appeal Decision Remade",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
     "PostConditionState": "dormantAppealState",
@@ -72,6 +84,19 @@
     "SecurityClassification": "Public"
   },
   {
+    "LiveFrom": "09/05/2023",
+    "CaseTypeID": "Benefit",
+    "ID": "reserveToInterlocJudge",
+    "Name": "Reserve to interloc - Judge",
+    "Description": "Reserve to interloc - Judge",
+    "DisplayOrder": 1281,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowEventNotes": "Y",
+    "ShowSummary": "N",
+    "SecurityClassification": "Public"
+  },
+  {
     "LiveFrom": "07/07/2023",
     "CaseTypeID": "Benefit",
     "ID": "sendToFirstTier",
@@ -80,6 +105,8 @@
     "DisplayOrder": 1415,
     "PreConditionState(s)": "withUT",
     "PostConditionState": "*",
+    "ShowEventNotes": "Y",
+    "ShowSummary": "N",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
@@ -93,7 +120,7 @@
     "Description": "Upper Tribunal Decision",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "dormantAppealState",
+    "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "SecurityClassification": "Public",
     "ShowEventNotes": "Y"
@@ -105,14 +132,14 @@
     "Name": "Get first tier documents",
     "Description": "Get first tier documents",
     "DisplayOrder": 835,
-    "PreConditionState(s)": "dormantAppealState;postHearing",
+    "PreConditionState(s)": "dormantAppealState;postHearing;withUT",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
     "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "Y"
+    "ShowEventNotes": "Y",
+    "ShowSummary": "N"
   },
   {
     "LiveFrom": "19/06/2023",
@@ -122,8 +149,19 @@
     "Description": "Bundle created for Upper Tribunal",
     "DisplayOrder": 500,
     "PreConditionState(s)": "*",
-    "PostConditionState": "withUpperTribunal",
+    "PostConditionState": "withUT",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "23/11/2022",
+    "CaseTypeID": "Benefit",
+    "ID": "postHearingOther",
+    "Name": "Post hearing Other",
+    "Description": "Post hearing application 'Other'",
+    "DisplayOrder": 500,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "postHearing",
     "SecurityClassification": "Public"
   }
 ]
