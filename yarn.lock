@@ -1292,7 +1292,7 @@ __metadata:
     assertion-error: ^1.1.0
     check-error: ^1.0.2
     deep-eql: ^3.0.1
-    get-func-name: ^2.0.0
+    get-func-name: ^2.0.1
     loupe: ^2.3.1
     pathval: ^1.1.1
     type-detect: ^4.0.5
@@ -1307,7 +1307,7 @@ __metadata:
     assertion-error: ^1.1.0
     check-error: ^1.0.2
     deep-eql: ^4.1.2
-    get-func-name: ^2.0.0
+    get-func-name: ^2.0.1
     loupe: ^2.3.1
     pathval: ^1.1.1
     type-detect: ^4.0.5
@@ -2742,9 +2742,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-func-name@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "get-func-name@npm:2.0.0"
+"get-func-name@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "get-func-name@npm:2.0.1"
   checksum: 8d82e69f3e7fab9e27c547945dfe5cc0c57fc0adf08ce135dddb01081d75684a03e7a0487466f478872b341d52ac763ae49e660d01ab83741f74932085f693c3
   languageName: node
   linkType: hard
@@ -3753,7 +3753,7 @@ __metadata:
   version: 2.3.4
   resolution: "loupe@npm:2.3.4"
   dependencies:
-    get-func-name: ^2.0.0
+    get-func-name: ^2.0.1
   checksum: 5af91db61aa18530f1749a64735ee194ac263e65e9f4d1562bf3036c591f1baa948289c193e0e34c7b5e2c1b75d3c1dc4fce87f5edb3cee10b0c0df46bc9ffb3
   languageName: node
   linkType: hard
