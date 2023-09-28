@@ -135,11 +135,23 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CaseEventID": "reserveToInterlocJudge",
+    "CaseFieldID": "reservedToJudgeInterloc",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Reserve to interloc - Judge",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CaseEventID": "postHearingReview",
     "CaseFieldID": "permissionToAppealGenerateNotice",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "permissionToAppeal.action = \"refuse\"",
+    "FieldShowCondition": "permissionToAppeal.action = \"grant\" OR permissionToAppeal.action = \"refuse\" OR permissionToAppeal.action = \"review\"",
     "LiveFrom": "05/10/2022",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 2,
@@ -157,6 +169,32 @@
     "LiveFrom": "05/10/2022",
     "PageDisplayOrder": 2,
     "PageFieldDisplayOrder": 3,
+    "PageID": "Permission_To_Appeal",
+    "PageLabel": "Permission to Appeal",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "permissionToAppealSignedBy",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "permissionToAppealGenerateNotice = \"Yes\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "Permission_To_Appeal",
+    "PageLabel": "Permission to Appeal",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "postHearingReview",
+    "CaseFieldID": "permissionToAppealSignedRole",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "permissionToAppealGenerateNotice = \"Yes\"",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 5,
     "PageID": "Permission_To_Appeal",
     "PageLabel": "Permission to Appeal",
     "ShowSummaryChangeOption": "Y"
