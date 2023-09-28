@@ -9,7 +9,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Handle Further Evidence"
+    "PageLabel": "Handle Further Evidence",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "actionFurtherEvidence",
@@ -2900,7 +2901,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "Publish": "Y"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=interlocReferral",
