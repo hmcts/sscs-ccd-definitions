@@ -26,7 +26,9 @@
   {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "CaseStateID": "handlingError", "AccessProfile": "caseworker-wa-task-configuration", "CRUD": "R"},
   {"LiveFrom": "10/06/2022", "CaseTypeID": "Benefit", "CaseStateID": "handlingError", "AccessProfile": "caseworker-ras-validation", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "listingError", "AccessProfile": "caseworker-wa-task-configuration", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "listingError", "AccessProfile": "caseworker-ras-validation", "CRUD": "R"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "listingError", "AccessProfile": "caseworker-ras-validation", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "notListable", "AccessProfile": "caseworker-wa-task-configuration", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseStateID": "notListable", "AccessProfile": "caseworker-ras-validation", "CRUD": "R"}
 ]
 
 
