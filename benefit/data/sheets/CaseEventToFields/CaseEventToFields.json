@@ -9,7 +9,9 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Handle Further Evidence"
+    "PageLabel": "Handle Further Evidence",
+    "PublishAs": "action",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "actionFurtherEvidence",
@@ -31,7 +33,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
     "PageID": "1.0",
-    "PageLabel": "Handle Further Evidence"
+    "PageLabel": "Handle Further Evidence",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "actionFurtherEvidence",
