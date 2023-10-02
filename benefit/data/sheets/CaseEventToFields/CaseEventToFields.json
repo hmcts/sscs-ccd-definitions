@@ -2190,7 +2190,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
     "PageLabel": "Issue direction",
     "ShowSummaryChangeOption": "Y"
@@ -2202,7 +2202,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
     "PageID": "1.0",
     "PageLabel": "Issue direction"
   },
@@ -2887,9 +2887,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Select who should review this case",
-    "ShowSummaryChangeOption": "Y",
-    "Publish": "Y",
-    "PublishAs": "action"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "validSendToInterloc",
@@ -2900,7 +2898,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "Publish": "Y"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=interlocReferral",
@@ -4292,7 +4291,7 @@
     "CaseFieldID": "reservedToJudge",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "actionPostponementRequestSelected=\"grant\" OR actionPostponementRequestSelected=\"refuse\"",
+    "FieldShowCondition": "actionPostponementRequestSelected=\"sendToJudge\" OR actionPostponementRequestSelected=\"grant\" OR actionPostponementRequestSelected=\"refuse\"",
     "LiveFrom": "01/09/2021",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
@@ -4369,7 +4368,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 0,
     "PageID": "1.0",
-    "FieldShowCondition": "dwpFurtherEvidenceStates=\"DoNotUse\"",
+    "FieldShowCondition": "dwpState=\"DoNotUse\"",
     "ShowSummaryChangeOption": "Y",
     "RetainHiddenValue": "Yes"
   },
@@ -4404,17 +4403,6 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "dwpSupplementaryResponse",
-    "CaseFieldID": "dwpFurtherEvidenceStates",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },

@@ -54,6 +54,20 @@
     "PublishAs": "workType"
   },
   {
+    "CaseEventID": "validSendToInterloc",
+    "CaseFieldID": "interlocReviewState",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "02/06/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 5,
+    "PageID": "1.0",
+    "PageLabel": "Interloc Review State",
+    "FieldShowCondition": "[STATE]=\"DoNotShow\"",
+    "Publish": "Y",
+    "PublishAs": "action"
+  },
+  {
     "CaseEventID": "uploadWelshDocument",
     "CaseFieldID": "uploadedWelshDocumentTypes",
     "CaseTypeID": "Benefit",
@@ -80,7 +94,7 @@
     "Publish": "Y"
   },
   {
-    "CaseEventID": "appealCreated",
+    "CaseEventID": "sentToDwp",
     "CaseFieldID": "dwpDueDate",
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
