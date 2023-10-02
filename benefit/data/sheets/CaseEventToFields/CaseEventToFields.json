@@ -3715,9 +3715,7 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "updateNotListableInterlocReview",
     "PageLabel": "Interlocutory review",
-    "ShowSummaryChangeOption": "Y",
-    "Publish": "Y",
-    "PublishAs": "action"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
