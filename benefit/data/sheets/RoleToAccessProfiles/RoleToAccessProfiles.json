@@ -39,6 +39,15 @@
   {
     "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-judge-salaried",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-judge-salaried",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/03/2023",
+    "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-panelmember",
     "Authorisation": "",
     "ReadOnly": "N",
