@@ -20,7 +20,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
     "PageID": "typeOfAppeal",
     "PageLabel": "Type of appeal",
     "FieldShowCondition": "appeal.benefitType.code=\"PIP\"",
@@ -34,7 +34,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
     "PageID": "typeOfAppeal",
     "PageLabel": "Type of appeal",
     "ShowSummaryChangeOption": "Y"
