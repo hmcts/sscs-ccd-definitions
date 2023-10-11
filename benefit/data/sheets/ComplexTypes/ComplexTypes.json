@@ -1,4 +1,6 @@
 [
+  {"LiveFrom": "01/01/2018", "ID": "judicialUserPanel", "ListElementCode": "assignedTo", "FieldType": "JudicialUser", "ElementLabel": "Judge", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/02/2023", "ID": "judicialUserPanel", "ListElementCode": "panelMembers", "FieldType": "Collection", "FieldTypeParameter": "JudicialUser", "ElementLabel": "Panel Members", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "dateRange", "ListElementCode": "start", "FieldType": "Date", "ElementLabel": "Start Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "dateRange", "ListElementCode": "end", "FieldType": "Date", "ElementLabel": "End Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingOptions", "ListElementCode": "wantsToAttend", "FieldType": "YesOrNo", "ElementLabel": "Wants To Attend", "SecurityClassification": "PUBLIC"},
@@ -11,6 +13,7 @@
   {"LiveFrom": "01/01/2018", "ID": "hearingOptions", "ListElementCode": "excludeDates", "FieldType": "Collection", "FieldTypeParameter": "dateRange", "ElementLabel": "Excluded Dates", "FieldShowCondition": "scheduleHearing=\"Yes\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingOptions", "ListElementCode": "other", "FieldType": "Text", "ElementLabel": "Other Information", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingOptions", "ListElementCode": "signLanguageType", "FieldType": "Text", "ElementLabel": "Sign languages", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingOptions", "ListElementCode": "hearingRoute", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingRoute", "ElementLabel": "Hearing Route", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingOptions", "ListElementCode": "agreeLessNotice", "FieldType": "YesOrNo", "ElementLabel": "Agree less notice of hearing availability", "FieldShowCondition": "wantsToAttend=\"Yes\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingSubtype", "ListElementCode": "wantsHearingTypeTelephone", "FieldType": "YesOrNo", "ElementLabel": "Wants hearing type telephone", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingSubtype", "ListElementCode": "hearingTelephoneNumber", "FieldType": "Text", "ElementLabel": "Hearing telephone number", "FieldShowCondition": "wantsHearingTypeTelephone=\"Yes\"", "SecurityClassification": "PUBLIC"},
@@ -99,7 +102,6 @@
   {"LiveFrom": "01/01/2018", "ID": "venue", "ListElementCode": "address", "FieldType": "address", "ElementLabel": "Venue Address", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "venue", "ListElementCode": "googleMapLink", "FieldType": "Text", "ElementLabel": "Venue Map Link", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "venue", "FieldType": "venue", "ElementLabel": "Venue", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "judge", "FieldType": "Text", "ElementLabel": "Judge", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "hearingDate", "FieldType": "Date", "ElementLabel": "Date", "SecurityClassification": "PUBLIC", "FieldShowCondition": "start=\"\""},
   {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "time", "FieldType": "Text", "ElementLabel": "Time", "HintText": "(24hr e.g. 13:25)", "SecurityClassification": "PUBLIC", "FieldShowCondition": "start=\"\""},
   {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "postponedDate", "FieldType": "Date", "ElementLabel": "Postponement date", "SecurityClassification": "PUBLIC"},
