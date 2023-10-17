@@ -1,10 +1,1 @@
-[
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "panelMemberExclusions", "TabFieldDisplayOrder": 13},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_judge", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "panel", "TabFieldDisplayOrder": 14, "FieldShowCondition": "panelMemberExclusions.arePanelMembersReserved=\"Yes\""},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_clerk", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "panelMemberExclusions", "TabFieldDisplayOrder": 13},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_clerk", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "panel", "TabFieldDisplayOrder": 14, "FieldShowCondition": "panelMemberExclusions.arePanelMembersReserved=\"Yes\""},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_registrar", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "panelMemberExclusions", "TabFieldDisplayOrder": 12},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_registrar", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "panel", "TabFieldDisplayOrder": 13, "FieldShowCondition": "panelMemberExclusions.arePanelMembersReserved=\"Yes\""},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "panelMemberExclusions", "TabFieldDisplayOrder": 14},
-  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "listing_requirements_superuser", "TabLabel": "Listing Requirements", "TabDisplayOrder": 24, "CaseFieldID": "panel", "TabFieldDisplayOrder": 15, "FieldShowCondition": "panelMemberExclusions.arePanelMembersReserved=\"Yes\""}
-]
+[]
