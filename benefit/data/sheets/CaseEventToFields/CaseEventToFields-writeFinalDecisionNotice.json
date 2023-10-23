@@ -280,7 +280,8 @@
     "PageID": "decisionDate",
     "PageLabel": "Decision date",
     "PageShowCondition": "writeFinalDecisionGenerateNotice = \"Yes\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "RetainHiddenValue": "Yes"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=workCapabilityAssessment",

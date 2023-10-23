@@ -387,6 +387,19 @@
     "RetainHiddenValue": "Yes"
   },
   {
+    "CaseEventID": "writeFinalDecision",
+    "CaseFieldID": "writeFinalDecisionDateOfDecisionCopy",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
+    "PageID": "typeOfAppeal",
+    "PageLabel": "Type of appeal",
+    "FieldShowCondition": "writeFinalDecisionGenerateNotice=\"DoNotUse\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CaseEventID": "sORWrite",
     "CaseFieldID": "generateNotice",
     "CaseTypeID": "Benefit",
