@@ -359,5 +359,18 @@
     "PageLabel": "Handle Further Evidence",
     "FieldShowCondition": "[STATE]=\"DoNotShow\"",
     "Publish": "Y"
+  },
+  {
+    "CaseEventID": "postHearingRequest",
+    "CaseFieldID": "dateOfDecision",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "21/08/2021",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Statement of Reasons",
+    "FieldShowCondition": "[STATE]=\"DoNotShow\"",
+    "Publish": "Y"
   }
 ]
