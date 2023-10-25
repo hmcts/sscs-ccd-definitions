@@ -469,5 +469,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendDirectionNoticeToAppellantOrAppointee", "Label": "Appellant or Appointee", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/02/2023", "CaseTypeID": "Benefit", "ID": "panelMemberExclusions", "Label": "Panel member exclusions/reserve to", "FieldType": "panelMemberExclusions", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/02/2023", "CaseTypeID": "Benefit", "ID": "adjournCaseSignedInUser", "Label": "Adjourned signed in user", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "20/01/2023", "CaseTypeID": "Benefit", "ID": "issueFinalDecisionDate", "Label": "Issue final decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "20/01/2023", "CaseTypeID": "Benefit", "ID": "issueFinalDecisionDate", "Label": "Issue final decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/01/2023", "CaseTypeID": "Benefit", "ID": "finalDecisionWasOriginalDecisionUploaded", "Label": "Was original decision uploaded", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
