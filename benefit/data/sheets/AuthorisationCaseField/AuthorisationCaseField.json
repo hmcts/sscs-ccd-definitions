@@ -1506,5 +1506,6 @@
   {"LiveFrom": "01/02/2023", "CaseTypeID": "Benefit", "CaseFieldID": "panelMemberExclusions", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "01/02/2023", "CaseTypeID": "Benefit", "CaseFieldID": "panelMemberExclusions", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "01/02/2023", "CaseTypeID": "Benefit", "CaseFieldID": "adjournCaseSignedInUser", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "08/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "issueFinalDecisionDate", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "08/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "issueFinalDecisionDate", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "CaseFieldID": "finalDecisionWasOriginalDecisionUploaded", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
 ]
