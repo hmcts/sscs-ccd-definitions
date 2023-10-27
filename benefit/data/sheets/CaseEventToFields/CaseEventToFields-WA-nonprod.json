@@ -348,21 +348,8 @@
     "Publish": "Y"
   },
   {
-    "CaseEventID": "actionFurtherEvidence",
-    "CaseFieldID": "scannedDocumentTypes",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "21/08/2021",
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 5,
-    "PageID": "1.0",
-    "PageLabel": "Handle Further Evidence",
-    "FieldShowCondition": "[STATE]=\"DoNotShow\"",
-    "Publish": "Y"
-  },
-  {
     "CaseEventID": "postHearingRequest",
-    "CaseFieldID": "dateOfDecision",
+    "CaseFieldID": "decisionInfo",
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
     "LiveFrom": "21/08/2021",
