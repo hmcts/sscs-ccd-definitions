@@ -93,6 +93,7 @@
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpRegionalCentre", "Label": "FTA Handling Office", "FieldType": "FixedList", "FieldTypeParameter": "FL_dwpRegionalCentre", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "caseCode", "Label": "Case code", "FieldType": "Text", "RegularExpression": "[A-Za-z0-9]{5}", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpState", "Label": "FTA State", "FieldType": "FixedList", "FieldTypeParameter": "FL_dwpStates", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dynamicDwpState", "Label": "FTA State", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpFurtherEvidenceStates", "Label": "FTA Further Evidence State", "FieldType": "FixedList", "FieldTypeParameter": "FL_dwpFurtherEvidenceStates", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpLT203", "Label": "LT203 or OM1", "FieldType": "dwpLT203DocumentCT", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "18/06/2019", "CaseTypeID": "Benefit", "ID": "dwpLapseLetter", "Label": "Lapse letter", "FieldType": "dwpLapseLetterDocumentCT", "SecurityClassification": "PUBLIC"},
@@ -469,5 +470,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "sendDirectionNoticeToAppellantOrAppointee", "Label": "Appellant or Appointee", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/02/2023", "CaseTypeID": "Benefit", "ID": "panelMemberExclusions", "Label": "Panel member exclusions/reserve to", "FieldType": "panelMemberExclusions", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/02/2023", "CaseTypeID": "Benefit", "ID": "adjournCaseSignedInUser", "Label": "Adjourned signed in user", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "20/01/2023", "CaseTypeID": "Benefit", "ID": "issueFinalDecisionDate", "Label": "Issue final decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "20/01/2023", "CaseTypeID": "Benefit", "ID": "issueFinalDecisionDate", "Label": "Issue final decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "20/01/2023", "CaseTypeID": "Benefit", "ID": "finalDecisionWasOriginalDecisionUploaded", "Label": "Was original decision uploaded", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]

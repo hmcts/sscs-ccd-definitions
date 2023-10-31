@@ -69,5 +69,15 @@
     "LiveFrom": "08/03/2023",
     "FieldDisplayOrder": 1,
     "PageID": "Statement_Of_Reasons"
+  },
+  {
+    "CaseEventID": "adminActionCorrection",
+    "CaseFieldID": "correction",
+    "ListElementCode": "adminCorrectionType",
+    "ID": "adminActionCorrectionAdminCorrectionType",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "05/10/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "Type_Selection"
   }
 ]
