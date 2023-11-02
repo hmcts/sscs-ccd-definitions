@@ -135,6 +135,18 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CaseEventID": "reserveToInterlocJudge",
+    "CaseFieldID": "reservedToJudgeInterloc",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "05/10/2022",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Reserve to interloc - Judge",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CaseEventID": "postHearingReview",
     "CaseFieldID": "permissionToAppealGenerateNotice",
     "CaseTypeID": "Benefit",

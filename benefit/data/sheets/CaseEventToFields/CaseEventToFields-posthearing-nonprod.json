@@ -292,6 +292,34 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEventPreviewFinalDecision",
+    "CaseEventID": "adminActionCorrection",
+    "CaseFieldID": "correction",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "17/04/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Type_Selection",
+    "PageLabel": "Correction Type Selection",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=previewDecisionNotice",
+    "CaseEventID": "adminActionCorrection",
+    "CaseFieldID": "writeFinalDecisionPreviewDocument",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "17/04/2023",
+    "CaseEventFieldLabel": "Corrected Document",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "previewDecisionNotice",
+    "PageLabel": "Preview Decision Notice",
+    "PageShowCondition": "correction.adminCorrectionType = \"headerCorrection\"",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
     "CaseEventID": "postHearingRequest",
     "CaseFieldID": "statementOfReasons",
     "CaseTypeID": "Benefit",
