@@ -208,6 +208,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": "Send_To_First_Tier",
     "PageLabel": "Send to First Tier",
-    "PageDisplayOrder": 1
+    "PageDisplayOrder": 1,
+    "Publish": "Y"
   }
 ]
