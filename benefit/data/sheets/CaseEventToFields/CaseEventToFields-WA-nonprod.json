@@ -218,6 +218,19 @@
     "Publish": "Y"
   },
   {
+    "CaseEventID": "sORRequest",
+    "CaseFieldID": "issueFinalDecisionDate",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "16/08/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "SOR Request",
+    "FieldShowCondition": "[STATE]=\"DoNotUse\"",
+    "Publish": "Y"
+  },
+  {
     "CaseEventID": "validSendToInterloc",
     "CaseFieldID": "issueFinalDecisionDate",
     "CaseTypeID": "Benefit",
