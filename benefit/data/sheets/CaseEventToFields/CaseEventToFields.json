@@ -55,6 +55,7 @@
     "PageID": "2.0",
     "PageLabel": "Handle Further Evidence",
     "PageShowCondition": "showPostponementDetailsPage=\"Yes\"",
+    "RetainHiddenValue": "Yes",
     "FieldShowCondition": "postponementRequestDetails=\"DoNotShow\""
   },
   {
