@@ -5345,6 +5345,15 @@
   {
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
+    "ListElementCode": "benefitType.descriptionSelection",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "incompleteApplicationReceived",
+    "CaseFieldID": "appeal",
     "ListElementCode": "benefitType.description",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
