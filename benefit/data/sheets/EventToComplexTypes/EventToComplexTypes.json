@@ -916,6 +916,7 @@
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 32,
+    "FieldShowCondition": "benefitType=\"DO_NOT_SHOW\"",
     "PageID": "1.0"
   },
   {
@@ -923,6 +924,17 @@
     "CaseFieldID": "appeal",
     "ListElementCode": "benefitType.description",
     "ID": "appealBenefitTypeDescription",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 32,
+    "FieldShowCondition": "benefitType=\"DO_NOT_SHOW\"",
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "appeal",
+    "ListElementCode": "benefitType.descriptionSelection",
+    "ID": "appealBenefitTypeDescriptionSelection",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 32,
@@ -5327,6 +5339,15 @@
     "ListElementCode": "benefitType.code",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
+    "FieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "incompleteApplicationReceived",
+    "CaseFieldID": "appeal",
+    "ListElementCode": "benefitType.descriptionSelection",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 1,
     "PageID": "1.0"
   },
