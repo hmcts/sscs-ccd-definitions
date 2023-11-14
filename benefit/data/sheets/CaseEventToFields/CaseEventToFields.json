@@ -226,18 +226,19 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CaseEventID": "adminUpdateEvent",
-    "CaseFieldID": "urgentCase",
+    "LiveFrom": "06/10/2022",
+    "CaseEventID": "updateListingRequirements",
+    "CaseFieldID": "panelMemberExclusions",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "LiveFrom": "01/01/2018",
+    "DisplayContext": "COMPLEX",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
-    "PageID": "1.0"
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "adminUpdateEvent",
-    "CaseFieldID": "urgentHearingRegistered",
+    "CaseFieldID": "urgentCase",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -247,7 +248,7 @@
   },
   {
     "CaseEventID": "adminUpdateEvent",
-    "CaseFieldID": "urgentHearingOutcome",
+    "CaseFieldID": "urgentHearingRegistered",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -257,7 +258,7 @@
   },
   {
     "CaseEventID": "adminUpdateEvent",
-    "CaseFieldID": "dwpUCB",
+    "CaseFieldID": "urgentHearingOutcome",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -267,7 +268,7 @@
   },
   {
     "CaseEventID": "adminUpdateEvent",
-    "CaseFieldID": "isInc5249521",
+    "CaseFieldID": "dwpUCB",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -277,7 +278,7 @@
   },
   {
     "CaseEventID": "adminUpdateEvent",
-    "CaseFieldID": "dateOfAppellantDeath",
+    "CaseFieldID": "isInc5249521",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -287,7 +288,7 @@
   },
   {
     "CaseEventID": "adminUpdateEvent",
-    "CaseFieldID": "hmctsDwpState",
+    "CaseFieldID": "dateOfAppellantDeath",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -297,12 +298,22 @@
   },
   {
     "CaseEventID": "adminUpdateEvent",
-    "CaseFieldID": "isProgressingViaGaps",
+    "CaseFieldID": "hmctsDwpState",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 11,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "adminUpdateEvent",
+    "CaseFieldID": "isProgressingViaGaps",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 12,
     "PageID": "1.0"
   },
   {
@@ -364,7 +375,7 @@
   },
   {
     "CaseEventID": "adjournCase",
-    "CaseFieldID": "adjournCaseDisabilityQualifiedPanelMemberName",
+    "CaseFieldID": "adjournCasePanelMember1",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -376,7 +387,7 @@
   },
   {
     "CaseEventID": "adjournCase",
-    "CaseFieldID": "adjournCaseMedicallyQualifiedPanelMemberName",
+    "CaseFieldID": "adjournCasePanelMember2",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -388,7 +399,7 @@
   },
   {
     "CaseEventID": "adjournCase",
-    "CaseFieldID": "adjournCaseOtherPanelMemberName",
+    "CaseFieldID": "adjournCasePanelMember3",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "01/01/2018",
@@ -1235,7 +1246,7 @@
     "CaseEventID": "incompleteApplicationReceived",
     "CaseFieldID": "appeal",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
+    "DisplayContext": "COMPLEX",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
@@ -2888,9 +2899,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Select who should review this case",
-    "ShowSummaryChangeOption": "Y",
-    "Publish": "Y",
-    "PublishAs": "action"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "validSendToInterloc",
@@ -3718,9 +3727,7 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "updateNotListableInterlocReview",
     "PageLabel": "Interlocutory review",
-    "ShowSummaryChangeOption": "Y",
-    "Publish": "Y",
-    "PublishAs": "action"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
