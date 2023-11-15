@@ -373,28 +373,6 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
-    "CaseEventID": "validSendToInterloc",
-    "CaseFieldID": "prePostHearing",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
-    "CaseEventID": "tcwReferToJudge",
-    "CaseFieldID": "prePostHearing",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "N"
-  },
-  {
     "CaseEventID": "writeFinalDecision",
     "CaseFieldID": "writeFinalDecisionLabelCorrection",
     "CaseTypeID": "Benefit",
