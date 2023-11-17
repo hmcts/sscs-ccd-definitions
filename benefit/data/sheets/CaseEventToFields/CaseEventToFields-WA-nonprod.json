@@ -375,19 +375,6 @@
     "Publish": "Y"
   },
   {
-    "CaseEventID": "postHearingRequest",
-    "CaseFieldID": "decisionInfo",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "READONLY",
-    "LiveFrom": "21/08/2021",
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "PageLabel": "Statement of Reasons",
-    "FieldShowCondition": "[STATE]=\"DoNotShow\"",
-    "Publish": "Y"
-  },
-  {
     "CaseEventID": "uploadDocumentFurtherEvidence",
     "CaseFieldID": "scannedDocumentTypes",
     "CaseTypeID": "Benefit",
