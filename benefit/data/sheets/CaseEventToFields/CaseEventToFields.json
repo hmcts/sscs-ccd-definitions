@@ -5220,7 +5220,7 @@
     "CaseEventID": "reserveToInterlocJudge",
     "CaseFieldID": "reservedToJudgeInterloc",
     "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
+    "DisplayContext": "OPTIONAL",
     "LiveFrom": "05/10/2022",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
