@@ -136,7 +136,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 11,
     "PageID": "1.0",
-    "FieldShowCondition": "appeal.benefitType.code!=\"industrialInjuriesDisablement\""
+    "FieldShowCondition": "appeal.benefitType.code!=\"industrialInjuriesDisablement\"",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "dwpUploadResponse",

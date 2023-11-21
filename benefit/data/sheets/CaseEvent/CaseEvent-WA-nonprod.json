@@ -1,0 +1,38 @@
+[
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "directionDueToday",
+    "Name": "Direction Due Today",
+    "Description": "System event triggered on the day a direction is due",
+    "DisplayOrder": 9991,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "hearingToday",
+    "Name": "Hearing Today",
+    "Description": "System event triggered on the day of a hearing",
+    "DisplayOrder": 9992,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "prepareForHearing",
+    "Name": "Prepare for Hearing",
+    "Description": "System event triggered 14 days before a hearing date",
+    "DisplayOrder": 9993,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
+  }
+]
