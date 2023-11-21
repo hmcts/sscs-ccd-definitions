@@ -183,17 +183,6 @@
     "PageID": "1.0"
   },
   {
-    "LiveFrom": "06/10/2022",
-    "CaseEventID": "updateListingRequirements",
-    "CaseFieldID": "dwpIsOfficerAttending",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "OPTIONAL",
-    "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
-    "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
-  },
-  {
     "LiveFrom": "04/07/2022",
     "CaseEventID": "addCaseOutcome",
     "CaseFieldID": "didPoAttend",
@@ -4394,6 +4383,17 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "dwpSupplementaryResponse",
+    "CaseFieldID": "dwpIsOfficerAttending",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },
