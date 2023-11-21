@@ -2896,7 +2896,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "Publish": "Y"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=interlocReferral",
@@ -3164,7 +3165,9 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 17,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "Publish": "Y",
+    "PublishAs": "action"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -4251,7 +4254,9 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Action Postponement Request"
+    "PageLabel": "Action Postponement Request",
+    "Publish": "Y",
+    "PublishAs": "action"
   },
   {
     "CaseEventID": "actionPostponementRequest",
