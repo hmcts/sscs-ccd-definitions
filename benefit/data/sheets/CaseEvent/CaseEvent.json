@@ -163,6 +163,18 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
+    "ID": "addHearing",
+    "Name": "Add a hearing",
+    "Description": "Add a hearing to the case",
+    "DisplayOrder": 130,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "ShowEventNotes": "Y",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
     "ID": "adminRestoreCases",
     "Name": "Admin - Restore cases",
     "Description": "Admin - Restore cases",
@@ -1433,18 +1445,6 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
-    "ShowEventNotes": "Y",
-    "SecurityClassification": "Public"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
-    "ID": "addHearing",
-    "Name": "Listing Request Sent",
-    "Description": "Send a listing request to list assist",
-    "DisplayOrder": 1035,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
     "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
