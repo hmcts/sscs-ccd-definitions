@@ -3024,7 +3024,7 @@
     "PageFieldDisplayOrder": 5,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
+    "FieldShowCondition": "dwpEditedEvidenceReason!=\"\""
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -3036,7 +3036,7 @@
     "PageFieldDisplayOrder": 6,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
+    "FieldShowCondition": "dwpEditedEvidenceReason!=\"\""
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -3048,7 +3048,7 @@
     "PageFieldDisplayOrder": 7,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
+    "FieldShowCondition": "dwpEditedEvidenceReason!=\"\""
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
