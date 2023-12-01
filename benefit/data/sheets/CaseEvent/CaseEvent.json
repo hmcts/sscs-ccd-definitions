@@ -2050,6 +2050,7 @@
     "DisplayOrder": 1470,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "ShowEventNotes": "Y",
     "SecurityClassification": "Public",
