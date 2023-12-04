@@ -1807,6 +1807,16 @@
   },
   {
     "CaseEventID": "tcwReferToJudge",
+    "CaseFieldID": "prePostHearing",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "tcwReferToJudge",
     "CaseFieldID": "tempNoteDetail",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
@@ -2877,12 +2887,23 @@
   },
   {
     "CaseEventID": "validSendToInterloc",
+    "CaseFieldID": "prePostHearing",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "validSendToInterloc",
     "CaseFieldID": "selectWhoReviewsCase",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
     "PageLabel": "Select who should review this case",
     "ShowSummaryChangeOption": "Y"
@@ -2894,7 +2915,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 3,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
   },
@@ -2906,7 +2927,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "10/10/2019",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 2,
+    "PageFieldDisplayOrder": 4,
     "FieldShowCondition": "selectWhoReviewsCase=\"postponementRequestInterlocSendToTcw\"",
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
@@ -2918,7 +2939,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 3,
+    "PageFieldDisplayOrder": 5,
     "FieldShowCondition": "selectWhoReviewsCase=\"postponementRequestInterlocSendToTcw\"",
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y"
@@ -2930,7 +2951,7 @@
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
+    "PageFieldDisplayOrder": 6,
     "PageID": "2.0",
     "PageShowCondition": "selectWhoReviewsCase=\"postponementRequestInterlocSendToTcw\"",
     "PageLabel": "Preview postponement request document"
