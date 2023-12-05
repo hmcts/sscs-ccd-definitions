@@ -3,7 +3,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Benefit",
     "ID": "editIssueFinalDecisionDate",
-    "Name": "Testing - IssueFinalDecisionDate",
+    "Name": "Testing - Edit Date",
     "Description": "Testing - Edit IssueFinalDecisionDate",
     "DisplayOrder": 9999,
     "PreConditionState(s)": "*",
