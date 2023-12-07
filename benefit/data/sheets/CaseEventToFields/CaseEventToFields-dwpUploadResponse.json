@@ -178,7 +178,7 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "dwpState",
+    "CaseFieldID": "dynamicDwpState",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
