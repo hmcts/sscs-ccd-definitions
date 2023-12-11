@@ -411,5 +411,19 @@
     "PageLabel": "Document types uploaded",
     "FieldShowCondition": "[STATE]=\"DoNotShow\"",
     "Publish": "Y"
+  },
+  {
+    "CaseEventID": "actionPostponementRequest",
+    "CaseFieldID": "interlocReviewState",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/12/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 10,
+    "PageID": "1.0",
+    "PageLabel": "Action Postponement Request",
+    "FieldShowCondition": "[STATE]=\"DoNotShow\"",
+    "Publish": "Y",
+    "PublishAs": "action"
   }
 ]
