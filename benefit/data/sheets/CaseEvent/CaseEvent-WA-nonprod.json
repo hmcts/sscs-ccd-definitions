@@ -91,5 +91,16 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Benefit",
+    "ID": "newCaseRolesAssigned",
+    "Name": "New Case Role Assigned",
+    "DisplayOrder": 10000,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "Publish": "Y"
   }
 ]
