@@ -111,18 +111,20 @@
     "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "dwp",
+    "CaseAccessCategories": "personalIndependencePayment,carer'sAllowance,jobseeker’sAllowance,employmentAndSupportAllowance,disabilityLivingAllowance,universalCredit,industrialDeathBenefit,pensionCredit,retirementPension,childSupport,bereavementBenefit,industrialInjuriesDisablement,maternityAllowance,socialFund,incomeSupport,bereavementSupportPaymentScheme,attendanceAllowance",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "GS_profile,caseworker-sscs-dwpresponsewriter",
+    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-dwpresponsewriter",
     "Disabled": "N"
   },
   {
     "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "hmrc",
+    "CaseAccessCategories": "taxCredit,guardiansAllowance,tax-freeChildcare,homeResponsibilitiesProtection,childBenefit,30HoursFreeChildcare,guaranteedMinimumPension,nationalInsuranceCredits",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "GS_profile,caseworker-sscs-hmrcresponsewriter",
+    "AccessProfiles": "GS_profile,caseworker,caseworker-sscs,caseworker-sscs-hmrcresponsewriter",
     "Disabled": "N"
   },
   {
