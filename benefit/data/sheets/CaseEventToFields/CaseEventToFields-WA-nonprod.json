@@ -177,6 +177,19 @@
     "Publish": "Y"
   },
   {
+    "CaseEventID": "newCaseRolesAssigned",
+    "CaseFieldID": "assignedCaseRoles",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "FieldShowCondition": "[STATE]=\"doNotUse\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "New Case Roles Assigned",
+    "Publish": "Y"
+  },
+  {
     "CaseEventID": "ftaResponseOverdue",
     "CaseFieldID": "directionTypeDl",
     "CaseTypeID": "Benefit",
@@ -214,6 +227,19 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "SOR Request",
+    "FieldShowCondition": "[STATE]=\"DoNotUse\"",
+    "Publish": "Y"
+  },
+  {
+    "CaseEventID": "setAsideRefusedSOR",
+    "CaseFieldID": "issueFinalDecisionDate",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "16/08/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Set Aside Refused - SOR",
     "FieldShowCondition": "[STATE]=\"DoNotUse\"",
     "Publish": "Y"
   },
