@@ -3221,7 +3221,8 @@
     "PageFieldDisplayOrder": 18,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "RetainHiddenValue": "Yes"
+    "RetainHiddenValue": "Yes",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
