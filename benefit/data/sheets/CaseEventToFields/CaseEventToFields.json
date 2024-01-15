@@ -5076,8 +5076,7 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "Write_Statement_Of_Reasons",
     "PageLabel": "Write Statement of Reasons",
-    "ShowSummaryChangeOption": "Y",
-    "Publish": "Y"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=generateDocument",
