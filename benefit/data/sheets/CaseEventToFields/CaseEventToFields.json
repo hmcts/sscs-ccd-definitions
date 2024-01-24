@@ -5256,6 +5256,7 @@
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "judgeReserved = \"Yes\"",
     "LiveFrom": "05/10/2022",
+    "RetainHiddenValue": "No",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
