@@ -5307,10 +5307,34 @@
     "CaseTypeID": "Benefit",
     "CaseEventID": "sendToFirstTier",
     "CaseFieldID": "sendToFirstTier",
-    "PageFieldDisplayOrder": 1,
     "DisplayContext": "MANDATORY",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
     "PageID": "Send_To_First_Tier",
-    "PageLabel": "Send to First Tier",
-    "PageDisplayOrder": 1
+    "PageLabel": "Send to First Tier"
+  },
+  {
+    "LiveFrom": "07/07/2023",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "confirmPoAttendance",
+    "CaseFieldID": "presentingOfficersDetails",
+    "DisplayContext": "COMPLEX",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Po_Details",
+    "PageLabel": "Confirm PO Attendance"
+  },
+  {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
+    "LiveFrom": "07/07/2023",
+    "CaseTypeID": "Benefit",
+    "CaseEventID": "confirmPoAttendance",
+    "CaseFieldID": "presentingOfficersHearingLink",
+    "DisplayContext": "OPTIONAL",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
+    "PageID": "Po_Details",
+    "PageLabel": "Confirm PO Attendance"
+
   }
 ]
