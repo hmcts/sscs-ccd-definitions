@@ -139,7 +139,7 @@
   {
     "LiveFrom": "14/11/2023",
     "CaseTypeID": "Benefit",
-    "RoleName": "fee-paid-judge",
+    "RoleName": "hearing-judge",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "GS_profile,caseworker,caseworker-sscs,caseworker-sscs-judge",
@@ -148,7 +148,7 @@
   {
     "LiveFrom": "14/11/2023",
     "CaseTypeID": "Benefit",
-    "RoleName": "medical",
+    "RoleName": "tribunal-member-1",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "GS_profile,caseworker,caseworker-sscs,caseworker-sscs-panelmember",
@@ -157,7 +157,7 @@
   {
     "LiveFrom": "14/11/2023",
     "CaseTypeID": "Benefit",
-    "RoleName": "fee-paid-medical",
+    "RoleName": "tribunal-member-2",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "GS_profile,caseworker,caseworker-sscs,caseworker-sscs-panelmember",
@@ -166,7 +166,7 @@
   {
     "LiveFrom": "14/11/2023",
     "CaseTypeID": "Benefit",
-    "RoleName": "fee-paid-disability",
+    "RoleName": "tribunal-member-3",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "GS_profile,caseworker,caseworker-sscs,caseworker-sscs-panelmember",
@@ -175,7 +175,7 @@
   {
     "LiveFrom": "14/11/2023",
     "CaseTypeID": "Benefit",
-    "RoleName": "fee-paid-tribunal-member",
+    "RoleName": "appraiser-1",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "GS_profile,caseworker,caseworker-sscs,caseworker-sscs-panelmember",
@@ -184,7 +184,7 @@
   {
     "LiveFrom": "14/11/2023",
     "CaseTypeID": "Benefit",
-    "RoleName": "fee-paid-financial",
+    "RoleName": "appraiser-2",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "GS_profile,caseworker,caseworker-sscs,caseworker-sscs-panelmember",
