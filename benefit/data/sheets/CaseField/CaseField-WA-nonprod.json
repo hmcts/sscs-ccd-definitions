@@ -1,0 +1,3 @@
+[
+  {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "ID": "preWorkAllocation", "Label": "Case created before WA went Live", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+]
