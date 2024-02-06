@@ -451,5 +451,16 @@
     "FieldShowCondition": "[STATE]=\"DoNotShow\"",
     "Publish": "Y",
     "PublishAs": "action"
+  },
+  {
+    "CaseEventID": "waCaseMigration",
+    "CaseFieldID": "preWorkAllocation",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "06/02/2024",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Migrate case for Work Allocation"
   }
 ]
