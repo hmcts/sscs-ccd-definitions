@@ -508,5 +508,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reservedToJudgeInterloc", "Label": "Reserved to (Interloc):", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "presentingOfficersDetails", "Label": "Presenting Officer's Details:", "FieldType": "poDetails", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "presentingOfficersHearingLink", "Label": "Hearing Link", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "poAttendanceConfirmed", "Label": "PO Attendance Confirmed?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "poAttendanceConfirmed", "Label": "PO Attendance Confirmed?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "judgeReserved", "Label": "Reserve to Judge?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
