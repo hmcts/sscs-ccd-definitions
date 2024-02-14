@@ -1591,5 +1591,6 @@
   {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "sendToFirstTier", "AccessProfile": "caseworker-sscs-clerk", "CRUD": "CRUD"},
   {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "presentingOfficersDetails", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "presentingOfficersHearingLink", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
-  {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "poAttendanceConfirmed", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
+  {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "poAttendanceConfirmed", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
+  {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "tribunalDirectPoToAttend", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"}
 ]
