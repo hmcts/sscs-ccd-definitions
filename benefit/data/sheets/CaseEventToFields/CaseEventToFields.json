@@ -558,15 +558,13 @@
     "CaseFieldID": "tribunalDirectPoToAttend",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
-    "PageShowCondition": "adjournCaseTypeOfNextHearing = \"faceToFace\" OR adjournCaseTypeOfNextHearing = \"video\" OR adjournCaseTypeOfNextHearing = \"telephone\"",
-    "FieldShowCondition": "hearingRoute=\"listAssist\"",
+    "PageShowCondition": "adjournCaseTypeOfNextHearing != \"paper\" AND hearingRoute=\"listAssist\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 10,
     "PageFieldDisplayOrder": 1,
     "PageID": "tribunalDirectPoToAttend",
     "PageLabel": "Tribunal Direct PO to Attend",
-    "ShowSummaryChangeOption": "Y",
-    "RetainHiddenValue": "Yes"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "adjournCase",
