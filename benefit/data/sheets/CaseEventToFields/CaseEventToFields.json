@@ -155,7 +155,7 @@
     "CaseFieldID": "hearingRoute",
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
-    "FieldShowCondition": "dwpIsOfficerAttending=\"DoNotShow\"",
+    "FieldShowCondition": "overrideFields=\"DoNotShow\"",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 0,
     "PageID": "1.0",
