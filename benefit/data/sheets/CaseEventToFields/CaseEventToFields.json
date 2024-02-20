@@ -3066,7 +3066,7 @@
     "PageFieldDisplayOrder": 5,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
+    "FieldShowCondition": "dwpEditedEvidenceReason!=\"\""
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -3078,7 +3078,7 @@
     "PageFieldDisplayOrder": 6,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
+    "FieldShowCondition": "dwpEditedEvidenceReason!=\"\""
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -3090,7 +3090,7 @@
     "PageFieldDisplayOrder": 7,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "dwpEditedEvidenceReason=\"phme\""
+    "FieldShowCondition": "dwpEditedEvidenceReason!=\"\""
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -5269,12 +5269,26 @@
   },
   {
     "CaseEventID": "reserveToInterlocJudge",
-    "CaseFieldID": "reservedToJudgeInterloc",
+    "CaseFieldID": "judgeReserved",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "05/10/2022",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Reserve to Judge Interloc",
+    "ShowSummaryChangeOption": "Y"
+  },
+  {
+    "CaseEventID": "reserveToInterlocJudge",
+    "CaseFieldID": "reservedToJudgeInterloc",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "FieldShowCondition": "judgeReserved = \"Yes\"",
+    "LiveFrom": "05/10/2022",
+    "RetainHiddenValue": "No",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
     "PageLabel": "Reserve to Judge Interloc",
     "ShowSummaryChangeOption": "Y"

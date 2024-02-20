@@ -33,5 +33,8 @@
   {"LiveFrom": "08/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "issueInterlocDecisionDate", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "08/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "issueInterlocDecisionDate", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRUD"},
   {"LiveFrom": "08/03/2023", "CaseTypeID": "Benefit", "CaseFieldID": "issueInterlocDecisionDate", "AccessProfile": "caseworker-sscs-judge", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "caseManagementLocation", "AccessProfile": "caseworker-ras-validation", "CRUD": "R"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "CaseFieldID": "caseManagementLocation", "AccessProfile": "caseworker-ras-validation", "CRUD": "R"},
+  {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "CaseFieldID": "preWorkAllocation", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "CaseFieldID": "preWorkAllocation", "AccessProfile": "caseworker-sscs-superuser", "CRUD": "CRU"},
+  {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "CaseFieldID": "preWorkAllocation", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRU"}
 ]
