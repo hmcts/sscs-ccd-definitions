@@ -1463,6 +1463,36 @@
     "PageID": "1.0"
   },
   {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "jointPartyContact",
+    "ListElementCode": "email",
+    "ID": "jointPartyContactEmail",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 74,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "jointPartyContact",
+    "ListElementCode": "phone",
+    "ID": "jointPartyContactPhone",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 75,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "jointPartyContact",
+    "ListElementCode": "mobile",
+    "ID": "jointPartyContactMobile",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 76,
+    "PageID": "1.0"
+  },
+  {
     "CaseEventID": "addRepresentative",
     "CaseFieldID": "appeal",
     "ListElementCode": "rep",

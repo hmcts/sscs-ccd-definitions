@@ -323,7 +323,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 14,
+    "PageFieldDisplayOrder": 15,
     "PageID": "1.0"
   },
   {
@@ -333,7 +333,7 @@
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "PageDisplayOrder": 1,
-    "PageFieldDisplayOrder": 15,
+    "PageFieldDisplayOrder": 16,
     "PageID": "1.0"
   },
   {
@@ -1006,6 +1006,17 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 13,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "jointPartyContact",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "COMPLEX",
+    "FieldShowCondition": "jointParty=\"Yes\"",
+    "LiveFrom": "01/01/2018",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 14,
     "PageID": "1.0"
   },
   {
