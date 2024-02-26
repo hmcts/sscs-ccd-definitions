@@ -68,7 +68,7 @@
     "RoleName": "hearing-centre-admin",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker-sscs,caseworker-sscs-clerk",
+    "AccessProfiles": "caseworker-sscs-clerk",
     "Disabled": "N"
   },
   {
@@ -86,7 +86,7 @@
     "RoleName": "regional-centre-admin",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker-sscs,caseworker-sscs-clerk",
+    "AccessProfiles": "caseworker-sscs-clerk",
     "Disabled": "N"
   },
   {
@@ -95,7 +95,7 @@
     "RoleName": "ctsc-team-leader",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker-sscs,caseworker-sscs-clerk,caseworker-sscs-superuser",
+    "AccessProfiles": "caseworker-sscs-clerk,caseworker-sscs-superuser",
     "Disabled": "N"
   },
   {
@@ -104,7 +104,7 @@
     "RoleName": "ctsc",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker-sscs,caseworker-sscs-clerk",
+    "AccessProfiles": "caseworker-sscs-clerk",
     "Disabled": "N"
   },
   {
@@ -114,7 +114,7 @@
     "CaseAccessCategories": "personalIndependencePayment,carer'sAllowance,jobseeker’sAllowance,employmentAndSupportAllowance,disabilityLivingAllowance,universalCredit,industrialDeathBenefit,pensionCredit,retirementPension,childSupport,bereavementBenefit,industrialInjuriesDisablement,maternityAllowance,socialFund,incomeSupport,bereavementSupportPaymentScheme,attendanceAllowance",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-dwpresponsewriter",
+    "AccessProfiles": "caseworker-sscs-dwpresponsewriter",
     "Disabled": "N"
   },
   {
@@ -124,7 +124,7 @@
     "CaseAccessCategories": "taxCredit,guardiansAllowance,tax-freeChildcare,homeResponsibilitiesProtection,childBenefit,30HoursFreeChildcare,guaranteedMinimumPension,nationalInsuranceCredits",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-hmrcresponsewriter",
+    "AccessProfiles": "caseworker-sscs-hmrcresponsewriter",
     "Disabled": "N"
   },
   {
@@ -214,7 +214,7 @@
     "RoleName": "specific-access-legal-ops",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-clerk,caseworker-sscs-registrar",
+    "AccessProfiles": "caseworker-sscs-clerk,caseworker-sscs-registrar",
     "Disabled": "N"
   },
   {
@@ -223,7 +223,7 @@
     "RoleName": "specific-access-ctsc",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-clerk",
+    "AccessProfiles": "caseworker-sscs-clerk",
     "Disabled": "N"
   },
   {
@@ -232,7 +232,7 @@
     "RoleName": "specific-access-judiciary",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-judge",
+    "AccessProfiles": "caseworker-sscs-judge",
     "Disabled": "N"
   },
   {
@@ -241,7 +241,7 @@
     "RoleName": "specific-access-admin",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-clerk",
+    "AccessProfiles": "caseworker-sscs-clerk",
     "Disabled": "N"
   },
   {
@@ -250,7 +250,7 @@
     "RoleName": "challenged-access-legal-ops",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-clerk,caseworker-sscs-registrar",
+    "AccessProfiles": "caseworker-sscs-clerk,caseworker-sscs-registrar",
     "Disabled": "N"
   },
   {
@@ -259,7 +259,7 @@
     "RoleName": "challenged-access-ctsc",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-clerk",
+    "AccessProfiles": "caseworker-sscs-clerk",
     "Disabled": "N"
   },
   {
@@ -268,7 +268,7 @@
     "RoleName": "challenged-access-judiciary",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-judge",
+    "AccessProfiles": "caseworker-sscs-judge",
     "Disabled": "N"
   },
   {
@@ -277,7 +277,7 @@
     "RoleName": "challenged-access-admin",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-clerk",
+    "AccessProfiles": "caseworker-sscs-clerk",
     "Disabled": "N"
   }
 ]
