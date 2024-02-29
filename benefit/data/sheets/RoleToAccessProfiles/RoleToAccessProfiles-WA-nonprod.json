@@ -148,7 +148,7 @@
   {
     "LiveFrom": "14/11/2023",
     "CaseTypeID": "Benefit",
-    "RoleName": "post-hearing-judge",
+    "RoleName": "post-hearing-salaried-judge",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "caseworker-sscs-judge-salaried",
