@@ -39,7 +39,7 @@
     "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs",
-    "CaseAccessCategories": "",
+    "CaseAccessCategories": "doNotRemove",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "caseworker-sscs",
