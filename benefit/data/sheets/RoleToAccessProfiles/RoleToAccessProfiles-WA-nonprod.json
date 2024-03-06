@@ -211,7 +211,7 @@
   {
     "LiveFrom": "14/11/2023",
     "CaseTypeID": "Benefit",
-    "RoleName": "tribunal-member-1",
+    "RoleName": "appraiser-1",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "caseworker-sscs,caseworker-sscs-judge",
@@ -220,7 +220,7 @@
   {
     "LiveFrom": "14/11/2023",
     "CaseTypeID": "Benefit",
-    "RoleName": "tribunal-member-2",
+    "RoleName": "appraiser-2",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "caseworker-sscs,caseworker-sscs-judge",
