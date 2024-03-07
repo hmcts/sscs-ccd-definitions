@@ -166,7 +166,7 @@
   {
     "LiveFrom": "14/11/2023",
     "CaseTypeID": "Benefit",
-    "RoleName": "fee-paid-judge",
+    "RoleName": "hearing-judge",
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "caseworker-sscs,caseworker-sscs-judge",
