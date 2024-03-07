@@ -938,5 +938,7 @@
   {"LiveFrom": "09/05/2023", "CaseTypeID": "Benefit", "CaseEventID": "permissionToAppealGranted", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
   {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "permissionToAppealGranted", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
   {"LiveFrom": "09/05/2023", "CaseTypeID": "Benefit", "CaseEventID": "permissionToAppealRefused", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRUD"},
-  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "permissionToAppealRefused", "AccessProfile": "caseworker-sscs", "CRUD": "R"}
+  {"LiveFrom": "23/11/2022", "CaseTypeID": "Benefit", "CaseEventID": "permissionToAppealRefused", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "CaseEventID": "waCaseMigration", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
+  {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "CaseEventID": "waCaseMigration", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRU"}
 ]
