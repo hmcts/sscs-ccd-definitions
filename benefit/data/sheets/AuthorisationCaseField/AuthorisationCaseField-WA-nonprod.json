@@ -1,4 +1,0 @@
-[
-  {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "CaseFieldID": "preWorkAllocation", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
-  {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "CaseFieldID": "preWorkAllocation", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRU"}
-]

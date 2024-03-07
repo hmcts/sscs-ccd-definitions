@@ -1,4 +1,0 @@
-[
-  {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "CaseEventID": "waCaseMigration", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
-  {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "CaseEventID": "waCaseMigration", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRU"}
-]
