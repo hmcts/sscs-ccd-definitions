@@ -511,6 +511,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "poAttendanceConfirmed", "Label": "PO Attendance Confirmed?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "judgeReserved", "Label": "Reserve to Judge?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tribunalDirectPoToAttend", "Label": "Tribunal direct PO to attend?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "judgeReserved", "Label": "Reserve to Judge?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "ID": "preWorkAllocation", "Label": "Case created before WA went Live", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
