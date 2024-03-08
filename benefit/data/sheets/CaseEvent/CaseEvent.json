@@ -3182,5 +3182,16 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "postHearing",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "06/02/2024",
+    "CaseTypeID": "Benefit",
+    "ID": "waCaseMigration",
+    "Name": "Migrate case for WA",
+    "DisplayOrder": 10003,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
+    "SecurityClassification": "Public"
   }
 ]

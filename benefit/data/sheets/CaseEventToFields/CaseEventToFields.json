@@ -5462,5 +5462,18 @@
     "PageID": "Po_Details",
     "PageLabel": "Confirm PO Attendance",
     "RetainHiddenValue": "No"
+    "PageLabel": "Send to First Tier",
+    "PageDisplayOrder": 1
+  },
+  {
+    "CaseEventID": "waCaseMigration",
+    "CaseFieldID": "preWorkAllocation",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "06/02/2024",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "PageLabel": "Migrate case for Work Allocation"
   }
 ]
