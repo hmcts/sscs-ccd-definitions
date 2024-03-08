@@ -5462,8 +5462,6 @@
     "PageID": "Po_Details",
     "PageLabel": "Confirm PO Attendance",
     "RetainHiddenValue": "No"
-    "PageLabel": "Send to First Tier",
-    "PageDisplayOrder": 1
   },
   {
     "CaseEventID": "waCaseMigration",
