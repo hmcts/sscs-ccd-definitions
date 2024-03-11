@@ -2,6 +2,11 @@
   {
     "LiveFrom": "6/2/2023",
     "CaseTypeID": "Benefit",
+    "OtherCaseReference":  "appeal.appellant.identity.nino"
+  },
+  {
+    "LiveFrom": "6/2/2023",
+    "CaseTypeID": "Benefit",
     "OtherCaseReference":  "caseReference"
   }
 ]
