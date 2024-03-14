@@ -2471,7 +2471,7 @@
     "Description": "Voids the case",
     "DisplayOrder": 1810,
     "PreConditionState(s)": "*",
-    "PostConditionState": "voidState",
+    "PostConditionState": "dormantAppealState",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
