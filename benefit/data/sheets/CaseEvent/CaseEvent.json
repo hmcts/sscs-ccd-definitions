@@ -2169,6 +2169,7 @@
     "DisplayOrder": 1600,
     "PreConditionState(s)": "draft",
     "PostConditionState": "draft",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "ShowEventNotes": "Y",
     "SecurityClassification": "Public"
   },
