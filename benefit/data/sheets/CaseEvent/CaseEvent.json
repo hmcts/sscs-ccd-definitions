@@ -3193,5 +3193,15 @@
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "06/02/2024",
+    "CaseTypeID": "Benefit",
+    "ID": "dwpCaseMigration",
+    "Name": "Migrate case for DWP",
+    "DisplayOrder": 10005,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
   }
 ]
