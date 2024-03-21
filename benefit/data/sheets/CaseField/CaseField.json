@@ -118,7 +118,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "issueCode", "Label": "Issue code", "FieldType": "FixedList", "FieldTypeParameter": "FL_issueCodes", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpOriginatingOffice", "Label": "Originating office", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpPresentingOffice", "Label": "Presenting office", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpIsOfficerAttending", "Label": "Is the Presenting Officer attending?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpIsOfficerAttending", "Label": "FTA recommend PO to attend?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpUCB", "Label": "Appellant - Unacceptable Customer Behaviour (UCB)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpPHME", "Label": "Potentially Harmful Medical Evidence (PHME)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "dwpComplexAppeal", "Label": "Is the appeal complex?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -435,6 +435,7 @@
   {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "hearingRoute", "Label": "Hearing Route", "FieldType": "FixedRadioList", "FieldTypeParameter": "FL_hearingRoute", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "08/03/2022", "CaseTypeID": "Benefit", "ID": "hearingState", "Label": "Hearing State", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingState", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "ID": "workBasketHearingDate", "Label": "Hearing Date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/12/2023", "CaseTypeID": "Benefit", "ID": "workBasketHearingDateIssued", "Label": "Hearing Date Issued", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "19/05/2022", "CaseTypeID": "Benefit", "ID": "workBasketHearingEpimsId", "Label": "Hearing Venue", "FieldType": "FixedList", "FieldTypeParameter": "FL_hearingEpimsId", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "04/07/2022", "CaseTypeID": "Benefit", "ID": "caseOutcome", "Label": "Case Outcome", "FieldType": "FixedList", "FieldTypeParameter": "FL_caseOutcome", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "04/07/2022", "CaseTypeID": "Benefit", "ID": "didPoAttend", "Label": "Did PO Attend?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -507,6 +508,10 @@
   {"LiveFrom": "18/07/2023", "CaseTypeID": "Benefit", "ID": "libertyToApplySignedRole", "Label": "Signed role", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/09/2021", "CaseTypeID": "Benefit", "ID": "sendToFirstTier", "Label": "Send to First Tier", "FieldType": "sendToFirstTier", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "reservedToJudgeInterloc", "Label": "Reserved to (Interloc):", "FieldType": "JudicialUser", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "presentingOfficersDetails", "Label": "Presenting Officer's Details:", "FieldType": "poDetails", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "presentingOfficersHearingLink", "Label": "Hearing Link", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "poAttendanceConfirmed", "Label": "PO Attendance Confirmed?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "judgeReserved", "Label": "Reserve to Judge?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "tribunalDirectPoToAttend", "Label": "Tribunal direct PO to attend?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "ID": "preWorkAllocation", "Label": "Case created before WA went Live", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
