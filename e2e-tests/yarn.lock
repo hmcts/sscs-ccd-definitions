@@ -1601,7 +1601,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-
 "chromium-bidi@npm:0.5.13":
   version: 0.5.13
   resolution: "chromium-bidi@npm:0.5.13"
@@ -5192,7 +5191,6 @@ __metadata:
   checksum: 823bf443c6dd14f669984dea25757b37993f67e8d94698996064035edd43bed8a5a17a9f12e439c2b35df1078c6bec05a6c86e336209eb1061e8025c481168e8
   languageName: node
   linkType: hard
-
 
 "puppeteer-core@npm:22.5.0":
   version: 22.5.0
