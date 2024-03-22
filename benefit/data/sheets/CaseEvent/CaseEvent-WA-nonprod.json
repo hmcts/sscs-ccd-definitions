@@ -139,16 +139,5 @@
     "SecurityClassification": "Public",
     "CallBackURLSubmittedEvent": "${CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL}/send",
     "Publish": "Y"
-  },
-  {
-    "LiveFrom": "06/02/2024",
-    "CaseTypeID": "Benefit",
-    "ID": "waCaseMigration",
-    "Name": "Migrate case for WA",
-    "DisplayOrder": 10003,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "Publish": "Y"
   }
 ]
