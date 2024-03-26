@@ -1463,6 +1463,36 @@
     "PageID": "1.0"
   },
   {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "jointPartyContact",
+    "ListElementCode": "email",
+    "ID": "jointPartyContactEmail",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 74,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "jointPartyContact",
+    "ListElementCode": "phone",
+    "ID": "jointPartyContactPhone",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 75,
+    "PageID": "1.0"
+  },
+  {
+    "CaseEventID": "caseUpdated",
+    "CaseFieldID": "jointPartyContact",
+    "ListElementCode": "mobile",
+    "ID": "jointPartyContactMobile",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "19/11/2019",
+    "FieldDisplayOrder": 76,
+    "PageID": "1.0"
+  },
+  {
     "CaseEventID": "addRepresentative",
     "CaseFieldID": "appeal",
     "ListElementCode": "rep",
@@ -6049,5 +6079,65 @@
     "LiveFrom": "05/10/2022",
     "FieldDisplayOrder": 2,
     "PageID": "Send_To_First_Tier"
+  },
+  {
+    "CaseEventID": "confirmPoAttendance",
+    "CaseFieldID": "presentingOfficersDetails",
+    "ListElementCode": "name.title",
+    "ID": "confirmPoAttendancePresentingOfficersDetailsNameTitle",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "05/10/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "Po_Details"
+  },
+  {
+    "CaseEventID": "confirmPoAttendance",
+    "CaseFieldID": "presentingOfficersDetails",
+    "ListElementCode": "name.firstName",
+    "ID": "confirmPoAttendancePresentingOfficersDetailsFirstName",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "05/10/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "Po_Details"
+  },
+  {
+    "CaseEventID": "confirmPoAttendance",
+    "CaseFieldID": "presentingOfficersDetails",
+    "ListElementCode": "name.lastName",
+    "ID": "confirmPoAttendancePresentingOfficersDetailsLastName",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "05/10/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "Po_Details"
+  },
+  {
+    "CaseEventID": "confirmPoAttendance",
+    "CaseFieldID": "presentingOfficersDetails",
+    "ListElementCode": "contact.phone",
+    "ID": "confirmPoAttendancePresentingOfficersDetailsContactPhone",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "05/10/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "Po_Details"
+  },
+  {
+    "CaseEventID": "confirmPoAttendance",
+    "CaseFieldID": "presentingOfficersDetails",
+    "ListElementCode": "contact.mobile",
+    "ID": "confirmPoAttendancePresentingOfficersDetailsContactMobile",
+    "DisplayContext": "COMPLEX",
+    "LiveFrom": "05/10/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "Po_Details"
+  },
+  {
+    "CaseEventID": "confirmPoAttendance",
+    "CaseFieldID": "presentingOfficersDetails",
+    "ListElementCode": "contact.email",
+    "ID": "confirmPoAttendancePresentingOfficersDetailsContactEmail",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "05/10/2022",
+    "FieldDisplayOrder": 1,
+    "PageID": "Po_Details"
   }
 ]
