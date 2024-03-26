@@ -43,7 +43,7 @@
     "codelyzer": "^6.0.2",
     "config": "^3.3.9",
     "cross-env": "^7.0.3",
-    "cucumber": "^6.0.7",
+    "@cucumber/cucumber": "^7.0.0",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-cucumber": "^2.0.0",
