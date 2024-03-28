@@ -71,7 +71,8 @@
   "resolutions": {
     "xml2js": "^0.6.2",
     "json-schema": "^0.4.0",
-    "jszip": "^3.10.1"
+    "jszip": "^3.10.1",
+    "thenify": "^3.3.1"
   },
   "packageManager": "yarn@3.5.0",
   "devDependencies": {
