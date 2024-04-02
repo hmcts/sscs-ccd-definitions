@@ -4231,19 +4231,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jszip@npm:^3.1.3":
-  version: 3.7.0
-  resolution: "jszip@npm:3.7.0"
-  dependencies:
-    lie: ~3.3.0
-    pako: ~1.0.2
-    readable-stream: ~2.3.6
-    set-immediate-shim: ~1.0.1
-  checksum: 10b8c6a8406c0ac559353bb8b8946a55432ccfda27bc98e539156301ec78a26cd4e7dc4288e9863796e9f30a6924910cefa7bb12bda1338cf71e522133abb370
-  languageName: node
-  linkType: hard
-
-"jszip@npm:^3.10.1":
+"jszip@npm:^3.8.0":
   version: 3.10.1
   resolution: "jszip@npm:3.10.1"
   dependencies:
@@ -5745,13 +5733,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"set-immediate-shim@npm:~1.0.1":
-  version: 1.0.1
-  resolution: "set-immediate-shim@npm:1.0.1"
-  checksum: 5085c84039d1e5eee73d2bf48ce765fcec76159021d0cc7b40e23bcdf62cb6d450ffb781e3c62c1118425242c48eae96df712cba0a20a437e86b0d4a15d51a11
-  languageName: node
-  linkType: hard
-
 "setimmediate@npm:^1.0.5":
   version: 1.0.5
   resolution: "setimmediate@npm:1.0.5"
@@ -6258,12 +6239,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"thenify@npm:>= 3.1.0 < 4":
-  version: 3.3.0
-  resolution: "thenify@npm:3.3.0"
+"thenify@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "thenify@npm:3.3.1"
   dependencies:
     any-promise: ^1.0.0
-  checksum: 5ba001d4017ecfce5b4cc358a64587d68122bd52a1e8fd837dd23d720ae434e4a4eeac61aa3568f27add1677a0997d3c15ae43112e326a8f329e08482df00b04
+  checksum: 84e1b804bfec49f3531215f17b4a6e50fd4397b5f7c1bccc427b9c656e1ecfb13ea79d899930184f78bc2f57285c54d9a50a590c8868f4f0cef5c1d9f898b05e
   languageName: node
   linkType: hard
 
