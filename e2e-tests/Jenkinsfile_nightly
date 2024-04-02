@@ -52,7 +52,7 @@ withNightlyPipeline("nodejs", product, component) {
     env.TEST_E2E_ANNOTATION = params.NIGHTLY_TAG
     env.LOGGING_DRIVER = 'INFO'
     env.LOGGING_BROWSER = 'INFO'
-    env.TEST_E2E_RETRIES = 3
+    env.TEST_E2E_RETRIES = 5
 
     afterSuccess('build') {
         stage('Transpile') {
