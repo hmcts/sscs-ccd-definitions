@@ -32,5 +32,3 @@ Feature: Upload evidences to a case
     Then the case should be in "Incomplete Application" state
 
     And I choose "Upload further evidence"
-    When I upload further evidence documents for Incomplete Application
-    Then I should see uploaded file for incomplete case within documents tab

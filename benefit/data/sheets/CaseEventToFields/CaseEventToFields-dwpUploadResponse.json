@@ -175,7 +175,7 @@
   },
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "dwpState",
+    "CaseFieldID": "dynamicDwpState",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
@@ -409,6 +409,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {
+    "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
     "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "otherParties",
     "CaseTypeID": "Benefit",

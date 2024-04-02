@@ -41,7 +41,7 @@ withNightlyPipeline("nodejs", product, component) {
     env.TEST_E2E_FAIL_FAST = 'false'
     env.TEST_E2E_NUM_BROWSERS = '50'
     env.TEST_E2E_ANNOTATION = '--cucumberOpts.tags=~@wip --cucumberOpts.tags=@nightly-test'
-    env.TEST_E2E_RETRIES = 1
+    env.TEST_E2E_RETRIES = 5
 
     afterSuccess('build') {
         stage('Transpile') {

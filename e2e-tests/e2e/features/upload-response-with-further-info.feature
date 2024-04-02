@@ -6,7 +6,7 @@ Feature: Alternate Happy Path
     Given I presetup an "PIP" SYA case
     And I am signed in as a Case Officer
     Given I navigate to an existing case
-    Then the case should be in "With FTA" state
+    Then the case should end in "With FTA" state
 
     When I switch to be a DWPResponse Writer
     And I navigate to an existing case
@@ -18,7 +18,6 @@ Feature: Alternate Happy Path
     And I navigate to an existing case
     When I choose "Response reviewed"
     And I choose Requires Interlocutory Review No "Response reviewed"
-    And I submit "Response reviewed"
     Then the case should be in "Ready to list" state
 
 

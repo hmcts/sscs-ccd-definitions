@@ -39,6 +39,15 @@
   {
     "LiveFrom": "18/03/2023",
     "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-judge-salaried",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-judge-salaried",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/03/2023",
+    "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-panelmember",
     "Authorisation": "",
     "ReadOnly": "N",
@@ -125,6 +134,16 @@
     "Authorisation": "",
     "ReadOnly": "N",
     "AccessProfiles": "[CREATOR]",
+    "Disabled": "N"
+  },
+  {
+    "LiveFrom": "18/03/2023",
+    "CaseTypeID": "Benefit",
+    "RoleName": "idam:caseworker-sscs-hmrcresponsewriter",
+    "CaseAccessCategories": "taxCredit,guardiansAllowance,tax-freeChildcare,homeResponsibilitiesProtection,childBenefit,30HoursFreeChildcare,guaranteedMinimumPension,nationalInsuranceCredits",
+    "Authorisation": "",
+    "ReadOnly": "N",
+    "AccessProfiles": "caseworker,caseworker-sscs,caseworker-sscs-hmrcresponsewriter",
     "Disabled": "N"
   }
 ]

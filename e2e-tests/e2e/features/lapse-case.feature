@@ -1,4 +1,4 @@
-@migrated-to-exui @nightly-test
+@nightly-test
 Feature: Lapse Appeal
 
   Background:

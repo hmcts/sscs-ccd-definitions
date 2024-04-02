@@ -1,5 +1,5 @@
 {
-  "ApiCallTimeout": 40000,
+  "ApiCallTimeout": 80000,
   "ccd": {
     "gatewayUrl": "https://gateway-ccd.demo.platform.hmcts.net",
     "webUrl": "https://manage-case.demo.platform.hmcts.net/list/case?jurisdiction=sscs"

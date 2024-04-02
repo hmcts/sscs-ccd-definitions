@@ -8,6 +8,6 @@ dist/
 *.iml
 reports/
 protractorFailuresReport/
-
+.pnp.*
 e2e/reporter/resources/
 .github/

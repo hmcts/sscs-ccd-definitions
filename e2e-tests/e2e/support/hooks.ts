@@ -10,7 +10,7 @@ After(async function (scenario) {
     const stream = await browser.takeScreenshot();
     const decodedImage = Buffer.from(stream.replace(/^data:image\/(png|gif|jpeg);base64,/, ''), 'base64');
     // eslint-disable-next-line no-invalid-this
-    await this.attach(decodedImage, 'image/png');
+    this.attach(decodedImage, 'image/png');
 
     // fetch browser logs
     const browserLog = await browser.manage().logs().get('browser');
@@ -22,7 +22,7 @@ After(async function (scenario) {
     }
     try {
       // eslint-disable-next-line no-invalid-this
-      await this.attach(JSON.stringify(browserErrorLogs, null, 2));
+      this.attach(JSON.stringify(browserErrorLogs, null, 2));
     } catch (error) {
       logger.error('Error occurred adding message to report.', error);
     }
