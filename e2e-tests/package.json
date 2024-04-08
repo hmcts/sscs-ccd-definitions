@@ -68,6 +68,12 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   },
+  "resolutions": {
+    "json-schema": "^0.4.0",
+    "xml2js": "^0.5.0",
+    "thenify": "^3.3.1",
+    "jszip": "^3.8.0"
+  },
   "packageManager": "yarn@3.5.0",
   "devDependencies": {
     "@cucumber/cucumber": "^9.5.1"
