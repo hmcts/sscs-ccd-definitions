@@ -21,6 +21,8 @@ def secrets = [
         'sscs-${env}': [
                 secret('test-e2e-caseofficer-username', 'TEST_CASEOFFICER_USERNAME'),
                 secret('test-e2e-caseofficer-password', 'TEST_CASEOFFICER_PASSWORD'),
+                secret('test-e2e-hmc-caseofficer-username', 'TEST_HMC_CASEOFFICER_USERNAME'),
+                secret('test-e2e-hmc-caseofficer-password', 'TEST_HMC_CASEOFFICER_PASSWORD'),
                 secret('test-e2e-judge-username', 'TEST_JUDGE_USERNAME'),
                 secret('test-e2e-judge-password', 'TEST_JUDGE_PASSWORD'),
                 secret('test-e2e-dwp-username', 'TEST_DWP_USERNAME'),
