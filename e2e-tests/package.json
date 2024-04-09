@@ -10,7 +10,7 @@
     "transpile": "yarn tsc -b",
     "lint": "yarn eslint . && yarn prettier --check .",
     "lint:fix": "yarn prettier --write . && yarn eslint . --fix --quiet",
-    "webdriverUpdate": "webdriver-manager update --versions.chrome 112.0.5615.49 --gecko=false",
+    "webdriverUpdate": "webdriver-manager update --versions.chrome 113.0.5672.63 --gecko=false",
     "e2e": "yarn test:fullfunctional",
     "test:local": "yarn build && cross-env NODE_ENV=development protractor ./dist/e2e/features.parallel.conf.js --cucumberOpts.tags=~@wip --cucumberOpts.tags=@nightly-test",
     "test:aat": "yarn build && cross-env NODE_ENV=aat protractor ./dist/e2e/features.parallel.conf.js --cucumberOpts.tags=~@wip --cucumberOpts.tags=@nightly-test",
