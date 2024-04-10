@@ -75,9 +75,10 @@ withPipeline("nodejs", product, component) {
     }
 
     before('functionalTest:aat') {
-        // stage('Setup') {
-        //     yarnBuilder.yarn('setup')
-        // }
+        sh """
+           ./bin/pull-latest-ccd-files.sh
+        """
+
         env.TEST_E2E_URL_WEB = params.URL_TO_TEST
         env.TEST_E2E_URL_GATEWAY = params.CCD_GATEWAY_URL
         env.TEST_E2E_API_URI = params.TRIBUNALS_API_URI
