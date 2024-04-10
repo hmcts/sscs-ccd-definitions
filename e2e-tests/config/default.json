@@ -1,0 +1,52 @@
+{
+  "ApiCallTimeout": 40000,
+  "ccd": {
+    "gatewayUrl": "https://gateway-ccd.aat.platform.hmcts.net",
+    "webUrl": "https://manage-case.aat.platform.hmcts.net/list/case?jurisdiction=sscs"
+  },
+  "tribunals": {
+    "uri": "http://sscs-tribunals-api-aat.service.core-compute-aat.internal"
+  },
+  "proxy": {
+    "url": "",
+    "use": "false",
+    "tunnelIdentifier": "reformtunnel"
+  },
+  "protractor": {
+    "UseHeadlessBrowser": true,
+    "TestOutputDir": "./reports/tests-results",
+    "RunWithNumberOfBrowsers": 2,
+    "WaitForAngular": true,
+    "FailFast": true,
+    "testRetries": 2
+  },
+  "users": {
+    "caseOfficer": {
+      "user": "",
+      "password": ""
+    },
+    "hearingCaseOfficer": {
+      "user": "",
+      "password": ""
+    },
+    "clerk": {
+      "user": "",
+      "password": ""
+    },
+    "judge": {
+      "user": "",
+      "password": ""
+    },
+    "DWPResponseWriter": {
+      "user": "",
+      "password": ""
+    }
+  },
+  "tests": {
+    "crossBrowser": false
+  },
+  "logging": {
+    "driver": "DEBUG",
+    "browser": "DEBUG"
+  }
+}

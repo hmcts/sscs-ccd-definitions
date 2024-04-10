@@ -1,0 +1,42 @@
+<div class="modal" id="modal{{$ctrl.index}}" tabindex="-1" role="dialog"
+     aria-labelledby="stackModalLabel{{$ctrl.index}}">
+    <div class="modal-dialog modal-lg m-stack-modal" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h6 class="modal-title" id="stackModalLabelP{{$ctrl.index}}">
+                    {{$ctrl.getParent($ctrl.data.description)}}</h6>
+                <h5 class="modal-title" id="stackModalLabel{{$ctrl.index}}">
+                    {{$ctrl.getShortDescription($ctrl.data.description)}}</h5>
+            </div>
+            <div class="modal-body">
+                <div ng-if="$ctrl.data.trace.length > 0">
+                    <div ng-if="$ctrl.isValueAnArray($ctrl.data.trace)">
+                        <pre class="logContainer" ng-repeat="trace in $ctrl.data.trace track by $index"><div ng-class="$ctrl.applySmartHighlight(line)" ng-repeat="line in trace.split('\n') track by $index">{{line}}</div></pre>
+                    </div>
+                    <div ng-if="!$ctrl.isValueAnArray($ctrl.data.trace)">
+                        <pre class="logContainer"><div ng-class="$ctrl.applySmartHighlight(line)" ng-repeat="line in $ctrl.data.trace.split('\n') track by $index">{{line}}</div></pre>
+                    </div>
+                </div>
+                <div ng-if="$ctrl.data.browserLogs.length > 0">
+                    <h5 class="modal-title">
+                        Browser logs:
+                    </h5>
+                    <pre class="logContainer"><div class="browserLogItem"
+                                                   ng-repeat="logError in $ctrl.data.browserLogs track by $index"><div><span class="label browserLogLabel label-default"
+                                                                                                                             ng-class="{'label-danger': logError.level==='SEVERE', 'label-warning': logError.level==='WARNING'}">{{logError.level}}</span><span class="label label-default">{{$ctrl.convertTimestamp(logError.timestamp)}}</span><div ng-repeat="messageLine in logError.message.split('\\n') track by $index">{{ messageLine }}</div></div></div></pre>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default"
+                        ng-class="{active: $ctrl.rootScope.showSmartStackTraceHighlight}"
+                        ng-click="$ctrl.toggleSmartStackTraceHighlight()">
+                    <span class="glyphicon glyphicon-education black"></span> Smart Stack Trace
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

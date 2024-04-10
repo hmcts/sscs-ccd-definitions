@@ -1,0 +1,23 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "./dist",
+
+    "module": "NodeNext",
+    "target": "ESNext",
+    "lib": ["es2020", "dom"],
+
+    "pretty": true,
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
+  }
+}

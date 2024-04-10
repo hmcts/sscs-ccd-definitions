@@ -1,0 +1,37 @@
+<div class="modal" id="imageModal{{$ctrl.index}}" tabindex="-1" role="dialog"
+     aria-labelledby="imageModalLabel{{$ctrl.index}}" ng-keydown="$ctrl.updateSelectedModal($event,$ctrl.index)">
+    <div class="modal-dialog modal-lg m-screenhot-modal" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h6 class="modal-title" id="imageModalLabelP{{$ctrl.index}}">
+                    {{$ctrl.getParent($ctrl.data.description)}}</h6>
+                <h5 class="modal-title" id="imageModalLabel{{$ctrl.index}}">
+                    {{$ctrl.getShortDescription($ctrl.data.description)}}</h5>
+            </div>
+            <div class="modal-body">
+                <img class="screenshotImage" ng-src="{{$ctrl.data.screenShotFile}}">
+            </div>
+            <div class="modal-footer">
+                <div class="pull-left">
+                    <button ng-disabled="!$ctrl.hasPrevious" class="btn btn-default btn-previous" data-dismiss="modal"
+                            data-toggle="modal" data-target="#imageModal{{$ctrl.previous}}">
+                        Prev
+                    </button>
+                    <button ng-disabled="!$ctrl.hasNext" class="btn btn-default btn-next"
+                            data-dismiss="modal" data-toggle="modal"
+                            data-target="#imageModal{{$ctrl.next}}">
+                        Next
+                    </button>
+                </div>
+                <a class="btn btn-primary" href="{{$ctrl.data.screenShotFile}}" target="_blank">
+                    Open Image in New Tab
+                    <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                </a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
