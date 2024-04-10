@@ -9,7 +9,7 @@ cd sscs-ccd-e2e-tests
 echo "Switch to Master branch on sscs-ccd-definition"
 git checkout master
 
-cd ..
+# cd ..
 
 #Copy ccd definition files  to sscs-ccd-def which contians ccd def files
 
