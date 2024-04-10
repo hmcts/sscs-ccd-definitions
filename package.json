@@ -6,7 +6,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "setup": "cd ccd-e2e-tests && yarn install && yarn webdriverUpdate",
+    "setup": "cd ccd-e2e-tests && ls -al && yarn install && yarn webdriverUpdate",
     "lint": "echo lint",
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
