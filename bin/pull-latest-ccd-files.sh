@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Checkout ccd definition project
-git clone https://github.com/hmcts/sscs-ccd-e2e-tests.git
+git clone git@github.com:hmcts/sscs-ccd-e2e-tests.git
 cd sscs-ccd-e2e-tests
 
 # mkdir e2e-tests
