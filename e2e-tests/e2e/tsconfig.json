@@ -1,5 +1,0 @@
-{
-  "extends": "../tsconfig-base.json",
-  "exclude": ["./reporter/resources", "../node_modules", "../.yarn"],
-  "include": ["./**/*.ts"]
-}
