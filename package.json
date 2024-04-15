@@ -6,11 +6,13 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "setup": "cd e2e-tests && yarn install && yarn transpile && yarn webdriverUpdate",
+    "setup": "./bin/pull-latest-ccd-files.sh",
     "lint": "echo lint",
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
-    "test:functional": "cd e2e-tests && yarn test:previewfunctional",
+    "test:preview": "echo preview test infra is wip",
+    "test:aat": "cd sscs-ccd-e2e-tests && yarn install && yarn test:fullfunctional",
+    "test:functional": "ENVIRONMENT=${ENVIRONMENT} ./bin/run-functional-tests.sh",
     "start": "node index.js",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
