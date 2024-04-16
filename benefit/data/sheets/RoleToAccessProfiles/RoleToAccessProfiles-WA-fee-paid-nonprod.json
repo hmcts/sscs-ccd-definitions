@@ -5,7 +5,7 @@
     "RoleName": "fee-paid-judge",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker-sscs-judge",
+    "AccessProfiles": "caseworker-sscs,caseworker-sscs-judge",
     "Disabled": "N"
   },
   {
@@ -14,7 +14,7 @@
     "RoleName": "fee-paid-medical",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker-sscs-judge",
+    "AccessProfiles": "caseworker-sscs,caseworker-sscs-judge",
     "Disabled": "N"
   },
   {
@@ -23,7 +23,7 @@
     "RoleName": "fee-paid-disability",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker-sscs-judge",
+    "AccessProfiles": "caseworker-sscs,caseworker-sscs-judge",
     "Disabled": "N"
   },
   {
@@ -32,7 +32,7 @@
     "RoleName": "fee-paid-financial",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker-sscs-judge",
+    "AccessProfiles": "caseworker-sscs,caseworker-sscs-judge",
     "Disabled": "N"
   },
   {
@@ -41,7 +41,7 @@
     "RoleName": "fee-paid-tribunal-member",
     "Authorisation": "",
     "ReadOnly": "N",
-    "AccessProfiles": "caseworker-sscs-judge",
+    "AccessProfiles": "caseworker-sscs,caseworker-sscs-judge",
     "Disabled": "N"
   }
 ]
