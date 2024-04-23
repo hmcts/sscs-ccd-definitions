@@ -53,13 +53,11 @@ esac
 
 if [[ ${ENV} == "local" ]]; then
     EM_CCD_ORCHESTRATOR_URL="http://host.docker.internal:4623"
-    SSCS_CCD_ORCHESTRATOR_URL="http://host.docker.internal:8070"
     TRIBUNALS_API_URL="http://host.docker.internal:8080"
     TYA_NOTIFICATIONS_API_URL="http://host.docker.internal:8081"
     BULK_SCAN_API_URL="http://host.docker.internal:8090"
     BULK_SCAN_ORCHESTRATOR_URL="http://host.docker.internal:8099"
 elif [[ ${ENV} == "aat" || ${ENV} == "demo" || ${ENV} == "prod" || ${ENV} == "perftest" || ${ENV} == "ithc" ]]; then
-    SSCS_CCD_ORCHESTRATOR_URL="http://sscs-ccd-callback-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
     TRIBUNALS_API_URL="http://sscs-tribunals-api-${ENV}.service.core-compute-${ENV}.internal"
     TYA_NOTIFICATIONS_API_URL="http://sscs-tya-notif-${ENV}.service.core-compute-${ENV}.internal"
     BULK_SCAN_API_URL="http://sscs-bulk-scan-${ENV}.service.core-compute-${ENV}.internal"
@@ -137,7 +135,6 @@ docker run -i --rm --name json2xlsx \
   --user 1000:1000 \
   -v json2xlsx_data:/tmp \
   -e "CCD_DEF_EM_CCD_ORCHESTRATOR_URL=${EM_CCD_ORCHESTRATOR_URL}" \
-  -e "CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL=${SSCS_CCD_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_TRIBUNALS_API_URL=${TRIBUNALS_API_URL}" \
   -e "CCD_DEF_TYA_NOTIFICATIONS_API_URL=${TYA_NOTIFICATIONS_API_URL}" \
   -e "CCD_DEF_BULK_SCAN_API_URL=${BULK_SCAN_API_URL}" \
