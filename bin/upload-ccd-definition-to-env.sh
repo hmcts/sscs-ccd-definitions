@@ -52,7 +52,6 @@ IDAM_URI="http://idam-api-idam-${ENV}.service.core-compute-idam-${ENV}.internal"
 AUTH_PROVIDER_BASE_URL="http://rpe-service-auth-provider-${ENV}.service.core-compute-${ENV}.internal"
 CCD_STORE_BASE_URL="http://ccd-definition-store-api-${ENV}.service.core-compute-${ENV}.internal"
 EM_CCD_ORCHESTRATOR_URL="http://em-ccd-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
-SSCS_CCD_ORCHESTRATOR_URL="http://sscs-ccd-callback-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
 TRIBUNALS_API_URL="http://sscs-tribunals-api-${ENV}.service.core-compute-${ENV}.internal"
 TYA_NOTIFICATIONS_API_URL="http://sscs-tya-notif-${ENV}.service.core-compute-${ENV}.internal"
 BULK_SCAN_API_URL="http://sscs-bulk-scan-${ENV}.service.core-compute-${ENV}.internal"
@@ -80,7 +79,6 @@ case ${ENV} in
     CCD_STORE_BASE_URL='http://'${DOCKER_HOST_IP}':4451'
     AUTH_PROVIDER_BASE_URL='http://'${DOCKER_HOST_IP}':4502'
     EM_CCD_ORCHESTRATOR_URL="http://rpa-em-ccd-orchestrator:8080"
-    SSCS_CCD_ORCHESTRATOR_URL="http://dockerhost:8070"
     TRIBUNALS_API_URL="http://dockerhost:8080"
     TYA_NOTIFICATIONS_API_URL="http://dockerhost:8081"
     BULK_SCAN_API_URL="http://dockerhost:8090"
@@ -119,7 +117,6 @@ docker run \
   -e "CCD_STORE_BASE_URL=${CCD_STORE_BASE_URL}" \
   -e "CCD_DEF_FILENAME=sscs-ccd.xlsx" \
   -e "CCD_DEF_EM_CCD_ORCHESTRATOR_URL=${EM_CCD_ORCHESTRATOR_URL}" \
-  -e "CCD_DEF_SSCS_CCD_ORCHESTRATOR_URL=${SSCS_CCD_ORCHESTRATOR_URL}" \
   -e "CCD_DEF_TRIBUNALS_API_URL=${TRIBUNALS_API_URL}" \
   -e "CCD_DEF_TYA_NOTIFICATIONS_API_URL=${TYA_NOTIFICATIONS_API_URL}" \
   -e "CCD_DEF_BULK_SCAN_API_URL=${BULK_SCAN_API_URL}" \
