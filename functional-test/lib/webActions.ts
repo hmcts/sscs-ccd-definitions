@@ -8,19 +8,23 @@ export class WebActions {
         this.page = page;
     }
 
-    async chooseOptionByLabel(elementId: string, labelText: string) {
-        await this.page.locator(elementId).selectOption({label: labelText});
+    async chooseOptionByLabel(elementLocator: string, labelText: string) {
+        await this.page.locator(elementLocator).selectOption({label: labelText});
+    }
+
+    async verifyPageLabel(elementLocator: string, labelText: string) {
+        await expect(this.page.locator(elementLocator)).toHaveText(labelText);
+    }
+
+    async inputField (elementLocator: string, inputValue: string) {
+        await this.page.fill(elementLocator, inputValue);
+    }
+
+    async clickButton(elementLocator: string): Promise<void> {
+        await this.page.click(elementLocator);
     }
 
     async clickNextStepButton(elementId: string): Promise<void> {
         await this.page.click(elementId);
-    }
-
-    async fillText(elementId: string, inputText: string): Promise<void> {
-        await this.page.fill(elementId, inputText);
-    }
-
-    async clickButton(elementName: string): Promise<void> {
-        await this.page.getByRole('button', {name: elementName}).click();
     }
 }

@@ -1,5 +1,5 @@
-import { expect, Locator, Page } from '@playwright/test';
-import { WebActions } from '../lib/webActions'
+import {expect, Locator, Page} from '@playwright/test';
+import {WebActions} from '../lib/webActions'
 
 let webActions: WebActions;
 
@@ -11,8 +11,8 @@ export class HomePage {
     readonly submitNextStepButton: string;
     readonly nextStepDropDown: string;
     readonly eventTitle: Locator;
-    
-    
+
+
     constructor(page: Page) {
         this.page = page;
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
@@ -40,10 +40,8 @@ export class HomePage {
     async verifyTabContent(fieldLabel: string, fieldValue: string): Promise<void> {
         await expect(this.notePadTab).toBeVisible();
         await this.notePadTab.click();
-        let noteSummaryField =  await this.page
-                  .locator(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`);
+        await expect(this.page
+            .locator(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`)).toBeVisible();
 
-        await expect(noteSummaryField).toBeVisible();
     }
- 
 }

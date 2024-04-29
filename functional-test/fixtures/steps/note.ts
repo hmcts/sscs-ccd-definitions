@@ -2,7 +2,7 @@ import { expect, Locator, Page } from '@playwright/test';
 import { HomePage } from '../../pages/homePage';
 import { AddNotePage } from '../../pages/addNotePage';
 import { LoginPage } from '../../pages/loginPage';
-import setUpData from  "../../helpers/dataSetUpHelper";
+import createCaseBasedOnCaseType from  "../../helpers/dataSetUpHelper";
 const addNoteTestConfig = require('../../data/uiJsonTestData/add-note.json');
 const eventTestConfig = require('../../data/uiJsonTestData/event-name.json'); 
 
@@ -21,13 +21,16 @@ export class Note {
         let homePage = new HomePage(this.page);
         let addNotePage = new AddNotePage(this.page);
 
-        var pipCaseId = await setUpData("PIP");
+        var pipCaseId = await createCaseBasedOnCaseType("PIP");
         await loginPage.goToLoginPage();
         await loginPage.verifySuccessfulLoginForCaseworker('Case list');
 
         await homePage.goToHomePage(pipCaseId);
         await homePage.chooseEvent(eventTestConfig.addNoteEvent);
-        await addNotePage.submitNote(addNoteTestConfig.noteSummaryValue);
+
+        await addNotePage.verifyPageContent();
+        await addNotePage.inputData(addNoteTestConfig.noteSummaryValue);
+        await addNotePage.confirmSubmission();
         await addNotePage.confirmSubmission();
 
         await homePage.verifyTabContent(addNoteTestConfig.noteFieldValue, addNoteTestConfig.noteSummaryValue);
