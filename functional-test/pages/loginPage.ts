@@ -1,20 +1,22 @@
 import { expect, Locator, Page } from '@playwright/test';
-import {credentials} from '../config/config';
+import { credentials } from '../config/config';
+import { WebActions } from '../lib/webActions'
+
+let webActions: WebActions;
 
 export class LoginPage {
 
     readonly page: Page;
-    readonly userName: Locator;
-    readonly passWord: Locator;
+    readonly userName: string;
+    readonly passWord: string;
     readonly loginBtn: Locator;
     readonly pageTitle: Locator;
 
     constructor(page: Page) {
         this.page = page;
-        this.userName = page.locator('#username');
-        this.passWord = page.locator('#password');
-        this.loginBtn = page.getByRole('button', {name: 'Sign in'});
         this.pageTitle = page.locator('h1');
+
+        webActions = new WebActions(this.page);
 
     }
 
@@ -27,9 +29,9 @@ export class LoginPage {
     }
 
     async verifySuccessfulLoginForCaseworker(expTitle: string): Promise<void> {
-        await this.userName.fill(credentials.caseWorker.email);
-        await this.passWord.fill(credentials.caseWorker.password);
-        await this.loginBtn.click();
+        await webActions.inputField('#username', credentials.caseWorker.email);
+        await webActions.inputField('#password', credentials.caseWorker.password);
+        await webActions.clickButton('Sign in');
         await expect(this.pageTitle).toHaveText(expTitle);
     }
 }

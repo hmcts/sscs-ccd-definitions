@@ -6,7 +6,7 @@ let webActions: WebActions;
 export class AddNotePage {
 
     readonly page: Page;
-    readonly textDetailsField: Locator;
+    readonly textDetailsField: string;
     readonly submitButton: Locator;
 
 
@@ -16,7 +16,6 @@ export class AddNotePage {
         this.submitButton = page.getByRole('button', {name: 'Submit'});*/
 
         webActions = new WebActions(this.page);
-
     }
 
     async verifyPageContent() {
@@ -31,7 +30,7 @@ x
     }
 
     async confirmSubmission(): Promise<void> {
-        await webActions.clickButton('[type=\'submit\']');
+        await webActions.clickButton('Submit');
     }
 
 }
