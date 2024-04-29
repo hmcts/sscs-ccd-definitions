@@ -1,5 +1,5 @@
 import { expect, Locator, Page } from '@playwright/test';
-import config from '../config/config';
+import {credentials} from '../config/config';
 
 export class LoginPage {
 
@@ -27,8 +27,8 @@ export class LoginPage {
     }
 
     async verifySuccessfulLoginForCaseworker(expTitle: string): Promise<void> {
-        await this.userName.fill(config.caseWorker.email);
-        await this.passWord.fill(config.caseWorker.password);
+        await this.userName.fill(credentials.caseWorker.email);
+        await this.passWord.fill(credentials.caseWorker.password);
         await this.loginBtn.click();
         await expect(this.pageTitle).toHaveText(expTitle);
     }

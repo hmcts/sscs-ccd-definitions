@@ -1,5 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
-import config from "./config";
+import {urls} from "./config";
 import path from 'path';
 
 
@@ -21,7 +21,7 @@ module.exports = defineConfig({
   workers: process.env.FUNCTIONAL_TESTS_WORKERS ? 5 : undefined,
   reporter: process.env.CI ? "html" : "list",
   use: {
-    baseURL: config.xuiUrl,
+    baseURL: urls.xuiUrl,
     trace: "on-first-retry",
   },
   // globalSetup: '../src/tests/e2e/global.setup.ts',

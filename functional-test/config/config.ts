@@ -1,97 +1,69 @@
 import path from "path";
 
-export interface UserCredentials {
-  readonly email: string;
-  readonly password: string;
-}
+export const urls = {
 
-export type UserRole =
-  | "caseWorker"
-  | "seniorCaseworker"
-  | "hearingCentreAdmin"
-  | "hearingCentreTeamLead"
-  | "judge"
-  | "seniorJudge"
-  | "respondent"
-  | "citizen"
-  | "superUser";
+  tribunalsApiUri: process.env.TRIBUNALS_API_URL || "http://sscs-tribunals-api-aat.service.core-compute-aat.internal",
+  xuiUrl: process.env.SSCS_XUI_URL || 'https://manage-case.aat.platform.hmcts.net',
+};
 
-interface Config {
-  [key: string]: UserCredentials | string;
-}
-
-export const config: Config = {
+export const credentials = {
   caseWorker: {
-    email: process.env.CASEWORKER_USERNAME || "sscs.superuserhmc@justice.gov.uk",
-    password: process.env.CASEWORKER_PASSWORD || "Testing123",
+    email: process.env.CASEWORKER_USERNAME,
+    password: process.env.CASEWORKER_PASSWORD,
   },
   seniorCaseworker: {
-    email: process.env.SENIOR_CASEWORKER_USERNAME || "seniorCaseworker-user",
+    email: process.env.SENIOR_CASEWORKER_USERNAME,
     password:
-      process.env.SENIOR_CASEWORKER_PASSWORD || "seniorCaseworker-password",
+      process.env.SENIOR_CASEWORKER_PASSWORD,
   },
   hearingCentreAdmin: {
     email:
-      process.env.HEARING_CENTRE_ADMIN_USERNAME || "hearingCentreAdmin-user",
+      process.env.HEARING_CENTRE_ADMIN_USERNAME,
     password:
-      process.env.HEARING_CENTRE_ADMIN_PASSWORD ||
-      "hearingCentreAdmin-password",
+      process.env.HEARING_CENTRE_ADMIN_PASSWORD,
   },
   hearingCentreTeamLead: {
     email:
-      process.env.HEARING_CENTRE_TEAM_LEAD_USERNAME ||
-      "hearingCentreTeamLead-user",
+      process.env.HEARING_CENTRE_TEAM_LEAD_USERNAME,
     password:
-      process.env.HEARING_CENTRE_TEAM_LEAD_PASSWORD ||
-      "hearingCentreTeamLead-password",
+      process.env.HEARING_CENTRE_TEAM_LEAD_PASSWORD,
   },
   judge: {
-    email: process.env.JUDGE_USERNAME || "judge-user",
-    password: process.env.JUDGE_PASSWORD || "judge-password",
+    email: process.env.JUDGE_USERNAME,
+    password: process.env.JUDGE_PASSWORD,
   },
   seniorJudge: {
-    email: process.env.SENIOR_JUDGE_USERNAME || "seniorJudge-user",
-    password: process.env.SENIOR_JUDGE_PASSWORD || "seniorJudge-password",
+    email: process.env.SENIOR_JUDGE_USERNAME,
+    password: process.env.SENIOR_JUDGE_PASSWORD,
   },
   respondent: {
-    email: process.env.RESPONDENT_USERNAME || "respondent-user",
-    password: process.env.RESPONDENT_PASSWORD || "respondent-password",
+    email: process.env.RESPONDENT_USERNAME,
+    password: process.env.RESPONDENT_PASSWORD,
   },
   citizen: {
-    email: process.env.CITIZEN_USERNAME || "citizen-user",
-    password: process.env.CITIZEN_PASSWORD || "citizen-password",
+    email: process.env.CITIZEN_USERNAME,
+    password: process.env.CITIZEN_PASSWORD,
   },
   superUser: {
-    email: process.env.SUPER_USER_USERNAME || "superUser-user",
-    password: process.env.SUPER_USER_PASSWORD || "superUser-password",
+    email: process.env.SUPER_USER_USERNAME,
+    password: process.env.SUPER_USER_PASSWORD,
   },
+};
 
-  tribunalsApiUri: process.env.TRIBUNALS_API_URI || "http://sscs-tribunals-api-aat.service.core-compute-aat.internal",
-  xuiUrl: process.env.SSCS_XUI_URL || 'https://manage-case.aat.platform.hmcts.net',
+export const paths = {
 
   testFile: path.resolve(__dirname, "../tests/fixtures/testFiles/mockFile.txt"),
   testPdfFile: path.resolve(
-    __dirname,
-    "../tests/fixtures/testFiles/mockFile.pdf",
+      __dirname,
+      "../tests/fixtures/testFiles/mockFile.pdf",
   ),
   testWordFile: path.resolve(
-    __dirname,
-    "../tests/fixtures/testFiles/mockFile.docx",
+      __dirname,
+      "../tests/fixtures/testFiles/mockFile.docx",
   ),
   testOdtFile: path.resolve(
-    __dirname,
-    "../tests/fixtures/testFiles/mockFile.odt",
+      __dirname,
+      "../tests/fixtures/testFiles/mockFile.odt",
   ),
 };
 
-export default config as {
-  [key in UserRole]: UserCredentials;
-} & {
-  tribunalsApiUri: string;
-  xuiUrl: string;
-  MYABaseURL: string;
-  testFile: string;
-  testPdfFile: string;
-  testWordFile: string;
-  testOdtFile: string;
-};
