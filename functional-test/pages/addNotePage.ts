@@ -1,5 +1,5 @@
-import { expect, Locator, Page } from '@playwright/test';
-import { WebActions } from '../lib/webActions'
+import {expect, Locator, Page} from '@playwright/test';
+import {WebActions} from '../lib/webActions'
 
 let webActions: WebActions;
 
@@ -8,24 +8,30 @@ export class AddNotePage {
     readonly page: Page;
     readonly textDetailsField: Locator;
     readonly submitButton: Locator;
-    
-    
+
+
     constructor(page: Page) {
         this.page = page;
-        this.textDetailsField = page.locator('#tempNoteDetail');
-        this.submitButton = page.getByRole('button', {name: 'Submit'});
-       
+        /*this.textDetailsField = page.locator('#tempNoteDetail');
+        this.submitButton = page.getByRole('button', {name: 'Submit'});*/
+
         webActions = new WebActions(this.page);
 
     }
 
-    async submitNote(noteSummary: string): Promise<void> {
-        await this.textDetailsField.fill(noteSummary);
-        await this.submitButton.click();
+    async verifyPageContent() {
+        await webActions.verifyPageLabel('.govuk-caption-l', 'Add a note'); //Captor Text
+        await webActions.verifyPageLabel('.govuk-heading-l', 'Add a case note'); //Heading Text
+        await webActions.verifyPageLabel('.form-label', 'Enter note'); //Field Label
+    }
+
+x
+    async inputData(elementData: string): Promise<void> {
+        await webActions.inputField('#tempNoteDetail', elementData);
     }
 
     async confirmSubmission(): Promise<void> {
-        await this.submitButton.click();
+        await webActions.clickButton('[type=\'submit\']');
     }
- 
+
 }

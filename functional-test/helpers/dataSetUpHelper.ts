@@ -15,16 +15,15 @@ import piprepFtoFSandLPayload from '../data/apiJsonTestData/pip_sandl_rep_ftof.j
 import piprepSandLPayload from '../data/apiJsonTestData/pip_sandl_rep.json';
 
 
-async function setUpData(caseType: string) {
+async function createCaseBasedOnCaseType(caseType: string) {
     let apiContext;
     let dataPayload;
-    // create new test data
+
+    //Formulate API Context For Request,wrapping the Request Endpoint
     apiContext = await request.newContext({
-        // All requests we send go to this API endpoint.
+        // All requests we send go to this API Endpoint.
         baseURL: urls.tribunalsApiUri,
     });
-
-    console.log('creating new test data...');
 
     dataPayload =
         caseType == "PIP"
@@ -57,8 +56,6 @@ async function setUpData(caseType: string) {
     let caseId = locationUrl.substring(locationUrl.lastIndexOf('/') + 1);
     console.log(`Case id is ${caseId}`);
     return caseId;
-
-
 }
 
-export default setUpData;
+export default createCaseBasedOnCaseType;
