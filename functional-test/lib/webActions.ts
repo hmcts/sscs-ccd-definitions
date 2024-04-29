@@ -9,10 +9,18 @@ export class WebActions {
     }
 
     async chooseOptionByLabel(elementId: string, labelText: string) {
-        this.page.locator(elementId).selectOption({label: labelText});
+        await this.page.locator(elementId).selectOption({label: labelText});
     }
 
     async clickNextStepButton(elementId: string): Promise<void> {
-        this.page.click(elementId);
+        await this.page.click(elementId);
+    }
+
+    async fillText(elementId: string, inputText: string): Promise<void> {
+        await this.page.fill(elementId, inputText);
+    }
+
+    async clickButton(elementName: string): Promise<void> {
+        await this.page.getByRole('button', {name: elementName}).click();
     }
 }

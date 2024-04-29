@@ -6,26 +6,24 @@ let webActions: WebActions;
 export class AddNotePage {
 
     readonly page: Page;
-    readonly textDetailsField: Locator;
+    readonly textDetailsField: string;
     readonly submitButton: Locator;
     
     
     constructor(page: Page) {
         this.page = page;
-        this.textDetailsField = page.locator('#tempNoteDetail');
-        this.submitButton = page.getByRole('button', {name: 'Submit'});
+        this.textDetailsField = '#tempNoteDetail';
        
         webActions = new WebActions(this.page);
-
     }
 
     async submitNote(noteSummary: string): Promise<void> {
-        await this.textDetailsField.fill(noteSummary);
-        await this.submitButton.click();
+        await webActions.fillText(this.textDetailsField, noteSummary);
+        await webActions.clickButton('Submit');
     }
 
     async confirmSubmission(): Promise<void> {
-        await this.submitButton.click();
+        await webActions.clickButton('Submit');
     }
  
 }
