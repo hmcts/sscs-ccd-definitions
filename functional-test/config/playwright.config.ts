@@ -23,12 +23,6 @@ module.exports = defineConfig({
   use: {
     baseURL: urls.xuiUrl,
     trace: "on-first-retry",
-    launchOptions: {
-      logger: {
-        isEnabled: (name, severity) => true,
-        log: (name, message) => console.log(`${name} ${message}`)
-      }
-    }
   },
   // globalSetup: '../src/tests/e2e/global.setup.ts',
   projects: [
