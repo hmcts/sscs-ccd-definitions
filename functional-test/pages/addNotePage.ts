@@ -30,7 +30,8 @@ x
     }
 
     async confirmSubmission(): Promise<void> {
-        await webActions.clickButton('[type=\'submit\']');
+        // await webActions.clickButton('[type=\'submit\']');
+        await webActions.clickButton('Submit');
     }
 
 }

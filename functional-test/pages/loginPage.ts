@@ -14,9 +14,6 @@ export class LoginPage {
 
     constructor(page: Page) {
         this.page = page;
-        this.userName = '#username';
-        this.passWord = '#password';
-        // this.loginBtn = page.getByRole('button', {name: 'Sign in'});
         this.pageTitle = page.locator('h1');
 
         webActions = new WebActions(this.page);
@@ -32,8 +29,8 @@ export class LoginPage {
     }
 
     async verifySuccessfulLoginForCaseworker(expTitle: string): Promise<void> {
-        await webActions.fillText(this.userName, credentials.caseWorker.email);
-        await webActions.fillText(this.passWord, credentials.caseWorker.password);
+        await webActions.inputField('#username', credentials.caseWorker.email);
+        await webActions.inputField('#password', credentials.caseWorker.password);
         await webActions.clickButton('Sign in');
         await expect(this.pageTitle).toHaveText(expTitle);
     }
