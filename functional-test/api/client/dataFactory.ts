@@ -1,18 +1,18 @@
 /* eslint-disable complexity */
-import {test, request} from '@playwright/test';
+import {request} from '@playwright/test';
 
 //import { Logger } from '@hmcts/nodejs-logging';
-import {urls} from '../config/config'
-import pipPayload from '../data/apiJsonTestData/pip_sya.json';
-import ucPayload from '../data/apiJsonTestData/uc_sya.json';
-import esaPayload from '../data/apiJsonTestData/esa_sya.json';
-import childSupportPayload from '../data/apiJsonTestData/child_support_sya.json';
-import taxCreditPayload from '../data/apiJsonTestData/tax_credit_sya.json';
-import pipSandLPayload from '../data/apiJsonTestData/pip_sandl_sya.json';
-import dlaSandLPayload from '../data/apiJsonTestData/dla_sandl_sya.json';
-import ucSandLVideoPayload from '../data/apiJsonTestData/uc_sandl_video_sya.json';
-import piprepFtoFSandLPayload from '../data/apiJsonTestData/pip_sandl_rep_ftof.json';
-import piprepSandLPayload from '../data/apiJsonTestData/pip_sandl_rep.json';
+import {urls} from '../../config/config'
+import pipPayload from '../../data/payload/pip_sya.json';
+import ucPayload from '../../data/payload/uc_sya.json';
+import esaPayload from '../../data/payload/esa_sya.json';
+import childSupportPayload from '../../data/payload/child_support_sya.json';
+import taxCreditPayload from '../../data/payload/tax_credit_sya.json';
+import pipSandLPayload from '../../data/payload/pip_sandl_sya.json';
+import dlaSandLPayload from '../../data/payload/dla_sandl_sya.json';
+import ucSandLVideoPayload from '../../data/payload/uc_sandl_video_sya.json';
+import piprepFtoFSandLPayload from '../../data/payload/pip_sandl_rep_ftof.json';
+import piprepSandLPayload from '../../data/payload/pip_sandl_rep.json';
 
 
 async function createCaseBasedOnCaseType(caseType: string) {

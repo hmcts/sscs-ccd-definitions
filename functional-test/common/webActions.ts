@@ -20,8 +20,8 @@ export class WebActions {
         await this.page.fill(elementLocator, inputValue);
     }
 
-    async clickButton(elementLocator: string): Promise<void> {
-        await this.page.getByRole('button', { name: elementLocator}).click();
+    async clickButton(buttonName: string): Promise<void> {
+        await this.page.getByRole('button', { name: buttonName}).click();
     }
 
     async clickNextStepButton(elementId: string): Promise<void> {
