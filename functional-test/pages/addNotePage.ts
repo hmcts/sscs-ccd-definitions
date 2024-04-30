@@ -1,20 +1,15 @@
 import {expect, Locator, Page} from '@playwright/test';
-import {WebActions} from '../lib/webActions'
+import {WebActions} from '../common/webActions'
 
 let webActions: WebActions;
 
 export class AddNotePage {
 
     readonly page: Page;
-    readonly textDetailsField: string;
-    readonly submitButton: Locator;
 
 
     constructor(page: Page) {
         this.page = page;
-        /*this.textDetailsField = page.locator('#tempNoteDetail');
-        this.submitButton = page.getByRole('button', {name: 'Submit'});*/
-
         webActions = new WebActions(this.page);
     }
 
