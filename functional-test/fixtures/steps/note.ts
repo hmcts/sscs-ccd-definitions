@@ -1,10 +1,11 @@
-import { expect, Locator, Page } from '@playwright/test';
-import { HomePage } from '../../pages/homePage';
+import { Page } from '@playwright/test';
+import { HomePage } from '../../pages/common/homePage';
 import { AddNotePage } from '../../pages/addNotePage';
-import { LoginPage } from '../../pages/loginPage';
+import { LoginPage } from '../../pages/common/loginPage';
+import { EventNameEventDescriptionPage } from '../../pages/event.name.event.description';
 import createCaseBasedOnCaseType from  "../../helpers/dataSetUpHelper";
-const addNoteTestConfig = require('../../data/uiJsonTestData/add-note.json');
-const eventTestConfig = require('../../data/uiJsonTestData/event-name.json'); 
+import addNoteTestData from "../../pages/content/add.note_en.json";
+import eventTestData from "../../pages/content/event.name.event.description_en.json";
 
 
 export class Note {
@@ -20,20 +21,24 @@ export class Note {
         let loginPage = new LoginPage(this.page);
         let homePage = new HomePage(this.page);
         let addNotePage = new AddNotePage(this.page);
+        let eventNameAndDescriptionPage = new EventNameEventDescriptionPage(this.page);
 
         var pipCaseId = await createCaseBasedOnCaseType("PIP");
         await loginPage.goToLoginPage();
         await loginPage.verifySuccessfulLoginForCaseworker('Case list');
 
         await homePage.goToHomePage(pipCaseId);
-        await homePage.chooseEvent(eventTestConfig.addNoteEvent);
+        await homePage.chooseEvent(eventTestData.addNoteEvent);
 
         await addNotePage.verifyPageContent();
-        await addNotePage.inputData(addNoteTestConfig.noteSummaryValue);
-        await addNotePage.confirmSubmission();
+        await addNotePage.inputData(addNoteTestData.noteSummaryValue);
         await addNotePage.confirmSubmission();
 
-        await homePage.verifyTabContent(addNoteTestConfig.noteFieldValue, addNoteTestConfig.noteSummaryValue);
+        await eventNameAndDescriptionPage.verifyPageContent();
+        await eventNameAndDescriptionPage.inputData();
+        await eventNameAndDescriptionPage.confirmSubmission();
+
+        await homePage.verifyTabContent(addNoteTestData.noteFieldValue, addNoteTestData.noteSummaryValue);
     }
 
     

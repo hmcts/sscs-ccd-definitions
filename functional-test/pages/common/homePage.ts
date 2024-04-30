@@ -1,5 +1,5 @@
 import {expect, Locator, Page} from '@playwright/test';
-import {WebActions} from '../lib/webActions'
+import {WebActions} from '../../common/webActions'
 
 let webActions: WebActions;
 
