@@ -1,4 +1,4 @@
-import { test as baseTest } from '@playwright/test';
+import { test as stepsFactory } from '@playwright/test';
 import { Note } from '../fixtures/steps/note';
 
 
@@ -7,7 +7,7 @@ type MyFixtures = {
 
 };
 
-export const test =  baseTest.extend<MyFixtures>({
+export const test =  stepsFactory.extend<MyFixtures>({
     addNoteSteps:async ({page}, use) => {
         const addNoteSteps = new Note(page);
         await use(addNoteSteps);

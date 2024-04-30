@@ -1,6 +1,6 @@
 {
     "addNoteEvent": "Add a note",
-    "event-summary-label" : "Event summary (optional)",
+    "event-summary-label" : " Event summary (optional) A few words describing the purpose of the event.",
     "event-summary-guidance-text" : "A few words describing the purpose of the event.",
     "event-summary-description" : "Event description (optional)",
     "event-summary-input" : "Event Summary for Automation",

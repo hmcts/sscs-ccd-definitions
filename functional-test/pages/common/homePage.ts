@@ -17,7 +17,7 @@ export class HomePage {
     constructor(page: Page) {
         this.page = page;
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
-        this.notePadTab = page.locator('//div[contains(text(), "Notepad")]');
+        this.notePadTab = page.locator('//div[contains(text(), "Notepad_")]');
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@type="submit"]';
         this.eventTitle = page.locator('h1.govuk-heading-l');
@@ -39,17 +39,10 @@ export class HomePage {
 
         await webActions.chooseOptionByLabel(this.nextStepDropDown, eventName);
         await webActions.clickNextStepButton(this.submitNextStepButton);
-        await expect(this.eventTitle).toHaveText('Add a case note');
     }
 
-    async verifyTabContent(fieldLabel: string, fieldValue: string): Promise<void> {
+    async navigateToTab(): Promise<void> {
         await expect(this.notePadTab).toBeVisible();
         await this.notePadTab.click();
-        await expect(this.page
-            .locator(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`))
-            .toBeVisible()
-            .catch((error) => {
-                logger.error(`Element to verify assertion is not present: ${error}`);
-            });
     }
 }

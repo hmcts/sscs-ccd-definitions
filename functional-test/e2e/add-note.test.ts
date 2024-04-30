@@ -1,6 +1,6 @@
-import { test } from "../lib/baseTest";
+import { test } from "../lib/stepsFactory";
 
 test("As a caseworker add note to a case", async ({ addNoteSteps }) => {
 
-    await addNoteSteps.submitNoteSuccessfully();
+    await addNoteSteps.performAddANote();
 });

@@ -1,12 +1,13 @@
-import {expect, Locator, Page} from '@playwright/test';
-import { WebActions } from '../common/webActions'
+import {Page} from '@playwright/test';
+import {WebActions} from '../common/webActions'
+import addNoteTestData from "./content/add.note_en.json";
+
 
 let webActions: WebActions;
 
 export class AddNotePage {
 
     readonly page: Page;
-
 
     constructor(page: Page) {
         this.page = page;
@@ -19,9 +20,8 @@ export class AddNotePage {
         await webActions.verifyPageLabel('.form-label', 'Enter note'); //Field Label
     }
 
-x
-    async inputData(elementData: string): Promise<void> {
-        await webActions.inputField('#tempNoteDetail', elementData);
+    async inputData(): Promise<void> {
+        await webActions.inputField('#tempNoteDetail', addNoteTestData.noteSummaryValue);
     }
 
     async confirmSubmission(): Promise<void> {
