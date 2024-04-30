@@ -1,7 +1,7 @@
 /* eslint-disable complexity */
 import {request} from '@playwright/test';
-
-import {urls} from '../../config/config'
+import {urls} from '../../config/config';
+import logger from '../../utils/loggerUtil';
 import pipPayload from '../../data/payload/pip_sya.json';
 import ucPayload from '../../data/payload/uc_sya.json';
 import esaPayload from '../../data/payload/esa_sya.json';
@@ -53,7 +53,7 @@ async function createCaseBasedOnCaseType(caseType: string) {
     const respHeaders = response.headers();
     const locationUrl: string = respHeaders.location;
     let caseId = locationUrl.substring(locationUrl.lastIndexOf('/') + 1);
-    console.log(`Case id is ${caseId}`);
+    logger.info(`Case was successfully created and id is ${caseId}`);
     return caseId;
 }
 

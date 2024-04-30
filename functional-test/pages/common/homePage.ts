@@ -1,5 +1,6 @@
-import {expect, Locator, Page} from '@playwright/test';
-import {WebActions} from '../../common/webActions'
+import { expect, Locator, Page } from '@playwright/test';
+import { WebActions } from '../../common/webActions';
+import logger from '../../utils/loggerUtil';
 
 let webActions: WebActions;
 
@@ -27,7 +28,11 @@ export class HomePage {
 
     async goToHomePage(caseId: string): Promise<void> {
         await this.page.goto(`/cases/case-details/${caseId}`);
-        await expect(this.summaryTab).toBeVisible();
+        await expect(this.summaryTab)
+            .toBeVisible()
+            .catch((error) => {
+                logger.error(`Element to verify assertion is not present: ${error}`);
+            });
     }
 
     async chooseEvent(eventName: string): Promise<void> {

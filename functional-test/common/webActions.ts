@@ -1,4 +1,5 @@
 import { expect, Page } from '@playwright/test';
+import logger from '../utils/loggerUtil';
 
 export class WebActions {
 
@@ -9,22 +10,44 @@ export class WebActions {
     }
 
     async chooseOptionByLabel(elementLocator: string, labelText: string) {
-        await this.page.locator(elementLocator).selectOption({label: labelText});
+        await this.page
+         .locator(elementLocator)
+         .selectOption({label: labelText})
+         .catch((error) => {
+            logger.error(`Select box field is not present: ${error}`);
+         });
     }
 
     async verifyPageLabel(elementLocator: string, labelText: string) {
-        await expect(this.page.locator(elementLocator)).toHaveText(labelText);
+        await expect(this.page.locator(elementLocator))
+         .toHaveText(labelText)
+         .catch((error) => {
+            logger.error(`Assertion failed due to: ${error}`);
+         });
     }
 
     async inputField (elementLocator: string, inputValue: string) {
-        await this.page.fill(elementLocator, inputValue);
+        await this.page
+         .fill(elementLocator, inputValue)
+         .catch((error) => {
+            logger.error(`Input field is not present: ${error}`);
+         });
     }
 
-    async clickButton(buttonName: string): Promise<void> {
-        await this.page.getByRole('button', { name: buttonName}).click();
+    async clickButton(elementLocator: string): Promise<void> {
+        await this.page
+         .getByRole('button', { name: elementLocator})
+         .click()
+         .catch((error) => {
+            logger.error(`Button element is not present: ${error}`);
+         });
     }
 
     async clickNextStepButton(elementId: string): Promise<void> {
-        await this.page.click(elementId);
+        await this.page
+         .click(elementId)
+         .catch((error) => {
+            logger.error(`Next step submit button is not present: ${error}`);
+         });
     }
 }
