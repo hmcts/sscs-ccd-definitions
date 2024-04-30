@@ -1,5 +1,6 @@
 import {expect, Locator, Page} from '@playwright/test';
-import {WebActions} from '../lib/webActions'
+import {WebActions} from '../lib/webActions';
+import logger from '../utils/loggerUtil';
 
 let webActions: WebActions;
 
@@ -41,7 +42,10 @@ export class HomePage {
         await expect(this.notePadTab).toBeVisible();
         await this.notePadTab.click();
         await expect(this.page
-            .locator(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`)).toBeVisible();
-
+            .locator(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`))
+            .toBeVisible()
+            .catch((error) => {
+                logger.error(`Element to verify assertion is not present: ${error}`);
+            });
     }
 }

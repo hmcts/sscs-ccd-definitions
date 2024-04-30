@@ -2,7 +2,8 @@
 import {test, request} from '@playwright/test';
 
 //import { Logger } from '@hmcts/nodejs-logging';
-import {urls} from '../config/config'
+import {urls} from '../config/config';
+import logger from '../utils/loggerUtil'; 
 import pipPayload from '../data/apiJsonTestData/pip_sya.json';
 import ucPayload from '../data/apiJsonTestData/uc_sya.json';
 import esaPayload from '../data/apiJsonTestData/esa_sya.json';
@@ -54,7 +55,7 @@ async function createCaseBasedOnCaseType(caseType: string) {
     const respHeaders = response.headers();
     const locationUrl: string = respHeaders.location;
     let caseId = locationUrl.substring(locationUrl.lastIndexOf('/') + 1);
-    console.log(`Case id is ${caseId}`);
+    logger.info(`Case was successfully created and id is ${caseId}`);
     return caseId;
 }
 
