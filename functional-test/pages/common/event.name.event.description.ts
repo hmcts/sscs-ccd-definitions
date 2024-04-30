@@ -1,6 +1,6 @@
 import {Page} from '@playwright/test';
-import {WebActions} from '../common/webActions'
-import eventTestData from "./content/event.name.event.description_en.json";
+import {WebActions} from '../../common/webActions'
+import eventTestData from "../content/event.name.event.description_en.json";
 
 let webActions: WebActions;
 
@@ -22,7 +22,7 @@ export class EventNameEventDescriptionPage {
         await webActions.verifyPageLabel('[for=\'field-trigger-description\']', eventTestData["event-summary-description"]); //Field Label
     }
 
-    async inputData(): Promise<void> {
+    async inputData(eventSummary:string, eventDescription:string): Promise<void> {
         await webActions.inputField('#field-trigger-summary', eventTestData["event-summary-input"]);
         await webActions.inputField('#field-trigger-description', eventTestData["event-description-input"]);
     }

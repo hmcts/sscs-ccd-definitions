@@ -2,9 +2,10 @@ import { Page } from '@playwright/test';
 import { HomePage } from '../../pages/common/homePage';
 import { AddNotePage } from '../../pages/addNotePage';
 import { LoginPage } from '../../pages/common/loginPage';
-import { EventNameEventDescriptionPage } from '../../pages/event.name.event.description';
+import { EventNameEventDescriptionPage } from '../../pages/common/event.name.event.description';
 import createCaseBasedOnCaseType from "../../api/client/appealTypeFactory";
 import { NotePadTab } from '../../pages/tabs/NotePadTab';
+import eventTestData from "../../pages/content/event.name.event.description_en.json"
 
 
 
@@ -37,7 +38,8 @@ export class Note {
         await addNotePage.confirmSubmission();
 
         await eventNameAndDescriptionPage.verifyPageContent();
-        await eventNameAndDescriptionPage.inputData();
+        //Params are passed to this page as this is a common page to be reused.
+        await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"], eventTestData["event-description-input"]);
         await eventNameAndDescriptionPage.confirmSubmission();
 
         await homePage.navigateToTab();
