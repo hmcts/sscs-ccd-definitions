@@ -22,7 +22,7 @@ export class WebActions {
         await expect(this.page.locator(elementLocator))
          .toHaveText(labelText)
          .catch((error) => {
-            logger.error(`Element to verify assertion is not present: ${error}`);
+            logger.error(`Assertion failed due to: ${error}`);
          });
     }
 
