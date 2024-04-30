@@ -3,8 +3,9 @@ import { HomePage } from '../../pages/common/homePage';
 import { AddNotePage } from '../../pages/addNotePage';
 import { LoginPage } from '../../pages/common/loginPage';
 import { EventNameEventDescriptionPage } from '../../pages/event.name.event.description';
-import createCaseBasedOnCaseType from "../../api/client/dataFactory";
-import addNoteTestData from "../../pages/content/add.note_en.json";
+import createCaseBasedOnCaseType from "../../api/client/appealTypeFactory";
+import { NotePadTab } from '../../pages/tabs/NotePadTab';
+
 
 
 export class Note {
@@ -21,6 +22,7 @@ export class Note {
         let loginPage = new LoginPage(this.page);
         let homePage = new HomePage(this.page);
         let addNotePage = new AddNotePage(this.page);
+        let notePadTab = new NotePadTab(this.page);
         let eventNameAndDescriptionPage = new EventNameEventDescriptionPage(this.page);
 
         var pipCaseId = await createCaseBasedOnCaseType("PIP");
@@ -31,7 +33,7 @@ export class Note {
         await homePage.chooseEvent('Add a note');
 
         await addNotePage.verifyPageContent();
-        await addNotePage.inputData(addNoteTestData.noteSummaryValue);
+        await addNotePage.inputData();
         await addNotePage.confirmSubmission();
 
         await eventNameAndDescriptionPage.verifyPageContent();
@@ -39,6 +41,7 @@ export class Note {
         await eventNameAndDescriptionPage.confirmSubmission();
 
         await homePage.navigateToTab();
+        //await notePadTab.verifyPageContentByKeyValue('Note','Playwright test note');
     }
 
     

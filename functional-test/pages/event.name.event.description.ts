@@ -1,4 +1,4 @@
-import {expect, Locator, Page} from '@playwright/test';
+import {Page} from '@playwright/test';
 import {WebActions} from '../common/webActions'
 import eventTestData from "./content/event.name.event.description_en.json";
 

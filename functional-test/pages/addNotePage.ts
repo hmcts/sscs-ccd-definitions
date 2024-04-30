@@ -20,7 +20,7 @@ export class AddNotePage {
         await webActions.verifyPageLabel('.form-label', 'Enter note'); //Field Label
     }
 
-    async inputData(elementData: string): Promise<void> {
+    async inputData(): Promise<void> {
         await webActions.inputField('#tempNoteDetail', addNoteTestData.noteSummaryValue);
     }
 

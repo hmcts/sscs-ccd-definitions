@@ -1,7 +1,6 @@
 /* eslint-disable complexity */
 import {request} from '@playwright/test';
 
-//import { Logger } from '@hmcts/nodejs-logging';
 import {urls} from '../../config/config'
 import pipPayload from '../../data/payload/pip_sya.json';
 import ucPayload from '../../data/payload/uc_sya.json';
