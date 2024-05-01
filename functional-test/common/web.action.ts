@@ -1,7 +1,7 @@
 import { expect, Page } from '@playwright/test';
 import logger from '../utils/loggerUtil';
 
-export class WebActions {
+export class WebAction {
 
     readonly page: Page;
 

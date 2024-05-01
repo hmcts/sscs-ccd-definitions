@@ -1,8 +1,8 @@
 import { expect, Locator, Page } from '@playwright/test';
 import { credentials } from '../../config/config';
-import { WebActions } from '../../common/webActions'
+import { WebAction } from '../../common/web.action'
 
-let webActions: WebActions;
+let webActions: WebAction;
 
 export class LoginPage {
 
@@ -12,7 +12,7 @@ export class LoginPage {
     constructor(page: Page) {
         this.page = page;
         this.pageTitle = page.locator('h1');
-        webActions = new WebActions(this.page);
+        webActions = new WebAction(this.page);
 
     }
 

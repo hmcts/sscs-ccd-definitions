@@ -6,7 +6,7 @@ interface UserLoginInfo {
     password: string;
 }
 
-type IdamLoginHelper = {
+type IdamLogin = {
     fields: UserLoginInfo;
     submitButton: string;
     signInUser(
@@ -16,7 +16,7 @@ type IdamLoginHelper = {
     ): Promise<void>;
 };
 
-const idamLoginHelper: IdamLoginHelper = {
+const idamLoginHelper: IdamLogin = {
     fields: {
         username: "#username",
         password: "#password",

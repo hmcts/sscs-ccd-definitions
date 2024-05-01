@@ -1,8 +1,8 @@
 import { expect, Locator, Page } from '@playwright/test';
-import { WebActions } from '../../common/webActions';
+import { WebAction } from '../../common/web.action';
 import logger from '../../utils/loggerUtil';
 
-let webActions: WebActions;
+let webActions: WebAction;
 
 export class HomePage {
 
@@ -22,7 +22,7 @@ export class HomePage {
         this.submitNextStepButton = '//button[@type="submit"]';
         this.eventTitle = page.locator('h1.govuk-heading-l');
 
-        webActions = new WebActions(this.page);
+        webActions = new WebAction(this.page);
 
     }
 

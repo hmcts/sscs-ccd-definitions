@@ -1,8 +1,8 @@
 import {Page} from '@playwright/test';
-import {WebActions} from '../../common/webActions'
+import {WebAction} from '../../common/web.action'
 import eventTestData from "../content/event.name.event.description_en.json";
 
-let webActions: WebActions;
+let webActions: WebAction;
 
 export class EventNameEventDescriptionPage {
 
@@ -10,7 +10,7 @@ export class EventNameEventDescriptionPage {
 
     constructor(page: Page) {
         this.page = page;
-        webActions = new WebActions(this.page);
+        webActions = new WebAction(this.page);
     }
 
     async verifyPageContent() {

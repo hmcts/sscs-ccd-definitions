@@ -52,18 +52,18 @@ export const credentials = {
 
 export const paths = {
 
-  testFile: path.resolve(__dirname, "../tests/fixtures/testFiles/mockFile.txt"),
+  testFile: path.resolve(__dirname, "../tests/fixtures/file/mockFile.txt"),
   testPdfFile: path.resolve(
       __dirname,
-      "../tests/fixtures/testFiles/mockFile.pdf",
+      "../tests/fixtures/file/mockFile.pdf",
   ),
   testWordFile: path.resolve(
       __dirname,
-      "../tests/fixtures/testFiles/mockFile.docx",
+      "../tests/fixtures/file/mockFile.docx",
   ),
   testOdtFile: path.resolve(
       __dirname,
-      "../tests/fixtures/testFiles/mockFile.odt",
+      "../tests/fixtures/file/mockFile.odt",
   ),
 };
 

@@ -1,10 +1,10 @@
 import { Page } from '@playwright/test';
 import { HomePage } from '../../pages/common/homePage';
-import { AddNotePage } from '../../pages/addNotePage';
+import { AddNote } from '../../pages/add.note';
 import { LoginPage } from '../../pages/common/loginPage';
 import { EventNameEventDescriptionPage } from '../../pages/common/event.name.event.description';
-import createCaseBasedOnCaseType from "../../api/client/appealTypeFactory";
-import { NotePadTab } from '../../pages/tabs/NotePadTab';
+import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
+import { NotePad } from '../../pages/tabs/note.pad';
 import eventTestData from "../../pages/content/event.name.event.description_en.json"
 
 
@@ -22,8 +22,8 @@ export class Note {
 
         let loginPage = new LoginPage(this.page);
         let homePage = new HomePage(this.page);
-        let addNotePage = new AddNotePage(this.page);
-        let notePadTab = new NotePadTab(this.page);
+        let addNotePage = new AddNote(this.page);
+        let notePadTab = new NotePad(this.page);
         let eventNameAndDescriptionPage = new EventNameEventDescriptionPage(this.page);
 
         var pipCaseId = await createCaseBasedOnCaseType("PIP");
@@ -43,7 +43,7 @@ export class Note {
         await eventNameAndDescriptionPage.confirmSubmission();
 
         await homePage.navigateToTab();
-        //await notePadTab.verifyPageContentByKeyValue('Note','Playwright test note');
+        await notePadTab.verifyPageContentByKeyValue('Note','Playwright test note');
     }
 
     

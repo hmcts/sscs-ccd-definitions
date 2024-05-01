@@ -1,17 +1,17 @@
 import {Page} from '@playwright/test';
-import {WebActions} from '../common/webActions'
+import {WebAction} from '../common/web.action'
 import addNoteTestData from "./content/add.note_en.json";
 
 
-let webActions: WebActions;
+let webActions: WebAction;
 
-export class AddNotePage {
+export class AddNote {
 
     readonly page: Page;
 
     constructor(page: Page) {
         this.page = page;
-        webActions = new WebActions(this.page);
+        webActions = new WebAction(this.page);
     }
 
     async verifyPageContent() {

@@ -1,10 +1,10 @@
 import { defineConfig, devices } from "@playwright/test";
-import {urls} from "./config";
+import {urls} from "./config/config";
 import path from 'path';
 
 
 module.exports = defineConfig({
-  testDir: "../e2e/",
+  testDir: "./e2e/",
   /* Run tests in files in parallel */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
