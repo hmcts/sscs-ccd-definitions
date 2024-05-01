@@ -12,7 +12,7 @@
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
     "test:preview": "echo preview test infra is wip",
     "test:aat": "cd sscs-ccd-e2e-tests && yarn install && yarn test:fullfunctional",
-    "test:functional": "ENVIRONMENT=${ENVIRONMENT} ./bin/run-functional-tests.sh",
+    "test:functional": "yarn playwright install && npx playwright test --config functional-test/playwright.config.ts --project chromium --reporter=html",
     "test:functional-headless": "yarn playwright install && npx playwright test --config functional-test/playwright.config.ts --project chromium --reporter=html",
     "test:functional-head": "yarn playwright install && npx playwright test --config functional-test/playwright.config.ts --project chromium --headed --reporter=html",
     "start": "node index.js",

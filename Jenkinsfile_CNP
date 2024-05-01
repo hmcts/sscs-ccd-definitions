@@ -51,14 +51,19 @@ withPipeline("nodejs", product, component) {
    
     onPR{
         env.ENVIRONMENT="preview"
+    }
+    onMaster{
+        env.ENVIRONMENT="aat"
+    }
+    
+    before('functionalTest:preview') {
+        env.TEST_E2E_URL_WEB = params.URL_TO_TEST
+        env.TEST_E2E_URL_GATEWAY = params.CCD_GATEWAY_URL
+        env.TEST_E2E_API_URI = params.TRIBUNALS_API_URI
+    }
 
-        stage('SSCS Create E2E tests') {
-            try {
-            yarnBuilder.yarn('test:functional-headless')
-            } catch (Error) {
-            unstable(message: "${STAGE_NAME} is unstable: " + Error.toString())
-            } finally {
-            publishHTML([
+    afterAlways('functionalTest:preview') {
+       publishHTML([
                     allowMissing: true,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
@@ -66,37 +71,7 @@ withPipeline("nodejs", product, component) {
                     reportFiles: 'index.html',
                     reportName: 'DSS E2E Test Report'
             ])
-            steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/functional/*'
-            }
-        }
-    }
-    onMaster{
-        env.ENVIRONMENT="aat"
-    }
-    
-
-    before('functionalTest:preview') {
-        env.TEST_E2E_URL_WEB = params.URL_TO_TEST
-        env.TEST_E2E_URL_GATEWAY = params.CCD_GATEWAY_URL
-        env.TEST_E2E_API_URI = params.TRIBUNALS_API_URI
-        env.TEST_E2E_NUM_BROWSERS = params.NUM_TESTS_IN_PARALLEL
-        env.TEST_E2E_WAIT_FOR_ANGULAR = 'false'
-        env.TEST_E2E_FAIL_FAST = 'false'
-        env.TEST_E2E_ANNOTATION = params.PREVIEW_TAG
-        env.TEST_E2E_RETRIES = 5
-
-    }
-
-    afterAlways('functionalTest:preview') {
-        publishHTML([
-                allowMissing         : true,
-                alwaysLinkToLastBuild: true,
-                keepAll              : true,
-                reportDir            : "e2e-tests/reports/tests-results/functional/",
-                reportFiles          : 'index.html',
-                reportName           : 'ExUi Functional Test Report'
-        ])
-        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'e2e-tests/reports/tests-results/functional/*'
+        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/functional/*'
     }
 
     before('functionalTest:aat') {
