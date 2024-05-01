@@ -45,34 +45,35 @@ withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
   enableHighLevelDataSetup()
   syncBranchesWithMaster(branchesToSync)
+   env.TEST_E2E_URL_WEB = params.URL_TO_TEST
+   env.TEST_E2E_URL_GATEWAY = params.CCD_GATEWAY_URL
+   env.TEST_E2E_API_URI = params.TRIBUNALS_API_URI
    
     onPR{
         env.ENVIRONMENT="preview"
-        env.TEST_E2E_URL_WEB = params.URL_TO_TEST
-        env.TEST_E2E_URL_GATEWAY = params.CCD_GATEWAY_URL
-        env.TEST_E2E_API_URI = params.TRIBUNALS_API_URI
     }
     onMaster{
         env.ENVIRONMENT="aat"
     }
+    afterAlways('smokeTest') {
 
-    stage('DSS Create E2E tests') {
-        try {
-          yarnBuilder.yarn('test:functional-headless')
-        } catch (Error) {
-          unstable(message: "${STAGE_NAME} is unstable: " + Error.toString())
-        } finally {
-          publishHTML([
-                  allowMissing: true,
-                  alwaysLinkToLastBuild: true,
-                  keepAll: true,
-                  reportDir: "playwright-report",
-                  reportFiles: 'index.html',
-                  reportName: 'DSS E2E Test Report'
-          ])
-          steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/functional/*'
+        stage('SSCS Create E2E tests') {
+            try {
+            yarnBuilder.yarn('test:functional-headless')
+            } catch (Error) {
+            unstable(message: "${STAGE_NAME} is unstable: " + Error.toString())
+            } finally {
+            publishHTML([
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: "playwright-report",
+                    reportFiles: 'index.html',
+                    reportName: 'DSS E2E Test Report'
+            ])
+            steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/functional/*'
+            }
         }
-    }
 
     before('functionalTest:preview') {
         env.TEST_E2E_URL_WEB = params.URL_TO_TEST
@@ -126,4 +127,5 @@ withPipeline("nodejs", product, component) {
     }
 
   println """done!""".stripIndent()
+    }
 }
