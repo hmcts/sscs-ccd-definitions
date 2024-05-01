@@ -48,27 +48,30 @@ withPipeline("nodejs", product, component) {
    
     onPR{
         env.ENVIRONMENT="preview"
+        env.TEST_E2E_URL_WEB = params.URL_TO_TEST
+        env.TEST_E2E_URL_GATEWAY = params.CCD_GATEWAY_URL
+        env.TEST_E2E_API_URI = params.TRIBUNALS_API_URI
     }
     onMaster{
         env.ENVIRONMENT="aat"
     }
 
-     before('smokeTest') {
-        env.TEST_E2E_URL_WEB = params.URL_TO_TEST
-        env.TEST_E2E_URL_GATEWAY = params.CCD_GATEWAY_URL
-        env.TEST_E2E_API_URI = params.TRIBUNALS_API_URI
-    }
-
-    afterAlways('smokeTest') {
-       publishHTML([
+    stage('DSS Create E2E tests') {
+        try {
+          yarnBuilder.yarn('test:functional-headless')
+        } catch (Error) {
+          unstable(message: "${STAGE_NAME} is unstable: " + Error.toString())
+        } finally {
+          publishHTML([
                   allowMissing: true,
                   alwaysLinkToLastBuild: true,
                   keepAll: true,
                   reportDir: "playwright-report",
                   reportFiles: 'index.html',
-                  reportName: 'SSCS-XUI E2E Test Report'
+                  reportName: 'DSS E2E Test Report'
           ])
-        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
+          steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/functional/*'
+        }
     }
 
     before('functionalTest:preview') {
