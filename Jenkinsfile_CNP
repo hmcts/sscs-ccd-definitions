@@ -53,13 +53,13 @@ withPipeline("nodejs", product, component) {
         env.ENVIRONMENT="aat"
     }
 
-     before('smokeTest:preview') {
+     before('smokeTest') {
         env.TEST_E2E_URL_WEB = params.URL_TO_TEST
         env.TEST_E2E_URL_GATEWAY = params.CCD_GATEWAY_URL
         env.TEST_E2E_API_URI = params.TRIBUNALS_API_URI
     }
 
-    afterAlways('smokeTest:preview') {
+    afterAlways('smokeTest') {
        publishHTML([
                   allowMissing: true,
                   alwaysLinkToLastBuild: true,
@@ -68,7 +68,7 @@ withPipeline("nodejs", product, component) {
                   reportFiles: 'index.html',
                   reportName: 'SSCS-XUI E2E Test Report'
           ])
-          steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/SSCS-Functional/*'
+        steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-output/**'
     }
 
     before('functionalTest:preview') {
