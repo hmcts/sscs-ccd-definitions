@@ -55,7 +55,7 @@ withPipeline("nodejs", product, component) {
     onMaster{
         env.ENVIRONMENT="aat"
     }
-    afterAlways('smokeTest') {
+    afterAlways('smokeTest:preview') {
 
         stage('SSCS Create E2E tests') {
             try {
@@ -74,6 +74,7 @@ withPipeline("nodejs", product, component) {
             steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'reports/tests-results/functional/*'
             }
         }
+    }
 
     before('functionalTest:preview') {
         env.TEST_E2E_URL_WEB = params.URL_TO_TEST
@@ -127,5 +128,4 @@ withPipeline("nodejs", product, component) {
     }
 
   println """done!""".stripIndent()
-    }
 }
