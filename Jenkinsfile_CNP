@@ -51,11 +51,6 @@ withPipeline("nodejs", product, component) {
    
     onPR{
         env.ENVIRONMENT="preview"
-    }
-    onMaster{
-        env.ENVIRONMENT="aat"
-    }
-    afterAlways('smokeTest:preview') {
 
         stage('SSCS Create E2E tests') {
             try {
@@ -75,6 +70,10 @@ withPipeline("nodejs", product, component) {
             }
         }
     }
+    onMaster{
+        env.ENVIRONMENT="aat"
+    }
+    
 
     before('functionalTest:preview') {
         env.TEST_E2E_URL_WEB = params.URL_TO_TEST
