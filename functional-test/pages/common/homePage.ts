@@ -9,6 +9,7 @@ export class HomePage {
     readonly page: Page;
     readonly summaryTab: Locator;
     readonly notePadTab: Locator;
+    readonly historyTab: Locator;
     readonly submitNextStepButton: string;
     readonly nextStepDropDown: string;
     readonly eventTitle: Locator;
@@ -16,8 +17,9 @@ export class HomePage {
 
     constructor(page: Page) {
         this.page = page;
-        this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
         this.notePadTab = page.locator('//div[contains(text(), "Notepad_")]');
+        this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
+        this.historyTab = page.locator('//div[contains(text(), "History_")]');
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@type="submit"]';
         this.eventTitle = page.locator('h1.govuk-heading-l');
@@ -41,8 +43,22 @@ export class HomePage {
         await webActions.clickNextStepButton(this.submitNextStepButton);
     }
 
-    async navigateToTab(): Promise<void> {
-        await expect(this.notePadTab).toBeVisible();
-        await this.notePadTab.click();
+    async navigateToTab(tabName : string): Promise<void> {
+        switch(tabName) {
+            case "Notepad": {
+                await expect(this.notePadTab).toBeVisible();
+                await this.notePadTab.click();
+                break;
+            }
+            case "History": {
+                await expect(this.historyTab).toBeVisible();
+                await this.historyTab.click();
+                break;
+            }
+            default: {
+                //statements;
+                break;
+            }
+        }
     }
 }

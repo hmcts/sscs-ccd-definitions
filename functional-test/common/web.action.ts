@@ -43,6 +43,15 @@ export class WebAction {
          });
     }
 
+    async clickLink(elementLocator: string): Promise<void> {
+        await this.page
+            .getByRole('link', { name: elementLocator})
+            .click()
+            .catch((error) => {
+                logger.error(`Link element is not present: ${error}`);
+            });
+    }
+
     async clickNextStepButton(elementId: string): Promise<void> {
         await this.page
          .click(elementId)
