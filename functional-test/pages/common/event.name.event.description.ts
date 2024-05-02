@@ -13,9 +13,9 @@ export class EventNameEventDescriptionPage {
         webActions = new WebAction(this.page);
     }
 
-    async verifyPageContent() {
+    async verifyPageContent(headingValue:string) {
 
-        await webActions.verifyPageLabel('.govuk-heading-l', eventTestData.addNoteEvent); //Heading Text
+        await webActions.verifyPageLabel('.govuk-heading-l', headingValue); //Heading Text
         await webActions.verifyPageLabel('[for=\'field-trigger-summary\']', eventTestData["event-summary-label"]); //Field Label
         //await webActions.verifyPageLabel('.form-hint', eventTestData["event-summary-guidance-text"]); //Guidance Text
 
@@ -23,8 +23,8 @@ export class EventNameEventDescriptionPage {
     }
 
     async inputData(eventSummary:string, eventDescription:string): Promise<void> {
-        await webActions.inputField('#field-trigger-summary', eventTestData["event-summary-input"]);
-        await webActions.inputField('#field-trigger-description', eventTestData["event-description-input"]);
+        await webActions.inputField('#field-trigger-summary', eventSummary);
+        await webActions.inputField('#field-trigger-description', eventDescription);
     }
 
     async confirmSubmission(): Promise<void> {

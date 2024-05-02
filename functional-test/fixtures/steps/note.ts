@@ -6,6 +6,7 @@ import { EventNameEventDescriptionPage } from '../../pages/common/event.name.eve
 import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
 import { NotePad } from '../../pages/tabs/note.pad';
 import eventTestData from "../../pages/content/event.name.event.description_en.json"
+import {History} from "../../pages/tabs/history";
 
 
 
@@ -24,6 +25,7 @@ export class Note {
         let homePage = new HomePage(this.page);
         let addNotePage = new AddNote(this.page);
         let notePadTab = new NotePad(this.page);
+        let historyTab = new History(this.page);
         let eventNameAndDescriptionPage = new EventNameEventDescriptionPage(this.page);
 
         var pipCaseId = await createCaseBasedOnCaseType("PIP");
@@ -37,13 +39,21 @@ export class Note {
         await addNotePage.inputData();
         await addNotePage.confirmSubmission();
 
-        await eventNameAndDescriptionPage.verifyPageContent();
+        await eventNameAndDescriptionPage.verifyPageContent('Add a note');
         //Params are passed to this page as this is a common page to be reused.
-        await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"], eventTestData["event-description-input"]);
+        await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"]+" - Add a note",
+            eventTestData["event-description-input"]+" -  Add a note");
         await eventNameAndDescriptionPage.confirmSubmission();
 
-        await homePage.navigateToTab();
+        await homePage.navigateToTab("Notepad");
         await notePadTab.verifyPageContentByKeyValue('Note','Playwright test note');
+        await homePage.navigateToTab("History");
+        await historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
+        await historyTab.verifyPageContentByKeyValue('Event', 'Add a note');
+        await historyTab.verifyPageContentByKeyValue('Summary', 'Event Summary for Automation - Add a note');
+        await historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification -  Add a note');
+        await historyTab.verifyEventCompleted('Add a note');
+
     }
 
     
