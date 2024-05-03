@@ -1,7 +1,7 @@
 [
   {
     "LiveFrom": "14/11/2023",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "RoleName": "fee-paid-judge",
     "Authorisation": "",
     "ReadOnly": "N",
@@ -10,7 +10,7 @@
   },
   {
     "LiveFrom": "14/11/2023",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "RoleName": "fee-paid-medical",
     "Authorisation": "",
     "ReadOnly": "N",
@@ -19,7 +19,7 @@
   },
   {
     "LiveFrom": "14/11/2023",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "RoleName": "fee-paid-disability",
     "Authorisation": "",
     "ReadOnly": "N",
@@ -28,7 +28,7 @@
   },
   {
     "LiveFrom": "14/11/2023",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "RoleName": "fee-paid-financial",
     "Authorisation": "",
     "ReadOnly": "N",
@@ -37,7 +37,7 @@
   },
   {
     "LiveFrom": "14/11/2023",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "RoleName": "fee-paid-tribunal-member",
     "Authorisation": "",
     "ReadOnly": "N",

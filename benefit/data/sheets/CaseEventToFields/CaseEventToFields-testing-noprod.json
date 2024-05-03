@@ -2,7 +2,7 @@
   {
     "CaseEventID": "editIssueFinalDecisionDate",
     "CaseFieldID": "issueFinalDecisionDate",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "24/08/2023",
     "PageDisplayOrder": 1,

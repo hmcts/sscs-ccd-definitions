@@ -1,7 +1,7 @@
 [
   {
     "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "ID": "directionDueToday",
     "Name": "Direction Due Today",
     "Description": "System event triggered on the day a direction is due",
@@ -13,7 +13,7 @@
   },
   {
     "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "ID": "reviewBfDateRequired",
     "Name": "Review BF Date Required",
     "Description": "System event for initiating work allocation task",
@@ -25,7 +25,7 @@
   },
   {
     "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "ID": "hearingToday",
     "Name": "Hearing Today",
     "Description": "System event triggered on the day of a hearing",
@@ -37,7 +37,7 @@
   },
   {
     "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "ID": "prepareForHearing",
     "Name": "Prepare for Hearing",
     "Description": "System event triggered 14 days before a hearing date",
@@ -49,7 +49,7 @@
   },
   {
     "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "ID": "createBundleAndAllocateCaseRolesRequired",
     "Name": "Bundle and Case Roles Required",
     "Description": "Create a bundle in the case",
@@ -61,7 +61,7 @@
   },
   {
     "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "ID": "reviewOutstandingDraftDecisionRequired",
     "Name": "Draft Decision Required",
     "DisplayOrder": 9997,
@@ -72,7 +72,7 @@
   },
   {
     "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "ID": "updateHearingDetailsRequired",
     "Name": "Update Hearing Details",
     "DisplayOrder": 9998,
@@ -83,7 +83,7 @@
   },
   {
     "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "ID": "ftaResponseOverdue",
     "Name": "FTA Response Overdue",
     "DisplayOrder": 9999,
@@ -94,7 +94,7 @@
   },
   {
     "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "ID": "newCaseRolesAssigned",
     "Name": "New Case Role Assigned",
     "DisplayOrder": 10000,
@@ -106,7 +106,7 @@
   },
   {
     "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "ID": "postponementGranted",
     "Name": "Postponement Granted",
     "DisplayOrder": 10000,
@@ -118,7 +118,7 @@
   },
   {
     "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "ID": "postponementRefused",
     "Name": "Postponement Refused",
     "DisplayOrder": 10001,
@@ -130,7 +130,7 @@
   },
   {
     "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "ID": "postponementSendToJudge",
     "Name": "Postponement Send to Judge",
     "DisplayOrder": 10002,

@@ -2,7 +2,7 @@
   {
     "CaseEventID": "setAsideRefused",
     "CaseFieldID": "setAside",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "23/08/2023",
     "PageDisplayOrder": 1,

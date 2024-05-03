@@ -2,7 +2,7 @@
   {
     "CaseEventID": "actionFurtherEvidence",
     "CaseFieldID": "scannedDocumentTypes",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "21/08/2021",
     "PageDisplayOrder": 2,
@@ -15,7 +15,7 @@
   {
     "CaseEventID": "manageWelshDocuments",
     "CaseFieldID": "uploadedWelshDocumentTypes",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "21/08/2021",
     "PageDisplayOrder": 1,
@@ -29,7 +29,7 @@
   {
     "CaseEventID": "validSendToInterloc",
     "CaseFieldID": "interlocReviewState",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "LiveFrom": "02/06/2023",
     "PageDisplayOrder": 1,
@@ -43,7 +43,7 @@
   {
     "CaseEventID": "uploadWelshDocument",
     "CaseFieldID": "uploadedWelshDocumentTypes",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "21/08/2021",
     "PageDisplayOrder": 1,
@@ -57,7 +57,7 @@
   {
     "CaseEventID": "directionDueToday",
     "CaseFieldID": "directionTypeDl",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
@@ -69,7 +69,7 @@
   {
     "CaseEventID": "sentToDwp",
     "CaseFieldID": "dwpDueDate",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "FieldShowCondition": "[STATE]=\"doNotUse\"",
     "LiveFrom": "01/01/2018",
@@ -83,7 +83,7 @@
   {
     "CaseEventID": "dwpSupplementaryResponse",
     "CaseFieldID": "languagePreferenceWelsh",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "FieldShowCondition": "[STATE]=\"doNotUse\"",
     "LiveFrom": "01/01/2018",
@@ -97,7 +97,7 @@
   {
     "CaseEventID": "uploadDocument",
     "CaseFieldID": "languagePreferenceWelsh",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "FieldShowCondition": "[STATE]=\"doNotUse\"",
     "LiveFrom": "01/01/2018",
@@ -111,7 +111,7 @@
   {
     "CaseEventID": "attachScannedDocs",
     "CaseFieldID": "languagePreferenceWelsh",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "FieldShowCondition": "[STATE]=\"doNotUse\"",
     "LiveFrom": "01/01/2018",
@@ -125,7 +125,7 @@
   {
     "CaseEventID": "uploadDocumentFurtherEvidence",
     "CaseFieldID": "languagePreferenceWelsh",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "FieldShowCondition": "[STATE]=\"doNotUse\"",
     "LiveFrom": "01/01/2018",
@@ -139,7 +139,7 @@
   {
     "CaseEventID": "createBundle",
     "CaseFieldID": "panel",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "30/05/2023",
     "PageDisplayOrder": 1,
@@ -153,7 +153,7 @@
   {
     "CaseEventID": "actionPostponementRequest",
     "CaseFieldID": "daysToHearing",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "FieldShowCondition": "[STATE]=\"doNotUse\"",
     "LiveFrom": "01/09/2021",
@@ -166,7 +166,7 @@
   {
     "CaseEventID": "createBundle",
     "CaseFieldID": "assignedCaseRoles",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "[STATE]=\"doNotUse\"",
     "LiveFrom": "01/01/2018",
@@ -179,7 +179,7 @@
   {
     "CaseEventID": "newCaseRolesAssigned",
     "CaseFieldID": "assignedCaseRoles",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "FieldShowCondition": "[STATE]=\"doNotUse\"",
     "LiveFrom": "01/01/2018",
@@ -192,7 +192,7 @@
   {
     "CaseEventID": "ftaResponseOverdue",
     "CaseFieldID": "directionTypeDl",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
@@ -207,7 +207,7 @@
   {
     "CaseEventID": "sORRequest",
     "CaseFieldID": "sscsHearingRecordings",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "16/08/2023",
     "PageDisplayOrder": 1,
@@ -220,7 +220,7 @@
   {
     "CaseEventID": "sORRequest",
     "CaseFieldID": "issueFinalDecisionDate",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "LiveFrom": "16/08/2023",
     "PageDisplayOrder": 1,
@@ -233,7 +233,7 @@
   {
     "CaseEventID": "setAsideRefusedSOR",
     "CaseFieldID": "issueFinalDecisionDate",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "LiveFrom": "16/08/2023",
     "PageDisplayOrder": 1,
@@ -246,7 +246,7 @@
   {
     "CaseEventID": "validSendToInterloc",
     "CaseFieldID": "issueFinalDecisionDate",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "24/08/2023",
     "PageDisplayOrder": 1,
@@ -259,7 +259,7 @@
   {
     "CaseEventID": "setAsideRefused",
     "CaseFieldID": "issueFinalDecisionDate",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "24/08/2023",
     "PageDisplayOrder": 1,
@@ -272,7 +272,7 @@
   {
     "CaseEventID": "actionFurtherEvidence",
     "CaseFieldID": "issueFinalDecisionDate",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "24/08/2023",
     "PageDisplayOrder": 1,
@@ -285,7 +285,7 @@
   {
     "CaseEventID": "validSendToInterloc",
     "CaseFieldID": "issueInterlocDecisionDate",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "24/08/2023",
     "PageDisplayOrder": 1,
@@ -298,7 +298,7 @@
   {
     "CaseEventID": "setAsideRefused",
     "CaseFieldID": "issueInterlocDecisionDate",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "24/08/2023",
     "PageDisplayOrder": 1,
@@ -311,7 +311,7 @@
   {
     "CaseEventID": "actionFurtherEvidence",
     "CaseFieldID": "issueInterlocDecisionDate",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "24/08/2023",
     "PageDisplayOrder": 1,
@@ -324,7 +324,7 @@
   {
     "CaseEventID": "validSendToInterloc",
     "CaseFieldID": "jointParty",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "24/08/2023",
     "PageDisplayOrder": 1,
@@ -337,7 +337,7 @@
   {
     "CaseEventID": "validSendToInterloc",
     "CaseFieldID": "otherParties",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "24/08/2023",
     "PageDisplayOrder": 1,
@@ -350,7 +350,7 @@
   {
     "CaseEventID": "actionFurtherEvidence",
     "CaseFieldID": "jointParty",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "24/08/2023",
     "PageDisplayOrder": 1,
@@ -363,7 +363,7 @@
   {
     "CaseEventID": "actionFurtherEvidence",
     "CaseFieldID": "otherParties",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "24/08/2023",
     "PageDisplayOrder": 1,
@@ -376,7 +376,7 @@
   {
     "CaseEventID": "uploadDocumentFurtherEvidence",
     "CaseFieldID": "scannedDocumentTypes",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "LiveFrom": "21/08/2021",
     "PageDisplayOrder": 1,
@@ -389,7 +389,7 @@
   {
     "CaseEventID": "uploadFurtherEvidence",
     "CaseFieldID": "scannedDocumentTypes",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "LiveFrom": "21/08/2021",
     "PageDisplayOrder": 1,
@@ -402,7 +402,7 @@
   {
     "CaseEventID": "dwpUploadResponse",
     "CaseFieldID": "scannedDocumentTypes",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "LiveFrom": "21/08/2021",
     "PageDisplayOrder": 1,
@@ -415,7 +415,7 @@
   {
     "CaseEventID": "dwpSupplementaryResponse",
     "CaseFieldID": "scannedDocumentTypes",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "LiveFrom": "21/08/2021",
     "PageDisplayOrder": 1,
@@ -428,7 +428,7 @@
   {
     "CaseEventID": "uploadDocument",
     "CaseFieldID": "scannedDocumentTypes",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "LiveFrom": "21/08/2021",
     "PageDisplayOrder": 1,
@@ -441,7 +441,7 @@
   {
     "CaseEventID": "actionPostponementRequest",
     "CaseFieldID": "interlocReviewState",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "READONLY",
     "LiveFrom": "01/12/2023",
     "PageDisplayOrder": 1,
@@ -455,7 +455,7 @@
   {
     "CaseEventID": "updateNotListable",
     "CaseFieldID": "interlocReviewState",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "[STATE]=\"doNotUse\"",
     "LiveFrom": "01/01/2018",

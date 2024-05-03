@@ -1,7 +1,7 @@
 [
   {
     "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "ID": "editIssueFinalDecisionDate",
     "Name": "Testing - Edit Date",
     "Description": "Testing - Edit IssueFinalDecisionDate",

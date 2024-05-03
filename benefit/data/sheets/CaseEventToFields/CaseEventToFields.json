@@ -1803,7 +1803,7 @@
   {
     "CaseEventID": "sendToDwp",
     "CaseFieldID": "caseManagementCategory",
-    "CaseTypeID": "Benefit",
+    "CaseTypeID": "Benefit-3741",
     "DisplayContext": "MANDATORY",
     "FieldShowCondition": "[STATE]=\"doNotUse\"",
     "RetainHiddenValue": "Yes",
