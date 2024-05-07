@@ -7,6 +7,7 @@ import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
 import { NotePad } from '../../pages/tabs/note.pad';
 import eventTestData from "../../pages/content/event.name.event.description_en.json"
 import {History} from "../../pages/tabs/history";
+import {StringUtilsComponent} from "../../utils/StringUtilsComponent";
 
 
 
@@ -35,14 +36,14 @@ export class Note {
         await homePage.goToHomePage(pipCaseId);
         await homePage.chooseEvent('Add a note');
 
-        await addNotePage.verifyPageContent();
+        await addNotePage.verifyPageContent(StringUtilsComponent.formatClaimReferenceToAUIDisplayFormat(pipCaseId));
         await addNotePage.inputData();
         await addNotePage.confirmSubmission();
 
         await eventNameAndDescriptionPage.verifyPageContent('Add a note');
         //Params are passed to this page as this is a common page to be reused.
         await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"]+" - Add a note",
-            eventTestData["event-description-input"]+" -  Add a note");
+            eventTestData["event-description-input"]+" - Add a note");
         await eventNameAndDescriptionPage.confirmSubmission();
 
         await homePage.navigateToTab("Notepad");
@@ -51,7 +52,7 @@ export class Note {
         await historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
         await historyTab.verifyPageContentByKeyValue('Event', 'Add a note');
         await historyTab.verifyPageContentByKeyValue('Summary', 'Event Summary for Automation - Add a note');
-        await historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification -  Add a note');
+        await historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification - Add a note');
         await historyTab.verifyEventCompleted('Add a note');
 
     }

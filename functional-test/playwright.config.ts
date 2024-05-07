@@ -6,7 +6,7 @@ import path from 'path';
 module.exports = defineConfig({
   testDir: "./e2e/",
   /* Run tests in files in parallel */
-  fullyParallel: false,
+  fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -37,7 +37,8 @@ module.exports = defineConfig({
     {
       name: "chromium",
       use: { 
-        ...devices["Desktop Chrome"]
+        //...devices["Desktop Chrome"],
+        viewport : null,
       }
     },
     // {
