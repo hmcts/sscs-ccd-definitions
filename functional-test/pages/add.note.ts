@@ -14,8 +14,9 @@ export class AddNote {
         webActions = new WebAction(this.page);
     }
 
-    async verifyPageContent() {
+    async verifyPageContent(casereference : string) {
         await webActions.verifyPageLabel('.govuk-caption-l', 'Add a note'); //Captor Text
+        //await webActions.verifyPageLabel('h1', casereference+": Bloggs"); //Captor Text
         await webActions.verifyPageLabel('.govuk-heading-l', 'Add a case note'); //Heading Text
         await webActions.verifyPageLabel('.form-label', 'Enter note'); //Field Label
     }

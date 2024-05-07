@@ -11,7 +11,7 @@ export class LoginPage {
 
     constructor(page: Page) {
         this.page = page;
-        this.pageTitle = page.locator('h1');
+        this.pageTitle = page.locator('h3');
         webActions = new WebAction(this.page);
 
     }
@@ -28,6 +28,6 @@ export class LoginPage {
         await webActions.inputField('#username', credentials.caseWorker.email);
         await webActions.inputField('#password', credentials.caseWorker.password);
         await webActions.clickButton('Sign in');
-        await expect(this.pageTitle).toHaveText('Case list');
+        await expect(this.pageTitle).toHaveText('My work');
     }
 }

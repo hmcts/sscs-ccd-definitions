@@ -21,7 +21,7 @@ export class HomePage {
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
         this.historyTab = page.locator('//div[contains(text(), "History_")]');
         this.nextStepDropDown = '#next-step';
-        this.submitNextStepButton = '//button[@type="submit"]';
+        this.submitNextStepButton = '//button[@class="submit"]';
         this.eventTitle = page.locator('h1.govuk-heading-l');
 
         webActions = new WebAction(this.page);
@@ -40,7 +40,8 @@ export class HomePage {
     async chooseEvent(eventName: string): Promise<void> {
 
         await webActions.chooseOptionByLabel(this.nextStepDropDown, eventName);
-        await webActions.clickNextStepButton(this.submitNextStepButton);
+        //await webActions.clickNextStepButton(this.submitNextStepButton);
+        await webActions.clickButton('Go');
     }
 
     async navigateToTab(tabName : string): Promise<void> {
