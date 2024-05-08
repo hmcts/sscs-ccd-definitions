@@ -54,7 +54,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 4,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -113,7 +114,8 @@
     "PageFieldDisplayOrder": 9,
     "PageID": "1.0",
     "FieldShowCondition": "appeal.benefitType.code!=\"UC\"",
-    "ShowSummaryChangeOption": "Y"
+    "ShowSummaryChangeOption": "Y",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "dwpUploadResponse",
@@ -136,7 +138,8 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 11,
     "PageID": "1.0",
-    "FieldShowCondition": "appeal.benefitType.code!=\"industrialInjuriesDisablement\""
+    "FieldShowCondition": "appeal.benefitType.code!=\"industrialInjuriesDisablement\"",
+    "Publish": "Y"
   },
   {
     "CaseEventID": "dwpUploadResponse",
