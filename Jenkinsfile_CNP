@@ -62,7 +62,7 @@ withPipeline("nodejs", product, component) {
         env.TEST_E2E_API_URI = params.TRIBUNALS_API_URI
     }
 
-    after('smokeTest:preview') {
+    afterAlways('smokeTest:preview') {
         publishHTML([
                     allowMissing: true,
                     alwaysLinkToLastBuild: true,
@@ -71,7 +71,7 @@ withPipeline("nodejs", product, component) {
                     reportFiles: 'index.html',
                     reportName: 'DSS E2E Test Report'
             ])
-            steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test-results/smokeTest/**/*'
+            steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'playwright-report/**/*'
     }
     
     before('functionalTest:preview') {
