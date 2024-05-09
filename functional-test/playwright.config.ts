@@ -19,7 +19,10 @@ module.exports = defineConfig({
 
   /* Opt out of parallel tests on CI. */
   workers: process.env.FUNCTIONAL_TESTS_WORKERS ? 5 : undefined,
-  reporter: [[process.env.CI ? "html" : "list", { open: "never", outputFile: 'index.html' }]],
+  reporter: [["html", { open: 'never',
+    outputDir: './foo',
+    host: '0.0.0.0',
+    port: 9223,  printSteps: true}]],
   use: {
     baseURL: urls.xuiUrl,
     trace: "on-first-retry",
