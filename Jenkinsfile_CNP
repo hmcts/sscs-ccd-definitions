@@ -72,7 +72,6 @@ withPipeline("nodejs", product, component) {
                     reportName: 'DSS E2E Test Report'
             ])
             steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test-results/smokeTest/**/*'
-            }
     }
     
     before('functionalTest:preview') {
