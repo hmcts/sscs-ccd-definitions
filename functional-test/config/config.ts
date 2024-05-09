@@ -8,8 +8,8 @@ export const urls = {
 
 export const credentials = {
   caseWorker: {
-    email: process.env.CASEWORKER_USERNAME,
-    password: process.env.CASEWORKER_PASSWORD,
+    email: process.env.TEST_CASEOFFICER_USERNAME,
+    password: process.env.TEST_CASEOFFICER_PASSWORD,
   },
   seniorCaseworker: {
     email: process.env.SENIOR_CASEWORKER_USERNAME,
