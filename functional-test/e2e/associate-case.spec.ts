@@ -2,9 +2,9 @@ import { test } from "../lib/steps.factory";
 
 test.describe('Associate case tests', () => {
 
-    /* TODO: Below test needs to be revisited when the relevant bug is fixed.
-    Related cases tab is not displayed after the Associate case event is completed
-    successfully.
+    /* TODO: Below test needs to be revisited when the defect SSCSSI-860 is fixed.
+       Related cases tab is not shown after completing Associate Case Event with 
+       another related case that can be associated.
     */
     test("As a caseworker associate a case to another case", async ({ associateCaseSteps }) => {
         await associateCaseSteps.associateCaseSuccessfully();
@@ -15,7 +15,7 @@ test.describe('Associate case tests', () => {
     });
 
     /* TODO: Below test needs to be revisited when the relevant bug is fixed.
-    No validation is in place when the user self associates the case.
+       No validation is in place when the case worker self associates the case.
     */
     test.describe.fixme(() => {
         test("As a caseworker I should not be able self associate a case", async ({ associateCaseSteps }) => {

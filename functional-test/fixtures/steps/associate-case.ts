@@ -1,6 +1,6 @@
 import { Page } from '@playwright/test';
 import { HomePage } from '../../pages/common/homePage';
-import { AssociateCasePage } from '../../pages/associateCasePage';
+import { AssociateCasePage } from '../../pages/associate.case.page';
 import { LoginPage } from '../../pages/common/loginPage';
 import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
 import { StringUtilsComponent } from "../../utils/StringUtilsComponent";
