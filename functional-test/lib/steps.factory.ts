@@ -1,13 +1,6 @@
-import {test as stepsFactory} from '@playwright/test';
-import {Note} from '../fixtures/steps/note';
-import {ConfirmCaseLapsed} from '../fixtures/steps/confirm.case.lapsed';
-import {EvidenceReminder} from '../fixtures/steps/evidence.reminder';
-import {AssociateCase} from '../fixtures/steps/associate-case';
-import {SendToAdmin} from '../fixtures/steps/send.to.admin';
-import {InformationReceived} from '../fixtures/steps/information.received';
-import {ReviewAdminActionTask} from '../fixtures/steps/work-allocation/review.admin.action.task'
-import {SendToJudge} from '../fixtures/steps/send.to.judge';
-import {UploadResponse} from '../fixtures/steps/upload.response';
+import { test as stepsFactory } from '@playwright/test';
+import { Note } from '../fixtures/steps/note';
+import { ConfirmCaseLapsed } from '../fixtures/steps/confirm.case.lapsed';
 import {ListingError} from "../fixtures/steps/listing.error";
 import {ReviewListingErrorTask} from '../fixtures/steps/work-allocation/review.listing.error.task'
 import {SendToDormant} from '../fixtures/steps/send.to.dormant';
