@@ -1,5 +1,6 @@
 import { expect, Locator, Page } from '@playwright/test';
 import { WebAction } from '../common/web.action';
+import associateCaseTestData from "../pages/content/associate.case_en.json";
 
 let webAction: WebAction;
 
@@ -13,11 +14,11 @@ export class AssociateCasePage {
     }
 
     async verifyPageContent(casereference : string) {
-        await webAction.verifyPageLabel('.govuk-caption-l', 'Associate case'); //Captor Text
-        await webAction.verifyPageLabel('.govuk-heading-l', 'Associate cases'); //Heading Text
-        await webAction.verifyPageLabel('#linkedCasesBoolean legend span', 'Has related appeal(s)'); //Field Label
-        await webAction.verifyPageLabel('label[for="linkedCasesBoolean_Yes"]', 'Yes');
-        await webAction.verifyPageLabel('label[for="linkedCasesBoolean_No"]', 'No');
+        await webAction.verifyPageLabel('.govuk-caption-l', associateCaseTestData['associate-case-caption']); //Captor Text
+        await webAction.verifyPageLabel('.govuk-heading-l', associateCaseTestData['associate-case-heading']); //Heading Text
+        await webAction.verifyPageLabel('#linkedCasesBoolean legend span', associateCaseTestData['associate-case-related-appeals-label']); //Field Label
+        await webAction.verifyPageLabel('label[for="linkedCasesBoolean_Yes"]', associateCaseTestData['associate-case-related-appeals-yes-label']);
+        await webAction.verifyPageLabel('label[for="linkedCasesBoolean_No"]', associateCaseTestData['associate-case-related-appeals-No-label']);
     }
 
     async associateCase(caseNumber: string): Promise<void> {

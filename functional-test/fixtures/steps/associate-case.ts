@@ -47,8 +47,8 @@ export class AssociateCase {
         var pipCaseId = await createCaseBasedOnCaseType("PIP");
         await this.goToAssociateCasePage(this.page, pipCaseId);
 
-        await associateCasePage.associateCase(associateCaseTestData.nonExistentCase);
-        await associateCasePage.verifyInputErrorMessage(associateCaseTestData.nonExistentCase);
+        await associateCasePage.associateCase(associateCaseTestData['associate-case-non-existent-case']);
+        await associateCasePage.verifyInputErrorMessage(associateCaseTestData['associate-case-non-existent-case']);
         await associateCasePage.cancelEvent();
 
         await homePage.navigateToTab("Summary");
@@ -71,7 +71,7 @@ export class AssociateCase {
            instead of displaying error message. Below method needs to be updated when the
            relevant bug is fixed.
         */
-        await associateCasePage.verifyInputErrorMessage(associateCaseTestData.nonExistentCase);
+        await associateCasePage.verifyInputErrorMessage(associateCaseTestData['associate-case-non-existent-case']);
         await associateCasePage.cancelEvent();
 
         await homePage.navigateToTab("Summary");

@@ -1,3 +1,8 @@
 {
-    "nonExistentCase": "9999999999999999"
+    "associate-case-non-existent-case": "9999999999999999",
+    "associate-case-caption" : "Associate case",
+    "associate-case-heading" : "Associate cases",
+    "associate-case-related-appeals-label" : "Has related appeal(s)",
+    "associate-case-related-appeals-yes-label" : "Yes",
+    "associate-case-related-appeals-No-label" : "No"
 }
