@@ -56,6 +56,11 @@ export class HomePage {
                 await this.historyTab.click();
                 break;
             }
+            case "Summary": {
+                await expect(this.historyTab).toBeVisible();
+                await this.summaryTab.click();
+                break;
+            }
             default: {
                 //statements;
                 break;
