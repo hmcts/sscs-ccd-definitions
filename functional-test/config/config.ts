@@ -2,8 +2,8 @@ import path from "path";
 
 export const urls = {
 
-  tribunalsApiUri: process.env.TRIBUNALS_API_URL,
-  xuiUrl: process.env.SSCS_XUI_URL,
+  tribunalsApiUri: process.env.TRIBUNALS_API_URL || "http://sscs-tribunals-api-aat.service.core-compute-aat.internal",
+  xuiUrl: process.env.SSCS_XUI_URL || 'https://manage-case.aat.platform.hmcts.net',
 };
 
 export const credentials = {
