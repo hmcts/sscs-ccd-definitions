@@ -40,7 +40,7 @@ export class Note {
         await addNotePage.inputData();
         await addNotePage.confirmSubmission();
 
-        await eventNameAndDescriptionPage.verifyPageContent('Add a note');
+        await eventNameAndDescriptionPage.verifyPageContent('Add a note', false , null, null);
         //Params are passed to this page as this is a common page to be reused.
         await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"]+" - Add a note",
             eventTestData["event-description-input"]+" - Add a note");

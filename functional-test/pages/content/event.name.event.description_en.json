@@ -1,4 +1,6 @@
 {
+    "event-summary-check-your-answers-heading" : "Check your answers",
+    "event-summary-check-the-information-text" : "Check the information below carefully.",
     "event-summary-label" : " Event summary (optional) A few words describing the purpose of the event.",
     "event-summary-guidance-text" : "A few words describing the purpose of the event.",
     "event-summary-description" : "Event description (optional)",

@@ -2,13 +2,13 @@ import { test as stepsFactory } from '@playwright/test';
 import { Note } from '../fixtures/steps/note';
 import { ConfirmCaseLapsed } from '../fixtures/steps/confirm.case.lapsed';
 import { EvidenceReminder } from '../fixtures/steps/evidence.reminder';
+import { SendToAdmin } from '../fixtures/steps/send.to.admin';
 
 
 type MyFixtures = {
     addNoteSteps: Note
     confirmCaseLapsedSteps: ConfirmCaseLapsed
     evidenceReminderSteps: EvidenceReminder
-
 };
 
 export const test =  stepsFactory.extend<MyFixtures>({
@@ -23,5 +23,8 @@ export const test =  stepsFactory.extend<MyFixtures>({
     evidenceReminderSteps:async ({page}, use) => {
         const evidenceReminderSteps = new EvidenceReminder(page);
         await use(evidenceReminderSteps);
+    sendToAdminSteps:async ({page}, use) => {
+        const sendToAdminSteps = new SendToAdmin(page);
+        await use(sendToAdminSteps);
     },
 })
