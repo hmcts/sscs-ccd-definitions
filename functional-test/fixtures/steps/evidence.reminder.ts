@@ -26,14 +26,7 @@ export class EvidenceReminder {
         var pipCaseId = await createCaseBasedOnCaseType("PIP");
         await loginPage.goToLoginPage();
         await loginPage.verifySuccessfulLoginForCaseworker();
-
         await homePage.goToHomePage(pipCaseId);
-
-        // await homePage.chooseEvent('Admin - send to With FTA');
-        // await eventNameAndDescriptionPage.verifyPageContent("Admin - send to With FTA");
-        // await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"],
-        //     eventTestData["event-description-input"]);
-        // await eventNameAndDescriptionPage.confirmSubmission();
 
         await homePage.chooseEvent('Evidence reminder');
         await eventNameAndDescriptionPage.verifyPageContent("Evidence reminder");
@@ -45,6 +38,7 @@ export class EvidenceReminder {
         await historyTab.verifyPageContentByKeyValue('Event', 'Evidence reminder');
         await historyTab.verifyPageContentByKeyValue('Summary', 'Event Summary for Automation');
         await historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification');
+        await historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
         await historyTab.verifyEventCompleted("Evidence reminder");
     }
 }

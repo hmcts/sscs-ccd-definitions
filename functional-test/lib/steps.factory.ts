@@ -23,8 +23,9 @@ export const test =  stepsFactory.extend<MyFixtures>({
     evidenceReminderSteps:async ({page}, use) => {
         const evidenceReminderSteps = new EvidenceReminder(page);
         await use(evidenceReminderSteps);
-    sendToAdminSteps:async ({page}, use) => {
-        const sendToAdminSteps = new SendToAdmin(page);
-        await use(sendToAdminSteps);
     },
+    // sendToAdminSteps:async ({page}, use) => {
+    //     const sendToAdminSteps = new SendToAdmin(page);
+    //     await use(sendToAdminSteps);
+    // },
 })

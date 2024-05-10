@@ -13,7 +13,7 @@ export class EventNameEventDescriptionPage {
         webActions = new WebAction(this.page);
     }
 
-    async verifyPageContent(headingValue: string, checkYourAnswersFlag: boolean = false, key: string, value: string) {
+    async verifyPageContent(headingValue: string, checkYourAnswersFlag: boolean = false, key?: string, value?: string) {
 
         await webActions.verifyPageLabel('.govuk-heading-l', headingValue); //Heading Text
         if (checkYourAnswersFlag) {
