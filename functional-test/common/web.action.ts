@@ -43,6 +43,15 @@ export class WebAction {
          });
     }
 
+    async clickRadioButton(elementLocator: string): Promise<void> {
+        await this.page
+         .getByRole('radio', { name: elementLocator})
+         .click()
+         .catch((error) => {
+            logger.error(`Radio button element is not present: ${error}`);
+         });
+    }
+
     async clickLink(elementLocator: string): Promise<void> {
         await this.page
             .getByRole('link', { name: elementLocator})
