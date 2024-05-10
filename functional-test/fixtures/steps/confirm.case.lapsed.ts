@@ -31,7 +31,7 @@ export class ConfirmCaseLapsed {
         await homePage.chooseEvent('Confirm lapsed');
 
         //Params are passed to this page as this is a common page to be reused.
-        await eventNameAndDescriptionPage.verifyPageContent('Confirm lapsed');
+        await eventNameAndDescriptionPage.verifyPageContent('Confirm lapsed',false, null, null);
         await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"],
             eventTestData["event-description-input"]);
         await eventNameAndDescriptionPage.confirmSubmission();
