@@ -2,14 +2,14 @@ import path from "path";
 
 export const urls = {
 
-  tribunalsApiUri: process.env.TRIBUNALS_API_URL || "http://sscs-tribunals-api-aat.service.core-compute-aat.internal",
-  xuiUrl: process.env.SSCS_XUI_URL || 'https://manage-case.aat.platform.hmcts.net',
+  tribunalsApiUri: process.env.TRIBUNALS_API_URL,
+  xuiUrl: process.env.SSCS_XUI_URL,
 };
 
 export const credentials = {
   caseWorker: {
-    email: process.env.TEST_CASEOFFICER_USERNAME || 'SSCS-ctsc-clerk@justice.gov.uk',
-    password: process.env.TEST_CASEOFFICER_PASSWORD || 'Testing123',
+    email: process.env.TEST_CASEOFFICER_USERNAME,
+    password: process.env.TEST_CASEOFFICER_PASSWORD,
   },
   seniorCaseworker: {
     email: process.env.SENIOR_CASEWORKER_USERNAME,

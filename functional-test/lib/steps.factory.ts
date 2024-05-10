@@ -9,6 +9,7 @@ type MyFixtures = {
     addNoteSteps: Note
     confirmCaseLapsedSteps: ConfirmCaseLapsed
     evidenceReminderSteps: EvidenceReminder
+    sendToAdminSteps: SendToAdmin
 };
 
 export const test =  stepsFactory.extend<MyFixtures>({
@@ -24,8 +25,8 @@ export const test =  stepsFactory.extend<MyFixtures>({
         const evidenceReminderSteps = new EvidenceReminder(page);
         await use(evidenceReminderSteps);
     },
-    // sendToAdminSteps:async ({page}, use) => {
-    //     const sendToAdminSteps = new SendToAdmin(page);
-    //     await use(sendToAdminSteps);
-    // },
+    sendToAdminSteps:async ({page}, use) => {
+        const sendToAdminSteps = new SendToAdmin(page);
+        await use(sendToAdminSteps);
+    },
 })
