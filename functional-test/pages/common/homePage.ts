@@ -17,10 +17,8 @@ export class HomePage {
 
     constructor(page: Page) {
         this.page = page;
-        // this.notePadTab = page.locator('//div[contains(text(), "Notepad")]');
         this.notePadTab = page.getByText('Notepad', {exact: true});
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
-        // this.historyTab = page.locator('//div[contains(text(), "History")]');
         this.historyTab = page.getByText('History', {exact: true});
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
@@ -56,6 +54,11 @@ export class HomePage {
             case "History": {
                 await expect(this.historyTab).toBeVisible();
                 await this.historyTab.click();
+                break;
+            }
+            case "Summary": {
+                await expect(this.historyTab).toBeVisible();
+                await this.summaryTab.click();
                 break;
             }
             default: {
