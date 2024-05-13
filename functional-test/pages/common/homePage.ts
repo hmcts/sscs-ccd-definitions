@@ -17,9 +17,9 @@ export class HomePage {
 
     constructor(page: Page) {
         this.page = page;
-        this.notePadTab = page.locator('//div[contains(text(), "Notepad_")]');
+        this.notePadTab = page.getByText('Notepad', {exact: true});
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
-        this.historyTab = page.locator('//div[contains(text(), "History_")]');
+        this.historyTab = page.getByText('History', {exact: true});
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
         this.eventTitle = page.locator('h1.govuk-heading-l');
