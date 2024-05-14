@@ -15,7 +15,6 @@ type MyFixtures = {
     evidenceReminderSteps: EvidenceReminder
     sendToAdminSteps: SendToAdmin
     listingErrorSteps: ListingError
-
 };
 
 export const test =  stepsFactory.extend<MyFixtures>({
