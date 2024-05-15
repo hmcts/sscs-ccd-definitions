@@ -30,6 +30,6 @@
     },
     "informationReceived": {
         "link": "Information received",
-        "eventTitle": ""
+        "eventTitle": "Log case progress"
     }
 }

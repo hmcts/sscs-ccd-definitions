@@ -5,7 +5,7 @@ import { EventNameEventDescriptionPage } from '../../pages/common/event.name.eve
 import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
 import eventTestData from "../../pages/content/event.name.event.description_en.json"
 import {History} from "../../pages/tabs/history";
-
+import { credentials } from '../../config/config';
 
 
 export class EvidenceReminder {
@@ -25,7 +25,7 @@ export class EvidenceReminder {
 
         var pipCaseId = await createCaseBasedOnCaseType("PIP");
         await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLoginForCaseworker();
+        await loginPage.verifySuccessfulLogin(credentials.caseWorker);
         await homePage.goToHomePage(pipCaseId);
 
         await homePage.chooseEvent('Evidence reminder');

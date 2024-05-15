@@ -53,10 +53,10 @@ export class ReviewAdminActionTask {
         await webActions.clickLink('Cancel')
         await homePage.navigateToTab('Tasks');
 
-        // await webActions.clickLink(task.sendCaseToTcw.link);
-        // await this.verifyPageTitle(task.sendCaseToTcw.eventTitle);
-        // await webActions.clickLink('Cancel')
-        // await homePage.navigateToTab('Tasks');
+        await webActions.clickLink(task.sendCaseToTcw.link);
+        await this.verifyPageTitle(task.sendCaseToTcw.eventTitle);
+        await webActions.clickLink('Cancel')
+        await homePage.navigateToTab('Tasks');
     }
 
     async selectNextStep(linkText: string) {
