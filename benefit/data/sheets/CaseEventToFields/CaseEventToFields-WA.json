@@ -146,7 +146,6 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Create Bundle",
-    "PageShowCondition": "[STATE]=\"DoNotShow\"",
     "FieldShowCondition": "[STATE]=\"DoNotShow\"",
     "Publish": "Y",
     "PublishAs": "panel"
@@ -169,7 +168,7 @@
     "CaseFieldID": "assignedCaseRoles",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
-    "FieldShowCondition": "[STATE]=\"DoNotShow\"",
+    "FieldShowCondition": "[STATE]=\"doNotUse\"",
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 2,
