@@ -4,6 +4,7 @@ export const urls = {
 
   tribunalsApiUri: process.env.TRIBUNALS_API_URL || "http://sscs-tribunals-api-aat.service.core-compute-aat.internal",
   xuiUrl: process.env.SSCS_XUI_URL || 'https://manage-case.aat.platform.hmcts.net',
+  idamUrl : process.env.IDAM_URL || 'https://idam-api.aat.platform.hmcts.net',
 };
 
 export const credentials = {
@@ -49,6 +50,12 @@ export const credentials = {
     password: process.env.SUPER_USER_PASSWORD,
   },
 };
+
+export const resources = {
+  idamClientId : process.env.IDAM_OAUTH2_CLIENT_ID,
+  idamClientSecret : process.env.IDAM_OAUTH2_CLIENT_SECRET,
+  idamClientRedirect : process.env.IDAM_OAUTH2_REDIRECT_URL
+}
 
 export const paths = {
 
