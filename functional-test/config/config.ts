@@ -36,6 +36,10 @@ export const credentials = {
     email: process.env.SENIOR_JUDGE_USERNAME,
     password: process.env.SENIOR_JUDGE_PASSWORD,
   },
+  nationalJudge: {
+    email: process.env.NATIONAL_JUDGE_USERNAME,
+    password: process.env.NATIONAL_JUDGE_PASSWORD,
+  },
   respondent: {
     email: process.env.RESPONDENT_USERNAME,
     password: process.env.RESPONDENT_PASSWORD,
@@ -43,6 +47,18 @@ export const credentials = {
   citizen: {
     email: process.env.CITIZEN_USERNAME,
     password: process.env.CITIZEN_PASSWORD,
+  },
+  ctscAdministrator: {
+    email: process.env.CTSC_ADMINISTRATOR_USERNAME,
+    password: process.env.CTSC_ADMINISTRATOR_PASSWORD,
+  },
+  ctscAdministratorWithCaseAllocatorRole: {
+    email: process.env.CTSC_ADMINISTRATOR_CASE_ALLOCATOR_USERNAME,
+    password: process.env.CTSC_ADMINISTRATOR_CASE_ALLOCATOR_PASSWORD,
+  },
+  ctscTeamLeader: {
+    email: process.env.CTSC_TEAM_LEADER_USERNAME,
+    password: process.env.CTSC_TEAM_LEADER_PASSWORD,
   },
   superUser: {
     email: process.env.SUPER_USER_USERNAME,

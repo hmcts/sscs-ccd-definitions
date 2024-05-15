@@ -8,7 +8,7 @@ import { NotePad } from '../../pages/tabs/note.pad';
 import eventTestData from "../../pages/content/event.name.event.description_en.json"
 import {History} from "../../pages/tabs/history";
 import {StringUtilsComponent} from "../../utils/StringUtilsComponent";
-
+import { credentials } from '../../config/config';
 
 
 export class Note {
@@ -31,7 +31,7 @@ export class Note {
 
         var pipCaseId = await createCaseBasedOnCaseType("PIP");
         await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLoginForCaseworker();
+        await loginPage.verifySuccessfulLogin(credentials.caseWorker);
 
         await homePage.goToHomePage(pipCaseId);
         await homePage.chooseEvent('Add a note');

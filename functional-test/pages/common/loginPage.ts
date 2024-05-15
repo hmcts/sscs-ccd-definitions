@@ -24,9 +24,9 @@ export class LoginPage {
         await this.page.goto(`/cases/case-details/${caseId}`);
     }
 
-    async verifySuccessfulLoginForCaseworker(): Promise<void> {
-        await webActions.inputField('#username', credentials.caseWorker.email);
-        await webActions.inputField('#password', credentials.caseWorker.password);
+    async verifySuccessfulLogin(userDetails: any): Promise<void> {
+        await webActions.inputField('#username', userDetails.email);
+        await webActions.inputField('#password', userDetails.password);
         await webActions.clickButton('Sign in');
         await expect(this.pageTitle).toHaveText('My work');
     }

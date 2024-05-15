@@ -18,7 +18,12 @@ export class SendToAdmin {
         this.page = page;
     }
 
-    async performSendToAdmin() {
+    async createCase(caseType: string) {
+        var taxCreditCaseId = await createCaseBasedOnCaseType(caseType);
+        return taxCreditCaseId;
+    }
+
+    async performSendToAdmin(caseId: string, credentials: any) {
 
         let loginPage = new LoginPage(this.page);
         let homePage = new HomePage(this.page);
@@ -26,11 +31,10 @@ export class SendToAdmin {
         let eventNameAndDescriptionPage = new EventNameEventDescriptionPage(this.page);
         let historyTab = new History(this.page);
 
-        var taxCreditCaseId = await createCaseBasedOnCaseType("TAX CREDIT");
         await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLoginForCaseworker();
+        await loginPage.verifySuccessfulLogin(credentials);
 
-        await homePage.goToHomePage(taxCreditCaseId);
+        await homePage.goToHomePage(caseId);
         await homePage.chooseEvent('Send to admin');
 
         //Params are passed to this page as this is a common page to be reused.
@@ -51,7 +55,7 @@ export class SendToAdmin {
         await historyTab.verifyPageContentByKeyValue('Event', 'Send to admin');
         await historyTab.verifyPageContentByKeyValue('Summary', 'Event Summary for Automation');
         await historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification');
-        await historyTab.verifyEventCompleted("Send to admin");
+        await historyTab.verifyEventRecorded("Send to admin");
     }
 
 }

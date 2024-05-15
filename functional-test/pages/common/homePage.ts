@@ -10,6 +10,8 @@ export class HomePage {
     readonly summaryTab: Locator;
     readonly notePadTab: Locator;
     readonly historyTab: Locator;
+    readonly rolesAndAccessTab: Locator;
+    readonly tasksTab: Locator;
     readonly submitNextStepButton: string;
     readonly nextStepDropDown: string;
     readonly eventTitle: Locator;
@@ -20,6 +22,8 @@ export class HomePage {
         this.notePadTab = page.getByText('Notepad', {exact: true});
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
         this.historyTab = page.getByText('History', {exact: true});
+        this.tasksTab = page.locator('//div[contains(text(), "Tasks")]');
+        this.rolesAndAccessTab = page.locator('//div[contains(text(), "Roles and access")]');
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
         this.eventTitle = page.locator('h1.govuk-heading-l');
@@ -57,8 +61,18 @@ export class HomePage {
                 break;
             }
             case "Summary": {
-                await expect(this.historyTab).toBeVisible();
+                await expect(this.summaryTab).toBeVisible();
                 await this.summaryTab.click();
+                break;
+            }
+            case "Tasks": {
+                await expect(this.tasksTab).toBeVisible();
+                await this.tasksTab.click();
+                break;
+            }
+            case "Roles and access": {
+                await expect(this.rolesAndAccessTab).toBeVisible();
+                await this.rolesAndAccessTab.click();
                 break;
             }
             default: {
@@ -66,5 +80,10 @@ export class HomePage {
                 break;
             }
         }
+    }
+
+    async logout() {
+        // await webActions.clickLink('Sign out');
+        await this.page.locator
     }
 }

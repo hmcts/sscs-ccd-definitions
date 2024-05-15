@@ -7,14 +7,15 @@ import { StringUtilsComponent } from "../../utils/StringUtilsComponent";
 import { History } from "../../pages/tabs/history";
 import { Summary } from "../../pages/tabs/summary";
 import associateCaseTestData from "../../pages/content/associate.case_en.json";
+import { credentials } from '../../config/config';
 
 export class AssociateCase {
 
-  readonly page : Page;
+    readonly page : Page;
 
-   constructor(page: Page) {
-       this.page = page;
-   }
+    constructor(page: Page) {
+        this.page = page;
+    }
 
     async associateCaseSuccessfully() {
         let homePage = new HomePage(this.page);
@@ -84,7 +85,7 @@ export class AssociateCase {
         let loginPage = new LoginPage(page);
         let homePage = new HomePage(page);
         await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLoginForCaseworker();
+        await loginPage.verifySuccessfulLogin(credentials.caseWorker);
         await homePage.goToHomePage(caseId);
         await homePage.chooseEvent("Associate case");
     }
