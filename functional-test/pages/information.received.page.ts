@@ -21,7 +21,6 @@ export class InformationReceivedPage {
 
     async selectReviewState(option: string): Promise<void> {
         await webAction.chooseOptionByLabel('#interlocReviewState', option);
-        // await this.page.selectOption('#interlocReviewState', option);
     }
 
     async confirmSubmission(): Promise<void> {
