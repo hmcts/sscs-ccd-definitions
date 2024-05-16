@@ -1,6 +1,7 @@
 import { expect, Page } from '@playwright/test';
 import { WebAction } from '../../common/web.action'
 import { HomePage } from '../../pages/common/homePage';
+import { timeouts } from '../../config/config';
 
 let webActions: WebAction;
 
@@ -15,7 +16,7 @@ export class Tasks {
 
     async verifyTaskIsDisplayed(taskName: string) {
         const startTime = Date.now();
-        const timeout = 240000;
+        const timeout = timeouts.maxTimeout;
 
         let homePage = new HomePage(this.page);
         let taskVisible = false;
@@ -27,7 +28,7 @@ export class Tasks {
             }
             await homePage.navigateToTab('Summary');
             await homePage.navigateToTab('Tasks');
-            await this.page.waitForTimeout(5000);
+            await this.page.waitForTimeout(timeouts.shortTimeout);
         }
 
         if (!taskVisible) {

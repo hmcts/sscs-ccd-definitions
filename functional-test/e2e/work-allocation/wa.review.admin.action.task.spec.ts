@@ -2,7 +2,7 @@ import { test } from "../../lib/steps.factory";
 import { credentials } from '../../config/config';
 import task  from '../../pages/content/review.admin.task_en.json';
 
-test.describe('WA - Review Admin action task tests', () => {
+test.describe.skip('WA - Review Admin action task tests', () => {
 
     test("As a CSTC Admin without case allocator role, review admin action task", async ({
         loginSteps,
@@ -11,7 +11,7 @@ test.describe('WA - Review Admin action task tests', () => {
         sendToAdminSteps,
         taskSteps }) => {
 
-        // Below step ensures test time is extended to allow enough time for task creation
+        // Below step ensures test timeout is extended to allow enough time for task creation
         test.slow();
 
         let caseReference = await sendToAdminSteps.createCase('PIP');

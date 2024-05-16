@@ -37,8 +37,8 @@ export const credentials = {
     password: process.env.SENIOR_JUDGE_PASSWORD,
   },
   nationalJudge: {
-    email: process.env.NATIONAL_JUDGE_USERNAME,
-    password: process.env.NATIONAL_JUDGE_PASSWORD,
+    email: process.env.TEST_NATIONAL_JUDGE_USERNAME,
+    password: process.env.TEST_NATIONAL_JUDGE_PASSWORD,
   },
   respondent: {
     email: process.env.RESPONDENT_USERNAME,
@@ -49,16 +49,16 @@ export const credentials = {
     password: process.env.CITIZEN_PASSWORD,
   },
   ctscAdministrator: {
-    email: process.env.CTSC_ADMINISTRATOR_USERNAME,
-    password: process.env.CTSC_ADMINISTRATOR_PASSWORD,
+    email: process.env.TEST_CTSC_ADMINISTRATOR_USERNAME,
+    password: process.env.TEST_CTSC_ADMINISTRATOR_PASSWORD,
   },
   ctscAdministratorWithCaseAllocatorRole: {
-    email: process.env.CTSC_ADMINISTRATOR_CASE_ALLOCATOR_USERNAME,
-    password: process.env.CTSC_ADMINISTRATOR_CASE_ALLOCATOR_PASSWORD,
+    email: process.env.TEST_CTSC_ADMINISTRATOR_CASE_ALLOCATOR_USERNAME,
+    password: process.env.TEST_CTSC_ADMINISTRATOR_CASE_ALLOCATOR_PASSWORD,
   },
   ctscTeamLeader: {
-    email: process.env.CTSC_TEAM_LEADER_USERNAME,
-    password: process.env.CTSC_TEAM_LEADER_PASSWORD,
+    email: process.env.TEST_CTSC_TEAM_LEADER_USERNAME,
+    password: process.env.TEST_CTSC_TEAM_LEADER_PASSWORD,
   },
   superUser: {
     email: process.env.SUPER_USER_USERNAME,
@@ -81,5 +81,12 @@ export const paths = {
       __dirname,
       "../tests/fixtures/file/mockFile.odt",
   ),
+};
+
+export const timeouts = {
+  shortTimeout: 5000,
+  mediumTimout: 60000,
+  longTimeout: 120000,
+  maxTimeout: 240000
 };
 

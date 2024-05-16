@@ -81,9 +81,4 @@ export class HomePage {
             }
         }
     }
-
-    async logout() {
-        // await webActions.clickLink('Sign out');
-        await this.page.locator
-    }
 }
