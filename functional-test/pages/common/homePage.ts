@@ -10,6 +10,7 @@ export class HomePage {
     readonly summaryTab: Locator;
     readonly notePadTab: Locator;
     readonly historyTab: Locator;
+    readonly appealDetailsTab: Locator;
     readonly submitNextStepButton: string;
     readonly nextStepDropDown: string;
     readonly eventTitle: Locator;
@@ -20,6 +21,7 @@ export class HomePage {
         this.notePadTab = page.getByText('Notepad', {exact: true});
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
         this.historyTab = page.getByText('History', {exact: true});
+        this.appealDetailsTab = page.getByText('Appeal Details', {exact: true});
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
         this.eventTitle = page.locator('h1.govuk-heading-l');
@@ -59,6 +61,11 @@ export class HomePage {
             case "Summary": {
                 await expect(this.historyTab).toBeVisible();
                 await this.summaryTab.click();
+                break;
+            }
+            case "Appeal Details": {
+                await expect(this.appealDetailsTab).toBeVisible();
+                await this.appealDetailsTab.click();
                 break;
             }
             default: {

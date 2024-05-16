@@ -18,6 +18,11 @@ export class History {
             .locator(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`)).toBeVisible();
     }
 
+    async verifyHistoryPageContentByKeyValue(fieldLabel: string, fieldValue: string) {
+        await expect(this.page
+            .locator(`//*[normalize-space()="${fieldLabel}"]/../td[normalize-space()="${fieldValue}"]`)).toBeVisible();
+    }
+
     async verifyEventCompleted(linkText: string) {
         await webActions.clickLink(linkText);
     }

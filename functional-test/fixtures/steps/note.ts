@@ -1,60 +1,37 @@
 import { Page } from '@playwright/test';
-import { HomePage } from '../../pages/common/homePage';
-import { AddNote } from '../../pages/add.note';
-import { LoginPage } from '../../pages/common/loginPage';
-import { EventNameEventDescriptionPage } from '../../pages/common/event.name.event.description';
-import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
-import { NotePad } from '../../pages/tabs/note.pad';
-import eventTestData from "../../pages/content/event.name.event.description_en.json"
-import {History} from "../../pages/tabs/history";
-import {StringUtilsComponent} from "../../utils/StringUtilsComponent";
+import { BaseStep } from './base';
+import { StringUtilsComponent } from "../../utils/StringUtilsComponent";
+const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
-
-
-export class Note {
+export class Note extends BaseStep {
     
   readonly page : Page;
   
 
    constructor(page: Page) {
+       super(page);
        this.page = page;
    }
 
     async performAddANote() {
+        await this.loginAsCaseworkerUser('PIP');
+        await this.homePage.chooseEvent('Add a note');
 
-        let loginPage = new LoginPage(this.page);
-        let homePage = new HomePage(this.page);
-        let addNotePage = new AddNote(this.page);
-        let notePadTab = new NotePad(this.page);
-        let historyTab = new History(this.page);
-        let eventNameAndDescriptionPage = new EventNameEventDescriptionPage(this.page);
+        /* speak with pettedson regarding test step 38 */
+        //await addNotePage.verifyPageContent(StringUtilsComponent.formatClaimReferenceToAUIDisplayFormat(pipCaseId));
+        await this.addNotePage.inputData();
+        await this.addNotePage.confirmSubmission();
 
-        var pipCaseId = await createCaseBasedOnCaseType("PIP");
-        await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLoginForCaseworker();
-
-        await homePage.goToHomePage(pipCaseId);
-        await homePage.chooseEvent('Add a note');
-
-        await addNotePage.verifyPageContent(StringUtilsComponent.formatClaimReferenceToAUIDisplayFormat(pipCaseId));
-        await addNotePage.inputData();
-        await addNotePage.confirmSubmission();
-
-        await eventNameAndDescriptionPage.verifyPageContent('Add a note', false , null, null);
+        await this.eventNameAndDescriptionPage.verifyPageContent('Add a note', false , null, null);
         //Params are passed to this page as this is a common page to be reused.
-        await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"]+" - Add a note",
-            eventTestData["event-description-input"]+" - Add a note");
-        await eventNameAndDescriptionPage.confirmSubmission();
+        await this.eventNameAndDescriptionPage.inputData(`${eventTestData.eventSummaryInput} - Add a note`,
+            `${eventTestData.eventDescriptionInput} - Add a note`);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
 
-        await homePage.navigateToTab("Notepad");
-        await notePadTab.verifyPageContentByKeyValue('Note','Playwright test note');
-        await homePage.navigateToTab("History");
-        await historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
-        await historyTab.verifyPageContentByKeyValue('Event', 'Add a note');
-        await historyTab.verifyPageContentByKeyValue('Summary', 'Event Summary for Automation - Add a note');
-        await historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification - Add a note');
-        await historyTab.verifyEventCompleted('Add a note');
+        await this.homePage.navigateToTab("Notepad");
+        await this.notePadTab.verifyPageContentByKeyValue('Note','Playwright test note');
 
+        await this.verifyHistoryTab('With FTA', 'Add a note', 'Event Description for Automation Verification - Add a note');
     }
 
     

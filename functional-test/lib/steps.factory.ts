@@ -4,17 +4,19 @@ import { ConfirmCaseLapsed } from '../fixtures/steps/confirm.case.lapsed';
 import { EvidenceReminder } from '../fixtures/steps/evidence.reminder';
 import { AssociateCase } from '../fixtures/steps/associate-case';
 import { SendToAdmin } from '../fixtures/steps/send.to.admin';
+import { UploadResponse } from '../fixtures/steps/upload.response';
 
 
-type MyFixtures = {
+type MyStepsFixtures = {
     addNoteSteps: Note
     associateCaseSteps: AssociateCase
     confirmCaseLapsedSteps: ConfirmCaseLapsed
     evidenceReminderSteps: EvidenceReminder
     sendToAdminSteps: SendToAdmin
+    uploadResponseSteps: UploadResponse
 };
 
-export const test =  stepsFactory.extend<MyFixtures>({
+export const test =  stepsFactory.extend<MyStepsFixtures>({
     addNoteSteps:async ({page}, use) => {
         const addNoteSteps = new Note(page);
         await use(addNoteSteps);
@@ -35,4 +37,10 @@ export const test =  stepsFactory.extend<MyFixtures>({
         const sendToAdminSteps = new SendToAdmin(page);
         await use(sendToAdminSteps);
     },
+    uploadResponseSteps:async ({page}, use) => {
+        const uploadResponseSteps = new UploadResponse(page);
+        await use(uploadResponseSteps);
+    }
 })
+
+

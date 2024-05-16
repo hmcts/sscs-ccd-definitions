@@ -6,7 +6,7 @@ import path from 'path';
 module.exports = defineConfig({
   testDir: "./e2e/",
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -19,26 +19,18 @@ module.exports = defineConfig({
 
   /* Opt out of parallel tests on CI. */
   workers: process.env.FUNCTIONAL_TESTS_WORKERS ? 5 : undefined,
-  reporter: [["html", { open: 'never',
-    outputDir: './foo',
-    host: '0.0.0.0',
-    port: 9223,  printSteps: true}]],
+  reporter: [[process.env.CI ? "html" : "list", { open: "never", outputDir: '../playwright-report/'}]],
   use: {
     baseURL: urls.xuiUrl,
     trace: "on-first-retry",
-    launchOptions: {
-      // 1
-      args: ["--start-maximized"],
-      slowMo: 50,
-    },
   },
   // globalSetup: '../src/tests/e2e/global.setup.ts',
   projects: [
     {
       name: "chromium",
       use: { 
-        //...devices["Desktop Chrome"],
-        viewport : null,
+        // ...devices["Desktop Chrome"],
+        viewport : null
       }
     },
     // {
