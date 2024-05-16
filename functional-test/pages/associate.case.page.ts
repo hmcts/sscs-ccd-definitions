@@ -1,7 +1,6 @@
 import { expect, Locator, Page } from '@playwright/test';
 import { WebAction } from '../common/web.action';
-// import associateCaseTestData from "../pages/content/associate.case_en.json";
-const associateCaseTestData = require("../pages/content/associate.case_en.json");
+const associateCaseTestData = require("content/associate.case_en.json");
 
 let webAction: WebAction;
 

@@ -1,6 +1,6 @@
 import { Page } from '@playwright/test';
 import { WebAction } from '../common/web.action';
-const uploadResponseTestdata = require('../content/upload.response_en.json');
+const uploadResponseTestdata = require('content/upload.response_en.json');
 
 let webActions: WebAction;
 
