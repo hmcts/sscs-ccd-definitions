@@ -1,9 +1,10 @@
 /* eslint-disable complexity */
 import {request} from '@playwright/test';
 import {urls, credentials, resources} from '../../../config/config';
+import logger from '../../../utils/loggerUtil';
 
 
-export async function getSSCSIDAMUserToken() {
+export async function getIDAMUserToken(user) {
     const scope = 'openid profile roles';
     const grantType = 'password';
     const idamTokenPath = '/o/token';
@@ -23,7 +24,6 @@ export async function getSSCSIDAMUserToken() {
         headers: {
             'content-type': 'application/x-www-form-urlencoded',
             'Accept': 'application/json'
-            // Add GitHub personal access token.
         },
         form: {
             grant_type: `${grantType}`,
@@ -31,15 +31,15 @@ export async function getSSCSIDAMUserToken() {
             client_id: `${resources.idamClientId}`,
             scope: `${scope}`,
             redirect_uri: `${resources.idamClientRedirect}`,
-            username: `${credentials.caseWorker.email}`,
-            password: `${credentials.caseWorker.password}`
+            username: `${user.email}`,
+            password: `${user.password}`
         }
     });
-    console.log('The value of the status :' + response.status());
+    logger.info('The value of the status :' + response.status());
     let token = response.statusText();
     const body: string = await response.body();
-    response.dispose();
-    return 'Bearer ' + JSON.parse(body).access_token;
+    await response.dispose();
+    return JSON.parse(body).access_token;
 }
 
 export async function getSSCSServiceToken() {
@@ -49,7 +49,6 @@ export async function getSSCSServiceToken() {
         // All requests we send go to this API Endpoint.
         baseURL: urls.s2sUrl,
         extraHTTPHeaders: {
-            // We set this header per GitHub guidelines.
             'Content-Type': 'application/x-www-form-urlencoded',
             'Accept': 'application/json'
         },
@@ -58,14 +57,40 @@ export async function getSSCSServiceToken() {
     const response = await apiContext.post(`${urls.s2sUrl}${s2sTokenPath}`, {
         headers: {
             'content-type': 'application/json',
-            // Add GitHub personal access token.
         },
         data: {microservice: `${resources.idamClientId}`}
     });
-    console.log('The value of the status :' + response.status());
+    logger.info('The value of the status :' + response.status());
     let statusText = response.statusText();
-    console.log('The value of the status :' + statusText);
+    logger.info('The value of the status :' + statusText);
     const body = await response.body();
-    console.log('The value of the token :' + body);
+    logger.info('The value of the service token :' + body);
+    await response.dispose();
     return body;
+}
+
+export async function getIDAMUserID(idamToken) {
+    const idamDetailsPath = '/details';
+
+    let apiContext = await request.newContext({
+        // All requests we send go to this API Endpoint.
+        baseURL: urls.idamUrl,
+        extraHTTPHeaders: {
+            'content-type': 'application/json'
+        },
+    });
+
+    const response = await apiContext.get(`${urls.idamUrl}${idamDetailsPath}`, {
+        headers: {
+            Authorization: `Bearer ${idamToken}`,
+            'content-type': 'application/json',
+        }
+    });
+    logger.info('The value of the status :' + response.status());
+    let statusText = response.statusText();
+    const body= await response.body();
+    // @ts-ignore
+    logger.info('The value of the id :' + JSON.parse(body).id);
+    // @ts-ignore
+    return JSON.parse(body).id;
 }
