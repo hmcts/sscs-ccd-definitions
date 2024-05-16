@@ -63,13 +63,13 @@ withPipeline("nodejs", product, component) {
             env.SSCS_XUI_URL='https://manage-case.demo.platform.hmcts.net'
     }
 
-    onAAT {
-        env.ENVIRONMENT="aat"
-        env.IDAM_URL='https://idam-api.aat.platform.hmcts.net'
-        env.S2S_URL='http://rpe-service-auth-provider-aat.service.core-compute-aat.internal'
-        env.TRIBUNALS_API_URL='http://sscs-tribunals-api-aat.service.core-compute-aat.internal'
-        env.SSCS_XUI_URL='https://manage-case.aat.platform.hmcts.net'
-    }
+    //onAAT {
+        //env.ENVIRONMENT="aat"
+        //env.IDAM_URL='https://idam-api.aat.platform.hmcts.net'
+        //env.S2S_URL='http://rpe-service-auth-provider-aat.service.core-compute-aat.internal'
+        //env.TRIBUNALS_API_URL='http://sscs-tribunals-api-aat.service.core-compute-aat.internal'
+        //env.SSCS_XUI_URL='https://manage-case.aat.platform.hmcts.net'
+    //}
 
     onMaster{
         env.ENVIRONMENT="aat"
