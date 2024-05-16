@@ -15,7 +15,7 @@ export async function getSSCSIDAMUserToken() {
         baseURL: urls.idamUrl,
         extraHTTPHeaders: {
             // We set this header per GitHub guidelines.
-            'Content-Type': 'application/x-www-form-urlencoded',
+            'content-type': 'application/x-www-form-urlencoded',
             'Accept': 'application/json'
         },
     });
@@ -38,6 +38,34 @@ export async function getSSCSIDAMUserToken() {
     console.log('The value of the status :' + response.status());
     let token = response.statusText();
     const body: string = await response.body();
+    response.dispose();
     return 'Bearer ' + JSON.parse(body).access_token;
 }
 
+export async function getSSCSServiceToken() {
+    const s2sTokenPath = '/testing-support/lease';
+
+    let apiContext = await request.newContext({
+        // All requests we send go to this API Endpoint.
+        baseURL: urls.s2sUrl,
+        extraHTTPHeaders: {
+            // We set this header per GitHub guidelines.
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Accept': 'application/json'
+        },
+    });
+
+    const response = await apiContext.post(`${urls.s2sUrl}${s2sTokenPath}`, {
+        headers: {
+            'content-type': 'application/json',
+            // Add GitHub personal access token.
+        },
+        data: {microservice: `${resources.idamClientId}`}
+    });
+    console.log('The value of the status :' + response.status());
+    let statusText = response.statusText();
+    console.log('The value of the status :' + statusText);
+    const body = await response.body();
+    console.log('The value of the token :' + body);
+    return body;
+}

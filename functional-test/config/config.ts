@@ -5,6 +5,7 @@ export const urls = {
   tribunalsApiUri: process.env.TRIBUNALS_API_URL || "http://sscs-tribunals-api-aat.service.core-compute-aat.internal",
   xuiUrl: process.env.SSCS_XUI_URL || 'https://manage-case.aat.platform.hmcts.net',
   idamUrl : process.env.IDAM_URL || 'https://idam-api.aat.platform.hmcts.net',
+  s2sUrl : process.env.S2S_URL || 'http://rpe-service-auth-provider-aat.service.core-compute-aat.internal',
 };
 
 export const credentials = {
