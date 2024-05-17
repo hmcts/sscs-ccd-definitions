@@ -26,6 +26,7 @@ module.exports = defineConfig({
   use: {
     baseURL: urls.xuiUrl,
     trace: "on-first-retry",
+    screenshot: 'only-on-failure',
     launchOptions: {
       // 1
       args: ["--start-maximized"],
