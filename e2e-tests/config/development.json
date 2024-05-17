@@ -1,0 +1,27 @@
+{
+  "ccd": {
+    "gatewayUrl": "http://localhost:5000",
+    "webUrl": "http://localhost:3455"
+  },
+  "tribunals": {
+    "uri": "http://localhost:8080"
+  },
+  "users": {
+    "caseOfficer": {
+      "user": "local.test@example.com",
+      "password": "Pa55word11"
+    },
+    "clerk": {
+      "user": "",
+      "password": ""
+    },
+    "judge": {
+      "user": "judge@example.com",
+      "password": "Pa55word11"
+    },
+    "DWPResponseWriter": {
+      "user": "dwpuser@example.com",
+      "password": "Pa55word11"
+    }
+  }
+}

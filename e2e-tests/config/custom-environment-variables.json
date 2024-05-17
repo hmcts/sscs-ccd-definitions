@@ -1,0 +1,48 @@
+{
+  "ccd": {
+    "gatewayUrl": "TEST_E2E_URL_GATEWAY",
+    "webUrl": "TEST_E2E_URL_WEB"
+  },
+  "tribunals": {
+    "uri": "TEST_E2E_API_URI"
+  },
+  "proxy": {
+    "url": "TEST_E2E_URL_PROXY",
+    "use": "TEST_E2E_USE_PROXY",
+    "tunnelIdentifier": "TUNNEL_IDENTIFIER"
+  },
+  "sauce": {
+    "user": "SAUCE_USERNAME",
+    "key": "SAUCE_ACCESS_KEY"
+  },
+  "protractor": {
+    "UseHeadlessBrowser": "TEST_E2E_HEADLESS",
+    "RunWithNumberOfBrowsers": "TEST_E2E_NUM_BROWSERS",
+    "WaitForAngular": "TEST_E2E_WAIT_FOR_ANGULAR",
+    "FailFast": "TEST_E2E_FAIL_FAST",
+    "testAnnotation": "TEST_E2E_ANNOTATION",
+    "testRetries": "TEST_E2E_RETRIES"
+  },
+  "users": {
+    "caseOfficer": {
+      "user": "TEST_CASEOFFICER_USERNAME",
+      "password": "TEST_CASEOFFICER_PASSWORD"
+    },
+    "clerk": {
+      "user": "TEST_CLERK_USERNAME",
+      "password": "TEST_CLERK_PASSWORD"
+    },
+    "judge": {
+      "user": "TEST_JUDGE_USERNAME",
+      "password": "TEST_JUDGE_PASSWORD"
+    },
+    "DWPResponseWriter": {
+      "user": "TEST_DWP_USERNAME",
+      "password": "TEST_DWP_PASSWORD"
+    }
+  },
+  "logging": {
+    "driver": "LOGGING_DRIVER",
+    "browser": "LOGGING_BROWSER"
+  }
+}

@@ -18,6 +18,3 @@ Change History.json
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-e2e-tests/node_modules
-sscs-ccd-e2e-tests/
-dist/

@@ -1,0 +1,23 @@
+{
+  "tribunals": {
+    "uri": "http://sscs-tribunals-api-aat.service.core-compute-aat.internal"
+  },
+  "users": {
+    "caseOfficer": {
+      "user": "sscs.superuser@mailinator.com",
+      "password": "Testing123"
+    },
+    "clerk": {
+      "user": "",
+      "password": ""
+    },
+    "judge": {
+      "user": "sscs.judge.user@mailinator.com",
+      "password": "Testing123"
+    },
+    "DWPResponseWriter": {
+      "user": "sscs.dwp.user@mailinator.com",
+      "password": "Testing123"
+    }
+  }
+}
