@@ -45,13 +45,14 @@ def branchesToSync = ['demo', 'ithc', 'perftest']
 
 withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
-  enableHighLevelDataSetup()
   syncBranchesWithMaster(branchesToSync)
-   
+
     onPR{
         env.ENVIRONMENT="preview"
     }
     onMaster{
+        // only enable high level data setup on master builds, SSCS-12483
+        enableHighLevelDataSetup()
         env.ENVIRONMENT="aat"
     }
 
