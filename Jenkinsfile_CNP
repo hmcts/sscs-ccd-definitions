@@ -48,12 +48,12 @@ withPipeline("nodejs", product, component) {
   enableHighLevelDataSetup()
   syncBranchesWithMaster(branchesToSync)
    
-    onPR{
+/*    onPR{
         env.ENVIRONMENT="preview"
     }
     onMaster{
         env.ENVIRONMENT="aat"
-    }
+    }*/
 
     before('functionalTest:preview') {
         // Temporarily disable running tests on preview env    
