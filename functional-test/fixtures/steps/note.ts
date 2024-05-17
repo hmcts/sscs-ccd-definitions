@@ -1,24 +1,23 @@
-import { Page } from '@playwright/test';
-import { HomePage } from '../../pages/common/homePage';
-import { AddNote } from '../../pages/add.note';
-import { LoginPage } from '../../pages/common/loginPage';
-import { EventNameEventDescriptionPage } from '../../pages/common/event.name.event.description';
+import {Page} from '@playwright/test';
+import {HomePage} from '../../pages/common/homePage';
+import {AddNote} from '../../pages/add.note';
+import {LoginPage} from '../../pages/common/loginPage';
+import {EventNameEventDescriptionPage} from '../../pages/common/event.name.event.description';
 import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
-import { NotePad } from '../../pages/tabs/note.pad';
+import {NotePad} from '../../pages/tabs/note.pad';
 import eventTestData from "../../pages/content/event.name.event.description_en.json"
 import {History} from "../../pages/tabs/history";
 import {StringUtilsComponent} from "../../utils/StringUtilsComponent";
 
 
-
 export class Note {
-    
-  readonly page : Page;
-  
 
-   constructor(page: Page) {
-       this.page = page;
-   }
+    readonly page: Page;
+
+
+    constructor(page: Page) {
+        this.page = page;
+    }
 
     async performAddANote() {
 
@@ -40,14 +39,14 @@ export class Note {
         await addNotePage.inputData();
         await addNotePage.confirmSubmission();
 
-        await eventNameAndDescriptionPage.verifyPageContent('Add a note', false , null, null);
+        await eventNameAndDescriptionPage.verifyPageContent('Add a note', false, null, null);
         //Params are passed to this page as this is a common page to be reused.
-        await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"]+" - Add a note",
-            eventTestData["event-description-input"]+" - Add a note");
+        await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"] + " - Add a note",
+            eventTestData["event-description-input"] + " - Add a note");
         await eventNameAndDescriptionPage.confirmSubmission();
 
         await homePage.navigateToTab("Notepad");
-        await notePadTab.verifyPageContentByKeyValue('Note','Playwright test note');
+        await notePadTab.verifyPageContentByKeyValue('Note', 'Playwright test note');
         await homePage.navigateToTab("History");
         await historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
         await historyTab.verifyPageContentByKeyValue('Event', 'Add a note');
@@ -57,5 +56,5 @@ export class Note {
 
     }
 
-    
+
 }
