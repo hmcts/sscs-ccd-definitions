@@ -31,7 +31,7 @@ export class Note {
 
         var pipCaseId = await createCaseBasedOnCaseType("PIP");
         await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLoginForCaseworker();
+        await loginPage.verifySuccessfulLoginForAMCaseworker();
 
         await homePage.goToHomePage(pipCaseId);
         await homePage.chooseEvent('Add a note');

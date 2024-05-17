@@ -28,7 +28,7 @@ export class SendToAdmin {
 
         var taxCreditCaseId = await createCaseBasedOnCaseType("TAX CREDIT");
         await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLoginForCaseworker();
+        await loginPage.verifySuccessfulLoginJudge();
 
         await homePage.goToHomePage(taxCreditCaseId);
         await homePage.chooseEvent('Send to admin');
