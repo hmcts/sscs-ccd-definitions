@@ -45,14 +45,14 @@ def branchesToSync = ['demo', 'ithc', 'perftest']
 
 withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
-  enableHighLevelDataSetup()
   syncBranchesWithMaster(branchesToSync)
-   
+
     onPR{
-        env.ENVIRONMENT="perftest"
+        env.ENVIRONMENT="preview"
     }
     onMaster{
-        env.ENVIRONMENT="perftest"
+        enableHighLevelDataSetup()
+        env.ENVIRONMENT="aat"
     }
 
     before('functionalTest:preview') {
