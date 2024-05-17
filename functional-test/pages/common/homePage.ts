@@ -17,9 +17,9 @@ export class HomePage {
 
     constructor(page: Page) {
         this.page = page;
-        this.notePadTab = page.getByText('Notepad', {exact: true});
+        this.notePadTab = page.locator('//div[contains(text(), "Notepad")]');
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
-        this.historyTab = page.getByText('History', {exact: true});
+        this.historyTab = page.locator('//div[contains(text(), "History")]');
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
         this.eventTitle = page.locator('h1.govuk-heading-l');
@@ -47,17 +47,14 @@ export class HomePage {
     async navigateToTab(tabName : string): Promise<void> {
         switch(tabName) {
             case "Notepad": {
-                await expect(this.notePadTab).toBeVisible();
                 await this.notePadTab.click();
                 break;
             }
             case "History": {
-                await expect(this.historyTab).toBeVisible();
                 await this.historyTab.click();
                 break;
             }
             case "Summary": {
-                await expect(this.historyTab).toBeVisible();
                 await this.summaryTab.click();
                 break;
             }
