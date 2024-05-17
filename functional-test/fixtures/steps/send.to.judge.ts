@@ -2,9 +2,7 @@ import {Page} from '@playwright/test';
 import {HomePage} from '../../pages/common/homePage';
 import {LoginPage} from '../../pages/common/loginPage';
 import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
-import sendToAdminData from "../../pages/content/send.to.admin_en.json"
 import {History} from '../../pages/tabs/history';
-import {TextAreaPage} from "../../pages/common/text.area.page";
 import eventTestData from "../../pages/content/event.name.event.description_en.json";
 import {EventNameEventDescriptionPage} from "../../pages/common/event.name.event.description";
 import { SendToJudgePage } from '../../pages/send.to.judge.page';
