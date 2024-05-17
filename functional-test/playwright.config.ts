@@ -26,6 +26,10 @@ module.exports = defineConfig({
   use: {
     baseURL: urls.xuiUrl,
     trace: "on-first-retry",
+    launchOptions: {
+      // 1
+      args: ["--start-maximized"]
+    },
   },
   // globalSetup: '../src/tests/e2e/global.setup.ts',
   projects: [

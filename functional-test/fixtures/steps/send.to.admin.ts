@@ -16,7 +16,7 @@ export class SendToAdmin extends BaseStep {
 
     async performSendToAdmin() {
 
-        await this.loginAsCaseworkerUser('TAX CREDIT');
+        await this.loginAsCaseworkerUser(null, 'TAX CREDIT');
         await this.homePage.chooseEvent('Send to admin');
 
         //Params are passed to this page as this is a common page to be reused.

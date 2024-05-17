@@ -43,7 +43,7 @@ export class UploadResponse extends BaseStep {
 
     async performUploadResponseWithoutFurtherInfoOnATaxCredit() {
 
-        let taxCaseId = await this.loginAsDWPUser("TAX CREDIT");
+        let taxCaseId = await this.loginAsHMRCUser("TAX CREDIT");
 
         await this.homePage.chooseEvent('Upload response');
         await this.uploadResponsePage.uploadDocs();

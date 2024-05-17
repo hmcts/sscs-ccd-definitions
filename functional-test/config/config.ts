@@ -51,6 +51,10 @@ export const credentials = {
   dwpResponseWriter: {
     email: process.env.TEST_DWP_USERNAME,
     password: process.env.TEST_DWP_PASSWORD,
+  },
+  hmrcUser: {
+    email: process.env.TEST_HMRC_USERNAME,
+    password: process.env.TEST_HMRC_PASSWORD,
   }
 };
 

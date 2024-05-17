@@ -41,4 +41,12 @@ export class LoginPage {
         await webActions.clickButton('Sign in');
         await expect(this.mainPageTitle).toHaveText('Case list');
     }
+
+    async verifySuccessfulLoginForHMRCUser(isLoggedIn?: boolean): Promise<void> {
+        if(isLoggedIn) await this.page.context().clearCookies();
+        await webActions.inputField('#username', credentials.hmrcUser.email);
+        await webActions.inputField('#password', credentials.hmrcUser.password);
+        await webActions.clickButton('Sign in');
+        await expect(this.mainPageTitle).toHaveText('Case list');
+    }
 }
