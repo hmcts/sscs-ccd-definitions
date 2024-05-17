@@ -35,8 +35,8 @@ export const credentials = {
       process.env.HEARING_CENTRE_TEAM_LEAD_PASSWORD,
   },
   judge: {
-    email: process.env.JUDGE_USERNAME,
-    password: process.env.JUDGE_PASSWORD,
+    email: process.env.TEST_JUDGE_USERNAME,
+    password: process.env.TEST_JUDGE_PASSWORD,
   },
   seniorJudge: {
     email: process.env.SENIOR_JUDGE_USERNAME,
