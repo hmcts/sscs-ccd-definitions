@@ -49,10 +49,10 @@ withPipeline("nodejs", product, component) {
   syncBranchesWithMaster(branchesToSync)
    
     onPR{
-        env.ENVIRONMENT="perftest"
+        env.ENVIRONMENT="preview"
     }
     onMaster{
-        env.ENVIRONMENT="perftest"
+        env.ENVIRONMENT="aat"
     }
 
     before('functionalTest:preview') {

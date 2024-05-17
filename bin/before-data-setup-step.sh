@@ -13,7 +13,8 @@ if [ -z "${TYPE}" ] || [ -z "${ENV}" ]; then
 fi
 
 if [[ ${ENV} == "preview" ]]; then
-    ENV="aat"
+    ENV="preview"
+    echo "env is set to $ENV"
 fi
 
 TIMESTAMP=$(printf '%s\n' "$LAST_COMMIT_TIMESTAMP")
