@@ -49,10 +49,14 @@ jacocoTestReport {
 // endregion
 
 task highLevelDataSetup(type: JavaExec) {
-    dependsOn classes
-    main = "benefit.HighLevelDataSetupApp"
-    classpath +=  sourceSets.test.runtimeClasspath
-    jvmArgs = ['--add-opens=java.base/java.lang.reflect=ALL-UNNAMED']
+    if (System.getenv("ENVIRONMENT") != "prod") {
+        println("high level data setup is disabled for non prod environments")
+    } else {
+        dependsOn classes
+        main = "benefit.HighLevelDataSetupApp"
+        classpath +=  sourceSets.test.runtimeClasspath
+        jvmArgs = ['--add-opens=java.base/java.lang.reflect=ALL-UNNAMED']
+    }
 }
 
 tasks.withType(Test) {
