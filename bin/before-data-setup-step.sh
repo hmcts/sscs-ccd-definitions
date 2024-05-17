@@ -13,7 +13,7 @@ if [ -z "${TYPE}" ] || [ -z "${ENV}" ]; then
 fi
 
 if [[ ${ENV} == "preview" ]]; then
-    ENV="preview"
+    ENV="perftest"
     echo "env is set to $ENV"
 fi
 
