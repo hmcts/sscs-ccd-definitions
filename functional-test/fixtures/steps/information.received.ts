@@ -7,7 +7,6 @@ import { InformationReceivedPage } from "../../pages/information.received.page";
 import eventTestData from "../../pages/content/event.name.event.description_en.json";
 import { EventNameEventDescriptionPage } from "../../pages/common/event.name.event.description";
 
-
 export class InformationReceived {
 
     readonly page: Page;
@@ -28,7 +27,7 @@ export class InformationReceived {
         let eventNameAndDescriptionPage = new EventNameEventDescriptionPage(this.page);
 
         await informationReceivedPage.verifyPageContent();
-        await informationReceivedPage.selectReviewState(informationReceivedData['information-received-review-state']);
+        await informationReceivedPage.selectReviewState(informationReceivedData.informationReceivedReviewStateSelectValue);
         await informationReceivedPage.confirmSubmission();
 
         await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"],

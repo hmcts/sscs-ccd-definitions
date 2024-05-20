@@ -14,9 +14,9 @@ export class InformationReceivedPage {
     }
 
     async verifyPageContent() {
-        await webAction.verifyPageLabel('span.govuk-caption-l', informationReceivedData['information-received-caption']); //Captor Text
-        await webAction.verifyPageLabel('h1.govuk-heading-l', informationReceivedData['information-received-heading']); //Heading Text
-        await webAction.verifyPageLabel('label[for="interlocReviewState"]', informationReceivedData['information-received-field-label']); //Field Label
+        await webAction.verifyPageLabel('span.govuk-caption-l', informationReceivedData.informationReceivedCaption); //Captor Text
+        await webAction.verifyPageLabel('h1.govuk-heading-l', informationReceivedData.informationReceivedHeading); //Heading Text
+        await webAction.verifyPageLabel('label[for="interlocReviewState"]', informationReceivedData.informationReceivedFieldLabel); //Field Label
     }
 
     async selectReviewState(option: string): Promise<void> {
