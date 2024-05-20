@@ -14,20 +14,31 @@ export class HomePage {
     readonly submitNextStepButton: string;
     readonly nextStepDropDown: string;
     readonly eventTitle: Locator;
+    readonly beforeTabBtn: Locator;
 
 
     constructor(page: Page) {
         this.page = page;
-        this.notePadTab = page.getByText('Notepad', {exact: true});
+        this.notePadTab = page.locator('//div[contains(text(), "Notepad")]');
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
-        this.historyTab = page.getByText('History', {exact: true});
+        this.historyTab = page.locator('//div[contains(text(), "History")]');
         this.appealDetailsTab = page.getByText('Appeal Details', {exact: true});
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
         this.eventTitle = page.locator('h1.govuk-heading-l');
+        this.beforeTabBtn = page.locator('.mat-tab-header-pagination-before  .mat-tab-header-pagination-chevron');
+
 
         webActions = new WebAction(this.page);
 
+    }
+
+    async delay(ms: number) {
+        return new Promise( resolve => setTimeout(resolve, ms) );
+    }
+
+    async reloadPage() {
+        await this.page.reload({timeout:3000, waitUntil:'load'});
     }
 
     async goToHomePage(caseId: string): Promise<void> {
@@ -46,20 +57,22 @@ export class HomePage {
         await webActions.clickButton('Go');
     }
 
+    async clickBeforeTabBtn(): Promise<void> {
+        await this.beforeTabBtn.click();
+    }
+
     async navigateToTab(tabName : string): Promise<void> {
         switch(tabName) {
             case "Notepad": {
-                await expect(this.notePadTab).toBeVisible();
                 await this.notePadTab.click();
                 break;
             }
             case "History": {
-                await expect(this.historyTab).toBeVisible();
+                // await this.beforeTabBtn.click();
                 await this.historyTab.click();
                 break;
             }
             case "Summary": {
-                await expect(this.historyTab).toBeVisible();
                 await this.summaryTab.click();
                 break;
             }

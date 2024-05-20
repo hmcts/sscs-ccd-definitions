@@ -5,6 +5,8 @@ import { EvidenceReminder } from '../fixtures/steps/evidence.reminder';
 import { AssociateCase } from '../fixtures/steps/associate-case';
 import { SendToAdmin } from '../fixtures/steps/send.to.admin';
 import { UploadResponse } from '../fixtures/steps/upload.response';
+import {ListingError} from "../fixtures/steps/listing.error";
+import {use} from "chai";
 
 
 type MyStepsFixtures = {
@@ -14,6 +16,7 @@ type MyStepsFixtures = {
     evidenceReminderSteps: EvidenceReminder
     sendToAdminSteps: SendToAdmin
     uploadResponseSteps: UploadResponse
+    listingErrorSteps: ListingError
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -40,7 +43,11 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     uploadResponseSteps:async ({page}, use) => {
         const uploadResponseSteps = new UploadResponse(page);
         await use(uploadResponseSteps);
-    }
+    },
+    listingErrorSteps:async ({page}, use) =>{
+        const listingErrorSteps = new ListingError(page);
+        await use(listingErrorSteps)
+}
 })
 
 

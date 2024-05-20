@@ -62,7 +62,7 @@ export abstract class BaseStep {
    async loginAsCaseworkerUser(caseId?: string, caseType?: string){
         if(!caseId) await createCaseBasedOnCaseType(caseType);
         await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForCaseworker(true);
+        await this.loginPage.verifySuccessfulLoginForAMCaseworker(true);
         await this.homePage.goToHomePage(caseId);
   }
 
@@ -72,7 +72,15 @@ export abstract class BaseStep {
     await this.loginPage.verifySuccessfulLoginForHMRCUser(true);
     await this.homePage.goToHomePage(caseId);
     return caseId;
-}
+  }
+
+  async loginAsJudgeUser(caseType: string){
+      var caseId = await createCaseBasedOnCaseType(caseType);
+      await this.loginPage.goToLoginPage();
+      await this.loginPage.verifySuccessfulLoginForJudge(true);
+      await this.homePage.goToHomePage(caseId);
+      return caseId;
+ }
 
   async verifyHistoryTab(state?: string, event?: string, comment?: string ) {
         await this.homePage.navigateToTab("History");

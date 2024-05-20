@@ -33,7 +33,8 @@ export class EventNameEventDescriptionPage {
     }
 
     async confirmSubmission(): Promise<void> {
-        await webActions.clickButton('Submit');
+        await this.page.waitForTimeout(3000);
+        await webActions.clickSubmitButton();
     }
 
 }

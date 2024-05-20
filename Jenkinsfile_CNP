@@ -26,7 +26,11 @@ def secrets = [
                 secret('test-e2e-judge-username', 'TEST_JUDGE_USERNAME'),
                 secret('test-e2e-judge-password', 'TEST_JUDGE_PASSWORD'),
                 secret('test-e2e-dwp-username', 'TEST_DWP_USERNAME'),
-                secret('test-e2e-dwp-password', 'TEST_DWP_PASSWORD')
+                secret('test-e2e-dwp-password', 'TEST_DWP_PASSWORD'),
+                secret('test-e2e-hmrc-username', 'TEST_HMRC_USERNAME'),
+                secret('test-e2e-hmrc-password', 'TEST_HMRC_PASSWORD'),
+                secret('test-e2e-am-caseofficer-username', 'TEST_AM_CASEOFFICER_USERNAME'),
+                secret('test-e2e-am-caseofficer-password', 'TEST_AM_CASEOFFICER_PASSWORD')
         ]
 ]
 
@@ -43,16 +47,32 @@ def branchesToSync = ['demo', 'ithc', 'perftest']
 
 withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
-  enableHighLevelDataSetup()
   syncBranchesWithMaster(branchesToSync)
-   env.TEST_E2E_URL_WEB = params.URL_TO_TEST
-   env.TEST_E2E_URL_GATEWAY = params.CCD_GATEWAY_URL
-   env.TEST_E2E_API_URI = params.TRIBUNALS_API_URI
-   
     onPR{
         env.ENVIRONMENT="preview"
+        env.IDAM_URL='https://idam-api.aat.platform.hmcts.net'
+        env.S2S_URL='http://rpe-service-auth-provider-aat.service.core-compute-aat.internal'
     }
+
+    onDemo {
+            env.ENVIRONMENT="demo"
+            env.IDAM_URL='https://idam-api.demo.platform.hmcts.net'
+            env.S2S_URL='http://rpe-service-auth-provider-demo.service.core-compute-aat.internal'
+            env.TRIBUNALS_API_URL='http://sscs-tribunals-api-demo.service.core-compute-aat.internal'
+            env.SSCS_XUI_URL='https://manage-case.demo.platform.hmcts.net'
+    }
+
+    //onAAT {
+        //env.ENVIRONMENT="aat"
+        //env.IDAM_URL='https://idam-api.aat.platform.hmcts.net'
+        //env.S2S_URL='http://rpe-service-auth-provider-aat.service.core-compute-aat.internal'
+        //env.TRIBUNALS_API_URL='http://sscs-tribunals-api-aat.service.core-compute-aat.internal'
+        //env.SSCS_XUI_URL='https://manage-case.aat.platform.hmcts.net'
+    //}
+
     onMaster{
+        // only enable high level data setup on master builds, SSCS-12483
+        enableHighLevelDataSetup()
         env.ENVIRONMENT="aat"
     }
 

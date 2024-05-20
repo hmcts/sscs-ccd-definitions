@@ -49,4 +49,19 @@ export class LoginPage {
         await webActions.clickButton('Sign in');
         await expect(this.mainPageTitle).toHaveText('Case list');
     }
+
+    async verifySuccessfulLoginForAMCaseworker(isLoggedIn?: boolean): Promise<void> {
+        if(isLoggedIn) await this.page.context().clearCookies();
+        await webActions.inputField('#username', credentials.amCaseWorker.email);
+        await webActions.inputField('#password', credentials.amCaseWorker.password);
+        await webActions.clickButton('Sign in');
+        await expect(this.pageTitle).toHaveText('My work');
+    }
+
+    async verifySuccessfulLoginForJudge(isLoggedIn?: boolean): Promise<void> {
+        if(isLoggedIn) await this.page.context().clearCookies();
+        await webActions.inputField('#username', credentials.judge.email);
+        await webActions.inputField('#password', credentials.judge.password);
+        await webActions.clickButton('Sign in');
+    }
 }

@@ -15,6 +15,7 @@ export class Note extends BaseStep {
 
     async performAddANote() {
         await this.loginAsCaseworkerUser('PIP');
+        await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Add a note');
 
         /* speak with pettedson regarding test step 38 */
