@@ -35,6 +35,10 @@ export class HomePage {
         return new Promise( resolve => setTimeout(resolve, ms) );
     }
 
+    async reloadPage() {
+        await this.page.reload({timeout:3000, waitUntil:'load'});
+    }
+
     async goToHomePage(caseId: string): Promise<void> {
         await this.page.goto(`/cases/case-details/${caseId}`);
         await expect(this.summaryTab)

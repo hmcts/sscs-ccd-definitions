@@ -31,7 +31,7 @@ export class SendToAdmin {
         await loginPage.verifySuccessfulLoginForJudge();
 
         await homePage.goToHomePage(taxCreditCaseId);
-        await homePage.delay(40000);
+        await homePage.reloadPage();
         await homePage.chooseEvent('Send to admin');
 
         //Params are passed to this page as this is a common page to be reused.
