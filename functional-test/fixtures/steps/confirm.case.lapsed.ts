@@ -25,9 +25,10 @@ export class ConfirmCaseLapsed {
 
         var pipCaseId = await createCaseBasedOnCaseType("CHILDSUPPORT");
         await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLoginForCaseworker();
+        await loginPage.verifySuccessfulLoginForAMCaseworker();
 
         await homePage.goToHomePage(pipCaseId);
+        await homePage.reloadPage();
         await homePage.chooseEvent('Confirm lapsed');
 
         //Params are passed to this page as this is a common page to be reused.

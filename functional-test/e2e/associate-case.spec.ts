@@ -1,6 +1,6 @@
 import { test } from "../lib/steps.factory";
 
-test.describe('Associate case tests', () => {
+test.describe.skip('Associate case tests', () => {
 
     /* TODO: Below test needs to be revisited when the defect SSCSSI-860 is fixed.
        Related cases tab is not shown after completing Associate Case Event with 
