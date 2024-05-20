@@ -10,6 +10,8 @@ import { ReviewAdminActionTask } from '../fixtures/steps/work-allocation/review.
 import { Login } from '../fixtures/steps/login';
 import { Logout } from '../fixtures/steps/logout';
 import { RolesAndAccess } from '../fixtures/steps/roles.and.access';
+import {ListingError} from "../fixtures/steps/listing.error";
+import {use} from "chai";
 
 
 type MyFixtures = {
@@ -24,6 +26,7 @@ type MyFixtures = {
     taskSteps: TaskActions
     reviewAdminActionTaskSteps: ReviewAdminActionTask
     informationReceivedSteps: InformationReceived
+    listingErrorSteps: ListingError
 };
 
 export const test =  stepsFactory.extend<MyFixtures>({
@@ -71,4 +74,8 @@ export const test =  stepsFactory.extend<MyFixtures>({
         const reviewAdminActionTaskSteps = new ReviewAdminActionTask(page);
         await use(reviewAdminActionTaskSteps);
     },
+    listingErrorSteps:async ({page}, use) =>{
+        const listingErrorSteps = new ListingError(page);
+        await use(listingErrorSteps)
+    }
 })
