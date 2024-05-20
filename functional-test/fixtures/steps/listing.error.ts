@@ -26,7 +26,7 @@ export class ListingError {
         //Create Case
         var pipCaseId = await createCaseBasedOnCaseType("PIP");
         await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLoginForCaseworker();
+        await loginPage.verifySuccessfulLoginForAMCaseworker();
 
         //Navigate to Listing Error Event
         await homePage.goToHomePage(pipCaseId);

@@ -33,7 +33,7 @@ export class EventNameEventDescriptionPage {
     }
 
     async confirmSubmission(): Promise<void> {
-        await webActions.clickButton('Submit');
+        await webActions.clickSubmitButton();
     }
 
 }
