@@ -28,6 +28,7 @@ export class ConfirmCaseLapsed {
         await loginPage.verifySuccessfulLoginForAMCaseworker();
 
         await homePage.goToHomePage(pipCaseId);
+        await homePage.delay(40000);
         await homePage.chooseEvent('Confirm lapsed');
 
         //Params are passed to this page as this is a common page to be reused.

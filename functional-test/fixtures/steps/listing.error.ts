@@ -30,6 +30,7 @@ export class ListingError {
 
         //Navigate to Listing Error Event
         await homePage.goToHomePage(pipCaseId);
+        await homePage.delay(40000);
         await homePage.chooseEvent('Listing Error');
 
         //Enter details in event and submit

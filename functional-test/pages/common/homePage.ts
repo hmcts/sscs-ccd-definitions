@@ -31,6 +31,10 @@ export class HomePage {
 
     }
 
+    async delay(ms: number) {
+        return new Promise( resolve => setTimeout(resolve, ms) );
+    }
+
     async goToHomePage(caseId: string): Promise<void> {
         await this.page.goto(`/cases/case-details/${caseId}`);
         await expect(this.summaryTab)
