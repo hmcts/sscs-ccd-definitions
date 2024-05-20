@@ -13,6 +13,7 @@ export class HomePage {
     readonly submitNextStepButton: string;
     readonly nextStepDropDown: string;
     readonly eventTitle: Locator;
+    readonly beforeTabBtn: Locator;
 
 
     constructor(page: Page) {
@@ -23,6 +24,8 @@ export class HomePage {
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
         this.eventTitle = page.locator('h1.govuk-heading-l');
+        this.beforeTabBtn = page.locator('.mat-tab-header-pagination-before  .mat-tab-header-pagination-chevron');
+
 
         webActions = new WebAction(this.page);
 
@@ -44,6 +47,10 @@ export class HomePage {
         await webActions.clickButton('Go');
     }
 
+    async clickBeforeTabBtn(): Promise<void> {
+        await this.beforeTabBtn.click();
+    }
+
     async navigateToTab(tabName : string): Promise<void> {
         switch(tabName) {
             case "Notepad": {
@@ -51,6 +58,7 @@ export class HomePage {
                 break;
             }
             case "History": {
+                // await this.beforeTabBtn.click();
                 await this.historyTab.click();
                 break;
             }
