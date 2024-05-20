@@ -14,22 +14,22 @@ export class SendToJudgePage {
     }
 
     async verifyPageContent() {
-        await webAction.verifyPageLabel('h1.govuk-heading-l', sendToJudgeData['send-to-judge-heading']); //Heading Text
-        await webAction.verifyPageLabel('label[for=\'prePostHearing\']', sendToJudgeData['send-to-judge-pre-post-hearing-field-label']); //Field Label
-        await webAction.verifyPageLabel('label[for=\'tempNoteDetail\']', sendToJudgeData['send-to-judge-text-field-label']);
-        await webAction.verifyPageLabel('label[for=\'interlocReviewState\']', sendToJudgeData['send-to-judge-review-state-field-label']);
+        await webAction.verifyPageLabel('h1.govuk-heading-l', sendToJudgeData.sendToJudgeHeading); //Heading Text
+        await webAction.verifyPageLabel('label[for=\'prePostHearing\']', sendToJudgeData.sendToJudgePrePostHearingFieldLabel); //Field Label
+        await webAction.verifyPageLabel('label[for=\'tempNoteDetail\']', sendToJudgeData.sendToJudgeTextFieldLabel);
+        await webAction.verifyPageLabel('label[for=\'interlocReviewState\']', sendToJudgeData.sendToJudgeReviewStateFieldLabel);
     }
 
     async selectHearingType(): Promise<void> {
-        await webAction.chooseOptionByLabel('#prePostHearing', sendToJudgeData['send-to-judge-pre-post-hearing-select-value']);
+        await webAction.chooseOptionByLabel('#prePostHearing', sendToJudgeData.sendToJudgePrePostHearingSelectValue);
     }
 
     async inputData(): Promise<void> {
-        await webAction.inputField('#tempNoteDetail', sendToJudgeData['send-to-judge-input']);
+        await webAction.inputField('#tempNoteDetail', sendToJudgeData.sendToJudgeInput);
     }
 
     async selectInterlocutoryReviewState(): Promise<void> {
-        await webAction.chooseOptionByLabel('#interlocReviewState', sendToJudgeData['send-to-judge-review-state-select-value']);
+        await webAction.chooseOptionByLabel('#interlocReviewState', sendToJudgeData.sendToJudgeReviewStateSelectValue);
     }
 
     async confirmSubmission(): Promise<void> {

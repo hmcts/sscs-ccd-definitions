@@ -1,10 +1,10 @@
 {
-    "send-to-judge-caption" : "Send to Judge",
-    "send-to-judge-heading" : "Send to Judge",
-    "send-to-judge-text-field-label" : "Enter note (Optional)",
-    "send-to-judge-pre-post-hearing-field-label" : "Pre or post hearing?",
-    "send-to-judge-review-state-field-label" : "Interlocutory review state",
-    "send-to-judge-input" : "Automation testing of the Send to Judge Event",
-    "send-to-judge-pre-post-hearing-select-value" : "Pre Hearing",
-    "send-to-judge-review-state-select-value" : "Awaiting Information"
+    "sendToJudgeCaption" : "Send to Judge",
+    "sendToJudgeHeading" : "Send to Judge",
+    "sendToJudgeTextFieldLabel" : "Enter note (Optional)",
+    "sendToJudgePrePostHearingFieldLabel" : "Pre or post hearing?",
+    "sendToJudgeReviewStateFieldLabel" : "Interlocutory review state",
+    "sendToJudgeInput" : "Automation testing of the Send to Judge Event",
+    "sendToJudgePrePostHearingSelectValue" : "Pre Hearing",
+    "sendToJudgeReviewStateSelectValue" : "Awaiting Information"
 }
