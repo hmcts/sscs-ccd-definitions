@@ -10,6 +10,7 @@ export class HomePage {
     readonly summaryTab: Locator;
     readonly notePadTab: Locator;
     readonly historyTab: Locator;
+    readonly appealDetailsTab: Locator;
     readonly submitNextStepButton: string;
     readonly nextStepDropDown: string;
     readonly eventTitle: Locator;
@@ -21,10 +22,11 @@ export class HomePage {
         this.notePadTab = page.locator('//div[contains(text(), "Notepad")]');
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
         this.historyTab = page.locator('//div[contains(text(), "History")]');
+        this.appealDetailsTab = page.getByText('Appeal Details', {exact: true});
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
         this.eventTitle = page.locator('h1.govuk-heading-l');
-        this.beforeTabBtn = page.locator('.mat-tab-header-pagination-before  .mat-tab-header-pagination-chevron');
+        this.beforeTabBtn = page.locator('//html/body/exui-root/exui-case-home/div/exui-case-details-home/exui-case-viewer-container/ccd-case-viewer/div/ccd-case-full-access-view/div[2]/div/mat-tab-group/mat-tab-header/button[1]/div');
 
 
         webActions = new WebAction(this.page);
@@ -36,7 +38,7 @@ export class HomePage {
     }
 
     async reloadPage() {
-        await this.page.reload({timeout:3000, waitUntil:'load'});
+        await this.page.reload({timeout:10000, waitUntil:'load'});
     }
 
     async goToHomePage(caseId: string): Promise<void> {
@@ -66,12 +68,16 @@ export class HomePage {
                 break;
             }
             case "History": {
-                // await this.beforeTabBtn.click();
                 await this.historyTab.click();
                 break;
             }
             case "Summary": {
                 await this.summaryTab.click();
+                break;
+            }
+            case "Appeal Details": {
+                await expect(this.appealDetailsTab).toBeVisible();
+                await this.appealDetailsTab.click();
                 break;
             }
             default: {

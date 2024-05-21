@@ -18,7 +18,7 @@ export class WebAction {
          });
     }
 
-    async verifyPageLabel(elementLocator: string, labelText: string) {
+    async verifyPageLabel(elementLocator: string, labelText: string | string[]) {
         await expect(this.page.locator(elementLocator))
          .toHaveText(labelText)
          .catch((error) => {
@@ -26,7 +26,23 @@ export class WebAction {
          });
     }
 
-    async inputField (elementLocator: string, inputValue: string) {
+    async verifyTextVisibility(labelText: string) {
+        await expect(this.page.getByText(labelText))
+         .toBeVisible()
+         .catch((error) => {
+            logger.error(`Test not visible due to: ${error}`);
+         });
+    }
+
+    async verifyElementVisibility(elementlocator: string) {
+        await expect(this.page.locator(elementlocator))
+         .toBeVisible()
+         .catch((error) => {
+            logger.error(`Element not visible due to: ${error}`);
+         });
+    }
+
+    async inputField(elementLocator: string, inputValue: string) {
         await this.page
          .fill(elementLocator, inputValue)
          .catch((error) => {
@@ -61,6 +77,15 @@ export class WebAction {
          });
     }
 
+    async clickElementById(elementLocator: string): Promise<void> {
+        await this.page
+         .locator(elementLocator)
+         .click()
+         .catch((error) => {
+            logger.error(`Radio button element is not present: ${error}`);
+         });
+    }
+
     async clickLink(elementLocator: string): Promise<void> {
         await this.page
             .getByRole('link', { name: elementLocator})
@@ -75,6 +100,15 @@ export class WebAction {
          .click(elementId)
          .catch((error) => {
             logger.error(`Next step submit button is not present: ${error}`);
+         });
+    }
+
+    async uploadFile(elementId: string, fileName: string): Promise<void> {
+        await this.page
+           .locator(elementId)
+           .setInputFiles(`functional-test/data/file/${fileName}`)
+           .catch((error) => {
+            logger.error(`File upload element is not present: ${error}`);
          });
     }
 }

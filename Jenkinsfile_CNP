@@ -89,7 +89,7 @@ withPipeline("nodejs", product, component) {
                     keepAll: true,
                     reportDir: "playwright-report",
                     reportFiles: 'index.html',
-                    reportName: 'DSS E2E Test Report'
+                    reportName: 'SSCS E2E Test Report'
             ])
             steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'playwright-report/**/*'
     }
