@@ -1,58 +1,40 @@
-import {Page} from '@playwright/test';
-import {HomePage} from '../../pages/common/homePage';
-import {LoginPage} from '../../pages/common/loginPage';
-import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
-import sendToAdminData from "../../pages/content/send.to.admin_en.json"
-import {History} from '../../pages/tabs/history';
-import {TextAreaPage} from "../../pages/common/text.area.page";
-import eventTestData from "../../pages/content/event.name.event.description_en.json";
-import {EventNameEventDescriptionPage} from "../../pages/common/event.name.event.description";
+import { Page } from '@playwright/test';
+import { BaseStep } from './base';
+const sendToAdminData = require("../../pages/content/send.to.admin_en.json");
+const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
 
-export class SendToAdmin {
+export class SendToAdmin extends BaseStep {
 
     readonly page: Page;
 
 
     constructor(page: Page) {
+        super(page);
         this.page = page;
     }
 
     async performSendToAdmin() {
 
-        let loginPage = new LoginPage(this.page);
-        let homePage = new HomePage(this.page);
-        let textAreaPage = new TextAreaPage(this.page);
-        let eventNameAndDescriptionPage = new EventNameEventDescriptionPage(this.page);
-        let historyTab = new History(this.page);
-
-        var taxCreditCaseId = await createCaseBasedOnCaseType("TAX CREDIT");
-        await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLoginForJudge();
-
-        await homePage.goToHomePage(taxCreditCaseId);
-        await homePage.reloadPage();
-        await homePage.chooseEvent('Send to admin');
+        await this.loginAsJudgeUser('TAX CREDIT');
+        await this.homePage.reloadPage();
+        await this.homePage.chooseEvent('Send to admin');
 
         //Params are passed to this page as this is a common page to be reused.
-        await textAreaPage.verifyPageContent(sendToAdminData["send-to-admin-caption"],
-            sendToAdminData["send-to-admin-heading"],
-            sendToAdminData["send-to-admin-field-label"]);
-        await textAreaPage.inputData(sendToAdminData["send-to-admin-input"]);
-        await textAreaPage.confirmSubmission();
+        await this.textAreaPage.verifyPageContent(sendToAdminData.sendToAdminCaption,
+            sendToAdminData.sendToAdminHeading,
+            sendToAdminData.sendToAdminFieldLabel);
+        await this.textAreaPage.inputData(sendToAdminData.sendToAdminInput);
+        await this.textAreaPage.confirmSubmission();
 
         //Params are passed to this page as this is a common page to be reused.
-        await eventNameAndDescriptionPage.verifyPageContent('Send to admin',true,
-            sendToAdminData["send-to-admin-field-label"], sendToAdminData["send-to-admin-input"]);
-        await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"],
-            eventTestData["event-description-input"]);
-        await eventNameAndDescriptionPage.confirmSubmission();
+        await this.eventNameAndDescriptionPage.verifyPageContent('Send to admin',true,
+            sendToAdminData.sendToAdminFieldLabel, sendToAdminData.sendToAdminInput);
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
 
-        await homePage.navigateToTab("History");
-        await historyTab.verifyPageContentByKeyValue('Event', 'Send to admin');
-        await historyTab.verifyPageContentByKeyValue('Summary', 'Event Summary for Automation');
-        await historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification');
-        await historyTab.verifyEventCompleted("Send to admin");
+        await this.verifyHistoryTabDetails('With FTA', 'Send to admin', 'Event Description for Automation Verification');
     }
 
 }
