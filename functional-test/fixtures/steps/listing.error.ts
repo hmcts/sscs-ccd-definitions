@@ -3,44 +3,38 @@ import {HomePage} from '../../pages/common/homePage';
 import {LoginPage} from '../../pages/common/loginPage';
 import {EventNameEventDescriptionPage} from '../../pages/common/event.name.event.description';
 import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
-import eventTestData from "../../pages/content/event.name.event.description_en.json"
 import {History} from '../../pages/tabs/history';
 import {WebAction} from '../../common/web.action';
+import { BaseStep } from './base';
+const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
 
-export class ListingError {
+export class ListingError extends BaseStep {
 
     readonly page: Page;
 
     constructor(page: Page) {
+        super(page);
         this.page = page;
     }
 
     async performListingErrorEvent() {
-        let loginPage = new LoginPage(this.page);
-        let homePage = new HomePage(this.page);
-        let eventNameAndDescriptionPage = new EventNameEventDescriptionPage(this.page);
-        let historyTab = new History(this.page);
         let webActions = new WebAction(this.page);
 
         //Create Case
-        var pipCaseId = await createCaseBasedOnCaseType("PIP");
-        await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLoginForCaseworker();
-
-        //Navigate to Listing Error Event
-        await homePage.goToHomePage(pipCaseId);
-        await homePage.chooseEvent('Listing Error');
+        await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'PIP');
+        await this.homePage.reloadPage();
+        await this.homePage.chooseEvent('Listing Error');
 
         //Enter details in event and submit
-        await eventNameAndDescriptionPage.verifyPageContent('Listing Error');
-        await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"],
-            eventTestData["event-description-input"]);
-        await eventNameAndDescriptionPage.confirmSubmission();
+        await this.eventNameAndDescriptionPage.verifyPageContent('Listing Error');
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
 
         //Navigate to History Tab and Verify event is listed
-        await homePage.navigateToTab("History");
-        await historyTab.verifyEventCompleted("Listing Error");
+        await this.homePage.navigateToTab("History");
+        await this.historyTab.verifyEventCompleted("Listing Error");
 
         //Verify End State after performing the event.
         await webActions.verifyPageLabel('//*[@id="case-viewer-field-read--caseHistory"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-case-history-viewer-field/ccd-event-log/div/div[2]/div/ccd-event-log-details/table/tbody/tr[3]/th/span', "End state");

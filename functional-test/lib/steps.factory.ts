@@ -5,16 +5,16 @@ import { EvidenceReminder } from '../fixtures/steps/evidence.reminder';
 import { AssociateCase } from '../fixtures/steps/associate-case';
 import { SendToAdmin } from '../fixtures/steps/send.to.admin';
 import { InformationReceived } from '../fixtures/steps/information.received';
-import { TaskActions } from '../fixtures/steps/task.actions';
+import { TaskActions } from '../fixtures/steps/work-allocation/task.actions';
 import { ReviewAdminActionTask } from '../fixtures/steps/work-allocation/review.admin.action.task'
 import { Login } from '../fixtures/steps/login';
 import { Logout } from '../fixtures/steps/logout';
 import { RolesAndAccess } from '../fixtures/steps/roles.and.access';
+import { UploadResponse } from '../fixtures/steps/upload.response';
 import {ListingError} from "../fixtures/steps/listing.error";
-import {use} from "chai";
 
 
-type MyFixtures = {
+type MyStepsFixtures = {
     addNoteSteps: Note
     associateCaseSteps: AssociateCase
     confirmCaseLapsedSteps: ConfirmCaseLapsed
@@ -27,10 +27,11 @@ type MyFixtures = {
     reviewAdminActionTaskSteps: ReviewAdminActionTask
     informationReceivedSteps: InformationReceived
     listingErrorSteps: ListingError
+    uploadResponseSteps: UploadResponse
 };
 
-export const test =  stepsFactory.extend<MyFixtures>({
-    addNoteSteps:async ({ page }, use) => {
+export const test =  stepsFactory.extend<MyStepsFixtures>({
+    addNoteSteps:async ({page}, use) => {
         const addNoteSteps = new Note(page);
         await use(addNoteSteps);
     },
@@ -73,6 +74,10 @@ export const test =  stepsFactory.extend<MyFixtures>({
     reviewAdminActionTaskSteps:async ({ page }, use) => {
         const reviewAdminActionTaskSteps = new ReviewAdminActionTask(page);
         await use(reviewAdminActionTaskSteps);
+    },
+    uploadResponseSteps:async ({page}, use) => {
+        const uploadResponseSteps = new UploadResponse(page);
+        await use(uploadResponseSteps);
     },
     listingErrorSteps:async ({page}, use) =>{
         const listingErrorSteps = new ListingError(page);

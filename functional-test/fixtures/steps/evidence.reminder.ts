@@ -1,44 +1,26 @@
 import { Page } from '@playwright/test';
-import { HomePage } from '../../pages/common/homePage';
-import { LoginPage } from '../../pages/common/loginPage';
-import { EventNameEventDescriptionPage } from '../../pages/common/event.name.event.description';
-import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
-import eventTestData from "../../pages/content/event.name.event.description_en.json"
-import {History} from "../../pages/tabs/history";
-import { credentials } from '../../config/config';
+import { BaseStep } from './base';
+const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
-
-export class EvidenceReminder {
+export class EvidenceReminder extends BaseStep {
     
   readonly page : Page;
   
 
    constructor(page: Page) {
+       super(page);
        this.page = page;
    }
 
     async performEvidenceReminder() {
-        let loginPage = new LoginPage(this.page);
-        let homePage = new HomePage(this.page);
-        let historyTab = new History(this.page);
-        let eventNameAndDescriptionPage = new EventNameEventDescriptionPage(this.page);
 
-        var pipCaseId = await createCaseBasedOnCaseType("PIP");
-        await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLogin(credentials.caseWorker);
-        await homePage.goToHomePage(pipCaseId);
+        await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'PIP');
+        await this.homePage.chooseEvent('Evidence reminder');
+        await this.eventNameAndDescriptionPage.verifyPageContent("Evidence reminder");
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
 
-        await homePage.chooseEvent('Evidence reminder');
-        await eventNameAndDescriptionPage.verifyPageContent("Evidence reminder");
-        await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"],
-            eventTestData["event-description-input"]);
-        await eventNameAndDescriptionPage.confirmSubmission();
-
-        await homePage.navigateToTab("History");
-        await historyTab.verifyPageContentByKeyValue('Event', 'Evidence reminder');
-        await historyTab.verifyPageContentByKeyValue('Summary', 'Event Summary for Automation');
-        await historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification');
-        await historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
-        await historyTab.verifyEventCompleted("Evidence reminder");
+        await this.verifyHistoryTabDetails('With FTA', 'Evidence reminder', 'Event Description for Automation Verification');
     }
 }

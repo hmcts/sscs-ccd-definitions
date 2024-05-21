@@ -1,46 +1,29 @@
-import {Page} from '@playwright/test';
-import {HomePage} from '../../pages/common/homePage';
-import {LoginPage} from '../../pages/common/loginPage';
-import {EventNameEventDescriptionPage} from '../../pages/common/event.name.event.description';
-import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
-import eventTestData from "../../pages/content/event.name.event.description_en.json"
-import {History} from '../../pages/tabs/history';
-import { credentials } from '../../config/config';
+import { Page } from '@playwright/test';
+import { BaseStep } from './base';
+const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
-export class ConfirmCaseLapsed {
+export class ConfirmCaseLapsed extends BaseStep {
 
     readonly page: Page;
 
-
     constructor(page: Page) {
+        super(page);
         this.page = page;
     }
 
     async performConfirmCaseLapsed() {
 
-        let loginPage = new LoginPage(this.page);
-        let homePage = new HomePage(this.page);
-        let eventNameAndDescriptionPage = new EventNameEventDescriptionPage(this.page);
-        let historyTab = new History(this.page);
-
-        var pipCaseId = await createCaseBasedOnCaseType("CHILDSUPPORT");
-        await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLogin(credentials.caseWorker);
-
-        await homePage.goToHomePage(pipCaseId);
-        await homePage.chooseEvent('Confirm lapsed');
+        await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'CHILDSUPPORT');
+        await this.homePage.reloadPage();
+        await this.homePage.chooseEvent('Confirm lapsed');
 
         //Params are passed to this page as this is a common page to be reused.
-        await eventNameAndDescriptionPage.verifyPageContent('Confirm lapsed',false, null, null);
-        await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"],
-            eventTestData["event-description-input"]);
-        await eventNameAndDescriptionPage.confirmSubmission();
+        await this.eventNameAndDescriptionPage.verifyPageContent('Confirm lapsed',false, null, null);
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
 
-        await homePage.navigateToTab("History");
-        await historyTab.verifyPageContentByKeyValue('Event', 'Confirm lapsed');
-        await historyTab.verifyPageContentByKeyValue('Summary', 'Event Summary for Automation');
-        await historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification');
-        await historyTab.verifyEventCompleted("Confirm lapsed");
+        await this.verifyHistoryTabDetails(null, 'Confirm lapsed', 'Event Description for Automation Verification');
     }
 
 }

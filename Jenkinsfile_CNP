@@ -36,7 +36,9 @@ def secrets = [
                 secret('test-e2e-ctsc-team-leader-username', 'TEST_CTSC_TEAM_LEADER_USERNAME'),
                 secret('test-e2e-ctsc-team-leader-password', 'TEST_CTSC_TEAM_LEADER_PASSWORD')
                 secret('test-e2e-hmrc-username', 'TEST_HMRC_USERNAME'),
-                secret('test-e2e-hmrc-password', 'TEST_HMRC_PASSWORD')
+                secret('test-e2e-hmrc-password', 'TEST_HMRC_PASSWORD'),
+                secret('test-e2e-am-caseofficer-username', 'TEST_AM_CASEOFFICER_USERNAME'),
+                secret('test-e2e-am-caseofficer-password', 'TEST_AM_CASEOFFICER_PASSWORD')
         ]
 ]
 
@@ -56,7 +58,26 @@ withPipeline("nodejs", product, component) {
   syncBranchesWithMaster(branchesToSync)
     onPR{
         env.ENVIRONMENT="preview"
+        env.IDAM_URL='https://idam-api.aat.platform.hmcts.net'
+        env.S2S_URL='http://rpe-service-auth-provider-aat.service.core-compute-aat.internal'
     }
+
+    onDemo {
+            env.ENVIRONMENT="demo"
+            env.IDAM_URL='https://idam-api.demo.platform.hmcts.net'
+            env.S2S_URL='http://rpe-service-auth-provider-demo.service.core-compute-aat.internal'
+            env.TRIBUNALS_API_URL='http://sscs-tribunals-api-demo.service.core-compute-aat.internal'
+            env.SSCS_XUI_URL='https://manage-case.demo.platform.hmcts.net'
+    }
+
+    //onAAT {
+        //env.ENVIRONMENT="aat"
+        //env.IDAM_URL='https://idam-api.aat.platform.hmcts.net'
+        //env.S2S_URL='http://rpe-service-auth-provider-aat.service.core-compute-aat.internal'
+        //env.TRIBUNALS_API_URL='http://sscs-tribunals-api-aat.service.core-compute-aat.internal'
+        //env.SSCS_XUI_URL='https://manage-case.aat.platform.hmcts.net'
+    //}
+
     onMaster{
         // only enable high level data setup on master builds, SSCS-12483
         enableHighLevelDataSetup()
@@ -76,7 +97,7 @@ withPipeline("nodejs", product, component) {
                     keepAll: true,
                     reportDir: "playwright-report",
                     reportFiles: 'index.html',
-                    reportName: 'DSS E2E Test Report'
+                    reportName: 'SSCS E2E Test Report'
             ])
             steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'playwright-report/**/*'
     }

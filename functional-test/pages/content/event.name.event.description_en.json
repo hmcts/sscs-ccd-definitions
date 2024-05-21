@@ -1,9 +1,9 @@
 {
-    "event-summary-check-your-answers-heading" : "Check your answers",
-    "event-summary-check-the-information-text" : "Check the information below carefully.",
-    "event-summary-label" : " Event summary (optional) A few words describing the purpose of the event.",
-    "event-summary-guidance-text" : "A few words describing the purpose of the event.",
-    "event-summary-description" : "Event description (optional)",
-    "event-summary-input" : "Event Summary for Automation",
-    "event-description-input" : "Event Description for Automation Verification"
+    "eventSummarycheckYourAnswersHeading" : "Check your answers",
+    "eventSummaryCheckTheInformationText" : "Check the information below carefully.",
+    "eventSummaryLabel" : " Event summary (optional) A few words describing the purpose of the event.",
+    "eventSummaryGuidanceText" : "A few words describing the purpose of the event.",
+    "eventSummaryDescription" : "Event description (optional)",
+    "eventSummaryInput" : "Event Summary for Automation",
+    "eventDescriptionInput" : "Event Description for Automation Verification"
 }

@@ -1,9 +1,9 @@
 import { Page } from '@playwright/test';
-import { WebAction } from '../../common/web.action';
+import { WebAction } from '../common/web.action';
 
 let webActions: WebAction;
 
-export class TextAreaPage {
+export class ResponseReviewedPage {
 
     readonly page: Page;
 
@@ -12,16 +12,20 @@ export class TextAreaPage {
         webActions = new WebAction(this.page);
     }
 
-    async verifyPageContent(captionValue: string, headingValue:string, textAreaLabel: string) {
+    async verifyPageContent(captionValue: string, headingValue:string) {
 
         //.govuk-caption-l
         await webActions.verifyPageLabel('.govuk-caption-l', captionValue); //Caption Text
         await webActions.verifyPageLabel('.govuk-heading-l', headingValue); //Heading Text
-        await webActions.verifyPageLabel('.form-label', textAreaLabel); //Field Label
     }
 
-    async inputData(enterNoteText:string): Promise<void> {
-        await webActions.inputField('#tempNoteDetail', enterNoteText);
+    async chooseInterlocOption(radioValue: string): Promise<void> {
+        await webActions.clickElementById(`#isInterlocRequired_${radioValue}`);
+    }
+
+    async continueSubmission(): Promise<void> {
+        await this.page.waitForTimeout(3000);
+        await webActions.clickButton('Continue');
     }
 
     async confirmSubmission(): Promise<void> {
