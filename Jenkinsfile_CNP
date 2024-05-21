@@ -26,7 +26,9 @@ def secrets = [
                 secret('test-e2e-judge-username', 'TEST_JUDGE_USERNAME'),
                 secret('test-e2e-judge-password', 'TEST_JUDGE_PASSWORD'),
                 secret('test-e2e-dwp-username', 'TEST_DWP_USERNAME'),
-                secret('test-e2e-dwp-password', 'TEST_DWP_PASSWORD')
+                secret('test-e2e-dwp-password', 'TEST_DWP_PASSWORD'),
+                secret('test-e2e-hmrc-username', 'TEST_HMRC_USERNAME'),
+                secret('test-e2e-hmrc-password', 'TEST_HMRC_PASSWORD')
         ]
 ]
 
@@ -43,13 +45,14 @@ def branchesToSync = ['demo', 'ithc', 'perftest']
 
 withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
-  enableHighLevelDataSetup()
   syncBranchesWithMaster(branchesToSync)
-   
+
     onPR{
         env.ENVIRONMENT="preview"
     }
     onMaster{
+        // only enable high level data setup on master builds, SSCS-12483
+        enableHighLevelDataSetup()
         env.ENVIRONMENT="aat"
     }
 
