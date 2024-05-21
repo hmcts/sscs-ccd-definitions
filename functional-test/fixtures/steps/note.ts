@@ -14,7 +14,7 @@ export class Note extends BaseStep {
    }
 
     async performAddANote() {
-        await this.loginAsCaseworkerUser('PIP');
+        await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'PIP');
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Add a note');
 
@@ -32,7 +32,7 @@ export class Note extends BaseStep {
         await this.homePage.navigateToTab("Notepad");
         await this.notePadTab.verifyPageContentByKeyValue('Note','Playwright test note');
 
-        await this.verifyHistoryTab('With FTA', 'Add a note', 'Event Description for Automation Verification - Add a note');
+        await this.verifyHistoryTabDetails('With FTA', 'Add a note', 'Event Description for Automation Verification - Add a note');
     }
 
     

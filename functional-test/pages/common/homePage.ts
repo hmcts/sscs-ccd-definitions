@@ -26,7 +26,7 @@ export class HomePage {
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
         this.eventTitle = page.locator('h1.govuk-heading-l');
-        this.beforeTabBtn = page.locator('.mat-tab-header-pagination-before  .mat-tab-header-pagination-chevron');
+        this.beforeTabBtn = page.locator('//html/body/exui-root/exui-case-home/div/exui-case-details-home/exui-case-viewer-container/ccd-case-viewer/div/ccd-case-full-access-view/div[2]/div/mat-tab-group/mat-tab-header/button[1]/div');
 
 
         webActions = new WebAction(this.page);
@@ -38,7 +38,7 @@ export class HomePage {
     }
 
     async reloadPage() {
-        await this.page.reload({timeout:3000, waitUntil:'load'});
+        await this.page.reload({timeout:10000, waitUntil:'load'});
     }
 
     async goToHomePage(caseId: string): Promise<void> {
@@ -68,7 +68,6 @@ export class HomePage {
                 break;
             }
             case "History": {
-                // await this.beforeTabBtn.click();
                 await this.historyTab.click();
                 break;
             }

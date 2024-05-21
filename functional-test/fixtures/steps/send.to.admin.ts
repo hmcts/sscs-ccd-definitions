@@ -34,7 +34,7 @@ export class SendToAdmin extends BaseStep {
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
-        await this.verifyHistoryTab(null, 'Send to admin', 'Event Description for Automation Verification');
+        await this.verifyHistoryTabDetails('With FTA', 'Send to admin', 'Event Description for Automation Verification');
     }
 
 }

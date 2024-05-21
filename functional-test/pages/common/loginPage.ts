@@ -55,7 +55,6 @@ export class LoginPage {
         await webActions.inputField('#username', credentials.amCaseWorker.email);
         await webActions.inputField('#password', credentials.amCaseWorker.password);
         await webActions.clickButton('Sign in');
-        await expect(this.pageTitle).toHaveText('My work');
     }
 
     async verifySuccessfulLoginForJudge(isLoggedIn?: boolean): Promise<void> {

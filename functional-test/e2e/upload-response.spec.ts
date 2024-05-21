@@ -1,6 +1,6 @@
 import { test } from "../lib/steps.factory";
 
-test.describe('Upload response tests', () => {
+test.describe('Upload response tests', async() => {
     test("As a caseworker review response submitted with any further info", async ({ uploadResponseSteps }) => {
         await uploadResponseSteps.performUploadResponseWithFurtherInfoOnAPIP();
     });
@@ -12,16 +12,20 @@ test.describe('Upload response tests', () => {
     test("As a caseworker review response submitted for an UC case", async({ uploadResponseSteps }) => {
         await uploadResponseSteps.performUploadResponseOnAUniversalCredit();
     });
-    
+})
+
+test.describe.serial('Error scenarios', async () => {
+
     test("Verify Upload response error scenario", async({ uploadResponseSteps }) => {
         await uploadResponseSteps.verifyErrorsScenariosInUploadResponse();
     });
-    
-    test("Verify Upload response PHME error scenario",async({ uploadResponseSteps }) => {
+
+    test("Verify Upload response PHME error scenario", async({ uploadResponseSteps }) => {
         await uploadResponseSteps.verifyPHMEErrorsScenariosInUploadResponse();
     });
-    
+
     test("Verify Upload response Issue code error scenario", async({ uploadResponseSteps }) => {
         await uploadResponseSteps.verifyIssueCodeErrorsScenariosInUploadResponse();
     });
 })
+   

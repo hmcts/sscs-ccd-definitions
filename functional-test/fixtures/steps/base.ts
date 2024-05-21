@@ -13,6 +13,7 @@ import { AddNote } from '../../pages/add.note';
 import { EventNameEventDescriptionPage } from '../../pages/common/event.name.event.description';
 import { NotePad } from '../../pages/tabs/note.pad';
 import { Summary } from "../../pages/tabs/summary";
+import { exit } from 'process';
 
 
 
@@ -59,12 +60,18 @@ export abstract class BaseStep {
         return caseId;
    }
 
-   async loginAsCaseworkerUser(caseId?: string, caseType?: string){
-        if(!caseId) await createCaseBasedOnCaseType(caseType);
+   async loginAsCaseworkerUserWithoutCaseId(caseId?: string, caseType?: string){
+        var caseId = await createCaseBasedOnCaseType(caseType);
         await this.loginPage.goToLoginPage();
         await this.loginPage.verifySuccessfulLoginForAMCaseworker(true);
         await this.homePage.goToHomePage(caseId);
-  }
+   }
+
+   async loginAsCaseworkerUserWithCaseId(caseId?: string){
+      await this.loginPage.goToLoginPage();
+      await this.loginPage.verifySuccessfulLoginForAMCaseworker(true);
+      await this.homePage.goToHomePage(caseId);
+   }  
 
   async loginAsHMRCUser(caseType: string){
     var caseId = await createCaseBasedOnCaseType(caseType);
@@ -82,13 +89,18 @@ export abstract class BaseStep {
       return caseId;
  }
 
-  async verifyHistoryTab(state?: string, event?: string, comment?: string ) {
+  async verifyHistoryTabDetails(state?: string, event?: string, comment?: string ) {
         await this.homePage.navigateToTab("History");
         if(state) await this.historyTab.verifyHistoryPageContentByKeyValue('End state', state);
         if(event) await this.historyTab.verifyHistoryPageContentByKeyValue('Event', event);
         if(comment) await this.historyTab.verifyHistoryPageContentByKeyValue('Comment', comment);
         if(event) await this.historyTab.verifyEventCompleted(event);
   }
+
+  async verifyHistoryTabLink(linkLabel: string) {
+      await this.homePage.navigateToTab("History");
+      await this.historyTab.verifyHistoryPageEventLink(linkLabel);
+}
 
   async verifyAppealDetailsTab(state: string, value: string) {
         await this.homePage.navigateToTab("Appeal Details");

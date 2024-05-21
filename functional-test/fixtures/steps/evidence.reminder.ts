@@ -14,13 +14,13 @@ export class EvidenceReminder extends BaseStep {
 
     async performEvidenceReminder() {
 
-        await this.loginAsCaseworkerUser('PIP');
+        await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'PIP');
         await this.homePage.chooseEvent('Evidence reminder');
         await this.eventNameAndDescriptionPage.verifyPageContent("Evidence reminder");
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
-        await this.verifyHistoryTab('With FTA', 'Evidence reminder', 'Event Description for Automation Verification');
+        await this.verifyHistoryTabDetails('With FTA', 'Evidence reminder', 'Event Description for Automation Verification');
     }
 }

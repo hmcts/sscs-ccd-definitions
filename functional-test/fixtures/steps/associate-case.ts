@@ -25,7 +25,7 @@ export class AssociateCase extends BaseStep {
 
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPageContentLinkTextByKeyValue('Related appeal(s)', hyphenatedSecondCaseId);
-        await this.verifyHistoryTab('With FTA', 'Associate case');
+        await this.verifyHistoryTabDetails('With FTA', 'Associate case');
     }
 
     async associateNonExistentCase() {
@@ -39,7 +39,7 @@ export class AssociateCase extends BaseStep {
 
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyFieldHiddenInPageContent('Related appeal(s)');
-        await this.verifyHistoryTab('With FTA');
+        await this.verifyHistoryTabDetails('With FTA');
     }
 
     async selfAssociateACase() {
@@ -57,11 +57,11 @@ export class AssociateCase extends BaseStep {
 
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyFieldHiddenInPageContent('Related appeal(s)');
-        await this.verifyHistoryTab('With FTA');
+        await this.verifyHistoryTabDetails('With FTA');
     }
 
     private async goToAssociateCasePage(caseId: string) {
-        await this.loginAsCaseworkerUser(caseId);
+        await this.loginAsCaseworkerUserWithCaseId(caseId);
         await this.homePage.chooseEvent("Associate case");
     }
 }

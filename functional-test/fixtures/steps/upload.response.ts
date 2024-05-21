@@ -7,6 +7,8 @@ export class UploadResponse extends BaseStep {
     
    private static caseId: string;
    readonly page : Page;
+
+   public expLinks:string[] = ['Upload response','Ready to list', 'Update to case data', 'Add a hearing'];
    
    constructor(page: Page) {
        super(page);
@@ -27,7 +29,7 @@ export class UploadResponse extends BaseStep {
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
 
-        await this.loginAsCaseworkerUser(pipCaseId);
+        await this.loginAsCaseworkerUserWithCaseId(pipCaseId);
         await this.homePage.navigateToTab("History");
         await this.historyTab.verifyPageContentByKeyValue('End state', 'Response received');
 
@@ -36,7 +38,12 @@ export class UploadResponse extends BaseStep {
         await this.responseReviewedPage.chooseInterlocOption('No');
         await this.responseReviewedPage.confirmSubmission();
 
-        await this.verifyHistoryTab('Ready to list', 'Ready to list', 'Makes an appeal ready to list');
+        await this.homePage.delay(6000);
+        await this.homePage.reloadPage();
+        this.expLinks.forEach(async testData => {
+            await this.verifyHistoryTabLink(testData);
+        });
+        await this.verifyHistoryTabDetails('Ready to list');
         await this.verifyAppealDetailsTab('Sent to FTA state', 'Sent to FTA');
 
     }
@@ -54,8 +61,13 @@ export class UploadResponse extends BaseStep {
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", uploadResponseTestdata.taxBenefitCode, uploadResponseTestdata.taxIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
 
-        await this.loginAsCaseworkerUser(taxCaseId);
-        await this.verifyHistoryTab('Ready to list', 'Update to case data', 'Updated case with date sent to robotics');
+        await this.loginAsCaseworkerUserWithCaseId(taxCaseId);
+        await this.homePage.delay(6000);
+        await this.homePage.reloadPage();
+        this.expLinks.forEach(async testData => {
+            await this.verifyHistoryTabLink(testData);
+        });
+        await this.verifyHistoryTabDetails('Ready to list');
         await this.verifyAppealDetailsTab('Sent to FTA state', 'Sent to FTA');
     }
 
@@ -85,8 +97,13 @@ export class UploadResponse extends BaseStep {
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", null, null, "UC");
         await this.checkYourAnswersPage.confirmSubmission();
 
-        await this.loginAsCaseworkerUser(ucCaseId);
-        await this.verifyHistoryTab('Ready to list', 'Update to case data', 'Updated case with date sent to robotics');
+        await this.loginAsCaseworkerUserWithCaseId(ucCaseId);
+        await this.homePage.delay(6000);
+        await this.homePage.reloadPage();
+        this.expLinks.forEach(async testData => {
+            await this.verifyHistoryTabLink(testData);
+        });
+        await this.verifyHistoryTabDetails('Ready to list');
         await this.verifyAppealDetailsTab('Sent to FTA state', 'Sent to FTA');
     }
 
