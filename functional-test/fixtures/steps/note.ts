@@ -31,7 +31,7 @@ export class Note {
 
         var pipCaseId = await createCaseBasedOnCaseType("PIP");
         await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLoginForCaseworker();
+        await loginPage.verifySuccessfulLoginForAMCaseworker();
 
         await homePage.goToHomePage(pipCaseId);
         await homePage.chooseEvent('Add a note');
@@ -48,6 +48,7 @@ export class Note {
 
         await homePage.navigateToTab("Notepad");
         await notePadTab.verifyPageContentByKeyValue('Note','Playwright test note');
+        await homePage.clickBeforeTabBtn();
         await homePage.navigateToTab("History");
         await historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
         await historyTab.verifyPageContentByKeyValue('Event', 'Add a note');
