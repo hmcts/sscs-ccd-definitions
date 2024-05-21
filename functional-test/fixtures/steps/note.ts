@@ -3,7 +3,7 @@ import { HomePage } from '../../pages/common/homePage';
 import { AddNote } from '../../pages/add.note';
 import { LoginPage } from '../../pages/common/loginPage';
 import { EventNameEventDescriptionPage } from '../../pages/common/event.name.event.description';
-import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
+import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import { NotePad } from '../../pages/tabs/note.pad';
 import eventTestData from "../../pages/content/event.name.event.description_en.json"
 import {History} from "../../pages/tabs/history";

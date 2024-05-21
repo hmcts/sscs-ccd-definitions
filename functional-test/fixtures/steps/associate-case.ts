@@ -2,7 +2,7 @@ import { Page } from '@playwright/test';
 import { HomePage } from '../../pages/common/homePage';
 import { AssociateCasePage } from '../../pages/associate.case.page';
 import { LoginPage } from '../../pages/common/loginPage';
-import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
+import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import { StringUtilsComponent } from "../../utils/StringUtilsComponent";
 import { History } from "../../pages/tabs/history";
 import { Summary } from "../../pages/tabs/summary";
