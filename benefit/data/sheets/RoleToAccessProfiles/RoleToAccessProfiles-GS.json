@@ -1,7 +1,7 @@
 [
   {
     "LiveFrom": "14/11/2023",
-    "CaseTypeID": "Benefit-3741",
+    "CaseTypeID": "Benefit",
     "RoleName": "hmcts-admin",
     "Authorisation": "",
     "ReadOnly": "Y",
@@ -10,7 +10,7 @@
   },
   {
     "LiveFrom": "14/11/2023",
-    "CaseTypeID": "Benefit-3741",
+    "CaseTypeID": "Benefit",
     "RoleName": "hmcts-judiciary",
     "Authorisation": "",
     "ReadOnly": "Y",
@@ -19,7 +19,7 @@
   },
   {
     "LiveFrom": "14/11/2023",
-    "CaseTypeID": "Benefit-3741",
+    "CaseTypeID": "Benefit",
     "RoleName": "hmcts-legal-operations",
     "Authorisation": "",
     "ReadOnly": "Y",
@@ -28,7 +28,7 @@
   },
   {
     "LiveFrom": "14/11/2023",
-    "CaseTypeID": "Benefit-3741",
+    "CaseTypeID": "Benefit",
     "RoleName": "hmcts-ctsc",
     "Authorisation": "",
     "ReadOnly": "Y",

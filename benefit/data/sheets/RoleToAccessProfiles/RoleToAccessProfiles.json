@@ -1,7 +1,7 @@
 [
   {
     "LiveFrom": "18/03/2023",
-    "CaseTypeID": "Benefit-3741",
+    "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-systemupdate",
     "Authorisation": "",
     "ReadOnly": "N",
@@ -10,7 +10,7 @@
   },
   {
     "LiveFrom": "18/03/2023",
-    "CaseTypeID": "Benefit-3741",
+    "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-anonymouscitizen",
     "Authorisation": "",
     "ReadOnly": "N",
@@ -19,7 +19,7 @@
   },
   {
     "LiveFrom": "18/03/2023",
-    "CaseTypeID": "Benefit-3741",
+    "CaseTypeID": "Benefit",
     "RoleName": "idam:caseworker-sscs-bulkscan",
     "Authorisation": "",
     "ReadOnly": "N",
@@ -28,7 +28,7 @@
   },
   {
     "LiveFrom": "18/03/2023",
-    "CaseTypeID": "Benefit-3741",
+    "CaseTypeID": "Benefit",
     "RoleName": "idam:citizen",
     "Authorisation": "",
     "ReadOnly": "N",
@@ -37,7 +37,7 @@
   },
   {
     "LiveFrom": "18/03/2023",
-    "CaseTypeID": "Benefit-3741",
+    "CaseTypeID": "Benefit",
     "RoleName": "[CREATOR]",
     "Authorisation": "",
     "ReadOnly": "N",
