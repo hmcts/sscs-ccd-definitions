@@ -72,6 +72,7 @@ export class HomePage {
                 break;
             }
             case "History": {
+                await expect(this.historyTab).toBeVisible();
                 await this.historyTab.click();
                 break;
             }

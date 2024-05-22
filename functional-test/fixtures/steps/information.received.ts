@@ -16,7 +16,6 @@ export class InformationReceived {
 
     async performInformationReceivedEvent() {
 
-        let homePage = new HomePage(this.page);
         let informationReceivedPage = new InformationReceivedPage(this.page);
         let eventNameAndDescriptionPage = new EventNameEventDescriptionPage(this.page);
 
@@ -28,8 +27,10 @@ export class InformationReceived {
             eventTestData.eventDescriptionInput);
         await eventNameAndDescriptionPage.confirmSubmission();
 
-        let historyTab = new History(this.page);
+        let homePage = new HomePage(this.page);
         await homePage.navigateToTab("History");
+
+        let historyTab = new History(this.page);
         await historyTab.verifyPageContentByKeyValue('Event', 'Information received');
         await historyTab.verifyPageContentByKeyValue('Summary', 'Event Summary for Automation');
         await historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification');
