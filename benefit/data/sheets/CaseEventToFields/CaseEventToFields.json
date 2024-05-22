@@ -9,8 +9,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Handle Further Evidence",
-    "Publish": "Y"
+    "PageLabel": "Handle Further Evidence"
   },
   {
     "CaseEventID": "actionFurtherEvidence",
@@ -1688,8 +1687,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Interloc referral",
-    "Publish": "Y"
+    "PageLabel": "Interloc referral"
   },
   {
     "CaseEventID": "nonCompliantSendToInterloc",
@@ -1801,20 +1799,6 @@
     "PageLabel": "Sent to FTA state"
   },
   {
-    "CaseEventID": "sendToDwp",
-    "CaseFieldID": "caseManagementCategory",
-    "CaseTypeID": "Benefit",
-    "DisplayContext": "MANDATORY",
-    "FieldShowCondition": "[STATE]=\"doNotUse\"",
-    "RetainHiddenValue": "Yes",
-    "LiveFrom": "01/01/2018",
-    "PageDisplayOrder": 2,
-    "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "PageLabel": "Sent to FTA state",
-    "Publish": "Y"
-  },
-  {
     "CaseEventID": "subscriptionUpdated",
     "CaseFieldID": "subscriptions",
     "CaseTypeID": "Benefit",
@@ -1879,9 +1863,7 @@
     "LiveFrom": "01/01/2018",
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
-    "PageID": "1.0",
-    "Publish": "Y",
-    "PublishAs": "workType"
+    "PageID": "1.0"
   },
   {
     "CaseEventID": "tcwReferToJudge",
@@ -2268,9 +2250,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "Issue direction",
-    "ShowSummaryChangeOption": "Y",
-    "Publish": "Y",
-    "PublishAs": "workType"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent",
@@ -3000,9 +2980,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y",
-    "Publish": "Y",
-    "PublishAs": "workType"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "validSendToInterloc",
@@ -3025,8 +3003,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 3,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y",
-    "Publish": "Y"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CallBackURLMidEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdMidEvent?pageId=interlocReferral",
@@ -3294,9 +3271,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 17,
     "PageID": "1.0",
-    "ShowSummaryChangeOption": "Y",
-    "Publish": "Y",
-    "PublishAs": "action"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -3309,8 +3284,7 @@
     "PageFieldDisplayOrder": 18,
     "PageID": "1.0",
     "ShowSummaryChangeOption": "Y",
-    "RetainHiddenValue": "Yes",
-    "Publish": "Y"
+    "RetainHiddenValue": "Yes"
   },
   {
     "CaseEventID": "hmctsResponseReviewed",
@@ -4396,8 +4370,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
-    "PageLabel": "Action Postponement Request",
-    "Publish": "Y"
+    "PageLabel": "Action Postponement Request"
   },
   {
     "CaseEventID": "actionPostponementRequest",
@@ -4806,8 +4779,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "Type_Selection",
     "PageLabel": "Application Type Selection",
-    "ShowSummaryChangeOption": "Y",
-    "Publish": "Y"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "postHearingReview",
@@ -5031,9 +5003,7 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "Type_Selection",
     "PageLabel": "Application Type Selection",
-    "ShowSummaryChangeOption": "Y",
-    "Publish": "Y",
-    "PublishAs": "action"
+    "ShowSummaryChangeOption": "Y"
   },
   {
     "CaseEventID": "postHearingRequest",
@@ -5464,8 +5434,7 @@
     "PageDisplayOrder": 1,
     "PageFieldDisplayOrder": 1,
     "PageID": "Send_To_First_Tier",
-    "PageLabel": "Send to First Tier",
-    "Publish": "Y"
+    "PageLabel": "Send to First Tier"
   },
   {
     "LiveFrom": "07/07/2023",
