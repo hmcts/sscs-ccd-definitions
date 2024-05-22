@@ -1,5 +1,5 @@
 import { Page } from '@playwright/test';
-import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
+import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import { StringUtilsComponent } from "../../utils/StringUtilsComponent";
 import { BaseStep } from './base';
 const associateCaseTestData = require("../../pages/content/associate.case_en.json");
