@@ -6,7 +6,6 @@ import { AssociateCase } from '../fixtures/steps/associate-case';
 import { SendToAdmin } from '../fixtures/steps/send.to.admin';
 import { InformationReceived } from '../fixtures/steps/information.received';
 import { ReviewAdminActionTask } from '../fixtures/steps/work-allocation/review.admin.action.task'
-import { RolesAndAccess } from '../fixtures/steps/roles.and.access';
 import { UploadResponse } from '../fixtures/steps/upload.response';
 import {ListingError} from "../fixtures/steps/listing.error";
 
@@ -16,7 +15,6 @@ type MyStepsFixtures = {
     associateCaseSteps: AssociateCase
     confirmCaseLapsedSteps: ConfirmCaseLapsed
     evidenceReminderSteps: EvidenceReminder
-    rolesAndAccessSteps: RolesAndAccess
     sendToAdminSteps: SendToAdmin
     reviewAdminActionTaskSteps: ReviewAdminActionTask
     informationReceivedSteps: InformationReceived
@@ -44,10 +42,6 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     informationReceivedSteps:async ({ page }, use) => {
         const informationReceivedSteps = new InformationReceived(page);
         await use(informationReceivedSteps);
-    },
-    rolesAndAccessSteps:async ({ page }, use) => {
-        const rolesAndAccessSteps = new RolesAndAccess(page);
-        await use(rolesAndAccessSteps);
     },
     sendToAdminSteps:async ({ page }, use) => {
         const sendToAdminSteps = new SendToAdmin(page);
