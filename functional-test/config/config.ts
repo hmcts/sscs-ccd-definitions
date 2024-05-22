@@ -55,10 +55,6 @@ export const credentials = {
     email: process.env.CITIZEN_USERNAME,
     password: process.env.CITIZEN_PASSWORD,
   },
-  ctscTeamLeader: {
-    email: process.env.TEST_CTSC_TEAM_LEADER_USERNAME,
-    password: process.env.TEST_CTSC_TEAM_LEADER_PASSWORD,
-  },
   superUser: {
     email: process.env.SUPER_USER_USERNAME,
     password: process.env.SUPER_USER_PASSWORD,
