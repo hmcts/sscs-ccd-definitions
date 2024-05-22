@@ -29,10 +29,8 @@ def secrets = [
                 secret('test-e2e-dwp-password', 'TEST_DWP_PASSWORD'),
                 secret('test-e2e-ctsc-admin-username', 'TEST_CTSC_ADMINISTRATOR_USERNAME'),
                 secret('test-e2e-ctsc-admin-password', 'TEST_CTSC_ADMINISTRATOR_PASSWORD'),
-                secret('test-e2e-ctsc-admin-case-allocator-username', 'TEST_CTSC_ADMINISTRATOR_CASE_ALLOCATOR_USERNAME'),
-                secret('test-e2e-ctsc-admin-case-allocator-password', 'TEST_CTSC_ADMINISTRATOR_CASE_ALLOCATOR_PASSWORD'),
-                secret('test-e2e-national-judge-username', 'TEST_NATIONAL_JUDGE_USERNAME'),
-                secret('test-e2e-national-judge-password', 'TEST_NATIONAL_JUDGE_PASSWORD'),
+                secret('test-e2e-am-caseofficer-case-allocator-username', 'TEST_AM_CASEOFFICER_CASE_ALLOCATOR_USERNAME'),
+                secret('test-e2e-am-caseofficer-case-allocator-password', 'TEST_AM_CASEOFFICER_CASE_ALLOCATOR_PASSWORD'),
                 secret('test-e2e-ctsc-team-leader-username', 'TEST_CTSC_TEAM_LEADER_USERNAME'),
                 secret('test-e2e-ctsc-team-leader-password', 'TEST_CTSC_TEAM_LEADER_PASSWORD')
                 secret('test-e2e-hmrc-username', 'TEST_HMRC_USERNAME'),

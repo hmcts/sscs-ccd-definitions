@@ -90,4 +90,20 @@ export class Tasks {
 
         expect(availableOptions).toMatchObject(options);
     }
+
+    async verifyNextStepNavigation(nextStepLink: string, expectedPageTitle: string) {
+        let homePage = new HomePage(this.page);
+
+        await webActions.clickLink(nextStepLink);
+
+        let pageTitle = await this.page.locator('h1.govuk-heading-l').textContent();
+        expect(pageTitle).toEqual(expectedPageTitle);
+
+        await webActions.clickLink('Cancel')
+        await homePage.navigateToTab('Tasks');
+    }
+
+    async clickNextStepLink(linkText: string) {
+        await webActions.clickLink(linkText);
+    }
 }

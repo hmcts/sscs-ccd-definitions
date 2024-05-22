@@ -17,6 +17,10 @@ export const credentials = {
     email: process.env.TEST_AM_CASEOFFICER_USERNAME,
     password: process.env.TEST_AM_CASEOFFICER_PASSWORD,
   },
+  amCaseWorkerWithCaseAllocatorRole: {
+    email: process.env.TEST_AM_CASEOFFICER_CASE_ALLOCATOR_USERNAME,
+    password: process.env.TEST_AM_CASEOFFICER_CASE_ALLOCATOR_PASSWORD,
+  },
   seniorCaseworker: {
     email: process.env.SENIOR_CASEWORKER_USERNAME,
     password:
@@ -42,10 +46,6 @@ export const credentials = {
     email: process.env.SENIOR_JUDGE_USERNAME,
     password: process.env.SENIOR_JUDGE_PASSWORD,
   },
-  nationalJudge: {
-    email: process.env.TEST_NATIONAL_JUDGE_USERNAME,
-    password: process.env.TEST_NATIONAL_JUDGE_PASSWORD,
-  },
   respondent: {
     email: process.env.RESPONDENT_USERNAME,
     password: process.env.RESPONDENT_PASSWORD,
@@ -53,14 +53,6 @@ export const credentials = {
   citizen: {
     email: process.env.CITIZEN_USERNAME,
     password: process.env.CITIZEN_PASSWORD,
-  },
-  ctscAdministrator: {
-    email: process.env.TEST_CTSC_ADMINISTRATOR_USERNAME,
-    password: process.env.TEST_CTSC_ADMINISTRATOR_PASSWORD,
-  },
-  ctscAdministratorWithCaseAllocatorRole: {
-    email: process.env.TEST_CTSC_ADMINISTRATOR_CASE_ALLOCATOR_USERNAME,
-    password: process.env.TEST_CTSC_ADMINISTRATOR_CASE_ALLOCATOR_PASSWORD,
   },
   ctscTeamLeader: {
     email: process.env.TEST_CTSC_TEAM_LEADER_USERNAME,
@@ -107,6 +99,6 @@ export const timeouts = {
   shortTimeout: 5000,
   mediumTimout: 60000,
   longTimeout: 120000,
-  maxTimeout: 240000
+  maxTimeout: 180000
 };
 

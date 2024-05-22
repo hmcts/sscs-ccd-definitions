@@ -17,9 +17,7 @@ export class SendToAdmin extends BaseStep {
     async performSendToAdmin(caseId?: string) {
 
         if(!caseId) {
-            await this.loginAsJudgeUserWithoutCaseId('TAX CREDIT');
-        } else {
-            await this.loginAsJudgeUserWithCaseId(caseId);
+            await this.loginAsJudgeUserWithoutCaseId(undefined, 'TAX CREDIT');
         }
         
         await this.homePage.reloadPage();

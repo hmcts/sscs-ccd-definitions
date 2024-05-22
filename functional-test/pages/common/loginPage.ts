@@ -71,10 +71,10 @@ export class LoginPage {
         await webActions.clickButton('Sign in');
     }
 
-    async verifySuccessfulLoginForCtscAdministratorCaseAllocator(isLoggedIn?: boolean): Promise<void> {
+    async verifySuccessfulLoginForAMCaseworkerWithCaseAllocatorRole(isLoggedIn?: boolean): Promise<void> {
         if(isLoggedIn) await this.page.context().clearCookies();
-        await webActions.inputField('#username', credentials.ctscAdministratorWithCaseAllocatorRole.email);
-        await webActions.inputField('#password', credentials.ctscAdministratorWithCaseAllocatorRole.password);
+        await webActions.inputField('#username', credentials.amCaseWorkerWithCaseAllocatorRole.email);
+        await webActions.inputField('#password', credentials.amCaseWorkerWithCaseAllocatorRole.password);
         await webActions.clickButton('Sign in');
         await expect(this.pageTitle).toHaveText('My work');
     }

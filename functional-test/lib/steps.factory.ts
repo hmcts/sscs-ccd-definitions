@@ -5,10 +5,7 @@ import { EvidenceReminder } from '../fixtures/steps/evidence.reminder';
 import { AssociateCase } from '../fixtures/steps/associate-case';
 import { SendToAdmin } from '../fixtures/steps/send.to.admin';
 import { InformationReceived } from '../fixtures/steps/information.received';
-import { TaskActions } from '../fixtures/steps/work-allocation/task.actions';
 import { ReviewAdminActionTask } from '../fixtures/steps/work-allocation/review.admin.action.task'
-import { Login } from '../fixtures/steps/login';
-import { Logout } from '../fixtures/steps/logout';
 import { RolesAndAccess } from '../fixtures/steps/roles.and.access';
 import { UploadResponse } from '../fixtures/steps/upload.response';
 import {ListingError} from "../fixtures/steps/listing.error";
@@ -19,11 +16,8 @@ type MyStepsFixtures = {
     associateCaseSteps: AssociateCase
     confirmCaseLapsedSteps: ConfirmCaseLapsed
     evidenceReminderSteps: EvidenceReminder
-    loginSteps: Login
-    logoutSteps: Logout
     rolesAndAccessSteps: RolesAndAccess
     sendToAdminSteps: SendToAdmin
-    taskSteps: TaskActions
     reviewAdminActionTaskSteps: ReviewAdminActionTask
     informationReceivedSteps: InformationReceived
     listingErrorSteps: ListingError
@@ -51,14 +45,6 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const informationReceivedSteps = new InformationReceived(page);
         await use(informationReceivedSteps);
     },
-    loginSteps:async ({ page }, use) => {
-        const loginSteps = new Login(page);
-        await use(loginSteps);
-    },
-    logoutSteps:async ({ page }, use) => {
-        const logoutSteps = new Logout(page);
-        await use(logoutSteps);
-    },
     rolesAndAccessSteps:async ({ page }, use) => {
         const rolesAndAccessSteps = new RolesAndAccess(page);
         await use(rolesAndAccessSteps);
@@ -66,10 +52,6 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     sendToAdminSteps:async ({ page }, use) => {
         const sendToAdminSteps = new SendToAdmin(page);
         await use(sendToAdminSteps);
-    },
-    taskSteps:async ({ page }, use) => {
-        const taskSteps = new TaskActions(page);
-        await use(taskSteps);
     },
     reviewAdminActionTaskSteps:async ({ page }, use) => {
         const reviewAdminActionTaskSteps = new ReviewAdminActionTask(page);

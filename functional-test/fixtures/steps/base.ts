@@ -14,7 +14,6 @@ import { EventNameEventDescriptionPage } from '../../pages/common/event.name.eve
 import { NotePad } from '../../pages/tabs/note.pad';
 import { Summary } from "../../pages/tabs/summary";
 import { Tasks } from "../../pages/tabs/tasks";
-import { exit } from 'process';
 import { InformationReceivedPage } from '../../pages/information.received.page';
 
 
@@ -86,7 +85,7 @@ export abstract class BaseStep {
       return caseId;
    }
 
-   async loginAsJudgeUserWithoutCaseId(caseType: string) {
+   async loginAsJudgeUserWithoutCaseId(caseId?: string, caseType?: string) {
       var caseId = await createCaseBasedOnCaseType(caseType);
       await this.loginPage.goToLoginPage();
       await this.loginPage.verifySuccessfulLoginForJudge(true);
@@ -98,14 +97,12 @@ export abstract class BaseStep {
       await this.loginPage.goToLoginPage();
       await this.loginPage.verifySuccessfulLoginForJudge(true);
       await this.homePage.goToHomePage(caseId);
-      return caseId;
    }
 
-   async loginAsCtscAdministratorCaseAllocatorWithCaseId(caseId: string) {
+   async loginAsCaseworkerWithCaseAllocatorRoleWithCaseId(caseId: string) {
      await this.loginPage.goToLoginPage();
-     await this.loginPage.verifySuccessfulLoginForCtscAdministratorCaseAllocator(true);
+     await this.loginPage.verifySuccessfulLoginForAMCaseworkerWithCaseAllocatorRole(true);
      await this.homePage.goToHomePage(caseId);
-     return caseId;
    }
 
    async verifyHistoryTabDetails(state?: string, event?: string, comment?: string ) {
@@ -113,7 +110,7 @@ export abstract class BaseStep {
         if(state) await this.historyTab.verifyHistoryPageContentByKeyValue('End state', state);
         if(event) await this.historyTab.verifyHistoryPageContentByKeyValue('Event', event);
         if(comment) await this.historyTab.verifyHistoryPageContentByKeyValue('Comment', comment);
-        if(event) await this.historyTab.verifyEventCompleted(event);
+        if(event) await this.historyTab.verifyEventRecorded(event);
    }
 
    async verifyHistoryTabLink(linkLabel: string) {

@@ -30,8 +30,8 @@ export class InformationReceived {
         await informationReceivedPage.selectReviewState(informationReceivedData.informationReceivedReviewStateSelectValue);
         await informationReceivedPage.confirmSubmission();
 
-        await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"],
-            eventTestData["event-description-input"]);
+        await eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
         await eventNameAndDescriptionPage.confirmSubmission();
 
         let historyTab = new History(this.page);
