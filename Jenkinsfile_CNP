@@ -82,12 +82,10 @@ withPipeline("nodejs", product, component) {
         env.TEST_E2E_API_URI = params.TRIBUNALS_API_URI
 
         stage('Playwright tests') {
-            yarnBuilder.yarn('test:jenkins')
-        }
-    }
-
-    afterAlways('smoketest:preview') {
-        publishHTML([
+            try{
+                yarnBuilder.yarn('test:jenkins')
+            } finally {
+                publishHTML([
                     allowMissing: true,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
@@ -96,6 +94,20 @@ withPipeline("nodejs", product, component) {
                     reportName: 'SSCS E2E Test Report'
             ])
             steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'playwright-report/**/*'
+            }
+        }
+    }
+
+    afterAlways('smoketest:preview') {
+        // publishHTML([
+        //             allowMissing: true,
+        //             alwaysLinkToLastBuild: true,
+        //             keepAll: true,
+        //             reportDir: "playwright-report",
+        //             reportFiles: 'index.html',
+        //             reportName: 'SSCS E2E Test Report'
+        //     ])
+        //     steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'playwright-report/**/*'
     }
     
 
