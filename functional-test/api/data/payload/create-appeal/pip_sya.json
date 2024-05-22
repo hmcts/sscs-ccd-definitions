@@ -1,10 +1,10 @@
 {
   "benefitType": {
-    "description": "Tax Credit",
-    "code": "taxCredit"
+    "description": "Personal Independence Payment",
+    "code": "PIP"
   },
   "mrn": {
-    "dwpIssuingOffice": "Tax Credit Office",
+    "dwpIssuingOffice": "DWP PIP (1)",
     "date": "01-01-2021",
     "reasonForBeingLate": "Lost my paperwork"
   },
@@ -15,7 +15,7 @@
     "firstName": "Joe",
     "lastName": "Bloggs",
     "dob": "26-02-1990",
-    "nino": "AB870533C",
+    "nino": "AB877533C",
     "contactDetails": {
       "addressLine1": "123 Hairy Lane",
       "addressLine2": "Off Hairy Park",
@@ -67,11 +67,9 @@
     "wantsToAttend": true,
     "wantsSupport": true,
     "anythingElse": "Yes, this...",
-    "interpreterLanguageType": "An interpreter language",
-    "signLanguageType": "A sign language",
     "arrangements": {
-      "languageInterpreter": true,
-      "signLanguageInterpreter": true,
+      "languageInterpreter": false,
+      "signLanguageInterpreter": false,
       "hearingLoop": true,
       "accessibleHearingRoom": false,
       "other": true

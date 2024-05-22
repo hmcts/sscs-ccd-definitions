@@ -10,8 +10,7 @@ module.exports = defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-   retries: 2, // Set the number of retries for all projects
-
+  retries: 1, // Set the number of retries for all projects
   timeout: 3 * 30 * 1000,
   expect: {
     timeout: 60 * 1000,
@@ -29,8 +28,7 @@ module.exports = defineConfig({
     screenshot: 'only-on-failure',
     launchOptions: {
       // 1
-      args: ["--start-maximized"],
-      slowMo: 50,
+      args: ["--start-maximized"]
     },
   },
   // globalSetup: '../src/tests/e2e/global.setup.ts',
@@ -38,8 +36,8 @@ module.exports = defineConfig({
     {
       name: "chromium",
       use: { 
-        //...devices["Desktop Chrome"],
-        viewport : null,
+        // ...devices["Desktop Chrome"],
+        viewport: { width: 1500, height: 700 }
       }
     },
     // {

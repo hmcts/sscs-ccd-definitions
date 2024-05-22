@@ -6,6 +6,7 @@ export const urls = {
   xuiUrl: process.env.SSCS_XUI_URL || 'https://manage-case.aat.platform.hmcts.net',
   idamUrl : process.env.IDAM_URL || 'https://idam-api.aat.platform.hmcts.net',
   s2sUrl : process.env.S2S_URL || 'http://rpe-service-auth-provider-aat.service.core-compute-aat.internal',
+  ccdApiUrl : process.env.CCD_API_URL || 'http://ccd-data-store-api-aat.service.core-compute-aat.internal'
 };
 
 export const credentials = {
@@ -54,6 +55,14 @@ export const credentials = {
     email: process.env.SUPER_USER_USERNAME,
     password: process.env.SUPER_USER_PASSWORD,
   },
+  dwpResponseWriter: {
+    email: process.env.TEST_DWP_USERNAME,
+    password: process.env.TEST_DWP_PASSWORD,
+  },
+  hmrcUser: {
+    email: process.env.TEST_HMRC_USERNAME,
+    password: process.env.TEST_HMRC_PASSWORD,
+  }
 };
 
 export const resources = {
