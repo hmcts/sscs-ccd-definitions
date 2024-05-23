@@ -1,5 +1,7 @@
-import { Page } from '@playwright/test';
-import { BaseStep } from './base';
+import {Page} from '@playwright/test';
+import {BaseStep} from './base';
+import {credentials} from "../../config/config";
+
 const sendToAdminData = require("../../pages/content/send.to.admin_en.json");
 const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
@@ -14,11 +16,9 @@ export class SendToAdmin extends BaseStep {
         this.page = page;
     }
 
-    async performSendToAdmin() {
+    async performSendToAdmin(caseId: string) {
 
-        await this.loginAsJudgeUser('TAX CREDIT');
-        await this.homePage.delay(5000); //Other back end events to complete...
-        //await this.homePage.waitForLoadState();
+        await this.loginUserWithCaseId(credentials.judge, caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Send to admin');
         //await this.homePage.waitForLoadState();
@@ -40,6 +40,7 @@ export class SendToAdmin extends BaseStep {
         await this.verifyHistoryTabLink('Send to admin');
 
         //await this.verifyHistoryTabDetails('With FTA', 'Send to admin', 'Event Description for Automation Verification');
+        await this.verifyHistoryTabDetails('Valid Appeal', 'Send to admin', 'Event Description for Automation Verification');
     }
 
 }

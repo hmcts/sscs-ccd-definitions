@@ -6,6 +6,7 @@ import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type
 import {History} from '../../pages/tabs/history';
 import {WebAction} from '../../common/web.action';
 import { BaseStep } from './base';
+import {credentials} from "../../config/config";
 const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
 
@@ -18,12 +19,10 @@ export class ListingError extends BaseStep {
         this.page = page;
     }
 
-    async performListingErrorEvent() {
+    async performListingErrorEvent(caseId: string) {
         let webActions = new WebAction(this.page);
 
-        //Create Case
-        await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'PIP');
-        await this.homePage.delay(5000); //Other back end events to complete...
+        await this.loginUserWithCaseId(credentials.amCaseWorker, caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Listing Error');
 
