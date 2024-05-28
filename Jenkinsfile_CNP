@@ -52,6 +52,7 @@ withPipeline("nodejs", product, component) {
         env.ENVIRONMENT="preview"
         env.IDAM_URL='https://idam-api.aat.platform.hmcts.net'
         env.S2S_URL='http://rpe-service-auth-provider-aat.service.core-compute-aat.internal'
+        env.URL_TO_TEST="https://xui-sscs-tribunals-api-pr-3833.preview.platform.hmcts.net"
     }
 
     onDemo {
