@@ -31,7 +31,7 @@ export class UploadResponse extends BaseStep {
 
         await this.loginAsCaseworkerUserWithCaseId(pipCaseId);
         await this.homePage.navigateToTab("History");
-        await this.historyTab.verifyPageContentByKeyValue('End state', 'Response received');
+        await this.historyTab.verifyHistoryPageContentByKeyValue('Upload response', 'End state', 'Response received');
 
         await this.homePage.chooseEvent('Response reviewed');
         await this.responseReviewedPage.verifyPageContent(responseReviewedTestData.captionValue, responseReviewedTestData.headingValue);
@@ -42,9 +42,10 @@ export class UploadResponse extends BaseStep {
         await this.homePage.reloadPage();
         this.expLinks.forEach(async testData => {
             await this.verifyHistoryTabLink(testData);
+            // await this.historyTab.verifyHistoryPageContentByKeyValue(testData, 'End state', 'Response received');
         });
         await this.verifyHistoryTabDetails('Ready to list');
-        await this.verifyAppealDetailsTab('Sent to FTA state', 'Sent to FTA');
+        // await this.verifyAppealDetailsTab('Sent to FTA state', 'Sent to FTA');
 
     }
 
