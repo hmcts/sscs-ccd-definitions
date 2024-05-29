@@ -2,7 +2,7 @@ import { Page } from '@playwright/test';
 import { BaseStep } from './base';
 const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
-export class SendToDormant extends BaseStep {
+export class VoidCase extends BaseStep {
     
   readonly page : Page;
   
@@ -12,13 +12,13 @@ export class SendToDormant extends BaseStep {
        this.page = page;
    }
 
-    async performSendToDormant() {
+    async performVoidCase() {
         await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'PIP');
-        await this.homePage.chooseEvent('Admin - send to Dormant');
-        await this.eventNameAndDescriptionPage.verifyPageContent("Admin - send to Dormant");
+        await this.homePage.chooseEvent('Void case');
+        await this.eventNameAndDescriptionPage.verifyPageContent("Void case");
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
-        await this.verifyHistoryTabDetails('Dormant', 'Admin - send to Dormant', 'Event Description for Automation Verification');
+        await this.verifyHistoryTabDetails("Dormant", 'Void case', 'Event Description for Automation Verification');
     }
 }
