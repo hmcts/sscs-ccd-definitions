@@ -19,6 +19,6 @@ export class SendToDormant extends BaseStep {
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
-        await this.verifyHistoryTabDetails("Dormant", 'Admin - send to Dormant', 'Event Description for Automation Verification');
+        await this.verifyHistoryTabDetails('Dormant', 'Admin - send to Dormant', 'Event Description for Automation Verification');
     }
 }
