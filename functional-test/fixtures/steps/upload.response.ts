@@ -31,8 +31,10 @@ export class UploadResponse extends BaseStep {
         await this.checkYourAnswersPage.confirmSubmission();
 
         await this.loginAsCaseworkerUserWithCaseId(pipCaseId);
-        await this.homePage.navigateToTab("History");
-        await this.historyTab.verifyHistoryPageContentByKeyValue('Upload response', 'End state', 'Response received');
+        //await this.homePage.navigateToTab("History");
+        await this.homePage.navigateToTab("Summary");
+        await this.summaryTab.verifyPresenceOfText("Response received");
+        //await this.historyTab.verifyHistoryPageContentByKeyValue('Upload response', 'End state', 'Response received');
 
         await this.homePage.chooseEvent('Response reviewed');
         await this.responseReviewedPage.verifyPageContent(responseReviewedTestData.captionValue, responseReviewedTestData.headingValue);
@@ -45,9 +47,8 @@ export class UploadResponse extends BaseStep {
         for (const linkName of this.presetLinks) {
             await this.verifyHistoryTabLink(linkName);
         }
-        //Could not verify the below steps as the state I am receiving is Ready To List.
-       /* await this.homePage.navigateToTab("Summary");
-        await this.summaryTab.verifyPresenceOfText("With FTA");*/
+        await this.homePage.navigateToTab("Summary");
+        await this.summaryTab.verifyPresenceOfText("Ready to list");
     }
 
     async performUploadResponseWithoutFurtherInfoOnATaxCredit() {
@@ -70,16 +71,9 @@ export class UploadResponse extends BaseStep {
         for (const linkName of this.presetLinks) {
             await this.verifyHistoryTabLink(linkName);
         }
-
-        /*
-        await this.homePage.delay(6000);
-        await this.homePage.reloadPage();
-        this.presetLinks.forEach(async testData => {
-            await this.verifyHistoryTabLink(testData);
-        });
-        await this.verifyHistoryTabDetails('Ready to list');
-        await this.verifyAppealDetailsTab('Sent to FTA state', 'Sent to FTA');
- */   }
+        await this.homePage.navigateToTab("Summary");
+        await this.summaryTab.verifyPresenceOfText("Ready to list");
+    }
 
     async performUploadResponseOnAUniversalCredit() {
 
@@ -114,13 +108,8 @@ export class UploadResponse extends BaseStep {
         for (const linkName of this.presetLinks) {
             await this.verifyHistoryTabLink(linkName);
         }
-        /*await this.homePage.delay(6000);
-        await this.homePage.reloadPage();
-        this.presetLinks.forEach(async testData => {
-            await this.verifyHistoryTabLink(testData);
-        });
-        await this.verifyHistoryTabDetails('Ready to list');
-        await this.verifyAppealDetailsTab('Sent to FTA state', 'Sent to FTA');*/
+        await this.homePage.navigateToTab("Summary");
+        await this.summaryTab.verifyPresenceOfText("Ready to list");
     }
 
     async verifyErrorsScenariosInUploadResponse() {

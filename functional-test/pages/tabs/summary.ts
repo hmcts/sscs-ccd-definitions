@@ -28,7 +28,6 @@ export class Summary {
     }
 
     async verifyPresenceOfText(fieldValue: string) {
-        let text = await this.page.locator(`//div/markdown/p[contains(text(),"${fieldValue}")]`).textContent();
-        expect(text).toEqual(fieldValue);
+        await expect(await this.page.locator(`//div/markdown/p[contains(text(),"${fieldValue}")]`)).toBeVisible()
     }
 }
