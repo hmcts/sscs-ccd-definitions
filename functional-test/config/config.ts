@@ -14,8 +14,8 @@ export const credentials = {
     email: process.env.TEST_CASEOFFICER_USERNAME,
     password: process.env.TEST_CASEOFFICER_PASSWORD,
   amCaseWorker: {
-    email: process.env.TEST_AM_CASEOFFICER_USERNAME || "SSCS-ctsc-clerk@justice.gov.uk",
-    password: process.env.TEST_AM_CASEOFFICER_PASSWORD || "Testing123",
+    email: process.env.TEST_AM_CASEOFFICER_USERNAME,
+    password: process.env.TEST_AM_CASEOFFICER_PASSWORD,
   },
   seniorCaseworker: {
     email: process.env.SENIOR_CASEWORKER_USERNAME,
