@@ -24,5 +24,3 @@ dist/
 playwright-report/
 logs/
 test-results
-package.json
-yarn.lock
