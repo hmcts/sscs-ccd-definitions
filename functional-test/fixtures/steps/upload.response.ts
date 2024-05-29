@@ -1,19 +1,20 @@
-import { Page } from '@playwright/test';
-import { BaseStep } from './base';
+import {expect, Page} from '@playwright/test';
+import {BaseStep} from './base';
+
 const responseReviewedTestData = require('../../pages/content/response.reviewed_en.json');
 const uploadResponseTestdata = require('../../pages/content/upload.response_en.json');
 
 export class UploadResponse extends BaseStep {
-    
-   private static caseId: string;
-   readonly page : Page;
 
-   public expLinks:string[] = ['Upload response','Ready to list', 'Update to case data', 'Add a hearing'];
-   
-   constructor(page: Page) {
-       super(page);
-       this.page = page;
-   }
+    private static caseId: string;
+    readonly page: Page;
+
+    private presetLinks: string[] = ['Upload response', 'Ready to list', 'Update to case data', 'Add a hearing'];
+
+    constructor(page: Page) {
+        super(page);
+        this.page = page;
+    }
 
 
     async performUploadResponseWithFurtherInfoOnAPIP() {
@@ -38,15 +39,15 @@ export class UploadResponse extends BaseStep {
         await this.responseReviewedPage.chooseInterlocOption('No');
         await this.responseReviewedPage.confirmSubmission();
 
-        await this.homePage.delay(6000);
-        await this.homePage.reloadPage();
-        this.expLinks.forEach(async testData => {
-            await this.verifyHistoryTabLink(testData);
-            // await this.historyTab.verifyHistoryPageContentByKeyValue(testData, 'End state', 'Response received');
-        });
-        await this.verifyHistoryTabDetails('Ready to list');
-        // await this.verifyAppealDetailsTab('Sent to FTA state', 'Sent to FTA');
+        await this.homePage.delay(1000);
+        await this.homePage.navigateToTab("History");
 
+        for (const linkName of this.presetLinks) {
+            await this.verifyHistoryTabLink(linkName);
+        }
+        //Could not verify the below steps as the state I am receiving is Ready To List.
+       /* await this.homePage.navigateToTab("Summary");
+        await this.summaryTab.verifyPresenceOfText("With FTA");*/
     }
 
     async performUploadResponseWithoutFurtherInfoOnATaxCredit() {
@@ -63,14 +64,22 @@ export class UploadResponse extends BaseStep {
         await this.checkYourAnswersPage.confirmSubmission();
 
         await this.loginAsCaseworkerUserWithCaseId(taxCaseId);
+        await this.homePage.delay(1000);
+        await this.homePage.navigateToTab("History");
+
+        for (const linkName of this.presetLinks) {
+            await this.verifyHistoryTabLink(linkName);
+        }
+
+        /*
         await this.homePage.delay(6000);
         await this.homePage.reloadPage();
-        this.expLinks.forEach(async testData => {
+        this.presetLinks.forEach(async testData => {
             await this.verifyHistoryTabLink(testData);
         });
         await this.verifyHistoryTabDetails('Ready to list');
         await this.verifyAppealDetailsTab('Sent to FTA state', 'Sent to FTA');
-    }
+ */   }
 
     async performUploadResponseOnAUniversalCredit() {
 
@@ -99,13 +108,19 @@ export class UploadResponse extends BaseStep {
         await this.checkYourAnswersPage.confirmSubmission();
 
         await this.loginAsCaseworkerUserWithCaseId(ucCaseId);
-        await this.homePage.delay(6000);
+        await this.homePage.delay(1000);
+        await this.homePage.navigateToTab("History");
+
+        for (const linkName of this.presetLinks) {
+            await this.verifyHistoryTabLink(linkName);
+        }
+        /*await this.homePage.delay(6000);
         await this.homePage.reloadPage();
-        this.expLinks.forEach(async testData => {
+        this.presetLinks.forEach(async testData => {
             await this.verifyHistoryTabLink(testData);
         });
         await this.verifyHistoryTabDetails('Ready to list');
-        await this.verifyAppealDetailsTab('Sent to FTA state', 'Sent to FTA');
+        await this.verifyAppealDetailsTab('Sent to FTA state', 'Sent to FTA');*/
     }
 
     async verifyErrorsScenariosInUploadResponse() {

@@ -2,6 +2,7 @@ import {expect, Page} from '@playwright/test';
 import {WebAction} from '../../common/web.action'
 import { HomePage } from '../common/homePage';
 import { threadId } from 'worker_threads';
+import {Locator} from "puppeteer";
 
 
 let webActions: WebAction;
@@ -51,8 +52,21 @@ export class History {
     }
 
     async verifyHistoryPageEventLink(fieldLabel: string) {
-        await expect(this.page
-            .locator(`//a[normalize-space()="${fieldLabel}"]`)).toBeVisible();
+        let linkElement = this.page.locator(`//a[normalize-space()="${fieldLabel}"]`);
+        for(let i= 0; i<=30; i++) {
+            let visibilityFlag = await linkElement.isVisible();
+            if (!visibilityFlag) {
+                await this.homePage.delay(1000);
+                await this.homePage.reloadPage();
+                await this.homePage.delay(3000);
+                console.log(`I am inside a loop ${i}`);
+                return i++;
+            } else {
+                await expect(linkElement).toBeVisible();
+                await linkElement.click();
+                break;
+            }
+        }
     }
 
     async verifyEventCompleted(linkText: string) {

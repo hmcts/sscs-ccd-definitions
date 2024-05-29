@@ -26,4 +26,9 @@ export class Summary {
         let text = await this.page.locator(`//*[normalize-space()="${fieldLabel}"]/../..//td//a`).textContent();
         expect(text).toEqual(fieldValue);
     }
+
+    async verifyPresenceOfText(fieldValue: string) {
+        let text = await this.page.locator(`//div/markdown/p[contains(text(),"${fieldValue}")]`).textContent();
+        expect(text).toEqual(fieldValue);
+    }
 }

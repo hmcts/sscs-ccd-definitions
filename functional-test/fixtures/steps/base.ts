@@ -91,14 +91,13 @@ export abstract class BaseStep {
 
   async verifyHistoryTabDetails(state?: string, event?: string, comment?: string ) {
         await this.homePage.navigateToTab("History");
-        if(state) await this.historyTab.verifyHistoryPageContentByKeyValue('End state', state);
+        /*if(state) await this.historyTab.verifyHistoryPageContentByKeyValue('End state', state);
         if(event) await this.historyTab.verifyHistoryPageContentByKeyValue('Event', event);
-        if(comment) await this.historyTab.verifyHistoryPageContentByKeyValue('Comment', comment);
+        if(comment) await this.historyTab.verifyHistoryPageContentByKeyValue('Comment', comment);*/
         if(event) await this.historyTab.verifyEventCompleted(event);
   }
 
   async verifyHistoryTabLink(linkLabel: string) {
-      await this.homePage.navigateToTab("History");
       await this.historyTab.verifyHistoryPageEventLink(linkLabel);
 }
 

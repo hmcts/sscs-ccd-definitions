@@ -38,7 +38,7 @@ export class HomePage {
     }
 
     async reloadPage() {
-        await this.page.reload({timeout:10000, waitUntil:'load'});
+        await this.page.reload({timeout:12000, waitUntil:'load'});
     }
 
     async goToHomePage(caseId: string): Promise<void> {
