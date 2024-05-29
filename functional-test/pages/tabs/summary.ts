@@ -28,6 +28,8 @@ export class Summary {
     }
 
     async verifyPresenceOfText(fieldValue: string) {
-        await expect(await this.page.locator(`//div/markdown/p[contains(text(),"${fieldValue}")]`)).toBeVisible()
+        if(!await this.page.locator(`//div/markdown/p[contains(text(),"${fieldValue}")]`).isVisible()) {
+            throw new Error("The relevant text is not visilble");
+        }
     }
 }
