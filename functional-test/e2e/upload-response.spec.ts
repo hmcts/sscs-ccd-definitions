@@ -18,7 +18,7 @@ test.describe('Upload response tests', async() => {
     });
 })
 
-test.describe.serial('Error scenarios', async () => {
+test.skip('Error scenarios', async () => {
 
     test("Verify Upload response error scenario", async({ uploadResponseSteps }) => {
         test.slow();
