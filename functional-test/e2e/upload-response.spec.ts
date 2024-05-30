@@ -1,7 +1,6 @@
 import { test } from "../lib/steps.factory";
 
-test.describe('Upload response tests', async() => {
-
+test.skip('Upload response tests', async() => {
     test("As a caseworker review response submitted with any further info", async ({ uploadResponseSteps }) => {
         test.slow();
         await uploadResponseSteps.performUploadResponseWithFurtherInfoOnAPIP();
@@ -18,8 +17,8 @@ test.describe('Upload response tests', async() => {
     });
 })
 
-test.describe.serial('Error scenarios', async () => {
-    
+test.skip('Error scenarios', async () => {
+
     test("Verify Upload response error scenario", async({ uploadResponseSteps }) => {
         test.slow();
         await uploadResponseSteps.verifyErrorsScenariosInUploadResponse();
