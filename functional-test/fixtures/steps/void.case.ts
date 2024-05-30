@@ -19,6 +19,6 @@ export class VoidCase extends BaseStep {
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
-        //await this.verifyHistoryTabDetails("Dormant", 'Void case', 'Event Description for Automation Verification');
+        await this.verifyHistoryTabDetails("Dormant", 'Void case', 'Event Description for Automation Verification');
     }
 }
