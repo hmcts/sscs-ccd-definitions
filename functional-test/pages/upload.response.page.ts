@@ -24,11 +24,12 @@ export class UploadResponsePage {
     }
 
     async uploadDocs(): Promise<void> {
-        await webActions.uploadFile('#dwpResponseDocument_documentLink', uploadResponseTestdata.testfileone);
+        await webActions.uploadFileUsingAFileChooser('#dwpResponseDocument_documentLink', uploadResponseTestdata.testfileone);
         await this.page.waitForTimeout(7000);
-        await webActions.uploadFile('#dwpAT38Document_documentLink', uploadResponseTestdata.testfiletwo);
+        await webActions.uploadFileUsingAFileChooser('#dwpAT38Document_documentLink', uploadResponseTestdata.testfiletwo);
         await this.page.waitForTimeout(7000);
-        await webActions.uploadFile('#dwpEvidenceBundleDocument_documentLink', uploadResponseTestdata.testfilethree);
+        await webActions.uploadFileUsingAFileChooser('#dwpEvidenceBundleDocument_documentLink', uploadResponseTestdata.testfilethree);
+        await this.page.waitForTimeout(7000);
     }
 
     async uploadPartialDocs(): Promise<void> {
@@ -79,7 +80,6 @@ export class UploadResponsePage {
     }
 
     async continueSubmission(): Promise<void> {
-        await this.page.waitForTimeout(3000);
         await webActions.clickButton('Continue');
     }
 

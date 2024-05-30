@@ -2,6 +2,7 @@ import { test } from "../lib/steps.factory";
 
 test.describe('Upload response tests', async() => {
     test.only("As a caseworker review response submitted with any further info",{tag: '@wip2'}, async ({ uploadResponseSteps }) => {
+        test.slow();
         await uploadResponseSteps.performUploadResponseWithFurtherInfoOnAPIP();
     });
     

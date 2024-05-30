@@ -23,7 +23,7 @@ export class UploadResponse extends BaseStep {
         await this.homePage.chooseEvent('Upload response');
         await this.uploadResponsePage.verifyPageContent("");
         await this.uploadResponsePage.uploadDocs();
-        /*await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.pipIssueCode);
+        await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.pipIssueCode);
         await this.uploadResponsePage.chooseAssistOption('Yes');
         await this.uploadResponsePage.continueSubmission();
 
@@ -48,7 +48,7 @@ export class UploadResponse extends BaseStep {
             await this.verifyHistoryTabLink(linkName);
         }
         await this.homePage.navigateToTab("Summary");
-        await this.summaryTab.verifyPresenceOfText("Ready to list");*/
+        await this.summaryTab.verifyPresenceOfText("Ready to list");
    }
 
     async performUploadResponseWithoutFurtherInfoOnATaxCredit() {
