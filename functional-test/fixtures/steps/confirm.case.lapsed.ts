@@ -14,6 +14,7 @@ export class ConfirmCaseLapsed extends BaseStep {
     async performConfirmCaseLapsed() {
 
         await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'CHILDSUPPORT');
+        await this.homePage.delay(5000); //Other back end events to complete...
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Confirm lapsed');
 
