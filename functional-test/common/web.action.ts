@@ -127,12 +127,9 @@ export class WebAction {
             .locator(elementId).click();
         const fileChooser = await fileChooserPromise;
         await fileChooser.setFiles(`functional-test/data/file/${fileName}`);
+    }
 
-        /*await this.page
-            .locator(elementId)
-            .setInputFiles(`functional-test/data/file/${fileName}`)
-            .catch((error) => {
-                logger.error(`File upload element is not present: ${error}`);
-            });*/
+    async screenshot() {
+        await this.page.screenshot({ path: 'screenshot.png', fullPage: true });
     }
 }

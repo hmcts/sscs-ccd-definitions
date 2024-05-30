@@ -33,12 +33,14 @@ export class UploadResponsePage {
     }
 
     async uploadPartialDocs(): Promise<void> {
-        await webActions.uploadFile('#dwpResponseDocument_documentLink', uploadResponseTestdata.testfileone);
+        await webActions.uploadFileUsingAFileChooser('#dwpResponseDocument_documentLink', uploadResponseTestdata.testfileone);
         await this.page.waitForTimeout(7000);
-        await webActions.uploadFile('#dwpEvidenceBundleDocument_documentLink', uploadResponseTestdata.testfilethree);
+        await webActions.uploadFileUsingAFileChooser('#dwpEvidenceBundleDocument_documentLink', uploadResponseTestdata.testfilethree);
+        await this.page.waitForTimeout(7000);
     }
 
     async verifyDocMissingErrorMsg(): Promise<void>{
+        await webActions.screenshot();
         await webActions.verifyElementVisibility('#errors');
         await webActions.verifyTextVisibility('AT38 document is missing');
     }
