@@ -21,9 +21,8 @@ export class HomePage {
         this.page = page;
         this.notePadTab = page.locator('//div[contains(text(), "Notepad")]');
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
-        this.historyTab = page.locator('//div[contains(text(), "History")]');
-        this.historyTab = page.locator('//div[@role="tab"]//div[text()="History"]').first();
-        //this.historyTab = page.getByText('History', {exact: true});
+        this.historyTab = page.locator('//div[contains(text(), "History")]').first();
+        //this.historyTab = page.locator('//div[@role="tab"]//div[text()="History"]').first();
         this.appealDetailsTab = page.getByText('Appeal Details', {exact: true});
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
