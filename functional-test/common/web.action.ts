@@ -95,6 +95,15 @@ export class WebAction {
             });
     }
 
+    async isLinkClickable(elementLocator: string): Promise<void> {
+        await this.page
+            .getByRole('link', { name: elementLocator})
+            .isEnabled()
+            .catch((error) => {
+                logger.error(`Link element is not present: ${error}`);
+            });
+    }
+
     async clickNextStepButton(elementId: string): Promise<void> {
         await this.page
          .click(elementId)
@@ -110,5 +119,20 @@ export class WebAction {
            .catch((error) => {
             logger.error(`File upload element is not present: ${error}`);
          });
+    }
+
+    async uploadFileUsingAFileChooser(elementId: string, fileName: string): Promise<void> {
+        const fileChooserPromise = this.page.waitForEvent('filechooser');
+        await this.page
+            .locator(elementId).click();
+        const fileChooser = await fileChooserPromise;
+        await fileChooser.setFiles(`functional-test/data/file/${fileName}`);
+
+        /*await this.page
+            .locator(elementId)
+            .setInputFiles(`functional-test/data/file/${fileName}`)
+            .catch((error) => {
+                logger.error(`File upload element is not present: ${error}`);
+            });*/
     }
 }

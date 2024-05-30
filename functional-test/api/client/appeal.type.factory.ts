@@ -50,6 +50,7 @@ async function createCaseBasedOnCaseType(caseType: string) {
     const response = await apiContext.post(`${urls.tribunalsApiUri}/api/appeals`, {
         data: dataPayload
     });
+    logger.info('The value of the Response Status : '+response.statusText());
     const respHeaders = response.headers();
     const locationUrl: string = respHeaders.location;
     let caseId = locationUrl.substring(locationUrl.lastIndexOf('/') + 1);

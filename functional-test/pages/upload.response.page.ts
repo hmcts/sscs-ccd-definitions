@@ -13,6 +13,16 @@ export class UploadResponsePage {
         webActions = new WebAction(this.page);
     }
 
+    async verifyPageContent(casereference : string) {
+        await webActions.verifyPageLabel('.govuk-caption-l', 'Upload response'); //Captor Text
+        //await webActions.verifyPageLabel('h1', casereference+": Bloggs"); //Captor Text
+        await webActions.verifyPageLabel('h2', 'FTA Response'); //Section heading
+        await webActions.verifyPageLabel('h2', 'AT38 (Optional)'); //Section heading
+        await webActions.verifyPageLabel('h2', 'FTA Evidence bundle'); //Section heading
+        await webActions.verifyPageLabel('h2', 'Audio/Video Evidence'); //Section heading
+        await webActions.isLinkClickable('Cancel');
+    }
+
     async uploadDocs(): Promise<void> {
         await webActions.uploadFile('#dwpResponseDocument_documentLink', uploadResponseTestdata.testfileone);
         await this.page.waitForTimeout(7000);
