@@ -23,6 +23,7 @@ module.exports = defineConfig({
     host: '0.0.0.0',
     port: 9223,  printSteps: true}]],
   use: {
+    headless: false,
     baseURL: urls.xuiUrl,
     trace: "on-first-retry",
     screenshot: 'only-on-failure',
