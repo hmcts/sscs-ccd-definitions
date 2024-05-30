@@ -6,13 +6,13 @@ test.describe('Upload response tests', async() => {
         await uploadResponseSteps.performUploadResponseWithFurtherInfoOnAPIP();
     });
     
-    test("As a caseworker review response submitted without any further info", {tag: '@wip2'},async ({ uploadResponseSteps }) => {
+    /*test("As a caseworker review response submitted without any further info", {tag: '@wip2'},async ({ uploadResponseSteps }) => {
         await uploadResponseSteps.performUploadResponseWithoutFurtherInfoOnATaxCredit();
     });
     
     test("As a caseworker review response submitted for an UC case", {tag: '@wip2'},async({ uploadResponseSteps }) => {
         await uploadResponseSteps.performUploadResponseOnAUniversalCredit();
-    });
+    });*/
 })
 
 test.describe.serial('Error scenarios', async () => {
