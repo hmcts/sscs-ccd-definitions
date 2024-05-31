@@ -23,6 +23,7 @@ export class UploadResponse extends BaseStep {
 
         //await this.homePage.waitForLoadState();
         await this.homePage.chooseEvent('Upload response');
+        await this.homePage.delay(2000);
         //await this.homePage.waitForLoadState();
         await this.uploadResponsePage.verifyPageContent("");
         await this.uploadResponsePage.uploadDocs();
