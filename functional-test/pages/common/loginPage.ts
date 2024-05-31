@@ -52,8 +52,10 @@ export class LoginPage {
 
     async verifySuccessfulLoginForAMCaseworker(isLoggedIn?: boolean): Promise<void> {
         if(isLoggedIn) await this.page.context().clearCookies();
-        await webActions.inputField('#username', credentials.amCaseWorker.email);
-        await webActions.inputField('#password', credentials.amCaseWorker.password);
+        //await webActions.inputField('#username', credentials.amCaseWorker.email);
+        //await webActions.inputField('#password', credentials.amCaseWorker.password);
+        await webActions.inputField('#username', 'SSCS-ctsc-admin1@justice.gov.uk');
+        await webActions.inputField('#password', 'Testing123');
         await webActions.clickButton('Sign in');
     }
 
