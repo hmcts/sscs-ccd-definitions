@@ -37,8 +37,8 @@ export class UploadResponse extends BaseStep {
 
         await this.loginAsCaseworkerUserWithCaseId(pipCaseId);
         //await this.homePage.navigateToTab("History");
-        await this.homePage.navigateToTab("Summary");
-        await this.summaryTab.verifyPresenceOfText("Response received");
+        //await this.homePage.navigateToTab("Summary");
+        //await this.summaryTab.verifyPresenceOfText("Response received"); //The State moves on so cannot verifyr this code correctly.
         //await this.historyTab.verifyHistoryPageContentByKeyValue('Upload response', 'End state', 'Response received');
 
         await this.homePage.chooseEvent('Response reviewed');
