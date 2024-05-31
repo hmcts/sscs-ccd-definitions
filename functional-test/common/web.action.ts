@@ -132,6 +132,6 @@ export class WebAction {
     }
 
     async screenshot() {
-        await this.page.screenshot({ path: '/playwright-report/screenshot.png', fullPage: true });
+        await this.page.screenshot({ path: 'playwright-report/screenshot.png', fullPage: true });
     }
 }
