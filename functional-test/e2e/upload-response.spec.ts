@@ -30,3 +30,15 @@ test.describe.serial('Error scenarios', async () => {
         await uploadResponseSteps.verifyIssueCodeErrorsScenariosInUploadResponse();
     });
 })
+
+test.afterEach(async ({ page }, testInfo) => {
+    if (testInfo.status !== testInfo.expectedStatus) {
+        // Get a unique place for the screenshot.
+        const screenshotPath = testInfo.outputPath(`/playwright-report/failure.png`);
+        // Add it to the report.
+        testInfo.attachments.push({ name: 'screenshot', path: screenshotPath, contentType: 'image/png' });
+        // Take the screenshot itself.
+        await page.screenshot({ path: screenshotPath, timeout: 5000 });
+    }
+});
+
