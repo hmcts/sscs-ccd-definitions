@@ -54,11 +54,21 @@ export class WebAction {
        // await this.page.getByRole('button', { name: elementLocator}).waitFor();  // <
         await this.page
          .getByRole('button', { name: elementLocator})
-         //.click({force: true, })
-            .dispatchEvent('click')
+         .click({force: true, })
          .catch((error) => {
             logger.error(`Button element is not present: ${error}`);
          });
+        //expect(this.page).toHaveURL('trigger/dwpUploadResponse/dwpUploadResponse1.0');
+    }
+
+    async clickGoButton(elementLocator: string): Promise<void> {
+        // await this.page.getByRole('button', { name: elementLocator}).waitFor();  // <
+        await this.page
+            .getByRole('button', { name: elementLocator})
+            .dispatchEvent('click')
+            .catch((error) => {
+                logger.error(`Button element is not present: ${error}`);
+            });
         //expect(this.page).toHaveURL('trigger/dwpUploadResponse/dwpUploadResponse1.0');
     }
 
