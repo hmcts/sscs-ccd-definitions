@@ -21,16 +21,17 @@ export class UploadResponse extends BaseStep {
 
         let pipCaseId = await this.loginAsDWPUser("PIP");
 
-        await this.homePage.waitForLoadState();
+        //await this.homePage.waitForLoadState();
         await this.homePage.chooseEvent('Upload response');
-        await this.homePage.waitForLoadState();
+        //await this.homePage.waitForLoadState();
         await this.uploadResponsePage.verifyPageContent("");
         await this.uploadResponsePage.uploadDocs();
         await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.pipIssueCode);
         await this.uploadResponsePage.chooseAssistOption('Yes');
         await this.uploadResponsePage.continueSubmission();
 
-        await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
+        await this.checkYourAnswersPage.verifyCYAPageContent("Upload response",
+            uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
 
         await this.loginAsCaseworkerUserWithCaseId(pipCaseId);
