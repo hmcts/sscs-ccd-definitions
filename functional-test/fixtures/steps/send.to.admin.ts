@@ -17,8 +17,10 @@ export class SendToAdmin extends BaseStep {
     async performSendToAdmin() {
 
         await this.loginAsJudgeUser('TAX CREDIT');
+        await this.homePage.waitForLoadState();
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Send to admin');
+        await this.homePage.waitForLoadState();
 
         //Params are passed to this page as this is a common page to be reused.
         await this.textAreaPage.verifyPageContent(sendToAdminData.sendToAdminCaption,

@@ -51,7 +51,7 @@ export class WebAction {
     }
 
     async clickButton(elementLocator: string): Promise<void> {
-        await this.page.getByRole('button', { name: elementLocator}).waitFor();  // <
+       // await this.page.getByRole('button', { name: elementLocator}).waitFor();  // <
         await this.page
          .getByRole('button', { name: elementLocator})
          .click({force: true})
