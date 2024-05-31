@@ -20,7 +20,10 @@ export class UploadResponse extends BaseStep {
     async performUploadResponseWithFurtherInfoOnAPIP() {
 
         let pipCaseId = await this.loginAsDWPUser("PIP");
+
+        await this.homePage.waitForLoadState();
         await this.homePage.chooseEvent('Upload response');
+        await this.homePage.waitForLoadState();
         await this.uploadResponsePage.verifyPageContent("");
         await this.uploadResponsePage.uploadDocs();
         await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.pipIssueCode);

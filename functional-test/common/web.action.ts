@@ -51,12 +51,14 @@ export class WebAction {
     }
 
     async clickButton(elementLocator: string): Promise<void> {
+        await this.page.getByRole('button', { name: elementLocator}).waitFor();  // <
         await this.page
          .getByRole('button', { name: elementLocator})
-         .click()
+         .click({force: true})
          .catch((error) => {
             logger.error(`Button element is not present: ${error}`);
          });
+        //expect(this.page).toHaveURL('trigger/dwpUploadResponse/dwpUploadResponse1.0');
     }
 
     async clickSubmitButton(): Promise<void> {

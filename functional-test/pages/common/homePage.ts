@@ -61,6 +61,10 @@ export class HomePage {
         await this.beforeTabBtn.click();
     }
 
+    async waitForLoadState() {
+        await this.page.waitForLoadState('networkidle');
+    }
+
     async navigateToTab(tabName : string): Promise<void> {
         switch(tabName) {
             case "Notepad": {
