@@ -60,7 +60,7 @@ export class UploadResponse extends BaseStep {
 
         let taxCaseId = await this.loginAsHMRCUser("TAX CREDIT");
         await this.homePage.chooseEvent('Upload response');
-        await this.homePage.delay(2000);
+        await this.homePage.delay(4000);
         await this.uploadResponsePage.verifyPageContent();
         await this.uploadResponsePage.uploadDocs();
         await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.taxIssueCode);
@@ -70,8 +70,8 @@ export class UploadResponse extends BaseStep {
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", uploadResponseTestdata.taxBenefitCode, uploadResponseTestdata.taxIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
 
+        await this.homePage.delay(3000);
         await this.loginAsCaseworkerUserWithCaseId(taxCaseId);
-        await this.homePage.delay(1000);
         await this.homePage.navigateToTab("History");
 
         for (const linkName of this.presetLinks) {
