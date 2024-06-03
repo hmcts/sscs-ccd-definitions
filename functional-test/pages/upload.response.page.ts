@@ -85,4 +85,8 @@ export class UploadResponsePage {
         await webActions.clickButton('Continue');
     }
 
+    async delay(ms: number) {
+        return new Promise( resolve => setTimeout(resolve, ms) );
+    }
+
 }

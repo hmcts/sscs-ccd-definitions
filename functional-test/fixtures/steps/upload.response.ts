@@ -59,7 +59,6 @@ export class UploadResponse extends BaseStep {
     async performUploadResponseWithoutFurtherInfoOnATaxCredit() {
 
         let taxCaseId = await this.loginAsHMRCUser("TAX CREDIT");
-
         await this.homePage.chooseEvent('Upload response');
         await this.homePage.delay(2000);
         await this.uploadResponsePage.verifyPageContent("");
@@ -88,6 +87,8 @@ export class UploadResponse extends BaseStep {
 
 
         await this.homePage.chooseEvent('Upload response');
+        await this.homePage.delay(2000);
+        await this.uploadResponsePage.verifyPageContent("");
         await this.uploadResponsePage.uploadDocs();
         await this.uploadResponsePage.chooseAssistOption('No');
         await this.uploadResponsePage.continueSubmission();
@@ -125,10 +126,13 @@ export class UploadResponse extends BaseStep {
         UploadResponse.caseId = pipErrorCaseId;
 
         await this.homePage.chooseEvent('Upload response');
+        await this.homePage.delay(2000);
+        await this.uploadResponsePage.verifyPageContent("");
         await this.uploadResponsePage.uploadPartialDocs();
         await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.pipIssueCode);
         await this.uploadResponsePage.chooseAssistOption('Yes');
         await this.uploadResponsePage.continueSubmission();
+        await this.uploadResponsePage.delay(1000);
         await this.uploadResponsePage.verifyDocMissingErrorMsg();
     }
 
