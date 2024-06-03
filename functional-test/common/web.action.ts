@@ -62,13 +62,13 @@ export class WebAction {
     }
 
     async clickGoButton(elementLocator: string): Promise<void> {
-        // await this.page.getByRole('button', { name: elementLocator}).waitFor();  // <
         await this.page
             .getByRole('button', { name: elementLocator})
             .dispatchEvent('click')
             .catch((error) => {
                 logger.error(`Button element is not present: ${error}`);
             });
+        await this.delay(1000);
         //expect(this.page).toHaveURL('trigger/dwpUploadResponse/dwpUploadResponse1.0');
     }
 
@@ -144,5 +144,9 @@ export class WebAction {
 
     async screenshot() {
         await this.page.screenshot({ path: 'playwright-report/screenshot.png', fullPage: true });
+    }
+
+    async delay(ms: number) {
+        return new Promise( resolve => setTimeout(resolve, ms) );
     }
 }
