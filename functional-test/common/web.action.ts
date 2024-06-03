@@ -54,7 +54,7 @@ export class WebAction {
        // await this.page.getByRole('button', { name: elementLocator}).waitFor();  // <
         await this.page
          .getByRole('button', { name: elementLocator})
-         .click({force: true, })
+         .click({force: true})
          .catch((error) => {
             logger.error(`Button element is not present: ${error}`);
          });

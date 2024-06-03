@@ -7,6 +7,7 @@ test.describe('Upload response tests', async() => {
     });
     
     test("As a caseworker review response submitted without any further info", {tag: '@wip2'},async ({ uploadResponseSteps }) => {
+        test.slow();
         await uploadResponseSteps.performUploadResponseWithoutFurtherInfoOnATaxCredit();
     });
     
@@ -23,10 +24,12 @@ test.describe.serial('Error scenarios', async () => {
     });
 
     test("Verify Upload response PHME error scenario", async({ uploadResponseSteps }) => {
+        test.slow();
         await uploadResponseSteps.verifyPHMEErrorsScenariosInUploadResponse();
     });
 
     test("Verify Upload response Issue code error scenario", async({ uploadResponseSteps }) => {
+        test.slow();
         await uploadResponseSteps.verifyIssueCodeErrorsScenariosInUploadResponse();
     });
 })
