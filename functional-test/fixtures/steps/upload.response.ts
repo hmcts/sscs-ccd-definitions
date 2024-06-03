@@ -25,7 +25,7 @@ export class UploadResponse extends BaseStep {
         await this.homePage.chooseEvent('Upload response');
         await this.homePage.delay(4000);
         //await this.homePage.waitForLoadState();
-        await this.uploadResponsePage.verifyPageContent("");
+        await this.uploadResponsePage.verifyPageContent();
         await this.uploadResponsePage.uploadDocs();
         await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.pipIssueCode);
         await this.uploadResponsePage.chooseAssistOption('Yes');
@@ -37,8 +37,8 @@ export class UploadResponse extends BaseStep {
 
         await this.loginAsCaseworkerUserWithCaseId(pipCaseId);
         //await this.homePage.navigateToTab("History");
-        //await this.homePage.navigateToTab("Summary");
-        //await this.summaryTab.verifyPresenceOfText("Response received"); //The State moves on so cannot verifyr this code correctly.
+        await this.homePage.navigateToTab("Summary");
+        await this.summaryTab.verifyPresenceOfText("Response received"); //The State moves on so cannot verifyr this code correctly.
         //await this.historyTab.verifyHistoryPageContentByKeyValue('Upload response', 'End state', 'Response received');
 
         await this.homePage.chooseEvent('Response reviewed');
@@ -61,7 +61,7 @@ export class UploadResponse extends BaseStep {
         let taxCaseId = await this.loginAsHMRCUser("TAX CREDIT");
         await this.homePage.chooseEvent('Upload response');
         await this.homePage.delay(2000);
-        await this.uploadResponsePage.verifyPageContent("");
+        await this.uploadResponsePage.verifyPageContent();
         await this.uploadResponsePage.uploadDocs();
         await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.taxIssueCode);
         await this.uploadResponsePage.chooseAssistOption('No');
@@ -88,7 +88,7 @@ export class UploadResponse extends BaseStep {
 
         await this.homePage.chooseEvent('Upload response');
         await this.homePage.delay(2000);
-        await this.uploadResponsePage.verifyPageContent("");
+        await this.uploadResponsePage.verifyPageContent();
         await this.uploadResponsePage.uploadDocs();
         await this.uploadResponsePage.chooseAssistOption('No');
         await this.uploadResponsePage.continueSubmission();
@@ -127,7 +127,7 @@ export class UploadResponse extends BaseStep {
 
         await this.homePage.chooseEvent('Upload response');
         await this.homePage.delay(2000);
-        await this.uploadResponsePage.verifyPageContent("");
+        await this.uploadResponsePage.verifyPageContent();
         await this.uploadResponsePage.uploadPartialDocs();
         await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.pipIssueCode);
         await this.uploadResponsePage.chooseAssistOption('Yes');

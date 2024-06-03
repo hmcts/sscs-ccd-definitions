@@ -13,7 +13,7 @@ export class UploadResponsePage {
         webActions = new WebAction(this.page);
     }
 
-    async verifyPageContent(casereference : string) {
+    async verifyPageContent() {
         await webActions.verifyPageLabel('.govuk-caption-l', 'Upload response'); //Captor Text
         //await webActions.verifyPageLabel('h1', casereference+": Bloggs"); //Captor Text
        /* await webActions.verifyPageLabel('h2', 'FTA Response'); //Section heading
