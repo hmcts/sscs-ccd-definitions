@@ -68,7 +68,6 @@ export class WebAction {
             .catch((error) => {
                 logger.error(`Button element is not present: ${error}`);
             });
-        //await this.delay(2000);
         //await this.page.isHidden('.spinner-container',{strict: true, timeout: 4000});
         //expect(this.page).toHaveURL('trigger/dwpUploadResponse/dwpUploadResponse1.0');
     }
