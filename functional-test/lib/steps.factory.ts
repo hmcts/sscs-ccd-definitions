@@ -6,7 +6,7 @@ import { AssociateCase } from '../fixtures/steps/associate-case';
 import { SendToAdmin } from '../fixtures/steps/send.to.admin';
 import { UploadResponse } from '../fixtures/steps/upload.response';
 import {ListingError} from "../fixtures/steps/listing.error";
-import { SendToDormant } from '../fixtures/steps/send.to.dormant';
+import { StrikeOutCase } from '../fixtures/steps/strike.out.case';
 import {use} from "chai";
 
 
@@ -18,7 +18,7 @@ type MyStepsFixtures = {
     sendToAdminSteps: SendToAdmin
     uploadResponseSteps: UploadResponse
     listingErrorSteps: ListingError
-    sendToDormantSteps: SendToDormant
+    strikeOutCaseSteps: StrikeOutCase
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -46,9 +46,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const uploadResponseSteps = new UploadResponse(page);
         await use(uploadResponseSteps);
     },
-    sendToDormantSteps:async ({page}, use) =>{
-        const sendToDormantSteps = new SendToDormant(page);
-        await use(sendToDormantSteps)
+    strikeOutCaseSteps:async ({page}, use) =>{
+        const strikeOutCaseSteps = new StrikeOutCase(page);
+        await use(strikeOutCaseSteps)
     },
     listingErrorSteps:async ({page}, use) =>{
         const listingErrorSteps = new ListingError(page);
