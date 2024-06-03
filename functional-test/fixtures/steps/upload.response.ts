@@ -61,6 +61,8 @@ export class UploadResponse extends BaseStep {
         let taxCaseId = await this.loginAsHMRCUser("TAX CREDIT");
 
         await this.homePage.chooseEvent('Upload response');
+        await this.homePage.delay(2000);
+        await this.uploadResponsePage.verifyPageContent("");
         await this.uploadResponsePage.uploadDocs();
         await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.taxIssueCode);
         await this.uploadResponsePage.chooseAssistOption('No');
