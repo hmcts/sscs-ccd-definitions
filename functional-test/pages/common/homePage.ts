@@ -43,6 +43,7 @@ export class HomePage {
 
     async goToHomePage(caseId: string): Promise<void> {
         await this.page.goto(`/cases/case-details/${caseId}`);
+        await this.delay(1000);
         await expect(this.summaryTab)
             .toBeVisible()
             .catch((error) => {
