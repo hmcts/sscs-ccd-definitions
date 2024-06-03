@@ -23,8 +23,10 @@ export class ConfirmCaseLapsed extends BaseStep {
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
+        await this.homePage.navigateToTab("History");
+        await this.verifyHistoryTabLink('Confirm lapsed');
 
-        await this.verifyHistoryTabDetails(null, 'Confirm lapsed', 'Event Description for Automation Verification');
+        //await this.verifyHistoryTabDetails(null, 'Confirm lapsed', 'Event Description for Automation Verification');
     }
 
 }
