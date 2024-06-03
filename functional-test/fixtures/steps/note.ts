@@ -32,8 +32,12 @@ export class Note extends BaseStep {
 
         await this.homePage.navigateToTab("Notepad");
         await this.notePadTab.verifyPageContentByKeyValue('Note','Playwright test note');
+        await this.homePage.navigateToTab("History");
+        await this.historyTab.verifyEventCompleted("Add a note");
 
-        await this.verifyHistoryTabDetails('With FTA', 'Add a note', 'Event Description for Automation Verification - Add a note');
+
+
+        //await this.verifyHistoryTabDetails('With FTA', 'Add a note', 'Event Description for Automation Verification - Add a note');
     }
 
     

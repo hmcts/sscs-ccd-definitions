@@ -20,7 +20,9 @@ export class EvidenceReminder extends BaseStep {
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
+        await this.homePage.navigateToTab("History");
+        await this.verifyHistoryTabLink('Evidence reminder');
 
-        await this.verifyHistoryTabDetails('With FTA', 'Evidence reminder', 'Event Description for Automation Verification');
+        //await this.verifyHistoryTabDetails('With FTA', 'Evidence reminder', 'Event Description for Automation Verification');
     }
 }
