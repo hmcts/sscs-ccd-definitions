@@ -23,6 +23,7 @@ export class ListingError extends BaseStep {
 
         //Create Case
         await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'PIP');
+        await this.homePage.delay(5000); //Other back end events to complete...
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Listing Error');
 

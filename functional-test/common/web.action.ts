@@ -51,12 +51,25 @@ export class WebAction {
     }
 
     async clickButton(elementLocator: string): Promise<void> {
+       // await this.page.getByRole('button', { name: elementLocator}).waitFor();  // <
         await this.page
          .getByRole('button', { name: elementLocator})
-         .click()
+         .click({force: true})
          .catch((error) => {
             logger.error(`Button element is not present: ${error}`);
          });
+        //expect(this.page).toHaveURL('trigger/dwpUploadResponse/dwpUploadResponse1.0');
+    }
+
+    async clickGoButton(elementLocator: string): Promise<void> {
+        await this.page
+            .getByRole('button', { name: elementLocator})
+            .dispatchEvent('click')
+            .catch((error) => {
+                logger.error(`Button element is not present: ${error}`);
+            });
+        //await this.page.isHidden('.spinner-container',{strict: true, timeout: 4000});
+        //expect(this.page).toHaveURL('trigger/dwpUploadResponse/dwpUploadResponse1.0');
     }
 
     async clickSubmitButton(): Promise<void> {
@@ -95,6 +108,15 @@ export class WebAction {
             });
     }
 
+    async isLinkClickable(elementLocator: string): Promise<void> {
+        await this.page
+            .getByRole('link', { name: elementLocator})
+            .isEnabled()
+            .catch((error) => {
+                logger.error(`Link element is not present: ${error}`);
+            });
+    }
+
     async clickNextStepButton(elementId: string): Promise<void> {
         await this.page
          .click(elementId)
@@ -110,5 +132,21 @@ export class WebAction {
            .catch((error) => {
             logger.error(`File upload element is not present: ${error}`);
          });
+    }
+
+    async uploadFileUsingAFileChooser(elementId: string, fileName: string): Promise<void> {
+        const fileChooserPromise = this.page.waitForEvent('filechooser');
+        await this.page
+            .locator(elementId).click();
+        const fileChooser = await fileChooserPromise;
+        await fileChooser.setFiles(`functional-test/data/file/${fileName}`);
+    }
+
+    async screenshot() {
+        await this.page.screenshot({ path: 'playwright-report/screenshot.png', fullPage: true });
+    }
+
+    async delay(ms: number) {
+        return new Promise( resolve => setTimeout(resolve, ms) );
     }
 }

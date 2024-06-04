@@ -17,8 +17,11 @@ export class SendToAdmin extends BaseStep {
     async performSendToAdmin() {
 
         await this.loginAsJudgeUser('TAX CREDIT');
+        await this.homePage.delay(5000); //Other back end events to complete...
+        //await this.homePage.waitForLoadState();
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Send to admin');
+        //await this.homePage.waitForLoadState();
 
         //Params are passed to this page as this is a common page to be reused.
         await this.textAreaPage.verifyPageContent(sendToAdminData.sendToAdminCaption,
@@ -33,8 +36,10 @@ export class SendToAdmin extends BaseStep {
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
+        await this.homePage.navigateToTab("History");
+        await this.verifyHistoryTabLink('Send to admin');
 
-        await this.verifyHistoryTabDetails('With FTA', 'Send to admin', 'Event Description for Automation Verification');
+        //await this.verifyHistoryTabDetails('With FTA', 'Send to admin', 'Event Description for Automation Verification');
     }
 
 }

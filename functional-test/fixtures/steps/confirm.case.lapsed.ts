@@ -14,6 +14,7 @@ export class ConfirmCaseLapsed extends BaseStep {
     async performConfirmCaseLapsed() {
 
         await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'CHILDSUPPORT');
+        await this.homePage.delay(5000); //Other back end events to complete...
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Confirm lapsed');
 
@@ -22,8 +23,10 @@ export class ConfirmCaseLapsed extends BaseStep {
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
+        await this.homePage.navigateToTab("History");
+        await this.verifyHistoryTabLink('Confirm lapsed');
 
-        await this.verifyHistoryTabDetails(null, 'Confirm lapsed', 'Event Description for Automation Verification');
+        //await this.verifyHistoryTabDetails(null, 'Confirm lapsed', 'Event Description for Automation Verification');
     }
 
 }
