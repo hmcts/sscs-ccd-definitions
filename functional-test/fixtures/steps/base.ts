@@ -54,7 +54,7 @@ export abstract class BaseStep {
     async loginAsDWPUser(caseType: string) {
         var caseId = await createCaseBasedOnCaseType(caseType);
         await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForDWPResponseWriter(true);
+        await this.loginPage.verifySuccessfulLoginForDWPResponseWriter(false);
         await this.homePage.goToHomePage(caseId);
         return caseId;
     }
@@ -62,7 +62,7 @@ export abstract class BaseStep {
     async loginAsCaseworkerUserWithoutCaseId(caseId?: string, caseType?: string) {
         var caseId = await createCaseBasedOnCaseType(caseType);
         await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForAMCaseworker(true);
+        await this.loginPage.verifySuccessfulLoginForAMCaseworker(false);
         await this.homePage.goToHomePage(caseId);
     }
 
@@ -75,7 +75,7 @@ export abstract class BaseStep {
     async loginAsHMRCUser(caseType: string) {
         var caseId = await createCaseBasedOnCaseType(caseType);
         await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForHMRCUser(true);
+        await this.loginPage.verifySuccessfulLoginForHMRCUser(false);
         await this.homePage.goToHomePage(caseId);
         return caseId;
     }
@@ -83,7 +83,7 @@ export abstract class BaseStep {
     async loginAsJudgeUser(caseType: string) {
         var caseId = await createCaseBasedOnCaseType(caseType);
         await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForJudge(true);
+        await this.loginPage.verifySuccessfulLoginForJudge(false);
         await this.homePage.goToHomePage(caseId);
         return caseId;
     }
@@ -110,7 +110,7 @@ export abstract class BaseStep {
   async loginAsSuperUserWithoutCaseId(caseId?: string, caseType?: string){
      var caseId = await createCaseBasedOnCaseType(caseType);
      await this.loginPage.goToLoginPage();
-     await this.loginPage.verifySuccessfulLoginForSuperUser(true);
+     await this.loginPage.verifySuccessfulLoginForSuperUser(false);
      await this.homePage.goToHomePage(caseId);
 }
 }

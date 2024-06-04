@@ -87,7 +87,7 @@ export class UploadResponse extends BaseStep {
 
 
         await this.homePage.chooseEvent('Upload response');
-        await this.homePage.delay(2000);
+        await this.homePage.delay(4000);
         await this.uploadResponsePage.verifyPageContent();
         await this.uploadResponsePage.uploadDocs();
         await this.uploadResponsePage.chooseAssistOption('No');
@@ -98,9 +98,11 @@ export class UploadResponse extends BaseStep {
 
         await this.uploadResponsePage.clickAddNewButton();
         await this.uploadResponsePage.selectUcIssueCode(uploadResponseTestdata.ucIssueCode);
+        await this.homePage.delay(2000);
         await this.uploadResponsePage.continueSubmission();
 
         await this.uploadResponsePage.chooseDisputeOption(uploadResponseTestdata.ucDisputeOption);
+        await this.homePage.delay(2000);
         await this.uploadResponsePage.continueSubmission();
 
         await this.uploadResponsePage.isJPOnTheCase(uploadResponseTestdata.ucJointPartyOnCase);
@@ -139,7 +141,7 @@ export class UploadResponse extends BaseStep {
     async verifyPHMEErrorsScenariosInUploadResponse() {
 
         await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForDWPResponseWriter();
+        await this.loginPage.verifySuccessfulLoginForDWPResponseWriter(false);
         await this.homePage.goToHomePage(UploadResponse.caseId);
 
         await this.homePage.chooseEvent('Upload response');
@@ -156,7 +158,7 @@ export class UploadResponse extends BaseStep {
     async verifyIssueCodeErrorsScenariosInUploadResponse() {
 
         await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForDWPResponseWriter();
+        await this.loginPage.verifySuccessfulLoginForDWPResponseWriter(false);
         await this.homePage.goToHomePage(UploadResponse.caseId);
 
         await this.homePage.chooseEvent('Upload response');

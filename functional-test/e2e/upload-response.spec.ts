@@ -1,7 +1,7 @@
 import { test } from "../lib/steps.factory";
 
-test.describe('Upload response tests',{tag: '@skip-test'}, async() => {
-    // test.describe.configure({ retries: 1 });
+test.describe('Upload response tests', async() => {
+
     test("As a caseworker review response submitted with any further info", async ({ uploadResponseSteps }) => {
         test.slow();
         await uploadResponseSteps.performUploadResponseWithFurtherInfoOnAPIP();
@@ -12,13 +12,14 @@ test.describe('Upload response tests',{tag: '@skip-test'}, async() => {
         await uploadResponseSteps.performUploadResponseWithoutFurtherInfoOnATaxCredit();
     });
     
-    /*test("As a caseworker review response submitted for an UC case", {tag: '@wip2'},async({ uploadResponseSteps }) => {
+    test("As a caseworker review response submitted for an UC case", async({ uploadResponseSteps }) => {
+        test.slow();
         await uploadResponseSteps.performUploadResponseOnAUniversalCredit();
-    });*/
+    });
 })
 
-test.describe.serial('Error scenarios', {tag: '@skip-test'}, async () => {
-
+test.describe.serial('Error scenarios', async () => {
+    
     test("Verify Upload response error scenario", async({ uploadResponseSteps }) => {
         test.slow();
         await uploadResponseSteps.verifyErrorsScenariosInUploadResponse();
