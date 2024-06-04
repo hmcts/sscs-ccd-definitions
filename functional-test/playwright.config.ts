@@ -24,7 +24,7 @@ module.exports = defineConfig({
     port: 9223,  printSteps: true}]],
   use: {
     baseURL: urls.xuiUrl,
-    trace: "on-first-retry",
+    trace: "retain-on-failure",
     screenshot: 'only-on-failure',
     launchOptions: {
       // 1
