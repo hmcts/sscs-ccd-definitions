@@ -2,7 +2,7 @@ import {Page} from '@playwright/test';
 import {HomePage} from '../../pages/common/homePage';
 import {LoginPage} from '../../pages/common/loginPage';
 import {EventNameEventDescriptionPage} from '../../pages/common/event.name.event.description';
-import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
+import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import {History} from '../../pages/tabs/history';
 import {WebAction} from '../../common/web.action';
 import { BaseStep } from './base';

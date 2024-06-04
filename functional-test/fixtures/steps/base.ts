@@ -1,19 +1,19 @@
-import {Page} from '@playwright/test';
-import {HomePage} from '../../pages/common/homePage';
-import {LoginPage} from '../../pages/common/loginPage';
-import {UploadResponsePage} from '../../pages/upload.response.page';
-import {CheckYourAnswersPage} from '../../pages/common/check.your.answers.page';
-import {ResponseReviewedPage} from '../../pages/response.reviewed.page';
-import {AssociateCasePage} from '../../pages/associate.case.page';
-import {TextAreaPage} from "../../pages/common/text.area.page";
-import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
-import {History} from "../../pages/tabs/history";
-import {AppealDetails} from "../../pages/tabs/appealDetails";
-import {AddNote} from '../../pages/add.note';
-import {EventNameEventDescriptionPage} from '../../pages/common/event.name.event.description';
-import {NotePad} from '../../pages/tabs/note.pad';
-import {Summary} from "../../pages/tabs/summary";
-import {exit} from 'process';
+import { Page } from '@playwright/test';
+import { HomePage } from '../../pages/common/homePage';
+import { LoginPage } from '../../pages/common/loginPage';
+import { UploadResponsePage } from '../../pages/upload.response.page';
+import { CheckYourAnswersPage } from '../../pages/common/check.your.answers.page';
+import { ResponseReviewedPage } from '../../pages/response.reviewed.page';
+import { AssociateCasePage } from '../../pages/associate.case.page';
+import { TextAreaPage } from "../../pages/common/text.area.page";
+import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
+import { History } from "../../pages/tabs/history";
+import { AppealDetails } from "../../pages/tabs/appealDetails";
+import { AddNote } from '../../pages/add.note';
+import { EventNameEventDescriptionPage } from '../../pages/common/event.name.event.description';
+import { NotePad } from '../../pages/tabs/note.pad';
+import { Summary } from "../../pages/tabs/summary";
+import { exit } from 'process';
 
 
 export abstract class BaseStep {

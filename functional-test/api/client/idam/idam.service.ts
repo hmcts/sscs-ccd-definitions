@@ -66,7 +66,7 @@ export async function getSSCSServiceToken() {
     const body = await response.body();
     logger.info('The value of the service token :' + body);
     await response.dispose();
-    return body;
+    return body.toString();
 }
 
 export async function getIDAMUserID(idamToken) {
