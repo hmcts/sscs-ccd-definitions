@@ -65,4 +65,12 @@ export class LoginPage {
         await webActions.inputField('#password', credentials.judge.password);
         await webActions.clickButton('Sign in');
     }
+
+    async verifySuccessfulLoginForSuperUser(isLoggedIn?: boolean): Promise<void> {
+        if(isLoggedIn) await this.page.context().clearCookies();
+        await webActions.inputField('#username', credentials.superUser.email);
+        await webActions.inputField('#password', credentials.superUser.password);
+        await webActions.clickButton('Sign in');
+        await expect(this.pageTitle).toHaveText('My work');
+    }
 }
