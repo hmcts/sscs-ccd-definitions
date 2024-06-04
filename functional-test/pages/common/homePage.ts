@@ -19,9 +19,9 @@ export class HomePage {
 
     constructor(page: Page) {
         this.page = page;
-        this.notePadTab = page.locator('//div[contains(text(), "Notepad")]');
+        this.notePadTab = page.getByText('Notepad', {exact: true});
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
-        this.historyTab = page.locator('//div[contains(text(), "History")]').first(); // To handle duplicate tab
+        this.historyTab = page.getByText('History', {exact: true});
         this.appealDetailsTab = page.getByText('Appeal Details', {exact: true});
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
