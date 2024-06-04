@@ -87,6 +87,7 @@ export abstract class BaseStep {
         await this.homePage.goToHomePage(caseId);
         return caseId;
     }
+
   /*async loginAsJudgeUser(caseType: string){
       var caseId = await createCaseBasedOnCaseType(caseType);
       await this.loginPage.goToLoginPage();
