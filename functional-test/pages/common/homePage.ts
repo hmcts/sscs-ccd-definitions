@@ -54,8 +54,9 @@ export class HomePage {
     async chooseEvent(eventName: string): Promise<void> {
 
         await webActions.chooseOptionByLabel(this.nextStepDropDown, eventName);
-        //await webActions.clickNextStepButton(this.submitNextStepButton);
-        await webActions.clickGoButton('Go');
+        await webActions.clickSubmitButton();
+        // await webActions.clickNextStepButton(this.submitNextStepButton);
+        // await webActions.clickGoButton('Go');
     }
 
     async clickBeforeTabBtn(): Promise<void> {
