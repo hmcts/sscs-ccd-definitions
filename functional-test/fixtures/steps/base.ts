@@ -105,5 +105,12 @@ export abstract class BaseStep {
         await this.homePage.navigateToTab("Appeal Details");
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue(state, value);
         await this.appealDetailsTab.verifyFTADueDateOnAppealDetails();
-    }
+  }
+
+  async loginAsSuperUserWithoutCaseId(caseId?: string, caseType?: string){
+     var caseId = await createCaseBasedOnCaseType(caseType);
+     await this.loginPage.goToLoginPage();
+     await this.loginPage.verifySuccessfulLoginForSuperUser(true);
+     await this.homePage.goToHomePage(caseId);
+}
 }

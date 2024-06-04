@@ -1,39 +1,24 @@
-import {Page} from '@playwright/test';
-import {HomePage} from '../../pages/common/homePage';
-import {LoginPage} from '../../pages/common/loginPage';
-import createCaseBasedOnCaseType from "../../api/client/appeal.type.factory";
-import {History} from '../../pages/tabs/history';
+import { Page } from '@playwright/test';
 import eventTestData from "../../pages/content/event.name.event.description_en.json";
-import {EventNameEventDescriptionPage} from "../../pages/common/event.name.event.description";
 import { SendToJudgePage } from '../../pages/send.to.judge.page';
+import { BaseStep } from './base';
 
-
-export class SendToJudge {
+export class SendToJudge extends BaseStep {
 
     readonly page: Page;
 
     constructor(page: Page) {
+        super(page);
         this.page = page;
     }
 
-    async createCase() {
-        var taxCreditCaseId = await createCaseBasedOnCaseType("TAX CREDIT");
-        return taxCreditCaseId;
-    }
+    async performSendToJudge() {
 
-    async performSendToJudge(caseId: string) {
-
-        let loginPage = new LoginPage(this.page);
-        let homePage = new HomePage(this.page);
         let sendToJudgePage = new SendToJudgePage(this.page);
-        let eventNameAndDescriptionPage = new EventNameEventDescriptionPage(this.page);
-        let historyTab = new History(this.page);
 
-        await loginPage.goToLoginPage();
-        await loginPage.verifySuccessfulLoginForCaseworker();
-
-        await homePage.goToHomePage(caseId);
-        await homePage.chooseEvent('Send to Judge');
+        await this.loginAsSuperUserWithoutCaseId(undefined, "TAX CREDIT");
+        await this.homePage.reloadPage();
+        await this.homePage.chooseEvent('Send to Judge');
 
         await sendToJudgePage.verifyPageContent();
         await sendToJudgePage.selectHearingType();
@@ -41,16 +26,11 @@ export class SendToJudge {
         await sendToJudgePage.selectInterlocutoryReviewState();
         await sendToJudgePage.confirmSubmission();
 
-        //Params are passed to this page as this is a common page to be reused.
-        await eventNameAndDescriptionPage.verifyPageContent('Send to Judge');
-        await eventNameAndDescriptionPage.inputData(eventTestData["event-summary-input"],
-            eventTestData["event-description-input"]);
-        await eventNameAndDescriptionPage.confirmSubmission();
+        await this.eventNameAndDescriptionPage.verifyPageContent('Send to Judge');
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
 
-        await homePage.navigateToTab("History");
-        await historyTab.verifyPageContentByKeyValue('Event', 'Send to Judge');
-        await historyTab.verifyPageContentByKeyValue('Summary', 'Event Summary for Automation');
-        await historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification');
-        await historyTab.verifyEventCompleted("Send to Judge");
+        await this.verifyHistoryTabDetails('With FTA', 'Send to Judge', eventTestData.eventDescriptionInput);
     }
 }
