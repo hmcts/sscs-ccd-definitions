@@ -54,6 +54,7 @@ export class HomePage {
     async chooseEvent(eventName: string): Promise<void> {
 
         await webActions.chooseOptionByLabel(this.nextStepDropDown, eventName);
+        await this.delay(2000);
         await webActions.clickSubmitButton();
         // await webActions.clickNextStepButton(this.submitNextStepButton);
         // await webActions.clickGoButton('Go');
