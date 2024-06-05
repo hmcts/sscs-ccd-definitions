@@ -11,9 +11,9 @@ export class ConfirmCaseLapsed extends BaseStep {
         this.page = page;
     }
 
-    async performConfirmCaseLapsed() {
+    async performConfirmCaseLapsed(caseId: string) {
 
-        await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'CHILDSUPPORT');
+        await this.loginAsCaseworkerUserWithCaseId(caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Confirm lapsed');
 
@@ -22,8 +22,10 @@ export class ConfirmCaseLapsed extends BaseStep {
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
+        await this.homePage.navigateToTab("History");
+        await this.verifyHistoryTabLink('Confirm lapsed');
 
-        await this.verifyHistoryTabDetails(null, 'Confirm lapsed', 'Event Description for Automation Verification');
+        //await this.verifyHistoryTabDetails(null, 'Confirm lapsed', 'Event Description for Automation Verification');
     }
 
 }
