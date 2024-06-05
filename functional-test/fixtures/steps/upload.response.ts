@@ -38,7 +38,7 @@ export class UploadResponse extends BaseStep {
             uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
 
-        await this.loginAsCaseworkerUserWithCaseId(pipCaseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker,true, pipCaseId);
         //await this.homePage.navigateToTab("History");
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Response received"); //The State moves on so cannot verifyr this code correctly.
@@ -74,7 +74,7 @@ export class UploadResponse extends BaseStep {
         await this.checkYourAnswersPage.confirmSubmission();
 
         await this.homePage.delay(3000);
-        await this.loginAsCaseworkerUserWithCaseId(taxCaseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker,true, taxCaseId);
         await this.homePage.navigateToTab("History");
 
         for (const linkName of this.presetLinks) {
@@ -114,7 +114,7 @@ export class UploadResponse extends BaseStep {
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", null, null, "UC");
         await this.checkYourAnswersPage.confirmSubmission();
 
-        await this.loginAsCaseworkerUserWithCaseId(ucCaseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker,false, ucCaseId);
         await this.homePage.delay(1000);
         await this.homePage.navigateToTab("History");
 

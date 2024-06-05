@@ -59,31 +59,10 @@ export abstract class BaseStep {
         return caseId;
     }
 
-    async loginAsCaseworkerUserWithoutCaseId(caseId?: string, caseType?: string) {
-        var caseId = await createCaseBasedOnCaseType(caseType);
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForAMCaseworker(false);
-        await this.homePage.goToHomePage(caseId);
-    }
-
-    async loginAsCaseworkerUserWithCaseId(caseId?: string) {
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForAMCaseworker(true);
-        await this.homePage.goToHomePage(caseId);
-    }
-
     async loginAsHMRCUser(caseType: string) {
         var caseId = await createCaseBasedOnCaseType(caseType);
         await this.loginPage.goToLoginPage();
         await this.loginPage.verifySuccessfulLoginForHMRCUser(false);
-        await this.homePage.goToHomePage(caseId);
-        return caseId;
-    }
-
-    async loginAsJudgeUser(caseType: string) {
-        var caseId = await createCaseBasedOnCaseType(caseType);
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForJudge(false);
         await this.homePage.goToHomePage(caseId);
         return caseId;
     }
@@ -113,10 +92,4 @@ export abstract class BaseStep {
         await this.appealDetailsTab.verifyFTADueDateOnAppealDetails();
     }
 
-    async loginAsSuperUserWithoutCaseId(caseType?: string) {
-        var caseId = await createCaseBasedOnCaseType(caseType);
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForSuperUser(false);
-        await this.homePage.goToHomePage(caseId);
-    }
 }
