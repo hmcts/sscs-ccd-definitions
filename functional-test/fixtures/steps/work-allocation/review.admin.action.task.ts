@@ -3,6 +3,7 @@ import task from '../../../pages/content/review.admin.task_en.json';
 import { BaseStep } from '../base';
 import { SendToAdmin } from '../send.to.admin';
 import { InformationReceived } from '../information.received';
+import { credentials } from '../../../config/config'
 
 
 export class ReviewAdminActionTask extends BaseStep {
@@ -14,19 +15,17 @@ export class ReviewAdminActionTask extends BaseStep {
         this.page = page;
     }
 
-    async verifyCtscAdminWithoutCaseAllocatorRoleCanViewReviewAdminActionTask() {
-
-        let pipCaseId = await this.loginAsJudgeUserWithoutCaseId(undefined, 'PIP');
+    async verifyCtscAdminWithoutCaseAllocatorRoleCanViewReviewAdminActionTask(caseId: string) {
 
         let sendToAdmin = new SendToAdmin(this.page);
 
         // Login as Judge and complete Send to Admin event to trigger Review Admin Action task
-        await sendToAdmin.performSendToAdmin(pipCaseId);
+        await sendToAdmin.performSendToAdmin(caseId);
         await this.homePage.navigateToTab('Tasks');
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
 
         // Login as CTSC Administrator and view the unassigned Review Admin Action task
-        await this.loginAsCaseworkerUserWithCaseId(pipCaseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, caseId);
         await this.homePage.navigateToTab('Tasks')
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
         await this.tasksTab.verifyPriortiy(task.name, task.priority);
@@ -34,18 +33,11 @@ export class ReviewAdminActionTask extends BaseStep {
         await this.tasksTab.verifyManageOptions(task.name, task.unassignedManageOptions);
     }
 
-    async verifyCtscAdminWithCaseAllocatorRoleCanViewReviewAdminActionTask() {
-        
-        let pipCaseId = await this.loginAsJudgeUserWithoutCaseId(undefined, 'PIP');
-        let sendToAdmin = new SendToAdmin(this.page);
+    async verifyCtscAdminWithCaseAllocatorRoleCanViewReviewAdminActionTask(caseId: string) {
 
-        // Login as Judge and complete Send to Admin event to trigger Review Admin Action task
-        await sendToAdmin.performSendToAdmin(pipCaseId);
-        await this.homePage.navigateToTab('Tasks');
-        await this.tasksTab.verifyTaskIsDisplayed(task.name);
-
-        // Login as CTSC Administrator and view the unassigned Review Admin Action task
-        await this.loginAsCaseworkerWithCaseAllocatorRoleWithCaseId(pipCaseId);
+        /* Login as CTSC Administrator with case allocator role and view the 
+           unassigned Review Admin Action task */
+        await this.loginUserWithCaseId(credentials.amCaseWorkerWithCaseAllocatorRole, caseId);
         await this.homePage.navigateToTab('Tasks')
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
         await this.tasksTab.verifyPriortiy(task.name, task.priority);
@@ -53,18 +45,10 @@ export class ReviewAdminActionTask extends BaseStep {
         await this.tasksTab.verifyManageOptions(task.name, task.unassignedManageOptionsForCaseAllocator);
     }
 
-    async verifyCtscAdminWithoutCaseAllocatorRoleCanCompleteReviewAdminActionTask() {
-
-        let pipCaseId = await this.loginAsJudgeUserWithoutCaseId(undefined, 'PIP');
-        let sendToAdmin = new SendToAdmin(this.page);
-
-        // Login as Judge and complete Send to Admin event to trigger Review Admin Action task
-        await sendToAdmin.performSendToAdmin(pipCaseId);
-        await this.homePage.navigateToTab('Tasks');
-        await this.tasksTab.verifyTaskIsDisplayed(task.name);
+    async verifyCtscAdminWithoutCaseAllocatorRoleCanCompleteReviewAdminActionTask(caseId: string) {
 
         // Login as CTSC Administrator and view the unassigned Review Admin Action task
-        await this.loginAsCaseworkerUserWithCaseId(pipCaseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, caseId);
         await this.homePage.navigateToTab('Tasks')
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
 

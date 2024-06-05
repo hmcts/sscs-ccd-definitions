@@ -34,7 +34,7 @@ export class InformationReceived {
         await historyTab.verifyPageContentByKeyValue('Event', 'Information received');
         await historyTab.verifyPageContentByKeyValue('Summary', 'Event Summary for Automation');
         await historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification');
-        await historyTab.verifyEventRecorded("Information received");
+        await historyTab.verifyEventCompleted("Information received");
     }
 
 }
