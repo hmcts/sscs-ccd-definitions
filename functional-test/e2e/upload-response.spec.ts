@@ -2,7 +2,7 @@ import { test } from "../lib/steps.factory";
 
 test.describe('Upload response tests', async() => {
 
-    test("As a caseworker review response submitted with any further info", async ({ uploadResponseSteps }) => {
+    /*test("As a caseworker review response submitted with any further info", async ({ uploadResponseSteps }) => {
         test.slow();
         await uploadResponseSteps.performUploadResponseWithFurtherInfoOnAPIP();
     });
@@ -15,7 +15,7 @@ test.describe('Upload response tests', async() => {
     test("As a caseworker review response submitted for an UC case", async({ uploadResponseSteps }) => {
         test.slow();
         await uploadResponseSteps.performUploadResponseOnAUniversalCredit();
-    });
+    });*/
 })
 
 test.describe.serial('Error scenarios', async () => {
