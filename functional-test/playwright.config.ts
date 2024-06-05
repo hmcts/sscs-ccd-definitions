@@ -10,7 +10,7 @@ module.exports = defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: 1, // Set the number of retries for all projects
+  retries: 0, // Set the number of retries for all projects
   timeout: 3 * 30 * 1000,
   expect: {
     timeout: 60 * 1000,
@@ -24,7 +24,7 @@ module.exports = defineConfig({
     port: 9223,  printSteps: true}]],
   use: {
     baseURL: urls.xuiUrl,
-    trace: "on-first-retry",
+    trace: "retain-on-failure",
     screenshot: 'only-on-failure',
     launchOptions: {
       // 1
