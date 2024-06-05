@@ -1,7 +1,7 @@
 import {test} from "../lib/steps.factory";
 import {credentials} from "../config/config"
 import {getIDAMUserToken, getSSCSServiceToken, getIDAMUserID} from "../api/client/idam/idam.service";
-import {performEventOnCase} from "../api/client/sscs/factory/appeal.update.factory";
+import performEventOnCase from "../api/client/sscs/factory/appeal.update.factory";
 import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.factory";
 
 test.skip("Test to Add a note to a case", async ({addNoteSteps}) => {

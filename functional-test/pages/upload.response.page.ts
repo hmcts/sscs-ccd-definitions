@@ -13,21 +13,34 @@ export class UploadResponsePage {
         webActions = new WebAction(this.page);
     }
 
+    async verifyPageContent() {
+        await webActions.verifyPageLabel('.govuk-caption-l', 'Upload response'); //Captor Text
+        //await webActions.verifyPageLabel('h1', casereference+": Bloggs"); //Captor Text
+       /* await webActions.verifyPageLabel('h2', 'FTA Response'); //Section heading
+        await webActions.verifyPageLabel('h2', 'AT38 (Optional)'); //Section heading
+        await webActions.verifyPageLabel('h2', 'FTA Evidence bundle'); //Section heading
+        await webActions.verifyPageLabel('h2', 'Audio/Video Evidence'); //Section heading */
+        await webActions.isLinkClickable('Cancel');
+    }
+
     async uploadDocs(): Promise<void> {
-        await webActions.uploadFile('#dwpResponseDocument_documentLink', uploadResponseTestdata.testfileone);
+        await webActions.uploadFileUsingAFileChooser('#dwpResponseDocument_documentLink', uploadResponseTestdata.testfileone);
         await this.page.waitForTimeout(7000);
-        await webActions.uploadFile('#dwpAT38Document_documentLink', uploadResponseTestdata.testfiletwo);
+        await webActions.uploadFileUsingAFileChooser('#dwpAT38Document_documentLink', uploadResponseTestdata.testfiletwo);
         await this.page.waitForTimeout(7000);
-        await webActions.uploadFile('#dwpEvidenceBundleDocument_documentLink', uploadResponseTestdata.testfilethree);
+        await webActions.uploadFileUsingAFileChooser('#dwpEvidenceBundleDocument_documentLink', uploadResponseTestdata.testfilethree);
+        await this.page.waitForTimeout(7000);
     }
 
     async uploadPartialDocs(): Promise<void> {
-        await webActions.uploadFile('#dwpResponseDocument_documentLink', uploadResponseTestdata.testfileone);
+        await webActions.uploadFileUsingAFileChooser('#dwpResponseDocument_documentLink', uploadResponseTestdata.testfileone);
         await this.page.waitForTimeout(7000);
-        await webActions.uploadFile('#dwpEvidenceBundleDocument_documentLink', uploadResponseTestdata.testfilethree);
+        await webActions.uploadFileUsingAFileChooser('#dwpEvidenceBundleDocument_documentLink', uploadResponseTestdata.testfilethree);
+        await this.page.waitForTimeout(7000);
     }
 
     async verifyDocMissingErrorMsg(): Promise<void>{
+        //await webActions.screenshot();
         await webActions.verifyElementVisibility('#errors');
         await webActions.verifyTextVisibility('AT38 document is missing');
     }
@@ -69,8 +82,11 @@ export class UploadResponsePage {
     }
 
     async continueSubmission(): Promise<void> {
-        await this.page.waitForTimeout(3000);
         await webActions.clickButton('Continue');
+    }
+
+    async delay(ms: number) {
+        return new Promise( resolve => setTimeout(resolve, ms) );
     }
 
 }
