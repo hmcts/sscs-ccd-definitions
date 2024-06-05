@@ -88,6 +88,20 @@ export abstract class BaseStep {
         return caseId;
     }
 
+  /*async loginAsJudgeUser(caseType: string){
+      var caseId = await createCaseBasedOnCaseType(caseType);
+      await this.loginPage.goToLoginPage();
+      await this.loginPage.verifySuccessfulLoginForJudge(true);
+      await this.homePage.goToHomePage(caseId);
+      return caseId;
+ }*/
+
+    async loginUserWithCaseId(user, caseId?: string){
+        await this.loginPage.goToLoginPage();
+        await this.loginPage.verifySuccessfulLoginForUser(user, true);
+        await this.homePage.goToHomePage(caseId);
+    }
+
     async verifyHistoryTabDetails(state?: string, event?: string, comment?: string) {
         await this.homePage.navigateToTab("History");
         await this.homePage.delay(1000);

@@ -1,6 +1,7 @@
 import { Page } from '@playwright/test';
 import { BaseStep } from './base';
 import { StringUtilsComponent } from "../../utils/StringUtilsComponent";
+import {credentials} from "../../config/config";
 const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
 export class Note extends BaseStep {
@@ -13,9 +14,8 @@ export class Note extends BaseStep {
        this.page = page;
    }
 
-    async performAddANote() {
-        await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'PIP');
-        await this.homePage.delay(5000); //Other back end events to complete...
+    async performAddANote(caseId :string) {
+        await this.loginUserWithCaseId(credentials.amCaseWorker, caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Add a note');
 
