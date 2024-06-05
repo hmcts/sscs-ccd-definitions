@@ -98,7 +98,7 @@ export abstract class BaseStep {
 
     async loginUserWithCaseId(user, caseId?: string){
         await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForUser(user, true);
+        await this.loginPage.verifySuccessfulLoginForUser(user, false);
         await this.homePage.goToHomePage(caseId);
     }
 

@@ -9,7 +9,7 @@ test("Test that the Case can be lapsed", async ({ confirmCaseLapsedSteps }) => {
     await confirmCaseLapsedSteps.performConfirmCaseLapsed(caseId);
 });
 
-test.afterAll("Case has to be set to Dormant",async () => {
-    await performAppealDormantOnCase(caseId);
-});
+// test.afterAll("Case has to be set to Dormant",async () => {
+//     await performAppealDormantOnCase(caseId);
+// });
 
