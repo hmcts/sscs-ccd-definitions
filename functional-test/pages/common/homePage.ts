@@ -23,9 +23,9 @@ export class HomePage {
         this.page = page;
         this.notePadTab = page.locator('//div[contains(text(), "Notepad")]');
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
-        this.historyTab = page.locator('//div[contains(text(), "History")]');
-        this.tasksTab = page.locator('//div[contains(text(), "Tasks")]');
-        this.rolesAndAccessTab = page.locator('//div[contains(text(), "Roles and access")]');
+        this.historyTab = page.getByRole('tab', { name: 'History', exact: true });
+        this.tasksTab = page.getByRole('tab', { name: 'Tasks', exact: true });
+        this.rolesAndAccessTab = page.getByRole('tab', { name: 'Roles and access', exact: true });
         this.appealDetailsTab = page.getByText('Appeal Details', {exact: true});
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
@@ -42,11 +42,12 @@ export class HomePage {
     }
 
     async reloadPage() {
-        await this.page.reload({timeout:10000, waitUntil:'load'});
+        await this.page.reload({timeout:13000, waitUntil:'load'});
     }
 
     async goToHomePage(caseId: string): Promise<void> {
         await this.page.goto(`/cases/case-details/${caseId}`);
+        await this.delay(5000);
         await expect(this.summaryTab)
             .toBeVisible()
             .catch((error) => {
@@ -57,13 +58,20 @@ export class HomePage {
     async chooseEvent(eventName: string): Promise<void> {
 
         await webActions.chooseOptionByLabel(this.nextStepDropDown, eventName);
-        //await webActions.clickNextStepButton(this.submitNextStepButton);
-        await webActions.clickButton('Go');
+        await this.delay(2000);
+        await webActions.clickSubmitButton();
+        // await webActions.clickNextStepButton(this.submitNextStepButton);
+        // await webActions.clickGoButton('Go');
     }
 
     async clickBeforeTabBtn(): Promise<void> {
         await this.beforeTabBtn.click();
     }
+
+    async waitForLoadState() {
+        await this.page.waitForLoadState('networkidle');
+    }
+
 
     async navigateToTab(tabName : string): Promise<void> {
         switch(tabName) {

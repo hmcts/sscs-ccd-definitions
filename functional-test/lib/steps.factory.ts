@@ -6,6 +6,7 @@ import { AssociateCase } from '../fixtures/steps/associate-case';
 import { SendToAdmin } from '../fixtures/steps/send.to.admin';
 import { InformationReceived } from '../fixtures/steps/information.received';
 import { ReviewAdminActionTask } from '../fixtures/steps/work-allocation/review.admin.action.task'
+import { SendToJudge } from '../fixtures/steps/send.to.judge';
 import { UploadResponse } from '../fixtures/steps/upload.response';
 import {ListingError} from "../fixtures/steps/listing.error";
 
@@ -15,9 +16,10 @@ type MyStepsFixtures = {
     associateCaseSteps: AssociateCase
     confirmCaseLapsedSteps: ConfirmCaseLapsed
     evidenceReminderSteps: EvidenceReminder
-    sendToAdminSteps: SendToAdmin
-    reviewAdminActionTaskSteps: ReviewAdminActionTask
     informationReceivedSteps: InformationReceived
+    sendToAdminSteps: SendToAdmin
+    sendToJudgeSteps: SendToJudge
+    reviewAdminActionTaskSteps: ReviewAdminActionTask
     listingErrorSteps: ListingError
     uploadResponseSteps: UploadResponse
 };
@@ -50,6 +52,10 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     reviewAdminActionTaskSteps:async ({ page }, use) => {
         const reviewAdminActionTaskSteps = new ReviewAdminActionTask(page);
         await use(reviewAdminActionTaskSteps);
+    },
+    sendToJudgeSteps:async ({page}, use) => {
+        const sendToJudgeSteps = new SendToJudge(page);
+        await use(sendToJudgeSteps);
     },
     uploadResponseSteps:async ({page}, use) => {
         const uploadResponseSteps = new UploadResponse(page);

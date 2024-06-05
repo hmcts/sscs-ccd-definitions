@@ -26,4 +26,14 @@ export class Summary {
         let text = await this.page.locator(`//*[normalize-space()="${fieldLabel}"]/../..//td//a`).textContent();
         expect(text).toEqual(fieldValue);
     }
+
+    async verifyPresenceOfText(fieldValue: string) {
+        await webActions.screenshot();
+        let text = await this.page.locator(`//div/markdown/p[contains(text(),"${fieldValue}")]`).textContent()
+        expect(text).toContain(fieldValue); // TODO An exact match is not done as there is Text from Upper nodes of the Dom Tree Appearing.
+    }
+
+    /*async verifyPresenceOfText(fieldValue: string): Promise<void>{
+        await webActions.verifyTextVisibility(fieldValue);
+    }*/
 }

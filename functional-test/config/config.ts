@@ -66,7 +66,11 @@ export const credentials = {
   hmrcUser: {
     email: process.env.TEST_HMRC_USERNAME,
     password: process.env.TEST_HMRC_PASSWORD,
-  }
+  },
+  amSuperUser: {
+    email: process.env.TEST_AM_SUPERUSER_USERNAME,
+    password: process.env.TEST_AM_SUPERUSER_PASSWORD,
+  },
 };
 
 export const resources = {

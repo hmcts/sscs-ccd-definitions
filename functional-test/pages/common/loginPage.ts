@@ -18,6 +18,10 @@ export class LoginPage {
 
     }
 
+    async delay(ms: number) {
+        return new Promise( resolve => setTimeout(resolve, ms) );
+    }
+
     async goToLoginPage(): Promise<void> {
         await this.page.goto("/");
     }
@@ -68,6 +72,22 @@ export class LoginPage {
         if(isLoggedIn) await this.page.context().clearCookies();
         await webActions.inputField('#username', credentials.amCaseWorkerWithCaseAllocatorRole.email);
         await webActions.inputField('#password', credentials.amCaseWorkerWithCaseAllocatorRole.password);
+        await webActions.clickButton('Sign in');
+        await expect(this.pageTitle).toHaveText('My work');
+    }
+
+    async verifySuccessfulLoginForSuperUser(isLoggedIn?: boolean): Promise<void> {
+        if(isLoggedIn) await this.page.context().clearCookies();
+        await webActions.inputField('#username', credentials.superUser.email);
+        await webActions.inputField('#password', credentials.superUser.password);
+        await webActions.clickButton('Sign in');
+        await expect(this.pageTitle).toHaveText('My work');
+    }
+
+    async verifySuccessfulLoginForUser(user, isLoggedIn?: boolean): Promise<void> {
+        if(isLoggedIn) await this.page.context().clearCookies();
+        await webActions.inputField('#username', user.email);
+        await webActions.inputField('#password', user.password);
         await webActions.clickButton('Sign in');
         await expect(this.pageTitle).toHaveText('My work');
     }
