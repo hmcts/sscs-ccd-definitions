@@ -19,7 +19,7 @@ export class HomePage {
 
     constructor(page: Page) {
         this.page = page;
-        this.notePadTab = page.getByText('Notepad', {exact: true});
+        this.notePadTab = page.locator('//div[contains(text(), "Notepad")]');
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
         this.historyTab = page.getByRole('tab', { name: 'History', exact: true })
         this.appealDetailsTab = page.getByText('Appeal Details', {exact: true});
