@@ -2,6 +2,7 @@ import { Page } from '@playwright/test';
 import eventTestData from "../../pages/content/event.name.event.description_en.json";
 import { SendToJudgePage } from '../../pages/send.to.judge.page';
 import { BaseStep } from './base';
+import {credentials} from "../../config/config";
 
 export class SendToJudge extends BaseStep {
 
@@ -12,14 +13,14 @@ export class SendToJudge extends BaseStep {
         this.page = page;
     }
 
-    async performSendToJudge() {
+    async performSendToJudge(caseId: string) {
 
-        let sendToJudgePage = new SendToJudgePage(this.page);
 
-        await this.loginAsSuperUserWithoutCaseId(undefined, "TAX CREDIT");
+        await this.loginUserWithCaseId(credentials.judge, caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Send to Judge');
 
+        let sendToJudgePage = new SendToJudgePage(this.page);
         await sendToJudgePage.verifyPageContent();
         await sendToJudgePage.selectHearingType();
         await sendToJudgePage.inputData();

@@ -98,7 +98,7 @@ export abstract class BaseStep {
 
     async loginUserWithCaseId(user, caseId?: string){
         await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForUser(user, true);
+        await this.loginPage.verifySuccessfulLoginForUser(user, false);
         await this.homePage.goToHomePage(caseId);
     }
 
@@ -121,7 +121,7 @@ export abstract class BaseStep {
         await this.appealDetailsTab.verifyFTADueDateOnAppealDetails();
   }
 
-  async loginAsSuperUserWithoutCaseId(caseId?: string, caseType?: string){
+  async loginAsSuperUserWithoutCaseId(caseType?: string){
      var caseId = await createCaseBasedOnCaseType(caseType);
      await this.loginPage.goToLoginPage();
      await this.loginPage.verifySuccessfulLoginForSuperUser(false);
