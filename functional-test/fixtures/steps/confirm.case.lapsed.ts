@@ -14,8 +14,8 @@ export class ConfirmCaseLapsed extends BaseStep {
 
     async performConfirmCaseLapsed(caseId: string) {
 
-
-        await this.loginUserWithCaseId(credentials.amCaseWorker, caseId);
+        //await this.loginAsCaseworkerUserWithCaseId(caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker,false, caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Confirm lapsed');
 
