@@ -59,14 +59,6 @@ export abstract class BaseStep {
         return caseId;
     }
 
-    async loginAsHMRCUser(caseType: string) {
-        var caseId = await createCaseBasedOnCaseType(caseType);
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForHMRCUser(false);
-        await this.homePage.goToHomePage(caseId);
-        return caseId;
-    }
-
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
         await this.loginPage.goToLoginPage();
         await this.loginPage.verifySuccessfulLoginForUser(user, clearCacheFlag);

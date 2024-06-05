@@ -22,7 +22,8 @@ export class UploadResponse extends BaseStep {
 
     async performUploadResponseWithFurtherInfoOnAPIP() {
 
-        let pipCaseId = await this.loginAsDWPUser("PIP");
+        let pipCaseId = await createCaseBasedOnCaseType("PIP");
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, pipCaseId);
 
         //await this.homePage.waitForLoadState();
         await this.homePage.chooseEvent('Upload response');
@@ -61,7 +62,8 @@ export class UploadResponse extends BaseStep {
 
     async performUploadResponseWithoutFurtherInfoOnATaxCredit() {
 
-        let taxCaseId = await this.loginAsHMRCUser("TAX CREDIT");
+        let taxCaseId = await createCaseBasedOnCaseType("TAX CREDIT");
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, taxCaseId);
         await this.homePage.chooseEvent('Upload response');
         await this.homePage.delay(4000);
         await this.uploadResponsePage.verifyPageContent();
@@ -86,8 +88,8 @@ export class UploadResponse extends BaseStep {
 
     async performUploadResponseOnAUniversalCredit() {
 
-        let ucCaseId = await this.loginAsDWPUser("UC");
-
+        let ucCaseId = await createCaseBasedOnCaseType("UC");
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, ucCaseId);
 
         await this.homePage.chooseEvent('Upload response');
         await this.homePage.delay(4000);
@@ -114,7 +116,7 @@ export class UploadResponse extends BaseStep {
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", null, null, "UC");
         await this.checkYourAnswersPage.confirmSubmission();
 
-        await this.loginUserWithCaseId(credentials.amCaseWorker,false, ucCaseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker,true, ucCaseId);
         await this.homePage.delay(1000);
         await this.homePage.navigateToTab("History");
 
