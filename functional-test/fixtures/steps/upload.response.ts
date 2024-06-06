@@ -40,10 +40,8 @@ export class UploadResponse extends BaseStep {
         await this.checkYourAnswersPage.confirmSubmission();
 
         await this.loginUserWithCaseId(credentials.amCaseWorker,true, pipCaseId);
-        //await this.homePage.navigateToTab("History");
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Response received"); //The State moves on so cannot verifyr this code correctly.
-        //await this.historyTab.verifyHistoryPageContentByKeyValue('Upload response', 'End state', 'Response received');
 
         await this.homePage.chooseEvent('Response reviewed');
         await this.responseReviewedPage.verifyPageContent(responseReviewedTestData.captionValue, responseReviewedTestData.headingValue);
@@ -58,6 +56,7 @@ export class UploadResponse extends BaseStep {
         }
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Ready to list");
+        await performAppealDormantOnCase(pipCaseId);
    }
 
     async performUploadResponseWithoutFurtherInfoOnATaxCredit() {
@@ -84,6 +83,7 @@ export class UploadResponse extends BaseStep {
         }
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Ready to list");
+        await performAppealDormantOnCase(taxCaseId);
     }
 
     async performUploadResponseOnAUniversalCredit() {
@@ -125,6 +125,8 @@ export class UploadResponse extends BaseStep {
         }
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Ready to list");
+        await performAppealDormantOnCase(ucCaseId);
+
     }
 
     async verifyErrorsScenariosInUploadResponse() {
@@ -142,12 +144,12 @@ export class UploadResponse extends BaseStep {
         await this.uploadResponsePage.continueSubmission();
         await this.uploadResponsePage.delay(1000);
         await this.uploadResponsePage.verifyDocMissingErrorMsg();
+        await performAppealDormantOnCase(pipErrorCaseId);
     }
 
     async verifyPHMEErrorsScenariosInUploadResponse() {
 
         await this.loginPage.goToLoginPage();
-        //await this.loginPage.verifySuccessfulLoginForDWPResponseWriter(false);
         await this.loginPage.verifySuccessfulLoginForUser(credentials.dwpResponseWriter, false)
         await this.homePage.goToHomePage(UploadResponse.caseId);
 
@@ -165,7 +167,6 @@ export class UploadResponse extends BaseStep {
     async verifyIssueCodeErrorsScenariosInUploadResponse() {
 
         await this.loginPage.goToLoginPage();
-        //await this.loginPage.verifySuccessfulLoginForDWPResponseWriter(false);
         await this.loginPage.verifySuccessfulLoginForUser(credentials.dwpResponseWriter, false)
         await this.homePage.goToHomePage(UploadResponse.caseId);
 
