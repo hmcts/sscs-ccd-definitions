@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test';
 import { BaseStep } from './base';
+import {credentials} from '../../config/config';
 const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
 export class ConfirmCaseLapsed extends BaseStep {
@@ -12,8 +13,7 @@ export class ConfirmCaseLapsed extends BaseStep {
     }
 
     async performConfirmCaseLapsed(caseId: string) {
-
-        await this.loginAsCaseworkerUserWithCaseId(caseId);
+        await this.loginUserWithCaseId(credentials.amSuperUser, caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Confirm lapsed');
 
