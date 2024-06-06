@@ -11,6 +11,6 @@ test("Test to Add a note to a case", async ({ addNoteSteps }) => {
     await addNoteSteps.performAddANote(caseId);
 });
 
-test.afterAll("Case has to be set to Dormant",async () => {
-    await performAppealDormantOnCase(caseId);
-});
+// test.afterAll("Case has to be set to Dormant",async () => {
+//     await performAppealDormantOnCase(caseId);
+// });
