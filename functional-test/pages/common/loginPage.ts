@@ -76,8 +76,8 @@ export class LoginPage {
         await expect(this.pageTitle).toHaveText('My work');
     }
 
-    async verifySuccessfulLoginForUser(user, isLoggedIn?: boolean): Promise<void> {
-        if(isLoggedIn) await this.page.context().clearCookies();
+    async verifySuccessfulLoginForUser(user, clearCacheFlag?: boolean): Promise<void> {
+        if(clearCacheFlag) await this.page.context().clearCookies();
         await webActions.inputField('#username', user.email);
         await webActions.inputField('#password', user.password);
         await webActions.clickButton('Sign in');
