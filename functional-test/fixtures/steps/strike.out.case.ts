@@ -12,8 +12,8 @@ export class StrikeOutCase extends BaseStep {
        this.page = page;
    }
 
-    async performStrikeOutCase() {
-        await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'PIP');
+    async performStrikeOutCase(caseId: string) {
+        await this.loginAsCaseworkerUserWithCaseId(caseId);
         await this.homePage.chooseEvent('Strike out case');
         await this.eventNameAndDescriptionPage.verifyPageContent("Strike out case");
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
