@@ -129,7 +129,8 @@ export class UploadResponse extends BaseStep {
 
     async verifyErrorsScenariosInUploadResponse() {
 
-        let pipErrorCaseId = await this.loginAsDWPUser("PIP");
+        let pipErrorCaseId = await createCaseBasedOnCaseType("PIP");
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, pipErrorCaseId);
         UploadResponse.caseId = pipErrorCaseId;
 
         await this.homePage.chooseEvent('Upload response');

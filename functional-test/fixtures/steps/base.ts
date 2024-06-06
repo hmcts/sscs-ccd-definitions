@@ -51,14 +51,6 @@ export abstract class BaseStep {
         this.textAreaPage = new TextAreaPage(this.page);
     }
 
-    async loginAsDWPUser(caseType: string) {
-        var caseId = await createCaseBasedOnCaseType(caseType);
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForDWPResponseWriter(false);
-        await this.homePage.goToHomePage(caseId);
-        return caseId;
-    }
-
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
         await this.loginPage.goToLoginPage();
         await this.loginPage.verifySuccessfulLoginForUser(user, clearCacheFlag);
@@ -78,10 +70,10 @@ export abstract class BaseStep {
         await this.historyTab.verifyHistoryPageEventLink(linkLabel);
     }
 
-    async verifyAppealDetailsTab(state: string, value: string) {
+    /*async verifyAppealDetailsTab(state: string, value: string) {
         await this.homePage.navigateToTab("Appeal Details");
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue(state, value);
         await this.appealDetailsTab.verifyFTADueDateOnAppealDetails();
-    }
+    }*/
 
 }
