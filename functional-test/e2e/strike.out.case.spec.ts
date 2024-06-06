@@ -3,7 +3,7 @@ import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.fa
 import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 let caseId : string;
 test.beforeAll("Case has to be Created",async () => {
-    caseId = await createCaseBasedOnCaseType('TAX CREDIT');
+    caseId = await createCaseBasedOnCaseType('PIP');
 });
 
 test("As a caseworker Strike out case", async ({ strikeOutCaseSteps }) => {
