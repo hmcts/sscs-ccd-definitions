@@ -12,8 +12,8 @@ export class VoidCase extends BaseStep {
        this.page = page;
    }
 
-    async performVoidCase() {
-        await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'PIP');
+    async performVoidCase(caseId: string) {
+        await this.loginAsCaseworkerUserWithCaseId(caseId);
         await this.homePage.chooseEvent('Void case');
         await this.eventNameAndDescriptionPage.verifyPageContent("Void case");
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
