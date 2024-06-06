@@ -147,7 +147,8 @@ export class UploadResponse extends BaseStep {
     async verifyPHMEErrorsScenariosInUploadResponse() {
 
         await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForDWPResponseWriter(false);
+        //await this.loginPage.verifySuccessfulLoginForDWPResponseWriter(false);
+        await this.loginPage.verifySuccessfulLoginForUser(credentials.dwpResponseWriter, false)
         await this.homePage.goToHomePage(UploadResponse.caseId);
 
         await this.homePage.chooseEvent('Upload response');
@@ -164,7 +165,8 @@ export class UploadResponse extends BaseStep {
     async verifyIssueCodeErrorsScenariosInUploadResponse() {
 
         await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForDWPResponseWriter(false);
+        //await this.loginPage.verifySuccessfulLoginForDWPResponseWriter(false);
+        await this.loginPage.verifySuccessfulLoginForUser(credentials.dwpResponseWriter, false)
         await this.homePage.goToHomePage(UploadResponse.caseId);
 
         await this.homePage.chooseEvent('Upload response');

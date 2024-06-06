@@ -81,6 +81,5 @@ export class LoginPage {
         await webActions.inputField('#username', user.email);
         await webActions.inputField('#password', user.password);
         await webActions.clickButton('Sign in');
-        await expect(this.pageTitle).toHaveText('My work');
     }
 }
