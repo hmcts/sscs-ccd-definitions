@@ -62,7 +62,7 @@ export class UploadResponse extends BaseStep {
     async performUploadResponseWithoutFurtherInfoOnATaxCredit() {
 
         let taxCaseId = await createCaseBasedOnCaseType("TAX CREDIT");
-        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, taxCaseId);
+        await this.loginUserWithCaseId(credentials.hmrcUser, false, taxCaseId);
         await this.homePage.chooseEvent('Upload response');
         await this.homePage.delay(4000);
         await this.uploadResponsePage.verifyPageContent();
