@@ -4,6 +4,7 @@ import { ConfirmCaseLapsed } from '../fixtures/steps/confirm.case.lapsed';
 import { EvidenceReminder } from '../fixtures/steps/evidence.reminder';
 import { AssociateCase } from '../fixtures/steps/associate-case';
 import { SendToAdmin } from '../fixtures/steps/send.to.admin';
+import { SendToJudge } from '../fixtures/steps/send.to.judge';
 import { UploadResponse } from '../fixtures/steps/upload.response';
 import {ListingError} from "../fixtures/steps/listing.error";
 import { StrikeOutCase } from '../fixtures/steps/strike.out.case';
@@ -16,6 +17,7 @@ type MyStepsFixtures = {
     confirmCaseLapsedSteps: ConfirmCaseLapsed
     evidenceReminderSteps: EvidenceReminder
     sendToAdminSteps: SendToAdmin
+    sendToJudgeSteps: SendToJudge
     uploadResponseSteps: UploadResponse
     listingErrorSteps: ListingError
     strikeOutCaseSteps: StrikeOutCase
@@ -41,6 +43,10 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     sendToAdminSteps:async ({page}, use) => {
         const sendToAdminSteps = new SendToAdmin(page);
         await use(sendToAdminSteps);
+    },
+    sendToJudgeSteps:async ({page}, use) => {
+        const sendToJudgeSteps = new SendToJudge(page);
+        await use(sendToJudgeSteps);
     },
     uploadResponseSteps:async ({page}, use) => {
         const uploadResponseSteps = new UploadResponse(page);
