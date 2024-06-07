@@ -2,6 +2,7 @@ import { Page } from '@playwright/test';
 import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import { StringUtilsComponent } from "../../utils/StringUtilsComponent";
 import { BaseStep } from './base';
+import {credentials} from "../../config/config";
 const associateCaseTestData = require("../../pages/content/associate.case_en.json");
 
 export class AssociateCase extends BaseStep {
@@ -61,7 +62,7 @@ export class AssociateCase extends BaseStep {
     }
 
     private async goToAssociateCasePage(caseId: string) {
-        await this.loginAsCaseworkerUserWithCaseId(caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker,true, caseId);
         await this.homePage.chooseEvent("Associate case");
     }
 }
