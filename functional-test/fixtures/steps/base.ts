@@ -1,11 +1,11 @@
-import { Page } from '@playwright/test';
-import { HomePage } from '../../pages/common/homePage';
-import { LoginPage } from '../../pages/common/loginPage';
-import { UploadResponsePage } from '../../pages/upload.response.page';
-import { CheckYourAnswersPage } from '../../pages/common/check.your.answers.page';
-import { ResponseReviewedPage } from '../../pages/response.reviewed.page';
-import { AssociateCasePage } from '../../pages/associate.case.page';
-import { TextAreaPage } from "../../pages/common/text.area.page";
+import {Page} from '@playwright/test';
+import {HomePage} from '../../pages/common/homePage';
+import {LoginPage} from '../../pages/common/loginPage';
+import {UploadResponsePage} from '../../pages/upload.response.page';
+import {CheckYourAnswersPage} from '../../pages/common/check.your.answers.page';
+import {ResponseReviewedPage} from '../../pages/response.reviewed.page';
+import {AssociateCasePage} from '../../pages/associate.case.page';
+import {TextAreaPage} from "../../pages/common/text.area.page";
 import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import { History } from "../../pages/tabs/history";
 import { AppealDetails } from "../../pages/tabs/appealDetails";
@@ -55,54 +55,9 @@ export abstract class BaseStep {
         this.tasksTab = new Tasks(this.page);
    }
 
-    async loginAsDWPUser(caseType: string) {
-        var caseId = await createCaseBasedOnCaseType(caseType);
+    async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
         await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForDWPResponseWriter(false);
-        await this.homePage.goToHomePage(caseId);
-        return caseId;
-    }
-
-    async loginAsCaseworkerUserWithoutCaseId(caseId?: string, caseType?: string) {
-        var caseId = await createCaseBasedOnCaseType(caseType);
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForAMCaseworker(false);
-        await this.homePage.goToHomePage(caseId);
-    }
-
-    async loginAsCaseworkerUserWithCaseId(caseId?: string) {
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForAMCaseworker(true);
-        await this.homePage.goToHomePage(caseId);
-    }
-
-    async loginAsHMRCUser(caseType: string) {
-        var caseId = await createCaseBasedOnCaseType(caseType);
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForHMRCUser(false);
-        await this.homePage.goToHomePage(caseId);
-        return caseId;
-    }
-
-    async loginAsJudgeUser(caseType: string) {
-        var caseId = await createCaseBasedOnCaseType(caseType);
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForJudge(false);
-        await this.homePage.goToHomePage(caseId);
-        return caseId;
-    }
-
-  /*async loginAsJudgeUser(caseType: string){
-      var caseId = await createCaseBasedOnCaseType(caseType);
-      await this.loginPage.goToLoginPage();
-      await this.loginPage.verifySuccessfulLoginForJudge(true);
-      await this.homePage.goToHomePage(caseId);
-      return caseId;
- }*/
-
-    async loginUserWithCaseId(user, caseId?: string){
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForUser(user, true);
+        await this.loginPage.verifySuccessfulLoginForUser(user, clearCacheFlag);
         await this.homePage.goToHomePage(caseId);
     }
 
@@ -119,16 +74,10 @@ export abstract class BaseStep {
         await this.historyTab.verifyHistoryPageEventLink(linkLabel);
     }
 
-    async verifyAppealDetailsTab(state: string, value: string) {
+    /*async verifyAppealDetailsTab(state: string, value: string) {
         await this.homePage.navigateToTab("Appeal Details");
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue(state, value);
         await this.appealDetailsTab.verifyFTADueDateOnAppealDetails();
-  }
+    }*/
 
-  async loginAsSuperUserWithoutCaseId(caseId?: string, caseType?: string){
-     var caseId = await createCaseBasedOnCaseType(caseType);
-     await this.loginPage.goToLoginPage();
-     await this.loginPage.verifySuccessfulLoginForSuperUser(false);
-     await this.homePage.goToHomePage(caseId);
-}
 }

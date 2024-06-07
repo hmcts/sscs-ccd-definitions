@@ -10,7 +10,7 @@ test("Send to admin", async ({ sendToAdminSteps }) => {
     await sendToAdminSteps.performSendToAdmin(caseId)
 });
 
-test.afterAll("Case has to be set to Dormant",async () => {
-    await performAppealDormantOnCase(caseId);
-});
+// test.afterAll("Case has to be set to Dormant",async () => {
+//     await performAppealDormantOnCase(caseId);
+// });
 

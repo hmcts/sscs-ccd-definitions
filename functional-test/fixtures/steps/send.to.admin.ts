@@ -18,7 +18,7 @@ export class SendToAdmin extends BaseStep {
 
     async performSendToAdmin(caseId: string) {
 
-        await this.loginUserWithCaseId(credentials.judge, caseId);
+        await this.loginUserWithCaseId(credentials.judge, false, caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Send to admin');
         //await this.homePage.waitForLoadState();
