@@ -56,7 +56,7 @@ export class UploadResponse extends BaseStep {
         }
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Ready to list");
-        await performAppealDormantOnCase(pipCaseId);
+        // await performAppealDormantOnCase(pipCaseId);
    }
 
     async performUploadResponseWithoutFurtherInfoOnATaxCredit() {
@@ -83,7 +83,7 @@ export class UploadResponse extends BaseStep {
         }
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Ready to list");
-        await performAppealDormantOnCase(taxCaseId);
+        // await performAppealDormantOnCase(taxCaseId);
     }
 
     async performUploadResponseOnAUniversalCredit() {
@@ -125,15 +125,15 @@ export class UploadResponse extends BaseStep {
         }
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Ready to list");
-        await performAppealDormantOnCase(ucCaseId);
+        // await performAppealDormantOnCase(ucCaseId);
 
     }
 
     async verifyErrorsScenariosInUploadResponse() {
 
         let pipErrorCaseId = await createCaseBasedOnCaseType("PIP");
-        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, pipErrorCaseId);
         UploadResponse.caseId = pipErrorCaseId;
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, UploadResponse.caseId);
 
         await this.homePage.chooseEvent('Upload response');
         await this.homePage.delay(2000);
@@ -144,13 +144,12 @@ export class UploadResponse extends BaseStep {
         await this.uploadResponsePage.continueSubmission();
         await this.uploadResponsePage.delay(1000);
         await this.uploadResponsePage.verifyDocMissingErrorMsg();
-        await performAppealDormantOnCase(pipErrorCaseId);
+        // await performAppealDormantOnCase(pipErrorCaseId);
     }
 
     async verifyPHMEErrorsScenariosInUploadResponse() {
 
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForUser(credentials.dwpResponseWriter, false)
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, UploadResponse.caseId);
         await this.homePage.goToHomePage(UploadResponse.caseId);
 
         await this.homePage.chooseEvent('Upload response');
@@ -166,8 +165,7 @@ export class UploadResponse extends BaseStep {
 
     async verifyIssueCodeErrorsScenariosInUploadResponse() {
 
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForUser(credentials.dwpResponseWriter, false)
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, UploadResponse.caseId);
         await this.homePage.goToHomePage(UploadResponse.caseId);
 
         await this.homePage.chooseEvent('Upload response');
@@ -178,5 +176,6 @@ export class UploadResponse extends BaseStep {
 
         await this.checkYourAnswersPage.confirmSubmission();
         await this.checkYourAnswersPage.verifyIssueCodeErrorMsg();
+        // await performAppealDormantOnCase(UploadResponse.caseId);
     }
 }

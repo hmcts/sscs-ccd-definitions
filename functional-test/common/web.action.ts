@@ -50,15 +50,25 @@ export class WebAction {
             });
     }
 
+    async clickFindButton(): Promise<void> {
+        await this.page.waitForLoadState('domcontentloaded');
+        await this.page
+         .locator("//exui-case-reference-search-box/div/form/button")
+         .click()
+         .catch((error) => {
+            logger.error(`Button element is not present: ${error}`);
+         });
+    }
+
     async clickButton(elementLocator: string): Promise<void> {
-       // await this.page.getByRole('button', { name: elementLocator}).waitFor();  // <
+        await this.page.waitForLoadState('domcontentloaded');
+        await this.page.getByRole('button', { name: elementLocator}).waitFor(); 
         await this.page
          .getByRole('button', { name: elementLocator})
          .click({force: true})
          .catch((error) => {
             logger.error(`Button element is not present: ${error}`);
          });
-        //expect(this.page).toHaveURL('trigger/dwpUploadResponse/dwpUploadResponse1.0');
     }
 
     async clickGoButton(elementLocator: string): Promise<void> {
@@ -68,8 +78,6 @@ export class WebAction {
             .catch((error) => {
                 logger.error(`Button element is not present: ${error}`);
             });
-        //await this.page.isHidden('.spinner-container',{strict: true, timeout: 4000});
-        //expect(this.page).toHaveURL('trigger/dwpUploadResponse/dwpUploadResponse1.0');
     }
 
     async clickSubmitButton(): Promise<void> {
