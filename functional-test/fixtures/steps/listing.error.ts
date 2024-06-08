@@ -22,7 +22,7 @@ export class ListingError extends BaseStep {
     async performListingErrorEvent(caseId: string) {
         let webActions = new WebAction(this.page);
 
-        await this.loginUserWithCaseId(credentials.amCaseWorker, caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false ,caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Listing Error');
 

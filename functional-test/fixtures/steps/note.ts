@@ -15,11 +15,11 @@ export class Note extends BaseStep {
    }
 
     async performAddANote(caseId :string) {
-        await this.loginUserWithCaseId(credentials.amCaseWorker, caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Add a note');
 
-        /* speak with pettedson regarding test step 38 */
+        /* speak with Pettedson regarding test step 38 */
         //await addNotePage.verifyPageContent(StringUtilsComponent.formatClaimReferenceToAUIDisplayFormat(pipCaseId));
         await this.addNotePage.inputData();
         await this.addNotePage.confirmSubmission();
@@ -34,8 +34,5 @@ export class Note extends BaseStep {
         await this.notePadTab.verifyPageContentByKeyValue('Note','Playwright test note');
         await this.homePage.navigateToTab("History");
         await this.historyTab.verifyEventCompleted("Add a note");
-        //await this.verifyHistoryTabDetails('With FTA', 'Add a note', 'Event Description for Automation Verification - Add a note');
     }
-
-    
 }

@@ -44,7 +44,8 @@ export class HomePage {
     async goToHomePage(caseId: string): Promise<void> {
         // await this.page.goto(`/cases/case-details/${caseId}`);
         await webActions.inputField('#caseReference', caseId);
-        await webActions.clickButton('Find');
+        await this.delay(1000);
+        await webActions.clickFindButton();
         await this.delay(3000);
         await expect(this.summaryTab)
             .toBeVisible()
@@ -54,7 +55,7 @@ export class HomePage {
     }
 
     async chooseEvent(eventName: string): Promise<void> {
-
+        await this.delay(2000);
         await webActions.chooseOptionByLabel(this.nextStepDropDown, eventName);
         await this.delay(2000);
         await webActions.clickSubmitButton();
