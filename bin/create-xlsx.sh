@@ -1,17 +1,26 @@
 #!/usr/bin/env bash
+set -x
 
 TYPE=${1}
 VERSION=${2}
 ENV=${3}
-LIKE_PROD=${4:-${ENV}}
-SHUTTERED=${5:-false}
+CHANGE_ID=${4}
+LIKE_PROD=${5:-${ENV}}
+SHUTTERED=${6:-false}
+
 
 RUN_DIR=`pwd`
-
 
 if [ -z "${VERSION}" ] || [ -z "${TYPE}" ] || [ -z "${ENV}" ]; then
     echo "Usage create-xlsx.sh [type] [version] [env]"
     exit 1
+fi
+
+if [ ${ENV} == "preview" ]; then
+     if [ -z "${VERSION}" ] || [ -z "${TYPE}" ] || [ -z "${ENV}" ] || [ -z "${CHANGE_ID}" ]; then
+         echo "Usage create-xlsx.sh [type] [version] [env] [pr-number]"
+         exit 1
+     fi
 fi
 
 case ${TYPE} in
@@ -49,7 +58,6 @@ fi
 
 echo "Tag version: ${TAG_VERSION}, CCD Definitions Version: ${CCD_DEF_VERSION}, File Name: ${ccdDefinitionFile}"
 
-docker build -t hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:latest -f ./docker/importer.Dockerfile ./${TYPE}
 
 if [ ${ENV} == "local" ]; then
     EM_CCD_ORCHESTRATOR_URL="http://localhost:4623"
@@ -62,10 +70,24 @@ elif [ ${ENV} == "aat" ] || [ ${ENV} == "demo" ] || [ ${ENV} == "prod" ] || [ ${
     TYA_NOTIFICATIONS_API_URL="http://sscs-tya-notif-${ENV}.service.core-compute-${ENV}.internal"
     BULK_SCAN_API_URL="http://sscs-bulk-scan-${ENV}.service.core-compute-${ENV}.internal"
     BULK_SCAN_ORCHESTRATOR_URL="http://bulk-scan-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
+elif [ ${ENV} == "preview" ]; then
+     ENV="aat"
+     CCD_DEF_VERSION=${CCD_DEF_VERSION}-${CHANGE_ID}
+     TRIBUNALS_API_URL="http://sscs-tribunals-api-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+     TYA_NOTIFICATIONS_API_URL="http://sscs-tya-notif-${ENV}.service.core-compute-${ENV}.internal"
+     BULK_SCAN_API_URL="http://sscs-bulk-scan-${ENV}.service.core-compute-${ENV}.internal"
+     BULK_SCAN_ORCHESTRATOR_URL="http://bulk-scan-orchestrator-${ENV}.service.core-compute-${ENV}.internal"
+     ORIGINAL_SHEETS="${RUN_DIR}/benefit/data/original"
+     mkdir -p ${ORIGINAL_SHEETS}
+     cp -r ${RUN_DIR}/benefit/data/sheets/ ${ORIGINAL_SHEETS}
+     find ${RUN_DIR}/benefit/data/sheets/ -type f -exec sed -i "s/Benefit/Benefit-${CHANGE_ID}/g" {} +
 else
         echo "${ENV} not recognised"
         exit 1
 fi
+
+docker build -t hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:latest -f ./docker/importer.Dockerfile ./${TYPE}
+
 
 if [ ${ENV} == "demo" ] || [ ${ENV} == "ithc" ]; then
     EM_CCD_ORCHESTRATOR_URL="http://em-ccd-orchestrator-demo.service.core-compute-demo.internal/"
@@ -130,6 +152,8 @@ fi
 
 echo ${excludedFilenamePatterns}
 
+cat ${RUN_DIR}/benefit/data/sheets/CaseType/CaseType.json
+
 docker run --rm --name json2xlsx \
   -v $(pwd)/releases:/tmp \
   -e "CCD_DEF_EM_CCD_ORCHESTRATOR_URL=${EM_CCD_ORCHESTRATOR_URL}" \
@@ -146,3 +170,6 @@ docker run --rm --name json2xlsx \
   -e "CCD_DEF_VERSION=${CCD_DEF_VERSION}" \
   hmctspublic.azurecr.io/sscs/ccd-definition-importer-${TYPE}:latest \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/${ccdDefinitionFile}"
+
+cp -r ${ORIGINAL_SHEETS}/sheets ${RUN_DIR}/benefit/data/
+rm -r ${ORIGINAL_SHEETS}
