@@ -25,7 +25,7 @@ export class ReviewAdminActionTask extends BaseStep {
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
 
         // Login as CTSC Administrator and view the unassigned Review Admin Action task
-        await this.loginUserWithCaseId(credentials.amCaseWorker, caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
         await this.homePage.navigateToTab('Tasks')
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
         await this.tasksTab.verifyPriortiy(task.name, task.priority);
@@ -37,7 +37,7 @@ export class ReviewAdminActionTask extends BaseStep {
 
         /* Login as CTSC Administrator with case allocator role and view the 
            unassigned Review Admin Action task */
-        await this.loginUserWithCaseId(credentials.amCaseWorkerWithCaseAllocatorRole, caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorkerWithCaseAllocatorRole, true, caseId);
         await this.homePage.navigateToTab('Tasks')
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
         await this.tasksTab.verifyPriortiy(task.name, task.priority);
@@ -48,7 +48,7 @@ export class ReviewAdminActionTask extends BaseStep {
     async verifyCtscAdminWithoutCaseAllocatorRoleCanCompleteReviewAdminActionTask(caseId: string) {
 
         // Login as CTSC Administrator and view the unassigned Review Admin Action task
-        await this.loginUserWithCaseId(credentials.amCaseWorker, caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
         await this.homePage.navigateToTab('Tasks')
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
 
