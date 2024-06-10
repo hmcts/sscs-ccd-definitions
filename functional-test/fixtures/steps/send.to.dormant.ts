@@ -14,7 +14,7 @@ export class SendToDormant extends BaseStep {
    }
 
     async performSendToDormant(caseId: string) {
-        await this.loginUserWithCaseId(caseId);
+        await this.loginUserWithCaseId(credentials.amSuperUser, false, caseId);
         await this.homePage.chooseEvent('Admin - send to Dormant');
 
         await this.eventNameAndDescriptionPage.verifyPageContent("Admin - send to Dormant");
