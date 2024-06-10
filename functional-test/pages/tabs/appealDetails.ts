@@ -22,7 +22,7 @@ export class AppealDetails {
         const ftaDueDate = new Date();
         ftaDueDate.setDate(new Date().getDate() + 28);
         let options = { day: '2-digit', month: 'short', year: 'numeric' };
-        let formattedDate = ftaDueDate.toLocaleDateString('en-UK', options);
+        let formattedDate = ftaDueDate.toLocaleDateString('en-UK', { day: '2-digit', month: 'short', year: 'numeric' });
         this.verifyAppealDetailsPageContentByKeyValue('FTA response due date', formattedDate);
     }
 }
