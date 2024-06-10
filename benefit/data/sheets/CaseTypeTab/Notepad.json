@@ -1,0 +1,6 @@
+[
+  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "judicialNotepad_sscs", "TabLabel": "Judicial Notepad", "TabDisplayOrder": 10, "CaseFieldID": "isConfidentialCaseLabel", "TabFieldDisplayOrder": 1, "TabShowCondition": "judgeAppealNotePad=\"*\"",  "FieldShowCondition": "isConfidentialCase =\"Yes\""},
+  {"LiveFrom": "", "CaseTypeID": "Benefit", "AccessProfile": "caseworker-sscs", "TabID": "judicialNotepad_sscs", "TabLabel": "Judicial Notepad", "TabDisplayOrder": 10, "CaseFieldID": "judgeAppealNotePad", "TabFieldDisplayOrder": 1},
+  {"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "notePadTab", "TabLabel": "Notepad", "TabDisplayOrder": 15, "CaseFieldID": "isConfidentialCaseLabel", "TabFieldDisplayOrder": 1, "TabShowCondition": "appealNotePad=\"*\"", "FieldShowCondition": "isConfidentialCase =\"Yes\""},
+  {"LiveFrom": "", "CaseTypeID": "Benefit", "AccessProfiles": ["caseworker-sscs-clerk", "caseworker-sscs-superuser", "caseworker-sscs-judge", "caseworker-sscs-registrar"], "TabID": "notePadTab", "TabLabel": "Notepad", "TabDisplayOrder": 15, "CaseFieldID": "appealNotePad", "TabFieldDisplayOrder": 1}
+]
