@@ -11,6 +11,7 @@ import { SendToDormant } from '../fixtures/steps/send.to.dormant';
 import { VoidCase } from '../fixtures/steps/void.case';
 import {use} from "chai";
 import { SendToFTA } from '../fixtures/steps/send.to.fta';
+import { AppealWithdrawn } from '../fixtures/steps/appeal.withdrawn';
 
 
 type MyStepsFixtures = {
@@ -25,6 +26,7 @@ type MyStepsFixtures = {
     sendToFTASteps: SendToFTA
     sendToDormantSteps: SendToDormant
     voidCaseSteps: VoidCase
+    appealWithdrawnSteps: AppealWithdrawn
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -71,6 +73,10 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     listingErrorSteps:async ({page}, use) =>{
         const listingErrorSteps = new ListingError(page);
         await use(listingErrorSteps)
+    },
+    appealWithdrawnSteps:async ({page}, use) =>{
+        const appealWithdrawnSteps = new AppealWithdrawn(page);
+        await use(appealWithdrawnSteps)
 }
 })
 
