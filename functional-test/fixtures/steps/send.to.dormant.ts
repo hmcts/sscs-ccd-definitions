@@ -16,14 +16,12 @@ export class SendToDormant extends BaseStep {
     async performSendToDormant(caseId: string) {
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.homePage.chooseEvent('Admin - send to Dormant');
-        await this.homePage.delay(4000);
 
         await this.eventNameAndDescriptionPage.verifyPageContent("Admin - send to Dormant");
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
-        
-        await this.homePage.delay(4000);
+
         await this.verifyHistoryTabDetails("Dormant", 'Admin - send to Dormant', 'Event Description for Automation Verification');
     }
 }
