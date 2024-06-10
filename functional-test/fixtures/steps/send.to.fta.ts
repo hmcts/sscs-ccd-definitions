@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test';
 import { BaseStep } from './base';
+import {credentials} from "../../config/config";
 
 const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
@@ -13,7 +14,7 @@ export class SendToFTA extends BaseStep {
     }
 
     async performSendToFTA(caseId: string) {
-        await this.loginAsSuperUserWithCaseId(caseId);
+        await this.loginUserWithCaseId(credentials.amSuperUser, false, caseId);
         await this.homePage.chooseEvent('Admin - send to With FTA');
         await this.eventNameAndDescriptionPage.verifyPageContent("Admin - send to With FTA");
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
