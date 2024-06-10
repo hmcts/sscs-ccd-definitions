@@ -1,0 +1,11 @@
+[
+{"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "eventHistory", "TabLabel": "History", "TabDisplayOrder": 2, "CaseFieldID": "isInc5249521CaseLabel", "TabFieldDisplayOrder": 1, "FieldShowCondition": "isInc5249521 =\"Yes\""},
+{"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "eventHistory", "TabLabel": "History", "TabDisplayOrder": 2, "CaseFieldID": "phmeGrantedLabel", "TabFieldDisplayOrder": 2, "FieldShowCondition": "phmeGranted =\"Yes\" AND interlocReferralReason!=\"phmeRequest\""},
+{"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "eventHistory", "TabLabel": "History", "TabDisplayOrder": 2, "CaseFieldID": "phmeUnderReviewLabel", "TabFieldDisplayOrder": 2, "FieldShowCondition": "interlocReferralReason=\"phmeRequest\""},
+{"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "eventHistory", "TabLabel": "History", "TabDisplayOrder": 2, "CaseFieldID": "isConfidentialCaseLabel", "TabFieldDisplayOrder": 3, "FieldShowCondition": "isConfidentialCase =\"Yes\""},
+{"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "eventHistory", "TabLabel": "History", "TabDisplayOrder": 2, "CaseFieldID": "isConfidentialityRequestUnderReviewLabel", "TabFieldDisplayOrder": 4, "FieldShowCondition": "confidentialityRequestOutcomeAppellant.requestOutcome =\"inProgress\" OR confidentialityRequestOutcomeJointParty.requestOutcome =\"inProgress\""},
+{"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "eventHistory", "TabLabel": "History", "TabDisplayOrder": 2, "CaseFieldID": "appellantDeceasedLabel", "TabFieldDisplayOrder": 5, "FieldShowCondition": "isAppellantDeceased =\"Yes\""},
+{"LiveFrom": "", "CaseTypeID": "Benefit", "AccessProfiles": ["caseworker-sscs-clerk", "caseworker-sscs-superuser", "caseworker-sscs-judge", "caseworker-sscs-registrar"], "TabID": "eventHistory_clerk", "TabLabel": "History", "TabDisplayOrder": 2, "CaseFieldID": "interlocReviewState", "TabFieldDisplayOrder": 6},
+{"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "eventHistory", "TabLabel": "History", "TabDisplayOrder": 2, "CaseFieldID": "dwpFurtherEvidenceStates", "TabFieldDisplayOrder": 7},
+{"LiveFrom": "", "CaseTypeID": "Benefit", "TabID": "eventHistory", "TabLabel": "History", "TabDisplayOrder": 2, "CaseFieldID": "caseHistory", "TabFieldDisplayOrder": 8}
+  ]
