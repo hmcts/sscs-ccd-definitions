@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test';
 import { BaseStep } from './base';
+import {credentials} from "../../config/config";
 const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
 export class SendToDormant extends BaseStep {
@@ -13,7 +14,7 @@ export class SendToDormant extends BaseStep {
    }
 
     async performSendToDormant(caseId: string) {
-        await this.loginAsCaseworkerUserWithCaseId(caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.homePage.chooseEvent('Admin - send to Dormant');
         await this.homePage.delay(4000);
 
