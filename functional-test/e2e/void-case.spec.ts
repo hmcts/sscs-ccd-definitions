@@ -10,3 +10,7 @@ test.beforeAll("Case has to be Created",async () => {
 test("As a caseworker Void a case", async ({ voidCaseSteps }) => {
     await voidCaseSteps.performVoidCase(caseId);
 });
+
+test.afterAll("Case has to be set to Dormant",async () => {
+    await performAppealDormantOnCase(caseId);
+});

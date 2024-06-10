@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test';
 import { BaseStep } from './base';
+import {credentials} from "../../config/config";
 const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
 export class VoidCase extends BaseStep {
@@ -13,7 +14,7 @@ export class VoidCase extends BaseStep {
    }
 
     async performVoidCase(caseId: string) {
-        await this.loginAsCaseworkerUserWithCaseId(caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.homePage.chooseEvent('Void case');
         await this.eventNameAndDescriptionPage.verifyPageContent("Void case");
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
