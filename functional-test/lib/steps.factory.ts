@@ -7,6 +7,7 @@ import { SendToAdmin } from '../fixtures/steps/send.to.admin';
 import { SendToJudge } from '../fixtures/steps/send.to.judge';
 import { UploadResponse } from '../fixtures/steps/upload.response';
 import {ListingError} from "../fixtures/steps/listing.error";
+import { SendToDormant } from '../fixtures/steps/send.to.dormant';
 import {use} from "chai";
 
 
@@ -19,6 +20,7 @@ type MyStepsFixtures = {
     sendToJudgeSteps: SendToJudge
     uploadResponseSteps: UploadResponse
     listingErrorSteps: ListingError
+    sendToDormantSteps: SendToDormant
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -49,6 +51,10 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     uploadResponseSteps:async ({page}, use) => {
         const uploadResponseSteps = new UploadResponse(page);
         await use(uploadResponseSteps);
+    },
+    sendToDormantSteps:async ({page}, use) =>{
+        const sendToDormantSteps = new SendToDormant(page);
+        await use(sendToDormantSteps)
     },
     listingErrorSteps:async ({page}, use) =>{
         const listingErrorSteps = new ListingError(page);
