@@ -126,5 +126,11 @@ export abstract class BaseStep {
      await this.loginPage.goToLoginPage();
      await this.loginPage.verifySuccessfulLoginForSuperUser(false);
      await this.homePage.goToHomePage(caseId);
-}
+    }
+
+    async loginAsSuperUserWithCaseId(caseId: string){
+        await this.loginPage.goToLoginPage();
+        await this.loginPage.verifySuccessfulLoginForSuperUser(false);
+        await this.homePage.goToHomePage(caseId);
+    }
 }
