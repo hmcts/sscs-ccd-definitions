@@ -9,6 +9,10 @@ import { ReviewAdminActionTask } from '../fixtures/steps/work-allocation/review.
 import { SendToJudge } from '../fixtures/steps/send.to.judge';
 import { UploadResponse } from '../fixtures/steps/upload.response';
 import {ListingError} from "../fixtures/steps/listing.error";
+import { SendToDormant } from '../fixtures/steps/send.to.dormant';
+import { VoidCase } from '../fixtures/steps/void.case';
+import {use} from "chai";
+import { SendToFTA } from '../fixtures/steps/send.to.fta';
 
 
 type MyStepsFixtures = {
@@ -22,6 +26,9 @@ type MyStepsFixtures = {
     reviewAdminActionTaskSteps: ReviewAdminActionTask
     listingErrorSteps: ListingError
     uploadResponseSteps: UploadResponse
+    sendToFTASteps: SendToFTA
+    sendToDormantSteps: SendToDormant
+    voidCaseSteps: VoidCase
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -60,6 +67,18 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     uploadResponseSteps:async ({page}, use) => {
         const uploadResponseSteps = new UploadResponse(page);
         await use(uploadResponseSteps);
+    },
+    sendToFTASteps:async ({page}, use) => {
+        const sendToFTASteps = new SendToFTA(page);
+        await use(sendToFTASteps);
+    },
+    sendToDormantSteps:async ({page}, use) =>{
+        const sendToDormantSteps = new SendToDormant(page);
+        await use(sendToDormantSteps)
+    },
+    voidCaseSteps:async ({page}, use) =>{
+        const voidCaseSteps = new VoidCase(page);
+        await use(voidCaseSteps)
     },
     listingErrorSteps:async ({page}, use) =>{
         const listingErrorSteps = new ListingError(page);
