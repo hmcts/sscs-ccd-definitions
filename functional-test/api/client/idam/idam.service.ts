@@ -23,6 +23,25 @@ export async function accessToken(user) {
     }
 }
 
+export async function accessId(user) {
+    let user_id_key = user.email + "_id"
+    console.log('The user email for getting the user id', user.email);
+    if (tokenIDCache.get(user_id_key) != null) {
+        console.log('User access token coming from cache', user_id_key);
+        return tokenIDCache.get(user_id_key);
+    } else {
+        if (user.email && user.password) {
+            const idamToken = await accessToken(user.email);
+            const userId = await getIDAMUserID(idamToken);
+            tokenIDCache.set(user_id_key, userId);
+            console.log('user id coming from idam', user_id_key);
+            return userId;
+        } else {
+            console.log('*******Missing user details. Cannot get the user id******');
+        }
+    }
+}
+
 async function getIDAMUserToken(user) {
     const scope = 'openid profile roles';
     const grantType = 'password';
@@ -88,7 +107,7 @@ export async function getSSCSServiceToken() {
     return body.toString();
 }
 
-export async function getIDAMUserID(idamToken) {
+async function getIDAMUserID(idamToken) {
     const idamDetailsPath = '/details';
 
     let apiContext = await request.newContext({
