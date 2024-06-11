@@ -57,6 +57,9 @@ withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
   syncBranchesWithMaster(branchesToSync)
     onPR{
+        // only enable high level data setup for preview specific casetype, SSCSSI-326
+        yarnBuilder.yarn('previewDataSetup')
+        println "previewDataSetup"
         env.ENVIRONMENT="preview"
         env.IDAM_URL='https://idam-api.aat.platform.hmcts.net'
         env.S2S_URL='http://rpe-service-auth-provider-aat.service.core-compute-aat.internal'
@@ -130,7 +133,7 @@ withPipeline("nodejs", product, component) {
             }
         }
     }
-    
+
     before('functionalTest:preview') {
         env.TEST_E2E_URL_WEB = params.URL_TO_TEST
         env.TEST_E2E_URL_GATEWAY = params.CCD_GATEWAY_URL
