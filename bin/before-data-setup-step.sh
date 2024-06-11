@@ -14,6 +14,9 @@ fi
 
 if [[ ${ENV} == "preview" ]]; then
     ENV="aat"
+    CHANGE_ID="PREVIEW"
+    TAG_VERSION=${TAG_VERSION}-${CHANGE_ID}
+    find ${RUN_DIR}/benefit/data/sheets/ -type f -exec sed -i "s/Benefit/Benefit-${CHANGE_ID}/g" {} +
 fi
 
 TIMESTAMP=$(printf '%s\n' "$LAST_COMMIT_TIMESTAMP")
@@ -148,11 +151,3 @@ docker run -i --rm --name json2xlsx \
   -e "CCD_DEF_VERSION=${TAG_VERSION}" \
   hmctspublic.azurecr.io/sscs/ccd-definitions:${LATEST_TAG} \
   sh -c "cd /opt/ccd-definition-processor && yarn json2xlsx -D /data/sheets ${excludedFilenamePatterns} -o /tmp/CCD_${CASE_TYPE_XLSX_NAME}Definition_${UPPERCASE_ENV}.xlsx"
-
-# Copy the output file from the Docker volume to the host directory
-output_file="CCD_${CASE_TYPE_XLSX_NAME}Definition_${UPPERCASE_ENV}.xlsx"
-docker create --name temp_container -v json2xlsx_data:/tmp busybox
-docker cp temp_container:/tmp/${output_file} $(pwd)/src/test/resources/ccd_definition/
-docker rm temp_container
-# Remove the Docker volume
-docker volume rm json2xlsx_data
