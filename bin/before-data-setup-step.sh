@@ -14,6 +14,8 @@ fi
 
 if [[ ${ENV} == "preview" ]]; then
     ENV="aat"
+    CHANGE_ID="PREVIEW"
+    TAG_VERSION=${TAG_VERSION}-${CHANGE_ID}
 fi
 
 TIMESTAMP=$(printf '%s\n' "$LAST_COMMIT_TIMESTAMP")
