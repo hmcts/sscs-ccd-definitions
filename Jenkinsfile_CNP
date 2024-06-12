@@ -112,6 +112,19 @@ withPipeline("nodejs", product, component) {
         }
     }
 
+    afterSuccess('checkout') {
+        onPR{
+            sh """ find ./benefit/data/sheets/ -type f -exec sed -i "s/Benefit/Benefit-${CHANGE_ID}/g" {} + """
+            sh """ cat ./benefit/data/sheets/CaseType.json """
+        }
+    }
+
+    afterSuccess('highleveldatasetup') {
+        onPR{
+            steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'src/test/resources/ccd_definition/*.xlsx'
+        }
+    }
+
     afterSuccess('smoketest:aat') {
         env.TEST_E2E_URL_WEB = params.URL_TO_TEST
         env.TEST_E2E_URL_GATEWAY = params.CCD_GATEWAY_URL
