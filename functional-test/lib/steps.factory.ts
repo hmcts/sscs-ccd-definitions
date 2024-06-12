@@ -9,6 +9,7 @@ import { UploadResponse } from '../fixtures/steps/upload.response';
 import {ListingError} from "../fixtures/steps/listing.error";
 import { SendToDormant } from '../fixtures/steps/send.to.dormant';
 import { VoidCase } from '../fixtures/steps/void.case';
+import { StrikeOutCase } from '../fixtures/steps/strike.out.case';
 import {use} from "chai";
 import { SendToFTA } from '../fixtures/steps/send.to.fta';
 import { AppealWithdrawn } from '../fixtures/steps/appeal.withdrawn';
@@ -27,6 +28,7 @@ type MyStepsFixtures = {
     sendToDormantSteps: SendToDormant
     voidCaseSteps: VoidCase
     appealWithdrawnSteps: AppealWithdrawn
+    strikeOutCaseSteps: StrikeOutCase
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -69,6 +71,10 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     voidCaseSteps:async ({page}, use) =>{
         const voidCaseSteps = new VoidCase(page);
         await use(voidCaseSteps)
+    },
+    strikeOutCaseSteps:async ({page}, use) =>{
+        const strikeOutCaseSteps = new StrikeOutCase(page);
+        await use(strikeOutCaseSteps)
     },
     listingErrorSteps:async ({page}, use) =>{
         const listingErrorSteps = new ListingError(page);
