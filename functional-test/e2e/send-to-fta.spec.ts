@@ -7,11 +7,11 @@ let caseId : string;
 test.beforeAll("Case has to be Created",async () => {
     caseId = await createCaseBasedOnCaseType('PIP');
 });
-test("Send to Judge", async ({ sendToJudgeSteps }) => {
-    await sendToJudgeSteps.performSendToJudge(caseId);
+
+test.beforeAll("Case has to be set to Dormant",async () => {
+    await performAppealDormantOnCase(caseId);
 });
 
- test.afterAll("Case has to be set to Dormant",async () => {
-     await performAppealDormantOnCase(caseId);
- });
-
+test("Send to FTA", async ({ sendToFTASteps }) => {
+    await sendToFTASteps.performSendToFTA(caseId)
+});
