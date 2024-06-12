@@ -16,6 +16,7 @@ export class AppealWithdrawn extends BaseStep {
     async performAppealWithdrawn(caseId: string) {
         console.log("**APPEAL WITHDRAWN**")
         await this.loginUserWithCaseId(credentials.amCaseWorker,false, caseId);
+        await this.homePage.reloadPage();
         await this.homePage.chooseEvent("Appeal withdrawn");
 
         await this.eventNameAndDescriptionPage.verifyPageContent("Appeal withdrawn");
