@@ -2,9 +2,3 @@ nodejs:
   # Don't modify below here
   image: ${IMAGE_NAME}
   ingressHost: ${SERVICE_FQDN}
-
-ccd-def-cleanup:
-  enabled: true
-  change_id: ${CHANGE_ID}
-  case_type_ids:
-    - Benefit
