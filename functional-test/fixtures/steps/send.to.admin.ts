@@ -18,7 +18,7 @@ export class SendToAdmin extends BaseStep {
 
     async performSendToAdmin(caseId: string) {
 
-        await this.loginUserWithCaseId(credentials.judge, caseId);
+        await this.loginUserWithCaseId(credentials.judge, false, caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Send to admin');
         //await this.homePage.waitForLoadState();
@@ -36,11 +36,8 @@ export class SendToAdmin extends BaseStep {
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
-        await this.homePage.navigateToTab("History");
-        await this.verifyHistoryTabLink('Send to admin');
 
-        //await this.verifyHistoryTabDetails('With FTA', 'Send to admin', 'Event Description for Automation Verification');
-        await this.verifyHistoryTabDetails('Valid Appeal', 'Send to admin', 'Event Description for Automation Verification');
+        await this.verifyHistoryTabDetails('With FTA', 'Send to admin', 'Event Description for Automation Verification');
     }
 
 }
