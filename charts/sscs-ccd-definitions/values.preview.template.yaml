@@ -5,6 +5,6 @@ nodejs:
 
 ccd-def-cleanup:
   enabled: true
-  change_id: PREVIEW
+  change_id: ${CHANGE_ID}
   case_type_ids:
     - Benefit
