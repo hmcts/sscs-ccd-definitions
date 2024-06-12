@@ -18,6 +18,10 @@ export const credentials = {
     email: process.env.TEST_AM_CASEOFFICER_USERNAME,
     password: process.env.TEST_AM_CASEOFFICER_PASSWORD,
   },
+  amCaseWorkerWithCaseAllocatorRole: {
+    email: process.env.TEST_AM_CASEOFFICER_CASE_ALLOCATOR_USERNAME,
+    password: process.env.TEST_AM_CASEOFFICER_CASE_ALLOCATOR_PASSWORD,
+  },
   seniorCaseworker: {
     email: process.env.SENIOR_CASEWORKER_USERNAME,
     password:
@@ -90,5 +94,12 @@ export const paths = {
       __dirname,
       "../tests/fixtures/file/mockFile.odt",
   ),
+};
+
+export const timeouts = {
+  shortTimeout: 5000,
+  mediumTimout: 60000,
+  longTimeout: 120000,
+  maxTimeout: 180000
 };
 
