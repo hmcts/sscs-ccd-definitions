@@ -22,6 +22,7 @@ export class AppealWithdrawn extends BaseStep {
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
+        await this.homePage.navigateToTab("History");
         await this.verifyHistoryTabDetails("Dormant");
     }
 }
