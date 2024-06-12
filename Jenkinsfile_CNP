@@ -56,6 +56,19 @@ withPipeline("nodejs", product, component) {
         env.ENVIRONMENT="aat"
     }
 
+    afterSuccess('checkout') {
+        onPR{
+            sh """ find ./benefit/data/sheets/ -type f -exec sed -i "s/Benefit/Benefit-${CHANGE_ID}/g" {} + """
+            sh """ cat ./benefit/data/sheets/CaseType.json """
+        }
+    }
+
+    afterSuccess('highleveldatasetup') {
+        onPR{
+            steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'src/test/resources/ccd_definition/*.xlsx'
+        }
+    }
+
     before('functionalTest:preview') {
         // Temporarily disable running tests on preview env
         // sh """
