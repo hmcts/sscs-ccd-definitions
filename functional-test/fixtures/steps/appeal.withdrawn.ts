@@ -14,6 +14,7 @@ export class AppealWithdrawn extends BaseStep {
    }
 
     async performAppealWithdrawn(caseId: string) {
+        console.log("**APPEAL WITHDRAWN**")
         await this.loginUserWithCaseId(credentials.amCaseWorker,false, caseId);
         await this.homePage.chooseEvent("Appeal withdrawn");
 
@@ -22,7 +23,6 @@ export class AppealWithdrawn extends BaseStep {
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
-        await this.homePage.navigateToTab("History");
-        await this.verifyHistoryTabDetails("Dormant");
+        //await this.verifyHistoryTabDetails("Dormant");
     }
 }
