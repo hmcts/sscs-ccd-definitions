@@ -26,25 +26,25 @@ async function getStartEventTokenOnCase (idamToken: string,
     logger.info('The value of the status for the start event :'+ responseForStartAnEvent.status());
     logger.info('The value of the status text for the start event:'+ responseForStartAnEvent.statusText());
     const body : string = await responseForStartAnEvent.body();
-    let event_token :string = JSON.parse(body).token;
     await responseForStartAnEvent.dispose();
-    return event_token;
+    return body;
 }
 
-export default async function performEventOnCase(idamToken: string,
-                                        serviceToken: string,
-                                        userId: string,
-                                        jurisdiction: string,
-                                        caseType: string,
-                                        caseId: string, eventId: string) {
+export default async function performEventOnCaseWithEmptyBody(idamToken: string,
+                                                              serviceToken: string,
+                                                              userId: string,
+                                                              jurisdiction: string,
+                                                              caseType: string,
+                                                              caseId: string, eventId: string) {
 
     //logger.info('The logger value for the body : ' + body);
-    let event_token :string = await getStartEventTokenOnCase(idamToken,
+    let body :string = await getStartEventTokenOnCase(idamToken,
         serviceToken,
         userId,
         jurisdiction,
         caseType,
         caseId, eventId);
+    let event_token :string = JSON.parse(body).token;
 
     let dataPayload = {
         event: {
@@ -79,4 +79,36 @@ export default async function performEventOnCase(idamToken: string,
         throw new Error("Error : Could not set the case to Dormant with status code - "
             + responseForSubmitAnEvent.status()+ " and message "+ responseForSubmitAnEvent.statusText());
     }
+
+   /* export default async function performEventOnCaseWithUploadResponse(idamToken: string,
+                                                                  serviceToken: string,
+                                                                  userId: string,
+                                                                  jurisdiction: string,
+                                                                  caseType: string,
+                                                                  caseId: string, eventId: string) {
+
+        //let
+
+        let body: string = await getStartEventTokenOnCase(idamToken,
+            serviceToken,
+            userId,
+            jurisdiction,
+            caseType,
+            caseId, eventId);
+        let event_token :string = JSON.parse(body).token;
+        let case_details = JSON.parse(body).case_details;
+        //case_details.
+
+        let dataPayload = {
+            event: {
+                id: `${eventId}`,
+                summary: `Summary for the ${eventId} of ${caseId}`,
+                description: `Description for the ${eventId} of ${caseId}`,
+            },
+            data: {},
+            event_token: `${event_token}`,
+            ignore_warning: true,
+        }
+        logger.info('The payload : ' + JSON.stringify(dataPayload));
+    }*/
 }
