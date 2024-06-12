@@ -80,14 +80,22 @@ export default async function performEventOnCaseWithEmptyBody(idamToken: string,
             + responseForSubmitAnEvent.status()+ " and message "+ responseForSubmitAnEvent.statusText());
     }
 
-   /* export default async function performEventOnCaseWithUploadResponse(idamToken: string,
+   // @ts-ignore
+    export default async function performEventOnCaseWithUploadResponse(idamToken: string,
                                                                   serviceToken: string,
                                                                   userId: string,
                                                                   jurisdiction: string,
                                                                   caseType: string,
                                                                   caseId: string, eventId: string) {
 
-        //let
+        let response_document = {
+            "documentLink": {
+                "document_url": "http://dm-store-aat.service.core-compute-aat.internal/documents/b4b8b038-1e11-49b3-b83e-13546cfc152d",
+                "document_binary_url": "http://dm-store-aat.service.core-compute-aat.internal/documents/b4b8b038-1e11-49b3-b83e-13546cfc152d/binary",
+                "document_filename": "Bloggs_IEF.pdf"
+            },
+            "documentFilename": "Bloggs_IEF.pdf"
+        };
 
         let body: string = await getStartEventTokenOnCase(idamToken,
             serviceToken,
@@ -97,9 +105,9 @@ export default async function performEventOnCaseWithEmptyBody(idamToken: string,
             caseId, eventId);
         let event_token :string = JSON.parse(body).token;
         let case_details = JSON.parse(body).case_details;
-        //case_details.
 
-        let dataPayload = {
+
+        /*let dataPayload = {
             event: {
                 id: `${eventId}`,
                 summary: `Summary for the ${eventId} of ${caseId}`,
@@ -108,7 +116,7 @@ export default async function performEventOnCaseWithEmptyBody(idamToken: string,
             data: {},
             event_token: `${event_token}`,
             ignore_warning: true,
-        }
-        logger.info('The payload : ' + JSON.stringify(dataPayload));
-    }*/
+        }*/
+        logger.info('The case_details : ' + JSON.stringify(case_details));
+    }
 }
