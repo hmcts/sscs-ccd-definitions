@@ -3,6 +3,7 @@ import {BaseStep} from './base';
 import {credentials} from "../../config/config";
 import performAppealDormantOnCase from "../../api/client/sscs/appeal.event";
 import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
+import {StepsHelper} from "../../helpers/stepsHelper";
 
 const responseReviewedTestData = require('../../pages/content/response.reviewed_en.json');
 const uploadResponseTestdata = require('../../pages/content/upload.response_en.json');
@@ -11,12 +12,14 @@ export class UploadResponse extends BaseStep {
 
     private static caseId: string;
     readonly page: Page;
+    protected stepsHelper: StepsHelper;
 
     private presetLinks: string[] = ['Upload response', 'Ready to list', 'Update to case data', 'Add a hearing'];
 
     constructor(page: Page) {
         super(page);
         this.page = page;
+        this.stepsHelper = new StepsHelper(this.page);
     }
 
 
@@ -24,16 +27,7 @@ export class UploadResponse extends BaseStep {
 
         let pipCaseId = await createCaseBasedOnCaseType("PIP");
         await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, pipCaseId);
-
-        //await this.homePage.waitForLoadState();
-        await this.homePage.chooseEvent('Upload response');
-        await this.homePage.delay(4000);
-        //await this.homePage.waitForLoadState();
-        await this.uploadResponsePage.verifyPageContent();
-        await this.uploadResponsePage.uploadDocs();
-        await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.pipIssueCode);
-        await this.uploadResponsePage.chooseAssistOption('Yes');
-        await this.uploadResponsePage.continueSubmission();
+        await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.pipIssueCode, 'Yes');
 
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response",
             uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
@@ -63,13 +57,7 @@ export class UploadResponse extends BaseStep {
 
         let taxCaseId = await createCaseBasedOnCaseType("TAX CREDIT");
         await this.loginUserWithCaseId(credentials.hmrcUser, false, taxCaseId);
-        await this.homePage.chooseEvent('Upload response');
-        await this.homePage.delay(4000);
-        await this.uploadResponsePage.verifyPageContent();
-        await this.uploadResponsePage.uploadDocs();
-        await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.taxIssueCode);
-        await this.uploadResponsePage.chooseAssistOption('No');
-        await this.uploadResponsePage.continueSubmission();
+        await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.taxIssueCode, 'No');
 
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", uploadResponseTestdata.taxBenefitCode, uploadResponseTestdata.taxIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
