@@ -49,8 +49,8 @@ export default async function performEventOnCase(idamToken: string,
     let dataPayload = {
         event: {
             id: `${eventId}`,
-            summary: `Summary for the Dormant of ${caseId}`,
-            description: `Description for the Dormant of ${caseId}`,
+            summary: `Summary for the ${eventId} of ${caseId}`,
+            description: `Description for the ${eventId} of ${caseId}`,
         },
         data: {},
         event_token: `${event_token}`,
