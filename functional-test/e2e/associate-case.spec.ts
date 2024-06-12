@@ -19,7 +19,7 @@ test.describe.skip('Associate case tests', () => {
     */
     test.describe.fixme(() => {
         test("As a caseworker I should not be able self associate a case", async ({ associateCaseSteps }) => {
-         await associateCaseSteps.selfAssociateACase();
+            await associateCaseSteps.selfAssociateACase();
         });
     });
 });
