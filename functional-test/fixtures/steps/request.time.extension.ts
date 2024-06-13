@@ -1,7 +1,9 @@
 import { Page } from '@playwright/test';
 import { BaseStep } from './base';
 import { credentials } from "../../config/config";
-const eventTestData = require("../../pages/content/event.name.event.description_en.json");
+
+const reqTimeExtData = require("../../pages/content/request.time.extension_en.json");
+
 
 export class RequestTimeExtension extends BaseStep {
 
@@ -13,10 +15,10 @@ export class RequestTimeExtension extends BaseStep {
     }
 
     async performAndVerifyRequestTimeExtension(caseId: string) {
-        
+
         await this.loginUserWithCaseId(credentials.dwpResponseWriter,false, caseId);
         await this.homePage.reloadPage();
-        await this.homePage.chooseEvent('Request time extension');
+        await this.homePage.chooseEvent(reqTimeExtData.eventName);
 
         await this.requestTimeExtensionPage.verifyPageContent();
         await this.requestTimeExtensionPage.uploadTimeExtensionDoc();
@@ -24,11 +26,11 @@ export class RequestTimeExtension extends BaseStep {
  
         await this.loginUserWithCaseId(credentials.amCaseWorker,true, caseId);
         await this.homePage.navigateToTab('History');
-        await this.historyTab.verifyHistoryPageEventLink('Request time extension');
+        await this.historyTab.verifyHistoryPageEventLink(reqTimeExtData.eventName);
 
         await this.homePage.navigateToTab('Appeal Details');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('FTA State', 'Extension requested');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Reason referred to interloc', 'Time extension');
+        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue(reqTimeExtData.stateField, reqTimeExtData.stateValue);
+        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue(reqTimeExtData.reasonField, reqTimeExtData.reasonValue);
     }
 
 }
