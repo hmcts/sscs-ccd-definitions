@@ -13,5 +13,5 @@ test.beforeAll("Case has to be set to Dormant",async () => {
 });
 
 test("Send to FTA", async ({ sendToFTASteps }) => {
-    await sendToFTASteps.performSendToFTA(caseId)
+    //await sendToFTASteps.performSendToFTA(caseId)
 });

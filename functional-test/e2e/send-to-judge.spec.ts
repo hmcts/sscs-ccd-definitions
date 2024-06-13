@@ -12,6 +12,6 @@ test("Send to Judge", async ({ sendToJudgeSteps }) => {
 });
 
  test.afterAll("Case has to be set to Dormant",async () => {
-     await performAppealDormantOnCase(caseId);
+     //await performAppealDormantOnCase(caseId);
  });
 
