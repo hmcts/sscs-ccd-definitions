@@ -7,7 +7,7 @@ import {
     performEventOnCaseWithUploadResponse
 } from "../api/client/sscs/factory/appeal.update.factory";
 
-test.only("Test to Make an Appeal Dormant", async ({addNoteSteps}) => {
+test("Test to Make an Appeal Dormant", async ({addNoteSteps}) => {
 
     let token: string = await accessToken(credentials.amSuperUser);
     //let token: string = await accessToken(credentials.judge);
