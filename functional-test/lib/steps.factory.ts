@@ -8,12 +8,13 @@ import { InformationReceived } from '../fixtures/steps/information.received';
 import { ReviewAdminActionTask } from '../fixtures/steps/work-allocation/review.admin.action.task'
 import { SendToJudge } from '../fixtures/steps/send.to.judge';
 import { UploadResponse } from '../fixtures/steps/upload.response';
-import {ListingError} from "../fixtures/steps/listing.error";
+import { ListingError } from "../fixtures/steps/listing.error";
 import { SendToDormant } from '../fixtures/steps/send.to.dormant';
 import { VoidCase } from '../fixtures/steps/void.case';
 import { StrikeOutCase } from '../fixtures/steps/strike.out.case';
-import {use} from "chai";
 import { SendToFTA } from '../fixtures/steps/send.to.fta';
+import { RequestTimeExtension } from '../fixtures/steps/request.time.extension';
+
 
 
 type MyStepsFixtures = {
@@ -31,6 +32,7 @@ type MyStepsFixtures = {
     sendToDormantSteps: SendToDormant
     voidCaseSteps: VoidCase
     strikeOutCaseSteps: StrikeOutCase
+    requestTimeExtensionSteps: RequestTimeExtension
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -76,18 +78,22 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     },
     sendToDormantSteps:async ({page}, use) =>{
         const sendToDormantSteps = new SendToDormant(page);
-        await use(sendToDormantSteps)
+        await use(sendToDormantSteps);
     },
     voidCaseSteps:async ({page}, use) =>{
         const voidCaseSteps = new VoidCase(page);
-        await use(voidCaseSteps)
+        await use(voidCaseSteps);
     },
     strikeOutCaseSteps:async ({page}, use) =>{
         const strikeOutCaseSteps = new StrikeOutCase(page);
-        await use(strikeOutCaseSteps)
+        await use(strikeOutCaseSteps);
     },
     listingErrorSteps:async ({page}, use) =>{
         const listingErrorSteps = new ListingError(page);
-        await use(listingErrorSteps)
+        await use(listingErrorSteps);
+    },
+    requestTimeExtensionSteps:async ({page}, use) =>{
+        const requestTimeExtensionSteps = new RequestTimeExtension(page);
+        await use(requestTimeExtensionSteps);
     }
 })
