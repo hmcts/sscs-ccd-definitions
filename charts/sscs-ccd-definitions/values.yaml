@@ -1,2 +1,6 @@
 nodejs:
   applicationPort: 3000
+  autoscaling:
+    enabled: false
+  ccd-def-cleanup:
+    enabled: false
