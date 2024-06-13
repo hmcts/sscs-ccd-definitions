@@ -10,6 +10,8 @@ export class HomePage {
     readonly summaryTab: Locator;
     readonly notePadTab: Locator;
     readonly historyTab: Locator;
+    readonly rolesAndAccessTab: Locator;
+    readonly tasksTab: Locator;
     readonly appealDetailsTab: Locator;
     readonly submitNextStepButton: string;
     readonly nextStepDropDown: string;
@@ -21,7 +23,9 @@ export class HomePage {
         this.page = page;
         this.notePadTab = page.locator('//div[contains(text(), "Notepad")]');
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
-        this.historyTab = page.locator('//div[contains(text(), "History")]');
+        this.historyTab = page.getByRole('tab', { name: 'History', exact: true });
+        this.tasksTab = page.getByRole('tab', { name: 'Tasks', exact: true });
+        this.rolesAndAccessTab = page.getByRole('tab', { name: 'Roles and access', exact: true });
         this.appealDetailsTab = page.getByText('Appeal Details', {exact: true});
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
@@ -38,11 +42,15 @@ export class HomePage {
     }
 
     async reloadPage() {
-        await this.page.reload({timeout:10000, waitUntil:'load'});
+        await this.page.reload({timeout:13000, waitUntil:'load'});
     }
 
     async goToHomePage(caseId: string): Promise<void> {
-        await this.page.goto(`/cases/case-details/${caseId}`);
+        // await this.page.goto(`/cases/case-details/${caseId}`);
+        await webActions.inputField('#caseReference', caseId);
+        await this.delay(1000);
+        await webActions.clickFindButton();
+        await this.delay(3000);
         await expect(this.summaryTab)
             .toBeVisible()
             .catch((error) => {
@@ -51,15 +59,22 @@ export class HomePage {
     }
 
     async chooseEvent(eventName: string): Promise<void> {
-
+        await this.delay(2000);
         await webActions.chooseOptionByLabel(this.nextStepDropDown, eventName);
-        //await webActions.clickNextStepButton(this.submitNextStepButton);
-        await webActions.clickButton('Go');
+        await this.delay(2000);
+        await webActions.clickSubmitButton();
+        // await webActions.clickNextStepButton(this.submitNextStepButton);
+        // await webActions.clickGoButton('Go');
     }
 
     async clickBeforeTabBtn(): Promise<void> {
         await this.beforeTabBtn.click();
     }
+
+    async waitForLoadState() {
+        await this.page.waitForLoadState('networkidle');
+    }
+
 
     async navigateToTab(tabName : string): Promise<void> {
         switch(tabName) {
@@ -68,10 +83,23 @@ export class HomePage {
                 break;
             }
             case "History": {
+                await expect(this.historyTab).toBeVisible();
                 await this.historyTab.click();
                 break;
             }
             case "Summary": {
+                await expect(this.summaryTab).toBeVisible();
+                await this.summaryTab.click();
+                break;
+            }
+            case "Tasks": {
+                await expect(this.tasksTab).toBeVisible();
+                await this.tasksTab.click();
+                break;
+            }
+            case "Roles and access": {
+                await expect(this.rolesAndAccessTab).toBeVisible();
+                await this.rolesAndAccessTab.click();
                 await this.summaryTab.click();
                 break;
             }

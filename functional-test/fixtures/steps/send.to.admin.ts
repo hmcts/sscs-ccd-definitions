@@ -1,5 +1,7 @@
-import { Page } from '@playwright/test';
-import { BaseStep } from './base';
+import {Page} from '@playwright/test';
+import {BaseStep} from './base';
+import {credentials} from "../../config/config";
+
 const sendToAdminData = require("../../pages/content/send.to.admin_en.json");
 const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
@@ -14,11 +16,12 @@ export class SendToAdmin extends BaseStep {
         this.page = page;
     }
 
-    async performSendToAdmin() {
+    async performSendToAdmin(caseId: string) {
 
-        await this.loginAsJudgeUser('TAX CREDIT');
+        await this.loginUserWithCaseId(credentials.judge, false, caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Send to admin');
+        //await this.homePage.waitForLoadState();
 
         //Params are passed to this page as this is a common page to be reused.
         await this.textAreaPage.verifyPageContent(sendToAdminData.sendToAdminCaption,

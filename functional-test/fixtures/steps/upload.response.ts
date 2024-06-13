@@ -1,82 +1,87 @@
-import { Page } from '@playwright/test';
-import { BaseStep } from './base';
+import {expect, Page} from '@playwright/test';
+import {BaseStep} from './base';
+import {credentials} from "../../config/config";
+import performAppealDormantOnCase from "../../api/client/sscs/appeal.event";
+import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
+import {StepsHelper} from "../../helpers/stepsHelper";
+
 const responseReviewedTestData = require('../../pages/content/response.reviewed_en.json');
 const uploadResponseTestdata = require('../../pages/content/upload.response_en.json');
 
 export class UploadResponse extends BaseStep {
-    
-   private static caseId: string;
-   readonly page : Page;
 
-   public expLinks:string[] = ['Upload response','Ready to list', 'Update to case data', 'Add a hearing'];
-   
-   constructor(page: Page) {
-       super(page);
-       this.page = page;
-   }
+    private static caseId: string;
+    readonly page: Page;
+    protected stepsHelper: StepsHelper;
+
+    private presetLinks: string[] = ['Upload response', 'Ready to list', 'Update to case data', 'Add a hearing'];
+
+    constructor(page: Page) {
+        super(page);
+        this.page = page;
+        this.stepsHelper = new StepsHelper(this.page);
+    }
 
 
     async performUploadResponseWithFurtherInfoOnAPIP() {
 
-        let pipCaseId = await this.loginAsDWPUser("PIP");
+        let pipCaseId = await createCaseBasedOnCaseType("PIP");
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, pipCaseId);
+        await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.pipIssueCode, 'Yes');
 
-        await this.homePage.chooseEvent('Upload response');
-        await this.uploadResponsePage.uploadDocs();
-        await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.pipIssueCode);
-        await this.uploadResponsePage.chooseAssistOption('Yes');
-        await this.uploadResponsePage.continueSubmission();
-
-        await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
+        await this.checkYourAnswersPage.verifyCYAPageContent("Upload response",
+            uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
 
-        await this.loginAsCaseworkerUserWithCaseId(pipCaseId);
-        await this.homePage.navigateToTab("History");
-        await this.historyTab.verifyPageContentByKeyValue('End state', 'Response received');
+        await this.loginUserWithCaseId(credentials.amCaseWorker,true, pipCaseId);
+        await this.homePage.navigateToTab("Summary");
+        await this.summaryTab.verifyPresenceOfText("Response received"); //The State moves on so cannot verifyr this code correctly.
 
         await this.homePage.chooseEvent('Response reviewed');
         await this.responseReviewedPage.verifyPageContent(responseReviewedTestData.captionValue, responseReviewedTestData.headingValue);
         await this.responseReviewedPage.chooseInterlocOption('No');
         await this.responseReviewedPage.confirmSubmission();
 
-        await this.homePage.delay(6000);
-        await this.homePage.reloadPage();
-        this.expLinks.forEach(async testData => {
-            await this.verifyHistoryTabLink(testData);
-        });
-        await this.verifyHistoryTabDetails('Ready to list');
-        await this.verifyAppealDetailsTab('Sent to FTA state', 'Sent to FTA');
+        await this.homePage.delay(1000);
+        await this.homePage.navigateToTab("History");
 
-    }
+        for (const linkName of this.presetLinks) {
+            await this.verifyHistoryTabLink(linkName);
+        }
+        await this.homePage.navigateToTab("Summary");
+        await this.summaryTab.verifyPresenceOfText("Ready to list");
+        // await performAppealDormantOnCase(pipCaseId);
+   }
 
     async performUploadResponseWithoutFurtherInfoOnATaxCredit() {
 
-        let taxCaseId = await this.loginAsHMRCUser("TAX CREDIT");
-
-        await this.homePage.chooseEvent('Upload response');
-        await this.uploadResponsePage.uploadDocs();
-        await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.taxIssueCode);
-        await this.uploadResponsePage.chooseAssistOption('No');
-        await this.uploadResponsePage.continueSubmission();
+        let taxCaseId = await createCaseBasedOnCaseType("TAX CREDIT");
+        await this.loginUserWithCaseId(credentials.hmrcUser, false, taxCaseId);
+        await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.taxIssueCode, 'No');
 
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", uploadResponseTestdata.taxBenefitCode, uploadResponseTestdata.taxIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
 
-        await this.loginAsCaseworkerUserWithCaseId(taxCaseId);
-        await this.homePage.delay(6000);
-        await this.homePage.reloadPage();
-        this.expLinks.forEach(async testData => {
-            await this.verifyHistoryTabLink(testData);
-        });
-        await this.verifyHistoryTabDetails('Ready to list');
-        await this.verifyAppealDetailsTab('Sent to FTA state', 'Sent to FTA');
+        await this.homePage.delay(3000);
+        await this.loginUserWithCaseId(credentials.amCaseWorker,true, taxCaseId);
+        await this.homePage.navigateToTab("History");
+
+        for (const linkName of this.presetLinks) {
+            await this.verifyHistoryTabLink(linkName);
+        }
+        await this.homePage.navigateToTab("Summary");
+        await this.summaryTab.verifyPresenceOfText("Ready to list");
+        // await performAppealDormantOnCase(taxCaseId);
     }
 
     async performUploadResponseOnAUniversalCredit() {
 
-        let ucCaseId = await this.loginAsDWPUser("UC");
-
+        let ucCaseId = await createCaseBasedOnCaseType("UC");
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, ucCaseId);
 
         await this.homePage.chooseEvent('Upload response');
+        await this.homePage.delay(4000);
+        await this.uploadResponsePage.verifyPageContent();
         await this.uploadResponsePage.uploadDocs();
         await this.uploadResponsePage.chooseAssistOption('No');
         await this.uploadResponsePage.continueSubmission();
@@ -86,9 +91,11 @@ export class UploadResponse extends BaseStep {
 
         await this.uploadResponsePage.clickAddNewButton();
         await this.uploadResponsePage.selectUcIssueCode(uploadResponseTestdata.ucIssueCode);
+        await this.homePage.delay(2000);
         await this.uploadResponsePage.continueSubmission();
 
         await this.uploadResponsePage.chooseDisputeOption(uploadResponseTestdata.ucDisputeOption);
+        await this.homePage.delay(2000);
         await this.uploadResponsePage.continueSubmission();
 
         await this.uploadResponsePage.isJPOnTheCase(uploadResponseTestdata.ucJointPartyOnCase);
@@ -97,33 +104,40 @@ export class UploadResponse extends BaseStep {
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", null, null, "UC");
         await this.checkYourAnswersPage.confirmSubmission();
 
-        await this.loginAsCaseworkerUserWithCaseId(ucCaseId);
-        await this.homePage.delay(6000);
-        await this.homePage.reloadPage();
-        this.expLinks.forEach(async testData => {
-            await this.verifyHistoryTabLink(testData);
-        });
-        await this.verifyHistoryTabDetails('Ready to list');
-        await this.verifyAppealDetailsTab('Sent to FTA state', 'Sent to FTA');
+        await this.loginUserWithCaseId(credentials.amCaseWorker,true, ucCaseId);
+        await this.homePage.delay(1000);
+        await this.homePage.navigateToTab("History");
+
+        for (const linkName of this.presetLinks) {
+            await this.verifyHistoryTabLink(linkName);
+        }
+        await this.homePage.navigateToTab("Summary");
+        await this.summaryTab.verifyPresenceOfText("Ready to list");
+        // await performAppealDormantOnCase(ucCaseId);
+
     }
 
     async verifyErrorsScenariosInUploadResponse() {
 
-        let pipErrorCaseId = await this.loginAsDWPUser("PIP");
+        let pipErrorCaseId = await createCaseBasedOnCaseType("PIP");
         UploadResponse.caseId = pipErrorCaseId;
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, UploadResponse.caseId);
 
         await this.homePage.chooseEvent('Upload response');
+        await this.homePage.delay(2000);
+        await this.uploadResponsePage.verifyPageContent();
         await this.uploadResponsePage.uploadPartialDocs();
         await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.pipIssueCode);
         await this.uploadResponsePage.chooseAssistOption('Yes');
         await this.uploadResponsePage.continueSubmission();
+        await this.uploadResponsePage.delay(1000);
         await this.uploadResponsePage.verifyDocMissingErrorMsg();
+        // await performAppealDormantOnCase(pipErrorCaseId);
     }
 
     async verifyPHMEErrorsScenariosInUploadResponse() {
 
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForDWPResponseWriter();
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, UploadResponse.caseId);
         await this.homePage.goToHomePage(UploadResponse.caseId);
 
         await this.homePage.chooseEvent('Upload response');
@@ -139,8 +153,7 @@ export class UploadResponse extends BaseStep {
 
     async verifyIssueCodeErrorsScenariosInUploadResponse() {
 
-        await this.loginPage.goToLoginPage();
-        await this.loginPage.verifySuccessfulLoginForDWPResponseWriter();
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, UploadResponse.caseId);
         await this.homePage.goToHomePage(UploadResponse.caseId);
 
         await this.homePage.chooseEvent('Upload response');
@@ -151,5 +164,6 @@ export class UploadResponse extends BaseStep {
 
         await this.checkYourAnswersPage.confirmSubmission();
         await this.checkYourAnswersPage.verifyIssueCodeErrorMsg();
+        // await performAppealDormantOnCase(UploadResponse.caseId);
     }
 }

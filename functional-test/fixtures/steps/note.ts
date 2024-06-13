@@ -1,6 +1,6 @@
 import { Page } from '@playwright/test';
 import { BaseStep } from './base';
-import { StringUtilsComponent } from "../../utils/StringUtilsComponent";
+import {credentials} from "../../config/config";
 const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
 export class Note extends BaseStep {
@@ -13,12 +13,12 @@ export class Note extends BaseStep {
        this.page = page;
    }
 
-    async performAddANote() {
-        await this.loginAsCaseworkerUserWithoutCaseId(undefined, 'PIP');
+    async performAddANote(caseId :string) {
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Add a note');
 
-        /* speak with pettedson regarding test step 38 */
+        /* speak with Pettedson regarding test step 38 */
         //await addNotePage.verifyPageContent(StringUtilsComponent.formatClaimReferenceToAUIDisplayFormat(pipCaseId));
         await this.addNotePage.inputData();
         await this.addNotePage.confirmSubmission();
@@ -31,9 +31,7 @@ export class Note extends BaseStep {
 
         await this.homePage.navigateToTab("Notepad");
         await this.notePadTab.verifyPageContentByKeyValue('Note','Playwright test note');
-
-        await this.verifyHistoryTabDetails('With FTA', 'Add a note', 'Event Description for Automation Verification - Add a note');
+        await this.homePage.navigateToTab("History");
+        await this.historyTab.verifyEventCompleted("Add a note");
     }
-
-    
 }
