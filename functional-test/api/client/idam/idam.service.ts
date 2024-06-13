@@ -18,7 +18,7 @@ export async function accessToken(user) {
             console.log('user access token coming from idam', user.email);
             return accessToken;
         } else {
-            console.log('*******Missing user details. Cannot get access token******');
+            console.log('******* Missing user details. Cannot get access token ******');
         }
     }
 }
