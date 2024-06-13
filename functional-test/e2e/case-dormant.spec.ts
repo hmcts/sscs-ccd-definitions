@@ -8,18 +8,20 @@ import {
 } from "../api/client/sscs/factory/appeal.update.factory";
 
 test.only("Test to Make an Appeal Dormant", async ({addNoteSteps}) => {
-    let token: string = await accessToken(credentials.amSuperUser);
-    //let token: string = await accessToken(credentials.judge);
+    //let token: string = await accessToken(credentials.amSuperUser);
+    let token: string = await accessToken(credentials.judge);
     console.log("The value of the IDAM Token : "+token);
     let serviceToken: string = await getSSCSServiceToken();
     let userId: string = await getIDAMUserID(token.trim());
     let pipCaseId = await createCaseBasedOnCaseType("CHILDSUPPORT");
-    await performEventOnCaseWithEmptyBody(token.trim(),
+    await new Promise(f => setTimeout(f, 4000));
+   /* await performEventOnCaseWithEmptyBody(token.trim(),
         serviceToken.trim(), userId.trim(),
         'SSCS','Benefit',
-        pipCaseId.trim(),'appealDormant')
-  /* await performEventOnCaseWithUploadResponse(token.trim(),
+        pipCaseId.trim(),'appealDormant');*/
+
+  await performEventOnCaseWithUploadResponse(token.trim(),
         serviceToken.trim(), userId.trim(),
         'SSCS','Benefit',
-        pipCaseId.trim(),'dwpUploadResponse');*/
+        pipCaseId.trim(),'dwpUploadResponse');
 });
