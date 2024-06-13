@@ -1,22 +1,25 @@
 import {test} from "../lib/steps.factory";
 import {credentials} from "../config/config"
-import {accessToken, getSSCSServiceToken,accessId} from "../api/client/idam/idam.service";
-import performEventOnCaseWithEmptyBody from "../api/client/sscs/factory/appeal.update.factory";
+import {accessToken, getSSCSServiceToken, accessId, getIDAMUserID} from "../api/client/idam/idam.service";
 import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.factory";
-import performEventOnCaseWithUploadResponse from "../api/client/sscs/factory/appeal.update.factory";
+import {
+    performEventOnCaseWithEmptyBody,
+    performEventOnCaseWithUploadResponse
+} from "../api/client/sscs/factory/appeal.update.factory";
 
-test("Test to Add a note to a case", async ({addNoteSteps}) => {
-    let token: string = await accessToken(credentials.caseWorker);
+test.only("Test to Make an Appeal Dormant", async ({addNoteSteps}) => {
+    let token: string = await accessToken(credentials.amSuperUser);
+    //let token: string = await accessToken(credentials.judge);
     console.log("The value of the IDAM Token : "+token);
     let serviceToken: string = await getSSCSServiceToken();
-    let userId: string = await accessId(credentials.caseWorker);
+    let userId: string = await getIDAMUserID(token.trim());
     let pipCaseId = await createCaseBasedOnCaseType("CHILDSUPPORT");
     await performEventOnCaseWithEmptyBody(token.trim(),
         serviceToken.trim(), userId.trim(),
         'SSCS','Benefit',
         pipCaseId.trim(),'appealDormant')
-   /* await performEventOnCaseWithUploadResponse(token.trim(),
+  /* await performEventOnCaseWithUploadResponse(token.trim(),
         serviceToken.trim(), userId.trim(),
         'SSCS','Benefit',
-        pipCaseId.trim(),'appealDormant')*/
+        pipCaseId.trim(),'dwpUploadResponse');*/
 });

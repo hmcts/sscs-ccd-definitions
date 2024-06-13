@@ -107,7 +107,7 @@ export async function getSSCSServiceToken() {
     return body.toString();
 }
 
-async function getIDAMUserID(idamToken) {
+export async function getIDAMUserID(idamToken) {
     const idamDetailsPath = '/details';
 
     let apiContext = await request.newContext({
