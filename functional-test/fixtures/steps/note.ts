@@ -1,6 +1,5 @@
 import { Page } from '@playwright/test';
 import { BaseStep } from './base';
-import { StringUtilsComponent } from "../../utils/StringUtilsComponent";
 import {credentials} from "../../config/config";
 const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 

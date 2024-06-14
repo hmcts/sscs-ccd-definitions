@@ -10,6 +10,8 @@ export class HomePage {
     readonly summaryTab: Locator;
     readonly notePadTab: Locator;
     readonly historyTab: Locator;
+    readonly rolesAndAccessTab: Locator;
+    readonly tasksTab: Locator;
     readonly appealDetailsTab: Locator;
     readonly submitNextStepButton: string;
     readonly nextStepDropDown: string;
@@ -21,7 +23,9 @@ export class HomePage {
         this.page = page;
         this.notePadTab = page.locator('//div[contains(text(), "Notepad")]');
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
-        this.historyTab = page.getByRole('tab', { name: 'History', exact: true })
+        this.historyTab = page.getByRole('tab', { name: 'History', exact: true });
+        this.tasksTab = page.getByRole('tab', { name: 'Tasks', exact: true });
+        this.rolesAndAccessTab = page.getByRole('tab', { name: 'Roles and access', exact: true });
         this.appealDetailsTab = page.getByText('Appeal Details', {exact: true});
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
@@ -84,6 +88,18 @@ export class HomePage {
                 break;
             }
             case "Summary": {
+                await expect(this.summaryTab).toBeVisible();
+                await this.summaryTab.click();
+                break;
+            }
+            case "Tasks": {
+                await expect(this.tasksTab).toBeVisible();
+                await this.tasksTab.click();
+                break;
+            }
+            case "Roles and access": {
+                await expect(this.rolesAndAccessTab).toBeVisible();
+                await this.rolesAndAccessTab.click();
                 await this.summaryTab.click();
                 break;
             }

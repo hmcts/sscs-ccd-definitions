@@ -7,34 +7,38 @@ import {ResponseReviewedPage} from '../../pages/response.reviewed.page';
 import {AssociateCasePage} from '../../pages/associate.case.page';
 import {TextAreaPage} from "../../pages/common/text.area.page";
 import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
-import {History} from "../../pages/tabs/history";
-import {AppealDetails} from "../../pages/tabs/appealDetails";
-import {AddNote} from '../../pages/add.note';
-import {EventNameEventDescriptionPage} from '../../pages/common/event.name.event.description';
-import {NotePad} from '../../pages/tabs/note.pad';
-import {Summary} from "../../pages/tabs/summary";
-import {exit} from 'process';
-
+import { History } from "../../pages/tabs/history";
+import { AppealDetails } from "../../pages/tabs/appealDetails";
+import { AddNote } from '../../pages/add.note';
+import { EventNameEventDescriptionPage } from '../../pages/common/event.name.event.description';
+import { NotePad } from '../../pages/tabs/note.pad';
+import { Summary } from "../../pages/tabs/summary";
+import { Tasks } from "../../pages/tabs/tasks";
+import { InformationReceivedPage } from '../../pages/information.received.page';
+import { RequestTimeExtensionPage } from '../../pages/request.time.extension.page';
 
 export abstract class BaseStep {
 
-    readonly page: Page;
-    protected loginPage: LoginPage;
-    protected homePage: HomePage;
-    protected uploadResponsePage: UploadResponsePage;
-    protected checkYourAnswersPage: CheckYourAnswersPage;
-    protected responseReviewedPage: ResponseReviewedPage;
-    protected addNotePage: AddNote;
-    protected notePadTab: NotePad;
-    protected eventNameAndDescriptionPage: EventNameEventDescriptionPage;
-    protected associateCasePage: AssociateCasePage;
-    protected textAreaPage: TextAreaPage;
-    protected historyTab: History;
-    protected appealDetailsTab: AppealDetails;
-    protected summaryTab: Summary;
+  readonly page : Page;
+  protected loginPage: LoginPage;
+  protected homePage: HomePage;
+  protected uploadResponsePage: UploadResponsePage;
+  protected checkYourAnswersPage: CheckYourAnswersPage;
+  protected responseReviewedPage: ResponseReviewedPage;
+  protected addNotePage: AddNote;
+  protected notePadTab: NotePad;
+  protected eventNameAndDescriptionPage: EventNameEventDescriptionPage;
+  protected associateCasePage: AssociateCasePage;
+  protected informationReceivedPage: InformationReceivedPage;
+  protected textAreaPage: TextAreaPage;
+  protected historyTab: History;
+  protected appealDetailsTab: AppealDetails;
+  protected summaryTab: Summary;
+  protected tasksTab: Tasks;
+  protected requestTimeExtensionPage: RequestTimeExtensionPage;
 
 
-    constructor(page: Page) {
+   constructor(page: Page) {
         this.page = page;
         this.loginPage = new LoginPage(this.page);
         this.homePage = new HomePage(this.page);
@@ -47,9 +51,12 @@ export abstract class BaseStep {
         this.addNotePage = new AddNote(this.page);
         this.notePadTab = new NotePad(this.page);
         this.associateCasePage = new AssociateCasePage(this.page);
+        this.informationReceivedPage = new InformationReceivedPage(this.page);
         this.summaryTab = new Summary(this.page);
         this.textAreaPage = new TextAreaPage(this.page);
-    }
+        this.tasksTab = new Tasks(this.page);
+        this.requestTimeExtensionPage = new RequestTimeExtensionPage(this.page);
+   }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
         await this.loginPage.goToLoginPage();
