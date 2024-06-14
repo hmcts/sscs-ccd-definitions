@@ -91,11 +91,11 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     },
     listingErrorSteps:async ({page}, use) =>{
         const listingErrorSteps = new ListingError(page);
-        await use(listingErrorSteps)
+        await use(listingErrorSteps);
     },
     appealWithdrawnSteps:async ({page}, use) =>{
         const appealWithdrawnSteps = new AppealWithdrawn(page);
-        await use(appealWithdrawnSteps)
+        await use(appealWithdrawnSteps);
     },
     requestTimeExtensionSteps:async ({page}, use) =>{
         const requestTimeExtensionSteps = new RequestTimeExtension(page);
