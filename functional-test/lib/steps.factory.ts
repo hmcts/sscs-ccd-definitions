@@ -13,8 +13,9 @@ import { SendToDormant } from '../fixtures/steps/send.to.dormant';
 import { VoidCase } from '../fixtures/steps/void.case';
 import { StrikeOutCase } from '../fixtures/steps/strike.out.case';
 import { SendToFTA } from '../fixtures/steps/send.to.fta';
-import {LinkCase} from "../fixtures/steps/link-case";
+import { AppealWithdrawn } from '../fixtures/steps/appeal.withdrawn';
 import { RequestTimeExtension } from '../fixtures/steps/request.time.extension';
+import {LinkCase} from "../fixtures/steps/link-case";
 
 
 
@@ -32,6 +33,7 @@ type MyStepsFixtures = {
     sendToFTASteps: SendToFTA
     sendToDormantSteps: SendToDormant
     voidCaseSteps: VoidCase
+    appealWithdrawnSteps: AppealWithdrawn
     strikeOutCaseSteps: StrikeOutCase
     linkACaseSteps: LinkCase
     requestTimeExtensionSteps: RequestTimeExtension
@@ -93,14 +95,20 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     listingErrorSteps:async ({page}, use) =>{
         const listingErrorSteps = new ListingError(page);
         await use(listingErrorSteps)
-},
+    },
+ 
+    appealWithdrawnSteps:async ({page}, use) =>{
+        const appealWithdrawnSteps = new AppealWithdrawn(page);
+        await use(appealWithdrawnSteps);
+    },
+  
+    requestTimeExtensionSteps:async ({page}, use) =>{
+        const requestTimeExtensionSteps = new RequestTimeExtension(page);
+        await use(requestTimeExtensionSteps);
+    },
+  
     linkACaseSteps:async ({page}, use)=>{
         const linkACaseSteps = new LinkCase(page);
         await use(linkACaseSteps)
     },
-
-    requestTimeExtensionSteps:async ({page}, use) =>{
-        const requestTimeExtensionSteps = new RequestTimeExtension(page);
-        await use(requestTimeExtensionSteps);
-    }
 })
