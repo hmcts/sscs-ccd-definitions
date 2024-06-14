@@ -1,9 +1,5 @@
 import {expect, Page} from "@playwright/test";
-import {HomePage} from "../../pages/common/homePage";
-import {History} from "../../pages/tabs/history";
-import {Summary} from "../../pages/tabs/summary";
 import {StringUtilsComponent} from "../../utils/StringUtilsComponent";
-import {LinkCasePage} from "../../pages/link.case.page";
 import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import linkCaseTestData from "../../pages/content/link.case_en.json";
 import {credentials} from "../../config/config";
