@@ -2,9 +2,47 @@
 import {request} from '@playwright/test';
 import {urls, credentials, resources} from '../../../config/config';
 import logger from '../../../utils/loggerUtil';
+const NodeCache = require('node-cache');
+//Idam access token expires for every 8 hrs
+const tokenIDCache = new NodeCache({ stdTTL: 25200, checkperiod: 1800, maxKeys: 3, deleteOnExpire: true});
 
+export async function accessToken(user) {
+    console.log('User logged in', user.email);
+    if (tokenIDCache.get(user.email) != null) {
+        console.log('User access token coming from cache', user.email);
+        return tokenIDCache.get(user.email);
+    } else {
+        if (user.email && user.password) {
+            const accessToken = await getIDAMUserToken(user);
+            tokenIDCache.set(user.email, accessToken);
+            console.log('user access token coming from idam', user.email);
+            return accessToken;
+        } else {
+            console.log('******* Missing user details. Cannot get access token ******');
+        }
+    }
+}
 
-export async function getIDAMUserToken(user) {
+export async function accessId(user) {
+    let user_id_key = user.email + "_id"
+    console.log('The user email for getting the user id', user.email);
+    if (tokenIDCache.get(user_id_key) != null) {
+        console.log('User access token coming from cache', user_id_key);
+        return tokenIDCache.get(user_id_key);
+    } else {
+        if (user.email && user.password) {
+            const idamToken = await accessToken(user);
+            const userId = await getIDAMUserID(idamToken);
+            tokenIDCache.set(user_id_key, userId);
+            console.log('user id coming from idam', user_id_key);
+            return userId;
+        } else {
+            console.log('*******Missing user details. Cannot get the user id******');
+        }
+    }
+}
+
+async function getIDAMUserToken(user) {
     const scope = 'openid profile roles';
     const grantType = 'password';
     const idamTokenPath = '/o/token';
