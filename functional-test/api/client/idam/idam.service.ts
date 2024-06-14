@@ -4,7 +4,7 @@ import {urls, credentials, resources} from '../../../config/config';
 import logger from '../../../utils/loggerUtil';
 const NodeCache = require('node-cache');
 //Idam access token expires for every 8 hrs
-const tokenIDCache = new NodeCache({ stdTTL: 25200, checkperiod: 1800, maxKeys: 3});
+const tokenIDCache = new NodeCache({ stdTTL: 25200, checkperiod: 1800, maxKeys: 3, deleteOnExpire: true});
 
 export async function accessToken(user) {
     console.log('User logged in', user.email);
