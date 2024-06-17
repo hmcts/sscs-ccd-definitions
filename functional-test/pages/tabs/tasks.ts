@@ -15,11 +15,12 @@ export class Tasks {
     }
 
     async verifyTaskIsDisplayed(taskName: string) {
-        const startTime = Date.now();
-        const timeout = timeouts.maxTimeout;
 
         let homePage = new HomePage(this.page);
         let taskVisible = false;
+
+        const startTime = Date.now();
+        const timeout = timeouts.maxTimeout;
 
         while (Date.now() - startTime < timeout) {
             taskVisible = await this.page.isVisible(`//exui-case-task[./*[normalize-space()='${taskName}']]`);
@@ -37,8 +38,28 @@ export class Tasks {
     }
 
     async verifyTaskIsHidden(taskName: string) {
-        let selector = `//exui-case-task[./*[normalize-space()='${taskName}']]`;
-        await expect(this.page.locator(selector)).toBeHidden();
+
+        let homePage = new HomePage(this.page);
+        let taskVisible = true;
+
+        await homePage.navigateToTab('Tasks');
+
+        const startTime = Date.now();
+        const timeout = timeouts.maxTimeout;
+
+        while (Date.now() - startTime < timeout) {
+            taskVisible = await this.page.isVisible(`//exui-case-task[./*[normalize-space()='${taskName}']]`);
+            if (!taskVisible) {
+                break;
+            }
+            await homePage.navigateToTab('Summary');
+            await homePage.navigateToTab('Tasks');
+            await this.page.waitForTimeout(timeouts.shortTimeout);
+        }
+
+        if (taskVisible) {
+            throw new Error(`Task "${taskName}" is still displayed after waiting for ${timeout / 1000} seconds.`);
+        }
     }
 
     async verifyTaskIsAssigned(taskName: string) {

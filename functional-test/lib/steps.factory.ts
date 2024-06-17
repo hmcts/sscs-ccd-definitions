@@ -9,11 +9,13 @@ import { ReviewAdminActionTask } from '../fixtures/steps/work-allocation/review.
 import { SendToJudge } from '../fixtures/steps/send.to.judge';
 import { UploadResponse } from '../fixtures/steps/upload.response';
 import {ListingError} from "../fixtures/steps/listing.error";
+import { ReviewListingErrorTask } from '../fixtures/steps/work-allocation/review.listing.error.task'
 import { SendToDormant } from '../fixtures/steps/send.to.dormant';
 import { VoidCase } from '../fixtures/steps/void.case';
 import { StrikeOutCase } from '../fixtures/steps/strike.out.case';
 import {use} from "chai";
 import { SendToFTA } from '../fixtures/steps/send.to.fta';
+import { ReadyToList } from '../fixtures/steps/ready.to.list';
 
 
 type MyStepsFixtures = {
@@ -25,12 +27,14 @@ type MyStepsFixtures = {
     sendToAdminSteps: SendToAdmin
     sendToJudgeSteps: SendToJudge
     reviewAdminActionTaskSteps: ReviewAdminActionTask
+    reviewListingErrorTaskSteps: ReviewListingErrorTask
     listingErrorSteps: ListingError
     uploadResponseSteps: UploadResponse
     sendToFTASteps: SendToFTA
     sendToDormantSteps: SendToDormant
     voidCaseSteps: VoidCase
     strikeOutCaseSteps: StrikeOutCase
+    readyToListSteps: ReadyToList
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -58,9 +62,17 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const sendToAdminSteps = new SendToAdmin(page);
         await use(sendToAdminSteps);
     },
+    readyToListSteps:async ({ page }, use) => {
+        const readyToListSteps = new ReadyToList(page);
+        await use(readyToListSteps);
+    },
     reviewAdminActionTaskSteps:async ({ page }, use) => {
         const reviewAdminActionTaskSteps = new ReviewAdminActionTask(page);
         await use(reviewAdminActionTaskSteps);
+    },
+    reviewListingErrorTaskSteps:async ({ page }, use) => {
+        const reviewListingErrorTaskSteps = new ReviewListingErrorTask(page);
+        await use(reviewListingErrorTaskSteps);
     },
     sendToJudgeSteps:async ({page}, use) => {
         const sendToJudgeSteps = new SendToJudge(page);
