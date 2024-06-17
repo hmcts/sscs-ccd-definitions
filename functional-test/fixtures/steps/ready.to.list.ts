@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import { Page, expect } from '@playwright/test';
 import eventTestData from "../../pages/content/event.name.event.description_en.json"
 import { BaseStep } from './base';
 import { credentials } from "../../config/config";
@@ -28,6 +28,8 @@ export class ReadyToList extends BaseStep {
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
+        await expect(this.homePage.summaryTab).toBeVisible();
+        await this.homePage.delay(3000);
         await this.verifyHistoryTabDetails('With FTA', 'Ready to list', eventTestData.eventDescriptionInput);
     }
 }
