@@ -68,11 +68,10 @@ export class ReviewListingErrorTask extends BaseStep {
         await this.tasksTab.verifyManageOptions(task.name, task.assignedManageOptions);
         await this.tasksTab.verifyNextStepsOptions(task.name, task.nextStepsOptions);
 
-        // Verify navigation for Send to Interloc and Send case to TCW next step options
+        // Verify navigation for Update listing requiremnts next step option
         await this.tasksTab.verifyNextStepNavigation(task.updateListingRequirements.link, task.updateListingRequirements.eventTitle);
-        // await this.tasksTab.verifyNextStepNavigation(task.sendCaseToTcw.link, task.sendCaseToTcw.eventTitle);
 
-        // Select Information recieved next step and complete the event
+        // Select Ready to list next step and complete the event
         await this.tasksTab.clickNextStepLink(task.readyToList.link);
 
         let readyToList = new ReadyToList(this.page)
