@@ -10,7 +10,7 @@ import logger from "../utils/loggerUtil";
 //var event_token: string = JSON.parse(response_document).push({hello: 'value'});
 import fs from 'fs';
 
-test.only("Test to Make an Appeal Dormant", async ({addNoteSteps}) => {
+test("Test to Make an Appeal Dormant", async ({addNoteSteps}) => {
 
     let childSupportCaseId = await createCaseBasedOnCaseType("CHILDSUPPORT");
 
