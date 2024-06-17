@@ -2,7 +2,7 @@ import { test } from "../../lib/steps.factory";
 import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import performAppealDormantOnCase from "../../api/client/sscs/appeal.event";
 
-test.describe('WA - Review Listing Error CTSC task initiation and completion tests', () => {
+test.describe.serial('WA - Review Listing Error CTSC task initiation and completion tests', () => {
 
     let caseId : string;
     
@@ -18,7 +18,7 @@ test.describe('WA - Review Listing Error CTSC task initiation and completion tes
         await reviewListingErrorTaskSteps.verifyCtscAdminWithoutCaseAllocatorRoleCanViewReviewListingErrorTask(caseId);
     });
 
-    test("As a CSTC Admin with case allocator role, view and cancel review listing error task", async ({        
+    test("As a CSTC Admin with case allocator role, review listing error task", async ({        
         reviewListingErrorTaskSteps }) => {
 
         test.slow();
@@ -45,7 +45,7 @@ test.describe('WA - Review Listing Error CTSC task automatic cancellation when c
         caseId = await createCaseBasedOnCaseType('PIP');
     });
 
-    test("Review listing error task is cancelled autmatically when case is void", async ({
+    test("Review listing error task is cancelled automatically when case is void", async ({
         reviewListingErrorTaskSteps}) => {
 
         test.slow();
