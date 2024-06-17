@@ -2887,7 +2887,7 @@
     "EventEnablingCondition": "hearingRoute=\"listAssist\"",
     "ShowEventNotes": "Y",
     "ShowSummary": "N",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToStart",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_TRIBUNALS_API k _URL}/ccdAboutToStart",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdSubmittedEvent",
     "SecurityClassification": "Public"
