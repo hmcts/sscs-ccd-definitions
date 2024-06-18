@@ -145,7 +145,7 @@ For example CCD_DEF_BASE_URL=http://localhost environment variable gets injected
     [
       {
         "LiveFrom": "2017-01-01",
-        "CaseTypeID": "Benefit",
+        "CaseTypeID": "Benefit-3850",
         "ID": "createCase",
         "CallBackURLSubmittedEvent": "${CCD_DEF_BASE_URL}/callback"
       }
@@ -155,7 +155,7 @@ to become:
     [
       {
         "LiveFrom": "2017-01-01",
-        "CaseTypeID": "Benefit",
+        "CaseTypeID": "Benefit-3850",
         "ID": "createCase",
         "CallBackURLSubmittedEvent": "http://localhost/callback"
       }
@@ -170,14 +170,14 @@ For example large AuthorisationCaseField.json file presented below:
     [
       {
         "LiveFrom": "01/01/2017",
-        "CaseTypeID": "Benefit",
+        "CaseTypeID": "Benefit-3850",
         "CaseFieldID": "appeal",
         "AccessProfile": "caseworker-sscs-clerk",
         "CRUD": "CRU"
       },
       {
         "LiveFrom": "01/01/2017",
-        "CaseTypeID": "Benefit",
+        "CaseTypeID": "Benefit-3850",
         "CaseFieldID": "appeal",
         "AccessProfile": "caseworker-sscs-judge",
         "CRUD": "CRU"
