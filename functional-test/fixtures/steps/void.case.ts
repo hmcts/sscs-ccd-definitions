@@ -13,9 +13,9 @@ export class VoidCase extends BaseStep {
        this.page = page;
    }
 
-    async performVoidCase(caseId: string, workAllocation: boolean = false): Promise<void> {
+    async performVoidCase(caseId: string, loginRequired: boolean = true): Promise<void> {
         
-        if(!workAllocation) {
+        if(loginRequired) {
             await this.loginUserWithCaseId(credentials.amCaseWorker, false ,caseId);
             await this.homePage.reloadPage(); 
         }

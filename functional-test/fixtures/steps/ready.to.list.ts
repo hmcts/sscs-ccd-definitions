@@ -13,9 +13,9 @@ export class ReadyToList extends BaseStep {
         this.page = page;
    }
 
-    async performReadyToListEvent(caseId: string, workAllocation: boolean = false): Promise<void> {
+    async performReadyToListEvent(caseId: string, loginRequired: boolean = true): Promise<void> {
 
-        if(!workAllocation) {
+        if(loginRequired) {
             await this.loginUserWithCaseId(credentials.amCaseWorker, false ,caseId);
             await this.homePage.reloadPage(); 
         }

@@ -13,10 +13,10 @@ export class ListingError extends BaseStep {
         this.page = page;
     }
 
-    async performListingErrorEvent(caseId: string, workAllocation: boolean = false): Promise<void> {
+    async performListingErrorEvent(caseId: string, loginRequired: boolean = true): Promise<void> {
 
-        if(!workAllocation) {
-            await this.loginUserWithCaseId(credentials.amCaseWorker, false ,caseId);
+        if(loginRequired) {
+            await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
             await this.homePage.reloadPage(); 
         }
         await this.homePage.chooseEvent('Listing Error');
