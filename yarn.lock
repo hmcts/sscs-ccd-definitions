@@ -8135,9 +8135,9 @@ __metadata:
   linkType: hard
 
 "monocart-code-viewer@npm:^1.1.3":
-  version: 1.1.4
-  resolution: "monocart-code-viewer@npm:1.1.4"
-  checksum: 8f4e74244b0f114dbdcd7d5eef1c5b751909e136dbc899b4950f745316a6956fd8e2b8c7f69c62b0e0e4888513f33352821fd578357773c57e0a5b574cf698eb
+  version: 1.1.3
+  resolution: "monocart-code-viewer@npm:1.1.3"
+  checksum: 4527f99ea1ad746e457f8d29fafec031663adfbce5d0effdde9c59cb2f78366de0e7f3534356955be9b5855b99462799d96c358c3c2fc4e242ee2677f44a89ef
   languageName: node
   linkType: hard
 
