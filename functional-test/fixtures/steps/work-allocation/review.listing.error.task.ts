@@ -29,7 +29,7 @@ export class ReviewListingErrorTask extends BaseStep {
         await readyToList.performReadyToListEvent(caseId);
 
         // Login as CTSC Admin and complete Listing error event to initiate Review Listing Error task
-        await listingError.performListingErrorEvent(caseId, true);
+        await listingError.performListingErrorEvent(caseId, false);
 
         // Verify CTSC Admin can view the unassigned Review Listing Error task
         await this.homePage.navigateToTab('Tasks');
@@ -90,7 +90,7 @@ export class ReviewListingErrorTask extends BaseStep {
         await readyToList.performReadyToListEvent(caseId);
 
         // As a CTSC Admin complete Listing error event to initiate Review Listing Error task
-        await listingError.performListingErrorEvent(caseId, true);
+        await listingError.performListingErrorEvent(caseId, false);
 
         // Verify CTSC Admin can view the unassigned Review Listing Error task
         await this.homePage.navigateToTab('Tasks')
@@ -104,7 +104,7 @@ export class ReviewListingErrorTask extends BaseStep {
         await this.tasksTab.verifyNextStepsOptions(task.name, task.nextStepsOptions);
 
         // CTSC Administrator voids the case
-        await voidCase.performVoidCase(caseId, true);
+        await voidCase.performVoidCase(caseId, false);
 
         // Verify task is removed from the tasks list within Tasks tab
         await this.homePage.navigateToTab('Tasks');
