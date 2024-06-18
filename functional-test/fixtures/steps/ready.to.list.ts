@@ -13,10 +13,12 @@ export class ReadyToList extends BaseStep {
         this.page = page;
    }
 
-    async performReadyToListEvent(caseId: string): Promise<void> {
+    async performReadyToListEvent(caseId: string, workAllocation: boolean = false): Promise<void> {
 
-        await this.loginUserWithCaseId(credentials.amCaseWorker, false ,caseId);
-        await this.homePage.reloadPage();
+        if(!workAllocation) {
+            await this.loginUserWithCaseId(credentials.amCaseWorker, false ,caseId);
+            await this.homePage.reloadPage(); 
+        }
         await this.homePage.chooseEvent('Ready to list');
 
         await this.completeReadyToListEvent();
