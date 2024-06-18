@@ -4,14 +4,14 @@ SHEETS_DIR=`pwd`/data/sheets
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   sed -i '' 's/http:\/\/em-ccd-orchestrator-aat.service.core-compute-aat.internal/\${CCD_DEF_EM_CCD_ORCHESTRATOR_URL}/g' ${SHEETS_DIR}/*.json
-  sed -i '' 's/http:\/\/sscs-tribunals-api-pr-3850.preview.platform.hmcts.net/\\${CCD_DEF_TRIBUNALS_API_URL}/g' ${SHEETS_DIR}/*.json
+  sed -i '' 's/http:\/\/sscs-tribunals-api-pr-3850.preview.platform.hmcts.net/\${CCD_DEF_TRIBUNALS_API_URL}/g' ${SHEETS_DIR}/*.json
   sed -i '' 's/http:\/\/sscs-tya-notif-aat.service.core-compute-aat.internal/\${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/g' ${SHEETS_DIR}/*.json
   sed -i '' 's/http:\/\/sscs-bulk-scan-aat.service.core-compute-aat.internal/\${CCD_DEF_BULK_SCAN_API_URL}/g' ${SHEETS_DIR}/*.json
   sed -i '' 's/http:\/\/bulk-scan-orchestrator-aat.service.core-compute-aat.internal/\${CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL}/g' ${SHEETS_DIR}/*.json
   sed -i '' 's/https:\/\/sscs-tya-frontend-aat.service.core-compute-aat.internal/validate-surname/\${subscriptions.appellantSubscription.tya}/trackyourappeal/g' ${SHEETS_DIR}/*.json
 else
   sed -i 's/http:\/\/em-ccd-orchestrator-aat.service.core-compute-aat.internal/\${CCD_DEF_EM_CCD_ORCHESTRATOR_URL}/g' ${SHEETS_DIR}/*.json
-  sed -i 's/http:\/\/sscs-tribunals-api-pr-3850.preview.platform.hmcts.net/\\${CCD_DEF_TRIBUNALS_API_URL}/g' ${SHEETS_DIR}/*.json
+  sed -i 's/http:\/\/sscs-tribunals-api-pr-3850.preview.platform.hmcts.net/\${CCD_DEF_TRIBUNALS_API_URL}/g' ${SHEETS_DIR}/*.json
   sed -i 's/http:\/\/sscs-tya-notif-aat.service.core-compute-aat.internal/\${CCD_DEF_TYA_NOTIFICATIONS_API_URL}/g' ${SHEETS_DIR}/*.json
   sed -i 's/http:\/\/sscs-bulk-scan-aat.service.core-compute-aat.internal/\${CCD_DEF_BULK_SCAN_API_URL}/g' ${SHEETS_DIR}/*.json
   sed -i 's/http:\/\/bulk-scan-orchestrator-aat.service.core-compute-aat.internal/\${CCD_DEF_BULK_SCAN_ORCHESTRATOR_URL}/g' ${SHEETS_DIR}/*.json
