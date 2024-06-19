@@ -29,7 +29,7 @@ export class Tasks {
             }
             await homePage.navigateToTab('Summary');
             await homePage.navigateToTab('Tasks');
-            await this.page.waitForTimeout(timeouts.shortTimeout);
+            await homePage.delay(timeouts.shortTimeout);
         }
 
         if (!taskVisible) {
@@ -54,7 +54,7 @@ export class Tasks {
             }
             await homePage.navigateToTab('Summary');
             await homePage.navigateToTab('Tasks');
-            await this.page.waitForTimeout(timeouts.shortTimeout);
+            await homePage.delay(timeouts.shortTimeout);
         }
 
         if (taskVisible) {

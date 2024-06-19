@@ -18,7 +18,7 @@ test.describe.serial('WA - Review Listing Error CTSC task initiation and complet
         await reviewListingErrorTaskSteps.verifyCtscAdminWithoutCaseAllocatorRoleCanViewReviewListingErrorTask(caseId);
     });
 
-    test("As a CSTC Admin with case allocator role, review listing error task", async ({        
+    test("As a CSTC Admin with case allocator role, review listing error task", async ({
         reviewListingErrorTaskSteps }) => {
 
         test.slow();
