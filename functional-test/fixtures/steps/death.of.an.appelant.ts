@@ -62,7 +62,6 @@ export class DeathOfAnAppelant extends BaseStep {
 
         await this.homePage.navigateToTab("Appeal Details");
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Date of appellant death','1 Jun 2003');
-        /*await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Title','Mr');
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('First Name','Automation');
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Last Name','Tester');
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Date of birth','1 Jun 1975');
@@ -74,7 +73,7 @@ export class DeathOfAnAppelant extends BaseStep {
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Postcode','NK5 7LL');
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Contact Number','+44 7818411015');
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Mobile Number','+44 7818411015');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Contact Email','test_xxx@hmcts.net');*/
+        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Contact Email','test_xxx@hmcts.net');
         await  deathOfAppellantPage.signOut();
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);

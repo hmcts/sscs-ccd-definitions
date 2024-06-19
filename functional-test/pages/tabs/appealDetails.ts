@@ -18,6 +18,10 @@ export class AppealDetails {
             .locator(`//*[normalize-space()="${fieldLabel}"]/../td[normalize-space()="${fieldValue}"]`)).toBeVisible();
     }
 
+    async verifyAppealDetailsPageContentByKeyValueForASpan(fieldLabel: string, fieldValue: string): Promise<void> {
+        await expect(this.page
+            .locator(`//*[normalize-space()="${fieldLabel}"]/..//span//span[normalize-space()="${fieldValue}"]`)).toBeVisible();
+    }
     async verifyFTADueDateOnAppealDetails() {
         const ftaDueDate = new Date();
         ftaDueDate.setDate(new Date().getDate() + 28);

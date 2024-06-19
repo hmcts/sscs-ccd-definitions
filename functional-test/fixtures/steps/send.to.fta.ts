@@ -16,7 +16,6 @@ export class SendToFTA extends BaseStep {
     }
 
     async performSendToFTA(caseId: string) {
-        await this.loginUserWithCaseId(credentials.amSuperUser, false, caseId);
 
         //Progress the Case to FTA Response
         let ftaResponseWriterBearerToken: string = await accessToken(credentials.dwpResponseWriter);
@@ -28,6 +27,7 @@ export class SendToFTA extends BaseStep {
             'SSCS','Benefit',
             caseId.trim(),'dwpUploadResponse');
 
+        await this.loginUserWithCaseId(credentials.amSuperUser, false, caseId);
         //Now Perform the respective Event.
         await this.homePage.chooseEvent('Admin - send to With FTA');
         await this.eventNameAndDescriptionPage.verifyPageContent("Admin - send to With FTA");
