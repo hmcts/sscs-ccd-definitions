@@ -8,7 +8,7 @@ test("Death of an Appellant without an Appointee", async ({ deathOfAppellant }) 
     await deathOfAppellant.performDeathOfAnAppellantWithoutAnApointee();
 });
 
-test.only("Death of an Appellant with an Appointee", async ({ deathOfAppellant }) => {
+test("Death of an Appellant with an Appointee", async ({ deathOfAppellant }) => {
     await deathOfAppellant.performDeathOfAnAppellantWithAnAppointee();
 });
 
