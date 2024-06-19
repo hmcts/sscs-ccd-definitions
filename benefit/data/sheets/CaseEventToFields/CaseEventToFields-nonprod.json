@@ -2,7 +2,7 @@
   {
     "CaseEventID": "setHearingRoute",
     "CaseFieldID": "hearingRoute",
-    "CaseTypeID": "Benefit-3850",
+    "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "23/11/2022",
     "PageDisplayOrder": 1,
