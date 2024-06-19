@@ -27,9 +27,9 @@ export class DeathOfAppellantPage {
 
         //The Appointee is selected first as there is an issue with the date.
         await webAction.clickElementById(`#appeal_appellant_isAppointee_${yesNoOption}`);
-        await webAction.inputField('#dateOfAppellantDeath-day', '01');
-        await webAction.inputField('#dateOfAppellantDeath-month', '06');
-        await webAction.inputField('#dateOfAppellantDeath-year', '2003');
+        await webAction.typeField('#dateOfAppellantDeath-day', '01');
+        await webAction.typeField('#dateOfAppellantDeath-month', '06');
+        await webAction.typeField('#dateOfAppellantDeath-year', '2003');
 
         if (yesNoOption === 'Yes') {
 
@@ -54,38 +54,38 @@ export class DeathOfAppellantPage {
             await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_contact_mobile\'] > .form-label', deathOfAnAppellant.mobileNumberTextFieldLabel);
             await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_contact_email\'] > .form-label', deathOfAnAppellant.contactEmailTextFieldLabel);
 
-            await webAction.inputField('#appeal_appellant_appointee_name_title', 'Mr');
-            await webAction.inputField('#appeal_appellant_appointee_name_firstName', 'Automation');
-            await webAction.inputField('#appeal_appellant_appointee_name_lastName', 'Tester');
-            await webAction.inputField('#appeal_appellant_appointee_identity_identity #dob-day', '1');
-            await webAction.inputField('#appeal_appellant_appointee_identity_identity #dob-month', '06');
-            await webAction.inputField('#appeal_appellant_appointee_identity_identity #dob-year', '1975');
-            await webAction.inputField('#appeal_appellant_appointee_identity_nino', 'WX564421C');
+            await webAction.typeField('#appeal_appellant_appointee_name_title', 'Mr');
+            await webAction.typeField('#appeal_appellant_appointee_name_firstName', 'Automation');
+            await webAction.typeField('#appeal_appellant_appointee_name_lastName', 'Tester');
+            await webAction.typeField('#appeal_appellant_appointee_identity_identity #dob-day', '1');
+            await webAction.typeField('#appeal_appellant_appointee_identity_identity #dob-month', '06');
+            await webAction.typeField('#appeal_appellant_appointee_identity_identity #dob-year', '1975');
+            await webAction.typeField('#appeal_appellant_appointee_identity_nino', 'WX564421C');
 
-            await webAction.inputField('#appeal_appellant_appointee_address_address ccd-field-write:nth-of-type(1) .form-control', '50 Egerton Gate,');
-            await webAction.inputField('#appeal_appellant_appointee_address_address ccd-field-write:nth-of-type(2) .form-control', 'SBH');
-            await webAction.inputField("#appeal_appellant_appointee_address_town", 'Swansea');
-            await webAction.inputField('#appeal_appellant_appointee_address_county', 'Bucks');
-            await webAction.inputField('#appeal_appellant_appointee_address_postcode', 'NK5 7LL');
-            await webAction.inputField('#appeal_appellant_appointee_contact_phone', '+44 7818411015');
-            await webAction.inputField('#appeal_appellant_appointee_contact_mobile', '+44 7818411015');
-            await webAction.inputField('#appeal_appellant_appointee_contact_email', 'test_xxx@hmcts.net');
+            await webAction.typeField('#appeal_appellant_appointee_address_address ccd-field-write:nth-of-type(1) .form-control', '50 Egerton Gate,');
+            await webAction.typeField('#appeal_appellant_appointee_address_address ccd-field-write:nth-of-type(2) .form-control', 'SBH');
+            await webAction.typeField("#appeal_appellant_appointee_address_town", 'Swansea');
+            await webAction.typeField('#appeal_appellant_appointee_address_county', 'Bucks');
+            await webAction.typeField('#appeal_appellant_appointee_address_postcode', 'NK5 7LL');
+            await webAction.typeField('#appeal_appellant_appointee_contact_phone', '+44 7818411015');
+            await webAction.typeField('#appeal_appellant_appointee_contact_mobile', '+44 7818411015');
+            await webAction.typeField('#appeal_appellant_appointee_contact_email', 'test_xxx@hmcts.net');
 
         }
     }
 
     async populateDeathOfAppellantDateInvalidFormat(yesNoOption: string) {
         await webAction.clickElementById(`#appeal_appellant_isAppointee_${yesNoOption}`);
-        await webAction.inputField('#dateOfAppellantDeath-day', '01');
-        await webAction.inputField('#dateOfAppellantDeath-month', 'AUG');
-        await webAction.inputField('#dateOfAppellantDeath-year', '2028');
+        await webAction.typeField('#dateOfAppellantDeath-day', '01');
+        await webAction.typeField('#dateOfAppellantDeath-month', 'AUG');
+        await webAction.typeField('#dateOfAppellantDeath-year', '2028');
     }
 
     async populateDeathOfAppellantDateInTheFuture(yesNoOption: string) {
         await webAction.clickElementById(`#appeal_appellant_isAppointee_${yesNoOption}`);
-        await webAction.inputField('#dateOfAppellantDeath-day', '01');
-        await webAction.inputField('#dateOfAppellantDeath-month', '08');
-        await webAction.inputField('#dateOfAppellantDeath-year', '2028');
+        await webAction.typeField('#dateOfAppellantDeath-day', '01');
+        await webAction.typeField('#dateOfAppellantDeath-month', '08');
+        await webAction.typeField('#dateOfAppellantDeath-year', '2028');
     }
 
     async confirmSubmission(): Promise<void> {
