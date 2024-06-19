@@ -44,7 +44,7 @@ export class WebAction {
 
     async inputField(elementLocator: string, inputValue: string) {
         await this.page
-            .fill(elementLocator, inputValue)
+            .type(elementLocator, inputValue)
             .catch((error) => {
                 logger.error(`Input field is not present: ${error}`);
             });
