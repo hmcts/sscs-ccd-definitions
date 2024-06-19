@@ -16,6 +16,6 @@ test("Validation Test - Death of the Appellant invalid Date", async ({ deathOfAp
     await deathOfAppellant.performDeathOfAnAppellantNotValidErrorScenarios();
 });
 
-test.only("Validation Test - Death of the Appellant in the Future", async ({ deathOfAppellant }) => {
+test("Validation Test - Death of the Appellant in the Future", async ({ deathOfAppellant }) => {
     await deathOfAppellant.performDeathOfAnAppellantFutureDateErrorScenarios();
 });
