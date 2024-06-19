@@ -18,6 +18,15 @@ export class WebAction {
             });
     }
 
+    async chooseOptionByIndex(elementLocator: string, indexNum: number) {
+        await this.page
+            .locator(elementLocator)
+            .selectOption({index: indexNum})
+            .catch((error) => {
+                logger.error(`Select box field is not present: ${error}`);
+            });
+    }
+
     async verifyPageLabel(elementLocator: string, labelText: string | string[]) {
         await expect(this.page.locator(elementLocator))
             .toHaveText(labelText)
@@ -165,7 +174,7 @@ export class WebAction {
         const fileChooser = await fileChooserPromise;
         await fileChooser.setFiles(`functional-test/data/file/${fileName}`);
     }
-
+    
     async screenshot() {
         await this.page.screenshot({ path: 'playwright-report/screenshot.png', fullPage: true });
     }

@@ -70,6 +70,6 @@ export class History {
     }
 
     async verifyEventCompleted(linkText: string) {
-        await expect(this.page.getByRole('link', { name: linkText})).toBeVisible();
+        await expect(this.page.getByRole('link', { name: linkText }).first()).toBeVisible();
     }
 }
