@@ -21,8 +21,14 @@ export class AppealDetails {
     async verifyFTADueDateOnAppealDetails() {
         const ftaDueDate = new Date();
         ftaDueDate.setDate(new Date().getDate() + 28);
-        let options = { day: '2-digit', month: 'short', year: 'numeric' };
         let formattedDate = ftaDueDate.toLocaleDateString('en-UK', { day: '2-digit', month: 'short', year: 'numeric' });
         this.verifyAppealDetailsPageContentByKeyValue('FTA response due date', formattedDate);
+    }
+
+    async verifyUrgHearingReqDueDateOnAppealDetails() {
+        const urgHearingDueDate = new Date();
+        urgHearingDueDate.setDate(new Date().getDate());
+        let formattedDate = urgHearingDueDate.toLocaleDateString('en-UK', { day: '2-digit', month: 'short', year: 'numeric' });
+        this.verifyAppealDetailsPageContentByKeyValue('Urgent hearing registered', formattedDate);
     }
 }

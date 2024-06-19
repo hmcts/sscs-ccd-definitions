@@ -17,6 +17,7 @@ import { SendToFTA } from '../fixtures/steps/send.to.fta';
 import { ReadyToList } from '../fixtures/steps/ready.to.list';
 import { AppealWithdrawn } from '../fixtures/steps/appeal.withdrawn';
 import { RequestTimeExtension } from '../fixtures/steps/request.time.extension';
+import { UrgentHearing } from '../fixtures/steps/urgent.hearing';
 
 
 
@@ -39,6 +40,7 @@ type MyStepsFixtures = {
     strikeOutCaseSteps: StrikeOutCase
     readyToListSteps: ReadyToList
     requestTimeExtensionSteps: RequestTimeExtension
+    urgentHearingSteps: UrgentHearing
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -113,5 +115,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     requestTimeExtensionSteps:async ({page}, use) =>{
         const requestTimeExtensionSteps = new RequestTimeExtension(page);
         await use(requestTimeExtensionSteps);
+    },
+    urgentHearingSteps:async ({page}, use) =>{
+        const urgentHearingSteps = new UrgentHearing(page);
+        await use(urgentHearingSteps);
     }
 })
