@@ -15,6 +15,7 @@ import { StrikeOutCase } from '../fixtures/steps/strike.out.case';
 import { SendToFTA } from '../fixtures/steps/send.to.fta';
 import { AppealWithdrawn } from '../fixtures/steps/appeal.withdrawn';
 import { RequestTimeExtension } from '../fixtures/steps/request.time.extension';
+import {DeathOfAnAppelant} from "../fixtures/steps/death.of.an.appelant";
 
 
 
@@ -35,6 +36,7 @@ type MyStepsFixtures = {
     appealWithdrawnSteps: AppealWithdrawn
     strikeOutCaseSteps: StrikeOutCase
     requestTimeExtensionSteps: RequestTimeExtension
+    deathOfAppellant : DeathOfAnAppelant
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -101,5 +103,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     requestTimeExtensionSteps:async ({page}, use) =>{
         const requestTimeExtensionSteps = new RequestTimeExtension(page);
         await use(requestTimeExtensionSteps);
+    },
+    deathOfAppellant:async ({page}, use) =>{
+        const deathOfAppellantSteps = new DeathOfAnAppelant(page);
+        await use(deathOfAppellantSteps);
     }
 })

@@ -76,11 +76,4 @@ export abstract class BaseStep {
     async verifyHistoryTabLink(linkLabel: string) {
         await this.historyTab.verifyHistoryPageEventLink(linkLabel);
     }
-
-    /*async verifyAppealDetailsTab(state: string, value: string) {
-        await this.homePage.navigateToTab("Appeal Details");
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue(state, value);
-        await this.appealDetailsTab.verifyFTADueDateOnAppealDetails();
-    }*/
-
 }

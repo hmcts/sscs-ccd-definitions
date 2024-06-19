@@ -50,6 +50,14 @@ export class WebAction {
             });
     }
 
+    async clearInputField(elementLocator: string) {
+        await this.page
+            .locator(elementLocator).clear()
+            .catch((error) => {
+                logger.error(`Input field is not present: ${error}`);
+            });
+    }
+
     async clickFindButton(): Promise<void> {
         await this.page.waitForLoadState('domcontentloaded');
         await this.page
@@ -156,5 +164,9 @@ export class WebAction {
 
     async delay(ms: number) {
         return new Promise( resolve => setTimeout(resolve, ms) );
+    }
+
+    async pause() {
+        await this.page.pause();
     }
 }

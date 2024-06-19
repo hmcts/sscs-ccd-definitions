@@ -9,3 +9,7 @@ test.beforeAll("Case has to be Created", async () => {
 test("As a caseworker withdraw an appeal", async ({appealWithdrawnSteps}) => {
     await appealWithdrawnSteps.performAppealWithdrawn(caseId);
 });
+
+test.afterAll("Case has to be set to Dormant", async () => {
+    await performAppealDormantOnCase(caseId);
+});
