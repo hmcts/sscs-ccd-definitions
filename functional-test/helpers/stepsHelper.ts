@@ -16,8 +16,8 @@ export class StepsHelper {
 
     async uploadResponseHelper(issueCodeData: string, assistOption: string) {
         await this.homePage.chooseEvent('Upload response');
-        await this.homePage.delay(4000);    
-        
+        await this.homePage.delay(4000);
+
         await this.uploadResponsePage.verifyPageContent();
         await this.uploadResponsePage.uploadDocs();
         await this.uploadResponsePage.selectIssueCode(issueCodeData);
