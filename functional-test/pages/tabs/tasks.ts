@@ -73,8 +73,9 @@ export class Tasks {
     }
 
     async selfAssignTask(taskName: string) {
-        await this.page
-            .locator(`//exui-case-task[./*[normalize-space()='${taskName}']]//a[normalize-space()='Assign to me']`).click();
+        let selector = `//exui-case-task[./*[normalize-space()='${taskName}']]//a[normalize-space()='Assign to me']`;
+        await this.page.locator(selector).click();
+        await expect(this.page.locator(selector)).toBeHidden();
     }
 
     async AssignTask(taskName: string) {

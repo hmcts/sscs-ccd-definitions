@@ -1,5 +1,6 @@
 import {expect, Page} from '@playwright/test';
 import logger from '../utils/loggerUtil';
+import path from 'path';
 
 export class WebAction {
 
@@ -156,7 +157,7 @@ export class WebAction {
         await this.page
             .locator(elementId).click();
         const fileChooser = await fileChooserPromise;
-        await fileChooser.setFiles(`functional-test/data/file/${fileName}`);
+        await fileChooser.setFiles(path.join(__dirname, `../data/file/${fileName}`));
     }
     
     async screenshot() {
