@@ -1,5 +1,6 @@
 import {Page} from '@playwright/test';
 import {WebAction} from '../common/web.action';
+import issueDirectionsNoticeData from "./content/issue.direction_en.json";
 
 let webActions: WebAction;
 
@@ -13,7 +14,21 @@ export class IssueDirectionPage {
     }
 
     async verifyPageContent() {
-        await webActions.verifyPageLabel('h1.govuk-heading-l', 'Issue direction'); 
+        await webActions.verifyPageLabel('.govuk-caption-l', issueDirectionsNoticeData.eventNameCaptor);
+        await webActions.verifyPageLabel('h1.govuk-heading-l', issueDirectionsNoticeData.eventNameHeading);
+        await webActions.verifyPageLabel('[for=\'prePostHearing\'] > .form-label', issueDirectionsNoticeData.prepostHearingLabel);
+        await webActions.verifyPageLabel('[for=\'directionTypeDl\'] > .form-label', issueDirectionsNoticeData.directionTypeLabel);
+        await webActions.verifyPageLabel('[for=\'confidentialityType-general\']', issueDirectionsNoticeData.sendToAllPartiesLabel);
+        await webActions.verifyPageLabel('[for=\'confidentialityType-confidential\']', issueDirectionsNoticeData.selectSpecificRecipientsLabel);
+        await webActions.verifyPageLabel('#directionDueDate legend > .form-label', issueDirectionsNoticeData.dueDateLabel);
+        await webActions.verifyPageLabel('[for=\'directionDueDate-day\']', issueDirectionsNoticeData.dayLabel);
+        await webActions.verifyPageLabel('[for=\'directionDueDate-month\']', issueDirectionsNoticeData.monthLabel);
+        await webActions.verifyPageLabel('[for=\'directionDueDate-year\']', issueDirectionsNoticeData.yearLabel);
+        await webActions.verifyPageLabel('.form-label[_ngcontent-ng-c823086951]', issueDirectionsNoticeData.reservedToInterlocLabel);
+        await webActions.verifyPageLabel('#generateNotice legend > .form-label', issueDirectionsNoticeData.generateNoticeLabel);
+        await webActions.verifyPageLabel('[for=\'generateNotice_Yes\']', issueDirectionsNoticeData.yesNoticeLabel);
+        await webActions.verifyPageLabel('[for=\'generateNotice_No\']', issueDirectionsNoticeData.noNoticeLabel);
+
     }
 
     async selectHearingOption(optionVal: string) {
@@ -24,8 +39,8 @@ export class IssueDirectionPage {
         await webActions.chooseOptionByLabel('#directionTypeDl', optionVal);
     }
 
-    async chooseRecipients() {
-        await webActions.clickElementById("#confidentialityType-general");
+    async chooseRecipients(optionVal: string) {
+        await webActions.clickElementById(optionVal);
     }
 
     async enterDirectionDueDate() {
@@ -34,8 +49,8 @@ export class IssueDirectionPage {
         await webActions.inputField('#directionDueDate-year', '2025');
     }
 
-    async chooseNoticeType() {
-        await webActions.clickElementById('#generateNotice_Yes');
+    async chooseNoticeType(optionVal: string) {
+        await webActions.clickElementById(optionVal);
     }
 
     async enterNoticeContent() {
@@ -64,15 +79,26 @@ export class IssueDirectionPage {
         await this.verifyPageContent();
         await this.selectHearingOption(hearingOption);
         await this.selectDirectionType(directionType);
-        await this.chooseRecipients();
-        await this.chooseNoticeType();
+        await this.chooseRecipients('#confidentialityType-general');
+        await this.chooseNoticeType('#generateNotice_Yes');
         await this.enterDirectionDueDate();
         await this.enterNoticeContent();
-        
+
         await this.confirmSubmission();
 
         await this.verifyDocumentTitle(docTitle);
         await this.confirmSubmission();
     }
 
+    async populatePreHearingAppealToProceed(hearingOption: string, directionType: string, docTitle: string): Promise<void> {
+        await this.selectHearingOption(hearingOption);
+        await this.selectDirectionType(directionType);
+        await this.chooseRecipients('#confidentialityType-general');
+        await this.chooseNoticeType('#generateNotice_Yes');
+        await this.enterDirectionDueDate();
+        await this.enterNoticeContent();
+        await this.confirmSubmission();
+        await this.verifyDocumentTitle(docTitle);
+        await this.confirmSubmission();
+    }
 }

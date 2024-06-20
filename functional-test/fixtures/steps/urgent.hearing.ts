@@ -41,14 +41,14 @@ export class UrgentHearing extends BaseStep {
         await this.homePage.reloadPage();
 
         await this.loginUserWithCaseId(credentials.judge, true, caseId);
-        await this.homePage.chooseEvent(issueDirectionTestdata.eventName);
+        await this.homePage.chooseEvent(issueDirectionTestdata.eventNameCaptor);
 
         await this.issueDirectionPage.submitIssueDirection(
             issueDirectionTestdata.hearingType, 
             issueDirectionTestdata.grantHearingOption, 
             issueDirectionTestdata.docTitle
         );
-        await this.eventNameAndDescriptionPage.verifyPageContent(issueDirectionTestdata.eventName);
+        await this.eventNameAndDescriptionPage.verifyPageContent(issueDirectionTestdata.eventNameCaptor);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
         await this.summaryTab.verifyPageContentByKeyValue('Urgent case', 'Yes');
@@ -85,14 +85,14 @@ export class UrgentHearing extends BaseStep {
         await this.homePage.reloadPage();
 
         await this.loginUserWithCaseId(credentials.judge, true, caseId);
-        await this.homePage.chooseEvent(issueDirectionTestdata.eventName);
+        await this.homePage.chooseEvent(issueDirectionTestdata.eventNameCaptor);
 
         await this.issueDirectionPage.submitIssueDirection(
             issueDirectionTestdata.hearingType, 
             issueDirectionTestdata.refuseHearingOption, 
             issueDirectionTestdata.docTitle
         );
-        await this.eventNameAndDescriptionPage.verifyPageContent(issueDirectionTestdata.eventName);
+        await this.eventNameAndDescriptionPage.verifyPageContent(issueDirectionTestdata.eventNameCaptor);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
         await this.summaryTab.verifyPageContentByKeyValue('Urgent case', 'No');
