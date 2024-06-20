@@ -1,5 +1,5 @@
 import {Page} from '@playwright/test';
-import {WebAction} from '../common/web.action'
+import {WebAction} from '../common/web.action';
 import addNoteTestData from "./content/add.note_en.json";
 
 
@@ -14,7 +14,7 @@ export class AddNote {
         webActions = new WebAction(this.page);
     }
 
-    async verifyPageContent(casereference : string) {
+    async verifyPageContent() {
         await webActions.verifyPageLabel('.govuk-caption-l', 'Add a note'); //Captor Text
         //await webActions.verifyPageLabel('h1', casereference+": Bloggs"); //Captor Text
         await webActions.verifyPageLabel('.govuk-heading-l', 'Add a case note'); //Heading Text

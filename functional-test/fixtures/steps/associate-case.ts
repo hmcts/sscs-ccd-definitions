@@ -7,7 +7,7 @@ const associateCaseTestData = require("../../pages/content/associate.case_en.jso
 
 export class AssociateCase extends BaseStep {
 
-  readonly page : Page;
+    readonly page : Page;
 
    constructor(page: Page) {
        super(page);

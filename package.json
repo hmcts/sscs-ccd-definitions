@@ -44,6 +44,7 @@
     "husky": "^8.0.3",
     "lodash": "^4.17.21",
     "mocha": "^10.2.0",
+    "node-cache": "^5.1.2",
     "otp": "^1.1.0",
     "playwright-core": "^1.41.1",
     "pre-commit": "^1.2.2",

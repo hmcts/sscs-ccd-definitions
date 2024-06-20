@@ -24,3 +24,4 @@ dist/
 playwright-report/
 logs/
 test-results
+.vscode/

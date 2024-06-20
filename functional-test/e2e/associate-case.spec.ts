@@ -14,12 +14,12 @@ test.describe.skip('Associate case tests', () => {
         await associateCaseSteps.associateNonExistentCase();
     });
 
-    /* TODO: Below test needs to be revisited when the relevant bug is fixed.
+    /* TODO: Below test needs to be revisited when the relevant bug SSCSCI-877 is fixed.
        No validation is in place when the case worker self associates the case.
     */
     test.describe.fixme(() => {
         test("As a caseworker I should not be able self associate a case", async ({ associateCaseSteps }) => {
-         await associateCaseSteps.selfAssociateACase();
+            await associateCaseSteps.selfAssociateACase();
         });
     });
 });
