@@ -1,5 +1,6 @@
 import {expect, Page} from '@playwright/test';
 import logger from '../utils/loggerUtil';
+import path from 'path';
 
 export class WebAction {
 
@@ -13,6 +14,15 @@ export class WebAction {
         await this.page
             .locator(elementLocator)
             .selectOption({label: labelText})
+            .catch((error) => {
+                logger.error(`Select box field is not present: ${error}`);
+            });
+    }
+
+    async chooseOptionByIndex(elementLocator: string, indexNum: number) {
+        await this.page
+            .locator(elementLocator)
+            .selectOption({index: indexNum})
             .catch((error) => {
                 logger.error(`Select box field is not present: ${error}`);
             });
@@ -147,9 +157,9 @@ export class WebAction {
         await this.page
             .locator(elementId).click();
         const fileChooser = await fileChooserPromise;
-        await fileChooser.setFiles(`functional-test/data/file/${fileName}`);
+        await fileChooser.setFiles(path.join(__dirname, `../data/file/${fileName}`));
     }
-
+    
     async screenshot() {
         await this.page.screenshot({ path: 'playwright-report/screenshot.png', fullPage: true });
     }

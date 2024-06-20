@@ -2,6 +2,7 @@
 import {request} from '@playwright/test';
 import {urls} from '../../../../config/config';
 import logger from '../../../../utils/loggerUtil';
+import upload_response_payload from '../../../data/payload/upload-response/upload-response.json';
 
 let apiContext;
 
@@ -47,7 +48,7 @@ async function performEventOnCaseWithEmptyBody(idamToken: string,
         caseType,
         caseId, eventId);
     let event_token: string = JSON.parse(body).token;
-    logger.info('Retrieved the token : '+ event_token);
+    logger.info('Retrieved the token : ' + event_token);
 
     let dataPayload = {
         event: {
@@ -90,16 +91,6 @@ async function performEventOnCaseWithUploadResponse(idamToken: string,
                                                     jurisdiction: string,
                                                     caseType: string,
                                                     caseId: string, eventId: string) {
-
-    let response_document = {
-        documentLink: {
-            document_url: "http://dm-store-aat.service.core-compute-aat.internal/documents/b4b8b038-1e11-49b3-b83e-13546cfc152d",
-            document_binary_url: "http://dm-store-aat.service.core-compute-aat.internal/documents/b4b8b038-1e11-49b3-b83e-13546cfc152d/binary",
-            document_filename: "Bloggs_IEF.pdf"
-        },
-        documentFilename: "Bloggs_IEF.pdf"
-    };
-
     let body: string = await getStartEventTokenOnCase(idamToken,
         serviceToken,
         userId,
@@ -107,22 +98,45 @@ async function performEventOnCaseWithUploadResponse(idamToken: string,
         caseType,
         caseId, eventId);
     let event_token: string = JSON.parse(body).token;
-    let case_details = JSON.parse(body).case_details;
-    case_details.case_data.push({dwpResponseDocument: {}});
-    logger.info("The value of the Case Details "+case_details);
+    //let case_details = upload_response_payload.;
 
-
-    /*let dataPayload = {
+    //logger.info("The value of the case Details " + JSON.stringify(case_details));
+    let dataPayload = {
         event: {
             id: `${eventId}`,
             summary: `Summary for the ${eventId} of ${caseId}`,
             description: `Description for the ${eventId} of ${caseId}`,
         },
-        data: {},
+        data: upload_response_payload,
         event_token: `${event_token}`,
         ignore_warning: true,
-    }*/
-    logger.info('The case_details : ' + JSON.stringify(case_details));
+    }
+    logger.debug("The value of the Upload Response Payload : " + JSON.stringify(dataPayload));
+    await performEventSubmission(userId, jurisdiction, caseType, caseId, idamToken, serviceToken, dataPayload);
+}
+
+async function performEventSubmission(userId, jurisdiction, caseType, caseId, idamToken, serviceToken, dataPayload) {
+    let endURL: string = `${urls.ccdApiUrl}/caseworkers/${userId}/jurisdictions/${jurisdiction}/case-types/${caseType}/cases/${caseId}/events`;
+    logger.debug('The end URL : ' + endURL);
+
+
+    const responseForSubmitAnEvent = await apiContext
+        .post(`${endURL}`, {
+            headers: {
+                Authorization: `Bearer ${idamToken}`,
+                ServiceAuthorization: `${serviceToken}`,
+                'content-type': 'application/json',
+            },
+            data: dataPayload
+        });
+    logger.info('The value of the status for the submit event :' + responseForSubmitAnEvent.status());
+    logger.info('The value of the status text for the submit event :' + responseForSubmitAnEvent.statusText());
+
+
+    if (responseForSubmitAnEvent.status() != 201) {
+        throw new Error("Error : Could not perform the Upload Response with status code - "
+            + responseForSubmitAnEvent.status() + " and message " + responseForSubmitAnEvent.statusText());
+    }
 }
 
 export {performEventOnCaseWithEmptyBody, performEventOnCaseWithUploadResponse}

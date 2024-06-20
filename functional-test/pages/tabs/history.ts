@@ -63,13 +63,12 @@ export class History {
                 return i++;
             } else {
                 await expect(linkElement).toBeVisible();
-                await linkElement.click();
                 break;
             }
         }
     }
 
     async verifyEventCompleted(linkText: string) {
-        await expect(this.page.getByRole('link', { name: linkText})).toBeVisible();
+        await expect(this.page.getByRole('link', { name: linkText }).first()).toBeVisible();
     }
 }
