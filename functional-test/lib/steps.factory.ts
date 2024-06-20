@@ -9,12 +9,15 @@ import { ReviewAdminActionTask } from '../fixtures/steps/work-allocation/review.
 import { SendToJudge } from '../fixtures/steps/send.to.judge';
 import { UploadResponse } from '../fixtures/steps/upload.response';
 import { ListingError } from "../fixtures/steps/listing.error";
+import { ReviewListingErrorTask } from '../fixtures/steps/work-allocation/review.listing.error.task'
 import { SendToDormant } from '../fixtures/steps/send.to.dormant';
 import { VoidCase } from '../fixtures/steps/void.case';
 import { StrikeOutCase } from '../fixtures/steps/strike.out.case';
 import { SendToFTA } from '../fixtures/steps/send.to.fta';
+import { ReadyToList } from '../fixtures/steps/ready.to.list';
 import { AppealWithdrawn } from '../fixtures/steps/appeal.withdrawn';
 import { RequestTimeExtension } from '../fixtures/steps/request.time.extension';
+import { UrgentHearing } from '../fixtures/steps/urgent.hearing';
 import {LinkCase} from "../fixtures/steps/link-case";
 
 
@@ -28,6 +31,7 @@ type MyStepsFixtures = {
     sendToAdminSteps: SendToAdmin
     sendToJudgeSteps: SendToJudge
     reviewAdminActionTaskSteps: ReviewAdminActionTask
+    reviewListingErrorTaskSteps: ReviewListingErrorTask
     listingErrorSteps: ListingError
     uploadResponseSteps: UploadResponse
     sendToFTASteps: SendToFTA
@@ -35,8 +39,10 @@ type MyStepsFixtures = {
     voidCaseSteps: VoidCase
     appealWithdrawnSteps: AppealWithdrawn
     strikeOutCaseSteps: StrikeOutCase
-    linkACaseSteps: LinkCase
+    readyToListSteps: ReadyToList
     requestTimeExtensionSteps: RequestTimeExtension
+    urgentHearingSteps: UrgentHearing
+    linkACaseSteps: LinkCase
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -64,9 +70,17 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const sendToAdminSteps = new SendToAdmin(page);
         await use(sendToAdminSteps);
     },
+    readyToListSteps:async ({ page }, use) => {
+        const readyToListSteps = new ReadyToList(page);
+        await use(readyToListSteps);
+    },
     reviewAdminActionTaskSteps:async ({ page }, use) => {
         const reviewAdminActionTaskSteps = new ReviewAdminActionTask(page);
         await use(reviewAdminActionTaskSteps);
+    },
+    reviewListingErrorTaskSteps:async ({ page }, use) => {
+        const reviewListingErrorTaskSteps = new ReviewListingErrorTask(page);
+        await use(reviewListingErrorTaskSteps);
     },
     sendToJudgeSteps:async ({page}, use) => {
         const sendToJudgeSteps = new SendToJudge(page);
@@ -106,8 +120,13 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const requestTimeExtensionSteps = new RequestTimeExtension(page);
         await use(requestTimeExtensionSteps);
     },
+
+    urgentHearingSteps:async ({page}, use) =>{
+        const urgentHearingSteps = new UrgentHearing(page);
+        await use(urgentHearingSteps);
+    },
   
-    linkACaseSteps:async ({page}, use)=>{
+     linkACaseSteps:async ({page}, use)=>{
         const linkACaseSteps = new LinkCase(page);
         await use(linkACaseSteps)
     },

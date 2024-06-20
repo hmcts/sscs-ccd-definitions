@@ -1,7 +1,6 @@
 import {expect, Page} from '@playwright/test';
 import {BaseStep} from './base';
 import {credentials} from "../../config/config";
-import performAppealDormantOnCase from "../../api/client/sscs/appeal.event";
 import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import {StepsHelper} from "../../helpers/stepsHelper";
 
