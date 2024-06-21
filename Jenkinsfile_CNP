@@ -77,9 +77,10 @@ withPipeline("nodejs", product, component) {
 
     afterSuccess('checkout') {
         onPR{
-            sh """ find benefit/data/sheets/ -type f -exec sed -i "s/Benefit/Benefit-E2E/g" {} + """
+            sh """ find benefit/data/sheets/ -type f -exec sed -i "s/Benefit/Benefit-${CHANGE_ID}/g" {} + """
             sh """ cat benefit/data/sheets/CaseType/CaseType.json """
         }
+
     }
 
     afterSuccess('highleveldatasetup') {

@@ -39,7 +39,7 @@ if [ "${VERSION}" == "tag" ]; then
     CCD_DEF_VERSION=${TAG_VERSION}
     FILE_VERSION=${TAG_VERSION}
 elif [ "${VERSION}" == "dev" ]; then
-    CCD_DEF_VERSION="${TAG_VERSION}-dev"
+    CCD_DEF_VERSION="${TAG_VERSION}"
     FILE_VERSION=${VERSION}
 else
     CCD_DEF_VERSION="${TAG_VERSION}"
