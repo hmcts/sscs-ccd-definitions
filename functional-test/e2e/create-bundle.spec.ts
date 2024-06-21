@@ -9,5 +9,6 @@ test.beforeAll("Case has to be Created", async () => {
 });
 
 test("As a caseworker create a bundle", async ({createBundleSteps}) => {
+    test.slow();
     await createBundleSteps.performUploadBundleResponse(caseId);
 });

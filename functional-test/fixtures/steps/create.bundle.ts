@@ -21,17 +21,18 @@ export class CreateBundle extends BaseStep {
     async performUploadBundleResponse(caseId) {
         let bundleDate = new Date();
         let formattedDate = bundleDate.toISOString().split('T')[0].split('-').reverse().join('-');
-        await this.loginUserWithCaseId(credentials.amSuperUser, false, caseId);
 
+        await this.loginUserWithCaseId(credentials.amSuperUser, false, caseId);
         await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.pipIssueCode, 'Yes');
         await this.checkYourAnswersPage.confirmSubmission();
         await this.homePage.chooseEvent("Create a bundle");
         await this.createBundlePage.verifyPageContent();
         await this.createBundlePage.confirmSubmission();
-        await this.homePage.delay(15000)
-        await this.homePage.reloadPage();
+
+        await this.homePage.delay(15000);
+        await this.homePage.reloadPage();;
         await this.homePage.navigateToTab("Bundles");
-        await this.bundlesTab.verifyBundlesTabContentByKeyValueForASpan(`${bundleTestData.stitchStatusLabel}`, `${bundleTestData.stitchStatusDone}`)
+        await this.bundlesTab.verifyBundlesTabContentByKeyValueForASpan(`${bundleTestData.stitchStatusLabel}`, `${bundleTestData.stitchStatusDone}`);
         await this.bundlesTab.verifyBundlesTabContentByKeyValueForASpanRegEx(`${bundleTestData.stitchDocLabel}`, `\\d+-${bundleTestData.stitchVal}\\.pdf`);
 
         await this.bundlesTab.verifyTableElementByIndex(bundleTestData.folderName, `${bundleTestData.folderNameVal}`, 0);
@@ -45,7 +46,7 @@ export class CreateBundle extends BaseStep {
         await this.bundlesTab.verifyBundlesTabContentByKeyValueForASpan(`${bundleTestData.configUsed}`, `${bundleTestData.configUsedDefaultVal}`);
         await this.bundlesTab.verifyBundlesTabContentByKeyValueForASpan(`${bundleTestData.amendBundle}`, `${bundleTestData.amendBundleDefaultVal}`);
 
-        await this.homePage.navigateToTab("History")
-        await this.verifyHistoryTabDetails("Response received", "Stitching bundle complete")
+        await this.homePage.navigateToTab("History");
+        await this.verifyHistoryTabDetails("Response received", "Stitching bundle complete");
     }
 }
