@@ -17,7 +17,7 @@ export class CheckYourAnswersPage {
     async verifyCYAPageContent(headingValue: string, benefitCode?: string, issueCode?: string, caseType?: string) {
 
         await webActions.verifyPageLabel('.govuk-heading-l', headingValue); //Heading Text
-        await webActions.verifyPageLabel('.heading-h2', eventTestData.eventSummarycheckYourAnswersHeading);//Check your answers Text.
+        await webActions.verifyPageLabel('form.check-your-answers h2.heading-h2', eventTestData.eventSummarycheckYourAnswersHeading);//Check your answers Text.
         await webActions.verifyPageLabel('//self::ccd-read-document-field/a', 
             [uploadResponseTestdata.testfileone, uploadResponseTestdata.testfiletwo, uploadResponseTestdata.testfilethree]);
         if(caseType === 'UC'){
