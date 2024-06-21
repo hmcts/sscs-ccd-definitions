@@ -4,7 +4,9 @@ import performAppealDormantOnCase from "../../api/client/sscs/appeal.event";
 
 let caseId : string;
 
-test.describe.serial('WA - Review Admin action task tests', async () => {
+test.describe.serial('WA - Review Admin action task tests', {
+    tag: '@work-allocation'
+}, async () => {
 
     test.beforeAll("Case has to be Created",async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
@@ -35,7 +37,7 @@ test.describe.serial('WA - Review Admin action task tests', async () => {
         await reviewAdminActionTaskSteps.verifyCtscAdminWithoutCaseAllocatorRoleCanCompleteReviewAdminActionTask(caseId);
     });
 
-    test.afterAll("Case has to be set to Dormant",async () => {
+    test.afterAll("Case has to be set to Dormant", async () => {
         await performAppealDormantOnCase(caseId);
     });
 });

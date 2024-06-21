@@ -3,5 +3,7 @@
     "sender": "Appellant (or Appointee)",
     "urgentDocType": "Urgent hearing request",
     "reinstatementDocType": "Reinstatement request",
-    "testfileone" : "testfile1.pdf"
+    "testfileone" : "testfile1.pdf",
+    "encrytpedFile": "test-encrypted-file.pdf",
+    "corruptedFile": "test-corrupted-file.pdf"
 }
