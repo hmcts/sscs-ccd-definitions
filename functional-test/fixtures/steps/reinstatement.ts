@@ -6,37 +6,33 @@ const actionFurtherEvidenceTestdata = require('../../pages/content/action.furthe
 const issueDirectionTestdata = require('../../pages/content/issue.direction_en.json');
 
 
-export class UrgentHearing extends BaseStep {
+export class Reinstatement extends BaseStep {
 
     readonly page: Page;
 
     constructor(page){
-        
         super(page);
         this.page = page;
     }
 
-    async requestAndGrantAnUrgentHearing(caseId: string) {
+    async requestAndGrantAnReinstatement(caseId: string) {
         
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventName);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
             actionFurtherEvidenceTestdata.sender, 
-            actionFurtherEvidenceTestdata.urgentDocType, 
+            actionFurtherEvidenceTestdata.reinstatementDocType, 
             actionFurtherEvidenceTestdata.testfileone
         );
         await this.eventNameAndDescriptionPage.verifyPageContent(actionFurtherEvidenceTestdata.eventName);
         await this.eventNameAndDescriptionPage.confirmSubmission();
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
-
-        await this.summaryTab.verifyPageContentByKeyValue('Urgent case', 'Yes');
-
         await this.homePage.navigateToTab("Appeal Details");
-        await this.appealDetailsTab.verifydueDates('Urgent hearing registered');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Urgent hearing outcome', 'In progress');
-        await this.verifyHistoryTabDetails('With FTA', 'Mark case as urgent');
+        await this.appealDetailsTab.verifydueDates('Reinstatement Registered');
+        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Reinstatement Outcome', 'In progress');
+        await this.verifyHistoryTabDetails('With FTA', 'Issue further evidence');
         await this.historyTab.verifyPageContentByKeyValue('Interlocutory review state', 'Review by Judge');
         await this.homePage.reloadPage();
 
@@ -45,28 +41,28 @@ export class UrgentHearing extends BaseStep {
 
         await this.issueDirectionPage.submitIssueDirection(
             issueDirectionTestdata.hearingType, 
-            issueDirectionTestdata.grantHearingOption, 
+            issueDirectionTestdata.grantReinstatementOption, 
             issueDirectionTestdata.docTitle
         );
         await this.eventNameAndDescriptionPage.verifyPageContent(issueDirectionTestdata.eventName);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
-        await this.summaryTab.verifyPageContentByKeyValue('Urgent case', 'Yes');
         await this.homePage.navigateToTab("Appeal Details");
-        await this.appealDetailsTab.verifydueDates('Urgent hearing registered');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Urgent hearing outcome', 'Granted');
+        await this.appealDetailsTab.verifydueDates('Reinstatement Registered');
+        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Reinstatement Outcome', 'Granted');
+        
         await this.verifyHistoryTabDetails('With FTA', 'Issue directions notice');
         await this.historyTab.verifyPageContentByKeyValue('Interlocutory review state', 'Awaiting Admin Action');
     }
 
-    async requestAndRefuseAnUrgentHearing(caseId: string) {
+    async requestAndRefuseAnReinstatement(caseId: string) {
         
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventName);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
             actionFurtherEvidenceTestdata.sender, 
-            actionFurtherEvidenceTestdata.urgentDocType, 
+            actionFurtherEvidenceTestdata.reinstatementDocType, 
             actionFurtherEvidenceTestdata.testfileone
         );
 
@@ -74,13 +70,10 @@ export class UrgentHearing extends BaseStep {
         await this.eventNameAndDescriptionPage.confirmSubmission();
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
-
-        await this.summaryTab.verifyPageContentByKeyValue('Urgent case', 'Yes');
-
         await this.homePage.navigateToTab("Appeal Details");
-        await this.appealDetailsTab.verifydueDates('Urgent hearing registered');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Urgent hearing outcome', 'In progress');
-        await this.verifyHistoryTabDetails('With FTA', 'Mark case as urgent');
+        await this.appealDetailsTab.verifydueDates('Reinstatement Registered');
+        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Reinstatement Outcome', 'In progress');
+        await this.verifyHistoryTabDetails('With FTA', 'Issue further evidence');
         await this.historyTab.verifyPageContentByKeyValue('Interlocutory review state', 'Review by Judge');
         await this.homePage.reloadPage();
 
@@ -89,17 +82,15 @@ export class UrgentHearing extends BaseStep {
 
         await this.issueDirectionPage.submitIssueDirection(
             issueDirectionTestdata.hearingType, 
-            issueDirectionTestdata.refuseHearingOption, 
+            issueDirectionTestdata.refuseReinstatementOption, 
             issueDirectionTestdata.docTitle
         );
         await this.eventNameAndDescriptionPage.verifyPageContent(issueDirectionTestdata.eventName);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
-        await this.summaryTab.verifyPageContentByKeyValue('Urgent case', 'No');
         await this.homePage.navigateToTab("Appeal Details");
-        await this.appealDetailsTab.verifydueDates('Urgent hearing registered');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Urgent hearing outcome', 'Refused');
+        await this.appealDetailsTab.verifydueDates('Reinstatement Registered');
+        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Reinstatement Outcome', 'Refused');
         await this.verifyHistoryTabDetails('With FTA', 'Issue directions notice');
-        await this.historyTab.verifyPageContentByKeyValue('Interlocutory review state', 'N/A');
     }
 }

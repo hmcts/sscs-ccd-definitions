@@ -1,5 +1,6 @@
 import { expect, Page } from '@playwright/test';
-import { WebAction } from '../../common/web.action'
+import { WebAction } from '../../common/web.action';
+import dateUtilsComponent from '../../utils/DateUtilsComponent';
 
 
 let webActions: WebAction;
@@ -21,14 +22,14 @@ export class AppealDetails {
     async verifyFTADueDateOnAppealDetails() {
         const ftaDueDate = new Date();
         ftaDueDate.setDate(new Date().getDate() + 28);
-        let formattedDate = ftaDueDate.toLocaleDateString('en-UK', { day: '2-digit', month: 'short', year: 'numeric' });
+        let formattedDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(ftaDueDate);
         this.verifyAppealDetailsPageContentByKeyValue('FTA response due date', formattedDate);
     }
 
-    async verifyUrgHearingReqDueDateOnAppealDetails() {
-        const urgHearingDueDate = new Date();
-        urgHearingDueDate.setDate(new Date().getDate());
-        let formattedDate = urgHearingDueDate.toLocaleDateString('en-UK', { day: '2-digit', month: 'short', year: 'numeric' });
-        this.verifyAppealDetailsPageContentByKeyValue('Urgent hearing registered', formattedDate);
+    async verifydueDates(reqField: string){
+        const dueDate = new Date();
+        dueDate.setDate(new Date().getDate());
+        let fomattedDueDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(dueDate);
+        this.verifyAppealDetailsPageContentByKeyValue(reqField, fomattedDueDate);
     }
 }
