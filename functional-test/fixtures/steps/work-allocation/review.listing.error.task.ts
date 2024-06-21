@@ -1,6 +1,4 @@
-import { expect, Page } from '@playwright/test';
-import { HomePage } from '../../../pages/common/homePage';
-import { Tasks } from "../../../pages/tabs/tasks";
+import { Page } from '@playwright/test';
 import { WebAction } from '../../../common/web.action'
 import task from '../../../pages/content/review.listing.error.task_en.json';
 import { BaseStep } from '../base';
@@ -31,7 +29,7 @@ export class ReviewListingErrorTask extends BaseStep {
         await readyToList.performReadyToListEvent(caseId);
 
         // Login as CTSC Admin and complete Listing error event to initiate Review Listing Error task
-        await listingError.performListingErrorEvent(caseId);
+        await listingError.performListingErrorEvent(caseId, false);
 
         // Verify CTSC Admin can view the unassigned Review Listing Error task
         await this.homePage.navigateToTab('Tasks');
@@ -92,7 +90,7 @@ export class ReviewListingErrorTask extends BaseStep {
         await readyToList.performReadyToListEvent(caseId);
 
         // As a CTSC Admin complete Listing error event to initiate Review Listing Error task
-        await listingError.performListingErrorEvent(caseId);
+        await listingError.performListingErrorEvent(caseId, false);
 
         // Verify CTSC Admin can view the unassigned Review Listing Error task
         await this.homePage.navigateToTab('Tasks')
@@ -106,7 +104,7 @@ export class ReviewListingErrorTask extends BaseStep {
         await this.tasksTab.verifyNextStepsOptions(task.name, task.nextStepsOptions);
 
         // CTSC Administrator voids the case
-        await voidCase.performVoidCase(caseId);
+        await voidCase.performVoidCase(caseId, false);
 
         // Verify task is removed from the tasks list within Tasks tab
         await this.homePage.navigateToTab('Tasks');

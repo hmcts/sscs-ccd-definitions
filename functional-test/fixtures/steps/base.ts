@@ -16,6 +16,8 @@ import { Summary } from "../../pages/tabs/summary";
 import { Tasks } from "../../pages/tabs/tasks";
 import { InformationReceivedPage } from '../../pages/information.received.page';
 import { RequestTimeExtensionPage } from '../../pages/request.time.extension.page';
+import { ActionFurtherEvidencePage } from '../../pages/action.further.evidence.page';
+import { IssueDirectionPage } from '../../pages/issue.direction.page';
 
 export abstract class BaseStep {
 
@@ -36,6 +38,8 @@ export abstract class BaseStep {
   protected summaryTab: Summary;
   protected tasksTab: Tasks;
   protected requestTimeExtensionPage: RequestTimeExtensionPage;
+  protected actionFurtherEvidencePage: ActionFurtherEvidencePage;
+  protected issueDirectionPage: IssueDirectionPage;
 
 
    constructor(page: Page) {
@@ -56,6 +60,8 @@ export abstract class BaseStep {
         this.textAreaPage = new TextAreaPage(this.page);
         this.tasksTab = new Tasks(this.page);
         this.requestTimeExtensionPage = new RequestTimeExtensionPage(this.page);
+        this.actionFurtherEvidencePage = new ActionFurtherEvidencePage(this.page);
+        this.issueDirectionPage = new IssueDirectionPage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {

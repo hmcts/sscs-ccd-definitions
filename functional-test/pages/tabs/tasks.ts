@@ -29,7 +29,7 @@ export class Tasks {
             }
             await homePage.navigateToTab('Summary');
             await homePage.navigateToTab('Tasks');
-            await this.page.waitForTimeout(timeouts.shortTimeout);
+            await homePage.delay(timeouts.shortTimeout);
         }
 
         if (!taskVisible) {
@@ -54,7 +54,7 @@ export class Tasks {
             }
             await homePage.navigateToTab('Summary');
             await homePage.navigateToTab('Tasks');
-            await this.page.waitForTimeout(timeouts.shortTimeout);
+            await homePage.delay(timeouts.shortTimeout);
         }
 
         if (taskVisible) {
@@ -73,8 +73,9 @@ export class Tasks {
     }
 
     async selfAssignTask(taskName: string) {
-        await this.page
-            .locator(`//exui-case-task[./*[normalize-space()='${taskName}']]//a[normalize-space()='Assign to me']`).click();
+        let selector = `//exui-case-task[./*[normalize-space()='${taskName}']]//a[normalize-space()='Assign to me']`;
+        await this.page.locator(selector).click();
+        await expect(this.page.locator(selector)).toBeHidden();
     }
 
     async AssignTask(taskName: string) {
