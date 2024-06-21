@@ -18,6 +18,7 @@ import { ReadyToList } from '../fixtures/steps/ready.to.list';
 import { AppealWithdrawn } from '../fixtures/steps/appeal.withdrawn';
 import { RequestTimeExtension } from '../fixtures/steps/request.time.extension';
 import { UrgentHearing } from '../fixtures/steps/urgent.hearing';
+import {DeathOfAnAppelant} from "../fixtures/steps/death.of.an.appelant";
 import {LinkCase} from "../fixtures/steps/link-case";
 
 
@@ -42,6 +43,7 @@ type MyStepsFixtures = {
     readyToListSteps: ReadyToList
     requestTimeExtensionSteps: RequestTimeExtension
     urgentHearingSteps: UrgentHearing
+    deathOfAppellant : DeathOfAnAppelant
     linkACaseSteps: LinkCase
 };
 
@@ -125,7 +127,12 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const urgentHearingSteps = new UrgentHearing(page);
         await use(urgentHearingSteps);
     },
-  
+
+    deathOfAppellant:async ({page}, use) =>{
+        const deathOfAppellantSteps = new DeathOfAnAppelant(page);
+        await use(deathOfAppellantSteps);
+    },
+    
      linkACaseSteps:async ({page}, use)=>{
         const linkACaseSteps = new LinkCase(page);
         await use(linkACaseSteps)
