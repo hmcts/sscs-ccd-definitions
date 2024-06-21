@@ -7,7 +7,7 @@ import {Locator} from "puppeteer";
 
 let webActions: WebAction;
 
-export class Bundle {
+export class Bundles {
 
     readonly page: Page;
     protected homePage: HomePage;
