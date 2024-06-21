@@ -63,7 +63,6 @@ export class History {
                 return i++;
             } else {
                 await expect(linkElement).toBeVisible();
-                await linkElement.click();
                 break;
             }
         }

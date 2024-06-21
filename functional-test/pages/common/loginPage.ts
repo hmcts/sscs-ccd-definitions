@@ -15,7 +15,6 @@ export class LoginPage {
         this.pageTitle = page.locator('h3');
         this.mainPageTitle = page.locator('h1');
         webActions = new WebAction(this.page);
-
     }
 
     async delay(ms: number) {
@@ -35,5 +34,6 @@ export class LoginPage {
         await webActions.inputField('#username', user.email);
         await webActions.inputField('#password', user.password);
         await webActions.clickButton('Sign in');
+        await expect(this.page.locator('//li/a[normalize-space()=\'Sign out\']')).toBeVisible();
     }
 }

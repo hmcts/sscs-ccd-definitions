@@ -103,4 +103,21 @@ export class UrgentHearing extends BaseStep {
         await this.historyTab.verifyPageContentByKeyValue('Interlocutory review state', 'N/A');
     }
 
+
+    async uploadEncryptedFiles(caseId: string) {
+        
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
+        await this.homePage.reloadPage();
+        await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventName);
+        await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
+            actionFurtherEvidenceTestdata.sender, 
+            actionFurtherEvidenceTestdata.docType, 
+            actionFurtherEvidenceTestdata.encrytpedFile
+        );
+        await this,this.actionFurtherEvidencePage.verifyEncryptedFileErrorMsg();
+    
+        await this.actionFurtherEvidencePage.uploadDocs(actionFurtherEvidenceTestdata.corruptedFile);
+        await this,this.actionFurtherEvidencePage.verifyEncryptedFileErrorMsg();
+    }
+
 }
