@@ -32,6 +32,7 @@ export class CreateBundle extends BaseStep {
         await this.homePage.delay(15000);
         await this.homePage.reloadPage();;
         await this.homePage.navigateToTab("Bundles");
+        await this.historyTab
         await this.bundlesTab.verifyBundlesTabContentByKeyValueForASpan(`${bundleTestData.stitchStatusLabel}`, `${bundleTestData.stitchStatusDone}`);
         await this.bundlesTab.verifyBundlesTabContentByKeyValueForASpanRegEx(`${bundleTestData.stitchDocLabel}`, `\\d+-${bundleTestData.stitchVal}\\.pdf`);
 
