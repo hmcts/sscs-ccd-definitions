@@ -3,9 +3,13 @@ import { BaseStep } from './base';
 import {credentials} from "../../config/config";
 import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import {accessId, accessToken, getSSCSServiceToken} from "../../api/client/idam/idam.service";
-import {performEventOnCaseWithUploadResponse} from "../../api/client/sscs/factory/appeal.update.factory";
+import {
+    performEventOnCaseForActionFurtherEvidence,
+    performEventOnCaseWithUploadResponse
+} from "../../api/client/sscs/factory/appeal.update.factory";
 import issueDirectionTestdata from "../../pages/content/issue.direction_en.json";
 import eventTestData from "../../pages/content/event.name.event.description_en.json";
+import logger from "../../utils/loggerUtil";
 
 export class IssueDirectionsNotice extends BaseStep {
     
@@ -20,16 +24,26 @@ export class IssueDirectionsNotice extends BaseStep {
     async performIssueDirectionNoticePreHearingAppealToProceed() {
 
         let taxCreditCaseId = await createCaseBasedOnCaseType('TAX CREDIT');
-        await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
-        let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
+        await new Promise(f => setTimeout(f, 6000)); //Delay required for the Case to be ready
+        logger.info('The value of the response writer : '+credentials.hmrcUser.email)
+        let responseWriterToken: string = await accessToken(credentials.hmrcUser);
         let serviceToken: string = await getSSCSServiceToken();
-        let responseWriterId: string = await accessId(credentials.dwpResponseWriter);
+        let responseWriterId: string = await accessId(credentials.hmrcUser);
         await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
             serviceToken.trim(), responseWriterId.trim(),
             'SSCS','Benefit',
-            taxCreditCaseId.trim(),'dwpUploadResponse');
+            taxCreditCaseId.trim(),'dwpUploadResponse','hmrc');
 
-        /*await this.loginUserWithCaseId(credentials.judge, false, taxCreditCaseId);
+        logger.info('The value of the response writer : '+credentials.amCaseWorker.email)
+        let caseWorkerToken: string = await accessToken(credentials.amCaseWorker);
+        let serviceTokenForCaseWorker: string = await getSSCSServiceToken();
+        let caseWorkerId: string = await accessId(credentials.amCaseWorker);
+        await new Promise(f => setTimeout(f, 12000)); //Delay required for the Case to be ready
+        await performEventOnCaseForActionFurtherEvidence(caseWorkerToken.trim(),
+            serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit',
+            taxCreditCaseId.trim(), 'uploadDocumentFurtherEvidence');
+
+       /* await this.loginUserWithCaseId(credentials.judge, false, taxCreditCaseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent("Issue directions notice");
 
@@ -44,7 +58,6 @@ export class IssueDirectionsNotice extends BaseStep {
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();*/
-
         //await this.verifyHistoryTabDetails("Dormant");
     }
 }

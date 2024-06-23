@@ -152,28 +152,28 @@
     "receivedVia": "Online"
   },
   "dwpResponseDocument": {
-    "documentFileName": null,
+    "documentFileName": "Bloggs_IEF.pdf",
     "documentLink": {
       "document_url": "http://dm-store-aat.service.core-compute-aat.internal/documents/b4b8b038-1e11-49b3-b83e-13546cfc152d",
       "document_binary_url": "http://dm-store-aat.service.core-compute-aat.internal/documents/b4b8b038-1e11-49b3-b83e-13546cfc152d/binary",
-      "document_filename": "dummy.pdf"
+      "document_filename": "Bloggs_IEF.pdf"
     }
   },
   "dwpAT38Document": {
-    "documentFileName": null,
+    "documentFileName": "Bloggs_IEF.pdf",
     "documentLink": {
       "document_url": "http://dm-store-aat.service.core-compute-aat.internal/documents/b4b8b038-1e11-49b3-b83e-13546cfc152d",
       "document_binary_url": "http://dm-store-aat.service.core-compute-aat.internal/documents/b4b8b038-1e11-49b3-b83e-13546cfc152d/binary",
-      "document_filename": "ceb988f5-1536-422a-8636-a989a8a86456.pdf"
+      "document_filename": "Bloggs_IEF.pdf"
     }
   },
   "scannedDocumentTypes": null,
   "dwpEvidenceBundleDocument": {
-    "documentFileName": null,
+    "documentFileName": "Bloggs_IEF.pdf",
     "documentLink": {
-      "document_url": "http://dm-store-aat.service.core-compute-aat.internal/documents/eebd53d9-e4e3-42d7-b4ea-937efb629339",
-      "document_binary_url": "http://dm-store-aat.service.core-compute-aat.internal/documents/eebd53d9-e4e3-42d7-b4ea-937efb629339/binary",
-      "document_filename": "dummy.pdf"
+      "document_url": "http://dm-store-aat.service.core-compute-aat.internal/documents/b4b8b038-1e11-49b3-b83e-13546cfc152d",
+      "document_binary_url": "http://dm-store-aat.service.core-compute-aat.internal/documents/b4b8b038-1e11-49b3-b83e-13546cfc152d/binary",
+      "document_filename": "Bloggs_IEF.pdf"
     }
   },
   "dwpEditedEvidenceReason": null,
