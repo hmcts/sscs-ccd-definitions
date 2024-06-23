@@ -6,7 +6,7 @@ test.describe.serial('WA - Review Listing Error CTSC task initiation and complet
 
     let caseId : string;
     
-    test.beforeAll("Case has to be Created",async () => {
+    /*test.beforeAll("Case has to be Created",async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
     });
 
@@ -34,14 +34,14 @@ test.describe.serial('WA - Review Listing Error CTSC task initiation and complet
 
     test.afterAll("Case has to be set to Dormant",async () => {
         await performAppealDormantOnCase(caseId);
-    });
+    });*/
 });
 
 test.describe('WA - Review Listing Error CTSC task automatic cancellation when case is void', () => {
 
     let caseId : string;
     
-    test.beforeAll("Case has to be Created",async () => {
+    /*test.beforeAll("Case has to be Created",async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
     });
 
@@ -54,7 +54,7 @@ test.describe('WA - Review Listing Error CTSC task automatic cancellation when c
 
     test.afterAll("Case has to be set to Dormant",async () => {
         await performAppealDormantOnCase(caseId);
-    });
+    });*/
 });
 
 

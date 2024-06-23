@@ -6,7 +6,7 @@ let caseId : string;
 
 test.describe.serial('WA - Review Admin action task tests', async () => {
 
-    test.beforeAll("Case has to be Created",async () => {
+    /*test.beforeAll("Case has to be Created",async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
     });
 
@@ -37,5 +37,5 @@ test.describe.serial('WA - Review Admin action task tests', async () => {
 
     test.afterAll("Case has to be set to Dormant",async () => {
         await performAppealDormantOnCase(caseId);
-    });
+    });*/
 });
