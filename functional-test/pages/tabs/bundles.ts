@@ -32,21 +32,6 @@ export class Bundles {
         await expect(locator).toBeVisible();
     }
 
-    // async verifyBundlesTabContentByKeyValueForASpanRegEx(fieldLabel: string, fieldValueRegex: string): Promise<void> {
-    //     const isVisible = await this.page.evaluate(({ fieldLabel, fieldValueRegex }) => {
-    //         const labelElement = Array.from(document.querySelectorAll('span')).find(el => el.textContent.trim() === fieldLabel);
-    //         if (!labelElement) return false;
-            
-    //         const spanElements = labelElement.closest('td')?.querySelectorAll('span');
-    //         if (!spanElements) return false;
-    
-    //         const regex = new RegExp(fieldValueRegex);
-    //         return Array.from(spanElements).some(span => regex.test(span.textContent.trim()));
-    //     }, { fieldLabel, fieldValueRegex });
-    
-    //     expect(isVisible).toBe(true);
-    // }
-
     async verifyBundlesTabContentByKeyValueForASpanRegEx(fieldLabel: string, fieldValueRegex: string): Promise<void> {
         const isVisible = await this.page.evaluate(({ fieldLabel, fieldValueRegex }) => {
             const labelElement = Array.from(document.querySelectorAll('span')).find(el => el.textContent.trim() === fieldLabel);
