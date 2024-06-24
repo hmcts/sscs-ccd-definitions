@@ -48,6 +48,14 @@ class DateUtilsComponent {
     });
   }
 
+  static formatDateToSpecifiedDateShortFormat(date) {
+    return date.toLocaleString('en-GB', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
+    });
+  }
+
   static checkWeekend(date) {
     switch (date.getDay()) {
       case 0: //Sunday
@@ -149,5 +157,5 @@ class DateUtilsComponent {
 }
 
 const fourWeeksFroToday = DateUtilsComponent.rollDateToCertainWeeks(4);
-console.log('There are 4 weeks fro Today : ' + DateUtilsComponent.formatDateToYYYYMMDD(fourWeeksFroToday));
-module.exports = {DateUtilsComponent};
+// console.log('There are 4 weeks fro Today : ' + DateUtilsComponent.formatDateToYYYYMMDD(fourWeeksFroToday));
+export default DateUtilsComponent;
