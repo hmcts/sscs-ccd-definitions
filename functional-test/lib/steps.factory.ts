@@ -17,6 +17,7 @@ import { SendToFTA } from '../fixtures/steps/send.to.fta';
 import { ReadyToList } from '../fixtures/steps/ready.to.list';
 import { AppealWithdrawn } from '../fixtures/steps/appeal.withdrawn';
 import { RequestTimeExtension } from '../fixtures/steps/request.time.extension';
+import { CreateBundle } from '../fixtures/steps/create.bundle';
 import { UrgentHearing } from '../fixtures/steps/urgent.hearing';
 import { Reinstatement } from '../fixtures/steps/reinstatement';
 import { AppealDormant } from '../fixtures/steps/appeal.dormant';
@@ -43,6 +44,7 @@ type MyStepsFixtures = {
     strikeOutCaseSteps: StrikeOutCase
     readyToListSteps: ReadyToList
     requestTimeExtensionSteps: RequestTimeExtension
+    createBundleSteps: CreateBundle
     urgentHearingSteps: UrgentHearing
     reinstatementSteps: Reinstatement
     appealDormantSteps: AppealDormant
@@ -121,6 +123,10 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     requestTimeExtensionSteps:async ({page}, use) =>{
         const requestTimeExtensionSteps = new RequestTimeExtension(page);
         await use(requestTimeExtensionSteps);
+    },
+    createBundleSteps:async ({page}, use) =>{
+        const createBundleSteps = new CreateBundle(page);
+        await use(createBundleSteps);
     },
     urgentHearingSteps:async ({page}, use) =>{
         const urgentHearingSteps = new UrgentHearing(page);

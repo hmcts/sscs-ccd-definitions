@@ -13,6 +13,7 @@ export class HomePage {
     readonly rolesAndAccessTab: Locator;
     readonly tasksTab: Locator;
     readonly appealDetailsTab: Locator;
+    readonly bundlesTab: Locator;
     readonly submitNextStepButton: string;
     readonly nextStepDropDown: string;
     readonly eventTitle: Locator;
@@ -27,6 +28,7 @@ export class HomePage {
         this.tasksTab = page.getByRole('tab', { name: 'Tasks', exact: true });
         this.rolesAndAccessTab = page.getByRole('tab', { name: 'Roles and access', exact: true });
         this.appealDetailsTab = page.getByText('Appeal Details', {exact: true});
+        this.bundlesTab = page.getByText('Bundles', {exact: true});
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
         this.eventTitle = page.locator('h1.govuk-heading-l');
@@ -107,6 +109,11 @@ export class HomePage {
             case "Appeal Details": {
                 await expect(this.appealDetailsTab).toBeVisible();
                 await this.appealDetailsTab.click();
+                break;
+            }
+            case "Bundles": {
+                await expect(this.bundlesTab).toBeVisible();
+                await this.bundlesTab.click();
                 break;
             }
             default: {
