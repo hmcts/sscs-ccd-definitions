@@ -22,6 +22,7 @@ import { UrgentHearing } from '../fixtures/steps/urgent.hearing';
 import { Reinstatement } from '../fixtures/steps/reinstatement';
 import { AppealDormant } from '../fixtures/steps/appeal.dormant';
 import {DeathOfAnAppelant} from "../fixtures/steps/death.of.an.appelant";
+import {LinkCase} from "../fixtures/steps/link-case";
 
 
 
@@ -49,6 +50,7 @@ type MyStepsFixtures = {
     reinstatementSteps: Reinstatement
     appealDormantSteps: AppealDormant
     deathOfAppellant : DeathOfAnAppelant
+    linkACaseSteps: LinkCase
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -56,11 +58,11 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const addNoteSteps = new Note(page);
         await use(addNoteSteps);
     },
-    associateCaseSteps:async ({ page }, use) => {
+    associateCaseSteps:async ({page}, use) => {
         const associateCaseSteps = new AssociateCase(page);
         await use(associateCaseSteps);
     },
-    confirmCaseLapsedSteps:async ({ page }, use) => {
+    confirmCaseLapsedSteps:async ({page}, use) => {
         const confirmCaseLapsedSteps = new ConfirmCaseLapsed(page);
         await use(confirmCaseLapsedSteps);
     },
@@ -114,34 +116,46 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     },
     listingErrorSteps:async ({page}, use) =>{
         const listingErrorSteps = new ListingError(page);
-        await use(listingErrorSteps);
+        await use(listingErrorSteps)
     },
+ 
     appealWithdrawnSteps:async ({page}, use) =>{
         const appealWithdrawnSteps = new AppealWithdrawn(page);
         await use(appealWithdrawnSteps);
     },
+  
     requestTimeExtensionSteps:async ({page}, use) =>{
         const requestTimeExtensionSteps = new RequestTimeExtension(page);
         await use(requestTimeExtensionSteps);
     },
+  
     createBundleSteps:async ({page}, use) =>{
         const createBundleSteps = new CreateBundle(page);
         await use(createBundleSteps);
     },
+
     urgentHearingSteps:async ({page}, use) =>{
         const urgentHearingSteps = new UrgentHearing(page);
         await use(urgentHearingSteps);
     },
+
     reinstatementSteps:async ({page}, use) =>{
         const reinstatementSteps = new Reinstatement(page);
         await use(reinstatementSteps);
     },
+
     appealDormantSteps:async ({page}, use) =>{
         const appealDormantSteps = new AppealDormant(page);
         await use(appealDormantSteps);
     },
+
     deathOfAppellant:async ({page}, use) =>{
         const deathOfAppellantSteps = new DeathOfAnAppelant(page);
         await use(deathOfAppellantSteps);
-    }
+    },
+    
+     linkACaseSteps:async ({page}, use)=>{
+        const linkACaseSteps = new LinkCase(page);
+        await use(linkACaseSteps)
+    },
 })
