@@ -49,11 +49,15 @@ export class IssueDirectionsNotice extends BaseStep {
         await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventNameCaptor);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
             actionFurtherEvidenceTestdata.sender,
-            actionFurtherEvidenceTestdata.docType,
+            actionFurtherEvidenceTestdata.other,
             actionFurtherEvidenceTestdata.testfileone
         );
+        await this.homePage.signOut();
+        await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
 
-        /*await this.loginUserWithCaseId(credentials.judge, false, taxCreditCaseId);
+
+        await this.loginUserWithCaseId(credentials.judge, false, taxCreditCaseId);
+        await new Promise(f => setTimeout(f, 12000)); //Delay required for the Case to be ready
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent("Issue directions notice");
 
@@ -63,11 +67,11 @@ export class IssueDirectionsNotice extends BaseStep {
             'Appeal to Proceed',
             issueDirectionTestdata.docTitle);
 
-       await this.eventNameAndDescriptionPage.verifyPageContent("Appeal withdrawn",
+       await this.eventNameAndDescriptionPage.verifyPageContent("Issue directions notice",
            true, "Direction type", "Appeal to Proceed");
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
-        await this.eventNameAndDescriptionPage.confirmSubmission();*/
-        //await this.verifyHistoryTabDetails("Dormant");
+        await this.eventNameAndDescriptionPage.confirmSubmission();
+        await this.verifyHistoryTabDetails("Issue directions notice");
     }
 }

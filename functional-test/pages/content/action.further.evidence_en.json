@@ -1,6 +1,7 @@
 {
     "eventNameCaptor": "Action further evidence",
     "sender": "Appellant (or Appointee)",
+    "other" : "Other",
     "urgentDocType": "Urgent hearing request",
     "reinstatementDocType": "Reinstatement request",
     "testfileone" : "testfile1.pdf",

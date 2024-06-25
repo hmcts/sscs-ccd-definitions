@@ -6,7 +6,6 @@
     "refuseHearingOption": "Refuse urgent hearing",
     "grantReinstatementOption": "Grant reinstatement",
     "refuseReinstatementOption": "Refuse reinstatement",
-    "docTitle" : "Preview Document (Optional)"
     "docTitle" : "Preview Document (Optional)",
 
     "prepostHearingLabel" : "Pre or post hearing?",
@@ -16,7 +15,7 @@
     "dueDateLabel" : "Due date (Optional)",
     "dayLabel" : "Day",
     "monthLabel" : "Month",
-    "yearLabel" : "Year,",
+    "yearLabel" : "Year",
     "reservedToInterlocLabel" : "Reserved to (Interloc): (Optional)",
     "generateNoticeLabel" : "Generate notice",
     "yesNoticeLabel" : "Yes",

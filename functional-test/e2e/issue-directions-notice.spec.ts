@@ -5,5 +5,6 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 let caseId: string;
 test.only("Issue Direction Notice - Pre Hearing - Normal Tax Credit Application - Appeal to Proceed",
     async ({issueDirectionsNoticeSteps}) => {
+    test.slow();
     await issueDirectionsNoticeSteps.performIssueDirectionNoticePreHearingAppealToProceed();
 });
