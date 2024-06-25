@@ -1,5 +1,6 @@
 import {expect, Page} from '@playwright/test';
 import logger from '../utils/loggerUtil';
+import path from 'path';
 
 export class WebAction {
 
@@ -51,9 +52,25 @@ export class WebAction {
             });
     }
 
+    async typeField(elementLocator: string, inputValue: string) {
+        await this.page
+            .type(elementLocator, inputValue)
+            .catch((error) => {
+                logger.error(`Input field is not present: ${error}`);
+            });
+    }
+
     async inputField(elementLocator: string, inputValue: string) {
         await this.page
             .fill(elementLocator, inputValue)
+            .catch((error) => {
+                logger.error(`Input field is not present: ${error}`);
+            });
+    }
+
+    async clearInputField(elementLocator: string) {
+        await this.page
+            .locator(elementLocator).clear()
             .catch((error) => {
                 logger.error(`Input field is not present: ${error}`);
             });
@@ -156,7 +173,7 @@ export class WebAction {
         await this.page
             .locator(elementId).click();
         const fileChooser = await fileChooserPromise;
-        await fileChooser.setFiles(`functional-test/data/file/${fileName}`);
+        await fileChooser.setFiles(path.join(__dirname, `../data/file/${fileName}`));
     }
     
     async screenshot() {
@@ -165,5 +182,9 @@ export class WebAction {
 
     async delay(ms: number) {
         return new Promise( resolve => setTimeout(resolve, ms) );
+    }
+
+    async pause() {
+        await this.page.pause();
     }
 }

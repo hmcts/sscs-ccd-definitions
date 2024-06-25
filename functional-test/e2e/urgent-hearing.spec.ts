@@ -4,7 +4,7 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 let caseId : string;
 
-test.beforeAll("Case has to be Created", async () => {
+test.beforeEach("Case has to be Created", async () => {
     caseId = await createCaseBasedOnCaseType('PIP');
 });
 
@@ -14,6 +14,10 @@ test("Grant - Urgent hearing request", async ({ urgentHearingSteps }) => {
 
 test("Refuse - Urgent hearing request", async ({ urgentHearingSteps }) => {
     await urgentHearingSteps.requestAndRefuseAnUrgentHearing(caseId);
+});
+
+test("Error scenario - Upload encrypted file in Action further evidence event", async({ urgentHearingSteps }) => {
+    await urgentHearingSteps.uploadEncryptedFiles(caseId);
 });
 
  test.afterAll("Case has to be set to Dormant",async () => {

@@ -23,11 +23,6 @@ export class History {
             .locator(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`)).toBeVisible();
     }
 
-    // async verifyHistoryPageContentByKeyValue(fieldLabel: string, fieldValue: string) {
-    //     await expect(this.page
-    //         .locator(`//*[normalize-space()="${fieldLabel}"]/../td[normalize-space()="${fieldValue}"]`)).toBeVisible();
-    // }
-
 
     async verifyHistoryPageContentByKeyValue(fieldLink: string, fieldLabel: string, fieldValue: string) {
         // await expect(this.page
@@ -63,13 +58,12 @@ export class History {
                 return i++;
             } else {
                 await expect(linkElement).toBeVisible();
-                await linkElement.click();
                 break;
             }
         }
     }
 
     async verifyEventCompleted(linkText: string) {
-        await expect(this.page.getByRole('link', { name: linkText }).first()).toBeVisible();
+        await expect(this.page.getByRole('link', { name: linkText})).toBeVisible();
     }
 }

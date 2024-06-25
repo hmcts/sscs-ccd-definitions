@@ -18,6 +18,10 @@ import { InformationReceivedPage } from '../../pages/information.received.page';
 import { RequestTimeExtensionPage } from '../../pages/request.time.extension.page';
 import { ActionFurtherEvidencePage } from '../../pages/action.further.evidence.page';
 import { IssueDirectionPage } from '../../pages/issue.direction.page';
+import { Bundles } from '../../pages/tabs/bundles';
+import { CreateBundle } from './create.bundle';
+import { CreateBundlePage } from '../../pages/create.bundle';
+import {LinkCasePage} from "../../pages/link.case.page";
 
 export abstract class BaseStep {
 
@@ -37,9 +41,13 @@ export abstract class BaseStep {
   protected appealDetailsTab: AppealDetails;
   protected summaryTab: Summary;
   protected tasksTab: Tasks;
+  protected bundlesTab: Bundles;
+  protected createBundlePage: CreateBundlePage;
   protected requestTimeExtensionPage: RequestTimeExtensionPage;
   protected actionFurtherEvidencePage: ActionFurtherEvidencePage;
   protected issueDirectionPage: IssueDirectionPage;
+  protected linkACasePage: LinkCasePage;
+
 
 
    constructor(page: Page) {
@@ -62,6 +70,9 @@ export abstract class BaseStep {
         this.requestTimeExtensionPage = new RequestTimeExtensionPage(this.page);
         this.actionFurtherEvidencePage = new ActionFurtherEvidencePage(this.page);
         this.issueDirectionPage = new IssueDirectionPage(this.page);
+        this.bundlesTab = new Bundles(this.page);
+        this.createBundlePage = new CreateBundlePage(this.page);
+        this.linkACasePage = new LinkCasePage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
@@ -82,11 +93,4 @@ export abstract class BaseStep {
     async verifyHistoryTabLink(linkLabel: string) {
         await this.historyTab.verifyHistoryPageEventLink(linkLabel);
     }
-
-    /*async verifyAppealDetailsTab(state: string, value: string) {
-        await this.homePage.navigateToTab("Appeal Details");
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue(state, value);
-        await this.appealDetailsTab.verifyFTADueDateOnAppealDetails();
-    }*/
-
 }

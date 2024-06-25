@@ -4,6 +4,9 @@
     "hearingType": "Pre Hearing",
     "grantHearingOption": "Grant urgent hearing",
     "refuseHearingOption": "Refuse urgent hearing",
+    "grantReinstatementOption": "Grant reinstatement",
+    "refuseReinstatementOption": "Refuse reinstatement",
+    "docTitle" : "Preview Document (Optional)"
     "docTitle" : "Preview Document (Optional)",
 
     "prepostHearingLabel" : "Pre or post hearing?",

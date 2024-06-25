@@ -6,8 +6,8 @@ let caseId: string;
 test.beforeAll("Case has to be Created", async () => {
     caseId = await createCaseBasedOnCaseType('PIP');
 });
-test("As a caseworker withdraw an appeal", async ({appealWithdrawnSteps}) => {
-    await appealWithdrawnSteps.performAppealWithdrawn(caseId);
+test("As a caseworker appeal a dormant case", async ({appealDormantSteps}) => {
+    await appealDormantSteps.performAppealDormant(caseId);
 });
 
 test.afterAll("Case has to be set to Dormant", async () => {
