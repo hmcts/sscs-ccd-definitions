@@ -3,8 +3,15 @@ import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.fa
 import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 let caseId: string;
-test.only("Issue Direction Notice - Pre Hearing - Normal Tax Credit Application - Appeal to Proceed",
+test("Issue Direction Notice - Pre Hearing - Normal Tax Credit Application - Appeal to Proceed",
     async ({issueDirectionsNoticeSteps}) => {
-    test.slow();
-    await issueDirectionsNoticeSteps.performIssueDirectionNoticePreHearingAppealToProceed();
-});
+        test.slow();
+        await issueDirectionsNoticeSteps.performIssueDirectionNoticePreHearingAppealToProceed();
+    });
+
+test("Issue Direction Notice - Post Hearing - Employment Support Application - Provide Information",
+    async ({issueDirectionsNoticeSteps}) => {
+        test.slow();
+        await issueDirectionsNoticeSteps.performIssueDirectionNoticePostHearingESAAppealToProceed();
+    });
+

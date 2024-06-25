@@ -101,4 +101,16 @@ export class IssueDirectionPage {
         await this.verifyDocumentTitle(docTitle);
         await this.confirmSubmission();
     }
+
+    async populatePostHearingESAAppealToProceed(hearingOption: string, directionType: string, docTitle: string): Promise<void> {
+        await this.selectHearingOption(hearingOption);
+        await this.selectDirectionType(directionType);
+        await this.chooseRecipients('#confidentialityType-general');
+        await this.chooseNoticeType('#generateNotice_Yes');
+        await this.enterDirectionDueDate();
+        await this.enterNoticeContent();
+        await this.confirmSubmission();
+        await this.verifyDocumentTitle(docTitle);
+        await this.confirmSubmission();
+    }
 }

@@ -1,7 +1,8 @@
 {
     "eventNameCaptor": "Issue directions notice",
     "eventNameHeading": "Issue direction",
-    "hearingType": "Pre Hearing",
+    "preHearingType": "Pre Hearing",
+    "postHearingType": "Post Hearing",
     "grantHearingOption": "Grant urgent hearing",
     "refuseHearingOption": "Refuse urgent hearing",
     "grantReinstatementOption": "Grant reinstatement",
