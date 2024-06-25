@@ -38,7 +38,7 @@ export class IssueDirectionsNotice extends BaseStep {
         let caseWorkerToken: string = await accessToken(credentials.amCaseWorker);
         let serviceTokenForCaseWorker: string = await getSSCSServiceToken();
         let caseWorkerId: string = await accessId(credentials.amCaseWorker);
-        await new Promise(f => setTimeout(f, 12000)); //Delay required for the Case to be ready
+        await new Promise(f => setTimeout(f, 20000)); //Delay required for the Case to be ready
         await performEventOnCaseForActionFurtherEvidence(caseWorkerToken.trim(),
             serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit',
             taxCreditCaseId.trim(), 'uploadDocumentFurtherEvidence');
