@@ -17,9 +17,13 @@ import { SendToFTA } from '../fixtures/steps/send.to.fta';
 import { ReadyToList } from '../fixtures/steps/ready.to.list';
 import { AppealWithdrawn } from '../fixtures/steps/appeal.withdrawn';
 import { RequestTimeExtension } from '../fixtures/steps/request.time.extension';
+import { CreateBundle } from '../fixtures/steps/create.bundle';
 import { UrgentHearing } from '../fixtures/steps/urgent.hearing';
 import { ReviewIncompleteAppealTask } from '../fixtures/steps/work-allocation/review.incomplete.appeal.task';
 import { RequestInfoFromParty } from '../fixtures/steps/request.info.from.party';
+import { Reinstatement } from '../fixtures/steps/reinstatement';
+import { AppealDormant } from '../fixtures/steps/appeal.dormant';
+import { DeathOfAnAppelant } from "../fixtures/steps/death.of.an.appelant";
 
 
 type MyStepsFixtures = {
@@ -42,8 +46,12 @@ type MyStepsFixtures = {
     strikeOutCaseSteps: StrikeOutCase
     readyToListSteps: ReadyToList
     requestTimeExtensionSteps: RequestTimeExtension
+    createBundleSteps: CreateBundle
     urgentHearingSteps: UrgentHearing
     requestInfoFromPartySteps: RequestInfoFromParty
+    reinstatementSteps: Reinstatement
+    appealDormantSteps: AppealDormant
+    deathOfAppellant : DeathOfAnAppelant
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -99,36 +107,52 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const sendToFTASteps = new SendToFTA(page);
         await use(sendToFTASteps);
     },
-    sendToDormantSteps:async ({page}, use) =>{
+    sendToDormantSteps:async ({page}, use) => {
         const sendToDormantSteps = new SendToDormant(page);
         await use(sendToDormantSteps);
     },
-    voidCaseSteps:async ({page}, use) =>{
+    voidCaseSteps:async ({page}, use) => {
         const voidCaseSteps = new VoidCase(page);
         await use(voidCaseSteps);
     },
-    strikeOutCaseSteps:async ({page}, use) =>{
+    strikeOutCaseSteps:async ({page}, use) => {
         const strikeOutCaseSteps = new StrikeOutCase(page);
         await use(strikeOutCaseSteps);
     },
-    listingErrorSteps:async ({page}, use) =>{
+    listingErrorSteps:async ({page}, use) => {
         const listingErrorSteps = new ListingError(page);
         await use(listingErrorSteps);
     },
-    appealWithdrawnSteps:async ({page}, use) =>{
+    appealWithdrawnSteps:async ({page}, use) => {
         const appealWithdrawnSteps = new AppealWithdrawn(page);
         await use(appealWithdrawnSteps);
     },
-    requestTimeExtensionSteps:async ({page}, use) =>{
+    requestTimeExtensionSteps:async ({page}, use) => {
         const requestTimeExtensionSteps = new RequestTimeExtension(page);
         await use(requestTimeExtensionSteps);
     },
-    urgentHearingSteps:async ({page}, use) =>{
+    createBundleSteps:async ({page}, use) => {
+        const createBundleSteps = new CreateBundle(page);
+        await use(createBundleSteps);
+    },
+    urgentHearingSteps:async ({page}, use) => {
         const urgentHearingSteps = new UrgentHearing(page);
         await use(urgentHearingSteps);
     },
-    requestInfoFromPartySteps:async ({page}, use) =>{
+    requestInfoFromPartySteps:async ({page}, use) => {
         const requestInfoFromPartySteps = new RequestInfoFromParty(page);
         await use(requestInfoFromPartySteps);
+    },
+    reinstatementSteps:async ({page}, use) => {
+        const reinstatementSteps = new Reinstatement(page);
+        await use(reinstatementSteps);
+    },
+    appealDormantSteps:async ({page}, use) => {
+        const appealDormantSteps = new AppealDormant(page);
+        await use(appealDormantSteps);
+    },
+    deathOfAppellant:async ({page}, use) => {
+        const deathOfAppellantSteps = new DeathOfAnAppelant(page);
+        await use(deathOfAppellantSteps);
     }
 })

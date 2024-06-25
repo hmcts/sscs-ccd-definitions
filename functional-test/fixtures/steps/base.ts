@@ -19,6 +19,9 @@ import { RequestTimeExtensionPage } from '../../pages/request.time.extension.pag
 import { ActionFurtherEvidencePage } from '../../pages/action.further.evidence.page';
 import { IssueDirectionPage } from '../../pages/issue.direction.page';
 import { RequestInfoFromPartyPage } from '../../pages/request.info.from.party.page';
+import { Bundles } from '../../pages/tabs/bundles';
+import { CreateBundle } from './create.bundle';
+import { CreateBundlePage } from '../../pages/create.bundle';
 
 export abstract class BaseStep {
 
@@ -38,6 +41,8 @@ export abstract class BaseStep {
   protected appealDetailsTab: AppealDetails;
   protected summaryTab: Summary;
   protected tasksTab: Tasks;
+  protected bundlesTab: Bundles;
+  protected createBundlePage: CreateBundlePage;
   protected requestTimeExtensionPage: RequestTimeExtensionPage;
   protected actionFurtherEvidencePage: ActionFurtherEvidencePage;
   protected issueDirectionPage: IssueDirectionPage;
@@ -64,6 +69,8 @@ export abstract class BaseStep {
         this.actionFurtherEvidencePage = new ActionFurtherEvidencePage(this.page);
         this.issueDirectionPage = new IssueDirectionPage(this.page);
         this.requestInfoFromPartyPage = new RequestInfoFromPartyPage(this.page);
+        this.bundlesTab = new Bundles(this.page);
+        this.createBundlePage = new CreateBundlePage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
@@ -84,11 +91,4 @@ export abstract class BaseStep {
     async verifyHistoryTabLink(linkLabel: string) {
         await this.historyTab.verifyHistoryPageEventLink(linkLabel);
     }
-
-    /*async verifyAppealDetailsTab(state: string, value: string) {
-        await this.homePage.navigateToTab("Appeal Details");
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue(state, value);
-        await this.appealDetailsTab.verifyFTADueDateOnAppealDetails();
-    }*/
-
 }
