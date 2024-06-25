@@ -23,6 +23,7 @@ import { Reinstatement } from '../fixtures/steps/reinstatement';
 import { AppealDormant } from '../fixtures/steps/appeal.dormant';
 import {DeathOfAnAppelant} from "../fixtures/steps/death.of.an.appelant";
 import {LinkCase} from "../fixtures/steps/link-case";
+import {IssueDirectionsNotice} from "../fixtures/steps/issue.directions.notice";
 
 
 
@@ -51,6 +52,7 @@ type MyStepsFixtures = {
     appealDormantSteps: AppealDormant
     deathOfAppellant : DeathOfAnAppelant
     linkACaseSteps: LinkCase
+    issueDirectionsNoticeSteps: IssueDirectionsNotice
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -116,19 +118,19 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     },
     listingErrorSteps:async ({page}, use) =>{
         const listingErrorSteps = new ListingError(page);
-        await use(listingErrorSteps)
+        await use(listingErrorSteps);
     },
- 
+
     appealWithdrawnSteps:async ({page}, use) =>{
         const appealWithdrawnSteps = new AppealWithdrawn(page);
         await use(appealWithdrawnSteps);
     },
-  
+
     requestTimeExtensionSteps:async ({page}, use) =>{
         const requestTimeExtensionSteps = new RequestTimeExtension(page);
         await use(requestTimeExtensionSteps);
     },
-  
+
     createBundleSteps:async ({page}, use) =>{
         const createBundleSteps = new CreateBundle(page);
         await use(createBundleSteps);
@@ -138,7 +140,10 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const urgentHearingSteps = new UrgentHearing(page);
         await use(urgentHearingSteps);
     },
-
+    issueDirectionsNoticeSteps:async ({page}, use) =>{
+        const issueDirectionsNoticeSteps = new IssueDirectionsNotice(page);
+        await use(issueDirectionsNoticeSteps);
+    },
     reinstatementSteps:async ({page}, use) =>{
         const reinstatementSteps = new Reinstatement(page);
         await use(reinstatementSteps);
@@ -153,7 +158,7 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const deathOfAppellantSteps = new DeathOfAnAppelant(page);
         await use(deathOfAppellantSteps);
     },
-    
+
      linkACaseSteps:async ({page}, use)=>{
         const linkACaseSteps = new LinkCase(page);
         await use(linkACaseSteps)
