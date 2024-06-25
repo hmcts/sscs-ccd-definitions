@@ -18,7 +18,8 @@ import { ReadyToList } from '../fixtures/steps/ready.to.list';
 import { AppealWithdrawn } from '../fixtures/steps/appeal.withdrawn';
 import { RequestTimeExtension } from '../fixtures/steps/request.time.extension';
 import { UrgentHearing } from '../fixtures/steps/urgent.hearing';
-
+import { ReviewIncompleteAppealTask } from '../fixtures/steps/work-allocation/review.incomplete.appeal.task';
+import { RequestInfoFromParty } from '../fixtures/steps/request.info.from.party';
 
 
 type MyStepsFixtures = {
@@ -31,6 +32,7 @@ type MyStepsFixtures = {
     sendToJudgeSteps: SendToJudge
     reviewAdminActionTaskSteps: ReviewAdminActionTask
     reviewListingErrorTaskSteps: ReviewListingErrorTask
+    reviewIncompleteAppealTaskSteps: ReviewIncompleteAppealTask
     listingErrorSteps: ListingError
     uploadResponseSteps: UploadResponse
     sendToFTASteps: SendToFTA
@@ -41,6 +43,7 @@ type MyStepsFixtures = {
     readyToListSteps: ReadyToList
     requestTimeExtensionSteps: RequestTimeExtension
     urgentHearingSteps: UrgentHearing
+    requestInfoFromPartySteps: RequestInfoFromParty
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -79,6 +82,10 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     reviewListingErrorTaskSteps:async ({ page }, use) => {
         const reviewListingErrorTaskSteps = new ReviewListingErrorTask(page);
         await use(reviewListingErrorTaskSteps);
+    },
+    reviewIncompleteAppealTaskSteps:async ({ page }, use) => {
+        const reviewIncompleteAppealTaskSteps = new ReviewIncompleteAppealTask(page);
+        await use(reviewIncompleteAppealTaskSteps);
     },
     sendToJudgeSteps:async ({page}, use) => {
         const sendToJudgeSteps = new SendToJudge(page);
@@ -119,5 +126,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     urgentHearingSteps:async ({page}, use) =>{
         const urgentHearingSteps = new UrgentHearing(page);
         await use(urgentHearingSteps);
+    },
+    requestInfoFromPartySteps:async ({page}, use) =>{
+        const requestInfoFromPartySteps = new RequestInfoFromParty(page);
+        await use(requestInfoFromPartySteps);
     }
 })
