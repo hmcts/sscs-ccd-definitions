@@ -7,7 +7,7 @@ test.describe.serial('WA - Review Incomplete Appeal CTSC task initiation and com
 }, async() => {
 
     let caseId : string;
-    
+
     test.beforeAll("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIPINCOMPLETE');
     });
@@ -26,11 +26,11 @@ test.describe.serial('WA - Review Incomplete Appeal CTSC task initiation and com
         await reviewIncompleteAppealTaskSteps.verifyCtscAdminWithCaseAllocatorRoleCanViewAndAssignReviewIncompleteAppealTask(caseId);
     });
 
-    test("As an allocated user for the task, CSTC Admin can view and complete the Incomplete Appeal the allocated task", async ({
+    test("As a CSTC Admin, view and complete the assigned Review Incomplete Appeal CTSC task", async ({
         reviewIncompleteAppealTaskSteps }) => {
 
         test.slow();
-        await reviewIncompleteAppealTaskSteps.verifyCtscAdminAsAnAllocatedUserForTheTaskCanViewAndCompleteTheAssignedReviewIncompleteAppealTask('1719218601693748');
+        await reviewIncompleteAppealTaskSteps.verifyCtscAdminAsAnAssignedUserForReviewIncompleteAppealTaskCanViewAndCompleteTheTask(caseId);
     });
 
     test.afterAll("Case has to be set to Dormant", async () => {
@@ -43,7 +43,7 @@ test.describe('WA - Review Incomplete Appeal CTSC task automatic cancellation wh
 }, async() => {
 
     let caseId : string;
-    
+
     test.beforeAll("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
     });

@@ -43,7 +43,7 @@ export class ReviewIncompleteAppealTask extends BaseStep {
         await this.tasksTab.assignTaskToCtscUser(task.name, credentials.amCaseWorker.email);
     }
 
-    async verifyCtscAdminAsAnAllocatedUserForTheTaskCanViewAndCompleteTheAssignedReviewIncompleteAppealTask(caseId: string) {
+    async verifyCtscAdminAsAnAssignedUserForReviewIncompleteAppealTaskCanViewAndCompleteTheTask(caseId: string) {
 
         // Login as CTSC Administrator and view the unassigned Review Incomplete Appeal task
         await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
