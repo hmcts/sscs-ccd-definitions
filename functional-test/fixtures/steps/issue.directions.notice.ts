@@ -9,6 +9,7 @@ import {
 } from "../../api/client/sscs/factory/appeal.update.factory";
 import issueDirectionTestdata from "../../pages/content/issue.direction_en.json";
 import eventTestData from "../../pages/content/event.name.event.description_en.json";
+import actionFurtherEvidenceTestdata from '../../pages/content/action.further.evidence_en.json';
 import logger from "../../utils/loggerUtil";
 
 export class IssueDirectionsNotice extends BaseStep {
@@ -24,7 +25,7 @@ export class IssueDirectionsNotice extends BaseStep {
     async performIssueDirectionNoticePreHearingAppealToProceed() {
 
         let taxCreditCaseId = await createCaseBasedOnCaseType('TAX CREDIT');
-        await new Promise(f => setTimeout(f, 6000)); //Delay required for the Case to be ready
+        await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : '+credentials.hmrcUser.email)
         let responseWriterToken: string = await accessToken(credentials.hmrcUser);
         let serviceToken: string = await getSSCSServiceToken();
@@ -34,16 +35,25 @@ export class IssueDirectionsNotice extends BaseStep {
             'SSCS','Benefit',
             taxCreditCaseId.trim(),'dwpUploadResponse','hmrc');
 
-        logger.info('The value of the response writer : '+credentials.amCaseWorker.email)
+        /*logger.info('The value of the response writer : '+credentials.amCaseWorker.email)
         let caseWorkerToken: string = await accessToken(credentials.amCaseWorker);
         let serviceTokenForCaseWorker: string = await getSSCSServiceToken();
         let caseWorkerId: string = await accessId(credentials.amCaseWorker);
         await new Promise(f => setTimeout(f, 20000)); //Delay required for the Case to be ready
         await performEventOnCaseForActionFurtherEvidence(caseWorkerToken.trim(),
             serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit',
-            taxCreditCaseId.trim(), 'uploadDocumentFurtherEvidence');
+            taxCreditCaseId.trim(), 'uploadDocumentFurtherEvidence');*/
 
-       /* await this.loginUserWithCaseId(credentials.judge, false, taxCreditCaseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, taxCreditCaseId);
+        await this.homePage.reloadPage();
+        await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventNameCaptor);
+        await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
+            actionFurtherEvidenceTestdata.sender,
+            actionFurtherEvidenceTestdata.docType,
+            actionFurtherEvidenceTestdata.testfileone
+        );
+
+        /*await this.loginUserWithCaseId(credentials.judge, false, taxCreditCaseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent("Issue directions notice");
 
