@@ -133,7 +133,6 @@ export class Tasks {
 
     async assignTaskToCtscUser(taskName: string, userEmail: string) {
         await this.clickAssignTask(taskName);
-        // await this.page.getByRole('link', { name: 'Assign task' }).click();
         await this.page.getByRole('radio', { name: 'CTSC' }).click();
         await this.page.getByRole('button', { name: 'Continue' }).click();
         await this.page.locator('#inputSelectPerson').fill('SSCS ctscadmin');

@@ -6,8 +6,8 @@
     "mrn": {
         "dwpIssuingOffice": "DWP PIP (2)",
         "date": "",
-        "mrnLateReason": null,
-        "mrnMissingReason": null
+        "mrnLateReason": "",
+        "mrnMissingReason": ""
     },
     "isAppointee": true,
     "evidenceProvide": "false",
