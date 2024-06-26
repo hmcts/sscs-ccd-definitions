@@ -18,10 +18,11 @@ import { InformationReceivedPage } from '../../pages/information.received.page';
 import { RequestTimeExtensionPage } from '../../pages/request.time.extension.page';
 import { ActionFurtherEvidencePage } from '../../pages/action.further.evidence.page';
 import { IssueDirectionPage } from '../../pages/issue.direction.page';
+import { RequestInfoFromPartyPage } from '../../pages/request.info.from.party.page';
 import { Bundles } from '../../pages/tabs/bundles';
 import { CreateBundle } from './create.bundle';
 import { CreateBundlePage } from '../../pages/create.bundle';
-import {LinkCasePage} from "../../pages/link.case.page";
+import { LinkCasePage } from "../../pages/link.case.page";
 
 export abstract class BaseStep {
 
@@ -46,6 +47,7 @@ export abstract class BaseStep {
   protected requestTimeExtensionPage: RequestTimeExtensionPage;
   protected actionFurtherEvidencePage: ActionFurtherEvidencePage;
   protected issueDirectionPage: IssueDirectionPage;
+  protected requestInfoFromPartyPage: RequestInfoFromPartyPage;
   protected linkACasePage: LinkCasePage;
 
 
@@ -70,6 +72,7 @@ export abstract class BaseStep {
         this.requestTimeExtensionPage = new RequestTimeExtensionPage(this.page);
         this.actionFurtherEvidencePage = new ActionFurtherEvidencePage(this.page);
         this.issueDirectionPage = new IssueDirectionPage(this.page);
+        this.requestInfoFromPartyPage = new RequestInfoFromPartyPage(this.page);
         this.bundlesTab = new Bundles(this.page);
         this.createBundlePage = new CreateBundlePage(this.page);
         this.linkACasePage = new LinkCasePage(this.page);

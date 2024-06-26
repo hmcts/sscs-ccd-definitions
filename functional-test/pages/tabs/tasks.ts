@@ -28,6 +28,7 @@ export class Tasks {
                 break;
             }
             await homePage.navigateToTab('Summary');
+            await homePage.delay(1000);
             await homePage.navigateToTab('Tasks');
             await homePage.delay(timeouts.shortTimeout);
         }
@@ -53,6 +54,7 @@ export class Tasks {
                 break;
             }
             await homePage.navigateToTab('Summary');
+            await homePage.delay(1000);
             await homePage.navigateToTab('Tasks');
             await homePage.delay(timeouts.shortTimeout);
         }
@@ -78,7 +80,7 @@ export class Tasks {
         await expect(this.page.locator(selector)).toBeHidden();
     }
 
-    async AssignTask(taskName: string) {
+    async clickAssignTask(taskName: string) {
         await (this.page
             .locator(`//exui-case-task[./*[normalize-space()='${taskName}']]//a[normalize-space()='Assign task']`)).click();
     }
@@ -127,5 +129,23 @@ export class Tasks {
 
     async clickNextStepLink(linkText: string) {
         await webActions.clickLink(linkText);
+    }
+
+    async assignTaskToCtscUser(taskName: string, userEmail: string) {
+        await this.clickAssignTask(taskName);
+        await this.page.getByRole('radio', { name: 'CTSC' }).click();
+        await this.page.getByRole('button', { name: 'Continue' }).click();
+        await this.page.locator('#inputSelectPerson').fill('SSCS ctscadmin');
+        await expect(this.page.locator('div.mat-autocomplete-panel.mat-autocomplete-visible')).toBeVisible();
+        await this.page.locator(`//mat-option/span[contains(text(), '${userEmail.toLowerCase()}')]`).click();
+        await expect(this.page.locator('//mat-option')).toBeHidden();
+        await this.page.getByRole('button', { name: 'Continue' }).click();
+        await expect(this.page.locator(`h1.govuk-heading-l:has-text('Check your answers')`)).toBeVisible();
+        await expect(this.page.locator('//td[normalize-space()=\'SSCS ctscadmin\']')).toBeVisible();
+        await this.page.getByRole('button', { name: 'Assign' }).click();
+
+        await expect(this.page.locator('//h2[normalize-space()=\'Active tasks\']')).toBeVisible();
+        let task = this.page.locator(`//exui-case-task[./*[normalize-space()='${taskName}']]`);
+        await expect(task.getByRole('link', { name: 'Assign task' })).toBeHidden();
     }
 }
