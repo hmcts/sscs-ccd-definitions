@@ -24,6 +24,8 @@ import { RequestInfoFromParty } from '../fixtures/steps/request.info.from.party'
 import { Reinstatement } from '../fixtures/steps/reinstatement';
 import { AppealDormant } from '../fixtures/steps/appeal.dormant';
 import { DeathOfAnAppelant } from "../fixtures/steps/death.of.an.appelant";
+import { LinkCase } from "../fixtures/steps/link-case";
+
 
 
 type MyStepsFixtures = {
@@ -52,6 +54,7 @@ type MyStepsFixtures = {
     reinstatementSteps: Reinstatement
     appealDormantSteps: AppealDormant
     deathOfAppellant : DeathOfAnAppelant
+    linkACaseSteps: LinkCase
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -59,11 +62,11 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const addNoteSteps = new Note(page);
         await use(addNoteSteps);
     },
-    associateCaseSteps:async ({ page }, use) => {
+    associateCaseSteps:async ({page}, use) => {
         const associateCaseSteps = new AssociateCase(page);
         await use(associateCaseSteps);
     },
-    confirmCaseLapsedSteps:async ({ page }, use) => {
+    confirmCaseLapsedSteps:async ({page}, use) => {
         const confirmCaseLapsedSteps = new ConfirmCaseLapsed(page);
         await use(confirmCaseLapsedSteps);
     },
@@ -121,7 +124,7 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     },
     listingErrorSteps:async ({page}, use) => {
         const listingErrorSteps = new ListingError(page);
-        await use(listingErrorSteps);
+        await use(listingErrorSteps)
     },
     appealWithdrawnSteps:async ({page}, use) => {
         const appealWithdrawnSteps = new AppealWithdrawn(page);
@@ -139,10 +142,6 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const urgentHearingSteps = new UrgentHearing(page);
         await use(urgentHearingSteps);
     },
-    requestInfoFromPartySteps:async ({page}, use) => {
-        const requestInfoFromPartySteps = new RequestInfoFromParty(page);
-        await use(requestInfoFromPartySteps);
-    },
     reinstatementSteps:async ({page}, use) => {
         const reinstatementSteps = new Reinstatement(page);
         await use(reinstatementSteps);
@@ -154,5 +153,13 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     deathOfAppellant:async ({page}, use) => {
         const deathOfAppellantSteps = new DeathOfAnAppelant(page);
         await use(deathOfAppellantSteps);
+    },    
+     linkACaseSteps:async ({page}, use)=> {
+        const linkACaseSteps = new LinkCase(page);
+        await use(linkACaseSteps)
+    },
+    requestInfoFromPartySteps:async ({page}, use) => {
+        const requestInfoFromPartySteps = new RequestInfoFromParty(page);
+        await use(requestInfoFromPartySteps);
     }
 })

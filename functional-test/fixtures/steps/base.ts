@@ -22,6 +22,7 @@ import { RequestInfoFromPartyPage } from '../../pages/request.info.from.party.pa
 import { Bundles } from '../../pages/tabs/bundles';
 import { CreateBundle } from './create.bundle';
 import { CreateBundlePage } from '../../pages/create.bundle';
+import { LinkCasePage } from "../../pages/link.case.page";
 
 export abstract class BaseStep {
 
@@ -47,6 +48,9 @@ export abstract class BaseStep {
   protected actionFurtherEvidencePage: ActionFurtherEvidencePage;
   protected issueDirectionPage: IssueDirectionPage;
   protected requestInfoFromPartyPage: RequestInfoFromPartyPage;
+  protected linkACasePage: LinkCasePage;
+
+
 
    constructor(page: Page) {
         this.page = page;
@@ -71,6 +75,7 @@ export abstract class BaseStep {
         this.requestInfoFromPartyPage = new RequestInfoFromPartyPage(this.page);
         this.bundlesTab = new Bundles(this.page);
         this.createBundlePage = new CreateBundlePage(this.page);
+        this.linkACasePage = new LinkCasePage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
