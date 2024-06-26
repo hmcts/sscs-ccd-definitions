@@ -1,8 +1,7 @@
 import { Page, expect } from '@playwright/test';
 import { WebAction } from '../common/web.action';
 import requestInfoData from "./content/request.info.from.party_en.json";
-
-const { DateUtilsComponent } = require('../utils/DateUtilsComponent');
+import dateUtilsComponent from '../utils/DateUtilsComponent';
 
 let webAction: WebAction;
 
@@ -56,7 +55,7 @@ export class RequestInfoFromPartyPage {
 
     async inputDueDate() {
         await expect(this.page.locator('#directionDueDate-day')).toBeVisible();
-        let date = DateUtilsComponent.rollDateToCertainWeeks(1);
+        let date = dateUtilsComponent.rollDateToCertainWeeks(1);
         await this.page.locator('#directionDueDate-day').fill(String(date.getDate()).padStart(2, '0'));
         await this.page.locator('#directionDueDate-month').fill(String(date.getMonth() + 1).padStart(2, '0'));
         await this.page.locator('#directionDueDate-year').pressSequentially(String(date.getFullYear()));

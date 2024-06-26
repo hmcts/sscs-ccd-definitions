@@ -15,6 +15,12 @@
             "Cancel task",
             "Assign to me"
     ],
+    "assignedManageOptionsForCaseAllocator" : [
+        "Cancel task",
+        "Mark as done",
+        "Reassign task",
+        "Unassign task"
+    ],
     "nextStepsOptions": [
         "Request Information From Party"
     ],

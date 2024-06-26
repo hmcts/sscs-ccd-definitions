@@ -68,17 +68,16 @@ export class ReviewIncompleteAppealTask extends BaseStep {
 
         let voidCase = new VoidCase(this.page);
 
-         // Verify CTSC Admin can view the unassigned Review Incomplete Appeal task
-        await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
+         // Verify CTSC Admin with case allocator role can view the unassigned Review Incomplete Appeal task
+        await this.loginUserWithCaseId(credentials.amCaseWorkerWithCaseAllocatorRole, false, caseId);
         await this.homePage.navigateToTab('Tasks')
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
-        await this.tasksTab.verifyManageOptions(task.name, task.unassignedManageOptions);
+        await this.tasksTab.verifyManageOptions(task.name, task.unassignedManageOptionsForCaseAllocator);
 
-        // CTSC Administrator self assigns task and verifies assigned task details
-        await this.tasksTab.selfAssignTask(task.name);
+        // CTSC Administrator with case allocator role assigns task to another CTSC user
+        await this.tasksTab.assignTaskToCtscUser(task.name, credentials.amCaseWorker.email);
         await this.tasksTab.verifyPageContentByKeyValue(task.name, 'Assigned to', task.assignedTo);
-        await this.tasksTab.verifyManageOptions(task.name, task.assignedManageOptions);
-        await this.tasksTab.verifyNextStepsOptions(task.name, task.nextStepsOptions);
+        await this.tasksTab.verifyManageOptions(task.name, task.assignedManageOptionsForCaseAllocator);
 
         // CTSC Administrator voids the case
         await voidCase.performVoidCase(caseId, false);

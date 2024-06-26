@@ -45,7 +45,7 @@ test.describe('WA - Review Incomplete Appeal CTSC task automatic cancellation wh
     let caseId : string;
 
     test.beforeAll("Case has to be Created", async () => {
-        caseId = await createCaseBasedOnCaseType('PIP');
+        caseId = await createCaseBasedOnCaseType('PIPINCOMPLETE');
     });
 
     test("Review Incomplete Appeal task is cancelled automatically when case is void", async ({
