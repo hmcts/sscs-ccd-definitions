@@ -11,5 +11,5 @@ test("As a caseworker set a Case to Dormant", async ({sendToDormantSteps}) => {
 });
 
 test.afterAll("Case has to be set to Dormant", async () => {
-    await performAppealDormantOnCase(caseId);
+    //await performAppealDormantOnCase(caseId);
 });
