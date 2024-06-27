@@ -24,5 +24,27 @@
 
     "contactNumberTextFieldLabel" : "Contact Number (Optional)",
     "mobileNumberTextFieldLabel" : "Mobile Number (Optional)",
-    "contactEmailTextFieldLabel" : "Contact Email (Optional)"
+    "contactEmailTextFieldLabel" : "Contact Email (Optional)",
+
+    "addressLine2TextFieldLabelNoOptional": "Address Line 2",
+    "contactNumberTextFieldLabelNoOptional" : "Contact Number",
+    "mobileNumberTextFieldLabelNoOptional" : "Mobile Number",
+    "contactEmailTextFieldLabelNoOptional" : "Contact Email",
+
+    "nameTitleValue": "Mr",
+    "firstNameValue": "Automation",
+    "lastNameValue": "Tester",
+    "dobDayValue": "1",
+    "dobMonthValue": "06",
+    "dobYearValue": "1975",
+    "dobFormattedValue": "1 Jun 1975",
+    "ninoValue": "WX564421C",
+    "streetAddressValue1": "50 Egerton Gate,",
+    "streetAddressValue2": "SBH",
+    "townValue": "Swansea",
+    "countyValue": "Bucks",
+    "postcodeValue":"NK5 7LL",
+    "phoneValue": "+44 7818411015",
+    "mobileValue": "+44 7818411015",
+    "emailValue": "test_xxx@hmcts.net"
 }
