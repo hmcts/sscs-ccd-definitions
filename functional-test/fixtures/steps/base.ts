@@ -19,9 +19,10 @@ import { RequestTimeExtensionPage } from '../../pages/request.time.extension.pag
 import { ActionFurtherEvidencePage } from '../../pages/action.further.evidence.page';
 import { IssueDirectionPage } from '../../pages/issue.direction.page';
 import { Bundles } from '../../pages/tabs/bundles';
-import { CreateBundle } from './create.bundle';
 import { CreateBundlePage } from '../../pages/create.bundle';
 import {LinkCasePage} from "../../pages/link.case.page";
+import { ProvideAppointeeDetailsPage } from '../../pages/provide.appointee.details.page';
+
 
 export abstract class BaseStep {
 
@@ -47,6 +48,7 @@ export abstract class BaseStep {
   protected actionFurtherEvidencePage: ActionFurtherEvidencePage;
   protected issueDirectionPage: IssueDirectionPage;
   protected linkACasePage: LinkCasePage;
+  protected provideAppointeeDetailsPage: ProvideAppointeeDetailsPage;
 
 
 
@@ -73,6 +75,7 @@ export abstract class BaseStep {
         this.bundlesTab = new Bundles(this.page);
         this.createBundlePage = new CreateBundlePage(this.page);
         this.linkACasePage = new LinkCasePage(this.page);
+        this.provideAppointeeDetailsPage = new ProvideAppointeeDetailsPage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
