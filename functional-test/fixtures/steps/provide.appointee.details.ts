@@ -50,7 +50,7 @@ export class ProvideAppointeeDetails extends BaseStep {
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
         
-        await this.homePage.navigateToTab(appointeeDetailsData.tabName);
+        await this.homePage.navigateToTab("Appeal Details");
         await this.appealDetailsTab.verifyAppealDetailsAppointeeDetails(appointeeDetailsData);
 
         await this.verifyHistoryTabDetails(appointeeDetailsData.endState, appointeeDetailsData.eventName);

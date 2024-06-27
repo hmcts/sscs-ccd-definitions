@@ -1,7 +1,6 @@
 {
     "eventName": "Provide appointee details",
     "endState": "Dormant",
-    "tabName": "Appeals",
     "appointeeDetailsNoLabel": "No",
     "appointeeDetailsYesLabel": "Yes",
 
