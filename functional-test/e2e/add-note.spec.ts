@@ -8,7 +8,8 @@ test.beforeAll("Case has to be Created", async () => {
     caseId = await createCaseBasedOnCaseType('PIP');
 });
 
-test("Test to Add a note to a case", async ({addNoteSteps}) => {
+test("Test to Add a note to a case", {tag: '@pipeline'},
+    async ({addNoteSteps}) => {
     await addNoteSteps.performAddANote(caseId);
 });
 
