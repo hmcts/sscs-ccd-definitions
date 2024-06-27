@@ -1,15 +1,19 @@
 import {Page} from '@playwright/test';
 import {WebAction} from '../common/web.action';
+import {ProvideAppointeeDetailsPage} from './provide.appointee.details.page';
 import deathOfAnAppellant from "./content/death.of.an.appellant_en.json";
+import appointeeDetails from "./content/appointee.details_en.json";
 
 let webAction: WebAction;
 
 export class DeathOfAppellantPage {
 
     readonly page: Page;
+    protected provideAppointeeDetails: ProvideAppointeeDetailsPage;
 
     constructor(page: Page) {
         this.page = page;
+        this.provideAppointeeDetails = new ProvideAppointeeDetailsPage(this.page);
         webAction = new WebAction(this.page);
     }
 
@@ -39,38 +43,7 @@ export class DeathOfAppellantPage {
             await webAction.verifyPageLabel('//h2[.=\'Address Details\']', deathOfAnAppellant.addressDetailsSectionHeading);
             await webAction.verifyPageLabel('//h2[.=\'Contact Details\']', deathOfAnAppellant.contactDetailsSectionHeading);
 
-            await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_name_title\'] > .form-label', deathOfAnAppellant.titleTextFieldLabel);
-            await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_name_firstName\'] > .form-label', deathOfAnAppellant.firstNameTextFieldLabel);
-            await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_name_lastName\'] > .form-label', deathOfAnAppellant.lastNameTextFieldLabel);
-            await webAction.verifyPageLabel('#appeal_appellant_appointee_identity_identity legend > .form-label', deathOfAnAppellant.dateOfBirthTextFieldLabel);
-            await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_identity_nino\'] > .form-label', deathOfAnAppellant.nationalInsuranceNumberTextFieldLabel);
-            await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_address_line1\'] > .form-label', deathOfAnAppellant.addressLine1TextFieldLabel);
-            await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_address_line2\'] > .form-label', deathOfAnAppellant.addressLine2TextFieldLabel);
-            await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_address_town\'] > .form-label', deathOfAnAppellant.townTextFieldLabel);
-            await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_address_county\'] > .form-label', deathOfAnAppellant.countyTextFieldLabel);
-            await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_address_postcode\'] > .form-label', deathOfAnAppellant.postcodeTextFieldLabel);
-
-            await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_contact_phone\'] > .form-label', deathOfAnAppellant.contactNumberTextFieldLabel);
-            await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_contact_mobile\'] > .form-label', deathOfAnAppellant.mobileNumberTextFieldLabel);
-            await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_contact_email\'] > .form-label', deathOfAnAppellant.contactEmailTextFieldLabel);
-
-            await webAction.typeField('#appeal_appellant_appointee_name_title', 'Mr');
-            await webAction.typeField('#appeal_appellant_appointee_name_firstName', 'Automation');
-            await webAction.typeField('#appeal_appellant_appointee_name_lastName', 'Tester');
-            await webAction.typeField('#appeal_appellant_appointee_identity_identity #dob-day', '1');
-            await webAction.typeField('#appeal_appellant_appointee_identity_identity #dob-month', '06');
-            await webAction.typeField('#appeal_appellant_appointee_identity_identity #dob-year', '1975');
-            await webAction.typeField('#appeal_appellant_appointee_identity_nino', 'WX564421C');
-
-            await webAction.typeField('#appeal_appellant_appointee_address_address ccd-field-write:nth-of-type(1) .form-control', '50 Egerton Gate,');
-            await webAction.typeField('#appeal_appellant_appointee_address_address ccd-field-write:nth-of-type(2) .form-control', 'SBH');
-            await webAction.typeField("#appeal_appellant_appointee_address_town", 'Swansea');
-            await webAction.typeField('#appeal_appellant_appointee_address_county', 'Bucks');
-            await webAction.typeField('#appeal_appellant_appointee_address_postcode', 'NK5 7LL');
-            await webAction.typeField('#appeal_appellant_appointee_contact_phone', '+44 7818411015');
-            await webAction.typeField('#appeal_appellant_appointee_contact_mobile', '+44 7818411015');
-            await webAction.typeField('#appeal_appellant_appointee_contact_email', 'test_xxx@hmcts.net');
-
+            this.provideAppointeeDetails.verifyAndPopulateAppointeeDetailsPage(appointeeDetails);
         }
     }
 
