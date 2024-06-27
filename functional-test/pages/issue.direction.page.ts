@@ -39,8 +39,26 @@ export class IssueDirectionPage {
         await webActions.chooseOptionByLabel('#directionTypeDl', optionVal);
     }
 
+    async selectHearingOption(optionVal: string) {
+        await webActions.chooseOptionByLabel('#prePostHearing', optionVal);
+    }
+
     async chooseRecipients(optionVal: string) {
         await webActions.clickElementById(optionVal);
+    }
+
+    async verifySpecificRecipients() {
+        await webActions.verifyPageLabel('#sendDirectionNoticeToFTA legend > .form-label', issueDirectionsNoticeData.ftaLabel);
+        await webActions.verifyPageLabel('#sendDirectionNoticeToRepresentative legend > .form-label', issueDirectionsNoticeData.representativeLabel);
+        await webActions.verifyPageLabel('#sendDirectionNoticeToOtherParty legend > .form-label', issueDirectionsNoticeData.otherPartyLabel);
+        await webActions.verifyPageLabel('#sendDirectionNoticeToAppellantOrAppointee legend > .form-label', issueDirectionsNoticeData.appellantOrAppointee);
+    }
+
+    async populateSpecificRecipients() {
+        await webActions.clickElementById("#sendDirectionNoticeToFTA_Yes");
+        await webActions.clickElementById("#sendDirectionNoticeToRepresentative_No");
+        await webActions.clickElementById("#sendDirectionNoticeToOtherParty_Yes");
+        await webActions.clickElementById("#sendDirectionNoticeToAppellantOrAppointee_No");
     }
 
     async enterDirectionDueDate() {
@@ -54,9 +72,12 @@ export class IssueDirectionPage {
     }
 
     async enterNoticeContent() {
-        await webActions.inputField('#bodyContent', 'Test body content');
-        await webActions.inputField('#signedBy', 'Tester');
-        await webActions.inputField('#signedRole', 'Test');
+        await webActions.inputField('#sscsInterlocDirectionDocument_documentType', 'Directions Notice');
+        await webActions.uploadFileUsingAFileChooser('#sscsInterlocDirectionDocument_documentLink', 'testfile1.pdf');
+        await webActions.inputField('#sscsInterlocDirectionDocument_documentFileName', 'testfile1.pdf');
+        await webActions.inputField('#documentDateAdded-day', '01');
+        await webActions.inputField('#documentDateAdded-month', '01');
+        await webActions.inputField('#documentDateAdded-year', '2028');
     }
 
     async submitContinueBtn(): Promise<void> {
@@ -91,6 +112,7 @@ export class IssueDirectionPage {
     }
 
     async populatePreHearingAppealToProceed(hearingOption: string, directionType: string, docTitle: string): Promise<void> {
+        await this.verifyPageContent();
         await this.selectHearingOption(hearingOption);
         await this.selectDirectionType(directionType);
         await this.chooseRecipients('#confidentialityType-general');
@@ -107,6 +129,20 @@ export class IssueDirectionPage {
         await this.selectDirectionType(directionType);
         await this.chooseRecipients('#confidentialityType-general');
         await this.chooseNoticeType('#generateNotice_Yes');
+        await this.enterDirectionDueDate();
+        await this.enterNoticeContent();
+        await this.confirmSubmission();
+        await this.verifyDocumentTitle(docTitle);
+        await this.confirmSubmission();
+    }
+
+    async populatePostHearingDLAProvideInformation(hearingOption: string, directionType: string, docTitle: string): Promise<void> {
+        await this.selectHearingOption(hearingOption);
+        await this.selectDirectionType(directionType);
+        await this.chooseRecipients('#confidentialityType-confidential');
+        await this.verifySpecificRecipients();
+        await this.populateSpecificRecipients();
+        await this.chooseNoticeType('#generateNotice_No');
         await this.enterDirectionDueDate();
         await this.enterNoticeContent();
         await this.confirmSubmission();

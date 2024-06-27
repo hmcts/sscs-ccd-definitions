@@ -23,7 +23,7 @@
       "county": "Kent",
       "postCode": "CF24 0AD",
       "phoneNumber": "07411222222",
-      "emailAddress": "hmctspentet1@mailinator.com"
+      "emailAddress": "joe@bloggs.com"
     }
   },
   "smsNotify": {
@@ -43,7 +43,7 @@
       "county": "County",
       "postCode": "CM14 4LQ",
       "phoneNumber": "07411999999",
-      "emailAddress": "hmctspentet2@mailinator.com"
+      "emailAddress": "harry.potter@wizards.com"
     }
   },
   "reasonsForAppealing": {

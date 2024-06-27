@@ -8,6 +8,10 @@
     "grantReinstatementOption": "Grant reinstatement",
     "refuseReinstatementOption": "Refuse reinstatement",
     "docTitle" : "Preview Document (Optional)",
+    "ftaLabel" : "FTA",
+    "representativeLabel" : "Representative",
+    "otherPartyLabel" : "Other Party",
+    "appellantOrAppointee" : "Appellant or Appointee",
 
     "prepostHearingLabel" : "Pre or post hearing?",
     "directionTypeLabel" : "Direction type",
