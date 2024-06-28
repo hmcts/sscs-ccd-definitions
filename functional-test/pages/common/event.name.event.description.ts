@@ -35,7 +35,6 @@ export class EventNameEventDescriptionPage {
     async confirmSubmission(): Promise<void> {
         await this.page.waitForTimeout(3000);
         await webActions.clickSubmitButton();
-        await this.page.waitForTimeout(2000);
+        await this.page.waitForTimeout(3000);
     }
-
 }
