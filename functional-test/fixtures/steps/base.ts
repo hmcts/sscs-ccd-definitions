@@ -22,6 +22,7 @@ import { Bundles } from '../../pages/tabs/bundles';
 import { CreateBundle } from './create.bundle';
 import { CreateBundlePage } from '../../pages/create.bundle';
 import {LinkCasePage} from "../../pages/link.case.page";
+import { RolesAndAccess } from "../../pages/tabs/roles.and.access";
 
 export abstract class BaseStep {
 
@@ -47,7 +48,7 @@ export abstract class BaseStep {
   protected actionFurtherEvidencePage: ActionFurtherEvidencePage;
   protected issueDirectionPage: IssueDirectionPage;
   protected linkACasePage: LinkCasePage;
-
+  protected rolesAndAccessTab: RolesAndAccess;
 
 
    constructor(page: Page) {
@@ -73,6 +74,7 @@ export abstract class BaseStep {
         this.bundlesTab = new Bundles(this.page);
         this.createBundlePage = new CreateBundlePage(this.page);
         this.linkACasePage = new LinkCasePage(this.page);
+        this.rolesAndAccessTab = new RolesAndAccess(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
