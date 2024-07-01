@@ -1271,8 +1271,8 @@ __metadata:
   linkType: hard
 
 "@cucumber/cucumber@npm:^9.5.0":
-  version: 9.5.0
-  resolution: "@cucumber/cucumber@npm:9.5.0"
+  version: 9.6.0
+  resolution: "@cucumber/cucumber@npm:9.6.0"
   dependencies:
     "@cucumber/ci-environment": 9.2.0
     "@cucumber/cucumber-expressions": 16.1.2
@@ -1316,7 +1316,7 @@ __metadata:
     yup: 1.2.0
   bin:
     cucumber-js: bin/cucumber.js
-  checksum: 238684ee517cd5e1a9b72d893d63221f3bc855480978fc031e26b06a01269792df99004a094777c049b32afdda85180c9ccb901791e3382916ff0f880bb45a33
+  checksum: 8b45c4889bb2ac0c99aee46415aebc2797fc903c6f89178f60ca23d7adcf46714a17369ffb6e2651310bd8176d00df0ba280d2836f8fbbae18737698a4dcbac0
   languageName: node
   linkType: hard
 
