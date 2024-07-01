@@ -61,7 +61,7 @@ export class ReviewBFDateTask extends BaseStep {
         await this.tasksTab.verifyTaskIsHidden(task.name);
     }
 
-    async verifyReviewBFDateTaskIsCancelledAutomaticallyWhenTheCaseIsVoid(caseId: string) {
+    async verifyReviewBFDateTaskIsCancelledAutomaticallyWhenTheCaseIsMarkedAsUrgent(caseId: string) {
 
         // CTSC Team leader performs direction due today event
         await this.performDirectionDueTodayEvent(caseId);

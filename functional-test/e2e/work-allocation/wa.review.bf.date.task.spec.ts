@@ -31,7 +31,7 @@ test.describe.serial('WA - Review BF Date CTSC task initiation and completion te
     });
 });
 
-test.describe('WA - Review BF Date CTSC task automatic cancellation when appeal is withdrawn', {
+test.describe('WA - Review BF Date CTSC task automatic cancellation when case is marked as urgent', {
     tag: '@work-allocation'
 }, async() => {
 
@@ -41,11 +41,11 @@ test.describe('WA - Review BF Date CTSC task automatic cancellation when appeal 
         caseId = await createCaseBasedOnCaseType('PIP');
     });
 
-    test("Review BF Date task is cancelled automatically when appeal is withdrawn", async ({
+    test("Review BF Date task is cancelled automatically when case is marked as urgent", async ({
         reviewBFDateTaskSteps}) => {
 
         test.slow();
-        await reviewBFDateTaskSteps.verifyReviewBFDateTaskIsCancelledAutomaticallyWhenTheCaseIsVoid(caseId);
+        await reviewBFDateTaskSteps.verifyReviewBFDateTaskIsCancelledAutomaticallyWhenTheCaseIsMarkedAsUrgent(caseId);
     });
 
     test.afterAll("Case has to be set to Dormant", async () => {
