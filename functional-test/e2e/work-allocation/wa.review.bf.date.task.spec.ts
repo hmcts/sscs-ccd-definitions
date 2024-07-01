@@ -12,14 +12,14 @@ test.describe.serial('WA - Review BF Date CTSC task initiation and completion te
         caseId = await createCaseBasedOnCaseType('PIP');
     });
 
-    test("CSTC Admin as allocated case worker, view the review BF date task", async ({
+    test("CSTC Admin as allocated case worker, views the review BF date task", async ({
         reviewBFDateTaskSteps }) => {
 
         test.slow();
         await reviewBFDateTaskSteps.verifyCtscAdminAsAllocatedCaseWorkerCanViewTheAutomaticallyAssignedReviewBFDateTask(caseId);
     });
 
-    test("CSTC Admin as allocated case worker, complete the review BF date task", async ({
+    test("CSTC Admin as allocated case worker, completes the review BF date task", async ({
         reviewBFDateTaskSteps }) => {
 
         test.slow();

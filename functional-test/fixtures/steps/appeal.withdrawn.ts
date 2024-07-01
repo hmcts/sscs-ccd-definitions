@@ -4,9 +4,9 @@ import {credentials} from "../../config/config";
 const eventTestData = require("../../pages/content/event.name.event.description_en.json");
 
 export class AppealWithdrawn extends BaseStep {
-    
+
   readonly page : Page;
-  
+
 
    constructor(page: Page) {
        super(page);
@@ -16,7 +16,7 @@ export class AppealWithdrawn extends BaseStep {
     async performAppealWithdrawn(caseId: string, loginRequired: boolean = true) {
 
         if(loginRequired) {
-            await this.loginUserWithCaseId(credentials.amCaseWorker, false ,caseId);
+            await this.loginUserWithCaseId(credentials.amSuperUser, false ,caseId);
             await this.homePage.reloadPage(); 
         }
 
