@@ -29,14 +29,13 @@ export class LinkCasePage {
         await webAction.clickButton("Remove");
     }
 
-
     async verifyCaseCannotLinkToItself() {
-        let errorMessageText = (await this.page.locator("//li[@class='ng-star-inserted']").textContent()).trim();
+        let errorMessageText = (await this.page.locator('ul#errors li.ng-star-inserted').textContent()).trim();
         expect(errorMessageText).toEqual(`You can’t link the case to itself, please correct`);
     }
 
     async verifyCannotLinkFakeCase(caseNumber: string){
-        let errorMessageText = (await this.page.locator("//span[@class='error-message ng-star-inserted']").textContent()).trim();
+        let errorMessageText = (await this.page.locator('div span.error-message').textContent()).trim();
         expect(errorMessageText).toEqual(`${caseNumber} does not correspond to an existing CCD case.`);
     }
 

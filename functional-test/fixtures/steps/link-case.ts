@@ -15,7 +15,7 @@ export class LinkCase extends BaseStep {
     }
 
     async linkCaseSuccessfully() {
-// Start by creating cases to be linked
+        // Start by creating cases to be linked
         var firstPipCaseId = await createCaseBasedOnCaseType("PIP");
         var secondPipCaseId = await createCaseBasedOnCaseType("PIP");
         let hyphenatedSecondCaseId = StringUtilsComponent.formatClaimReferenceToAUIDisplayFormat(secondPipCaseId).replace(/\s/g, '-');
@@ -27,6 +27,8 @@ export class LinkCase extends BaseStep {
         // Cases are linked and event is submitted
         await this.linkACasePage.linkCase(secondPipCaseId);
         await this.linkACasePage.confirmSubmission();
+        await expect(this.homePage.summaryTab).toBeVisible();
+        await this.homePage.delay(3000);
 
         // Moving to Related Appeals tab and verifying that the cases are linked by looking for 'secondPipCaseId' on 'firstPipCaseId' case.
         await this.homePage.navigateToTab("Related Appeals");
@@ -40,7 +42,7 @@ export class LinkCase extends BaseStep {
     }
 
     async linkCaseToItself() {
-// Only need 1 case created as we will be linking the case using the same case id.
+        // Only need 1 case created as we will be linking the case using the same case id.
         const pipCaseId = await createCaseBasedOnCaseType("PIP");
 
         // Link a case event has been triggered and the case reference id for the is used for Link a case.
@@ -53,7 +55,7 @@ export class LinkCase extends BaseStep {
     }
 
     async linkNonExistingCase() {
-// Only need 1 case created as we will be linking the case using an invalid case id.
+        // Only need 1 case created as we will be linking the case using an invalid case id.
         const pipCaseId = await createCaseBasedOnCaseType("PIP");
 
         // Link a case event has been triggered and invalid case reference id is used for Link a case.
@@ -88,6 +90,8 @@ export class LinkCase extends BaseStep {
         // Submit the event to confirm removal of link between cases.
         await this.linkACasePage.confirmSubmission();
         await this.linkACasePage.confirmSubmission();
+        await expect(this.homePage.summaryTab).toBeVisible();
+        await this.homePage.delay(3000);
 
         // Confirm that event has successfully run and is showing in History tab.
         await this.homePage.navigateToTab("History");
