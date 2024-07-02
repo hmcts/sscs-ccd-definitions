@@ -2,6 +2,7 @@ import {expect, Page} from "@playwright/test";
 import {StringUtilsComponent} from "../../utils/StringUtilsComponent";
 import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import linkCaseTestData from "../../pages/content/link.case_en.json";
+import eventTestData from "../../pages/content/event.name.event.description_en.json"
 import {credentials} from "../../config/config";
 import {BaseStep} from "./base";
 
@@ -26,7 +27,9 @@ export class LinkCase extends BaseStep {
 
         // Cases are linked and event is submitted
         await this.linkACasePage.linkCase(secondPipCaseId);
-        await this.linkACasePage.confirmSubmission();
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
         await expect(this.homePage.summaryTab).toBeVisible();
         await this.homePage.delay(3000);
 
@@ -48,7 +51,9 @@ export class LinkCase extends BaseStep {
         // Link a case event has been triggered and the case reference id for the is used for Link a case.
         await this.goToLinkACasePage(this.page, pipCaseId);
         await this.linkACasePage.linkCase(pipCaseId)
-        await this.linkACasePage.confirmSubmission();
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
 
         // Error has been thrown and now is being verified.
         await this.linkACasePage.verifyCaseCannotLinkToItself();
@@ -89,7 +94,9 @@ export class LinkCase extends BaseStep {
 
         // Submit the event to confirm removal of link between cases.
         await this.linkACasePage.confirmSubmission();
-        await this.linkACasePage.confirmSubmission();
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
         await expect(this.homePage.summaryTab).toBeVisible();
         await this.homePage.delay(3000);
 
