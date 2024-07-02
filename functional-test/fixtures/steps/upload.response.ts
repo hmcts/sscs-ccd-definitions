@@ -137,6 +137,7 @@ export class UploadResponse extends BaseStep {
         await this.homePage.goToHomePage(UploadResponse.caseId);
 
         await this.homePage.chooseEvent('Upload response');
+        await this.uploadResponsePage.verifyPageContent();
         await this.uploadResponsePage.uploadDocs();
         await this.uploadResponsePage.selectEvidenceReason('Potentially harmful evidence');
         await this.uploadResponsePage.selectIssueCode(uploadResponseTestdata.pipIssueCode);
@@ -153,6 +154,7 @@ export class UploadResponse extends BaseStep {
         await this.homePage.goToHomePage(UploadResponse.caseId);
 
         await this.homePage.chooseEvent('Upload response');
+        await this.uploadResponsePage.verifyPageContent();
         await this.uploadResponsePage.uploadDocs();
         await this.uploadResponsePage.selectIssueCode('DD');
         await this.uploadResponsePage.chooseAssistOption('Yes');

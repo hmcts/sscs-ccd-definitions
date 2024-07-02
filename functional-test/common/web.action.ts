@@ -40,7 +40,7 @@ export class WebAction {
         await expect(this.page.getByText(labelText))
             .toBeVisible()
             .catch((error) => {
-                logger.error(`Test not visible due to: ${error}`);
+                logger.error(`Text not visible due to: ${error}`);
             });
     }
 

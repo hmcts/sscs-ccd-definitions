@@ -37,7 +37,7 @@ export class UploadResponsePage {
         await webActions.uploadFileUsingAFileChooser('#dwpResponseDocument_documentLink', uploadResponseTestdata.testfileone);
         await this.page.waitForTimeout(7000);
         await webActions.uploadFileUsingAFileChooser('#dwpEvidenceBundleDocument_documentLink', uploadResponseTestdata.testfilethree);
-        // await this.page.waitForTimeout(7000);
+        await this.page.waitForTimeout(7000);
     }
 
     async verifyDocMissingErrorMsg(): Promise<void>{
