@@ -20,7 +20,8 @@ export class LinkCasePage {
 
     async linkCase(caseNumber: string): Promise<void> {
         await webAction.clickButton("Add new");
-        await webAction.inputField('.form-control', caseNumber);
+        await expect(this.page.locator('input#linkedCase_0_0')).toBeVisible();
+        await this.page.locator('input#linkedCase_0_0').pressSequentially(caseNumber);
         await webAction.clickButton("Submit");
     }
 
