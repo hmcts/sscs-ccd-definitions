@@ -1,0 +1,14 @@
+[
+  {
+    "CaseEventID": "setAsideRefused",
+    "CaseFieldID": "setAside",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "MANDATORY",
+    "LiveFrom": "23/08/2023",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "1.0",
+    "FieldShowCondition": "[STATE]=\"DoNotUse\"",
+    "Publish": "Y"
+  }
+]
