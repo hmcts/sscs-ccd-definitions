@@ -69,7 +69,7 @@ export class Tasks {
         await expect(this.page.locator(selector)).toBeVisible();
     }
 
-    async cancelTask(taskName: string) {
+    async clickCancelTask(taskName: string) {
         await this.page
             .locator(`//exui-case-task[./*[normalize-space()='${taskName}']]//a[normalize-space()='Cancel task']`).click();
     }
@@ -147,5 +147,13 @@ export class Tasks {
         await expect(this.page.locator('//h2[normalize-space()=\'Active tasks\']')).toBeVisible();
         let task = this.page.locator(`//exui-case-task[./*[normalize-space()='${taskName}']]`);
         await expect(task.getByRole('link', { name: 'Assign task' })).toBeHidden();
+    }
+
+    async cancelTask(taskName: string) {
+        await this.clickCancelTask(taskName);
+        await expect(this.page.locator('h1.govuk-heading-xl')).toHaveText('Cancel a task');
+        await expect(this.page.locator(`exui-task-field:has-text('${taskName}')`)).toBeVisible();
+        await this.page.getByRole('button', { name: 'Cancel task' }).click();
+        await expect(this.page.locator('//h2[normalize-space()=\'Active tasks\']')).toBeVisible();
     }
 }

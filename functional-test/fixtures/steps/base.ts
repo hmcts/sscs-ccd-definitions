@@ -24,6 +24,9 @@ import { CreateBundle } from './create.bundle';
 import { CreateBundlePage } from '../../pages/create.bundle';
 import {LinkCasePage} from "../../pages/link.case.page";
 import { RolesAndAccess } from "../../pages/tabs/roles.and.access";
+import { SupplementaryResponsePage } from "../../pages/supplementary.response.page";
+import { UploadDocumentFurtherEvidencePage } from '../../pages/upload.document.further.evidence.page';
+
 
 export abstract class BaseStep {
 
@@ -51,6 +54,8 @@ export abstract class BaseStep {
   protected requestInfoFromPartyPage: RequestInfoFromPartyPage;
   protected linkACasePage: LinkCasePage;
   protected rolesAndAccessTab: RolesAndAccess;
+  protected supplementaryResponsePage: SupplementaryResponsePage;
+  protected uploadDocumentFurtherEvidencePage: UploadDocumentFurtherEvidencePage;
 
 
    constructor(page: Page) {
@@ -78,6 +83,8 @@ export abstract class BaseStep {
         this.createBundlePage = new CreateBundlePage(this.page);
         this.linkACasePage = new LinkCasePage(this.page);
         this.rolesAndAccessTab = new RolesAndAccess(this.page);
+        this.supplementaryResponsePage = new SupplementaryResponsePage(this.page);
+        this.uploadDocumentFurtherEvidencePage = new UploadDocumentFurtherEvidencePage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
