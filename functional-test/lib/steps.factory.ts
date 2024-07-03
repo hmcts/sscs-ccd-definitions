@@ -23,6 +23,7 @@ import { Reinstatement } from '../fixtures/steps/reinstatement';
 import { AppealDormant } from '../fixtures/steps/appeal.dormant';
 import {DeathOfAnAppelant} from "../fixtures/steps/death.of.an.appelant";
 import {LinkCase} from "../fixtures/steps/link-case";
+import { ReviewBFDateTask } from '../fixtures/steps/work-allocation/review.bf.date.task';
 
 
 
@@ -51,6 +52,7 @@ type MyStepsFixtures = {
     appealDormantSteps: AppealDormant
     deathOfAppellant : DeathOfAnAppelant
     linkACaseSteps: LinkCase
+    reviewBFDateTaskSteps: ReviewBFDateTask
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -158,4 +160,8 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const linkACaseSteps = new LinkCase(page);
         await use(linkACaseSteps)
     },
+    reviewBFDateTaskSteps:async ({ page }, use) => {
+        const reviewBFDateTaskSteps = new ReviewBFDateTask(page);
+        await use(reviewBFDateTaskSteps);
+    }
 })
