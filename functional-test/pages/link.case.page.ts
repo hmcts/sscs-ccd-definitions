@@ -22,6 +22,7 @@ export class LinkCasePage {
         await webAction.clickButton("Add new");
         await expect(this.page.locator('input#linkedCase_0_0')).toBeVisible();
         await this.page.locator('input#linkedCase_0_0').pressSequentially(caseNumber);
+        await this.page.locator('div#linkedCase.form-group').click();
         await webAction.clickButton("Submit");
     }
 
