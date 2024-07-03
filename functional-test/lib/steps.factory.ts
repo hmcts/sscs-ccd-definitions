@@ -23,8 +23,9 @@ import { ReviewIncompleteAppealTask } from '../fixtures/steps/work-allocation/re
 import { RequestInfoFromParty } from '../fixtures/steps/request.info.from.party';
 import { Reinstatement } from '../fixtures/steps/reinstatement';
 import { AppealDormant } from '../fixtures/steps/appeal.dormant';
-import { DeathOfAnAppelant } from "../fixtures/steps/death.of.an.appelant";
-import { LinkCase } from "../fixtures/steps/link-case";
+import {DeathOfAnAppelant} from "../fixtures/steps/death.of.an.appelant";
+import {LinkCase} from "../fixtures/steps/link-case";
+import { ReviewBFDateTask } from '../fixtures/steps/work-allocation/review.bf.date.task';
 
 
 
@@ -55,6 +56,7 @@ type MyStepsFixtures = {
     appealDormantSteps: AppealDormant
     deathOfAppellant : DeathOfAnAppelant
     linkACaseSteps: LinkCase
+    reviewBFDateTaskSteps: ReviewBFDateTask
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -161,5 +163,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     requestInfoFromPartySteps:async ({page}, use) => {
         const requestInfoFromPartySteps = new RequestInfoFromParty(page);
         await use(requestInfoFromPartySteps);
+    },
+    reviewBFDateTaskSteps:async ({ page }, use) => {
+        const reviewBFDateTaskSteps = new ReviewBFDateTask(page);
+        await use(reviewBFDateTaskSteps);
     }
 })

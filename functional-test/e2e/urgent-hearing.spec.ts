@@ -9,14 +9,17 @@ test.beforeEach("Case has to be Created", async () => {
 });
 
 test("Grant - Urgent hearing request", async ({ urgentHearingSteps }) => {
+    test.slow();
     await urgentHearingSteps.requestAndGrantAnUrgentHearing(caseId);
 });
 
 test("Refuse - Urgent hearing request", async ({ urgentHearingSteps }) => {
+    test.slow();
     await urgentHearingSteps.requestAndRefuseAnUrgentHearing(caseId);
 });
 
 test("Error scenario - Upload encrypted file in Action further evidence event", async({ urgentHearingSteps }) => {
+    test.slow();
     await urgentHearingSteps.uploadEncryptedFiles(caseId);
 });
 
