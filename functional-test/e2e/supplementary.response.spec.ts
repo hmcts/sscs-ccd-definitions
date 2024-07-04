@@ -2,11 +2,12 @@ import { test } from "../lib/steps.factory";
 import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.factory";
 import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
-let caseId : string;
 
 test.describe.serial('WA - Action Unprocessed Correspondence CTSC task initiation and completion tests', {
     tag: '@work-allocation'
 }, async () => {
+
+    let caseId : string;
 
     test.beforeAll("Create case and allocate to CTSC Admin", async ({ supplementaryResponseSteps }) => {
         caseId = await createCaseBasedOnCaseType('PIP');
