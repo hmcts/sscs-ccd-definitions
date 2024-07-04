@@ -26,6 +26,8 @@ import { AppealDormant } from '../fixtures/steps/appeal.dormant';
 import {DeathOfAnAppelant} from "../fixtures/steps/death.of.an.appelant";
 import {LinkCase} from "../fixtures/steps/link-case";
 import { ReviewBFDateTask } from '../fixtures/steps/work-allocation/review.bf.date.task';
+import { SupplementaryResponse } from '../fixtures/steps/supplementary.response';
+import { UploadDocumentFurtherEvidence } from '../fixtures/steps/upload.document.further.evidence';
 
 
 
@@ -57,6 +59,8 @@ type MyStepsFixtures = {
     deathOfAppellant : DeathOfAnAppelant
     linkACaseSteps: LinkCase
     reviewBFDateTaskSteps: ReviewBFDateTask
+    supplementaryResponseSteps: SupplementaryResponse
+    uploadDocumentFurtherEvidenceSteps: UploadDocumentFurtherEvidence
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -167,5 +171,13 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     reviewBFDateTaskSteps:async ({ page }, use) => {
         const reviewBFDateTaskSteps = new ReviewBFDateTask(page);
         await use(reviewBFDateTaskSteps);
+    },
+    supplementaryResponseSteps:async ({ page }, use) => {
+        const supplementaryResponseSteps = new SupplementaryResponse(page);
+        await use(supplementaryResponseSteps);
+    },
+    uploadDocumentFurtherEvidenceSteps:async ({ page }, use) => {
+        const uploadDocumentFurtherEvidenceSteps = new UploadDocumentFurtherEvidence(page);
+        await use(uploadDocumentFurtherEvidenceSteps);
     }
 })

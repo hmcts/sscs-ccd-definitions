@@ -12,21 +12,21 @@ test.describe.serial('WA - Review Incomplete Appeal CTSC task initiation and com
         caseId = await createCaseBasedOnCaseType('PIPINCOMPLETE');
     });
 
-    test("As a CSTC Admin without case allocator role, review Incomplete Appeal task", async ({
+    test("As a CTSC Admin without case allocator role, review Incomplete Appeal task", async ({
         reviewIncompleteAppealTaskSteps}) => {
 
         test.slow();
         await reviewIncompleteAppealTaskSteps.verifyCtscAdminWithoutCaseAllocatorRoleCanViewReviewIncompleteAppealTask(caseId);
     });
 
-    test("As a CSTC Admin with case allocator role, assign Incomplete Appeal task to another CTSC admin", async ({
+    test("As a CTSC Admin with case allocator role, assign Incomplete Appeal task to another CTSC admin", async ({
         reviewIncompleteAppealTaskSteps }) => {
 
         test.slow();
         await reviewIncompleteAppealTaskSteps.verifyCtscAdminWithCaseAllocatorRoleCanViewAndAssignReviewIncompleteAppealTask(caseId);
     });
 
-    test("As a CSTC Admin, view and complete the assigned Review Incomplete Appeal CTSC task", async ({
+    test("As a CTSC Admin, view and complete the assigned Review Incomplete Appeal CTSC task", async ({
         reviewIncompleteAppealTaskSteps }) => {
 
         test.slow();

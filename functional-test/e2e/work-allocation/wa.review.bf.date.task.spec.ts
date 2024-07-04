@@ -2,24 +2,24 @@ import { test } from "../../lib/steps.factory";
 import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import performAppealDormantOnCase from "../../api/client/sscs/appeal.event";
 
-let caseId : string;
-
 test.describe.serial('WA - Review BF Date CTSC task initiation and completion tests', {
     tag: '@work-allocation'
 }, async () => {
+
+    let caseId : string;
 
     test.beforeAll("Case has to be Created",async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
     });
 
-    test("CSTC Admin as allocated case worker, views the review BF date task", async ({
+    test("CTSC Admin as allocated case worker, views the review BF date task", async ({
         reviewBFDateTaskSteps }) => {
 
         test.slow();
         await reviewBFDateTaskSteps.verifyCtscAdminAsAllocatedCaseWorkerCanViewTheAutomaticallyAssignedReviewBFDateTask(caseId);
     });
 
-    test("CSTC Admin as allocated case worker, completes the review BF date task", async ({
+    test("CTSC Admin as allocated case worker, completes the review BF date task", async ({
         reviewBFDateTaskSteps }) => {
 
         test.slow();
