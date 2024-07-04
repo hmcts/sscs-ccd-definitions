@@ -81,6 +81,9 @@ export class UploadDocumentFurtherEvidence extends BaseStep {
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
+        await expect(this.homePage.summaryTab).toBeVisible();
+        await this.homePage.delay(3000);
+
         await this.tasksTab.verifyTaskIsHidden(task.name);
     }
 

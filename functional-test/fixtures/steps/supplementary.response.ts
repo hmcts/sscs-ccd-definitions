@@ -78,6 +78,9 @@ export class SupplementaryResponse extends BaseStep {
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
+        await expect(this.homePage.summaryTab).toBeVisible();
+        await this.homePage.delay(3000);
+
         // Verify task is removed from the tasks list within Tasks tab
         await this.tasksTab.verifyTaskIsHidden(task.name);
     }
