@@ -2,7 +2,7 @@ name: sscs-ccd-definitions pipeline
 
 variables:
   serviceConnection: 'azurerm-prod'
-  repositoryBenefit-3877: sscs/ccd-definition-importer-benefit
+  repositoryBenefit-3879: sscs/ccd-definition-importer-benefit
   repositoryBulkscan: sscs/ccd-definition-importer-bulkscan
   acrName: hmctspublic
   acrResourceGroup: rpe-acr-prod-rg
@@ -40,7 +40,7 @@ jobs:
       vmImage: 'ubuntu-latest'
     steps:
       - powershell: |
-          Write-Host ("##vso[task.setvariable variable=imageTagBenefit-3877;]$((Get-Content benefit/VERSION.yaml -Raw) -replace 'TAG: ','')")
+          Write-Host ("##vso[task.setvariable variable=imageTagBenefit-3879;]$((Get-Content benefit/VERSION.yaml -Raw) -replace 'TAG: ','')")
           Write-Host ("##vso[task.setvariable variable=imageTagBulkscan;]$((Get-Content bulkscan/VERSION.yaml -Raw) -replace 'TAG: ','')")
       - task: AzureCLI@1
         inputs:
@@ -51,21 +51,21 @@ jobs:
             set -e
             cd benefit
             # "|| true" because we don't want script to exit here when return code from az acr is "1"
-            response=$(az acr repository show-tags -n $(acrName) --repository $(repositoryBenefit-3877) | grep $(imageTagBenefit-3877)) | grep -v RC || true
+            response=$(az acr repository show-tags -n $(acrName) --repository $(repositoryBenefit-3879) | grep $(imageTagBenefit-3879)) | grep -v RC || true
             if [ -z "$response" ]; then
-              echo "Building $(repositoryBenefit-3877):$(imageTagBenefit-3877) ..."
-              az acr build -r $(acrName) -t $(repositoryBenefit-3877):$(imageTagBenefit-3877) -g $(acrResourceGroup) -f ../docker/importer.Dockerfile .
-              az acr repository update --name $(acrName) --image $(repositoryBenefit-3877):$(imageTagBenefit-3877) --delete-enabled false --write-enabled false
+              echo "Building $(repositoryBenefit-3879):$(imageTagBenefit-3879) ..."
+              az acr build -r $(acrName) -t $(repositoryBenefit-3879):$(imageTagBenefit-3879) -g $(acrResourceGroup) -f ../docker/importer.Dockerfile .
+              az acr repository update --name $(acrName) --image $(repositoryBenefit-3879):$(imageTagBenefit-3879) --delete-enabled false --write-enabled false
             else
-              echo "$(repositoryBenefit-3877):$(imageTagBenefit-3877) already exists"
+              echo "$(repositoryBenefit-3879):$(imageTagBenefit-3879) already exists"
             fi
-            response=$(az acr repository show-tags -n $(acrName) --repository $(repositoryBenefit-3877) | grep $(imageTagBenefit-3877)$(nonProdTag)) | grep -v RC || true
+            response=$(az acr repository show-tags -n $(acrName) --repository $(repositoryBenefit-3879) | grep $(imageTagBenefit-3879)$(nonProdTag)) | grep -v RC || true
             if [ -z "$response" ]; then
-              echo "Building $(repositoryBenefit-3877):$(imageTagBenefit-3877)$(nonProdTag) ..."
-              az acr build -r $(acrName) -t $(repositoryBenefit-3877):$(imageTagBenefit-3877)$(nonProdTag) -g $(acrResourceGroup) --build-arg exclude=prod -f ../docker/importer.Dockerfile .
-              az acr repository update --name $(acrName) --image $(repositoryBenefit-3877):$(imageTagBenefit-3877)$(nonProdTag) --delete-enabled false --write-enabled false
+              echo "Building $(repositoryBenefit-3879):$(imageTagBenefit-3879)$(nonProdTag) ..."
+              az acr build -r $(acrName) -t $(repositoryBenefit-3879):$(imageTagBenefit-3879)$(nonProdTag) -g $(acrResourceGroup) --build-arg exclude=prod -f ../docker/importer.Dockerfile .
+              az acr repository update --name $(acrName) --image $(repositoryBenefit-3879):$(imageTagBenefit-3879)$(nonProdTag) --delete-enabled false --write-enabled false
             else
-              echo "$(repositoryBenefit-3877):$(imageTagBenefit-3877) already exists"
+              echo "$(repositoryBenefit-3879):$(imageTagBenefit-3879) already exists"
             fi
             cd ../bulkscan
             response=$(az acr repository show-tags -n $(acrName) --repository $(repositoryBulkscan) | grep $(imageTagBulkscan)) || true
