@@ -12,7 +12,7 @@ test.describe.serial('WA - Review Listing Error CTSC task initiation and complet
         caseId = await createCaseBasedOnCaseType('PIP');
     });
 
-    test("As a CSTC Admin without case allocator role, review listing error task", async ({
+    test("As a CTSC Admin without case allocator role, review listing error task", async ({
         reviewListingErrorTaskSteps}) => {
 
         // Below step ensures test timeout is extended to allow enough time for task creation
@@ -20,14 +20,14 @@ test.describe.serial('WA - Review Listing Error CTSC task initiation and complet
         await reviewListingErrorTaskSteps.verifyCtscAdminWithoutCaseAllocatorRoleCanViewReviewListingErrorTask(caseId);
     });
 
-    test("As a CSTC Admin with case allocator role, review listing error task", async ({
+    test("As a CTSC Admin with case allocator role, review listing error task", async ({
         reviewListingErrorTaskSteps }) => {
 
         test.slow();
         await reviewListingErrorTaskSteps.verifyCtscAdminWithCaseAllocatorRoleCanViewReviewListingErrorTask(caseId);
     });
 
-    test("As a CSTC Administrator, complete listing error task", async ({
+    test("As a CTSC Administrator, complete listing error task", async ({
         reviewListingErrorTaskSteps }) => {
 
         test.slow();
