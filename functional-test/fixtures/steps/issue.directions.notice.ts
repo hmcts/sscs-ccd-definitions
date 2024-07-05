@@ -130,7 +130,7 @@ export class IssueDirectionsNotice extends BaseStep {
 
     async performIssueDirectionNoticePostHearingDLAAppealToProceed() {
 
-        let pipCaseId = await createCaseBasedOnCaseType('DLA');
+        let pipCaseId = await createCaseBasedOnCaseType('DLASANDL');
         await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
         let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
@@ -167,16 +167,15 @@ export class IssueDirectionsNotice extends BaseStep {
         await this.homePage.chooseEvent("Issue directions notice");
 
         await this.issueDirectionPage.verifyPageContent();
-        await this.issueDirectionPage.populatePostHearingESAAppealToProceed(
+        await this.issueDirectionPage.populatePostHearingDLAProvideInformation(
             issueDirectionTestdata.postHearingType,
             'Provide information',
             issueDirectionTestdata.docTitle);
-
-        /*await this.eventNameAndDescriptionPage.verifyPageContent("Issue directions notice",
-            true, "Direction type", "Appeal to Proceed");
+        await this.eventNameAndDescriptionPage.verifyPageContent("Issue directions notice",
+            true, "Direction type", "Provide information");
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
-        await this.verifyHistoryTabDetails("Issue directions notice");*/
+        await this.verifyHistoryTabDetails("Issue directions notice");
     }
 }

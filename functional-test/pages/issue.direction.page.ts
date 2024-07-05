@@ -72,12 +72,12 @@ export class IssueDirectionPage {
     }
 
     async enterNoticeContent() {
-        await webActions.inputField('#sscsInterlocDirectionDocument_documentType', 'Directions Notice');
+        await webActions.chooseOptionByLabel('#sscsInterlocDirectionDocument_documentType', 'Directions Notice');
         await webActions.uploadFileUsingAFileChooser('#sscsInterlocDirectionDocument_documentLink', 'testfile1.pdf');
-        await webActions.inputField('#sscsInterlocDirectionDocument_documentFileName', 'testfile1.pdf');
         await webActions.inputField('#documentDateAdded-day', '01');
         await webActions.inputField('#documentDateAdded-month', '01');
         await webActions.inputField('#documentDateAdded-year', '2028');
+        await webActions.inputField('#sscsInterlocDirectionDocument_documentFileName','testfile1.pdf');
     }
 
     async submitContinueBtn(): Promise<void> {
