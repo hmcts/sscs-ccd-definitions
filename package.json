@@ -13,14 +13,14 @@
     "test:preview": "echo preview test infra is wip",
     "test:aat": "cd sscs-ccd-e2e-tests && yarn install && yarn test:fullfunctional",
     "test:functional": "ENVIRONMENT=${ENVIRONMENT} ./bin/run-functional-tests.sh",
-    "test:functional-headless": "yarn playwright install && npx playwright test --config functional-test/playwright.config.ts --project chromium --reporter=html ---grep @pipeline",
-    "test:functional-head": "yarn playwright install && npx playwright test --config functional-test/playwright.config.ts --project chromium --headed --reporter=html --grep @pipeline",
+    "test:functional-headless": "yarn playwright install && npx playwright test --config functional-test/playwright.config.ts --project chromium --reporter=html --grep-invert @work-allocation",
+    "test:functional-head": "yarn playwright install && npx playwright test --config functional-test/playwright.config.ts --project chromium --headed --reporter=html --grep-invert @work-allocation",
     "start": "node index.js",
     "test:coverage": "echo test:coverage",
     "test:a11y": "echo test:a11y",
     "highLevelDataSetup": "echo 'bash bin/before-data-setup-step.sh benefit $1 && ./gradlew highLevelDataSetup --args=$1 && sh bin/after-data-setup-step.sh' > ./temp.sh && sh ./temp.sh",
     "test:smoke": "echo no tests run at this step",
-    "test:jenkins": "PLAYWRIGHT_HTML_REPORT=playwright-report PW_TEST_HTML_REPORT_OPEN=never yarn playwright install && npx playwright test --config functional-test/playwright.config.ts --project chromium --reporter=html --grep @pipeline"
+    "test:jenkins": "PLAYWRIGHT_HTML_REPORT=playwright-report PW_TEST_HTML_REPORT_OPEN=never yarn playwright install && npx playwright test --config functional-test/playwright.config.ts --project chromium --reporter=html --grep-invert @work-allocation"
   },
   "dependencies": {
     "@cucumber/cucumber": "^9.5.0",
