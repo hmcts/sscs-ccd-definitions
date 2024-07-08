@@ -22,6 +22,15 @@ import { Bundles } from '../../pages/tabs/bundles';
 import { CreateBundle } from './create.bundle';
 import { CreateBundlePage } from '../../pages/create.bundle';
 import {LinkCasePage} from "../../pages/link.case.page";
+import { AddHearingPage } from '../../pages/add.hearing.page';
+import { HearingBookedPage } from '../../pages/hearing.booked.page';
+import { UploadRecordingPage } from '../../pages/upload.recording.page';
+import { HearingRecordings } from '../../pages/tabs/hearing.recordings';
+import { RequestRecordingPage } from '../../pages/request.recording.page';
+import { ActionRecordingPage } from '../../pages/action.recording.page';
+import { Documents } from "../../pages/tabs/documents";
+import { UploadDocumentPage } from "../../pages/upload.document.page";
+
 
 export abstract class BaseStep {
 
@@ -47,7 +56,14 @@ export abstract class BaseStep {
   protected actionFurtherEvidencePage: ActionFurtherEvidencePage;
   protected issueDirectionPage: IssueDirectionPage;
   protected linkACasePage: LinkCasePage;
-
+  protected addHearingPage: AddHearingPage;
+  protected hearingBookedPage: HearingBookedPage;
+  protected uploadRecordingPage: UploadRecordingPage;
+  protected hearingRecordingsTab: HearingRecordings;
+  protected requestRecordingPage: RequestRecordingPage;
+  protected actionRecordingPage: ActionRecordingPage;
+  protected documentsTab: Documents;
+  protected uploadDocumentPage: UploadDocumentPage;
 
 
    constructor(page: Page) {
@@ -73,6 +89,14 @@ export abstract class BaseStep {
         this.bundlesTab = new Bundles(this.page);
         this.createBundlePage = new CreateBundlePage(this.page);
         this.linkACasePage = new LinkCasePage(this.page);
+        this.addHearingPage = new AddHearingPage(this.page);
+        this.hearingBookedPage = new HearingBookedPage(this.page);
+        this.uploadRecordingPage = new UploadRecordingPage(this.page);
+        this.hearingRecordingsTab = new HearingRecordings(this.page);
+        this.requestRecordingPage = new RequestRecordingPage(this.page);
+        this.actionRecordingPage = new ActionRecordingPage(this.page);
+        this.documentsTab = new Documents(this.page);
+        this.uploadDocumentPage = new UploadDocumentPage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {

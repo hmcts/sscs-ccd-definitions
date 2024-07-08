@@ -21,9 +21,9 @@ import { CreateBundle } from '../fixtures/steps/create.bundle';
 import { UrgentHearing } from '../fixtures/steps/urgent.hearing';
 import { Reinstatement } from '../fixtures/steps/reinstatement';
 import { AppealDormant } from '../fixtures/steps/appeal.dormant';
-import {DeathOfAnAppelant} from "../fixtures/steps/death.of.an.appelant";
-import {LinkCase} from "../fixtures/steps/link-case";
-
+import { DeathOfAnAppelant } from "../fixtures/steps/death.of.an.appelant";
+import { LinkCase } from "../fixtures/steps/link-case";
+import { UploadHearing } from "../fixtures/steps/upload.hearing";
 
 
 type MyStepsFixtures = {
@@ -51,6 +51,7 @@ type MyStepsFixtures = {
     appealDormantSteps: AppealDormant
     deathOfAppellant : DeathOfAnAppelant
     linkACaseSteps: LinkCase
+    uploadHearingSteps: UploadHearing
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -158,4 +159,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const linkACaseSteps = new LinkCase(page);
         await use(linkACaseSteps)
     },
+    
+    uploadHearingSteps:async ({page}, use) =>{
+        const uploadHearingSteps = new UploadHearing(page);
+        await use(uploadHearingSteps);
+    }
 })
