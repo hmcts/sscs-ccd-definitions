@@ -9,11 +9,11 @@ test.beforeEach("Case has to be Created", async () => {
     test.setTimeout(240000);
 });
 
-test("Grant - Hearing recording request", {tag: '@wip'}, async ({ uploadHearingSteps }) => {
+test("Grant - Hearing recording request", async ({ uploadHearingSteps }) => {
     await uploadHearingSteps.requestAndGrantAnHearingRecording(caseId);
 });
 
-test("Refuse - Hearing recording request", {tag: '@wip'}, async ({ uploadHearingSteps }) => {
+test("Refuse - Hearing recording request", async ({ uploadHearingSteps }) => {
     await uploadHearingSteps.requestAndRefuseAnHearingRecording(caseId);
 });
 

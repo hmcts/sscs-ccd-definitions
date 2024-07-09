@@ -121,6 +121,7 @@ export class HomePage {
             case "Bundles": {
                 await expect(this.bundlesTab).toBeVisible();
                 await this.bundlesTab.click();
+                break;
             }
             case "Hearing Recordings": {
                 await expect(this.hearingRecordingsTab).toBeVisible({ timeout: 8000});
