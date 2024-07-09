@@ -48,7 +48,7 @@ export class ActionFurtherEvidencePage {
     }
 
     async confirmSubmission(): Promise<void> {
-        await webActions.clickSubmitButton();
+        await webActions.clickButton('Submit');
     }
 
     async clickAddNewButton(): Promise<void> {
