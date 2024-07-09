@@ -12,6 +12,7 @@ export class HomePage {
     readonly historyTab: Locator;
     readonly rolesAndAccessTab: Locator;
     readonly tasksTab: Locator;
+    readonly welshTab: Locator;
     readonly appealDetailsTab: Locator;
     readonly bundlesTab: Locator;
     readonly submitNextStepButton: string;
@@ -26,6 +27,7 @@ export class HomePage {
         this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
         this.historyTab = page.getByRole('tab', { name: 'History', exact: true });
         this.tasksTab = page.getByRole('tab', { name: 'Tasks', exact: true });
+        this.welshTab = page.getByRole('tab', { name: 'Welsh', exact: true });
         this.rolesAndAccessTab = page.getByRole('tab', { name: 'Roles and access', exact: true });
         this.appealDetailsTab = page.getByText('Appeal Details', {exact: true});
         this.bundlesTab = page.getByText('Bundles', {exact: true});
@@ -98,6 +100,11 @@ export class HomePage {
             case "Tasks": {
                 await expect(this.tasksTab).toBeVisible();
                 await this.tasksTab.click();
+                break;
+            }
+            case "Welsh": {
+                await expect(this.welshTab).toBeVisible();
+                await this.welshTab.click();
                 break;
             }
             case "Roles and access": {

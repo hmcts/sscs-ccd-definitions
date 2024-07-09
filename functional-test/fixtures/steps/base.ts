@@ -26,6 +26,8 @@ import {LinkCasePage} from "../../pages/link.case.page";
 import { RolesAndAccess } from "../../pages/tabs/roles.and.access";
 import { SupplementaryResponsePage } from "../../pages/supplementary.response.page";
 import { UploadDocumentFurtherEvidencePage } from '../../pages/upload.document.further.evidence.page';
+import { UpdateLanguagePreferencePage } from '../../pages/update.language.preference.page';
+import { Welsh } from '../../pages/tabs/welsh';
 
 
 export abstract class BaseStep {
@@ -46,6 +48,7 @@ export abstract class BaseStep {
   protected appealDetailsTab: AppealDetails;
   protected summaryTab: Summary;
   protected tasksTab: Tasks;
+  protected welshTab: Welsh;
   protected bundlesTab: Bundles;
   protected createBundlePage: CreateBundlePage;
   protected requestTimeExtensionPage: RequestTimeExtensionPage;
@@ -56,6 +59,7 @@ export abstract class BaseStep {
   protected rolesAndAccessTab: RolesAndAccess;
   protected supplementaryResponsePage: SupplementaryResponsePage;
   protected uploadDocumentFurtherEvidencePage: UploadDocumentFurtherEvidencePage;
+  protected updateLanguagePreferencePage: UpdateLanguagePreferencePage;
 
 
    constructor(page: Page) {
@@ -75,6 +79,7 @@ export abstract class BaseStep {
         this.summaryTab = new Summary(this.page);
         this.textAreaPage = new TextAreaPage(this.page);
         this.tasksTab = new Tasks(this.page);
+        this.welshTab = new Welsh(this.page);
         this.requestTimeExtensionPage = new RequestTimeExtensionPage(this.page);
         this.actionFurtherEvidencePage = new ActionFurtherEvidencePage(this.page);
         this.issueDirectionPage = new IssueDirectionPage(this.page);
@@ -85,6 +90,7 @@ export abstract class BaseStep {
         this.rolesAndAccessTab = new RolesAndAccess(this.page);
         this.supplementaryResponsePage = new SupplementaryResponsePage(this.page);
         this.uploadDocumentFurtherEvidencePage = new UploadDocumentFurtherEvidencePage(this.page);
+        this.updateLanguagePreferencePage = new UpdateLanguagePreferencePage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
