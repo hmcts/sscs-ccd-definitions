@@ -1,6 +1,6 @@
 /* eslint-disable complexity */
-import {request} from '@playwright/test';
-import {urls} from '../../../../config/config';
+import { request } from '@playwright/test';
+import { urls } from '../../../../config/config';
 import logger from '../../../../utils/loggerUtil';
 import pipPayload from '../../../data/payload/create-appeal/pip_sya.json';
 import ucPayload from '../../../data/payload/create-appeal/uc_sya.json';
@@ -12,7 +12,7 @@ import dlaSandLPayload from '../../../data/payload/create-appeal/dla_sandl_sya.j
 import ucSandLVideoPayload from '../../../data/payload/create-appeal//uc_sandl_video_sya.json';
 import piprepFtoFSandLPayload from '../../../data/payload/create-appeal/pip_sandl_rep_ftof.json';
 import piprepSandLPayload from '../../../data/payload/create-appeal/pip_sandl_rep.json';
-
+import pipIncompleteAppealPayload from '../../../data/payload/create-appeal/pip_incomplete_appeal.json';
 
 async function createCaseBasedOnCaseType(caseType: string) {
     let apiContext;
@@ -45,12 +45,17 @@ async function createCaseBasedOnCaseType(caseType: string) {
                                             ? piprepFtoFSandLPayload
                                             : caseType == "PIPREPSANDL"
                                                 ? piprepSandLPayload
-                                                : new Error("Unsupported case type");
+                                                : caseType == "PIPINCOMPLETE"
+                                                    ? pipIncompleteAppealPayload
+                                                    : new Error("Unsupported case type");
 
-    const response = await apiContext.post(`${urls.tribunalsApiUri}/api/appeals`, {
+    let apiUrl = caseType.toLowerCase()
+        .includes('incomplete') ? `${urls.tribunalsApiUri}/appeals` : `${urls.tribunalsApiUri}/api/appeals`;
+
+    const response = await apiContext.post(apiUrl, {
         data: dataPayload
     });
-    logger.info('The value of the Response Status : '+response.statusText());
+    logger.info('The value of the Response Status : ' + response.statusText());
     const respHeaders = response.headers();
     const locationUrl: string = respHeaders.location;
     let caseId = locationUrl.substring(locationUrl.lastIndexOf('/') + 1);
