@@ -17,9 +17,6 @@ test.describe('Provide No Appointee Details on a Dormant Case', async() => {
     let caseId: string;
     test.beforeAll("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
-    });
-
-    test.beforeAll("Case has to be set to Dormant",async () => {
         await performAppealDormantOnCase(caseId);
     });
 
@@ -32,9 +29,6 @@ test.describe('Provide Appointee Details on a Dormant Case', async() => {
     let caseId: string;
     test.beforeAll("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
-    });
-
-    test.beforeAll("Case has to be set to Dormant",async () => {
         await performAppealDormantOnCase(caseId);
     });
 

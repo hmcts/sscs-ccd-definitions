@@ -22,7 +22,7 @@ export class ProvideAppointeeDetails extends BaseStep {
     }
 
     async performNoAppointeeDetails(caseId: string) {
-        await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, caseId);
         await this.homePage.chooseEvent(appointeeDetailsData.eventName);
         
         await this.provideAppointeeDetailsPage.verifyPageContent(appointeeDetailsData.eventName);
@@ -34,11 +34,12 @@ export class ProvideAppointeeDetails extends BaseStep {
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
+        await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
         await this.verifyHistoryTabDetails(appointeeDetailsData.endState, appointeeDetailsData.eventName);
     }
 
     async performProvideAppointeeDetails(caseId: string) {
-        await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, caseId);
         await this.homePage.chooseEvent(appointeeDetailsData.eventName);
 
         await this.provideAppointeeDetailsPage.verifyPageContent(appointeeDetailsData.eventName);
@@ -49,7 +50,9 @@ export class ProvideAppointeeDetails extends BaseStep {
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
-        
+
+
+        await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
         await this.homePage.navigateToTab("Appeal Details");
         await this.appealDetailsTab.verifyAppealDetailsAppointeeDetails(appointeeDetailsData);
 
