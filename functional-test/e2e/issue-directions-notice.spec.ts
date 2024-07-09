@@ -7,13 +7,13 @@ test("Issue Direction Notice - Pre Hearing - Normal Tax Credit Application - App
     async ({issueDirectionsNoticeSteps}) => {
         test.slow();
         await issueDirectionsNoticeSteps.performIssueDirectionNoticePreHearingAppealToProceed();
-});
+    });
 
 test("Issue Direction Notice - Post Hearing - Employment Support Application - Provide Information",
     async ({issueDirectionsNoticeSteps}) => {
         test.slow();
         await issueDirectionsNoticeSteps.performIssueDirectionNoticePostHearingESAAppealToProceed();
-});
+    });
 
 test("Issue Direction Notice - Post Hearing - Disability Living Allowance Application - Provide Information",
     async ({issueDirectionsNoticeSteps}) => {
@@ -21,8 +21,8 @@ test("Issue Direction Notice - Post Hearing - Disability Living Allowance Applic
         await issueDirectionsNoticeSteps.performIssueDirectionNoticePostHearingDLAAppealToProceed();
     });
 
-test.only("Issue Direction Notice - Error Messages Test",
+test("Issue Direction Notice - Error Messages Test",
     async ({issueDirectionsNoticeSteps}) => {
-            test.slow();
-            await issueDirectionsNoticeSteps.performIssueDirectionErrorMessages();
+        test.slow();
+        await issueDirectionsNoticeSteps.performIssueDirectionErrorMessages();
     });

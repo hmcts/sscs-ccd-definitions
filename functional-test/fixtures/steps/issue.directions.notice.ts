@@ -11,6 +11,7 @@ import issueDirectionTestdata from "../../pages/content/issue.direction_en.json"
 import eventTestData from "../../pages/content/event.name.event.description_en.json";
 import actionFurtherEvidenceTestdata from '../../pages/content/action.further.evidence_en.json';
 import logger from "../../utils/loggerUtil";
+import performAppealDormantOnCase from "../../api/client/sscs/appeal.event";
 
 export class IssueDirectionsNotice extends BaseStep {
 
@@ -73,12 +74,13 @@ export class IssueDirectionsNotice extends BaseStep {
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
         await this.verifyHistoryTabDetails("Issue directions notice");
+        await performAppealDormantOnCase(taxCreditCaseId);
     }
 
 
     async performIssueDirectionNoticePostHearingESAAppealToProceed() {
 
-        let pipCaseId = await createCaseBasedOnCaseType('ESA');
+        let esaCaseId = await createCaseBasedOnCaseType('ESA');
         await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
         let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
@@ -87,7 +89,7 @@ export class IssueDirectionsNotice extends BaseStep {
         await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
             serviceToken.trim(), responseWriterId.trim(),
             'SSCS', 'Benefit',
-            pipCaseId.trim(), 'dwpUploadResponse', 'dwp');
+            esaCaseId.trim(), 'dwpUploadResponse', 'dwp');
 
         /*logger.info('The value of the response writer : '+credentials.amCaseWorker.email)
         let caseWorkerToken: string = await accessToken(credentials.amCaseWorker);
@@ -98,7 +100,7 @@ export class IssueDirectionsNotice extends BaseStep {
             serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit',
             taxCreditCaseId.trim(), 'uploadDocumentFurtherEvidence');*/
 
-        await this.loginUserWithCaseId(credentials.amCaseWorker, false, pipCaseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, esaCaseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventNameCaptor);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
@@ -109,7 +111,7 @@ export class IssueDirectionsNotice extends BaseStep {
         await this.homePage.signOut();
         await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
 
-        await this.loginUserWithCaseId(credentials.judge, false, pipCaseId);
+        await this.loginUserWithCaseId(credentials.judge, false, esaCaseId);
         await new Promise(f => setTimeout(f, 12000)); //Delay required for the Case to be ready
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent("Issue directions notice");
@@ -126,6 +128,7 @@ export class IssueDirectionsNotice extends BaseStep {
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
         await this.verifyHistoryTabDetails("Issue directions notice");
+        await performAppealDormantOnCase(esaCaseId);
     }
 
     async performIssueDirectionNoticePostHearingDLAAppealToProceed() {
