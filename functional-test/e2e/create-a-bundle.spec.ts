@@ -4,7 +4,7 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 
 let caseId: string;
-test("Case has to be Created", async () => {
+test.beforeAll("Case has to be Created", async () => {
     caseId = await createCaseBasedOnCaseType('PIP');
 });
 
