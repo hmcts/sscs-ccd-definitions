@@ -23,8 +23,9 @@ import { ReviewIncompleteAppealTask } from '../fixtures/steps/work-allocation/re
 import { RequestInfoFromParty } from '../fixtures/steps/request.info.from.party';
 import { Reinstatement } from '../fixtures/steps/reinstatement';
 import { AppealDormant } from '../fixtures/steps/appeal.dormant';
-import {DeathOfAnAppelant} from "../fixtures/steps/death.of.an.appelant";
-import {LinkCase} from "../fixtures/steps/link-case";
+import { UploadHearing } from "../fixtures/steps/upload.hearing";
+import { DeathOfAnAppelant } from "../fixtures/steps/death.of.an.appelant";
+import { LinkCase } from "../fixtures/steps/link-case";
 import { ReviewBFDateTask } from '../fixtures/steps/work-allocation/review.bf.date.task';
 import { SupplementaryResponse } from '../fixtures/steps/supplementary.response';
 import { UploadDocumentFurtherEvidence } from '../fixtures/steps/upload.document.further.evidence';
@@ -58,6 +59,7 @@ type MyStepsFixtures = {
     appealDormantSteps: AppealDormant
     deathOfAppellant : DeathOfAnAppelant
     linkACaseSteps: LinkCase
+    uploadHearingSteps: UploadHearing
     reviewBFDateTaskSteps: ReviewBFDateTask
     supplementaryResponseSteps: SupplementaryResponse
     uploadDocumentFurtherEvidenceSteps: UploadDocumentFurtherEvidence
@@ -163,6 +165,10 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
      linkACaseSteps:async ({page}, use)=> {
         const linkACaseSteps = new LinkCase(page);
         await use(linkACaseSteps)
+    },
+    uploadHearingSteps:async ({page}, use) =>{
+        const uploadHearingSteps = new UploadHearing(page);
+        await use(uploadHearingSteps);
     },
     requestInfoFromPartySteps:async ({page}, use) => {
         const requestInfoFromPartySteps = new RequestInfoFromParty(page);

@@ -18,6 +18,8 @@ export class HomePage {
     readonly nextStepDropDown: string;
     readonly eventTitle: Locator;
     readonly beforeTabBtn: Locator;
+    readonly hearingRecordingsTab: Locator;
+    readonly documentsTab: Locator;
 
 
     constructor(page: Page) {
@@ -32,6 +34,8 @@ export class HomePage {
         this.nextStepDropDown = '#next-step';
         this.submitNextStepButton = '//button[@class="submit"]';
         this.eventTitle = page.locator('h1.govuk-heading-l');
+        this.hearingRecordingsTab = page.getByRole('tab', { name: 'Hearing Recordings', exact: true });
+        this.documentsTab = page.getByRole('tab', { name: 'Documents', exact: true });
         this.beforeTabBtn = page.locator('//html/body/exui-root/exui-case-home/div/exui-case-details-home/exui-case-viewer-container/ccd-case-viewer/div/ccd-case-full-access-view/div[2]/div/mat-tab-group/mat-tab-header/button[1]/div');
 
 
@@ -78,6 +82,10 @@ export class HomePage {
         await this.page.waitForLoadState('networkidle');
     }
 
+    async clickSignOut() {
+        await webActions.clickElementById('li a.hmcts-header__navigation-link');
+    }
+
 
     async navigateToTab(tabName : string): Promise<void> {
         switch(tabName) {
@@ -113,6 +121,16 @@ export class HomePage {
             case "Bundles": {
                 await expect(this.bundlesTab).toBeVisible();
                 await this.bundlesTab.click();
+                break;
+            }
+            case "Hearing Recordings": {
+                await expect(this.hearingRecordingsTab).toBeVisible({ timeout: 8000});
+                await this.hearingRecordingsTab.click();
+                break;
+            }
+            case "Documents": {
+                await expect(this.documentsTab).toBeVisible();
+                await this.documentsTab.click();
                 break;
             }
             default: {
