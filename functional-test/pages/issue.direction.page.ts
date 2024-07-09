@@ -101,6 +101,32 @@ export class IssueDirectionPage {
         await this.page.waitForTimeout(3000);
     }
 
+    async verifyErrorMsg(pageLevelErrorMessages, specificRecipientsErrorMessages, generateNoticeYesErrorMessages): Promise<void>{
+
+        //await webActions.verifyElementVisibility('#errors');
+        if (pageLevelErrorMessages) {
+            await webActions.verifyTextVisibility('Pre or post hearing? is required');
+            await webActions.verifyTextVisibility('Field is required');
+            await webActions.verifyTextVisibility('Generate notice is required');
+        }
+        if (specificRecipientsErrorMessages === true) {
+            await webActions.verifyTextVisibility('Pre or post hearing? is required');
+            await webActions.verifyTextVisibility('FTA is required');
+            await webActions.verifyTextVisibility('Representative is required');
+            await webActions.verifyTextVisibility('Appellant or Appointee is required');
+        }
+
+        if (generateNoticeYesErrorMessages === true) {
+            await webActions.verifyTextVisibility('Pre or post hearing? is required');
+            await webActions.verifyTextVisibility('FTA is required');
+            await webActions.verifyTextVisibility('Representative is required');
+            await webActions.verifyTextVisibility('Appellant or Appointee is required');
+            await webActions.verifyTextVisibility('Body content is required');
+            await webActions.verifyTextVisibility('Signed by is required');
+            await webActions.verifyTextVisibility('Signed role is required');
+        }
+    }
+
     async clickAddNewButton(): Promise<void> {
         await webActions.clickButton('Add new');
     }
