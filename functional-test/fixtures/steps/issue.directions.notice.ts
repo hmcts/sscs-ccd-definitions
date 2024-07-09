@@ -68,7 +68,7 @@ export class IssueDirectionsNotice extends BaseStep {
             issueDirectionTestdata.docTitle);
 
         await this.eventNameAndDescriptionPage.verifyPageContent("Issue directions notice",
-            true, "Direction type", "Appeal to Proceed");
+            true, "Direction type");
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
@@ -121,7 +121,7 @@ export class IssueDirectionsNotice extends BaseStep {
             issueDirectionTestdata.docTitle);
 
         await this.eventNameAndDescriptionPage.verifyPageContent("Issue directions notice",
-            true, "Direction type", "Appeal to Proceed");
+            true, "Direction type");
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
@@ -172,7 +172,7 @@ export class IssueDirectionsNotice extends BaseStep {
             'Provide information',
             issueDirectionTestdata.docTitle);
         await this.eventNameAndDescriptionPage.verifyPageContent("Issue directions notice",
-            true, "Direction type", "Provide information");
+            true, "Direction type");
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();

@@ -15,8 +15,14 @@ test("Issue Direction Notice - Post Hearing - Employment Support Application - P
         await issueDirectionsNoticeSteps.performIssueDirectionNoticePostHearingESAAppealToProceed();
 });
 
-test.only("Issue Direction Notice - Post Hearing - Disability Living Allowance Application - Provide Information",
+test("Issue Direction Notice - Post Hearing - Disability Living Allowance Application - Provide Information",
     async ({issueDirectionsNoticeSteps}) => {
         test.slow();
         await issueDirectionsNoticeSteps.performIssueDirectionNoticePostHearingDLAAppealToProceed();
+    });
+
+test("Issue Direction Notice - Post Hearing - Disability Living Allowance Application - Provide Information",
+    async ({issueDirectionsNoticeSteps}) => {
+            test.slow();
+            await issueDirectionsNoticeSteps.performIssueDirectionNoticePostHearingDLAAppealToProceed();
     });

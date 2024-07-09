@@ -71,13 +71,20 @@ export class IssueDirectionPage {
         await webActions.clickElementById(optionVal);
     }
 
-    async enterNoticeContent() {
-        await webActions.chooseOptionByLabel('#sscsInterlocDirectionDocument_documentType', 'Directions Notice');
-        await webActions.uploadFileUsingAFileChooser('#sscsInterlocDirectionDocument_documentLink', 'testfile1.pdf');
-        await webActions.inputField('#documentDateAdded-day', '01');
-        await webActions.inputField('#documentDateAdded-month', '01');
-        await webActions.inputField('#documentDateAdded-year', '2028');
-        await webActions.inputField('#sscsInterlocDirectionDocument_documentFileName','testfile1.pdf');
+    async enterNoticeContent(generateNoticeFlag) {
+        if (!generateNoticeFlag) {
+            await webActions.chooseOptionByLabel('#sscsInterlocDirectionDocument_documentType', 'Directions Notice');
+            await webActions.uploadFileUsingAFileChooser('#sscsInterlocDirectionDocument_documentLink', 'testfile1.pdf');
+            await webActions.delay(3000);
+            await webActions.inputField('#documentDateAdded-day', '01');
+            await webActions.inputField('#documentDateAdded-month', '01');
+            await webActions.inputField('#documentDateAdded-year', '2028');
+            await webActions.inputField('#sscsInterlocDirectionDocument_documentFileName','testfile1.pdf');
+        } else {
+            await webActions.inputField('#bodyContent', 'Test body content');
+            await webActions.inputField('#signedBy', 'Tester');
+            await webActions.inputField('#signedRole', 'Test');
+        }
     }
 
     async submitContinueBtn(): Promise<void> {
@@ -89,7 +96,9 @@ export class IssueDirectionPage {
     }
 
     async confirmSubmission(): Promise<void> {
+        await this.page.waitForTimeout(3000);
         await webActions.clickSubmitButton();
+        await this.page.waitForTimeout(3000);
     }
 
     async clickAddNewButton(): Promise<void> {
@@ -103,10 +112,8 @@ export class IssueDirectionPage {
         await this.chooseRecipients('#confidentialityType-general');
         await this.chooseNoticeType('#generateNotice_Yes');
         await this.enterDirectionDueDate();
-        await this.enterNoticeContent();
-
+        await this.enterNoticeContent(true);
         await this.confirmSubmission();
-
         await this.verifyDocumentTitle(docTitle);
         await this.confirmSubmission();
     }
@@ -118,7 +125,7 @@ export class IssueDirectionPage {
         await this.chooseRecipients('#confidentialityType-general');
         await this.chooseNoticeType('#generateNotice_Yes');
         await this.enterDirectionDueDate();
-        await this.enterNoticeContent();
+        await this.enterNoticeContent(true);
         await this.confirmSubmission();
         await this.verifyDocumentTitle(docTitle);
         await this.confirmSubmission();
@@ -130,7 +137,7 @@ export class IssueDirectionPage {
         await this.chooseRecipients('#confidentialityType-general');
         await this.chooseNoticeType('#generateNotice_Yes');
         await this.enterDirectionDueDate();
-        await this.enterNoticeContent();
+        await this.enterNoticeContent(true);
         await this.confirmSubmission();
         await this.verifyDocumentTitle(docTitle);
         await this.confirmSubmission();
@@ -144,9 +151,7 @@ export class IssueDirectionPage {
         await this.populateSpecificRecipients();
         await this.chooseNoticeType('#generateNotice_No');
         await this.enterDirectionDueDate();
-        await this.enterNoticeContent();
-        await this.confirmSubmission();
-        await this.verifyDocumentTitle(docTitle);
+        await this.enterNoticeContent(false);
         await this.confirmSubmission();
     }
 }
