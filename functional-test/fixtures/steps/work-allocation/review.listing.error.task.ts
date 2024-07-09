@@ -2,7 +2,7 @@ import { Page } from '@playwright/test';
 import { WebAction } from '../../../common/web.action'
 import task from '../../../pages/content/review.listing.error.task_en.json';
 import { BaseStep } from '../base';
-import { credentials } from '../../../config/config';
+import { credentials } from '../../../config/config'
 import { ListingError } from '../listing.error';
 import { ReadyToList } from '../ready.to.list';
 import { VoidCase } from '../void.case';
