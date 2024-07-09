@@ -4,11 +4,11 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 
 let caseId: string;
-test.skip("Case has to be Created", async () => {
+test("Case has to be Created", async () => {
     caseId = await createCaseBasedOnCaseType('PIP');
 });
 
-test.skip("As a caseworker create a bundle", async ({createBundleSteps}) => {
+test("As a caseworker create a bundle", async ({createBundleSteps}) => {
     test.slow();
     await createBundleSteps.performUploadBundleResponse(caseId);
 });
