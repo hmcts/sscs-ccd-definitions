@@ -29,6 +29,7 @@ import { LinkCase } from "../fixtures/steps/link-case";
 import { ReviewBFDateTask } from '../fixtures/steps/work-allocation/review.bf.date.task';
 import { SupplementaryResponse } from '../fixtures/steps/supplementary.response';
 import { UploadDocumentFurtherEvidence } from '../fixtures/steps/upload.document.further.evidence';
+import {IssueDirectionsNotice} from "../fixtures/steps/issue.directions.notice";
 
 
 
@@ -63,6 +64,7 @@ type MyStepsFixtures = {
     reviewBFDateTaskSteps: ReviewBFDateTask
     supplementaryResponseSteps: SupplementaryResponse
     uploadDocumentFurtherEvidenceSteps: UploadDocumentFurtherEvidence
+    issueDirectionsNoticeSteps: IssueDirectionsNotice
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -132,37 +134,48 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     },
     listingErrorSteps:async ({page}, use) => {
         const listingErrorSteps = new ListingError(page);
-        await use(listingErrorSteps)
+        await use(listingErrorSteps);
     },
-    appealWithdrawnSteps:async ({page}, use) => {
+
+    appealWithdrawnSteps:async ({page}, use) =>{
         const appealWithdrawnSteps = new AppealWithdrawn(page);
         await use(appealWithdrawnSteps);
     },
-    requestTimeExtensionSteps:async ({page}, use) => {
+
+    requestTimeExtensionSteps:async ({page}, use) =>{
         const requestTimeExtensionSteps = new RequestTimeExtension(page);
         await use(requestTimeExtensionSteps);
     },
-    createBundleSteps:async ({page}, use) => {
+
+    createBundleSteps:async ({page}, use) =>{
         const createBundleSteps = new CreateBundle(page);
         await use(createBundleSteps);
     },
-    urgentHearingSteps:async ({page}, use) => {
+
+    urgentHearingSteps:async ({page}, use) =>{
         const urgentHearingSteps = new UrgentHearing(page);
         await use(urgentHearingSteps);
     },
-    reinstatementSteps:async ({page}, use) => {
+    issueDirectionsNoticeSteps:async ({page}, use) =>{
+        const issueDirectionsNoticeSteps = new IssueDirectionsNotice(page);
+        await use(issueDirectionsNoticeSteps);
+    },
+    reinstatementSteps:async ({page}, use) =>{
         const reinstatementSteps = new Reinstatement(page);
         await use(reinstatementSteps);
     },
-    appealDormantSteps:async ({page}, use) => {
+
+    appealDormantSteps:async ({page}, use) =>{
         const appealDormantSteps = new AppealDormant(page);
         await use(appealDormantSteps);
     },
-    deathOfAppellant:async ({page}, use) => {
+
+    deathOfAppellant:async ({page}, use) =>{
         const deathOfAppellantSteps = new DeathOfAnAppelant(page);
         await use(deathOfAppellantSteps);
-    },    
-     linkACaseSteps:async ({page}, use)=> {
+    },
+
+     linkACaseSteps:async ({page}, use)=>{
         const linkACaseSteps = new LinkCase(page);
         await use(linkACaseSteps)
     },

@@ -59,40 +59,18 @@
       "description": "Child Support"
     },
     "hearingOptions": {
-      "wantsToAttend": "Yes",
-      "wantsSupport": "Yes",
-      "languageInterpreter": "Yes",
-      "languages": "An interpreter language",
-      "signLanguageType": "A sign language",
-      "arrangements": [
-        "signLanguageInterpreter",
-        "hearingLoop"
-      ],
-      "scheduleHearing": "Yes",
-      "excludeDates": [
-        {
-          "value": {
-            "start": "2099-12-10",
-            "end": "2099-12-10"
-          },
-          "id": "503e0b2e-016b-4bc8-b14c-f8fb873e2135"
-        },
-        {
-          "value": {
-            "start": "2099-12-11",
-            "end": "2099-12-11"
-          },
-          "id": "f33469d0-e823-4065-a91f-82c3b0933c83"
-        },
-        {
-          "value": {
-            "start": "2099-12-12",
-            "end": "2099-12-12"
-          },
-          "id": "5a7a2b7a-4452-491a-8a06-9e5c39c83053"
-        }
-      ],
-      "other": "Yes, this..."
+      "wantsToAttend": null,
+      "wantsSupport": null,
+      "languageInterpreter": null,
+      "languages": null,
+      "languagesList": null,
+      "scheduleHearing": null,
+      "other": null,
+      "signLanguageType": null,
+      "hearingRoute": null,
+      "agreeLessNotice": null,
+      "arrangements": [],
+      "excludeDates": []
     },
     "appealReasons": {
       "reasons": [
@@ -139,7 +117,7 @@
         "postcode": "CM14 4LQ"
       },
       "contact": {
-        "email": "harry.potter@wizards.com",
+        "email": "joe@bloggs.com",
         "phone": null,
         "mobile": "07411999999"
       },
@@ -178,8 +156,8 @@
   },
   "dwpEditedEvidenceReason": null,
   "dwpUploadAudioVideoEvidence": [],
-  "benefitCode": "022",
-  "issueCode": "EC",
+  "benefitCode": "053",
+  "issueCode": "DQ",
   "dwpFurtherInfo": "No",
   "dwpUCB": null,
   "dwpFurtherEvidenceStates": null,
@@ -353,7 +331,7 @@
         "contact": {
           "phone": "07919621017",
           "mobile": null,
-          "email": "pats_john@homtail.com"
+          "email": "hmctspentet1@mailinator.com"
         },
         "role": {
           "name": "Receiving parent",
