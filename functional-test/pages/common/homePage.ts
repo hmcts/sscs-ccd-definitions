@@ -82,6 +82,10 @@ export class HomePage {
         await this.page.waitForLoadState('networkidle');
     }
 
+    async clickSignOut() {
+        await webActions.clickElementById('li a.hmcts-header__navigation-link');
+    }
+
 
     async navigateToTab(tabName : string): Promise<void> {
         switch(tabName) {

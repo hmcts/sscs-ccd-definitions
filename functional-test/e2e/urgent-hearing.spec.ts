@@ -8,7 +8,7 @@ test.beforeEach("Case has to be Created", async () => {
     caseId = await createCaseBasedOnCaseType('PIP');
 });
 
-test("Grant - Urgent hearing request", {tag: '@wip'}, async ({ urgentHearingSteps }) => {
+test("Grant - Urgent hearing request", async ({ urgentHearingSteps }) => {
     await urgentHearingSteps.requestAndGrantAnUrgentHearing(caseId);
 });
 

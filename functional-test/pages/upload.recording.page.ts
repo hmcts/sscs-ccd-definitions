@@ -21,14 +21,11 @@ export class UploadRecordingPage {
     async chooseHearingTypeAndAddRecording(): Promise<void> {
         await webActions.clickRadioButton('Final Hearing');
         await webActions.clickButton('Add new');
-        // await webActions.uploadFileUsingAFileChooser('#hearingRecording_recordings_value', 'test_av.mp3');
-        // await webActions.delay(10000);
 
         await expect(async() => {
             await webActions.uploadFileUsingAFileChooser('#hearingRecording_recordings_value', 'test_av.mp3');
             await webActions.delay(7000);
         }).toPass();
         await webActions.clickButton('Continue');
-        // await webActions.clickSubmitButton();
     }
 }
