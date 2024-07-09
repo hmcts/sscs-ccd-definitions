@@ -28,6 +28,7 @@ export class CreateBundle extends BaseStep {
         await this.homePage.chooseEvent("Create a bundle");
         await this.createBundlePage.verifyPageContent();
         await this.createBundlePage.confirmSubmission();
+        await expect(this.homePage.summaryTab).toBeVisible();
 
         await this.homePage.delay(15000);
         await this.homePage.reloadPage();

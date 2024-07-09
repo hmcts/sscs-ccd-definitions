@@ -19,10 +19,15 @@ import { AppealWithdrawn } from '../fixtures/steps/appeal.withdrawn';
 import { RequestTimeExtension } from '../fixtures/steps/request.time.extension';
 import { CreateBundle } from '../fixtures/steps/create.bundle';
 import { UrgentHearing } from '../fixtures/steps/urgent.hearing';
+import { ReviewIncompleteAppealTask } from '../fixtures/steps/work-allocation/review.incomplete.appeal.task';
+import { RequestInfoFromParty } from '../fixtures/steps/request.info.from.party';
 import { Reinstatement } from '../fixtures/steps/reinstatement';
 import { AppealDormant } from '../fixtures/steps/appeal.dormant';
 import {DeathOfAnAppelant} from "../fixtures/steps/death.of.an.appelant";
 import {LinkCase} from "../fixtures/steps/link-case";
+import { ReviewBFDateTask } from '../fixtures/steps/work-allocation/review.bf.date.task';
+import { SupplementaryResponse } from '../fixtures/steps/supplementary.response';
+import { UploadDocumentFurtherEvidence } from '../fixtures/steps/upload.document.further.evidence';
 import {IssueDirectionsNotice} from "../fixtures/steps/issue.directions.notice";
 
 
@@ -37,6 +42,7 @@ type MyStepsFixtures = {
     sendToJudgeSteps: SendToJudge
     reviewAdminActionTaskSteps: ReviewAdminActionTask
     reviewListingErrorTaskSteps: ReviewListingErrorTask
+    reviewIncompleteAppealTaskSteps: ReviewIncompleteAppealTask
     listingErrorSteps: ListingError
     uploadResponseSteps: UploadResponse
     sendToFTASteps: SendToFTA
@@ -48,10 +54,14 @@ type MyStepsFixtures = {
     requestTimeExtensionSteps: RequestTimeExtension
     createBundleSteps: CreateBundle
     urgentHearingSteps: UrgentHearing
+    requestInfoFromPartySteps: RequestInfoFromParty
     reinstatementSteps: Reinstatement
     appealDormantSteps: AppealDormant
     deathOfAppellant : DeathOfAnAppelant
     linkACaseSteps: LinkCase
+    reviewBFDateTaskSteps: ReviewBFDateTask
+    supplementaryResponseSteps: SupplementaryResponse
+    uploadDocumentFurtherEvidenceSteps: UploadDocumentFurtherEvidence
     issueDirectionsNoticeSteps: IssueDirectionsNotice
 };
 
@@ -92,6 +102,10 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const reviewListingErrorTaskSteps = new ReviewListingErrorTask(page);
         await use(reviewListingErrorTaskSteps);
     },
+    reviewIncompleteAppealTaskSteps:async ({ page }, use) => {
+        const reviewIncompleteAppealTaskSteps = new ReviewIncompleteAppealTask(page);
+        await use(reviewIncompleteAppealTaskSteps);
+    },
     sendToJudgeSteps:async ({page}, use) => {
         const sendToJudgeSteps = new SendToJudge(page);
         await use(sendToJudgeSteps);
@@ -104,19 +118,19 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const sendToFTASteps = new SendToFTA(page);
         await use(sendToFTASteps);
     },
-    sendToDormantSteps:async ({page}, use) =>{
+    sendToDormantSteps:async ({page}, use) => {
         const sendToDormantSteps = new SendToDormant(page);
         await use(sendToDormantSteps);
     },
-    voidCaseSteps:async ({page}, use) =>{
+    voidCaseSteps:async ({page}, use) => {
         const voidCaseSteps = new VoidCase(page);
         await use(voidCaseSteps);
     },
-    strikeOutCaseSteps:async ({page}, use) =>{
+    strikeOutCaseSteps:async ({page}, use) => {
         const strikeOutCaseSteps = new StrikeOutCase(page);
         await use(strikeOutCaseSteps);
     },
-    listingErrorSteps:async ({page}, use) =>{
+    listingErrorSteps:async ({page}, use) => {
         const listingErrorSteps = new ListingError(page);
         await use(listingErrorSteps);
     },
@@ -163,4 +177,20 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const linkACaseSteps = new LinkCase(page);
         await use(linkACaseSteps)
     },
+    requestInfoFromPartySteps:async ({page}, use) => {
+        const requestInfoFromPartySteps = new RequestInfoFromParty(page);
+        await use(requestInfoFromPartySteps);
+    },
+    reviewBFDateTaskSteps:async ({ page }, use) => {
+        const reviewBFDateTaskSteps = new ReviewBFDateTask(page);
+        await use(reviewBFDateTaskSteps);
+    },
+    supplementaryResponseSteps:async ({ page }, use) => {
+        const supplementaryResponseSteps = new SupplementaryResponse(page);
+        await use(supplementaryResponseSteps);
+    },
+    uploadDocumentFurtherEvidenceSteps:async ({ page }, use) => {
+        const uploadDocumentFurtherEvidenceSteps = new UploadDocumentFurtherEvidence(page);
+        await use(uploadDocumentFurtherEvidenceSteps);
+    }
 })
