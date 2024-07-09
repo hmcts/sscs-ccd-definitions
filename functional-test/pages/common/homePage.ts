@@ -51,6 +51,10 @@ export class HomePage {
         await this.page.reload({timeout:13000, waitUntil:'load'});
     }
 
+    async signOut(): Promise<void> {
+        await webActions.clickElementById("//a[contains(.,'Sign out')]");
+    }
+
     async goToHomePage(caseId: string): Promise<void> {
         // await this.page.goto(`/cases/case-details/${caseId}`);
         await webActions.inputField('#caseReference', caseId);
