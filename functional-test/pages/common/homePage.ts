@@ -111,7 +111,6 @@ export class HomePage {
             case "Roles and access": {
                 await expect(this.rolesAndAccessTab).toBeVisible();
                 await this.rolesAndAccessTab.click();
-                await this.summaryTab.click();
                 break;
             }
             case "Appeal Details": {

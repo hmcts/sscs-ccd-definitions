@@ -18,6 +18,7 @@ import { InformationReceivedPage } from '../../pages/information.received.page';
 import { RequestTimeExtensionPage } from '../../pages/request.time.extension.page';
 import { ActionFurtherEvidencePage } from '../../pages/action.further.evidence.page';
 import { IssueDirectionPage } from '../../pages/issue.direction.page';
+import { RequestInfoFromPartyPage } from '../../pages/request.info.from.party.page';
 import { Bundles } from '../../pages/tabs/bundles';
 import { CreateBundle } from './create.bundle';
 import { CreateBundlePage } from '../../pages/create.bundle';
@@ -30,6 +31,9 @@ import { RequestRecordingPage } from '../../pages/request.recording.page';
 import { ActionRecordingPage } from '../../pages/action.recording.page';
 import { Documents } from "../../pages/tabs/documents";
 import { UploadDocumentPage } from "../../pages/upload.document.page";
+import { RolesAndAccess } from "../../pages/tabs/roles.and.access";
+import { SupplementaryResponsePage } from "../../pages/supplementary.response.page";
+import { UploadDocumentFurtherEvidencePage } from '../../pages/upload.document.further.evidence.page';
 
 
 export abstract class BaseStep {
@@ -55,6 +59,7 @@ export abstract class BaseStep {
   protected requestTimeExtensionPage: RequestTimeExtensionPage;
   protected actionFurtherEvidencePage: ActionFurtherEvidencePage;
   protected issueDirectionPage: IssueDirectionPage;
+  protected requestInfoFromPartyPage: RequestInfoFromPartyPage;
   protected linkACasePage: LinkCasePage;
   protected addHearingPage: AddHearingPage;
   protected hearingBookedPage: HearingBookedPage;
@@ -64,6 +69,9 @@ export abstract class BaseStep {
   protected actionRecordingPage: ActionRecordingPage;
   protected documentsTab: Documents;
   protected uploadDocumentPage: UploadDocumentPage;
+  protected rolesAndAccessTab: RolesAndAccess;
+  protected supplementaryResponsePage: SupplementaryResponsePage;
+  protected uploadDocumentFurtherEvidencePage: UploadDocumentFurtherEvidencePage;
 
 
    constructor(page: Page) {
@@ -86,6 +94,7 @@ export abstract class BaseStep {
         this.requestTimeExtensionPage = new RequestTimeExtensionPage(this.page);
         this.actionFurtherEvidencePage = new ActionFurtherEvidencePage(this.page);
         this.issueDirectionPage = new IssueDirectionPage(this.page);
+        this.requestInfoFromPartyPage = new RequestInfoFromPartyPage(this.page);
         this.bundlesTab = new Bundles(this.page);
         this.createBundlePage = new CreateBundlePage(this.page);
         this.linkACasePage = new LinkCasePage(this.page);
@@ -97,6 +106,9 @@ export abstract class BaseStep {
         this.actionRecordingPage = new ActionRecordingPage(this.page);
         this.documentsTab = new Documents(this.page);
         this.uploadDocumentPage = new UploadDocumentPage(this.page);
+        this.rolesAndAccessTab = new RolesAndAccess(this.page);
+        this.supplementaryResponsePage = new SupplementaryResponsePage(this.page);
+        this.uploadDocumentFurtherEvidencePage = new UploadDocumentFurtherEvidencePage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {

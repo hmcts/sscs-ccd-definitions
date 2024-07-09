@@ -1,8 +1,7 @@
 import { Page, expect } from '@playwright/test';
 import { WebAction } from '../common/web.action';
+import requestInfoData from "./content/request.info.from.party_en.json";
 import dateUtilsComponent from '../utils/DateUtilsComponent';
-
-const requestInfoData = require("./content/request.info.from.party_en.json");
 
 let webAction: WebAction;
 
