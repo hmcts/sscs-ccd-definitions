@@ -18,7 +18,7 @@ export class RequestTimeExtension extends BaseStep {
 
         await this.loginUserWithCaseId(credentials.dwpResponseWriter,false, caseId);
         await this.homePage.reloadPage();
-        await this.homePage.chooseEvent(reqTimeExtData.eventName);
+        await this.homePage.chooseEvent(reqTimeExtData.eventNameCaptor);
 
         await this.requestTimeExtensionPage.verifyPageContent();
         await this.requestTimeExtensionPage.uploadTimeExtensionDoc();

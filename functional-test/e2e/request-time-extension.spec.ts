@@ -12,6 +12,8 @@ test("Verify DWP user can succesfully request extension on a appeal", async ({ r
     await requestTimeExtensionSteps.performAndVerifyRequestTimeExtension(caseId);
 });
 
-// test.afterAll("Case has to be set to Dormant",async () => {
-//     await performAppealDormantOnCase(caseId);
-// });
+
+ test.afterAll("Case has to be set to Dormant",async () => {
+     await performAppealDormantOnCase(caseId);
+ });
+
