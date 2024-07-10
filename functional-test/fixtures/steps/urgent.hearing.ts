@@ -44,7 +44,7 @@ export class UrgentHearing extends BaseStep {
         await this.homePage.chooseEvent(issueDirectionTestdata.eventNameCaptor);
 
         await this.issueDirectionPage.submitIssueDirection(
-            issueDirectionTestdata.hearingType, 
+            issueDirectionTestdata.preHearingType,
             issueDirectionTestdata.grantHearingOption, 
             issueDirectionTestdata.docTitle
         );
@@ -88,7 +88,7 @@ export class UrgentHearing extends BaseStep {
         await this.homePage.chooseEvent(issueDirectionTestdata.eventNameCaptor);
 
         await this.issueDirectionPage.submitIssueDirection(
-            issueDirectionTestdata.hearingType, 
+            issueDirectionTestdata.preHearingType,
             issueDirectionTestdata.refuseHearingOption, 
             issueDirectionTestdata.docTitle
         );

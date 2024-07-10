@@ -40,7 +40,7 @@ export class Reinstatement extends BaseStep {
         await this.homePage.chooseEvent(issueDirectionTestdata.eventName);
 
         await this.issueDirectionPage.submitIssueDirection(
-            issueDirectionTestdata.hearingType, 
+            issueDirectionTestdata.preHearingType,
             issueDirectionTestdata.grantReinstatementOption, 
             issueDirectionTestdata.docTitle
         );
@@ -81,7 +81,7 @@ export class Reinstatement extends BaseStep {
         await this.homePage.chooseEvent(issueDirectionTestdata.eventName);
 
         await this.issueDirectionPage.submitIssueDirection(
-            issueDirectionTestdata.hearingType, 
+            issueDirectionTestdata.preHearingType,
             issueDirectionTestdata.refuseReinstatementOption, 
             issueDirectionTestdata.docTitle
         );

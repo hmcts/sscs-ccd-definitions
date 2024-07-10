@@ -25,7 +25,7 @@ export class SendToFTA extends BaseStep {
         await performEventOnCaseWithUploadResponse(ftaResponseWriterBearerToken.trim(),
             serviceToken.trim(), ftaResponseWriter.trim(),
             'SSCS','Benefit',
-            caseId.trim(),'dwpUploadResponse');
+            caseId.trim(),'dwpUploadResponse','dwp');
 
         await this.loginUserWithCaseId(credentials.amSuperUser, false, caseId);
         //Now Perform the respective Event.
