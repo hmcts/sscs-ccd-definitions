@@ -29,6 +29,7 @@ import { LinkCase } from "../fixtures/steps/link-case";
 import { ReviewBFDateTask } from '../fixtures/steps/work-allocation/review.bf.date.task';
 import { SupplementaryResponse } from '../fixtures/steps/supplementary.response';
 import { UploadDocumentFurtherEvidence } from '../fixtures/steps/upload.document.further.evidence';
+import { UpdateLanguagePreference } from '../fixtures/steps/update.language.preference';
 import {IssueDirectionsNotice} from "../fixtures/steps/issue.directions.notice";
 
 
@@ -64,6 +65,7 @@ type MyStepsFixtures = {
     reviewBFDateTaskSteps: ReviewBFDateTask
     supplementaryResponseSteps: SupplementaryResponse
     uploadDocumentFurtherEvidenceSteps: UploadDocumentFurtherEvidence
+    updateLanguagePreferenceSteps: UpdateLanguagePreference
     issueDirectionsNoticeSteps: IssueDirectionsNotice
 };
 
@@ -191,5 +193,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     uploadDocumentFurtherEvidenceSteps:async ({ page }, use) => {
         const uploadDocumentFurtherEvidenceSteps = new UploadDocumentFurtherEvidence(page);
         await use(uploadDocumentFurtherEvidenceSteps);
+    },
+    updateLanguagePreferenceSteps:async ({ page }, use) => {
+        const updateLanguagePreferenceSteps = new UpdateLanguagePreference(page);
+        await use(updateLanguagePreferenceSteps);
     }
 })
