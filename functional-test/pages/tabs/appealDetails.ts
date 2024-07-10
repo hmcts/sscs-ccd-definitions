@@ -32,4 +32,19 @@ export class AppealDetails {
         let fomattedDueDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(dueDate);
         this.verifyAppealDetailsPageContentByKeyValue(reqField, fomattedDueDate);
     }
+
+    async verifyAppealDetailsAppointeeDetails(appointeeData) {
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.firstNameTextFieldLabel, appointeeData.firstNameValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.lastNameTextFieldLabel, appointeeData.lastNameValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.dateOfBirthTextFieldLabel, appointeeData.dobFormattedValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.nationalInsuranceNumberTextFieldLabel,  appointeeData.ninoValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.addressLine1TextFieldLabel, appointeeData.streetAddressValue1);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.addressLine2TextFieldLabelNoOptional, appointeeData.streetAddressValue2);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.townTextFieldLabel, appointeeData.townValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.countyTextFieldLabel, appointeeData.countyValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.postcodeTextFieldLabel, appointeeData.postcodeValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.contactNumberTextFieldLabelNoOptional, appointeeData.phoneValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.mobileNumberTextFieldLabelNoOptional, appointeeData.mobileValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.contactEmailTextFieldLabelNoOptional, appointeeData.emailValue);
+    }
 }

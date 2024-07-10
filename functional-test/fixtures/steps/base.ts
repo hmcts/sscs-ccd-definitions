@@ -20,9 +20,9 @@ import { ActionFurtherEvidencePage } from '../../pages/action.further.evidence.p
 import { IssueDirectionPage } from '../../pages/issue.direction.page';
 import { RequestInfoFromPartyPage } from '../../pages/request.info.from.party.page';
 import { Bundles } from '../../pages/tabs/bundles';
-import { CreateBundle } from './create.bundle';
 import { CreateBundlePage } from '../../pages/create.bundle';
 import {LinkCasePage} from "../../pages/link.case.page";
+import { ProvideAppointeeDetailsPage } from '../../pages/provide.appointee.details.page';
 import { AddHearingPage } from '../../pages/add.hearing.page';
 import { HearingBookedPage } from '../../pages/hearing.booked.page';
 import { UploadRecordingPage } from '../../pages/upload.recording.page';
@@ -64,6 +64,7 @@ export abstract class BaseStep {
   protected issueDirectionPage: IssueDirectionPage;
   protected requestInfoFromPartyPage: RequestInfoFromPartyPage;
   protected linkACasePage: LinkCasePage;
+  protected provideAppointeeDetailsPage: ProvideAppointeeDetailsPage;
   protected addHearingPage: AddHearingPage;
   protected hearingBookedPage: HearingBookedPage;
   protected uploadRecordingPage: UploadRecordingPage;
@@ -103,6 +104,7 @@ export abstract class BaseStep {
         this.bundlesTab = new Bundles(this.page);
         this.createBundlePage = new CreateBundlePage(this.page);
         this.linkACasePage = new LinkCasePage(this.page);
+        this.provideAppointeeDetailsPage = new ProvideAppointeeDetailsPage(this.page);
         this.addHearingPage = new AddHearingPage(this.page);
         this.hearingBookedPage = new HearingBookedPage(this.page);
         this.uploadRecordingPage = new UploadRecordingPage(this.page);
