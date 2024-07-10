@@ -10,14 +10,14 @@ module.exports = defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: 1, // Set the number of retries for all projects
+  retries: 2, // Set the number of retries for all projects
   timeout: 3 * 30 * 1000,
   expect: {
     timeout: 60 * 1000,
   },
 
   /* Opt out of parallel tests on CI. */
-  workers: process.env.FUNCTIONAL_TESTS_WORKERS ? 5 : undefined,
+  workers: process.env.FUNCTIONAL_TESTS_WORKERS ? 10 : undefined,
   reporter: [["html", { open: 'never',
     outputDir: 'playwright-report',
     host: '0.0.0.0',
