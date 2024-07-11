@@ -32,7 +32,7 @@ import { SupplementaryResponse } from '../fixtures/steps/supplementary.response'
 import { UploadDocumentFurtherEvidence } from '../fixtures/steps/upload.document.further.evidence';
 import { UpdateLanguagePreference } from '../fixtures/steps/update.language.preference';
 import {IssueDirectionsNotice} from "../fixtures/steps/issue.directions.notice";
-
+import { UpdateSubscription } from '../fixtures/steps/update.subscription'
 
 
 type MyStepsFixtures = {
@@ -69,6 +69,7 @@ type MyStepsFixtures = {
     uploadDocumentFurtherEvidenceSteps: UploadDocumentFurtherEvidence
     updateLanguagePreferenceSteps: UpdateLanguagePreference
     issueDirectionsNoticeSteps: IssueDirectionsNotice
+    updateSubscriptionSteps: UpdateSubscription
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -203,5 +204,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     updateLanguagePreferenceSteps:async ({ page }, use) => {
         const updateLanguagePreferenceSteps = new UpdateLanguagePreference(page);
         await use(updateLanguagePreferenceSteps);
+    },
+    updateSubscriptionSteps: async ({ page }, use) => {
+        const updateSubscriptionSteps = new UpdateSubscription(page);
+        await use(updateSubscriptionSteps);
     }
 })
