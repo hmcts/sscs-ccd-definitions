@@ -74,9 +74,10 @@ export class UploadResponse extends BaseStep {
 
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", uploadResponseTestdata.taxBenefitCode, uploadResponseTestdata.taxIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
+        await this.homePage.clickSignOut();
 
         await this.homePage.delay(3000);
-        await this.loginUserWithCaseId(credentials.amCaseWorker,true, taxCaseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, taxCaseId);
         await this.homePage.navigateToTab("History");
 
         for (const linkName of this.presetLinks) {
@@ -116,8 +117,9 @@ export class UploadResponse extends BaseStep {
 
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", null, null, "UC");
         await this.checkYourAnswersPage.confirmSubmission();
+        await this.homePage.clickSignOut();
 
-        await this.loginUserWithCaseId(credentials.amCaseWorker,true, ucCaseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, ucCaseId);
         await this.homePage.delay(1000);
         await this.homePage.navigateToTab("History");
 

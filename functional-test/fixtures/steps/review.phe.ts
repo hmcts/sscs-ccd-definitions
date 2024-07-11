@@ -25,13 +25,13 @@ export class ReviewPHE extends BaseStep {
         await this.reviewPHEPage.selectGrantPermission();
         await this.reviewPHEPage.confirmSubmission();
 
-        await this.eventNameAndDescriptionPage.verifyPageContent('Review PHE request');
+        await this.eventNameAndDescriptionPage.verifyPageContent(reviewPHETestdata.eventNameCaptor);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
        
-        await this.summaryTab.verifyPresenceOfTitle("PHE on this case: Granted");
-        await this.verifyHistoryTabDetails('Review PHE request');
-        await this.historyTab.verifyPresenceOfTitle("PHE on this case: Granted");
+        await this.summaryTab.verifyPresenceOfTitle(reviewPHETestdata.pheGrantedText);
+        await this.verifyHistoryTabDetails(reviewPHETestdata.eventNameCaptor);
+        await this.historyTab.verifyPresenceOfTitle(reviewPHETestdata.pheGrantedText);
         await this.homePage.clickSignOut();
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
@@ -67,12 +67,12 @@ export class ReviewPHE extends BaseStep {
         await this.reviewPHEPage.selectRefusePermission();
         await this.reviewPHEPage.confirmSubmission();
 
-        await this.eventNameAndDescriptionPage.verifyPageContent('Review PHE request');
+        await this.eventNameAndDescriptionPage.verifyPageContent(reviewPHETestdata.eventNameCaptor);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
        
-        await this.summaryTab.verifyTitleNotPresent("PHE on this case: Granted");
-        await this.verifyHistoryTabDetails('Review PHE request');
+        await this.summaryTab.verifyTitleNotPresent(reviewPHETestdata.pheGrantedText);
+        await this.verifyHistoryTabDetails(reviewPHETestdata.eventNameCaptor);
         await this.homePage.clickSignOut();
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
