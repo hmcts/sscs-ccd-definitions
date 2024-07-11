@@ -17,8 +17,8 @@ module.exports = defineConfig({
   },
 
   /* Opt out of parallel tests on CI. */
-  // workers: process.env.FUNCTIONAL_TESTS_WORKERS ? 20 : undefined,
-  workers: 20,
+  workers: process.env.FUNCTIONAL_TESTS_WORKERS || 20,
+  // workers: 20,
   reporter: [["html", { open: 'never',
     outputDir: 'playwright-report',
     host: '0.0.0.0',
