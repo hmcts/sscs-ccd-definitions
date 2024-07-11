@@ -40,6 +40,16 @@ export class UploadResponsePage {
         await this.page.waitForTimeout(7000);
     }
 
+    async uploadPHEDocs(): Promise<void> {
+        await webActions.chooseOptionByLabel('#dwpEditedEvidenceReason', 'Potentially harmful evidence');
+        await webActions.uploadFileUsingAFileChooser('#dwpEditedResponseDocument_documentLink', uploadResponseTestdata.testfileone);
+        await this.page.waitForTimeout(10000);
+        await webActions.uploadFileUsingAFileChooser('#dwpEditedEvidenceBundleDocument_documentLink', uploadResponseTestdata.testfiletwo);
+        await this.page.waitForTimeout(7000);
+        await webActions.uploadFileUsingAFileChooser('#appendix12Doc_documentLink', uploadResponseTestdata.testfilethree);
+        await this.page.waitForTimeout(7000);
+    }
+
     async verifyDocMissingErrorMsg(): Promise<void>{
         //await webActions.screenshot();
         await webActions.verifyElementVisibility('#errors');

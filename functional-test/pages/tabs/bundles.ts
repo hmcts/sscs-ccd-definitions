@@ -24,7 +24,7 @@ export class Bundles {
 
     async verifyBundlesTabContentByKeyValueForASpan(fieldLabel: string, fieldValue: string): Promise<void> {
         await expect(this.page
-            .locator(`//*[normalize-space()="${fieldLabel}"]/..//span//span[normalize-space()="${fieldValue}"]`)).toBeVisible();
+            .locator(`//*[normalize-space()="${fieldLabel}"]/..//span//span[normalize-space()="${fieldValue}"]`).first()).toBeVisible();
     }
 
     async verifyTableElementByIndex(fieldLabel: string, fieldValue: string, index: number): Promise<void> {
