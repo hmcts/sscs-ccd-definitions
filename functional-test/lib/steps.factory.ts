@@ -34,7 +34,7 @@ import { UpdateLanguagePreference } from '../fixtures/steps/update.language.pref
 import { ReviewPHE } from '../fixtures/steps/review.phe';
 import { IssueDirectionsNotice } from "../fixtures/steps/issue.directions.notice";
 import { UpdateUCB } from "../fixtures/steps/update.ucb";
-
+import { UpdateSubscription } from '../fixtures/steps/update.subscription'
 
 
 type MyStepsFixtures = {
@@ -73,6 +73,7 @@ type MyStepsFixtures = {
     reviewPHESteps: ReviewPHE
     issueDirectionsNoticeSteps: IssueDirectionsNotice
     updateUCBSteps: UpdateUCB
+    updateSubscriptionSteps: UpdateSubscription
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -215,5 +216,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     updateUCBSteps:async ({ page }, use) => {
         const updateUCBSteps = new UpdateUCB(page);
         await use(updateUCBSteps);
+    },
+    updateSubscriptionSteps: async ({ page }, use) => {
+        const updateSubscriptionSteps = new UpdateSubscription(page);
+        await use(updateSubscriptionSteps);
     }
 })

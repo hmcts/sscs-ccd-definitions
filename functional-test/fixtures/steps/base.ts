@@ -39,7 +39,8 @@ import { Welsh } from '../../pages/tabs/welsh';
 import { ReviewPHEPage } from '../../pages/review.phe.page';
 import { ListingRequirements } from '../../pages/tabs/listing.requirements';
 import { UpdateUCBPage } from '../../pages/update.ucb.page';
-
+import { UpdateSubscriptionPage } from '../../pages/update.subscription.page';
+import { Subscriptions } from '../../pages/tabs/subscriptions';
 
 export abstract class BaseStep {
 
@@ -83,7 +84,8 @@ export abstract class BaseStep {
   protected reviewPHEPage: ReviewPHEPage;
   protected listingRequirementsTab: ListingRequirements;
   protected updateUCBPage: UpdateUCBPage;
-
+  protected updateSubscriptionPage: UpdateSubscriptionPage;
+  protected subscriptionsTab: Subscriptions;
 
    constructor(page: Page) {
         this.page = page;
@@ -126,6 +128,8 @@ export abstract class BaseStep {
         this.reviewPHEPage = new ReviewPHEPage(this.page);
         this.listingRequirementsTab = new ListingRequirements(this.page);
         this.updateUCBPage = new UpdateUCBPage(this.page);
+        this.updateSubscriptionPage = new UpdateSubscriptionPage(this.page);
+        this.subscriptionsTab = new Subscriptions(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
