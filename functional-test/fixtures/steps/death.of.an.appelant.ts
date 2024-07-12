@@ -39,7 +39,7 @@ export class DeathOfAnAppelant extends BaseStep {
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Date of appellant death','1 Jun 2003');
         await  deathOfAppellantPage.signOut();
 
-        await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.verifyHistoryTabLink('Death of appellant');
         await performAppealDormantOnCase(caseId);
     }

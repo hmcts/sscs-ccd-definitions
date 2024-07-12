@@ -49,6 +49,23 @@ export class UploadResponse extends BaseStep {
         // await performAppealDormantOnCase(pipCaseId);
    }
 
+   async performUploadResponseWithPHEOnAPIPAndReviewResponse(caseId: string) {
+
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, caseId);
+        await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.pipIssueCode, 'No', true);
+
+        await this.checkYourAnswersPage.verifyCYAPageContentWithPHE("Upload response", uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
+        await this.checkYourAnswersPage.confirmSubmission();
+
+        await this.homePage.delay(3000);
+        await this.loginUserWithCaseId(credentials.amCaseWorker,true, caseId);
+    
+        await this.homePage.navigateToTab("Summary");
+        await this.summaryTab.verifyPresenceOfText("Ready to list");
+        await this.summaryTab.verifyPresenceOfTitle("PHE on this case: Under Review");
+        await this.homePage.clickSignOut();
+   }
+
     async performUploadResponseWithoutFurtherInfoOnATaxCredit() {
 
         let taxCaseId = await createCaseBasedOnCaseType("TAX CREDIT");
@@ -57,9 +74,10 @@ export class UploadResponse extends BaseStep {
 
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", uploadResponseTestdata.taxBenefitCode, uploadResponseTestdata.taxIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
+        await this.homePage.clickSignOut();
 
         await this.homePage.delay(3000);
-        await this.loginUserWithCaseId(credentials.amCaseWorker,true, taxCaseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, taxCaseId);
         await this.homePage.navigateToTab("History");
 
         for (const linkName of this.presetLinks) {
@@ -99,8 +117,9 @@ export class UploadResponse extends BaseStep {
 
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", null, null, "UC");
         await this.checkYourAnswersPage.confirmSubmission();
+        await this.homePage.clickSignOut();
 
-        await this.loginUserWithCaseId(credentials.amCaseWorker,true, ucCaseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, ucCaseId);
         await this.homePage.delay(1000);
         await this.homePage.navigateToTab("History");
 
