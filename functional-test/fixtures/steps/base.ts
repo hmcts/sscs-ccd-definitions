@@ -36,6 +36,7 @@ import { SupplementaryResponsePage } from "../../pages/supplementary.response.pa
 import { UploadDocumentFurtherEvidencePage } from '../../pages/upload.document.further.evidence.page';
 import { UpdateLanguagePreferencePage } from '../../pages/update.language.preference.page';
 import { Welsh } from '../../pages/tabs/welsh';
+import {WriteFinalDecisionPages} from "../../pages/write.final.decision.page";
 
 
 export abstract class BaseStep {
@@ -77,6 +78,7 @@ export abstract class BaseStep {
   protected supplementaryResponsePage: SupplementaryResponsePage;
   protected uploadDocumentFurtherEvidencePage: UploadDocumentFurtherEvidencePage;
   protected updateLanguagePreferencePage: UpdateLanguagePreferencePage;
+  protected writeFinalDecisionPage : WriteFinalDecisionPages;
 
 
    constructor(page: Page) {
@@ -117,6 +119,7 @@ export abstract class BaseStep {
         this.supplementaryResponsePage = new SupplementaryResponsePage(this.page);
         this.uploadDocumentFurtherEvidencePage = new UploadDocumentFurtherEvidencePage(this.page);
         this.updateLanguagePreferencePage = new UpdateLanguagePreferencePage(this.page);
+        this.writeFinalDecisionPage = new WriteFinalDecisionPages(page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {

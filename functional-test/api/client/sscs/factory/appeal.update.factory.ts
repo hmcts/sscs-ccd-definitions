@@ -2,7 +2,7 @@
 import {request} from '@playwright/test';
 import {urls} from '../../../../config/config';
 import logger from '../../../../utils/loggerUtil';
-import upload_response_payload_dwp_022_EC from '../../../data/payload/upload-response/upload-response-dwp-022-EC.json';
+import upload_response_payload_dwp_022_EC from '../../../data/payload/upload-response/upload-response-dwp-022-CC.json';
 import upload_response_payload_hmrc_053_DQ
     from '../../../data/payload/upload-response/upload-response-hmrc-053-DQ.json';
 import action_further_evidence_payload

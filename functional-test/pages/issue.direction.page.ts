@@ -39,10 +39,6 @@ export class IssueDirectionPage {
         await webActions.chooseOptionByLabel('#directionTypeDl', optionVal);
     }
 
-    async selectHearingOption(optionVal: string) {
-        await webActions.chooseOptionByLabel('#prePostHearing', optionVal);
-    }
-
     async chooseRecipients(optionVal: string) {
         await webActions.clickElementById(optionVal);
     }

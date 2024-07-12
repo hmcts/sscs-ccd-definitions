@@ -1,0 +1,75 @@
+{
+    "eventNameCaptor": "Write final decision",
+    "eventNameHeading": "Write final decision",
+    "issueFinalDecisionEventNameCaptor": "Write final decision",
+
+    "typeOfAppealPageHeading": "Type of appeal",
+    "generateNoticeLabel" : "Generate notice?",
+    "isThisAwardAboutDailyLivingLabel" : "Is this award about daily living and/or mobility?",
+    "yesLabel" : "Yes",
+    "noLabel" : "No",
+
+    "allowedRefusedPageHeading": "Allowed or refused",
+    "isTheAppealLabel" : "Is the appeal allowed or refused?",
+    "allowedLabel" : "Allowed",
+    "refusedLabel" : "Refused",
+
+    "typeOfHearingPageHeading": "Type of hearing",
+    "whatTypeOfHearingWasHeldLabel" : "What type of hearing was held?",
+    "faceToFaceLabel" : "Face to face",
+    "telephoneLabel" : "Telephone",
+    "videoLabel" : "Video",
+    "paperLabel" : "Paper",
+    "triageLabel": "Triage",
+    "didAPresentingOfficerLabel" : "Did a Presenting Officer attend on behalf of the Respondent?",
+    "didTheAppellantAttendTheHearing" : "Did the appellant attend the hearing?",
+    "otherPartyAttendTheHearing" : "Other party attend the hearing?",
+    "otherPartySectionHeading" : "Other party",
+    "otherPartyNameLabel" : "Other party name",
+    "otherPartyAttendTheHearingLabel" : "Other party attend the hearing?",
+
+    "panelMembersPageHeading" : "Panel members",
+    "nameOfDisabilityQualifiedPanelMemberDQPMLabel":"Name of the Disability Qualified Panel Member (DQPM) (Optional)",
+    "nameOfMedicallyQualifiedPanelMemberMQPMLabel" : "Name of the Medically Qualified Panel Member (MQPM) (Optional)",
+    "otherLabel": "Other (Optional)",
+    "nameOfDisabilityQualifiedPanelMemberInput" : "Panel Member - Judge",
+    "nameOfMedicallyQualifiedPanelMemberInput" : "Panel Member - Doctor",
+    "otherPanelMemberInput" : "Panel Member - Clerk",
+
+    "decisionDatePageHeading" : "Decision date",
+    "dateOfFTADecisionLabel" : "Date of FTA's decision",
+    "dayLabel" : "Day",
+    "monthLabel" : "Month",
+    "yearLabel" : "Year",
+
+    "bundleSectionPreferenceHeading" : "Bundle page/section reference",
+    "whatIsTheLastPageInTheTribunalBundleLabel" : "What is the last page in the tribunal bundle?",
+    "whatIsTheLastPageInTheTribunalBundleGuidanceText" : "For example: B7",
+    "lastPageInTheTribunalBundleInput" : "Tribunal Bundle Input",
+
+    "summaryOfOutcomePageHeading" : "Summary of outcome decision",
+    "summaryOfOutcomeLabel" : "Summary of outcome decision",
+    "summaryOfOutcomeInput" : " Automation - Summary of outcome decision - Input Text",
+
+    "reasonsForDecisionPageHeading" : "Reasons for decision",
+    "reasonsForDecisionSectionHeading" : "Reasons for decision",
+    "reasonsForDecisionLabel" : "Reasons for decision",
+    "reasonsForDecisionInput" : " Automation - Reasons For Decision - Input Text",
+
+    "anythingElsePageHeading" : "Anything else?",
+    "anythingElseLabel" : "Anything else? (Optional)",
+    "anythingElseInput" : "Automation Testing - Anything Else",
+
+
+    "previewDecisionNoticePageHeading" : "Preview Decision Notice",
+    "previewDecisionNoticeLabel" : "Preview Decision Notice",
+    "previewDecisionNoticeGuidanceText" : "All documents must be PDF formatted",
+
+    "checkYourAnswersPageHeading" : "Write final decision",
+    "checkYourAnswersSectionHeading" : "Check your answers",
+    "checkYourInformationCarefullyLabel" : "Check the information below carefully.",
+    "checkYourAnswersNameOfDisabilityQualifiedPanelMemberDQPMLabel":"Name of the Disability Qualified Panel Member (DQPM)",
+    "checkYourAnswersNameOfMedicallyQualifiedPanelMemberMQPMLabel":"Name of the Medically Qualified Panel Member (MQPM)",
+    "checkYourAnswersShowTheFinalDecisionOutcomeLabel":"Summary of outcome decision",
+    "checkYourAnswersAnythingElse":"Anything else?"
+}

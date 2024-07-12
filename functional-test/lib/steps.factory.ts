@@ -32,6 +32,7 @@ import { SupplementaryResponse } from '../fixtures/steps/supplementary.response'
 import { UploadDocumentFurtherEvidence } from '../fixtures/steps/upload.document.further.evidence';
 import { UpdateLanguagePreference } from '../fixtures/steps/update.language.preference';
 import {IssueDirectionsNotice} from "../fixtures/steps/issue.directions.notice";
+import {WriteFinalDecision} from "../fixtures/steps/write.final.decision";
 
 
 
@@ -69,6 +70,7 @@ type MyStepsFixtures = {
     uploadDocumentFurtherEvidenceSteps: UploadDocumentFurtherEvidence
     updateLanguagePreferenceSteps: UpdateLanguagePreference
     issueDirectionsNoticeSteps: IssueDirectionsNotice
+    issueFinalDecisionSteps: WriteFinalDecision
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -203,5 +205,10 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     updateLanguagePreferenceSteps:async ({ page }, use) => {
         const updateLanguagePreferenceSteps = new UpdateLanguagePreference(page);
         await use(updateLanguagePreferenceSteps);
+    },
+    issueFinalDecisionSteps:async ({ page }, use) => {
+        const issueFinalDecisionSteps = new WriteFinalDecision(page);
+        await use(issueFinalDecisionSteps);
     }
+
 })
