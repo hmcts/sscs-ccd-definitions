@@ -40,7 +40,6 @@ import { ReviewPHEPage } from '../../pages/review.phe.page';
 import { UpdateSubscriptionPage } from '../../pages/update.subscription.page';
 import { Subscriptions } from '../../pages/tabs/subscriptions';
 
-
 export abstract class BaseStep {
 
   readonly page : Page;
