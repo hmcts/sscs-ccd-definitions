@@ -22,7 +22,7 @@ test.describe('Upload response tests', async() => {
     });
 })
 
-test.describe('Upload response tests', async() => {
+test.describe('Upload response tests for PHE workflow', async() => {
 
     test.beforeEach("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
@@ -33,6 +33,20 @@ test.describe('Upload response tests', async() => {
         await uploadResponseSteps.performUploadResponseWithPHEOnAPIPAndReviewResponse(caseId);
         await reviewPHESteps.grantAnPHERequest(caseId);
         await reviewPHESteps.refuseAnPHERequest(caseId);
+    });
+    
+})
+
+test.describe('Upload response tests for UCB workflow', async() => {
+
+    test.beforeEach("Case has to be Created", async () => {
+        caseId = await createCaseBasedOnCaseType('PIP');
+    });
+
+    test("As a caseworker review UCB response submitted without any further info", async ({ uploadResponseSteps, updateUCBSteps }) => {
+        test.slow();
+        await uploadResponseSteps.performUploadResponseWithUCBOnAPIP(caseId);
+        await updateUCBSteps.verifyUpdatedUCBOption();
     });
     
 })
