@@ -47,35 +47,6 @@ export class UpdateSubscription extends BaseStep {  //updated class
 
     }
 
-    // async performUpdateSubscriptionChildSupport(caseId: string) {   // added new method regarding subscription event
-    //     // Creating case - CHILDSUPPORT
-    //     var ChildSupportCaseId = await createCaseBasedOnCaseType("CHILDSUPPORT");
-
-    //     // Starting event
-    //     await this.goToUpdateSubscriptionPage(this.page, ChildSupportCaseId);
-    //     await this.updateSubscriptionPage.verifyPageContent();
-
-    //     // Filling fields and Submitting the event
-    //     await this.updateSubscriptionPage.applySubscriptionChildSupport();
-    //     await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
-    //         eventTestData.eventDescriptionInput);
-    //     await this.eventNameAndDescriptionPage.confirmSubmission();
-    //     await expect(this.homePage.summaryTab).toBeVisible();
-    //     await this.homePage.delay(3000);
-
-    //     // Verifying History tab + end state
-    //     await this.verifyHistoryTabDetails("Update subscription");
-    //     await this.historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
-    //     await this.historyTab.verifyPageContentByKeyValue('Event', 'Update subscription');
-    //     await this.historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification');
-
-    //     // Navigate to Subscriptions tab + validations
-    //     await this.homePage.navigateToTab("Subscriptions");
-    //     await this.homePage.delay(1000);
-    //     await this.subscriptionsTab.verifyPageContentByKeyValueChildSupport;
-
-    // }
-
     // Event created to trigger Link a case event from next steps dropdown menu:
     private async goToUpdateSubscriptionPage(page: Page, caseId: string) {
         await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
