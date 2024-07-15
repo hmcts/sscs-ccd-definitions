@@ -40,7 +40,7 @@ test.describe.serial('WA - Review Reinstatement Request Judge task initiation an
     test("As a Salaried Judge, view the Review Reinstatement Request - Judge task", async ({
         reinstatementSteps }) => {
 
-        test.setTimeout(300000);
+        test.slow();
         await reinstatementSteps.verifySalariedJudgeCanViewTheUnassignedReviewReinstatementRequestTask(caseId);
     });
 
@@ -52,7 +52,7 @@ test.describe.serial('WA - Review Reinstatement Request Judge task initiation an
     });
 
     test.afterAll("Case has to be set to Dormant", async () => {
-        // await performAppealDormantOnCase(caseId);
+        await performAppealDormantOnCase(caseId);
     });
 })
 
@@ -73,7 +73,7 @@ test.describe.serial('WA - Review Reinstatement Request Judge task initiation an
     test("As a Fee-Paid Judge, view the Review Reinstatement Request - Judge task", async ({
         reinstatementSteps }) => {
 
-        test.setTimeout(300000);
+        test.slow();
         await reinstatementSteps.verifyFeePaidJudgeCanViewTheUnassignedReviewReinstatementRequestTask(caseId);
     });
 
@@ -85,7 +85,7 @@ test.describe.serial('WA - Review Reinstatement Request Judge task initiation an
     });
 
     test.afterAll("Case has to be set to Dormant", async () => {
-        // await performAppealDormantOnCase(caseId);
+        await performAppealDormantOnCase(caseId);
     });
 })
 
@@ -125,7 +125,7 @@ test.describe.serial('WA - Review Reinstatement Request Judge task - Reassign to
     });
 
     test.afterAll("Case has to be set to Dormant", async () => {
-        // await performAppealDormantOnCase(caseId);
+        await performAppealDormantOnCase(caseId);
     });
 })
 
@@ -157,7 +157,7 @@ test.describe.serial('WA - Judge completes Review Reinstatement Request task man
     });
 
     test.afterAll("Case has to be set to Dormant", async () => {
-        // await performAppealDormantOnCase(caseId);
+        await performAppealDormantOnCase(caseId);
     });
 })
 
@@ -168,6 +168,7 @@ test.describe.serial('WA - Review Reinstatement Request Judge task automatic can
     let caseId : string;
     
     test.beforeAll("Case has to be Created", async ( { reinstatementSteps }) => {
+        test.slow();
         caseId = await createCaseBasedOnCaseType('PIP');
         await reinstatementSteps.requestAndRefuseAnReinstatement(caseId);
     });
@@ -187,6 +188,6 @@ test.describe.serial('WA - Review Reinstatement Request Judge task automatic can
     });
 
     test.afterAll("Case has to be set to Dormant", async () => {
-        // await performAppealDormantOnCase(caseId);
+        await performAppealDormantOnCase(caseId);
     });
 });
