@@ -47,6 +47,18 @@ export const credentials = {
     email: process.env.SENIOR_JUDGE_USERNAME,
     password: process.env.SENIOR_JUDGE_PASSWORD,
   },
+  salariedJudge: {
+    email: process.env.TEST_SALARIED_JUDGE_USERNAME,
+    password: process.env.TEST_SALARIED_JUDGE_PASSWORD
+  },
+  feePaidJudge: {
+    email: process.env.TEST_FEE_PAID_JUDGE_USERNAME,
+    password: process.env.TEST_FEE_PAID_JUDGE_PASSWORD
+  },
+  amTribunalCaseWorker: {
+    email: process.env.TEST_AM_TRIBUNAL_CASEWORKER_USERNAME,
+    password: process.env.TEST_AM_TRIBUNAL_CASEWORKER_PASSWORD
+  },
   respondent: {
     email: process.env.RESPONDENT_USERNAME,
     password: process.env.RESPONDENT_PASSWORD,

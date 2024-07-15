@@ -59,6 +59,7 @@ export class HomePage {
 
     async goToHomePage(caseId: string): Promise<void> {
         // await this.page.goto(`/cases/case-details/${caseId}`);
+        await this.selectToViewTasksAndCasesIfRequired();
         await webActions.inputField('#caseReference', caseId);
         await this.delay(1000);
         await webActions.clickFindButton();
@@ -92,6 +93,14 @@ export class HomePage {
         await webActions.clickElementById('li a.hmcts-header__navigation-link');
     }
 
+    async selectToViewTasksAndCasesIfRequired() {
+        expect(await this.page.locator('h1').count()).toBeGreaterThanOrEqual(1);
+        let headerText = await this.page.locator('h1').first().textContent();
+        if(headerText.toLowerCase().includes('work access')) {
+            await this.page.getByRole('radio', { name: 'View tasks and cases' }).click();
+            await this.page.getByRole('button', { name: 'Continue' }).click();
+        }
+    }
 
     async navigateToTab(tabName : string): Promise<void> {
         switch(tabName) {
