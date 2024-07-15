@@ -10,7 +10,6 @@ test.describe.serial('WA - Review Information Requested CTSC task initiation and
 
     test.beforeAll("Create case and complete request info from party event", async ({requestInfoFromPartySteps}) => {
         caseId = await createCaseBasedOnCaseType('PIP');
-        // caseId = '1720620972246088';
         await requestInfoFromPartySteps.performRequestInfoFromPartyEvent(caseId);
     });
 
@@ -35,9 +34,9 @@ test.describe.serial('WA - Review Information Requested CTSC task initiation and
         await requestInfoFromPartySteps.verifyCtscAdminAsAnAssignedUserForReviewInformationRequestedTaskCanViewAndCompleteTheTask(caseId);
     });
 
-    // test.afterAll("Case has to be set to Dormant", async () => {
-    //     await performAppealDormantOnCase(caseId);
-    // });
+    test.afterAll("Case has to be set to Dormant", async () => {
+        await performAppealDormantOnCase(caseId);
+    });
 });
 
 test.describe('WA - Review Information Requested CTSC task automatic cancellation when case is void', {
@@ -59,7 +58,7 @@ test.describe('WA - Review Information Requested CTSC task automatic cancellatio
         await requestInfoFromPartySteps.verifyReviewInformationRequestedTaskIsCancelledAutomaticallyWhenTheCaseIsVoid(caseId);
     });
 
-    // test.afterAll("Case has to be set to Dormant", async () => {
-    //     await performAppealDormantOnCase(caseId);
-    // });
+    test.afterAll("Case has to be set to Dormant", async () => {
+        await performAppealDormantOnCase(caseId);
+    });
 });
