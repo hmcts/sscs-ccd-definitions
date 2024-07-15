@@ -29,11 +29,13 @@ test.describe.serial('WA - Review Reinstatement Request Judge task initiation an
 }, async() => {
 
     let caseId : string;
-    
-    test.beforeAll("Create case and complete reinstatement request event", async (
-        { reinstatementSteps }) => {
-        test.slow();
+
+    test.beforeAll("Create case", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
+    });
+
+    test("Grant Reinstatement request", async ({ reinstatementSteps }) => {
+        test.slow();
         await reinstatementSteps.requestAndGrantAnReinstatement(caseId);
     });
 
@@ -62,11 +64,13 @@ test.describe.serial('WA - Review Reinstatement Request Judge task initiation an
 }, async() => {
 
     let caseId : string;
-    
-    test.beforeAll("Create case and complete reinstatement request event", async (
-        { reinstatementSteps }) => {
-        test.slow();
+
+    test.beforeAll("Create case", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
+    });
+
+    test("Refuse Reinstatement request", async ({ reinstatementSteps }) => {
+        test.slow();
         await reinstatementSteps.requestAndRefuseAnReinstatement(caseId);
     });
 
@@ -95,11 +99,13 @@ test.describe.serial('WA - Review Reinstatement Request Judge task - Reassign to
 }, async() => {
 
     let caseId : string;
-    
-    test.beforeAll("Create case and complete reinstatement request event", async (
-        { reinstatementSteps }) => {
-        test.slow();
+
+    test.beforeAll("Create case", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
+    });
+
+    test("Refuse Reinstatement request", async ({ reinstatementSteps }) => {
+        test.slow();
         await reinstatementSteps.requestAndRefuseAnReinstatement(caseId);
     });
 
@@ -134,11 +140,13 @@ test.describe.serial('WA - Judge completes Review Reinstatement Request task man
 }, async() => {
 
     let caseId : string;
-    
-    test.beforeAll("Create case and complete reinstatement request event", async (
-        { reinstatementSteps }) => {
-        test.slow();
+
+    test.beforeAll("Create case", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
+    });
+
+    test("Grant Reinstatement request", async ({ reinstatementSteps }) => {
+        test.slow();
         await reinstatementSteps.requestAndGrantAnReinstatement(caseId);
     });
 
@@ -166,10 +174,13 @@ test.describe.serial('WA - Review Reinstatement Request Judge task automatic can
 }, async() => {
 
     let caseId : string;
-    
-    test.beforeAll("Case has to be Created", async ( { reinstatementSteps }) => {
-        test.slow();
+
+    test.beforeAll("Create case", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
+    });
+
+    test("Refuse Reinstatement request", async ({ reinstatementSteps }) => {
+        test.slow();
         await reinstatementSteps.requestAndRefuseAnReinstatement(caseId);
     });
 
