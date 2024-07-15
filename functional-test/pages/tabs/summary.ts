@@ -33,6 +33,16 @@ export class Summary {
         expect(text).toContain(fieldValue); // TODO An exact match is not done as there is Text from Upper nodes of the Dom Tree Appearing.
     }
 
+    async verifyPresenceOfTitle(fieldValue: string) {
+        let text = await this.page.locator(`//div/markdown/h2[contains(text(),"${fieldValue}")]`).textContent()
+        expect(text).toContain(fieldValue); // TODO An exact match is not done as there is Text from Upper nodes of the Dom Tree Appearing.
+    }
+
+    async verifyTitleNotPresent(fieldLabel: string) {
+        await expect(this.page
+            .locator(`//div/markdown/h2[contains(text(),"${fieldLabel}")]`)).not.toBeVisible();
+    }
+
     /*async verifyPresenceOfText(fieldValue: string): Promise<void>{
         await webActions.verifyTextVisibility(fieldValue);
     }*/
