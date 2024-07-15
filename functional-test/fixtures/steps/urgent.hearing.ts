@@ -28,8 +28,6 @@ export class UrgentHearing extends BaseStep {
         );
         await this.eventNameAndDescriptionPage.verifyPageContent(actionFurtherEvidenceTestdata.eventName);
         await this.eventNameAndDescriptionPage.confirmSubmission();
-        await this.eventNameAndDescriptionPage.confirmSubmission();
-
 
         await this.summaryTab.verifyPageContentByKeyValue('Urgent case', 'Yes');
 
@@ -72,8 +70,6 @@ export class UrgentHearing extends BaseStep {
 
         await this.eventNameAndDescriptionPage.verifyPageContent(actionFurtherEvidenceTestdata.eventName);
         await this.eventNameAndDescriptionPage.confirmSubmission();
-        await this.eventNameAndDescriptionPage.confirmSubmission();
-
 
         await this.summaryTab.verifyPageContentByKeyValue('Urgent case', 'Yes');
 
@@ -118,5 +114,4 @@ export class UrgentHearing extends BaseStep {
         await this.actionFurtherEvidencePage.uploadDocs(actionFurtherEvidenceTestdata.corruptedFile);
         await this.actionFurtherEvidencePage.verifyEncryptedFileErrorMsg();
     }
-
 }
