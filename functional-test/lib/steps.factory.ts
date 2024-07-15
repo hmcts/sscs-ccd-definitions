@@ -32,7 +32,8 @@ import { SupplementaryResponse } from '../fixtures/steps/supplementary.response'
 import { UploadDocumentFurtherEvidence } from '../fixtures/steps/upload.document.further.evidence';
 import { UpdateLanguagePreference } from '../fixtures/steps/update.language.preference';
 import { ReviewPHE } from '../fixtures/steps/review.phe';
-import {IssueDirectionsNotice} from "../fixtures/steps/issue.directions.notice";
+import { IssueDirectionsNotice } from "../fixtures/steps/issue.directions.notice";
+import { UpdateUCB } from "../fixtures/steps/update.ucb";
 import { UpdateSubscription } from '../fixtures/steps/update.subscription'
 
 
@@ -71,6 +72,7 @@ type MyStepsFixtures = {
     updateLanguagePreferenceSteps: UpdateLanguagePreference
     reviewPHESteps: ReviewPHE
     issueDirectionsNoticeSteps: IssueDirectionsNotice
+    updateUCBSteps: UpdateUCB
     updateSubscriptionSteps: UpdateSubscription
 };
 
@@ -210,6 +212,10 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     reviewPHESteps:async ({ page }, use) => {
         const reviewPHESteps = new ReviewPHE(page);
         await use(reviewPHESteps);
+    },
+    updateUCBSteps:async ({ page }, use) => {
+        const updateUCBSteps = new UpdateUCB(page);
+        await use(updateUCBSteps);
     },
     updateSubscriptionSteps: async ({ page }, use) => {
         const updateSubscriptionSteps = new UpdateSubscription(page);
