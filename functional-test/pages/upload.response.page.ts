@@ -50,6 +50,12 @@ export class UploadResponsePage {
         await this.page.waitForTimeout(7000);
     }
 
+    async uploadUCBDocs(): Promise<void> {
+        await webActions.clickElementById('#dwpUCB_Yes');
+        await webActions.uploadFileUsingAFileChooser('#dwpUcbEvidenceDocument', uploadResponseTestdata.testfileone);
+        await this.page.waitForTimeout(10000);
+    }
+
     async verifyDocMissingErrorMsg(): Promise<void>{
         //await webActions.screenshot();
         await webActions.verifyElementVisibility('#errors');

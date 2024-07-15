@@ -37,6 +37,8 @@ import { UploadDocumentFurtherEvidencePage } from '../../pages/upload.document.f
 import { UpdateLanguagePreferencePage } from '../../pages/update.language.preference.page';
 import { Welsh } from '../../pages/tabs/welsh';
 import { ReviewPHEPage } from '../../pages/review.phe.page';
+import { ListingRequirements } from '../../pages/tabs/listing.requirements';
+import { UpdateUCBPage } from '../../pages/update.ucb.page';
 import { UpdateSubscriptionPage } from '../../pages/update.subscription.page';
 import { Subscriptions } from '../../pages/tabs/subscriptions';
 import { OtherPartyDetails } from '../../pages/tabs/other.party.details';
@@ -82,6 +84,8 @@ export abstract class BaseStep {
   protected uploadDocumentFurtherEvidencePage: UploadDocumentFurtherEvidencePage;
   protected updateLanguagePreferencePage: UpdateLanguagePreferencePage;
   protected reviewPHEPage: ReviewPHEPage;
+  protected listingRequirementsTab: ListingRequirements;
+  protected updateUCBPage: UpdateUCBPage;
   protected updateSubscriptionPage: UpdateSubscriptionPage;
   protected subscriptionsTab: Subscriptions;
   protected updateOtherPartyDataPage: updateOtherPartyDataPage;
@@ -126,6 +130,8 @@ export abstract class BaseStep {
         this.uploadDocumentFurtherEvidencePage = new UploadDocumentFurtherEvidencePage(this.page);
         this.updateLanguagePreferencePage = new UpdateLanguagePreferencePage(this.page);
         this.reviewPHEPage = new ReviewPHEPage(this.page);
+        this.listingRequirementsTab = new ListingRequirements(this.page);
+        this.updateUCBPage = new UpdateUCBPage(this.page);
         this.updateSubscriptionPage = new UpdateSubscriptionPage(this.page);
         this.subscriptionsTab = new Subscriptions(this.page);
         this.updateOtherPartyDataPage = new updateOtherPartyDataPage(this.page);
