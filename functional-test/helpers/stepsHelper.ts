@@ -14,12 +14,14 @@ export class StepsHelper {
         this.uploadResponsePage = new UploadResponsePage(this.page);
     }
 
-    async uploadResponseHelper(issueCodeData: string, assistOption: string) {
+    async uploadResponseHelper(issueCodeData: string, assistOption: string, phmeFlag?: boolean, ucbFlag?: boolean) {
         await this.homePage.chooseEvent('Upload response');
         await this.homePage.delay(4000);
 
         await this.uploadResponsePage.verifyPageContent();
         await this.uploadResponsePage.uploadDocs();
+        if(phmeFlag) await this.uploadResponsePage.uploadPHEDocs();
+        if(ucbFlag) await this.uploadResponsePage.uploadUCBDocs();
         await this.uploadResponsePage.selectIssueCode(issueCodeData);
         await this.uploadResponsePage.chooseAssistOption(assistOption);
         await this.uploadResponsePage.continueSubmission();

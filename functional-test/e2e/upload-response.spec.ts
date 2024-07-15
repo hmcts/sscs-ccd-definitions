@@ -2,7 +2,9 @@ import { test } from "../lib/steps.factory";
 import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.factory";
 import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
-test.describe('Upload response tests', async() => {
+let caseId : string;
+
+test.describe('Upload response tests', {tag: '@pipeline'}, async() => {
 
     test("As a caseworker review response submitted with any further info", async ({ uploadResponseSteps }) => {
         test.slow();
@@ -20,8 +22,37 @@ test.describe('Upload response tests', async() => {
     });
 })
 
+test.describe('Upload response tests for PHE workflow', {tag: '@pipeline'}, async() => {
 
-test.describe.serial('Error scenarios', async () => {
+    test.beforeEach("Case has to be Created", async () => {
+        caseId = await createCaseBasedOnCaseType('PIP');
+    });
+
+    test("As a caseworker review PHE response submitted without any further info", async ({ uploadResponseSteps, reviewPHESteps }) => {
+        test.slow();
+        await uploadResponseSteps.performUploadResponseWithPHEOnAPIPAndReviewResponse(caseId);
+        await reviewPHESteps.grantAnPHERequest(caseId);
+        await reviewPHESteps.refuseAnPHERequest(caseId);
+    });
+    
+})
+
+test.describe('Upload response tests for UCB workflow', {tag: '@pipeline'}, async() => {
+
+    test.beforeEach("Case has to be Created", async () => {
+        caseId = await createCaseBasedOnCaseType('PIP');
+    });
+
+    test("As a caseworker review UCB response submitted without any further info", async ({ uploadResponseSteps, updateUCBSteps }) => {
+        test.slow();
+        await uploadResponseSteps.performUploadResponseWithUCBOnAPIP(caseId);
+        await updateUCBSteps.verifyUpdatedUCBOption();
+    });
+    
+})
+
+
+test.describe.serial('Error scenarios', {tag: '@pipeline'}, async () => {
 
     test("Verify Upload response error scenario", async({ uploadResponseSteps }) => {
         test.slow();
