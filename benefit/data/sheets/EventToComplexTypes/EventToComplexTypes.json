@@ -721,7 +721,7 @@
     "CaseFieldID": "appeal",
     "ListElementCode": "appellant.confidentialityRequired",
     "ID": "appealAppellantConfidentiality",
-    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit-3545\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\"",
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\"",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "19/11/2020",
     "FieldDisplayOrder": 16
@@ -902,7 +902,7 @@
     "CaseEventID": "caseUpdated",
     "CaseFieldID": "appeal",
     "ListElementCode": "benefitType",
-    "ID": "appealBenefit-3545Type",
+    "ID": "appealBenefitType",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 32,
@@ -912,7 +912,7 @@
     "CaseEventID": "caseUpdated",
     "CaseFieldID": "appeal",
     "ListElementCode": "benefitType.code",
-    "ID": "appealBenefit-3545TypeCode",
+    "ID": "appealBenefitTypeCode",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 32,
@@ -923,7 +923,7 @@
     "CaseEventID": "caseUpdated",
     "CaseFieldID": "appeal",
     "ListElementCode": "benefitType.description",
-    "ID": "appealBenefit-3545TypeDescription",
+    "ID": "appealBenefitTypeDescription",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 32,
@@ -934,7 +934,7 @@
     "CaseEventID": "caseUpdated",
     "CaseFieldID": "appeal",
     "ListElementCode": "benefitType.descriptionSelection",
-    "ID": "appealBenefit-3545TypeDescriptionSelection",
+    "ID": "appealBenefitTypeDescriptionSelection",
     "DisplayContext": "OPTIONAL",
     "LiveFrom": "19/11/2019",
     "FieldDisplayOrder": 32,
@@ -4826,7 +4826,7 @@
     "PageID": "typeOfHearing",
     "PageLabel": "Type of hearing",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit-3545\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\""
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\""
   },
   {
     "CaseEventID": "writeFinalDecision",
@@ -4839,7 +4839,7 @@
     "PageID": "typeOfHearing",
     "PageLabel": "Type of hearing",
     "ShowSummaryChangeOption": "Y",
-    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit-3545\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\""
+    "FieldShowCondition": "appeal.benefitType.code=\"childSupport\" OR appeal.benefitType.code=\"taxCredit\" OR appeal.benefitType.code=\"guardiansAllowance\" OR appeal.benefitType.code=\"taxFreeChildcare\" OR appeal.benefitType.code=\"homeResponsibilitiesProtection\" OR appeal.benefitType.code=\"childBenefit\" OR appeal.benefitType.code=\"thirtyHoursFreeChildcare\" OR appeal.benefitType.code=\"guaranteedMinimumPension\" OR appeal.benefitType.code=\"nationalInsuranceCredits\""
   },
   {
     "CaseEventID": "incompleteApplicationReceived",

@@ -21,7 +21,7 @@ test("Test to Make an Appeal Dormant", async ({addNoteSteps}) => {
 
     await performEventOnCaseWithUploadResponse(judgeToken.trim(),
         serviceTokenForJudge.trim(), judgeUserId.trim(),
-        'SSCS','Benefit-3545',
+        'SSCS','Benefit',
         childSupportCaseId.trim(),'dwpUploadResponse');
 
 
@@ -31,7 +31,7 @@ test("Test to Make an Appeal Dormant", async ({addNoteSteps}) => {
     await new Promise(f => setTimeout(f, 3000)); //Delay required for the Case to be ready
      await performEventOnCaseWithEmptyBody(token.trim(),
          serviceToken.trim(), userId.trim(),
-         'SSCS','Benefit-3545',
+         'SSCS','Benefit',
          childSupportCaseId.trim(),'appealDormant');
     logger.info("The value of the IDAM Token : "+token);*/
 

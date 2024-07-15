@@ -12,6 +12,6 @@ export default async function performAppealDormantOnCase(caseId: string) {
     await new Promise(f => setTimeout(f, 3000));
     await performEventOnCaseWithEmptyBody(token.trim(),
         serviceToken.trim(), userId.trim(),
-        'SSCS','Benefit-3545',
+        'SSCS','Benefit',
         caseId.trim(),'appealDormant')
 }

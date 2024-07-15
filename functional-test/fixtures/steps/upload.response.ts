@@ -55,7 +55,7 @@ export class UploadResponse extends BaseStep {
         await this.loginUserWithCaseId(credentials.hmrcUser, false, taxCaseId);
         await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.taxIssueCode, 'No');
 
-        await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", uploadResponseTestdata.taxBenefit-3545Code, uploadResponseTestdata.taxIssueCode);
+        await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", uploadResponseTestdata.taxBenefitCode, uploadResponseTestdata.taxIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
 
         await this.homePage.delay(3000);
@@ -241,7 +241,7 @@ export class UploadResponse extends BaseStep {
         await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.pipIssueCode, 'Yes');
 
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response",
-            uploadResponseTestdata.pipBenefit-3545Code, uploadResponseTestdata.pipIssueCode);
+            uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
     }
 }
