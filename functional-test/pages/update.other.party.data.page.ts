@@ -21,8 +21,7 @@ export class updateOtherPartyDataPage {
 
     // Applying other party data for the Mandatory fields only
     async applyOtherPartyData() {
-        const buttonAddNew = this.page.getByRole('button').and(this.page.getByTitle('Add New'));
-        await buttonAddNew.click(); //fields should be expanded here
+        await this.page.getByRole('button', { name: 'Add new' }).click(); //fields are expanded here
         await this.page.getByText("First Name");
         await this.page.locator('#otherParties_0_name_firstName').fill(addUpdateOtherPartyData.updateOtherPartyDataFirstName);
         await this.page.locator('#otherParties_0_name_lastName').fill(addUpdateOtherPartyData.updateOtherPartyDataLastName);
@@ -31,6 +30,22 @@ export class updateOtherPartyDataPage {
         await this.page.locator('#otherParties_0_address_postcode').fill(addUpdateOtherPartyData.updateOtherPartyDataAddressPostCode);
         await this.page.locator('#otherParties_0_confidentialityRequired_No').click();
         await this.page.locator('#otherParties_0_unacceptableCustomerBehaviour_No').click();
+        await this.page.locator('#otherParties_0_role_name').selectOption({ label: 'Paying parent' }); //selecting role drop down
+
+        await webAction.clickButton("Submit");
+    }
+
+    async applyOtherPartyDataTaxCredit() {
+        await this.page.getByRole('button', { name: 'Add new' }).click(); //fields are expanded here
+        await this.page.getByText("First Name");
+        await this.page.locator('#otherParties_0_name_firstName').fill(addUpdateOtherPartyData.updateOtherPartyDataFirstName);
+        await this.page.locator('#otherParties_0_name_lastName').fill(addUpdateOtherPartyData.updateOtherPartyDataLastName);
+        await this.page.locator('#otherParties_0_address_line1').fill(addUpdateOtherPartyData.updateOtherPartyDataAddressLine);
+        await this.page.locator('#otherParties_0_address_town').fill(addUpdateOtherPartyData.updateOtherPartyDataAddressTown);
+        await this.page.locator('#otherParties_0_address_postcode').fill(addUpdateOtherPartyData.updateOtherPartyDataAddressPostCode);
+        await this.page.locator('#otherParties_0_confidentialityRequired_No').click();
+        await this.page.locator('#otherParties_0_unacceptableCustomerBehaviour_No').click();
+        // Role is not a Mandatory field for Tax Credit cases // await this.page.locator('#otherParties_0_role_name').selectOption({ label: 'Paying parent' });
 
         await webAction.clickButton("Submit");
     }

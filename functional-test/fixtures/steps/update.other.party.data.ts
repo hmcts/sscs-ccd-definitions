@@ -43,6 +43,33 @@ export class UpdateOtherPartyData extends BaseStep {
         await this.homePage.delay(1000);
         await this.otherPartyDetailsTab.verifyPageContentByKeyValue;
     }
+
+    async performUpdateOtherPartyDataTaxCredit(caseId: string) {
+        // Creating case - TAX CREDIT
+        var TaxCreditCaseId = await createCaseBasedOnCaseType("TAX CREDIT");
+
+        // Starting event
+        await this.goToUpdateOtherPartyData(this.page, TaxCreditCaseId);
+        await this.updateOtherPartyDataPage.verifyPageContent();
+
+        // Filling fields and Submitting the event
+        await this.updateOtherPartyDataPage.applyOtherPartyDataTaxCredit();
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
+        await expect(this.homePage.summaryTab).toBeVisible();
+        await this.homePage.delay(3000);
+
+        // Verifying History tab + end state
+        await this.verifyHistoryTabDetails("Update other party data");
+        await this.historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
+        await this.historyTab.verifyPageContentByKeyValue('Event', 'Update other party data');
+
+        // Navigate to Other Party Details tab + validations
+        await this.homePage.navigateToTab("Other Party Details");
+        await this.homePage.delay(1000);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue;
+    }
         
          // Event created to select the event from next steps dropdown menu:
     private async goToUpdateOtherPartyData(page: Page, caseId: string) {
