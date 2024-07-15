@@ -1,0 +1,52 @@
+import { expect, Page } from '@playwright/test';
+import { BaseStep } from './base';
+import { credentials } from "../../config/config";
+import addUpdateOtherPartyData from "../../pages/content/update.other.party.data_en.json"
+import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
+import { StringUtilsComponent } from "../../utils/StringUtilsComponent";
+import { time } from 'console';
+const eventTestData = require("../../pages/content/event.name.event.description_en.json");
+
+export class UpdateOtherPartyData extends BaseStep {
+
+    readonly page: Page;
+
+
+    constructor(page: Page) {
+        super(page);
+        this.page = page;
+    }
+
+    async performUpdateOtherPartyData(caseId: string) {
+        // Creating case - CHILDSUPPORT
+        var ChildSupportCaseId = await createCaseBasedOnCaseType("CHILDSUPPORT");
+
+        // Starting event
+        await this.goToUpdateOtherPartyData(this.page, ChildSupportCaseId);
+        await this.updateOtherPartyDataPage.verifyPageContent();
+
+        // Filling fields and Submitting the event
+        await this.updateOtherPartyDataPage.applyOtherPartyData();
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
+        await expect(this.homePage.summaryTab).toBeVisible();
+        await this.homePage.delay(3000);
+
+        // Verifying History tab + end state
+        await this.verifyHistoryTabDetails("Update other party data");
+        await this.historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
+        await this.historyTab.verifyPageContentByKeyValue('Event', 'Update other party data');
+
+        // Navigate to Other Party Details tab + validations
+        await this.homePage.navigateToTab("Other Party Details");
+        await this.homePage.delay(1000);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue;
+    }
+        
+         // Event created to select the event from next steps dropdown menu:
+    private async goToUpdateOtherPartyData(page: Page, caseId: string) {
+        await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
+        await this.homePage.chooseEvent("Update other party data");
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "updateOtherPartyDataHeading" : "Update other party data",
+   
+    "updateOtherPartyDataFirstName" : "Testing",
+    "updateOtherPartyDataLastName": "Other party",
+    "updateOtherPartyDataAddressLine": "101, test street",
+    "updateOtherPartyDataAddressTown": "Town test",
+    "updateOtherPartyDataAddressPostCode": "TS2 2ST",
+    "updateOtherPartyDataAddressConfidentiality": "No",
+    "updateOtherPartyDataAddressBehaviour": "No",
+    "updateOtherPartyDataAddressRole": "Paying parent"
+
+}
