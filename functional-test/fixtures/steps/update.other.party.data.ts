@@ -2,6 +2,7 @@ import { expect, Page } from '@playwright/test';
 import { BaseStep } from './base';
 import { credentials } from "../../config/config";
 import addUpdateOtherPartyData from "../../pages/content/update.other.party.data_en.json"
+import addUpdateSubscriptionData from "../../pages/content/update.subscription.data_en.json"
 import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import { StringUtilsComponent } from "../../utils/StringUtilsComponent";
 import { time } from 'console';
@@ -43,15 +44,24 @@ export class UpdateOtherPartyData extends BaseStep {
         await this.homePage.delay(3000);
 
         // Verifying History tab + end state
-        await this.verifyHistoryTabDetails("Update other party data");
+        await this.verifyHistoryTabDetails("Update subscription");
         await this.historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
         await this.historyTab.verifyPageContentByKeyValue('Event', 'Update subscription');
 
         // Navigate to Other Party Details tab + validations
-        await this.verifyOtherPartyDetails("Other parties");
-        await this.otherPartyDetailsTab.verifyPageContentByKeyValue;
-        await this.otherPartyDetailsTab.verifyTabDetails;
-    }
+        await this.verifyOtherPartyDetails("Other parties 1");
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('First Name', addUpdateOtherPartyData.updateOtherPartyDataFirstName);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Last Name', addUpdateOtherPartyData.updateOtherPartyDataLastName);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Address Line 1', addUpdateOtherPartyData.updateOtherPartyDataAddressLine);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Town', addUpdateOtherPartyData.updateOtherPartyDataAddressTown);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Postcode', addUpdateOtherPartyData.updateOtherPartyDataAddressPostCode);
+        await this.page.getByRole('row', { name: 'Confidentiality Required No', exact: true }).locator(`//tr[.='Confidentiality RequiredNo']`); // couldn't use the same method as other options for these 2 lines 58, 59
+        await this.page.getByRole('row', { name: 'Unacceptable Customer Behaviour No', exact: true }).locator(`//span[.='Unacceptable Customer Behaviour']`);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Role', addUpdateOtherPartyData.updateOtherPartyDataRole);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Track Your Appeal Number', addUpdateSubscriptionData.updateSubscriptionTrackYAotherParty);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Email Address', addUpdateSubscriptionData.updateSubscriptionEmailotherParty);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Mobile Number', addUpdateSubscriptionData.updateSubscriptionMobileNumberotherParty);
+}
 
     async performUpdateOtherPartyDataTaxCredit(caseId: string) {
         // Creating case - TAX CREDIT
@@ -79,15 +89,23 @@ export class UpdateOtherPartyData extends BaseStep {
         await this.homePage.delay(3000);
 
         // Verifying History tab + end state
-        await this.verifyHistoryTabDetails("Update other party data");
+        await this.verifyHistoryTabDetails("Update subscription");
         await this.historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
         await this.historyTab.verifyPageContentByKeyValue('Event', 'Update subscription');
 
         // Navigate to Other Party Details tab + validations
         await this.verifyOtherPartyDetails("Other parties");
-        await this.otherPartyDetailsTab.verifyPageContentByKeyValue;
-        await this.otherPartyDetailsTab.verifyTabDetails;
-    }
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('First Name', addUpdateOtherPartyData.updateOtherPartyDataFirstName);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Last Name', addUpdateOtherPartyData.updateOtherPartyDataLastName);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Address Line 1', addUpdateOtherPartyData.updateOtherPartyDataAddressLine);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Town', addUpdateOtherPartyData.updateOtherPartyDataAddressTown);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Postcode', addUpdateOtherPartyData.updateOtherPartyDataAddressPostCode);
+        await this.page.getByRole('row', { name: 'Confidentiality Required No', exact: true }).locator(`//tr[.='Confidentiality RequiredNo']`); // couldn't use the same method as other options for these 2 lines 106, 107
+        await this.page.getByRole('row', { name: 'Unacceptable Customer Behaviour No', exact: true }).locator(`//span[.='Unacceptable Customer Behaviour']`);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Track Your Appeal Number', addUpdateSubscriptionData.updateSubscriptionTrackYAotherParty);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Email Address', addUpdateSubscriptionData.updateSubscriptionEmailotherParty);
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue('Mobile Number', addUpdateSubscriptionData.updateSubscriptionMobileNumberotherParty);
+}
         
     // Event created to select Update other party data event from next steps dropdown menu:
     private async goToUpdateOtherPartyData(page: Page, caseId: string) {
