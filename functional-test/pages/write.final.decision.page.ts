@@ -28,9 +28,17 @@ export class WriteFinalDecisionPages {
         }
     }
 
-    async inputTypeOfAppealPageData() {
-        await webActions.clickElementById("#writeFinalDecisionIsDescriptorFlow_No");
-        await webActions.clickElementById("[for='writeFinalDecisionGenerateNotice_Yes']");
+    async inputTypeOfAppealPageData(awardDailyLiving = false, generateNotice = true) {
+        if (awardDailyLiving === true) {
+            await webActions.clickElementById("#writeFinalDecisionIsDescriptorFlow_Yes");
+        } else {
+            await webActions.clickElementById("#writeFinalDecisionIsDescriptorFlow_No");
+        }
+        if (generateNotice === true) {
+            await webActions.clickElementById("[for='writeFinalDecisionGenerateNotice_Yes']");
+        } else {
+            await webActions.clickElementById("[for='writeFinalDecisionGenerateNotice_No']");
+        }
     }
 
     async verifyPageContentAllowedOrRefusedPage() {
@@ -97,9 +105,9 @@ export class WriteFinalDecisionPages {
     }
 
     async inputTypePageContentForDecisionPageData() {
-        await webActions.inputField("#writeFinalDecisionDateOfDecision-day", "11");
-        await webActions.inputField("#writeFinalDecisionDateOfDecision-month", "07");
-        await webActions.inputField("#writeFinalDecisionDateOfDecision-year", "2024");
+        await webActions.typeField("#writeFinalDecisionDateOfDecision-day", "11");
+        await webActions.typeField("#writeFinalDecisionDateOfDecision-month", "07");
+        await webActions.typeField("#writeFinalDecisionDateOfDecision-year", "2024");
     }
 
     async verifyPageContentForBundleSectionReferencePage() {
@@ -147,6 +155,7 @@ export class WriteFinalDecisionPages {
     async inputPageContentForAnythingElsePageData() {
         await webActions.inputField("#writeFinalDecisionAnythingElse", writeFinalDecisionData.anythingElseInput)
     }
+
     async verifyPageContentForPreviewDecisionNoticePage(writeFinalDecisionEventFlag = true) {
         if (writeFinalDecisionEventFlag) {
             await webActions.verifyPageLabel('.govuk-caption-l', writeFinalDecisionData.eventNameCaptor);
@@ -187,28 +196,197 @@ export class WriteFinalDecisionPages {
         await webActions.verifyPageLabel('.form-table tr:nth-of-type(16) > .valign-top > .text-16', writeFinalDecisionData.checkYourAnswersAnythingElse);
         await webActions.verifyPageLabel('.form-table tr:nth-of-type(17) > .valign-top > .text-16', writeFinalDecisionData.previewDecisionNoticeLabel);
     }
+
+    async verifyPageContentForCheckYourAnswersPageForAwardsCriteria() {
+        //await webActions.verifyPageLabel('.govuk-caption-l', writeFinalDecisionData.eventNameCaptor); // No Captor on this Page.
+        await webActions.verifyPageLabel('h1.govuk-heading-l', writeFinalDecisionData.checkYourAnswersPageHeading);
+        await webActions.verifyPageLabel('.heading-h2', writeFinalDecisionData.checkYourAnswersSectionHeading);
+        await webActions.verifyPageLabel('.check-your-answers > [_ngcontent-ng-c645309043] > .text-16', writeFinalDecisionData.checkYourInformationCarefullyLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(3) > .valign-top > .text-16', writeFinalDecisionData.isThisAwardAboutDailyLivingLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(3) > .form-cell .text-16', writeFinalDecisionData.yesLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(4) > .valign-top > .text-16', writeFinalDecisionData.generateNoticeLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(4) > .form-cell .text-16', writeFinalDecisionData.yesLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(5) > .valign-top > .text-16', writeFinalDecisionData.whatTypeOfHearingWasHeldLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(5) > .form-cell .text-16', writeFinalDecisionData.faceToFaceLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(6) > .valign-top > .text-16', writeFinalDecisionData.didAPresentingOfficerLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(6) > .form-cell .text-16', writeFinalDecisionData.yesLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(7) > .valign-top > .text-16', writeFinalDecisionData.didTheAppellantAttendTheHearing);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(7) > .form-cell .text-16', writeFinalDecisionData.noLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(8) > .valign-top > .text-16', writeFinalDecisionData.whatAreYouConsideringAwardingForDailyLivingLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(8) > .form-cell .text-16', writeFinalDecisionData.standardRateLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(9) > .valign-top > .text-16', writeFinalDecisionData.howWouldThisNewAwardCompareToTheOriginalFTAAwardForDailyLiving);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(9) > .form-cell .text-16', writeFinalDecisionData.sameLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(10) > .valign-top > .text-16', writeFinalDecisionData.whatAreYouConsideringAwardingForMobilityLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(10) > .form-cell .text-16', writeFinalDecisionData.enhancedRateLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(11) > .valign-top > .text-16', writeFinalDecisionData.howWouldThisNewAwardCompareToTheOriginalFTAAwardForMobility);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(11) > .form-cell .text-16', writeFinalDecisionData.higherLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(12) > .valign-top > .text-16', writeFinalDecisionData.startDateLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(13) > .valign-top > .text-16', writeFinalDecisionData.doesThisAwardHaveAnEndDateLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(13) > .form-cell .text-16', writeFinalDecisionData.setEndDateLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(14) > .valign-top > .text-16', writeFinalDecisionData.endDateLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(15) > .valign-top > .text-16', writeFinalDecisionData.nameOfDisabilityQualifiedPanelMemberDQPMWithoutOptionalLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(15) > .form-cell .text-16', writeFinalDecisionData.nameOfDisabilityQualifiedPanelMemberInput);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(16) > .valign-top > .text-16', writeFinalDecisionData.nameOfMedicallyQualifiedPanelMemberMQPMWithoutOptionalLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(16) > .form-cell .text-16', writeFinalDecisionData.nameOfMedicallyQualifiedPanelMemberInput);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(17) > .valign-top > .text-16', writeFinalDecisionData.dateOfFTADecisionLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(18) > .valign-top > .text-16', writeFinalDecisionData.dailyLivingLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(18) > .form-cell .text-16', writeFinalDecisionData.takingNutritionLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(19) > .valign-top > .text-16', writeFinalDecisionData.mobilityNonOptionalLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(19) > .form-cell .text-16', writeFinalDecisionData.movingAroundLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(20) > .valign-top > .text-16', writeFinalDecisionData.takingNutritionLabel);
+        //await webActions.verifyPageLabel('.form-table tr:nth-of-type(20) > .form-cell .text-16', writeFinalDecisionData.takingNutritionLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(21) > .valign-top > .text-16', writeFinalDecisionData.movingAroundLabel);
+        //await webActions.verifyPageLabel('.form-table tr:nth-of-type(21) > .form-cell .text-16', writeFinalDecisionData.takingNutritionLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(22) > .valign-top > .text-16', writeFinalDecisionData.whatIsTheLastPageInTheTribunalBundleLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(22) > .form-cell .text-16', writeFinalDecisionData.lastPageInTheTribunalBundleInput);
+
+        await webActions.verifyPageLabel('tr:nth-of-type(23) > .valign-top > .text-16', writeFinalDecisionData.reasonsForDecisionLabel);
+        await webActions.verifyPageLabel('tr:nth-of-type(23) > td:nth-of-type(1) span:nth-of-type(1)', writeFinalDecisionData.reasonsForDecisionInput);
+
+        await webActions.verifyPageLabel('tr:nth-of-type(24) > .case-field-label', writeFinalDecisionData.anythingElsePageHeading);
+        await webActions.verifyPageLabel('tr:nth-of-type(24) [_ngcontent-ng-c142448239]', writeFinalDecisionData.anythingElseInput);
+
+        await webActions.verifyPageLabel('tr:nth-of-type(25) > .valign-top > .text-16', writeFinalDecisionData.previewDecisionNoticeLabel);
+
+
+    }
+
+    async verifyAndInputPageContentForTypeOfAwardPage() {
+
+        await webActions.verifyPageLabel('.govuk-caption-l', writeFinalDecisionData.eventNameCaptor);
+        await webActions.verifyPageLabel('h1.govuk-heading-l', writeFinalDecisionData.typeOfAwardPageHeading);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionDailyLivingQuestion\'] > .form-label', writeFinalDecisionData.whatAreYouConsideringAwardingForDailyLivingLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionDailyLivingQuestion-notConsidered\']', writeFinalDecisionData.notConsideredLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionDailyLivingQuestion-standardRate\']', writeFinalDecisionData.standardRateLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionDailyLivingQuestion-enhancedRate\']', writeFinalDecisionData.enhancedRateLabel);
+        await webActions.clickElementById("#pipWriteFinalDecisionDailyLivingQuestion-standardRate");
+
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionComparedToDWPDailyLivingQuestion\'] > .form-label', writeFinalDecisionData.howWouldThisNewAwardCompareToTheOriginalFTAAwardForDailyLiving);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionComparedToDWPDailyLivingQuestion-higher\']', writeFinalDecisionData.higherLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionComparedToDWPDailyLivingQuestion-same\']', writeFinalDecisionData.sameLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionComparedToDWPDailyLivingQuestion-lower\']', writeFinalDecisionData.lowerLabel);
+        await webActions.clickElementById("#pipWriteFinalDecisionComparedToDWPDailyLivingQuestion-same");
+
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionMobilityQuestion\'] > .form-label', writeFinalDecisionData.whatAreYouConsideringAwardingForMobilityLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionMobilityQuestion-notConsidered\']', writeFinalDecisionData.notConsideredLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionMobilityQuestion-standardRate\']', writeFinalDecisionData.standardRateLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionMobilityQuestion-enhancedRate\']', writeFinalDecisionData.enhancedRateLabel);
+        await webActions.clickElementById("#pipWriteFinalDecisionMobilityQuestion-enhancedRate");
+
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionComparedToDWPMobilityQuestion\'] > .form-label', writeFinalDecisionData.howWouldThisNewAwardCompareToTheOriginalFTAAwardForMobility   );
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionComparedToDWPMobilityQuestion-higher\']', writeFinalDecisionData.higherLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionComparedToDWPMobilityQuestion-same\']', writeFinalDecisionData.sameLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionComparedToDWPMobilityQuestion-lower\']', writeFinalDecisionData.lowerLabel);
+        await webActions.clickElementById("#pipWriteFinalDecisionComparedToDWPMobilityQuestion-higher");
+
+    }
+
+    async verifyAndInputPageContentForAwardDatesPage() {
+        await webActions.verifyPageLabel('.govuk-caption-l', writeFinalDecisionData.eventNameCaptor);
+        await webActions.verifyPageLabel('h1.govuk-heading-l', writeFinalDecisionData.awardDatesPageHeading);
+        await webActions.verifyPageLabel('#writeFinalDecisionStartDate legend > .form-label', writeFinalDecisionData.startDateLabel);
+        await webActions.verifyPageLabel("[for='writeFinalDecisionStartDate-day']", writeFinalDecisionData.dayLabel);
+        await webActions.verifyPageLabel("[for='writeFinalDecisionStartDate-month']", writeFinalDecisionData.monthLabel);
+        await webActions.verifyPageLabel("[for='writeFinalDecisionStartDate-year']", writeFinalDecisionData.yearLabel);
+        await webActions.verifyPageLabel("[for='writeFinalDecisionEndDateType'] > .form-label", writeFinalDecisionData.doesThisAwardHaveAnEndDateLabel);
+        await webActions.verifyPageLabel("[for='writeFinalDecisionEndDateType-setEndDate']", writeFinalDecisionData.setEndDateLabel);
+        await webActions.verifyPageLabel("[for='writeFinalDecisionEndDateType-indefinite']", writeFinalDecisionData.indefiniteAwardLabel);
+        await webActions.verifyPageLabel("[for='writeFinalDecisionEndDateType-na']", writeFinalDecisionData.notApplicableNoAwardLabel);
+        await webActions.clickElementById("#writeFinalDecisionEndDateType-setEndDate");
+        await webActions.verifyPageLabel('#writeFinalDecisionEndDate legend > .form-label', writeFinalDecisionData.endDateLabel);
+        await webActions.verifyPageLabel('[for=\'writeFinalDecisionEndDate-day\']', writeFinalDecisionData.dayLabel);
+        await webActions.verifyPageLabel('[for=\'writeFinalDecisionEndDate-month\']', writeFinalDecisionData.monthLabel);
+        await webActions.verifyPageLabel('[for=\'writeFinalDecisionEndDate-year\']', writeFinalDecisionData.yearLabel);
+    }
+
+    async inputPageContentForAwardDatesPageData() {
+        await webActions.typeField("#writeFinalDecisionStartDate-day", '01');
+        await webActions.typeField("#writeFinalDecisionStartDate-month", '07');
+        await webActions.typeField("#writeFinalDecisionStartDate-year", '2024');
+
+        await webActions.typeField("#writeFinalDecisionEndDate-day", '30');
+        await webActions.typeField("#writeFinalDecisionEndDate-month", '07');
+        await webActions.typeField("#writeFinalDecisionEndDate-year", '2024');
+    }
+
+    async verifyPageContentForSelectActivitiesPage() {
+        await webActions.verifyPageLabel('.govuk-caption-l', writeFinalDecisionData.eventNameCaptor);
+        await webActions.verifyPageLabel('h1.govuk-heading-l', writeFinalDecisionData.selectActivitiesPageHeading);
+        await webActions.verifyPageLabel('#pipWriteFinalDecisionDailyLivingActivitiesQuestion legend > .form-label', writeFinalDecisionData.dailyActivitiesLabel);
+        await webActions.verifyPageLabel('#pipWriteFinalDecisionDailyLivingActivitiesQuestion .form-hint', writeFinalDecisionData.selectAllThatApplyGuidanceText);
+        await webActions.verifyPageLabel("[for='pipWriteFinalDecisionDailyLivingActivitiesQuestion-preparingFood']", writeFinalDecisionData.preparingFoodLabel);
+        await webActions.verifyPageLabel("[for='pipWriteFinalDecisionDailyLivingActivitiesQuestion-takingNutrition']", writeFinalDecisionData.takingNutritionLabel);
+        await webActions.verifyPageLabel("[for='pipWriteFinalDecisionDailyLivingActivitiesQuestion-managingTherapy']", writeFinalDecisionData.managingTherapyOrMonitoringHealthConditionLabel);
+        await webActions.verifyPageLabel("[for='pipWriteFinalDecisionDailyLivingActivitiesQuestion-washingAndBathing']", writeFinalDecisionData.washingAndBathingLabel);
+        await webActions.verifyPageLabel("[for='pipWriteFinalDecisionDailyLivingActivitiesQuestion-managingToiletNeeds']", writeFinalDecisionData.managingToiletNeedsOrIncontinenceLabel);
+        await webActions.verifyPageLabel("[for='pipWriteFinalDecisionDailyLivingActivitiesQuestion-dressingAndUndressing']", writeFinalDecisionData.dressingAndUndressingLabel);
+        await webActions.verifyPageLabel("[for='pipWriteFinalDecisionDailyLivingActivitiesQuestion-communicating']", writeFinalDecisionData.communicatingVerballyLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionDailyLivingActivitiesQuestion-readingUnderstanding\']', writeFinalDecisionData.readingAndUnderstandingSignsSymbolsAndWordsLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionDailyLivingActivitiesQuestion-engagingWithOthers\']', writeFinalDecisionData.engagingWithOtherPeopleF2FLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionDailyLivingActivitiesQuestion-budgetingDecisions\']', writeFinalDecisionData.makingBudgetingDecisionsLabel);
+        await webActions.verifyPageLabel('#pipWriteFinalDecisionMobilityActivitiesQuestion legend > .form-label', writeFinalDecisionData.mobilityLabel);
+        await webActions.verifyPageLabel('#pipWriteFinalDecisionMobilityActivitiesQuestion .form-hint', writeFinalDecisionData.selectAllThatApplyGuidanceText);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionMobilityActivitiesQuestion-planningAndFollowing\']', writeFinalDecisionData.planningAndFollowingJourneysLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionMobilityActivitiesQuestion-movingAround\']', writeFinalDecisionData.movingAroundLabel);
+    }
+
+    async inputPageContentForSelectActivitiesPageData() {
+        await webActions.clickElementById("#pipWriteFinalDecisionDailyLivingActivitiesQuestion-takingNutrition");
+        await webActions.clickElementById("#pipWriteFinalDecisionMobilityActivitiesQuestion-movingAround");
+    }
+
+    async verifyPageContentForDailyLivingNutrition() {
+        await webActions.verifyPageLabel('.govuk-caption-l', writeFinalDecisionData.eventNameCaptor);
+        await webActions.verifyPageLabel('h1.govuk-heading-l', writeFinalDecisionData.dailyLivingTakingNutritionPageHeading);
+        await webActions.verifyPageLabel('span.form-label', writeFinalDecisionData.takingNutritionLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionTakingNutritionQuestion-takingNutrition2a\']', writeFinalDecisionData.canTakeNutritionLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionTakingNutritionQuestion-takingNutrition2b\']', writeFinalDecisionData.needsEitherLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionTakingNutritionQuestion-takingNutrition2c\']', writeFinalDecisionData.needsATherapeuticLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionTakingNutritionQuestion-takingNutrition2d\']', writeFinalDecisionData.needsPromptingLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionTakingNutritionQuestion-takingNutrition2e\']', writeFinalDecisionData.needsAssistanceLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionTakingNutritionQuestion-takingNutrition2f\']', writeFinalDecisionData.cannotConveyFoodAndDrinkLabel);
+    }
+
+    async inputPageContentForDailyLivingNutritionPageData() {
+        await webActions.clickElementById("div:nth-of-type(6) > .form-control");
+    }
+
+    async verifyPageContentForMovingAround() {
+        await webActions.verifyPageLabel('.govuk-caption-l', writeFinalDecisionData.eventNameCaptor);
+        await webActions.verifyPageLabel('h1.govuk-heading-l', writeFinalDecisionData.mobilityActivitiesPageHeading);
+        await webActions.verifyPageLabel('span.form-label', writeFinalDecisionData.movingAroundLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionMovingAroundQuestion-movingAround12a\']', writeFinalDecisionData.canStandAndThenMoveMoreThan200mLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionMovingAroundQuestion-movingAround12b\']', writeFinalDecisionData.canStandAndThenMoveMoreThan50mLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionMovingAroundQuestion-movingAround12c\']', writeFinalDecisionData.canStandAndThenMoveMoreThan20mLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionMovingAroundQuestion-movingAround12d\']', writeFinalDecisionData.canStandAndThenMoveWithAid20mTo50mLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionMovingAroundQuestion-movingAround12e\']', writeFinalDecisionData.canStandAndThenMoveWithAid1mTo20mLabel);
+        await webActions.verifyPageLabel('[for=\'pipWriteFinalDecisionMovingAroundQuestion-movingAround12f\']', writeFinalDecisionData.canStandAndThenMoveEitherAidedOrUnaidedLabel);
+    }
+
+    async inputPageContentForMovingAroundPageData() {
+        await webActions.clickElementById("div:nth-of-type(6) > .form-control");
+    }
+
     async chooseAllowedOrRefused(optionVal: string) {
         await webActions.clickElementById(optionVal);
-    }
-
-    async chooseGenerateNotice(optionVal: string) {
-        await webActions.clickElementById(optionVal);
-    }
-
-    async enterNoticeContent(generateNoticeFlag) {
-        if (!generateNoticeFlag) {
-            await webActions.chooseOptionByLabel('#sscsInterlocDirectionDocument_documentType', 'Directions Notice');
-            await webActions.uploadFileUsingAFileChooser('#sscsInterlocDirectionDocument_documentLink', 'testfile1.pdf');
-            await webActions.delay(3000);
-            await webActions.inputField('#documentDateAdded-day', '01');
-            await webActions.inputField('#documentDateAdded-month', '01');
-            await webActions.inputField('#documentDateAdded-year', '2028');
-            await webActions.inputField('#sscsInterlocDirectionDocument_documentFileName', 'testfile1.pdf');
-        } else {
-            await webActions.inputField('#bodyContent', 'Test body content');
-            await webActions.inputField('#signedBy', 'Tester');
-            await webActions.inputField('#signedRole', 'Test');
-        }
     }
 
     async submitContinueBtn(): Promise<void> {
@@ -223,31 +401,5 @@ export class WriteFinalDecisionPages {
         await this.page.waitForTimeout(3000);
         await webActions.clickSubmitButton();
         await this.page.waitForTimeout(3000);
-    }
-
-    async verifyErrorMsg(pageLevelErrorMessages, specificRecipientsErrorMessages, generateNoticeYesErrorMessages): Promise<void> {
-
-        //await webActions.verifyElementVisibility('#errors');
-        if (pageLevelErrorMessages) {
-            await webActions.verifyTextVisibility('Pre or post hearing? is required');
-            await webActions.verifyTextVisibility('Field is required');
-            await webActions.verifyTextVisibility('Generate notice is required');
-        }
-        if (specificRecipientsErrorMessages === true) {
-            await webActions.verifyTextVisibility('Pre or post hearing? is required');
-            await webActions.verifyTextVisibility('FTA is required');
-            await webActions.verifyTextVisibility('Representative is required');
-            await webActions.verifyTextVisibility('Appellant or Appointee is required');
-        }
-
-        if (generateNoticeYesErrorMessages === true) {
-            await webActions.verifyTextVisibility('Pre or post hearing? is required');
-            await webActions.verifyTextVisibility('FTA is required');
-            await webActions.verifyTextVisibility('Representative is required');
-            await webActions.verifyTextVisibility('Appellant or Appointee is required');
-            await webActions.verifyTextVisibility('Body content is required');
-            await webActions.verifyTextVisibility('Signed by is required');
-            await webActions.verifyTextVisibility('Signed role is required');
-        }
     }
 }

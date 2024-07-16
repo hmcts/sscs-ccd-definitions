@@ -22,7 +22,7 @@ export class WriteFinalDecision extends BaseStep {
         this.page = page;
     }
 
-    async performWriteFinalDecisionForAPIPAppeal(pipCaseId) {
+    async performWriteFinalDecisionForAPIPAppealNoAwardAndNoticeGenerated(pipCaseId) {
 
         await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
         /*logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
@@ -40,7 +40,7 @@ export class WriteFinalDecision extends BaseStep {
 
         //The Type of Appeal Page
         await this.writeFinalDecisionPage.verifyPageContentTypeOfAppealPage(true)
-        await this.writeFinalDecisionPage.inputTypeOfAppealPageData();
+        await this.writeFinalDecisionPage.inputTypeOfAppealPageData(false, true); //No Awards but Generate Notice
         await this.writeFinalDecisionPage.submitContinueBtn();
         await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
 
@@ -61,7 +61,6 @@ export class WriteFinalDecision extends BaseStep {
         await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
 
         await this.writeFinalDecisionPage.verifyPageContentForDecisionDatePage();
-        await this.writeFinalDecisionPage.submitContinueBtn();
         await this.writeFinalDecisionPage.inputTypePageContentForDecisionPageData();
         await this.writeFinalDecisionPage.submitContinueBtn();
         await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
@@ -91,6 +90,101 @@ export class WriteFinalDecision extends BaseStep {
         await new Promise(f => setTimeout(f, 1000));
 
         await this.writeFinalDecisionPage.verifyPageContentForCheckYourAnswersPage()
+        await this.writeFinalDecisionPage.confirmSubmission();
+        await this.verifyHistoryTabDetails("Write final decision");
+    }
+
+    async performWriteFinalDecisionForAPIPAppealAwardAndNoticeGenerated(pipCaseId) {
+
+        await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
+        /*logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
+        let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
+        let serviceToken: string = await getSSCSServiceToken();
+        let responseWriterId: string = await accessId(credentials.dwpResponseWriter);
+        await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
+            serviceToken.trim(), responseWriterId.trim(),
+            'SSCS', 'Benefit',
+            pipCaseId.trim(), 'dwpUploadResponse', 'dwp');*/
+
+        await this.loginUserWithCaseId(credentials.judge, false, pipCaseId);
+        //await this.homePage.reloadPage();
+        await this.homePage.chooseEvent("Write final decision");
+
+        //The Type of Appeal Page
+        await this.writeFinalDecisionPage.verifyPageContentTypeOfAppealPage(true)
+        await this.writeFinalDecisionPage.inputTypeOfAppealPageData(true, true); //No Awards but Generate Notice
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        /*//Allowed or Refused Page (Because we opted not in the previous page)
+        await this.writeFinalDecisionPage.verifyPageContentAllowedOrRefusedPage();
+        await this.writeFinalDecisionPage.chooseAllowedOrRefused("#writeFinalDecisionAllowedOrRefused-allowed");
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready*/
+
+        await this.writeFinalDecisionPage.verifyPageContentTypeOfHearingPage();
+        await this.writeFinalDecisionPage.inputTypeOfHearingPageData(false)
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        await this.writeFinalDecisionPage.verifyAndInputPageContentForTypeOfAwardPage();
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        await this.writeFinalDecisionPage.verifyAndInputPageContentForAwardDatesPage();
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        await this.writeFinalDecisionPage.verifyAndInputPageContentForAwardDatesPage();
+        await this.writeFinalDecisionPage.inputPageContentForAwardDatesPageData();
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        await this.writeFinalDecisionPage.verifyPageContentForPanelMembersPage('PIP');
+        await this.writeFinalDecisionPage.inputPageContentForPanelMembersPageData('PIP');
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        await this.writeFinalDecisionPage.verifyPageContentForDecisionDatePage();
+        await this.writeFinalDecisionPage.inputTypePageContentForDecisionPageData();
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        await this.writeFinalDecisionPage.verifyPageContentForSelectActivitiesPage();
+        await this.writeFinalDecisionPage.inputPageContentForSelectActivitiesPageData();
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        await this.writeFinalDecisionPage.verifyPageContentForDailyLivingNutrition();
+        await this.writeFinalDecisionPage.inputPageContentForDailyLivingNutritionPageData();
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        await this.writeFinalDecisionPage.verifyPageContentForMovingAround();
+        await this.writeFinalDecisionPage.inputPageContentForMovingAroundPageData();
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        await this.writeFinalDecisionPage.verifyPageContentForBundleSectionReferencePage();
+        await this.writeFinalDecisionPage.inputPageContentForBundleSectionReferencePageData();
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        await this.writeFinalDecisionPage.verifyPageContentForReasonForDecisionPage();
+        await this.writeFinalDecisionPage.inputPageContentForReasonForDecisionPageData();
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        await this.writeFinalDecisionPage.verifyPageContentForAnythingElseDecisionPage();
+        await this.writeFinalDecisionPage.inputPageContentForAnythingElsePageData();
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000));
+
+        await this.writeFinalDecisionPage.verifyPageContentForPreviewDecisionNoticePage(true);
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000));
+
+        await this.writeFinalDecisionPage.verifyPageContentForCheckYourAnswersPageForAwardsCriteria()
         await this.writeFinalDecisionPage.confirmSubmission();
         await this.verifyHistoryTabDetails("Write final decision");
     }

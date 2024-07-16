@@ -4,12 +4,24 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 let caseId: string;
 
-test.only("Issue Final Decision - Upload Response with Further Information as No - Simple Decision Notice - 'Yes' notice generated.",
-    async ({issueFinalDecisionSteps}) => {
-        test.slow();
-        let pipCaseId = await createCaseBasedOnCaseType('PIP');
-        await issueFinalDecisionSteps.performWriteFinalDecisionForAPIPAppeal(pipCaseId);
-        await issueFinalDecisionSteps.performIssueFinalDecisionForAPIPAppeal(pipCaseId);
-        await performAppealDormantOnCase(pipCaseId);
-    });
+test.describe('Issue Final Decision - PIP Appeal Type', async () => {
 
+    test("Issue Final Decision - Upload Response with Further Information as No - Simple Decision Notice - 'Yes' notice generated. - No Award Given",
+        async ({issueFinalDecisionSteps}) => {
+            test.slow();
+            let pipCaseId = await createCaseBasedOnCaseType('PIP');
+            await issueFinalDecisionSteps.performWriteFinalDecisionForAPIPAppealNoAwardAndNoticeGenerated(pipCaseId);
+            await issueFinalDecisionSteps.performIssueFinalDecisionForAPIPAppeal(pipCaseId);
+            await performAppealDormantOnCase(pipCaseId);
+        });
+
+    test("Issue Final Decision - Upload Response with Further Information as No - Simple Decision Notice - 'Yes' notice generated. - Yes Award is Given",
+        async ({issueFinalDecisionSteps}) => {
+            test.slow();
+            let pipCaseId = await createCaseBasedOnCaseType('PIP');
+            await issueFinalDecisionSteps.performWriteFinalDecisionForAPIPAppealAwardAndNoticeGenerated(pipCaseId);
+            //await issueFinalDecisionSteps.performIssueFinalDecisionForAPIPAppeal(pipCaseId);
+            await performAppealDormantOnCase(pipCaseId);
+        });
+
+})
