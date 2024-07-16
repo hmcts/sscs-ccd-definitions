@@ -1,6 +1,7 @@
 import { expect, Page } from '@playwright/test';
 import { WebAction } from '../common/web.action';
 import addUpdateOtherPartyData from "./content/update.other.party.data_en.json";
+import addUpdateSubscriptionData from "./content/update.subscription.data_en.json"
 
 
 let webAction: WebAction;
@@ -45,7 +46,19 @@ export class updateOtherPartyDataPage {
         await this.page.locator('#otherParties_0_address_postcode').fill(addUpdateOtherPartyData.updateOtherPartyDataAddressPostCode);
         await this.page.locator('#otherParties_0_confidentialityRequired_No').click();
         await this.page.locator('#otherParties_0_unacceptableCustomerBehaviour_No').click();
-        // Role is not a Mandatory field for Tax Credit cases // await this.page.locator('#otherParties_0_role_name').selectOption({ label: 'Paying parent' });
+        // Role is NOT a Mandatory field for Tax Credit cases // await this.page.locator('#otherParties_0_role_name').selectOption({ label: 'Paying parent' });
+
+        await webAction.clickButton("Submit");
+    }
+
+    // Applying Other parties subscriptions
+    async applyOtherPartiesSubscription() {
+        await this.page.locator('#otherParties_0_otherPartySubscription_wantSmsNotifications_Yes').click();
+        await this.page.locator('#otherParties_0_otherPartySubscription_tya').fill(addUpdateSubscriptionData.updateSubscriptionTrackYAotherParty);
+        await this.page.locator('#otherParties_0_otherPartySubscription_email').fill(addUpdateSubscriptionData.updateSubscriptionEmailotherParty);
+        await this.page.locator('#otherParties_0_otherPartySubscription_mobile').fill(addUpdateSubscriptionData.updateSubscriptionMobileNumberotherParty);
+        await this.page.locator('#otherParties_0_otherPartySubscription_subscribeEmail_Yes').click();
+        await this.page.locator('#otherParties_0_otherPartySubscription_subscribeSms_Yes').click();
 
         await webAction.clickButton("Submit");
     }

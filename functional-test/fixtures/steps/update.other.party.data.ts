@@ -33,15 +33,24 @@ export class UpdateOtherPartyData extends BaseStep {
         await expect(this.homePage.summaryTab).toBeVisible();
         await this.homePage.delay(3000);
 
+        // Adding other party subscription
+        await this.goToUpdateSubscriptionPage(this.page, ChildSupportCaseId);
+        await this.updateOtherPartyDataPage.applyOtherPartiesSubscription();
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
+        await expect(this.homePage.summaryTab).toBeVisible();
+        await this.homePage.delay(3000);
+
         // Verifying History tab + end state
         await this.verifyHistoryTabDetails("Update other party data");
         await this.historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
-        await this.historyTab.verifyPageContentByKeyValue('Event', 'Update other party data');
+        await this.historyTab.verifyPageContentByKeyValue('Event', 'Update subscription');
 
         // Navigate to Other Party Details tab + validations
         await this.homePage.navigateToTab("Other Party Details");
         await this.homePage.delay(1000);
-        await this.otherPartyDetailsTab.verifyPageContentByKeyValue;
+        await this.otherPartyDetailsTab.verifyTabDetails;
     }
 
     async performUpdateOtherPartyDataTaxCredit(caseId: string) {
@@ -60,20 +69,34 @@ export class UpdateOtherPartyData extends BaseStep {
         await expect(this.homePage.summaryTab).toBeVisible();
         await this.homePage.delay(3000);
 
+        // Adding other party subscription
+        await this.goToUpdateSubscriptionPage(this.page, TaxCreditCaseId);
+        await this.updateOtherPartyDataPage.applyOtherPartiesSubscription();
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
+        await expect(this.homePage.summaryTab).toBeVisible();
+        await this.homePage.delay(3000);
+
         // Verifying History tab + end state
         await this.verifyHistoryTabDetails("Update other party data");
         await this.historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
-        await this.historyTab.verifyPageContentByKeyValue('Event', 'Update other party data');
+        await this.historyTab.verifyPageContentByKeyValue('Event', 'Update subscription');
 
         // Navigate to Other Party Details tab + validations
         await this.homePage.navigateToTab("Other Party Details");
         await this.homePage.delay(1000);
-        await this.otherPartyDetailsTab.verifyPageContentByKeyValue;
+        await this.otherPartyDetailsTab.verifyTabDetails;
     }
         
-         // Event created to select the event from next steps dropdown menu:
+    // Event created to select Update other party data event from next steps dropdown menu:
     private async goToUpdateOtherPartyData(page: Page, caseId: string) {
         await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
         await this.homePage.chooseEvent("Update other party data");
+    }
+    // Event created to trigger Update subscription event from next steps dropdown menu:
+    private async goToUpdateSubscriptionPage(page: Page, caseId: string) {
+        await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
+        await this.homePage.chooseEvent("Update subscription");
     }
 }
