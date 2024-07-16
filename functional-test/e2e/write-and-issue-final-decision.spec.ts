@@ -4,7 +4,7 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 let caseId: string;
 
-test.describe('Issue Final Decision - PIP Appeal Type', async () => {
+test.describe('Issue Final Decision - PIP Appeal Type', {tag: '@pipeline'},  async () => {
 
     test("Issue Final Decision - Upload Response with Further Information as No - Simple Decision Notice - 'Yes' notice generated. - No Award Given",
         async ({issueFinalDecisionSteps}) => {
