@@ -20,7 +20,7 @@ test.describe('Issue Final Decision - PIP Appeal Type', async () => {
             test.slow();
             let pipCaseId = await createCaseBasedOnCaseType('PIP');
             await issueFinalDecisionSteps.performWriteFinalDecisionForAPIPAppealAwardAndNoticeGenerated(pipCaseId);
-            //await issueFinalDecisionSteps.performIssueFinalDecisionForAPIPAppeal(pipCaseId);
+            await issueFinalDecisionSteps.performIssueFinalDecisionForAPIPAppeal(pipCaseId);
             await performAppealDormantOnCase(pipCaseId);
         });
 
