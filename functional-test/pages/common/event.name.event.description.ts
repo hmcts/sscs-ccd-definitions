@@ -1,5 +1,6 @@
 import {Page} from '@playwright/test';
 import {WebAction} from '../../common/web.action'
+import {isUndefined} from "node:util";
 const eventTestData = require("../content/event.name.event.description_en.json");
 
 let webActions: WebAction;
@@ -18,9 +19,12 @@ export class EventNameEventDescriptionPage {
         await webActions.verifyPageLabel('.govuk-heading-l', headingValue); //Heading Text
         if (checkYourAnswersFlag) {
             await webActions.verifyPageLabel('.heading-h2', eventTestData.eventSummarycheckYourAnswersHeading); //Check your answers Text.
-            await webActions.verifyPageLabel('.check-your-answers > .text-16', eventTestData.eventSummaryCheckTheInformationText);
+            await webActions.verifyPageLabel('.check-your-answers h2.heading-h2 + span', eventTestData.eventSummaryCheckTheInformationText);
             await webActions.verifyPageLabel('.case-field-label > .text-16', key);
-            await webActions.verifyPageLabel('ccd-read-text-area-field > span', value);
+            if (typeof (value) === 'undefined') {
+            } else {
+                await webActions.verifyPageLabel('ccd-read-text-area-field > span', value);
+            }
         }
         await webActions.verifyPageLabel('[for=\'field-trigger-summary\']', eventTestData.eventSummaryLabel); //Field Label
         //await webActions.verifyPageLabel('.form-hint', eventTestData["event-summary-guidance-text"]); //Guidance Text

@@ -23,13 +23,11 @@ export class UrgentHearing extends BaseStep {
         await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventName);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
             actionFurtherEvidenceTestdata.sender, 
-            actionFurtherEvidenceTestdata.urgentDocType, 
+            actionFurtherEvidenceTestdata.urgentDocType,
             actionFurtherEvidenceTestdata.testfileone
         );
         await this.eventNameAndDescriptionPage.verifyPageContent(actionFurtherEvidenceTestdata.eventName);
         await this.eventNameAndDescriptionPage.confirmSubmission();
-        await this.eventNameAndDescriptionPage.confirmSubmission();
-
 
         await this.summaryTab.verifyPageContentByKeyValue('Urgent case', 'Yes');
 
@@ -41,14 +39,14 @@ export class UrgentHearing extends BaseStep {
         await this.homePage.reloadPage();
 
         await this.loginUserWithCaseId(credentials.judge, true, caseId);
-        await this.homePage.chooseEvent(issueDirectionTestdata.eventName);
+        await this.homePage.chooseEvent(issueDirectionTestdata.eventNameCaptor);
 
         await this.issueDirectionPage.submitIssueDirection(
-            issueDirectionTestdata.hearingType, 
+            issueDirectionTestdata.preHearingType,
             issueDirectionTestdata.grantHearingOption, 
             issueDirectionTestdata.docTitle
         );
-        await this.eventNameAndDescriptionPage.verifyPageContent(issueDirectionTestdata.eventName);
+        await this.eventNameAndDescriptionPage.verifyPageContent(issueDirectionTestdata.eventNameCaptor);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
         await this.summaryTab.verifyPageContentByKeyValue('Urgent case', 'Yes');
@@ -66,14 +64,12 @@ export class UrgentHearing extends BaseStep {
         await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventName);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
             actionFurtherEvidenceTestdata.sender, 
-            actionFurtherEvidenceTestdata.urgentDocType, 
+            actionFurtherEvidenceTestdata.urgentDocType,
             actionFurtherEvidenceTestdata.testfileone
         );
 
         await this.eventNameAndDescriptionPage.verifyPageContent(actionFurtherEvidenceTestdata.eventName);
         await this.eventNameAndDescriptionPage.confirmSubmission();
-        await this.eventNameAndDescriptionPage.confirmSubmission();
-
 
         await this.summaryTab.verifyPageContentByKeyValue('Urgent case', 'Yes');
 
@@ -85,14 +81,14 @@ export class UrgentHearing extends BaseStep {
         await this.homePage.reloadPage();
 
         await this.loginUserWithCaseId(credentials.judge, true, caseId);
-        await this.homePage.chooseEvent(issueDirectionTestdata.eventName);
+        await this.homePage.chooseEvent(issueDirectionTestdata.eventNameCaptor);
 
         await this.issueDirectionPage.submitIssueDirection(
-            issueDirectionTestdata.hearingType, 
+            issueDirectionTestdata.preHearingType,
             issueDirectionTestdata.refuseHearingOption, 
             issueDirectionTestdata.docTitle
         );
-        await this.eventNameAndDescriptionPage.verifyPageContent(issueDirectionTestdata.eventName);
+        await this.eventNameAndDescriptionPage.verifyPageContent(issueDirectionTestdata.eventNameCaptor);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
         await this.summaryTab.verifyPageContentByKeyValue('Urgent case', 'No');
@@ -104,19 +100,18 @@ export class UrgentHearing extends BaseStep {
     }
 
     async uploadEncryptedFiles(caseId: string) {
-        
+
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventName);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
-            actionFurtherEvidenceTestdata.sender, 
-            actionFurtherEvidenceTestdata.docType, 
+            actionFurtherEvidenceTestdata.sender,
+            actionFurtherEvidenceTestdata.docType,
             actionFurtherEvidenceTestdata.encrytpedFile
         );
-        await this,this.actionFurtherEvidencePage.verifyEncryptedFileErrorMsg();
-    
-        await this.actionFurtherEvidencePage.uploadDocs(actionFurtherEvidenceTestdata.corruptedFile);
-        await this,this.actionFurtherEvidencePage.verifyEncryptedFileErrorMsg();
-    }
+        await this.actionFurtherEvidencePage.verifyEncryptedFileErrorMsg();
 
+        await this.actionFurtherEvidencePage.uploadDocs(actionFurtherEvidenceTestdata.corruptedFile);
+        await this.actionFurtherEvidencePage.verifyEncryptedFileErrorMsg();
+    }
 }

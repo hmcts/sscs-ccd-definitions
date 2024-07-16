@@ -28,7 +28,24 @@ export class CheckYourAnswersPage {
             [benefitCode, issueCode]);   
             await webActions.verifyPageLabel('//self::ccd-read-yes-no-field/span', [uploadResponseTestdata.poAttendOption]);
         }
-            
+    }
+
+    async verifyCYAPageContentWithPHE(headingValue: string, benefitCode?: string, issueCode?: string, caseType?: string) {
+
+        await webActions.verifyPageLabel('.govuk-heading-l', headingValue); //Heading Text
+        await webActions.verifyPageLabel('form.check-your-answers h2.heading-h2', eventTestData.eventSummarycheckYourAnswersHeading);//Check your answers Text.
+        await webActions.verifyPageLabel('//self::ccd-read-fixed-list-field/span',
+            ["Potentially harmful evidence", benefitCode, issueCode]);   
+        await webActions.verifyPageLabel('//self::ccd-read-yes-no-field/span', [uploadResponseTestdata.poAttendOption]);
+    }
+
+    async verifyCYAPageContentWithUCB(headingValue: string, benefitCode?: string, issueCode?: string, caseType?: string) {
+
+        await webActions.verifyPageLabel('.govuk-heading-l', headingValue); //Heading Text
+        await webActions.verifyPageLabel('form.check-your-answers h2.heading-h2', eventTestData.eventSummarycheckYourAnswersHeading);//Check your answers Text.
+        await webActions.verifyPageLabel('//self::ccd-read-fixed-list-field/span',
+            [benefitCode, issueCode]);   
+        await webActions.verifyPageLabel('//self::ccd-read-yes-no-field/span', ["Yes", uploadResponseTestdata.poAttendOption]);
     }
 
     async confirmSubmission(): Promise<void> {

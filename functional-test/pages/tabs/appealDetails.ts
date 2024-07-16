@@ -23,13 +23,28 @@ export class AppealDetails {
         const ftaDueDate = new Date();
         ftaDueDate.setDate(new Date().getDate() + 28);
         let formattedDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(ftaDueDate);
-        this.verifyAppealDetailsPageContentByKeyValue('FTA response due date', formattedDate);
+        await this.verifyAppealDetailsPageContentByKeyValue('FTA response due date', formattedDate);
     }
 
     async verifydueDates(reqField: string){
         const dueDate = new Date();
         dueDate.setDate(new Date().getDate());
         let fomattedDueDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(dueDate);
-        this.verifyAppealDetailsPageContentByKeyValue(reqField, fomattedDueDate);
+        await this.verifyAppealDetailsPageContentByKeyValue(reqField, fomattedDueDate);
+    }
+
+    async verifyAppealDetailsAppointeeDetails(appointeeData) {
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.firstNameTextFieldLabel, appointeeData.firstNameValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.lastNameTextFieldLabel, appointeeData.lastNameValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.dateOfBirthTextFieldLabel, appointeeData.dobFormattedValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.nationalInsuranceNumberTextFieldLabel,  appointeeData.ninoValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.addressLine1TextFieldLabel, appointeeData.streetAddressValue1);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.addressLine2TextFieldLabelNoOptional, appointeeData.streetAddressValue2);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.townTextFieldLabel, appointeeData.townValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.countyTextFieldLabel, appointeeData.countyValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.postcodeTextFieldLabel, appointeeData.postcodeValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.contactNumberTextFieldLabelNoOptional, appointeeData.phoneValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.mobileNumberTextFieldLabelNoOptional, appointeeData.mobileValue);
+        await this.verifyAppealDetailsPageContentByKeyValue(appointeeData.contactEmailTextFieldLabelNoOptional, appointeeData.emailValue);
     }
 }
