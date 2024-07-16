@@ -25,7 +25,6 @@ export class RequestInfoFromParty extends BaseStep {
     async performRequestInfoFromPartyEvent(caseId: string, loginRequired: boolean = true) {
         if (loginRequired) {
             await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
-            // await this.homePage.reloadPage();
         }
 
         await this.homePage.chooseEvent('Request info from party');
@@ -59,7 +58,7 @@ export class RequestInfoFromParty extends BaseStep {
     async verifyCtscAdminWithoutCaseAllocatorRoleCanViewReviewInformationRequestedTask(caseId: string) {
 
         // Verify CTSC Admin can view the unassigned Review Information Requested task
-        await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
+        await this.performRequestInfoFromPartyEvent(caseId);
         await this.homePage.navigateToTab('Tasks');
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
         await this.tasksTab.verifyPriortiy(task.name, task.priority);
@@ -103,9 +102,7 @@ export class RequestInfoFromParty extends BaseStep {
 
     async verifyReviewInformationRequestedTaskIsCancelledAutomaticallyWhenTheCaseIsVoid(caseId: string) {
 
-        let voidCase = new VoidCase(this.page);
-
-         // Verify CTSC Admin with case allocator role can view the unassigned Review Information Requested task
+        // Verify CTSC Admin with case allocator role can view the unassigned Review Information Requested task
         await this.loginUserWithCaseId(credentials.amCaseWorkerWithCaseAllocatorRole, false, caseId);
         await this.homePage.navigateToTab('Tasks')
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
@@ -117,6 +114,7 @@ export class RequestInfoFromParty extends BaseStep {
         await this.tasksTab.verifyManageOptions(task.name, task.assignedManageOptionsForCaseAllocator);
 
         // CTSC Administrator voids the case
+        let voidCase = new VoidCase(this.page);
         await voidCase.performVoidCase(caseId, false);
 
         // Verify task is removed from the tasks list within Tasks tab
