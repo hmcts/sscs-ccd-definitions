@@ -1,6 +1,6 @@
 import {test} from "../lib/steps.factory";
 
-test.describe('Link a case tests', () => {
+test.describe('Link a case tests', {tag: '@pipeline'}, () => {
 
 
     // Happy Path test:

@@ -5,7 +5,7 @@ let caseId: string;
 test.beforeAll("Case has to be Created", async () => {
     caseId = await createCaseBasedOnCaseType('PIP');
 });
-test("As a caseworker set a Case to Dormant", {tag: '@pipeline'},
+test("As a caseworker set a Case to Dormant",
     async ({sendToDormantSteps}) => {
     await sendToDormantSteps.performSendToDormant(caseId);
 });
