@@ -64,6 +64,11 @@ export class History {
     }
 
     async verifyEventCompleted(linkText: string) {
-        await expect(this.page.getByRole('link', { name: linkText})).toBeVisible();
+        await expect(this.page.getByRole('link', { name: linkText }).first()).toBeVisible();
+    }
+
+    async verifyPresenceOfTitle(fieldValue: string) {
+        let text = await this.page.locator(`//div/markdown/h2[contains(text(),"${fieldValue}")]`).textContent()
+        expect(text).toContain(fieldValue); // TODO An exact match is not done as there is Text from Upper nodes of the Dom Tree Appearing.
     }
 }

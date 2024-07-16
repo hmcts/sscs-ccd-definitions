@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test';
 import eventTestData from "../../pages/content/event.name.event.description_en.json";
+import appointeeDetailsData from "../../pages/content/appointee.details_en.json";
 import { SendToJudgePage } from '../../pages/send.to.judge.page';
 import { BaseStep } from './base';
 import {credentials} from "../../config/config";
@@ -38,7 +39,7 @@ export class DeathOfAnAppelant extends BaseStep {
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Date of appellant death','1 Jun 2003');
         await  deathOfAppellantPage.signOut();
 
-        await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.verifyHistoryTabLink('Death of appellant');
         await performAppealDormantOnCase(caseId);
     }
@@ -62,18 +63,7 @@ export class DeathOfAnAppelant extends BaseStep {
 
         await this.homePage.navigateToTab("Appeal Details");
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Date of appellant death','1 Jun 2003');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('First Name','Automation');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Last Name','Tester');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Date of birth','1 Jun 1975');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('National insurance number','WX564421C');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Address Line 1','50 Egerton Gate,');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Address Line 2','SBH');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Town','Swansea');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('County','Bucks');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Postcode','NK5 7LL');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Contact Number','+44 7818411015');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Mobile Number','+44 7818411015');
-        await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Contact Email','test_xxx@hmcts.net');
+        await this.appealDetailsTab.verifyAppealDetailsAppointeeDetails(appointeeDetailsData);
         await  deathOfAppellantPage.signOut();
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);

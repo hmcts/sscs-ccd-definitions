@@ -1,7 +1,9 @@
 {
     "eventName": "Action further evidence",
+    "eventNameCaptor": "Action further evidence",
     "sender": "Appellant (or Appointee)",
     "ftaSender": "FTA",
+    "other" : "Other",
     "urgentDocType": "Urgent hearing request",
     "reinstatementDocType": "Reinstatement request",
     "testfileone" : "testfile1.pdf",
