@@ -23,6 +23,7 @@ export class HomePage {
     readonly documentsTab: Locator;
     readonly listingRequirementsTab: Locator;
     readonly subscriptionsTab: Locator;
+    readonly audioVideoEvidenceTab: Locator;
 
 
     constructor(page: Page) {
@@ -41,6 +42,7 @@ export class HomePage {
         this.hearingRecordingsTab = page.getByRole('tab', { name: 'Hearing Recordings', exact: true });
         this.documentsTab = page.getByRole('tab', { name: 'Documents', exact: true });
         this.listingRequirementsTab = page.getByRole('tab', { name: 'Listing Requirements', exact: true });
+        this.audioVideoEvidenceTab = page.getByRole('tab', { name: 'Audio/Video evidence', exact: true });
         this.beforeTabBtn = page.locator('//html/body/exui-root/exui-case-home/div/exui-case-details-home/exui-case-viewer-container/ccd-case-viewer/div/ccd-case-full-access-view/div[2]/div/mat-tab-group/mat-tab-header/button[1]/div');
         this.subscriptionsTab = page.getByRole('tab', { name: 'Subscriptions', exact: true });
 
@@ -150,6 +152,11 @@ export class HomePage {
             case "Listing Requirements": {
                 await expect(this.listingRequirementsTab).toBeVisible();
                 await this.listingRequirementsTab.click();
+                break;
+            }
+            case "Audio/Video Evidence": {
+                await expect(this.audioVideoEvidenceTab).toBeVisible();
+                await this.audioVideoEvidenceTab.click();
                 break;
             }
             case "Subscriptions": {

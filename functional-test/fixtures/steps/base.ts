@@ -41,6 +41,7 @@ import { ListingRequirements } from '../../pages/tabs/listing.requirements';
 import { UpdateUCBPage } from '../../pages/update.ucb.page';
 import { UpdateSubscriptionPage } from '../../pages/update.subscription.page';
 import { Subscriptions } from '../../pages/tabs/subscriptions';
+import { AudioVideoEvidence } from '../../pages/tabs/audioVideoEvidence';
 
 export abstract class BaseStep {
 
@@ -86,6 +87,7 @@ export abstract class BaseStep {
   protected updateUCBPage: UpdateUCBPage;
   protected updateSubscriptionPage: UpdateSubscriptionPage;
   protected subscriptionsTab: Subscriptions;
+  protected avTab: AudioVideoEvidence;
 
    constructor(page: Page) {
         this.page = page;
@@ -130,6 +132,7 @@ export abstract class BaseStep {
         this.updateUCBPage = new UpdateUCBPage(this.page);
         this.updateSubscriptionPage = new UpdateSubscriptionPage(this.page);
         this.subscriptionsTab = new Subscriptions(this.page);
+        this.avTab = new AudioVideoEvidence(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {

@@ -3,7 +3,7 @@ import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.fa
 
 let caseId: string;
 
-test("Performing Update subscription event for all parties PIP case", { tag: '@wip' }, async ({ updateSubscriptionSteps }) => {
+test("Performing Update subscription event for all parties PIP case", async ({ updateSubscriptionSteps }) => {
     test.slow();
     await updateSubscriptionSteps.performUpdateSubscription(caseId);
 })

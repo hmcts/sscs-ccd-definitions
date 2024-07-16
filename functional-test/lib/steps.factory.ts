@@ -34,7 +34,9 @@ import { UpdateLanguagePreference } from '../fixtures/steps/update.language.pref
 import { ReviewPHE } from '../fixtures/steps/review.phe';
 import { IssueDirectionsNotice } from "../fixtures/steps/issue.directions.notice";
 import { UpdateUCB } from "../fixtures/steps/update.ucb";
-import { UpdateSubscription } from '../fixtures/steps/update.subscription'
+import { UpdateSubscription } from '../fixtures/steps/update.subscription';
+import { ProcessAVEvidence } from '../fixtures/steps/process.av.evidence';
+
 
 
 type MyStepsFixtures = {
@@ -74,6 +76,7 @@ type MyStepsFixtures = {
     issueDirectionsNoticeSteps: IssueDirectionsNotice
     updateUCBSteps: UpdateUCB
     updateSubscriptionSteps: UpdateSubscription
+    processAVEvidenceSteps: ProcessAVEvidence
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -220,5 +223,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     updateSubscriptionSteps: async ({ page }, use) => {
         const updateSubscriptionSteps = new UpdateSubscription(page);
         await use(updateSubscriptionSteps);
+    },
+    processAVEvidenceSteps: async ({ page }, use) => {
+        const processAVEvidenceSteps = new ProcessAVEvidence(page);
+        await use(processAVEvidenceSteps);
     }
 })
