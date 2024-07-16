@@ -142,7 +142,7 @@ export class WriteFinalDecisionPages {
     }
 
     async inputPageContentForReasonForDecisionPageData() {
-        await webActions.inputField("#writeFinalDecisionReasons_value", writeFinalDecisionData.reasonsForDecisionInput)
+        await webActions.typeField("#writeFinalDecisionReasons_value", writeFinalDecisionData.reasonsForDecisionInput)
     }
 
     async verifyPageContentForAnythingElseDecisionPage() {
