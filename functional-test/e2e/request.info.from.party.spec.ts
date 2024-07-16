@@ -8,15 +8,15 @@ test.describe.serial('WA - Review Information Requested CTSC task initiation and
 
     let caseId : string;
 
-    test.beforeAll("Create case and complete request info from party event", async ({requestInfoFromPartySteps}) => {
+    test.beforeAll("Create case and complete request info from party event", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
-        await requestInfoFromPartySteps.performRequestInfoFromPartyEvent(caseId);
     });
 
     test("As a CSTC Admin without case allocator role, Review Information Requested Task", async ({
         requestInfoFromPartySteps}) => {
 
         test.slow();
+        await requestInfoFromPartySteps.performRequestInfoFromPartyEvent(caseId);
         await requestInfoFromPartySteps.verifyCtscAdminWithoutCaseAllocatorRoleCanViewReviewInformationRequestedTask(caseId);
     });
 
@@ -45,16 +45,15 @@ test.describe('WA - Review Information Requested CTSC task automatic cancellatio
 
     let caseId : string;
 
-    test.beforeAll("Case has to be Created", async ({requestInfoFromPartySteps}) => {
-        caseId = await createCaseBasedOnCaseType('PIPINCOMPLETE');
-        await requestInfoFromPartySteps.performRequestInfoFromPartyEvent(caseId);
+    test.beforeAll("Case has to be Created", async () => {
+        caseId = await createCaseBasedOnCaseType('PIP');
     });
 
     test("Review Information Requested task is cancelled automatically when case is void", async ({
         requestInfoFromPartySteps}) => {
 
         test.slow();
-        
+        await requestInfoFromPartySteps.performRequestInfoFromPartyEvent(caseId);
         await requestInfoFromPartySteps.verifyReviewInformationRequestedTaskIsCancelledAutomaticallyWhenTheCaseIsVoid(caseId);
     });
 
