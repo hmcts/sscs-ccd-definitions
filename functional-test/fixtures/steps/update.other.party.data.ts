@@ -48,8 +48,8 @@ export class UpdateOtherPartyData extends BaseStep {
         await this.historyTab.verifyPageContentByKeyValue('Event', 'Update subscription');
 
         // Navigate to Other Party Details tab + validations
-        await this.homePage.navigateToTab("Other Party Details");
-        await this.homePage.delay(1000);
+        await this.verifyOtherPartyDetails("Other parties");
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue;
         await this.otherPartyDetailsTab.verifyTabDetails;
     }
 
@@ -84,8 +84,8 @@ export class UpdateOtherPartyData extends BaseStep {
         await this.historyTab.verifyPageContentByKeyValue('Event', 'Update subscription');
 
         // Navigate to Other Party Details tab + validations
-        await this.homePage.navigateToTab("Other Party Details");
-        await this.homePage.delay(1000);
+        await this.verifyOtherPartyDetails("Other parties");
+        await this.otherPartyDetailsTab.verifyPageContentByKeyValue;
         await this.otherPartyDetailsTab.verifyTabDetails;
     }
         

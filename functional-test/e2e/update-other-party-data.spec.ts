@@ -3,12 +3,12 @@ import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.fa
 
 let caseId: string;
 
-test("Adding Other party data + subscription in a ChildSupport case", async ({ updateOtherPartyDataSteps }) => {
+test("Adding Other party data + subscription in a ChildSupport case", { tag: '@pipeline' }, async ({ updateOtherPartyDataSteps }) => {
     test.slow();
     await updateOtherPartyDataSteps.performUpdateOtherPartyData(caseId);
 })
 
-test("Adding Other party data + subscription in a TaxCredit case", async ({ updateOtherPartyDataSteps }) => {
+test("Adding Other party data + subscription in a TaxCredit case", { tag: '@pipeline' }, async ({ updateOtherPartyDataSteps }) => {
     test.slow();
     await updateOtherPartyDataSteps.performUpdateOtherPartyDataTaxCredit(caseId);
 })
