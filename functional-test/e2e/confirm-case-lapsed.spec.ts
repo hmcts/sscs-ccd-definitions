@@ -5,11 +5,11 @@ let caseId : string;
 test.beforeAll("Case has to be Created",async () => {
     caseId = await createCaseBasedOnCaseType('CHILDSUPPORT');
 });
-test("Test that the Case can be lapsed", async ({ confirmCaseLapsedSteps }) => {
+test("Test that the Case can be lapsed", {tag: '@pipeline'}, async ({ confirmCaseLapsedSteps }) => {
     await confirmCaseLapsedSteps.performConfirmCaseLapsed(caseId);
 });
 
-// test.afterAll("Case has to be set to Dormant",async () => {
-//     await performAppealDormantOnCase(caseId);
-// });
+test.afterAll("Case has to be set to Dormant",async () => {
+    await performAppealDormantOnCase(caseId);
+});
 

@@ -2,7 +2,7 @@ import {test} from "../lib/steps.factory";
 import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.factory";
 import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
-test.describe('Provide Appointee Details to a Non Dormant Case', async() => {
+test.describe('Provide Appointee Details to a Non Dormant Case', {tag: '@pipeline'}, async() => {
     let caseId: string;
     test.beforeAll("A non Dormant case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
@@ -13,7 +13,7 @@ test.describe('Provide Appointee Details to a Non Dormant Case', async() => {
     });
 });
 
-test.describe('Provide No Appointee Details on a Dormant Case', async() => {
+test.describe('Provide No Appointee Details on a Dormant Case',  {tag: '@pipeline'}, async() => {
     let caseId: string;
     test.beforeAll("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
@@ -25,7 +25,7 @@ test.describe('Provide No Appointee Details on a Dormant Case', async() => {
     });
 });
 
-test.describe('Provide Appointee Details on a Dormant Case', async() => {
+test.describe('Provide Appointee Details on a Dormant Case', {tag: '@pipeline'}, async() => {
     let caseId: string;
     test.beforeAll("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');

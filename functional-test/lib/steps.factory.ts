@@ -31,6 +31,9 @@ import { ReviewBFDateTask } from '../fixtures/steps/work-allocation/review.bf.da
 import { SupplementaryResponse } from '../fixtures/steps/supplementary.response';
 import { UploadDocumentFurtherEvidence } from '../fixtures/steps/upload.document.further.evidence';
 import { UpdateLanguagePreference } from '../fixtures/steps/update.language.preference';
+import { ReviewPHE } from '../fixtures/steps/review.phe';
+import { UpdateUCB } from "../fixtures/steps/update.ucb";
+import { UpdateSubscription } from '../fixtures/steps/update.subscription'
 import {IssueDirectionsNotice} from "../fixtures/steps/issue.directions.notice";
 import {WriteFinalDecision} from "../fixtures/steps/write.final.decision";
 
@@ -69,7 +72,10 @@ type MyStepsFixtures = {
     supplementaryResponseSteps: SupplementaryResponse
     uploadDocumentFurtherEvidenceSteps: UploadDocumentFurtherEvidence
     updateLanguagePreferenceSteps: UpdateLanguagePreference
+    reviewPHESteps: ReviewPHE
     issueDirectionsNoticeSteps: IssueDirectionsNotice
+    updateUCBSteps: UpdateUCB
+    updateSubscriptionSteps: UpdateSubscription
     issueFinalDecisionSteps: WriteFinalDecision
 };
 
@@ -205,6 +211,18 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     updateLanguagePreferenceSteps:async ({ page }, use) => {
         const updateLanguagePreferenceSteps = new UpdateLanguagePreference(page);
         await use(updateLanguagePreferenceSteps);
+    },
+    reviewPHESteps:async ({ page }, use) => {
+        const reviewPHESteps = new ReviewPHE(page);
+        await use(reviewPHESteps);
+    },
+    updateUCBSteps:async ({ page }, use) => {
+        const updateUCBSteps = new UpdateUCB(page);
+        await use(updateUCBSteps);
+    },
+    updateSubscriptionSteps: async ({ page }, use) => {
+        const updateSubscriptionSteps = new UpdateSubscription(page);
+        await use(updateSubscriptionSteps);
     },
     issueFinalDecisionSteps:async ({ page }, use) => {
         const issueFinalDecisionSteps = new WriteFinalDecision(page);
