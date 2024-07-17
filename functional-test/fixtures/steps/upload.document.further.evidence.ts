@@ -147,7 +147,7 @@ export class UploadDocumentFurtherEvidence extends BaseStep {
         await this.tasksTab.verifyTaskIsHidden(aucTask.name);
     }
 
-    async verifyUnassignedReviewBilingualDocumentTaskIsCancelledWhenTranslationsAreCancelledByCtscAdmin(caseId: string) {
+    async verifyCtscAdminCanViewBilingualDocumentTaskAndCancelWelshTranslations(caseId: string) {
 
         // Verify CTSC Admin can view the unassigned Review Bi-Lingual Document task
         await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);

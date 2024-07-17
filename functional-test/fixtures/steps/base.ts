@@ -44,6 +44,9 @@ import { UpdateSubscriptionPage } from '../../pages/update.subscription.page';
 import { Subscriptions } from '../../pages/tabs/subscriptions';
 import { AudioVideoEvidence } from '../../pages/tabs/audioVideoEvidence';
 import { ProcessAVPage } from '../../pages/process.av.page';
+import { OtherPartyDetails } from '../../pages/tabs/other.party.details';
+import { updateOtherPartyDataPage } from '../../pages/update.other.party.data.page';
+
 
 export abstract class BaseStep {
 
@@ -92,8 +95,10 @@ export abstract class BaseStep {
   protected subscriptionsTab: Subscriptions;
   protected avTab: AudioVideoEvidence;
   protected processAVPage: ProcessAVPage;
+  protected updateOtherPartyDataPage: updateOtherPartyDataPage;
+  protected otherPartyDetailsTab: OtherPartyDetails;
 
-   constructor(page: Page) {
+    constructor(page: Page) {
         this.page = page;
         this.loginPage = new LoginPage(this.page);
         this.homePage = new HomePage(this.page);
@@ -139,7 +144,9 @@ export abstract class BaseStep {
         this.subscriptionsTab = new Subscriptions(this.page);
         this.avTab = new AudioVideoEvidence(this.page);
         this.processAVPage = new ProcessAVPage(this.page);
-   }
+        this.updateOtherPartyDataPage = new updateOtherPartyDataPage(this.page);
+        this.otherPartyDetailsTab = new OtherPartyDetails(this.page);
+    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
         await this.loginPage.goToLoginPage();
@@ -158,5 +165,9 @@ export abstract class BaseStep {
 
     async verifyHistoryTabLink(linkLabel: string) {
         await this.historyTab.verifyHistoryPageEventLink(linkLabel);
+    }
+    async verifyOtherPartyDetails(state?: string, event?: string, comment?: string) {
+        await this.homePage.navigateToTab("Other Party Details");
+        await this.homePage.delay(1000);
     }
 }
