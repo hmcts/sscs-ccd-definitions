@@ -37,14 +37,14 @@ export class Reinstatement extends BaseStep {
         await this.homePage.reloadPage();
 
         await this.loginUserWithCaseId(credentials.judge, true, caseId);
-        await this.homePage.chooseEvent(issueDirectionTestdata.eventName);
+        await this.homePage.chooseEvent(issueDirectionTestdata.eventNameCaptor);
 
         await this.issueDirectionPage.submitIssueDirection(
-            issueDirectionTestdata.hearingType, 
+            issueDirectionTestdata.preHearingType,
             issueDirectionTestdata.grantReinstatementOption, 
             issueDirectionTestdata.docTitle
         );
-        await this.eventNameAndDescriptionPage.verifyPageContent(issueDirectionTestdata.eventName);
+        await this.eventNameAndDescriptionPage.verifyPageContent(issueDirectionTestdata.eventNameCaptor);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
         await this.homePage.navigateToTab("Appeal Details");
@@ -78,14 +78,14 @@ export class Reinstatement extends BaseStep {
         await this.homePage.reloadPage();
 
         await this.loginUserWithCaseId(credentials.judge, true, caseId);
-        await this.homePage.chooseEvent(issueDirectionTestdata.eventName);
+        await this.homePage.chooseEvent(issueDirectionTestdata.eventNameCaptor);
 
         await this.issueDirectionPage.submitIssueDirection(
-            issueDirectionTestdata.hearingType, 
+            issueDirectionTestdata.preHearingType,
             issueDirectionTestdata.refuseReinstatementOption, 
             issueDirectionTestdata.docTitle
         );
-        await this.eventNameAndDescriptionPage.verifyPageContent(issueDirectionTestdata.eventName);
+        await this.eventNameAndDescriptionPage.verifyPageContent(issueDirectionTestdata.eventNameCaptor);
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
         await this.homePage.navigateToTab("Appeal Details");

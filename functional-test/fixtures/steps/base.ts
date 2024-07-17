@@ -20,13 +20,27 @@ import { ActionFurtherEvidencePage } from '../../pages/action.further.evidence.p
 import { IssueDirectionPage } from '../../pages/issue.direction.page';
 import { RequestInfoFromPartyPage } from '../../pages/request.info.from.party.page';
 import { Bundles } from '../../pages/tabs/bundles';
-import { CreateBundle } from './create.bundle';
 import { CreateBundlePage } from '../../pages/create.bundle';
 import {LinkCasePage} from "../../pages/link.case.page";
+import { ProvideAppointeeDetailsPage } from '../../pages/provide.appointee.details.page';
+import { AddHearingPage } from '../../pages/add.hearing.page';
+import { HearingBookedPage } from '../../pages/hearing.booked.page';
+import { UploadRecordingPage } from '../../pages/upload.recording.page';
+import { HearingRecordings } from '../../pages/tabs/hearing.recordings';
+import { RequestRecordingPage } from '../../pages/request.recording.page';
+import { ActionRecordingPage } from '../../pages/action.recording.page';
+import { Documents } from "../../pages/tabs/documents";
+import { UploadDocumentPage } from "../../pages/upload.document.page";
 import { RolesAndAccess } from "../../pages/tabs/roles.and.access";
 import { SupplementaryResponsePage } from "../../pages/supplementary.response.page";
 import { UploadDocumentFurtherEvidencePage } from '../../pages/upload.document.further.evidence.page';
-
+import { UpdateLanguagePreferencePage } from '../../pages/update.language.preference.page';
+import { Welsh } from '../../pages/tabs/welsh';
+import { ReviewPHEPage } from '../../pages/review.phe.page';
+import { ListingRequirements } from '../../pages/tabs/listing.requirements';
+import { UpdateUCBPage } from '../../pages/update.ucb.page';
+import { UpdateSubscriptionPage } from '../../pages/update.subscription.page';
+import { Subscriptions } from '../../pages/tabs/subscriptions';
 
 export abstract class BaseStep {
 
@@ -46,6 +60,7 @@ export abstract class BaseStep {
   protected appealDetailsTab: AppealDetails;
   protected summaryTab: Summary;
   protected tasksTab: Tasks;
+  protected welshTab: Welsh;
   protected bundlesTab: Bundles;
   protected createBundlePage: CreateBundlePage;
   protected requestTimeExtensionPage: RequestTimeExtensionPage;
@@ -53,10 +68,24 @@ export abstract class BaseStep {
   protected issueDirectionPage: IssueDirectionPage;
   protected requestInfoFromPartyPage: RequestInfoFromPartyPage;
   protected linkACasePage: LinkCasePage;
+  protected provideAppointeeDetailsPage: ProvideAppointeeDetailsPage;
+  protected addHearingPage: AddHearingPage;
+  protected hearingBookedPage: HearingBookedPage;
+  protected uploadRecordingPage: UploadRecordingPage;
+  protected hearingRecordingsTab: HearingRecordings;
+  protected requestRecordingPage: RequestRecordingPage;
+  protected actionRecordingPage: ActionRecordingPage;
+  protected documentsTab: Documents;
+  protected uploadDocumentPage: UploadDocumentPage;
   protected rolesAndAccessTab: RolesAndAccess;
   protected supplementaryResponsePage: SupplementaryResponsePage;
   protected uploadDocumentFurtherEvidencePage: UploadDocumentFurtherEvidencePage;
-
+  protected updateLanguagePreferencePage: UpdateLanguagePreferencePage;
+  protected reviewPHEPage: ReviewPHEPage;
+  protected listingRequirementsTab: ListingRequirements;
+  protected updateUCBPage: UpdateUCBPage;
+  protected updateSubscriptionPage: UpdateSubscriptionPage;
+  protected subscriptionsTab: Subscriptions;
 
    constructor(page: Page) {
         this.page = page;
@@ -75,6 +104,7 @@ export abstract class BaseStep {
         this.summaryTab = new Summary(this.page);
         this.textAreaPage = new TextAreaPage(this.page);
         this.tasksTab = new Tasks(this.page);
+        this.welshTab = new Welsh(this.page);
         this.requestTimeExtensionPage = new RequestTimeExtensionPage(this.page);
         this.actionFurtherEvidencePage = new ActionFurtherEvidencePage(this.page);
         this.issueDirectionPage = new IssueDirectionPage(this.page);
@@ -82,9 +112,24 @@ export abstract class BaseStep {
         this.bundlesTab = new Bundles(this.page);
         this.createBundlePage = new CreateBundlePage(this.page);
         this.linkACasePage = new LinkCasePage(this.page);
+        this.provideAppointeeDetailsPage = new ProvideAppointeeDetailsPage(this.page);
+        this.addHearingPage = new AddHearingPage(this.page);
+        this.hearingBookedPage = new HearingBookedPage(this.page);
+        this.uploadRecordingPage = new UploadRecordingPage(this.page);
+        this.hearingRecordingsTab = new HearingRecordings(this.page);
+        this.requestRecordingPage = new RequestRecordingPage(this.page);
+        this.actionRecordingPage = new ActionRecordingPage(this.page);
+        this.documentsTab = new Documents(this.page);
+        this.uploadDocumentPage = new UploadDocumentPage(this.page);
         this.rolesAndAccessTab = new RolesAndAccess(this.page);
         this.supplementaryResponsePage = new SupplementaryResponsePage(this.page);
         this.uploadDocumentFurtherEvidencePage = new UploadDocumentFurtherEvidencePage(this.page);
+        this.updateLanguagePreferencePage = new UpdateLanguagePreferencePage(this.page);
+        this.reviewPHEPage = new ReviewPHEPage(this.page);
+        this.listingRequirementsTab = new ListingRequirements(this.page);
+        this.updateUCBPage = new UpdateUCBPage(this.page);
+        this.updateSubscriptionPage = new UpdateSubscriptionPage(this.page);
+        this.subscriptionsTab = new Subscriptions(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {

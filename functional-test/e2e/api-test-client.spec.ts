@@ -22,7 +22,7 @@ test("Test to Make an Appeal Dormant", async ({addNoteSteps}) => {
     await performEventOnCaseWithUploadResponse(judgeToken.trim(),
         serviceTokenForJudge.trim(), judgeUserId.trim(),
         'SSCS','Benefit',
-        childSupportCaseId.trim(),'dwpUploadResponse');
+        childSupportCaseId.trim(),'dwpUploadResponse','dwp');
 
 
    /* let token: string = await accessToken(credentials.amSuperUser);
@@ -40,7 +40,7 @@ test("Test to Make an Appeal Dormant", async ({addNoteSteps}) => {
 
 /*test.only("Temporary testing of the JSON Node on Json Node", async ({addNoteSteps}) => {
 
-    fs.readFile('./functional-test/api/data/payload/upload-response/upload-response.json', function read(err, data) {
+    fs.readFile('./functional-test/api/data/payload/upload-response/upload-response-dwp-022-EC.json', function read(err, data) {
         if (err) {
             throw err;
         }

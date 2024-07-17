@@ -23,12 +23,18 @@ import { ReviewIncompleteAppealTask } from '../fixtures/steps/work-allocation/re
 import { RequestInfoFromParty } from '../fixtures/steps/request.info.from.party';
 import { Reinstatement } from '../fixtures/steps/reinstatement';
 import { AppealDormant } from '../fixtures/steps/appeal.dormant';
-import {DeathOfAnAppelant} from "../fixtures/steps/death.of.an.appelant";
-import {LinkCase} from "../fixtures/steps/link-case";
+import { ProvideAppointeeDetails } from '../fixtures/steps/provide.appointee.details';
+import { UploadHearing } from "../fixtures/steps/upload.hearing";
+import { DeathOfAnAppelant } from "../fixtures/steps/death.of.an.appelant";
+import { LinkCase } from "../fixtures/steps/link-case";
 import { ReviewBFDateTask } from '../fixtures/steps/work-allocation/review.bf.date.task';
 import { SupplementaryResponse } from '../fixtures/steps/supplementary.response';
 import { UploadDocumentFurtherEvidence } from '../fixtures/steps/upload.document.further.evidence';
-
+import { UpdateLanguagePreference } from '../fixtures/steps/update.language.preference';
+import { ReviewPHE } from '../fixtures/steps/review.phe';
+import { IssueDirectionsNotice } from "../fixtures/steps/issue.directions.notice";
+import { UpdateUCB } from "../fixtures/steps/update.ucb";
+import { UpdateSubscription } from '../fixtures/steps/update.subscription'
 
 
 type MyStepsFixtures = {
@@ -58,9 +64,16 @@ type MyStepsFixtures = {
     appealDormantSteps: AppealDormant
     deathOfAppellant : DeathOfAnAppelant
     linkACaseSteps: LinkCase
+    provideAppointeeDetailsSteps: ProvideAppointeeDetails
+    uploadHearingSteps: UploadHearing
     reviewBFDateTaskSteps: ReviewBFDateTask
     supplementaryResponseSteps: SupplementaryResponse
     uploadDocumentFurtherEvidenceSteps: UploadDocumentFurtherEvidence
+    updateLanguagePreferenceSteps: UpdateLanguagePreference
+    reviewPHESteps: ReviewPHE
+    issueDirectionsNoticeSteps: IssueDirectionsNotice
+    updateUCBSteps: UpdateUCB
+    updateSubscriptionSteps: UpdateSubscription
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -130,7 +143,7 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     },
     listingErrorSteps:async ({page}, use) => {
         const listingErrorSteps = new ListingError(page);
-        await use(listingErrorSteps)
+        await use(listingErrorSteps);
     },
     appealWithdrawnSteps:async ({page}, use) => {
         const appealWithdrawnSteps = new AppealWithdrawn(page);
@@ -148,7 +161,11 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
         const urgentHearingSteps = new UrgentHearing(page);
         await use(urgentHearingSteps);
     },
-    reinstatementSteps:async ({page}, use) => {
+    issueDirectionsNoticeSteps:async ({page}, use) =>{
+        const issueDirectionsNoticeSteps = new IssueDirectionsNotice(page);
+        await use(issueDirectionsNoticeSteps);
+    },
+    reinstatementSteps:async ({page}, use) =>{
         const reinstatementSteps = new Reinstatement(page);
         await use(reinstatementSteps);
     },
@@ -163,6 +180,14 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
      linkACaseSteps:async ({page}, use)=> {
         const linkACaseSteps = new LinkCase(page);
         await use(linkACaseSteps)
+    },
+    provideAppointeeDetailsSteps:async ({page}, use)=>{
+        const provideAppointeeDetailsSteps = new ProvideAppointeeDetails(page);
+        await use(provideAppointeeDetailsSteps)
+    },
+    uploadHearingSteps:async ({page}, use) =>{
+        const uploadHearingSteps = new UploadHearing(page);
+        await use(uploadHearingSteps);
     },
     requestInfoFromPartySteps:async ({page}, use) => {
         const requestInfoFromPartySteps = new RequestInfoFromParty(page);
@@ -179,5 +204,21 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     uploadDocumentFurtherEvidenceSteps:async ({ page }, use) => {
         const uploadDocumentFurtherEvidenceSteps = new UploadDocumentFurtherEvidence(page);
         await use(uploadDocumentFurtherEvidenceSteps);
+    },
+    updateLanguagePreferenceSteps:async ({ page }, use) => {
+        const updateLanguagePreferenceSteps = new UpdateLanguagePreference(page);
+        await use(updateLanguagePreferenceSteps);
+    },
+    reviewPHESteps:async ({ page }, use) => {
+        const reviewPHESteps = new ReviewPHE(page);
+        await use(reviewPHESteps);
+    },
+    updateUCBSteps:async ({ page }, use) => {
+        const updateUCBSteps = new UpdateUCB(page);
+        await use(updateUCBSteps);
+    },
+    updateSubscriptionSteps: async ({ page }, use) => {
+        const updateSubscriptionSteps = new UpdateSubscription(page);
+        await use(updateSubscriptionSteps);
     }
 })

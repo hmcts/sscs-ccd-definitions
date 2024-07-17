@@ -46,7 +46,9 @@ export class CreateBundle extends BaseStep {
 
         await this.bundlesTab.verifyBundlesTabContentByKeyValueForASpan(`${bundleTestData.configUsed}`, `${bundleTestData.configUsedDefaultVal}`);
         await this.bundlesTab.verifyBundlesTabContentByKeyValueForASpan(`${bundleTestData.amendBundle}`, `${bundleTestData.amendBundleDefaultVal}`);
+        await this.homePage.clickSignOut();
 
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.homePage.navigateToTab("History");
         await this.verifyHistoryTabDetails("Response received", "Stitching bundle complete");
     }
