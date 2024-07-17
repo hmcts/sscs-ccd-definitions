@@ -39,7 +39,7 @@ export class WriteFinalDecision extends BaseStep {
         await this.homePage.chooseEvent("Write final decision");
 
         //The Type of Appeal Page
-        await this.writeFinalDecisionPage.verifyPageContentTypeOfAppealPage(true)
+        await this.writeFinalDecisionPage.verifyPageContentTypeOfAppealPage(true);
         await this.writeFinalDecisionPage.inputTypeOfAppealPageData(false, true); //No Awards but Generate Notice
         await this.writeFinalDecisionPage.submitContinueBtn();
         await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
@@ -89,7 +89,7 @@ export class WriteFinalDecision extends BaseStep {
         await this.writeFinalDecisionPage.submitContinueBtn();
         await new Promise(f => setTimeout(f, 1000));
 
-        await this.writeFinalDecisionPage.verifyPageContentForCheckYourAnswersPage()
+        await this.writeFinalDecisionPage.verifyPageContentForCheckYourAnswersPage();
         await this.writeFinalDecisionPage.confirmSubmission();
         await this.verifyHistoryTabDetails("Write final decision");
     }
@@ -111,7 +111,7 @@ export class WriteFinalDecision extends BaseStep {
         await this.homePage.chooseEvent("Write final decision");
 
         //The Type of Appeal Page
-        await this.writeFinalDecisionPage.verifyPageContentTypeOfAppealPage(true)
+        await this.writeFinalDecisionPage.verifyPageContentTypeOfAppealPage(true);
         await this.writeFinalDecisionPage.inputTypeOfAppealPageData(true, true); //No Awards but Generate Notice
         await this.writeFinalDecisionPage.submitContinueBtn();
         await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
@@ -184,7 +184,48 @@ export class WriteFinalDecision extends BaseStep {
         await this.writeFinalDecisionPage.submitContinueBtn();
         await new Promise(f => setTimeout(f, 1000));
 
-        await this.writeFinalDecisionPage.verifyPageContentForCheckYourAnswersPageForAwardsCriteria()
+        await this.writeFinalDecisionPage.verifyPageContentForCheckYourAnswersPageForAwardsCriteria();
+        await this.writeFinalDecisionPage.confirmSubmission();
+        await this.verifyHistoryTabDetails("Write final decision");
+    }
+
+    async performWriteFinalDecisionForATaxCreditAppealAndNoNoticeGenerated(taxCreditCaseId) {
+
+        /*await this.loginUserWithCaseId(credentials.caseWorker, false, taxCreditCaseId);
+        await this.homePage.reloadPage();
+        await this.homePage.chooseEvent('Add a hearing');
+        await this.addHearingPage.submitHearing();
+        await this.eventNameAndDescriptionPage.confirmSubmission();
+        await this.homePage.clickSignOut();
+        await this.homePage.delay(3000);*/
+
+
+        /*await this.homePage.delay(3000);
+        await this.homePage.chooseEvent('Hearing booked');
+        await this.hearingBookedPage.submitHearingBooked();
+        await this.homePage.clickSignOut();*/
+
+        await this.loginUserWithCaseId(credentials.judge, false, taxCreditCaseId);
+        await this.homePage.reloadPage();
+        await this.homePage.chooseEvent("Write final decision");
+
+        await this.writeFinalDecisionPage.verifyPageContentTypeOfAppealPage(false)
+        await this.writeFinalDecisionPage.inputTypeOfAppealPageData(false, false, "TAX CREDIT"); //No Awards but Generate Notice
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        //Allowed or Refused Page (Because we opted not in the previous page)
+        await this.writeFinalDecisionPage.verifyPageContentAllowedOrRefusedPage();
+        await this.writeFinalDecisionPage.chooseAllowedOrRefused("#writeFinalDecisionAllowedOrRefused-refused");
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        await this.writeFinalDecisionPage.verifyPageContentForPreviewDecisionNoticePage(true);
+        await this.writeFinalDecisionPage.inputPageContentForPreviewDecisionNoticePageData();
+        await this.writeFinalDecisionPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000));
+
+        await this.writeFinalDecisionPage.verifyPageContentForCheckYourAnswersPageForNoNoticeGenerated();
         await this.writeFinalDecisionPage.confirmSubmission();
         await this.verifyHistoryTabDetails("Write final decision");
     }

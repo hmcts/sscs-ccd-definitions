@@ -25,3 +25,17 @@ test.describe('Issue Final Decision - PIP Appeal Type', {tag: '@pipeline'},  asy
         });
 
 })
+
+test.describe('Issue Final Decision - Tax Credit Appeal Type', {tag: '@pipeline'},  async () => {
+
+    test("Issue Final Decision - Upload Response with Further Information as No - Simple Decision Notice - 'No' notice generated",
+        async ({issueFinalDecisionSteps}) => {
+            test.slow();
+            let taxCreditCaseId = await createCaseBasedOnCaseType('TAX CREDIT');
+            await issueFinalDecisionSteps.performWriteFinalDecisionForATaxCreditAppealAndNoNoticeGenerated(taxCreditCaseId);
+            await issueFinalDecisionSteps.performIssueFinalDecisionForAPIPAppeal(taxCreditCaseId);
+            await performAppealDormantOnCase(taxCreditCaseId);
+        });
+
+
+})
