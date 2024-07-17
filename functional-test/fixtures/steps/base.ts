@@ -42,54 +42,58 @@ import { ListingRequirements } from '../../pages/tabs/listing.requirements';
 import { UpdateUCBPage } from '../../pages/update.ucb.page';
 import { UpdateSubscriptionPage } from '../../pages/update.subscription.page';
 import { Subscriptions } from '../../pages/tabs/subscriptions';
+import { OtherPartyDetails } from '../../pages/tabs/other.party.details';
+import { updateOtherPartyDataPage } from '../../pages/update.other.party.data.page';
 
 export abstract class BaseStep {
 
-  readonly page : Page;
-  protected loginPage: LoginPage;
-  protected homePage: HomePage;
-  protected uploadResponsePage: UploadResponsePage;
-  protected checkYourAnswersPage: CheckYourAnswersPage;
-  protected responseReviewedPage: ResponseReviewedPage;
-  protected addNotePage: AddNote;
-  protected notePadTab: NotePad;
-  protected eventNameAndDescriptionPage: EventNameEventDescriptionPage;
-  protected associateCasePage: AssociateCasePage;
-  protected informationReceivedPage: InformationReceivedPage;
-  protected textAreaPage: TextAreaPage;
-  protected historyTab: History;
-  protected appealDetailsTab: AppealDetails;
-  protected summaryTab: Summary;
-  protected tasksTab: Tasks;
-  protected welshTab: Welsh;
-  protected bundlesTab: Bundles;
-  protected createBundlePage: CreateBundlePage;
-  protected requestTimeExtensionPage: RequestTimeExtensionPage;
-  protected actionFurtherEvidencePage: ActionFurtherEvidencePage;
-  protected issueDirectionPage: IssueDirectionPage;
-  protected requestInfoFromPartyPage: RequestInfoFromPartyPage;
-  protected linkACasePage: LinkCasePage;
-  protected provideAppointeeDetailsPage: ProvideAppointeeDetailsPage;
-  protected addHearingPage: AddHearingPage;
-  protected hearingBookedPage: HearingBookedPage;
-  protected uploadRecordingPage: UploadRecordingPage;
-  protected hearingRecordingsTab: HearingRecordings;
-  protected requestRecordingPage: RequestRecordingPage;
-  protected actionRecordingPage: ActionRecordingPage;
-  protected documentsTab: Documents;
-  protected uploadDocumentPage: UploadDocumentPage;
-  protected rolesAndAccessTab: RolesAndAccess;
-  protected supplementaryResponsePage: SupplementaryResponsePage;
-  protected uploadDocumentFurtherEvidencePage: UploadDocumentFurtherEvidencePage;
-  protected updateLanguagePreferencePage: UpdateLanguagePreferencePage;
-  protected amendInterlocReviewStatePage: AmendInterlocReviewStatePage;
-  protected reviewPHEPage: ReviewPHEPage;
-  protected listingRequirementsTab: ListingRequirements;
-  protected updateUCBPage: UpdateUCBPage;
-  protected updateSubscriptionPage: UpdateSubscriptionPage;
-  protected subscriptionsTab: Subscriptions;
+    readonly page: Page;
+    protected loginPage: LoginPage;
+    protected homePage: HomePage;
+    protected uploadResponsePage: UploadResponsePage;
+    protected checkYourAnswersPage: CheckYourAnswersPage;
+    protected responseReviewedPage: ResponseReviewedPage;
+    protected addNotePage: AddNote;
+    protected notePadTab: NotePad;
+    protected eventNameAndDescriptionPage: EventNameEventDescriptionPage;
+    protected associateCasePage: AssociateCasePage;
+    protected informationReceivedPage: InformationReceivedPage;
+    protected textAreaPage: TextAreaPage;
+    protected historyTab: History;
+    protected appealDetailsTab: AppealDetails;
+    protected summaryTab: Summary;
+    protected tasksTab: Tasks;
+    protected welshTab: Welsh;
+    protected bundlesTab: Bundles;
+    protected createBundlePage: CreateBundlePage;
+    protected requestTimeExtensionPage: RequestTimeExtensionPage;
+    protected actionFurtherEvidencePage: ActionFurtherEvidencePage;
+    protected issueDirectionPage: IssueDirectionPage;
+    protected requestInfoFromPartyPage: RequestInfoFromPartyPage;
+    protected linkACasePage: LinkCasePage;
+    protected provideAppointeeDetailsPage: ProvideAppointeeDetailsPage;
+    protected addHearingPage: AddHearingPage;
+    protected hearingBookedPage: HearingBookedPage;
+    protected uploadRecordingPage: UploadRecordingPage;
+    protected hearingRecordingsTab: HearingRecordings;
+    protected requestRecordingPage: RequestRecordingPage;
+    protected actionRecordingPage: ActionRecordingPage;
+    protected documentsTab: Documents;
+    protected uploadDocumentPage: UploadDocumentPage;
+    protected rolesAndAccessTab: RolesAndAccess;
+    protected supplementaryResponsePage: SupplementaryResponsePage;
+    protected uploadDocumentFurtherEvidencePage: UploadDocumentFurtherEvidencePage;
+    protected updateLanguagePreferencePage: UpdateLanguagePreferencePage;
+    protected amendInterlocReviewStatePage: AmendInterlocReviewStatePage;
+    protected reviewPHEPage: ReviewPHEPage;
+    protected listingRequirementsTab: ListingRequirements;
+    protected updateUCBPage: UpdateUCBPage;
+    protected updateSubscriptionPage: UpdateSubscriptionPage;
+    protected subscriptionsTab: Subscriptions;
+    protected updateOtherPartyDataPage: updateOtherPartyDataPage;
+    protected otherPartyDetailsTab: OtherPartyDetails;
 
-   constructor(page: Page) {
+    constructor(page: Page) {
         this.page = page;
         this.loginPage = new LoginPage(this.page);
         this.homePage = new HomePage(this.page);
@@ -133,7 +137,9 @@ export abstract class BaseStep {
         this.updateUCBPage = new UpdateUCBPage(this.page);
         this.updateSubscriptionPage = new UpdateSubscriptionPage(this.page);
         this.subscriptionsTab = new Subscriptions(this.page);
-   }
+        this.updateOtherPartyDataPage = new updateOtherPartyDataPage(this.page);
+        this.otherPartyDetailsTab = new OtherPartyDetails(this.page);
+    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
         await this.loginPage.goToLoginPage();
@@ -152,5 +158,9 @@ export abstract class BaseStep {
 
     async verifyHistoryTabLink(linkLabel: string) {
         await this.historyTab.verifyHistoryPageEventLink(linkLabel);
+    }
+    async verifyOtherPartyDetails(state?: string, event?: string, comment?: string) {
+        await this.homePage.navigateToTab("Other Party Details");
+        await this.homePage.delay(1000);
     }
 }

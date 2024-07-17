@@ -35,6 +35,7 @@ import { ReviewPHE } from '../fixtures/steps/review.phe';
 import { IssueDirectionsNotice } from "../fixtures/steps/issue.directions.notice";
 import { UpdateUCB } from "../fixtures/steps/update.ucb";
 import { UpdateSubscription } from '../fixtures/steps/update.subscription'
+import { UpdateOtherPartyData } from '../fixtures/steps/update.other.party.data';
 
 
 type MyStepsFixtures = {
@@ -74,6 +75,7 @@ type MyStepsFixtures = {
     issueDirectionsNoticeSteps: IssueDirectionsNotice
     updateUCBSteps: UpdateUCB
     updateSubscriptionSteps: UpdateSubscription
+    updateOtherPartyDataSteps: UpdateOtherPartyData
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -220,5 +222,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     updateSubscriptionSteps: async ({ page }, use) => {
         const updateSubscriptionSteps = new UpdateSubscription(page);
         await use(updateSubscriptionSteps);
+    },
+    updateOtherPartyDataSteps: async ({ page }, use) => {
+        const updateOtherPartyDataSteps = new UpdateOtherPartyData(page);
+        await use(updateOtherPartyDataSteps);
     }
 })
