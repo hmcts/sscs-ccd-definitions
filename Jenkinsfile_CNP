@@ -27,8 +27,20 @@ def secrets = [
                 secret('test-e2e-judge-password', 'TEST_JUDGE_PASSWORD'),
                 secret('test-e2e-dwp-username', 'TEST_DWP_USERNAME'),
                 secret('test-e2e-dwp-password', 'TEST_DWP_PASSWORD'),
+                secret('test-e2e-am-caseofficer-case-allocator-username', 'TEST_AM_CASEOFFICER_CASE_ALLOCATOR_USERNAME'),
+                secret('test-e2e-am-caseofficer-case-allocator-password', 'TEST_AM_CASEOFFICER_CASE_ALLOCATOR_PASSWORD'),
                 secret('test-e2e-hmrc-username', 'TEST_HMRC_USERNAME'),
-                secret('test-e2e-hmrc-password', 'TEST_HMRC_PASSWORD')
+                secret('test-e2e-hmrc-password', 'TEST_HMRC_PASSWORD'),
+
+
+                secret('test-e2e-am-caseofficer-username', 'TEST_AM_CASEOFFICER_USERNAME'),
+                secret('test-e2e-am-caseofficer-password', 'TEST_AM_CASEOFFICER_PASSWORD'),
+                secret('test-e2e-caseofficer-username', 'TEST_AM_SUPERUSER_USERNAME'),
+                secret('test-e2e-caseofficer-password', 'TEST_AM_SUPERUSER_PASSWORD'),
+                secret('test-e2e-superuser-username', 'SUPER_USER_USERNAME'),
+                secret('test-e2e-superuser-password', 'SUPER_USER_PASSWORD'),
+                secret('idam-sscs-oauth2-client-secret', 'IDAM_OAUTH2_CLIENT_SECRET'),
+                secret('idam-redirect', 'IDAM_OAUTH2_REDIRECT_URL')
         ]
 ]
 
@@ -46,21 +58,52 @@ def branchesToSync = ['demo', 'ithc', 'perftest']
 withPipeline("nodejs", product, component) {
   loadVaultSecrets(secrets)
   syncBranchesWithMaster(branchesToSync)
-
     onPR{
         env.ENVIRONMENT="preview"
+        env.IDAM_URL='https://idam-api.aat.platform.hmcts.net'
+        env.S2S_URL='http://rpe-service-auth-provider-aat.service.core-compute-aat.internal'
+        env.IDAM_OAUTH2_CLIENT_ID='sscs'
     }
+
+    onDemo {
+            env.ENVIRONMENT="demo"
+            env.IDAM_URL='https://idam-api.demo.platform.hmcts.net'
+            env.S2S_URL='http://rpe-service-auth-provider-demo.service.core-compute-demo.internal'
+            env.TRIBUNALS_API_URL='http://sscs-tribunals-api-demo.service.core-compute-demo.internal'
+            env.SSCS_XUI_URL='https://manage-case.demo.platform.hmcts.net'
+            env.IDAM_OAUTH2_CLIENT_ID='sscs'
+    }
+
     onMaster{
         // only enable high level data setup on master builds, SSCS-12483
         enableHighLevelDataSetup()
+        env.IDAM_OAUTH2_CLIENT_ID='sscs'
         env.ENVIRONMENT="aat"
     }
 
+    afterSuccess('smoketest:aat') {
+        env.TEST_E2E_URL_WEB = params.URL_TO_TEST
+        env.TEST_E2E_URL_GATEWAY = params.CCD_GATEWAY_URL
+        env.TEST_E2E_API_URI = params.TRIBUNALS_API_URI
+
+        stage('Playwright tests') {
+            try{
+                yarnBuilder.yarn('test:jenkins')
+            } finally {
+                publishHTML([
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: "playwright-report",
+                    reportFiles: 'index.html',
+                    reportName: 'SSCS E2E Test Report'
+            ])
+            steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'playwright-report/**/*'
+            }
+        }
+    }
+    
     before('functionalTest:preview') {
-        // Temporarily disable running tests on preview env    
-        // sh """
-        //    ./bin/pull-latest-ccd-files.sh
-        // """
         env.TEST_E2E_URL_WEB = params.URL_TO_TEST
         env.TEST_E2E_URL_GATEWAY = params.CCD_GATEWAY_URL
         env.TEST_E2E_API_URI = params.TRIBUNALS_API_URI
