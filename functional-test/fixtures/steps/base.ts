@@ -46,6 +46,7 @@ import { AudioVideoEvidence } from '../../pages/tabs/audioVideoEvidence';
 import { ProcessAVPage } from '../../pages/process.av.page';
 import { OtherPartyDetails } from '../../pages/tabs/other.party.details';
 import { updateOtherPartyDataPage } from '../../pages/update.other.party.data.page';
+import { SendCaseToTcwPage } from '../../pages/send.case.to.tcw.page';
 
 
 export abstract class BaseStep {
@@ -97,6 +98,7 @@ export abstract class BaseStep {
   protected processAVPage: ProcessAVPage;
   protected updateOtherPartyDataPage: updateOtherPartyDataPage;
   protected otherPartyDetailsTab: OtherPartyDetails;
+  protected sendCaseToTcwPage: SendCaseToTcwPage;
 
     constructor(page: Page) {
         this.page = page;
@@ -146,6 +148,7 @@ export abstract class BaseStep {
         this.processAVPage = new ProcessAVPage(this.page);
         this.updateOtherPartyDataPage = new updateOtherPartyDataPage(this.page);
         this.otherPartyDetailsTab = new OtherPartyDetails(this.page);
+        this.sendCaseToTcwPage = new SendCaseToTcwPage(this.page);
     }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
