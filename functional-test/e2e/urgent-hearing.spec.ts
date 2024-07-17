@@ -26,7 +26,7 @@ test.describe("Urgent hearing test", {tag: '@pipeline'}, async() => {
     });
     
      test.afterAll("Case has to be set to Dormant",async () => {
-        // await performAppealDormantOnCase(caseId);
+        await performAppealDormantOnCase(caseId);
      });
 });
 
