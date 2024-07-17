@@ -36,12 +36,14 @@ import { SupplementaryResponsePage } from "../../pages/supplementary.response.pa
 import { UploadDocumentFurtherEvidencePage } from '../../pages/upload.document.further.evidence.page';
 import { UpdateLanguagePreferencePage } from '../../pages/update.language.preference.page';
 import { Welsh } from '../../pages/tabs/welsh';
+import { AmendInterlocReviewStatePage } from '../../pages/amend.interloc.review.state.page';
 import { ReviewPHEPage } from '../../pages/review.phe.page';
 import { ListingRequirements } from '../../pages/tabs/listing.requirements';
 import { UpdateUCBPage } from '../../pages/update.ucb.page';
 import { UpdateSubscriptionPage } from '../../pages/update.subscription.page';
 import { Subscriptions } from '../../pages/tabs/subscriptions';
 import { AudioVideoEvidence } from '../../pages/tabs/audioVideoEvidence';
+import { ProcessAVPage } from '../../pages/process.av.page';
 
 export abstract class BaseStep {
 
@@ -82,12 +84,14 @@ export abstract class BaseStep {
   protected supplementaryResponsePage: SupplementaryResponsePage;
   protected uploadDocumentFurtherEvidencePage: UploadDocumentFurtherEvidencePage;
   protected updateLanguagePreferencePage: UpdateLanguagePreferencePage;
+  protected amendInterlocReviewStatePage: AmendInterlocReviewStatePage;
   protected reviewPHEPage: ReviewPHEPage;
   protected listingRequirementsTab: ListingRequirements;
   protected updateUCBPage: UpdateUCBPage;
   protected updateSubscriptionPage: UpdateSubscriptionPage;
   protected subscriptionsTab: Subscriptions;
   protected avTab: AudioVideoEvidence;
+  protected processAVPage: ProcessAVPage;
 
    constructor(page: Page) {
         this.page = page;
@@ -127,12 +131,14 @@ export abstract class BaseStep {
         this.supplementaryResponsePage = new SupplementaryResponsePage(this.page);
         this.uploadDocumentFurtherEvidencePage = new UploadDocumentFurtherEvidencePage(this.page);
         this.updateLanguagePreferencePage = new UpdateLanguagePreferencePage(this.page);
+        this.amendInterlocReviewStatePage = new AmendInterlocReviewStatePage(this.page);
         this.reviewPHEPage = new ReviewPHEPage(this.page);
         this.listingRequirementsTab = new ListingRequirements(this.page);
         this.updateUCBPage = new UpdateUCBPage(this.page);
         this.updateSubscriptionPage = new UpdateSubscriptionPage(this.page);
         this.subscriptionsTab = new Subscriptions(this.page);
         this.avTab = new AudioVideoEvidence(this.page);
+        this.processAVPage = new ProcessAVPage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {

@@ -92,10 +92,9 @@ export class UploadResponse extends BaseStep {
 
         await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, caseId);
         await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.pipIssueCode, 'No', undefined, undefined, true);
-
-        // await this.checkYourAnswersPage.verifyCYAPageContent("Upload response", uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
         await this.homePage.delay(3000);
+        await this.homePage.clickSignOut();
     }
 
 

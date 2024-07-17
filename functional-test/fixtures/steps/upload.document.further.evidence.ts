@@ -4,10 +4,12 @@ import rbdTask from '../../pages/content/review.bilingual.document.task_en.json'
 import { BaseStep } from './base';
 import { credentials } from '../../config/config';
 import eventTestData from '../../pages/content/event.name.event.description_en.json';
-import actionFurtherEvidenceTestdata from '../../pages/content/action.further.evidence_en.json';
-import uploadDocumentFurtherEvidenceData from '../../pages/content/upload.document.further.evidence_en.json';
 import { CancelTranslations } from './cancel.translations';
 import { RequestTranslations } from './request.translations';
+
+
+const actionFurtherEvidenceTestdata = require('../../pages/content/action.further.evidence_en.json');
+const uploadDocumentFurtherEvidenceData = require('../../pages/content/upload.document.further.evidence_en.json');
 
 
 export class UploadDocumentFurtherEvidence extends BaseStep {
@@ -19,7 +21,7 @@ export class UploadDocumentFurtherEvidence extends BaseStep {
         this.page = page;
     }
 
-    async performUploadDocumentFurtherEvidence(caseId: string) {
+    async performUploadDocumentFurtherEvidence(caseId: string, uploadAudioFile ?: boolean) {
 
         await this.loginUserWithCaseId(credentials.amCaseWorkerWithCaseAllocatorRole, false, caseId);
         await this.homePage.reloadPage();
@@ -30,7 +32,13 @@ export class UploadDocumentFurtherEvidence extends BaseStep {
         await this.uploadDocumentFurtherEvidencePage.clickAddNew();
         await this.uploadDocumentFurtherEvidencePage.selectDocumenType(uploadDocumentFurtherEvidenceData.documentType);
         await this.uploadDocumentFurtherEvidencePage.inputFilename(uploadDocumentFurtherEvidenceData.fileName);
-        await this.uploadDocumentFurtherEvidencePage.uploadFurtherEvidenceDoc(uploadDocumentFurtherEvidenceData.testfileone);
+
+        if(uploadAudioFile) {
+            await this.uploadDocumentFurtherEvidencePage.uploadFurtherEvidenceDoc(uploadDocumentFurtherEvidenceData.testaudiofile);
+        } else {
+            await this.uploadDocumentFurtherEvidencePage.uploadFurtherEvidenceDoc(uploadDocumentFurtherEvidenceData.testfileone);
+        }
+        
         await this.uploadDocumentFurtherEvidencePage.confirmSubmission();
 
         await this.eventNameAndDescriptionPage.verifyPageContent(uploadDocumentFurtherEvidenceData.eventName);
@@ -39,6 +47,7 @@ export class UploadDocumentFurtherEvidence extends BaseStep {
         await this.eventNameAndDescriptionPage.confirmSubmission();
 
         await expect(this.homePage.summaryTab).toBeVisible();
+        await this.homePage.clickSignOut();
     }
 
     async allocateCaseToCtscUser(caseId: string) {

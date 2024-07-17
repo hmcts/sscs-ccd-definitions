@@ -25,8 +25,14 @@ def secrets = [
                 secret('test-e2e-hmc-caseofficer-password', 'TEST_HMC_CASEOFFICER_PASSWORD'),
                 secret('test-e2e-judge-username', 'TEST_JUDGE_USERNAME'),
                 secret('test-e2e-judge-password', 'TEST_JUDGE_PASSWORD'),
+                secret('test-e2e-salaried-judge-username', 'TEST_SALARIED_JUDGE_USERNAME'),
+                secret('test-e2e-salaried-judge-password', 'TEST_SALARIED_JUDGE_PASSWORD'),
+                secret('test-e2e-fee-paid-judge-username', 'TEST_FEE_PAID_JUDGE_USERNAME'),
+                secret('test-e2e-fee-paid-judge-password', 'TEST_FEE_PAID_JUDGE_PASSWORD'),
                 secret('test-e2e-dwp-username', 'TEST_DWP_USERNAME'),
                 secret('test-e2e-dwp-password', 'TEST_DWP_PASSWORD'),
+                secret('test-e2e-am-tcw-username', 'TEST_AM_TRIBUNAL_CASEWORKER_USERNAME'),
+                secret('test-e2e-am-tcw-password', 'TEST_AM_TRIBUNAL_CASEWORKER_PASSWORD'),
                 secret('test-e2e-am-caseofficer-case-allocator-username', 'TEST_AM_CASEOFFICER_CASE_ALLOCATOR_USERNAME'),
                 secret('test-e2e-am-caseofficer-case-allocator-password', 'TEST_AM_CASEOFFICER_CASE_ALLOCATOR_PASSWORD'),
                 secret('test-e2e-hmrc-username', 'TEST_HMRC_USERNAME'),
@@ -73,14 +79,6 @@ withPipeline("nodejs", product, component) {
             env.SSCS_XUI_URL='https://manage-case.demo.platform.hmcts.net'
             env.IDAM_OAUTH2_CLIENT_ID='sscs'
     }
-
-    //onAAT {
-        //env.ENVIRONMENT="aat"
-        //env.IDAM_URL='https://idam-api.aat.platform.hmcts.net'
-        //env.S2S_URL='http://rpe-service-auth-provider-aat.service.core-compute-aat.internal'
-        //env.TRIBUNALS_API_URL='http://sscs-tribunals-api-aat.service.core-compute-aat.internal'
-        //env.SSCS_XUI_URL='https://manage-case.aat.platform.hmcts.net'
-    //}
 
     onMaster{
         // only enable high level data setup on master builds, SSCS-12483
