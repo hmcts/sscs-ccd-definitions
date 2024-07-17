@@ -126,7 +126,7 @@ export class Reinstatement extends BaseStep {
         await this.tasksTab.verifyManageOptions(task.name, task.assignedManageOptionsForSalariedJudge);
         await this.tasksTab.verifyNextStepsOptions(task.name, task.nextStepsOptions);
 
-        // Select Action Further Evidence next step and complete the event
+        // Select Send to Admin next step and complete the event
         await this.tasksTab.clickNextStepLink(task.sendToAdmin.link);
 
         let sendToAdmin = new SendToAdmin(this.page);
@@ -141,7 +141,6 @@ export class Reinstatement extends BaseStep {
         // Verify Salaried Judge self assigns the task
         await this.loginUserWithCaseId(credentials.salariedJudge, true, caseId);
         await this.homePage.navigateToTab('Tasks');
-        // await this.tasksTab.verifyTaskIsDisplayed(task.name);
         await this.tasksTab.selfAssignTask(task.name);
         
         await this.tasksTab.reassignTaskToTcwUser(task.name, credentials.amTribunalCaseWorker.email);
@@ -149,7 +148,7 @@ export class Reinstatement extends BaseStep {
 
     async verifyFeePaidJudgeCanViewTheUnassignedReviewReinstatementRequestTask(caseId: string): Promise<void> {
          
-        // Verify Review Reinstatement Request - Judge task is displayed to the Salaried Judge
+        // Verify Review Reinstatement Request - Judge task is displayed to the Fee-Paid Judge
          await this.loginUserWithCaseId(credentials.feePaidJudge, false, caseId);
          await this.homePage.navigateToTab('Tasks');
          await this.tasksTab.verifyTaskIsDisplayed(task.name);
@@ -161,7 +160,7 @@ export class Reinstatement extends BaseStep {
 
     async verifyFeePaidJudgeCanCompleteTheUnassignedReviewReinstatementRequestTask(caseId: string): Promise<void> {
 
-        // Verify Salaried Judge self assigns the task
+        // Fee-Paid Judge self assigns the task
         await this.loginUserWithCaseId(credentials.feePaidJudge, true, caseId);
         await this.homePage.navigateToTab('Tasks');
         await this.tasksTab.selfAssignTask(task.name);
@@ -170,7 +169,7 @@ export class Reinstatement extends BaseStep {
         await this.tasksTab.verifyManageOptions(task.name, task.assignedManageOptionsForFeePaidJudge);
         await this.tasksTab.verifyNextStepsOptions(task.name, task.nextStepsOptions);
 
-        // Select Action Further Evidence next step and complete the event
+        // Select Send to Admin next step and complete the event
         await this.tasksTab.clickNextStepLink(task.sendToAdmin.link);
 
         let sendToAdmin = new SendToAdmin(this.page);
@@ -182,7 +181,7 @@ export class Reinstatement extends BaseStep {
 
     async verifyTcwCanCompleteTheAssignedReviewReinstatementRequestTask(caseId: string): Promise<void> {
 
-        // Verify Salaried Judge self assigns the task
+        // Verify TCW can see the assigned Review Reinstatement Request - Judge task
         await this.loginUserWithCaseId(credentials.amTribunalCaseWorker, false, caseId);
         await this.homePage.navigateToTab('Tasks');
         
@@ -190,7 +189,7 @@ export class Reinstatement extends BaseStep {
         await this.tasksTab.verifyManageOptions(task.name, task.assignedManageOptionsForTCW);
         await this.tasksTab.verifyNextStepsOptions(task.name, task.nextStepsOptions);
 
-        // Select Action Further Evidence next step and complete the event
+        // Select Amend Interloc review state next step and complete the event
         await this.tasksTab.clickNextStepLink(task.amendInterlocReviewState.link);
 
         await this.amendInterlocReviewStatePage.verifyPageContent();

@@ -1,5 +1,7 @@
 {
+    "RolesAndAccessHeading" : "Roles and access",
     "ctscRole": {
+        "link": "Allocate a CTSC role",
         "caption" : "Allocate a CTSC role",
         "heading" : "Choose a role",
         "ctscCaseworkerLabel" : "Allocated CTSC Caseworker",
@@ -9,5 +11,22 @@
         "allocateToName" : "SSCS ctscadmin", 
         "durationOfRoleHeading" : "Duration of role",
         "numberOfDaysRadioButtonLabel" : "7 days"
+    },
+    "judicialRole": {
+        "link": "Allocate a judicial role",
+        "caption" : "Allocate a judicial role",
+        "heading" : "Choose a role",
+        "interlocutoryJudge": "Interlocutory Judge",
+        "ctscCaseworkerLabel" : "Allocated CTSC Caseworker",
+        "chooseHowToAllocateRoleHeading" : "Choose how to allocate the role",
+        "allocateToAnotherPersonRadioButtonLabel" : "Allocate to another person",
+        "findPersonHeading" : "Find the person",
+        "allocateToName" : {
+            "salariedJudge": "Edwin Ford",
+            "feePaidJudge": "Jay Griffith"
+        }, 
+        "durationOfRoleHeading" : "Duration of role",
+        "numberOfDaysRadioButtonLabel" : "7 days",
+        "cyaHeading": "Check your answers"
     }
 }

@@ -44,6 +44,7 @@ import { UpdateSubscriptionPage } from '../../pages/update.subscription.page';
 import { Subscriptions } from '../../pages/tabs/subscriptions';
 import { OtherPartyDetails } from '../../pages/tabs/other.party.details';
 import { updateOtherPartyDataPage } from '../../pages/update.other.party.data.page';
+import { SendCaseToTcwPage } from '../../pages/send.case.to.tcw.page';
 
 export abstract class BaseStep {
 
@@ -92,6 +93,7 @@ export abstract class BaseStep {
     protected subscriptionsTab: Subscriptions;
     protected updateOtherPartyDataPage: updateOtherPartyDataPage;
     protected otherPartyDetailsTab: OtherPartyDetails;
+    protected sendCaseToTcwPage: SendCaseToTcwPage;
 
     constructor(page: Page) {
         this.page = page;
@@ -139,6 +141,7 @@ export abstract class BaseStep {
         this.subscriptionsTab = new Subscriptions(this.page);
         this.updateOtherPartyDataPage = new updateOtherPartyDataPage(this.page);
         this.otherPartyDetailsTab = new OtherPartyDetails(this.page);
+        this.sendCaseToTcwPage = new SendCaseToTcwPage(this.page);
     }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
