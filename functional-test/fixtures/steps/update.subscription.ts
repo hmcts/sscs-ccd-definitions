@@ -2,7 +2,6 @@ import { expect, Page } from '@playwright/test';
 import { BaseStep } from './base';
 import { credentials } from "../../config/config";
 import UpdateSubscriptionTestData from "../../pages/content/update.subscription.data_en.json"
-//import eventTestData from "../../pages/content/event.name.event.description_en.json"
 import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import { StringUtilsComponent } from "../../utils/StringUtilsComponent";
 import { time } from 'console';

@@ -86,7 +86,15 @@ export class UploadResponse extends BaseStep {
         await this.page.locator('button.mat-tab-header-pagination-after').click();
         await this.homePage.navigateToTab("Listing Requirements");
         await this.listingRequirementsTab.verifyContentByKeyValueForASpan(ucbTestData.ucbFieldLabel, ucbTestData.ucbFieldValue_Yes);
+    }
 
+    async performUploadResponseWithAVEvidenceOnAPIP(caseId: string) {
+
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, caseId);
+        await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.pipIssueCode, 'No', undefined, undefined, true);
+        await this.checkYourAnswersPage.confirmSubmission();
+        await this.homePage.delay(3000);
+        await this.homePage.clickSignOut();
     }
 
 
