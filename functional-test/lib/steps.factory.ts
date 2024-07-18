@@ -37,6 +37,8 @@ import { UpdateUCB } from "../fixtures/steps/update.ucb";
 import { ProcessAVEvidence } from '../fixtures/steps/process.av.evidence';
 import { UpdateSubscription } from '../fixtures/steps/update.subscription'
 import { UpdateOtherPartyData } from '../fixtures/steps/update.other.party.data';
+import {UpdateNotListable} from "../fixtures/steps/update.not.listable";
+import {use} from "chai";
 
 
 type MyStepsFixtures = {
@@ -78,6 +80,7 @@ type MyStepsFixtures = {
     updateSubscriptionSteps: UpdateSubscription
     processAVEvidenceSteps: ProcessAVEvidence
     updateOtherPartyDataSteps: UpdateOtherPartyData
+    updateNotListableSteps: UpdateNotListable
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -232,5 +235,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     updateOtherPartyDataSteps: async ({ page }, use) => {
         const updateOtherPartyDataSteps = new UpdateOtherPartyData(page);
         await use(updateOtherPartyDataSteps);
+    },
+    updateNotListableSteps: async ({page}, use)=>{
+        const updateNotListableSteps = new UpdateNotListable(page);
+        await use(updateNotListableSteps);
     }
 })

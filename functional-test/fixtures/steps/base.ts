@@ -47,7 +47,8 @@ import { ProcessAVPage } from '../../pages/process.av.page';
 import { OtherPartyDetails } from '../../pages/tabs/other.party.details';
 import { updateOtherPartyDataPage } from '../../pages/update.other.party.data.page';
 import { SendCaseToTcwPage } from '../../pages/send.case.to.tcw.page';
-
+import {NotListablePage} from "../../pages/not.listable.page";
+import {UpdateNotListablePage} from "../../pages/update.not.listable.page";
 
 export abstract class BaseStep {
 
@@ -99,8 +100,10 @@ export abstract class BaseStep {
   protected updateOtherPartyDataPage: updateOtherPartyDataPage;
   protected otherPartyDetailsTab: OtherPartyDetails;
   protected sendCaseToTcwPage: SendCaseToTcwPage;
+  protected notListablePage: NotListablePage;
+  protected updateNotListablePage: UpdateNotListablePage;
 
-    constructor(page: Page) {
+   constructor(page: Page) {
         this.page = page;
         this.loginPage = new LoginPage(this.page);
         this.homePage = new HomePage(this.page);
@@ -149,7 +152,9 @@ export abstract class BaseStep {
         this.updateOtherPartyDataPage = new updateOtherPartyDataPage(this.page);
         this.otherPartyDetailsTab = new OtherPartyDetails(this.page);
         this.sendCaseToTcwPage = new SendCaseToTcwPage(this.page);
-    }
+        this.notListablePage = new NotListablePage(this.page);
+        this.updateNotListablePage = new UpdateNotListablePage(this.page);
+   }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
         await this.loginPage.goToLoginPage();
