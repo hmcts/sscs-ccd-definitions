@@ -6,7 +6,7 @@ test.beforeAll("Case has to be Created",async () => {
     caseId = await createCaseBasedOnCaseType('PIP');
 });
 
-test("As a caseworker Strike out case", {tag: '@pipeline'},
+test("As a caseworker Strike out case",
     async ({ strikeOutCaseSteps }) => {
     await strikeOutCaseSteps.performStrikeOutCase(caseId);
 });

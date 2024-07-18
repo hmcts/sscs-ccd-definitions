@@ -30,7 +30,7 @@ export class CheckYourAnswersPage {
         }
     }
 
-    async verifyCYAPageContentWithPHE(headingValue: string, benefitCode?: string, issueCode?: string, caseType?: string) {
+    async verifyCYAPageContentWithPHE(headingValue: string, benefitCode?: string, issueCode?: string) {
 
         await webActions.verifyPageLabel('.govuk-heading-l', headingValue); //Heading Text
         await webActions.verifyPageLabel('form.check-your-answers h2.heading-h2', eventTestData.eventSummarycheckYourAnswersHeading);//Check your answers Text.
@@ -39,7 +39,7 @@ export class CheckYourAnswersPage {
         await webActions.verifyPageLabel('//self::ccd-read-yes-no-field/span', [uploadResponseTestdata.poAttendOption]);
     }
 
-    async verifyCYAPageContentWithUCB(headingValue: string, benefitCode?: string, issueCode?: string, caseType?: string) {
+    async verifyCYAPageContentWithUCB(headingValue: string, benefitCode?: string, issueCode?: string) {
 
         await webActions.verifyPageLabel('.govuk-heading-l', headingValue); //Heading Text
         await webActions.verifyPageLabel('form.check-your-answers h2.heading-h2', eventTestData.eventSummarycheckYourAnswersHeading);//Check your answers Text.
