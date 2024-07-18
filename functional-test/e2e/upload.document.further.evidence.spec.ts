@@ -23,7 +23,7 @@ test.describe.serial('WA - Action Unprocessed Correspondence CTSC task initiatio
         uploadDocumentFurtherEvidenceSteps }) => {
 
         test.slow();
-        await uploadDocumentFurtherEvidenceSteps.performUploadDocumentFurtherEvidence(caseId);
+        await uploadDocumentFurtherEvidenceSteps.performUploadDocumentFurtherEvidence(caseId, false);
     });
 
     test('CTSC Admin as allocated case worker, views the Action Unprocessed Correspondence CTSC task', async ({
@@ -107,7 +107,7 @@ test.describe.serial('WA - Review Bi-Lingual Document CTSC task initiation and c
         uploadDocumentFurtherEvidenceSteps }) => {
 
         test.slow();
-        await uploadDocumentFurtherEvidenceSteps.performUploadDocumentFurtherEvidence(caseId);
+        await uploadDocumentFurtherEvidenceSteps.performUploadDocumentFurtherEvidence(caseId, false);
     });
 
     test('As a CTSC Admin, view the Review Bi-Lingual Document CTSC task', async ({
@@ -150,7 +150,7 @@ test.describe.serial('WA - Review Bi-Lingual Document CTSC task cancellation tes
         uploadDocumentFurtherEvidenceSteps }) => {
 
         test.slow();
-        await uploadDocumentFurtherEvidenceSteps.performUploadDocumentFurtherEvidence(caseId);
+        await uploadDocumentFurtherEvidenceSteps.performUploadDocumentFurtherEvidence(caseId, false);
     });
 
     test('CTSC Admin views Review Bi-Lingual Document CTSC task and cancels Welsh translations', async ({

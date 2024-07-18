@@ -1,6 +1,8 @@
 import { expect, Page } from '@playwright/test';
 import { HomePage } from '../../pages/common/homePage';
-import allocateRole from '../content/allocate.role_en.json';
+// import allocateRole from '../content/allocate.role_en.json';
+
+const allocateRole = require("../content/allocate.role_en.json");
 
 export class RolesAndAccess {
 
