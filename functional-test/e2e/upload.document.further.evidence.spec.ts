@@ -46,7 +46,7 @@ test.describe.serial('WA - Upload document FE - Action Unprocessed Correspondenc
 });
 
 
-test.describe('WA - Upload document FE - Action Unprocessed Correspondence CTSC task cancellation', {
+test.describe.serial('WA - Upload document FE - Action Unprocessed Correspondence CTSC task cancellation', {
     tag: '@work-allocation'
 }, async() => {
 
