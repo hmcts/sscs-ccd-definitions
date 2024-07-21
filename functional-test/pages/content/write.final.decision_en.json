@@ -1,7 +1,7 @@
 {
     "eventNameCaptor": "Write final decision",
     "eventNameHeading": "Write final decision",
-    "issueFinalDecisionEventNameCaptor": "Write final decision",
+    "issueFinalDecisionEventNameCaptor": "Issue final decision",
 
     "typeOfAppealPageHeading": "Type of appeal",
     "generateNoticeLabel" : "Generate notice?",
@@ -34,6 +34,7 @@
     "nameOfDisabilityQualifiedPanelMemberDQPMWithoutOptionalLabel":"Name of the Disability Qualified Panel Member (DQPM)",
     "nameOfMedicallyQualifiedPanelMemberMQPMWithoutOptionalLabel" : "Name of the Medically Qualified Panel Member (MQPM)",
     "otherLabel": "Other (Optional)",
+    "otherWithoutOptionalLabel": "Other",
     "nameOfDisabilityQualifiedPanelMemberInput" : "Panel Member - Judge",
     "nameOfMedicallyQualifiedPanelMemberInput" : "Panel Member - Doctor",
     "otherPanelMemberInput" : "Panel Member - Clerk",
@@ -131,6 +132,48 @@
     "canStandAndThenMoveEitherAidedOrUnaidedLabel": "12f. Cannot, either aided or unaided, stand; or (ii) move more than 1 metre. (12 points)",
 
     "mobilityNonOptionalLabel" : "Mobility",
-    "dailyLivingLabel" : "Daily living"
+    "dailyLivingLabel" : "Daily living",
+
+    "workCapabilitiesAssessmentPageHeading" : "Work capability assessment",
+    "isThisAWCAAppeal" : "Is this a WCA appeal?",
+    "isThisASupportGroupOnlyAppealLabel" : "Is this a support group only appeal?",
+
+    "schedule7ActivitiesPageHeading" : "Schedule 7 activities",
+    "schedule7ActivitiesLabel" : "Schedule 7 Activities",
+    "doSchedule7ActivitiesApply" : "Do Schedule 7 Activities Apply?",
+    "noneApply" : "None apply",
+    "theSchedule7ActivitiesSelectedBelowApply" : "The Schedule 7 activities selected below apply:",
+
+    "mobilisingUnaidedLabel" : "1. Mobilising unaided by another person with or without a walking stick, manual wheelchair or other aid if such aid is normally or could reasonably be worn or used. Cannot either: (a) mobilise more than 50 metres on level ground without stopping in order to avoid significant discomfort or exhaustion; or (b) repeatedly mobilise 50 metres within a reasonable timescale because of significant discomfort or exhaustion.",
+    "transferringFromOneSeatedPositionLabel" : "2. Transferring from one seated position to another. Cannot move between one seated position and another seated position located next to one another without receiving physical assistance from another person.",
+    "reachingCannotRaiseEitherArmLabel" : "3. Reaching. Cannot raise either arm as if to put something in the top pocket of a coat or jacket.",
+    "pickingUpMovingAndTransferringLabel" : "4. Picking up and moving or transferring by the use of the upper body and arms (excluding standing, sitting, bending or kneeling and all other activities specified in this Schedule). Cannot pick up and move a 0.5 litre carton full of liquid.",
+    "manualDexterityLabel" : "5. Manual dexterity. Cannot press a button (such as a telephone keypad) with either hand or cannot turn the pages of a book with either hand.",
+    "makingSelfUnderstoodLabel" : "6. Making self understood through speaking, writing, typing, or other means which are normally, or could reasonably be, used unaided by another person. Cannot convey a simple message, such as the presence of a hazard.",
+    "understandingCommunicationByLabel" : "7. Understanding communication by: (i) verbal means (such as hearing or lip reading) alone; (ii) non-verbal means (such as reading 16 point print or Braille) alone; or (iii) a combination of sub- paragraphs (i) and (ii), using any aid that is normally, or could reasonably, be used unaided by another person. Cannot understand a simple message, such as the location of a fire escape, due to sensory impairment.",
+    "absenceOrLossLabel" : "8. Absence or loss of control whilst conscious leading to extensive evacuation of the bowel and/or voiding of the bladder, other than enuresis (bed-wetting), despite the wearing or use of any aids or adaptations which are normally or could reasonably be worn or used.",
+    "learningTasksLabel" : "9. Learning tasks. Cannot learn how to complete a simple task, such as setting an alarm clock, due to cognitive impairment or mental disorder.",
+    "awarenessHazardLabel" : "10. Awareness of hazard. Reduced awareness of everyday hazards, due to cognitive impairment or mental disorder, leads to a significant risk of: (a) injury to self or others; or (b) damage to property or possessions, such that the claimant requires supervision for the majority of the time to maintain safety.",
+    "initiatingAndCompletingLabel" : "11. Initiating and completing personal action (which means planning, organisation, problem solving, prioritising or switching tasks). Cannot, due to impaired mental function, reliably initiate or complete at least two sequential personal actions.",
+    "copingWithChangeLabel" : "12. Coping with change. Cannot cope with any change, due to cognitive impairment or mental disorder, to the extent that day to day life cannot be managed.",
+    "copingWithSocialEngagementLabel" : "13. Coping with social engagement, due to cognitive impairment or mental disorder. Engagement in social contact is always precluded due to difficulty relating to others or significant distress experienced by the claimant.",
+    "appropriatenessOfBehaviourLabel": "14. Appropriateness of behaviour with other people, due to cognitive impairment or mental disorder. Has, on a daily basis, uncontrollable episodes of aggressive or disinhibited behaviour that would be unreasonable in any workplace.",
+    "conveyingFoodOrDrinkLabel": "15. Conveying food or drink to the mouth. (a) Cannot convey food or drink to the claimant’s own mouth without receiving physical assistance from someone else; (b) Cannot convey food or drink to the claimant’s own mouth without repeatedly stopping or experiencing breathlessness or severe discomfort; (c) Cannot convey food or drink to the claimant’s own mouth without receiving regular prompting given by someone else in the claimant’s presence; or (d) Owing to a severe disorder of mood or behaviour, fails to convey food or drink to the claimant’s own mouth without receiving: (i) physical assistance from someone else; or (ii) regular prompting given by someone else in the claimant’s presence.",
+    "chewingOrSwallowingFoodLabel": "16. Chewing or swallowing food or drink. (a) Cannot chew or swallow food or drink; (b) Cannot chew or swallow food or drink without repeatedly stopping or experiencing breathlessness or severe discomfort; (c) Cannot chew or swallow food or drink without repeatedly receiving regular prompting given by someone else in the claimant’s presence; or (d) Owing to a severe disorder of mood or behaviour, fails to: (i) chew or swallow food or drink; or (ii) chew or swallow food or drink without regular prompting given by someone else in the claimant’s presence.",
+
+    "whenShouldDWPReassessPageHeading" : "When should DWP reassess the award?",
+    "whenShouldFTAReAssessTheAwardLabel" : "When should FTA reassess the award? ",
+    "noRecommendationLabel" : "No recommendation",
+    "reassessWithin3MonthsLabel" : "Reassess within 3 months",
+    "reassessWithin6MonthsLabel" : "Reassess within 6 months",
+    "reassessWithin12MonthsLabel" : "Reassess within 12 months",
+    "reassessWithin18MonthsLabel" : "Reassess within 18 months",
+    "reassessWithin24MonthsLabel" : "Reassess within 24 months",
+    "doNotReassessWithin3MonthsLabel" : "Do not reassess within 3 months",
+    "doNotReassessWithin6MonthsLabel" : "Do not reassess within 6 months",
+    "doNotReassessWithin12MonthsLabel" : "Do not reassess within 12 months",
+    "doNotReassessWithin18MonthsLabel" : "Do not reassess within 18 months",
+    "doNotReassessWithin24MonthsLabel" : "Do not reassess within 24 months",
+    "doNotReassessLabel" : "Do not reassess"
 
 }

@@ -36,6 +36,16 @@ test.describe('Issue Final Decision - Tax Credit Appeal Type', {tag: '@pipeline'
             await issueFinalDecisionSteps.performIssueFinalDecisionForAPIPAppeal(taxCreditCaseId);
             await performAppealDormantOnCase(taxCreditCaseId);
         });
+})
 
+test.describe('Issue Final Decision - Universal Credit Appeal Type', {tag: '@pipeline'},  async () => {
 
+    test.only("Issue Final Decision - Simple Decision Notice - 'Yes' notice generated",
+        async ({issueFinalDecisionSteps}) => {
+            test.slow();
+            let universalCreditCaseId = await createCaseBasedOnCaseType('UC');
+            await issueFinalDecisionSteps.performWriteFinalDecisionForAUniversalCreditAppealAndNoticeGenerated(universalCreditCaseId);
+            await issueFinalDecisionSteps.performIssueFinalDecisionForAPIPAppeal(universalCreditCaseId);
+            await performAppealDormantOnCase(universalCreditCaseId);
+        });
 })

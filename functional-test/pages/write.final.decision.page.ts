@@ -43,7 +43,15 @@ export class WriteFinalDecisionPages {
                 }
                 break;
             }
-            case "TAX CREDIT": {
+            case "TAX CREDIT"   : {
+                if (generateNotice === true) {
+                    await webActions.clickElementById("[for='writeFinalDecisionGenerateNotice_Yes']");
+                } else {
+                    await webActions.clickElementById("[for='writeFinalDecisionGenerateNotice_No']");
+                }
+                break;
+            }
+            case "UNIVERSAL CREDIT": {
                 if (generateNotice === true) {
                     await webActions.clickElementById("[for='writeFinalDecisionGenerateNotice_Yes']");
                 } else {
@@ -79,7 +87,6 @@ export class WriteFinalDecisionPages {
         await webActions.verifyPageLabel('[for=\'writeFinalDecisionTypeOfHearing-triage\']', writeFinalDecisionData.triageLabel);
         await webActions.clickElementById("#writeFinalDecisionTypeOfHearing-faceToFace");
         await webActions.verifyPageLabel('#writeFinalDecisionPresentingOfficerAttendedQuestion legend > .form-label', writeFinalDecisionData.didAPresentingOfficerLabel);
-        await webActions.verifyPageLabel('#writeFinalDecisionPresentingOfficerAttendedQuestion legend > .form-label', writeFinalDecisionData.didAPresentingOfficerLabel);
         await webActions.verifyPageLabel('#writeFinalDecisionAppellantAttendedQuestion legend > .form-label', writeFinalDecisionData.didTheAppellantAttendTheHearing);
         await webActions.verifyPageLabel('.error-spacing', writeFinalDecisionData.otherPartySectionHeading);
         if (otherPartyRequiredFlag === true) {
@@ -100,16 +107,34 @@ export class WriteFinalDecisionPages {
     async verifyPageContentForPanelMembersPage(appealType = 'PIP') {
         await webActions.verifyPageLabel('.govuk-caption-l', writeFinalDecisionData.eventNameCaptor);
         await webActions.verifyPageLabel('h1.govuk-heading-l', writeFinalDecisionData.panelMembersPageHeading);
-        if (appealType === 'PIP') {
-            await webActions.verifyPageLabel('[for=\'writeFinalDecisionDisabilityQualifiedPanelMemberName\'] > .form-label', writeFinalDecisionData.nameOfDisabilityQualifiedPanelMemberDQPMLabel);
-            await webActions.verifyPageLabel('[for=\'writeFinalDecisionMedicallyQualifiedPanelMemberName\'] > .form-label', writeFinalDecisionData.nameOfMedicallyQualifiedPanelMemberMQPMLabel);
+        switch (appealType) {
+            case 'PIP': {
+                await webActions.verifyPageLabel('[for=\'writeFinalDecisionDisabilityQualifiedPanelMemberName\'] > .form-label', writeFinalDecisionData.nameOfDisabilityQualifiedPanelMemberDQPMLabel);
+                await webActions.verifyPageLabel('[for=\'writeFinalDecisionMedicallyQualifiedPanelMemberName\'] > .form-label', writeFinalDecisionData.nameOfMedicallyQualifiedPanelMemberMQPMLabel);
+
+            } case 'UNIVERSAL CREDIT' : {
+                await webActions.verifyPageLabel('[for=\'writeFinalDecisionMedicallyQualifiedPanelMemberName\'] > .form-label', writeFinalDecisionData.nameOfMedicallyQualifiedPanelMemberMQPMLabel);
+                await webActions.verifyPageLabel('[for=\'writeFinalDecisionOtherPanelMemberName\'] > .form-label', writeFinalDecisionData.otherLabel);
+            }
+            default : {
+                break;
+            }
         }
     }
 
     async inputPageContentForPanelMembersPageData(appealType = 'PIP') {
-        if (appealType === 'PIP') {
-            await webActions.inputField("#writeFinalDecisionDisabilityQualifiedPanelMemberName", writeFinalDecisionData.nameOfDisabilityQualifiedPanelMemberInput);
-            await webActions.inputField("#writeFinalDecisionMedicallyQualifiedPanelMemberName", writeFinalDecisionData.nameOfMedicallyQualifiedPanelMemberInput);
+        switch (appealType) {
+            case 'PIP': {
+                await webActions.inputField("#writeFinalDecisionDisabilityQualifiedPanelMemberName", writeFinalDecisionData.nameOfDisabilityQualifiedPanelMemberInput);
+                await webActions.inputField("#writeFinalDecisionMedicallyQualifiedPanelMemberName", writeFinalDecisionData.nameOfMedicallyQualifiedPanelMemberInput);
+            }
+            case 'UNIVERSAL CREDIT' : {
+                await webActions.inputField("#writeFinalDecisionMedicallyQualifiedPanelMemberName", writeFinalDecisionData.nameOfMedicallyQualifiedPanelMemberInput);
+                await webActions.inputField("#writeFinalDecisionOtherPanelMemberName", writeFinalDecisionData.otherPanelMemberInput);
+            }
+            default : {
+                break;
+            }
         }
     }
 
@@ -418,8 +443,142 @@ export class WriteFinalDecisionPages {
 
     }
 
-    async inputPageContentForMovingAroundPageData() {
+    async verifyPageContentForCheckYourAnswersPageForUCCaseWithScheduleAndReasses() {
+
+        //await webActions.verifyPageLabel('.govuk-caption-l', writeFinalDecisionData.eventNameCaptor); // No Captor on this Page.
+        await webActions.verifyPageLabel('h1.govuk-heading-l', writeFinalDecisionData.checkYourAnswersPageHeading);
+        await webActions.verifyPageLabel('.heading-h2', writeFinalDecisionData.checkYourAnswersSectionHeading);
+        await webActions.verifyPageLabel('.check-your-answers > [_ngcontent-ng-c645309043] > .text-16', writeFinalDecisionData.checkYourInformationCarefullyLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(3) > .valign-top > .text-16', writeFinalDecisionData.generateNoticeLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(3) > .form-cell .text-16', writeFinalDecisionData.yesLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(4) > .valign-top > .text-16', writeFinalDecisionData.isTheAppealLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(4) > .form-cell .text-16', writeFinalDecisionData.allowedLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(5) > .valign-top > .text-16', writeFinalDecisionData.whatTypeOfHearingWasHeldLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(5) > .form-cell .text-16', writeFinalDecisionData.faceToFaceLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(6) > .valign-top > .text-16', writeFinalDecisionData.didAPresentingOfficerLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(6) > .form-cell .text-16', writeFinalDecisionData.yesLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(7) > .valign-top > .text-16', writeFinalDecisionData.didTheAppellantAttendTheHearing);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(7) > .form-cell .text-16', writeFinalDecisionData.noLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(8) > .valign-top > .text-16', writeFinalDecisionData.nameOfMedicallyQualifiedPanelMemberMQPMWithoutOptionalLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(8) > .form-cell .text-16', writeFinalDecisionData.nameOfMedicallyQualifiedPanelMemberInput);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(9) > .valign-top > .text-16', writeFinalDecisionData.otherWithoutOptionalLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(9) > .form-cell .text-16', writeFinalDecisionData.otherPanelMemberInput);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(10) > .valign-top > .text-16', writeFinalDecisionData.dateOfFTADecisionLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(12) > .valign-top > .text-16', writeFinalDecisionData.isThisAWCAAppeal);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(12) > .form-cell .text-16', writeFinalDecisionData.yesLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(13) > .valign-top > .text-16', writeFinalDecisionData.isThisASupportGroupOnlyAppealLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(13) > .form-cell .text-16', writeFinalDecisionData.yesLabel);
+
+        //Commented out as The return value was 'Show Schedule 7 Activities Apply?'
+        //await webActions.verifyPageLabel('.form-table tr:nth-of-type(15) > .valign-top > .text-16', writeFinalDecisionData.doSchedule7ActivitiesApply);
+        //await webActions.verifyPageLabel('.form-table tr:nth-of-type(15) > .form-cell .text-16', writeFinalDecisionData.theSchedule7ActivitiesSelectedBelowApply);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(16) > .valign-top > .text-16', writeFinalDecisionData.schedule7ActivitiesLabel);
+        await webActions.verifyPageLabel('tr:nth-of-type(16) tr:nth-of-type(1) .text-16', writeFinalDecisionData.manualDexterityLabel);
+        await webActions.verifyPageLabel('tr:nth-of-type(16) tr:nth-of-type(2) .text-16', writeFinalDecisionData.initiatingAndCompletingLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(17) > .valign-top > .text-16', writeFinalDecisionData.whatIsTheLastPageInTheTribunalBundleLabel);
+        await webActions.verifyPageLabel('tr:nth-of-type(17) > .form-cell .text-16', writeFinalDecisionData.lastPageInTheTribunalBundleInput);
+
+        await webActions.verifyPageLabel('tr:nth-of-type(19) > .valign-top > .text-16', writeFinalDecisionData.whenShouldFTAReAssessTheAwardLabel);
+        await webActions.verifyPageLabel('tr:nth-of-type(19) > .form-cell .text-16', writeFinalDecisionData.reassessWithin3MonthsLabel);
+
+        await webActions.verifyPageLabel('tr:nth-of-type(20) > .valign-top > .text-16', writeFinalDecisionData.reasonsForDecisionLabel);
+        await webActions.verifyPageLabel('tr:nth-of-type(20) > td:nth-of-type(1) span:nth-of-type(1)', writeFinalDecisionData.reasonsForDecisionInput);
+
+        await webActions.verifyPageLabel('tr:nth-of-type(20) > .valign-top > .text-16', writeFinalDecisionData.reasonsForDecisionLabel);
+        await webActions.verifyPageLabel('tr:nth-of-type(20) > td:nth-of-type(1) span:nth-of-type(1)', writeFinalDecisionData.reasonsForDecisionInput);
+
+        await webActions.verifyPageLabel('tr:nth-of-type(21) > .valign-top > .text-16', writeFinalDecisionData.checkYourAnswersAnythingElse);
+        await webActions.verifyPageLabel('tr:nth-of-type(21) > .form-cell span', writeFinalDecisionData.anythingElseInput);
+
+        await webActions.verifyPageLabel('tr:nth-of-type(22) > .valign-top > .text-16', writeFinalDecisionData.previewDecisionNoticeLabel);
+    }
+
+        async inputPageContentForMovingAroundPageData() {
         await webActions.clickElementById("div:nth-of-type(6) > .form-control");
+    }
+
+    async verifyPageContentForWorkCapabilityAssessmentPage() {
+
+        await webActions.verifyPageLabel('.govuk-caption-l', writeFinalDecisionData.eventNameCaptor);
+        await webActions.verifyPageLabel('h1.govuk-heading-l', writeFinalDecisionData.workCapabilitiesAssessmentPageHeading);
+        await webActions.verifyPageLabel('#wcaAppeal legend > .form-label', writeFinalDecisionData.isThisAWCAAppeal);
+        await webActions.verifyPageLabel('[for=\'wcaAppeal_Yes\']', writeFinalDecisionData.yesLabel);
+        await webActions.verifyPageLabel('[for=\'wcaAppeal_No\']', writeFinalDecisionData.noLabel);
+    }
+
+    async inputAndVerifyPageContentForWorkCapabilityAssessmentPageData() {
+        await webActions.clickElementById("#wcaAppeal_Yes");
+        await webActions.verifyPageLabel('#supportGroupOnlyAppeal legend > .form-label', writeFinalDecisionData.isThisASupportGroupOnlyAppealLabel);
+        await webActions.verifyPageLabel('[for=\'supportGroupOnlyAppeal_Yes\']', writeFinalDecisionData.yesLabel);
+        await webActions.verifyPageLabel('[for=\'supportGroupOnlyAppeal_No\']', writeFinalDecisionData.noLabel);
+        await webActions.clickElementById("#supportGroupOnlyAppeal_Yes");
+    }
+
+    async verifyPageContentForSchedule7ActivitiesPage() {
+
+        await webActions.verifyPageLabel('.govuk-caption-l', writeFinalDecisionData.eventNameCaptor);
+        await webActions.verifyPageLabel('h1.govuk-heading-l', writeFinalDecisionData.schedule7ActivitiesPageHeading);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesApply\'] > .form-label', writeFinalDecisionData.doSchedule7ActivitiesApply);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesApply-No\']', writeFinalDecisionData.noneApply);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesApply-Yes\']', writeFinalDecisionData.theSchedule7ActivitiesSelectedBelowApply);
+    }
+
+    async inputAndVerifyPageContentForSchedule7ActivitiesPageData() {
+        await webActions.clickElementById("ccd-write-fixed-radio-list-field div:nth-of-type(2) > .form-control");
+        await webActions.verifyPageLabel('ccd-write-multi-select-list-field legend > .form-label', writeFinalDecisionData.schedule7ActivitiesLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7MobilisingUnaided\']', writeFinalDecisionData.mobilisingUnaidedLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7SittingPositions\']', writeFinalDecisionData.transferringFromOneSeatedPositionLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7Reaching\']', writeFinalDecisionData.reachingCannotRaiseEitherArmLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7PickingUp\']', writeFinalDecisionData.pickingUpMovingAndTransferringLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7ManualDexterity\']', writeFinalDecisionData.manualDexterityLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7ManualDexterity\']', writeFinalDecisionData.manualDexterityLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7MakingSelfUnderstood\']', writeFinalDecisionData.makingSelfUnderstoodLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7Communication\']', writeFinalDecisionData.understandingCommunicationByLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7LossOfControl\']', writeFinalDecisionData.absenceOrLossLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7LearningTasks\']', writeFinalDecisionData.learningTasksLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7PersonalAction\']', writeFinalDecisionData.initiatingAndCompletingLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7CopingWithChange\']', writeFinalDecisionData.copingWithChangeLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7SocialEngagement\']', writeFinalDecisionData.copingWithSocialEngagementLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7AppropriatenessOfBehaviour\']', writeFinalDecisionData.appropriatenessOfBehaviourLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7ConveyingFoodOrDrink\']', writeFinalDecisionData.conveyingFoodOrDrinkLabel);
+        await webActions.verifyPageLabel('[for=\'ucWriteFinalDecisionSchedule7ActivitiesQuestion-schedule7ChewingOrSwallowing\']', writeFinalDecisionData.chewingOrSwallowingFoodLabel);
+        await webActions.clickElementById("[value='schedule7ManualDexterity']");
+        await webActions.clickElementById("[value='schedule7PersonalAction']");
+    }
+
+    async verifyPageContentForReassessTheAwardPage() {
+
+        await webActions.verifyPageLabel('.govuk-caption-l', writeFinalDecisionData.eventNameCaptor);
+        await webActions.verifyPageLabel('h1.govuk-heading-l', writeFinalDecisionData.whenShouldDWPReassessPageHeading);
+        await webActions.verifyPageLabel('span.form-label', writeFinalDecisionData.whenShouldFTAReAssessTheAwardLabel);
+        await webActions.verifyPageLabel('[for=\'dwpReassessTheAward-noRecommendation\']', writeFinalDecisionData.noRecommendationLabel);
+        await webActions.verifyPageLabel('[for=\'dwpReassessTheAward-reassess3\']', writeFinalDecisionData.reassessWithin3MonthsLabel);
+        await webActions.verifyPageLabel('[for=\'dwpReassessTheAward-reassess6\']', writeFinalDecisionData.reassessWithin6MonthsLabel);
+        await webActions.verifyPageLabel('[for=\'dwpReassessTheAward-reassess12\']', writeFinalDecisionData.reassessWithin12MonthsLabel);
+        await webActions.verifyPageLabel('[for=\'dwpReassessTheAward-reassess18\']', writeFinalDecisionData.reassessWithin18MonthsLabel);
+        await webActions.verifyPageLabel('[for=\'dwpReassessTheAward-reassess24\']', writeFinalDecisionData.reassessWithin24MonthsLabel);
+        await webActions.verifyPageLabel('[for=\'dwpReassessTheAward-doNotReassess3\']', writeFinalDecisionData.doNotReassessWithin3MonthsLabel);
+        await webActions.verifyPageLabel('[for=\'dwpReassessTheAward-doNotReassess6\']', writeFinalDecisionData.doNotReassessWithin6MonthsLabel);
+        await webActions.verifyPageLabel('[for=\'dwpReassessTheAward-doNotReassess12\']', writeFinalDecisionData.doNotReassessWithin12MonthsLabel);
+        await webActions.verifyPageLabel('[for=\'dwpReassessTheAward-doNotReassess18\']', writeFinalDecisionData.doNotReassessWithin18MonthsLabel);
+        await webActions.verifyPageLabel('[for=\'dwpReassessTheAward-doNotReassess24\']', writeFinalDecisionData.doNotReassessWithin24MonthsLabel);
+        await webActions.verifyPageLabel('[for=\'dwpReassessTheAward-doNotReassess\']', writeFinalDecisionData.doNotReassessLabel);
+    }
+
+    async inputPageContentForReassessTheAwardPage() {
+        await webActions.clickElementById("#dwpReassessTheAward div:nth-of-type(2) > .form-control");
     }
 
     async chooseAllowedOrRefused(optionVal: string) {
