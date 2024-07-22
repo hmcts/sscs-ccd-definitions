@@ -125,12 +125,12 @@ export class WriteFinalDecisionPages {
     async inputPageContentForPanelMembersPageData(appealType = 'PIP') {
         switch (appealType) {
             case 'PIP': {
-                await webActions.inputField("#writeFinalDecisionDisabilityQualifiedPanelMemberName", writeFinalDecisionData.nameOfDisabilityQualifiedPanelMemberInput);
-                await webActions.inputField("#writeFinalDecisionMedicallyQualifiedPanelMemberName", writeFinalDecisionData.nameOfMedicallyQualifiedPanelMemberInput);
+                await webActions.typeField("#writeFinalDecisionDisabilityQualifiedPanelMemberName", writeFinalDecisionData.nameOfDisabilityQualifiedPanelMemberInput);
+                await webActions.typeField("#writeFinalDecisionMedicallyQualifiedPanelMemberName", writeFinalDecisionData.nameOfMedicallyQualifiedPanelMemberInput);
             }
             case 'UNIVERSAL CREDIT' : {
-                await webActions.inputField("#writeFinalDecisionMedicallyQualifiedPanelMemberName", writeFinalDecisionData.nameOfMedicallyQualifiedPanelMemberInput);
-                await webActions.inputField("#writeFinalDecisionOtherPanelMemberName", writeFinalDecisionData.otherPanelMemberInput);
+                await webActions.typeField("#writeFinalDecisionMedicallyQualifiedPanelMemberName", writeFinalDecisionData.nameOfMedicallyQualifiedPanelMemberInput);
+                await webActions.typeField("#writeFinalDecisionOtherPanelMemberName", writeFinalDecisionData.otherPanelMemberInput);
             }
             default : {
                 break;
