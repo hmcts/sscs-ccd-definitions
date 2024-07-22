@@ -1604,5 +1604,7 @@
   {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "poAttendanceConfirmed", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "09/12/2022", "CaseTypeID": "Benefit", "CaseFieldID": "tribunalDirectPoToAttend", "AccessProfile": "caseworker-sscs", "CRUD": "CRUD"},
   {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "CaseFieldID": "preWorkAllocation", "AccessProfile": "caseworker-sscs", "CRUD": "R"},
-  {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "CaseFieldID": "preWorkAllocation", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRU"}
+  {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "CaseFieldID": "preWorkAllocation", "AccessProfile": "caseworker-sscs-systemupdate", "CRUD": "CRU"},
+  {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "CaseFieldID": "appeal", "AccessProfile": "caseworker-sscs-pcqextractor", "CRUD": "R"},
+  {"LiveFrom": "06/02/2024", "CaseTypeID": "Benefit", "CaseFieldID": "scannedDocuments", "AccessProfile": "caseworker-sscs-pcqextractor", "CRUD": "R"}
 ]
