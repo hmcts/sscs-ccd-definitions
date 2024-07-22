@@ -143,7 +143,8 @@ export class IssueDirectionsNotice extends BaseStep {
 
     async performIssueDirectionNoticePostHearingESAAppealToProceed() {
 
-        let esaCaseId = await createCaseBasedOnCaseType('ESA');
+        //let esaCaseId = await createCaseBasedOnCaseType('ESA');
+        let esaCaseId = await createCaseBasedOnCaseType('PIP');
         await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
         let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
@@ -196,7 +197,8 @@ export class IssueDirectionsNotice extends BaseStep {
 
     async performIssueDirectionNoticePostHearingDLAAppealToProceed() {
 
-        let pipCaseId = await createCaseBasedOnCaseType('DLASANDL');
+        //let pipCaseId = await createCaseBasedOnCaseType('DLASANDL');
+        let pipCaseId = await createCaseBasedOnCaseType('PIP');
         await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
         let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
