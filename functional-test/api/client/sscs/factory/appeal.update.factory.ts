@@ -2,7 +2,11 @@
 import {request} from '@playwright/test';
 import {urls} from '../../../../config/config';
 import logger from '../../../../utils/loggerUtil';
-import upload_response_payload from '../../../data/payload/upload-response/upload-response.json';
+import upload_response_payload_dwp_022_EC from '../../../data/payload/upload-response/upload-response-dwp-022-EC.json';
+import upload_response_payload_hmrc_053_DQ
+    from '../../../data/payload/upload-response/upload-response-hmrc-053-DQ.json';
+import action_further_evidence_payload
+    from '../../../data/payload/action-further-evidence/action-further-evidence-other.json';
 
 let apiContext;
 
@@ -90,7 +94,9 @@ async function performEventOnCaseWithUploadResponse(idamToken: string,
                                                     userId: string,
                                                     jurisdiction: string,
                                                     caseType: string,
-                                                    caseId: string, eventId: string) {
+                                                    caseId: string,
+                                                    eventId: string,
+                                                    ftaAuthority: string) {
     let body: string = await getStartEventTokenOnCase(idamToken,
         serviceToken,
         userId,
@@ -98,7 +104,12 @@ async function performEventOnCaseWithUploadResponse(idamToken: string,
         caseType,
         caseId, eventId);
     let event_token: string = JSON.parse(body).token;
-    //let case_details = upload_response_payload.;
+    let upload_response_payload = {};
+    if (ftaAuthority === 'dwp') {
+        upload_response_payload = upload_response_payload_dwp_022_EC;
+    } else if (ftaAuthority === 'hmrc') {
+        upload_response_payload = upload_response_payload_hmrc_053_DQ;
+    }
 
     //logger.info("The value of the case Details " + JSON.stringify(case_details));
     let dataPayload = {
@@ -108,6 +119,37 @@ async function performEventOnCaseWithUploadResponse(idamToken: string,
             description: `Description for the ${eventId} of ${caseId}`,
         },
         data: upload_response_payload,
+        event_token: `${event_token}`,
+        ignore_warning: true,
+    }
+    logger.debug("The value of the Upload Response Payload : " + JSON.stringify(dataPayload));
+    await performEventSubmission(userId, jurisdiction, caseType, caseId, idamToken, serviceToken, dataPayload);
+}
+
+async function performEventOnCaseForActionFurtherEvidence(idamToken: string,
+                                  serviceToken: string,
+                                  userId: string,
+                                  jurisdiction: string,
+                                  caseType: string,
+                                  caseId: string,
+                                  eventId: string) {
+    let body: string = await getStartEventTokenOnCase(idamToken,
+        serviceToken,
+        userId,
+        jurisdiction,
+        caseType,
+        caseId, eventId);
+    let event_token: string = JSON.parse(body).token;
+
+
+    //logger.info("The value of the case Details " + JSON.stringify(case_details));
+    let dataPayload = {
+        event: {
+            id: `${eventId}`,
+            summary: `Summary for the ${eventId} of ${caseId}`,
+            description: `Description for the ${eventId} of ${caseId}`,
+        },
+        data: action_further_evidence_payload,
         event_token: `${event_token}`,
         ignore_warning: true,
     }
@@ -139,4 +181,4 @@ async function performEventSubmission(userId, jurisdiction, caseType, caseId, id
     }
 }
 
-export {performEventOnCaseWithEmptyBody, performEventOnCaseWithUploadResponse}
+export {performEventOnCaseWithEmptyBody, performEventOnCaseWithUploadResponse, performEventOnCaseForActionFurtherEvidence}
