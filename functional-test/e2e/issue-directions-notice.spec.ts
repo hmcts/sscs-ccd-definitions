@@ -30,7 +30,7 @@ test.describe("Issue direction test", {tag: '@pipeline'}, async() => {
             await issueDirectionsNoticeSteps.performIssueDirectionErrorMessages();
         });
 
-    test.only("Issue Direction Notice - Invalid PIP Case - Pre Hearing - Appeal to Proceed",
+    test("Issue Direction Notice - Invalid PIP Case - Pre Hearing - Appeal to Proceed",
         async ({issueDirectionsNoticeSteps}) => {
             test.slow();
             await issueDirectionsNoticeSteps.performIssueDirectionNoticeIncompleteApplicationPreHearingAppealToProceed();
