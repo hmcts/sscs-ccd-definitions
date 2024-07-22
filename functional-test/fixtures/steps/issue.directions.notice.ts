@@ -9,11 +9,10 @@ import {
 } from "../../api/client/sscs/factory/appeal.update.factory";
 import issueDirectionTestdata from "../../pages/content/issue.direction_en.json";
 import eventTestData from "../../pages/content/event.name.event.description_en.json";
-import sendToInterLocData from '../../pages/content/send.to.interloc_en.json';
-import actionFurtherEvidenceTestData from '../../pages/content/action.further.evidence_en.json';
+import actionFurtherEvidenceTestdata from '../../pages/content/action.further.evidence_en.json';
+import sendToInterLocPreValidData from '../../pages/content/send.to.interloc_en.json';
 import logger from "../../utils/loggerUtil";
 import performAppealDormantOnCase from "../../api/client/sscs/appeal.event";
-import sendToInterLocPreValidData from "../../pages/content/send.to.interloc_en.json";
 
 export class IssueDirectionsNotice extends BaseStep {
 
@@ -29,7 +28,7 @@ export class IssueDirectionsNotice extends BaseStep {
 
         let pipCaseId = await createCaseBasedOnCaseType('PIPINCOMPLETE');
         await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
-        logger.info('The value of the Case Id that is Created : ' + pipCaseId)
+        logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
         /*let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
         let serviceToken: string = await getSSCSServiceToken();
         let responseWriterId: string = await accessId(credentials.dwpResponseWriter);
@@ -111,11 +110,11 @@ export class IssueDirectionsNotice extends BaseStep {
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, taxCreditCaseId);
         await this.homePage.reloadPage();
-        await this.homePage.chooseEvent(actionFurtherEvidenceTestData.eventNameCaptor);
+        await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventNameCaptor);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
-            actionFurtherEvidenceTestData.sender,
-            actionFurtherEvidenceTestData.other,
-            actionFurtherEvidenceTestData.testfileone
+            actionFurtherEvidenceTestdata.sender,
+            actionFurtherEvidenceTestdata.other,
+            actionFurtherEvidenceTestdata.testfileone
         );
         await this.homePage.signOut();
         await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
@@ -166,11 +165,11 @@ export class IssueDirectionsNotice extends BaseStep {
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, esaCaseId);
         await this.homePage.reloadPage();
-        await this.homePage.chooseEvent(actionFurtherEvidenceTestData.eventNameCaptor);
+        await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventNameCaptor);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
-            actionFurtherEvidenceTestData.sender,
-            actionFurtherEvidenceTestData.other,
-            actionFurtherEvidenceTestData.testfileone
+            actionFurtherEvidenceTestdata.sender,
+            actionFurtherEvidenceTestdata.other,
+            actionFurtherEvidenceTestdata.testfileone
         );
         await this.homePage.signOut();
         await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
@@ -219,11 +218,11 @@ export class IssueDirectionsNotice extends BaseStep {
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, pipCaseId);
         await this.homePage.reloadPage();
-        await this.homePage.chooseEvent(actionFurtherEvidenceTestData.eventNameCaptor);
+        await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventNameCaptor);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
-            actionFurtherEvidenceTestData.sender,
-            actionFurtherEvidenceTestData.other,
-            actionFurtherEvidenceTestData.testfileone
+            actionFurtherEvidenceTestdata.sender,
+            actionFurtherEvidenceTestdata.other,
+            actionFurtherEvidenceTestdata.testfileone
         );
         await this.homePage.signOut();
         await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
@@ -248,10 +247,11 @@ export class IssueDirectionsNotice extends BaseStep {
 
 
     async performIssueDirectionErrorMessages() {
-        let pipCaseId = await createCaseBasedOnCaseType('DLASANDL');
+        //let pipCaseId = await createCaseBasedOnCaseType('DLASANDL');
+        let pipCaseId = await createCaseBasedOnCaseType('PIP');
         await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
-        let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
+       let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
         let serviceToken: string = await getSSCSServiceToken();
         let responseWriterId: string = await accessId(credentials.dwpResponseWriter);
         await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
@@ -270,11 +270,11 @@ export class IssueDirectionsNotice extends BaseStep {
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, pipCaseId);
         await this.homePage.reloadPage();
-        await this.homePage.chooseEvent(actionFurtherEvidenceTestData.eventNameCaptor);
+        await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventNameCaptor);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
-            actionFurtherEvidenceTestData.sender,
-            actionFurtherEvidenceTestData.other,
-            actionFurtherEvidenceTestData.testfileone
+            actionFurtherEvidenceTestdata.sender,
+            actionFurtherEvidenceTestdata.other,
+            actionFurtherEvidenceTestdata.testfileone
         );
         await this.homePage.signOut();
         await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
@@ -286,13 +286,13 @@ export class IssueDirectionsNotice extends BaseStep {
         await this.issueDirectionPage.verifyPageContent();
         await this.issueDirectionPage.confirmSubmission();
 
-        await this.issueDirectionPage.verifyErrorMsg(true, false, false);
+        await this.issueDirectionPage.verifyErrorMsg(true,false,false);
         await this.issueDirectionPage.chooseRecipients('#confidentialityType-confidential');
         await this.issueDirectionPage.confirmSubmission();
-        await this.issueDirectionPage.verifyErrorMsg(false, true, false);
+        await this.issueDirectionPage.verifyErrorMsg(false,true,false);
 
         await this.issueDirectionPage.chooseNoticeType('#generateNotice_Yes');
         await this.issueDirectionPage.confirmSubmission();
-        await this.issueDirectionPage.verifyErrorMsg(false, false, true);
+        await this.issueDirectionPage.verifyErrorMsg(false,false,true);
     }
 }
