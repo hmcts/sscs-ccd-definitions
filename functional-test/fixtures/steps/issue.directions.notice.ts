@@ -9,9 +9,11 @@ import {
 } from "../../api/client/sscs/factory/appeal.update.factory";
 import issueDirectionTestdata from "../../pages/content/issue.direction_en.json";
 import eventTestData from "../../pages/content/event.name.event.description_en.json";
-import actionFurtherEvidenceTestdata from '../../pages/content/action.further.evidence_en.json';
+import sendToInterLocData from '../../pages/content/send.to.interloc_en.json';
+import actionFurtherEvidenceTestData from '../../pages/content/action.further.evidence_en.json';
 import logger from "../../utils/loggerUtil";
 import performAppealDormantOnCase from "../../api/client/sscs/appeal.event";
+import sendToInterLocPreValidData from "../../pages/content/send.to.interloc_en.json";
 
 export class IssueDirectionsNotice extends BaseStep {
 
@@ -27,7 +29,7 @@ export class IssueDirectionsNotice extends BaseStep {
 
         let pipCaseId = await createCaseBasedOnCaseType('PIPINCOMPLETE');
         await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
-        logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
+        logger.info('The value of the Case Id that is Created : ' + pipCaseId)
         /*let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
         let serviceToken: string = await getSSCSServiceToken();
         let responseWriterId: string = await accessId(credentials.dwpResponseWriter);
@@ -45,14 +47,22 @@ export class IssueDirectionsNotice extends BaseStep {
             serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit',
             taxCreditCaseId.trim(), 'uploadDocumentFurtherEvidence');*/
 
+        //This block would also act as a Test for the Send to interloc - pre-valid Event. SSCSSI-228
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, pipCaseId);
         await this.homePage.reloadPage();
-        await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventNameCaptor);
-        await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
-            actionFurtherEvidenceTestdata.sender,
-            actionFurtherEvidenceTestdata.other,
-            actionFurtherEvidenceTestdata.testfileone
-        );
+        await this.homePage.chooseEvent("Send to interloc - pre-valid");
+        await this.sendToInterlocPrevalidPage.verifyPageContentForTheInterlocReferralPage();
+        await this.sendToInterlocPrevalidPage.inputReasonForReferral();
+        await this.sendToInterlocPrevalidPage.submitContinueBtn();
+        await this.textAreaPage.verifyPageContent(sendToInterLocPreValidData.sendToInterLocPreValidCaption, sendToInterLocPreValidData.appealNotepad, sendToInterLocPreValidData.enterNoteOptionalLabel);
+        await this.textAreaPage.inputData(sendToInterLocPreValidData.appealNotepadInput);
+        await this.sendToInterlocPrevalidPage.confirmSubmission();
+        await this.eventNameAndDescriptionPage.verifyPageContent(sendToInterLocPreValidData.sendToInterLocPreValidCaption,
+            false);
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
+        await this.verifyHistoryTabDetails("Send to interloc - pre-valid");
         await this.homePage.signOut();
         await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
 
@@ -101,11 +111,11 @@ export class IssueDirectionsNotice extends BaseStep {
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, taxCreditCaseId);
         await this.homePage.reloadPage();
-        await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventNameCaptor);
+        await this.homePage.chooseEvent(actionFurtherEvidenceTestData.eventNameCaptor);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
-            actionFurtherEvidenceTestdata.sender,
-            actionFurtherEvidenceTestdata.other,
-            actionFurtherEvidenceTestdata.testfileone
+            actionFurtherEvidenceTestData.sender,
+            actionFurtherEvidenceTestData.other,
+            actionFurtherEvidenceTestData.testfileone
         );
         await this.homePage.signOut();
         await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
@@ -156,11 +166,11 @@ export class IssueDirectionsNotice extends BaseStep {
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, esaCaseId);
         await this.homePage.reloadPage();
-        await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventNameCaptor);
+        await this.homePage.chooseEvent(actionFurtherEvidenceTestData.eventNameCaptor);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
-            actionFurtherEvidenceTestdata.sender,
-            actionFurtherEvidenceTestdata.other,
-            actionFurtherEvidenceTestdata.testfileone
+            actionFurtherEvidenceTestData.sender,
+            actionFurtherEvidenceTestData.other,
+            actionFurtherEvidenceTestData.testfileone
         );
         await this.homePage.signOut();
         await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
@@ -209,11 +219,11 @@ export class IssueDirectionsNotice extends BaseStep {
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, pipCaseId);
         await this.homePage.reloadPage();
-        await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventNameCaptor);
+        await this.homePage.chooseEvent(actionFurtherEvidenceTestData.eventNameCaptor);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
-            actionFurtherEvidenceTestdata.sender,
-            actionFurtherEvidenceTestdata.other,
-            actionFurtherEvidenceTestdata.testfileone
+            actionFurtherEvidenceTestData.sender,
+            actionFurtherEvidenceTestData.other,
+            actionFurtherEvidenceTestData.testfileone
         );
         await this.homePage.signOut();
         await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
@@ -260,11 +270,11 @@ export class IssueDirectionsNotice extends BaseStep {
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, pipCaseId);
         await this.homePage.reloadPage();
-        await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventNameCaptor);
+        await this.homePage.chooseEvent(actionFurtherEvidenceTestData.eventNameCaptor);
         await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
-            actionFurtherEvidenceTestdata.sender,
-            actionFurtherEvidenceTestdata.other,
-            actionFurtherEvidenceTestdata.testfileone
+            actionFurtherEvidenceTestData.sender,
+            actionFurtherEvidenceTestData.other,
+            actionFurtherEvidenceTestData.testfileone
         );
         await this.homePage.signOut();
         await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
@@ -276,13 +286,13 @@ export class IssueDirectionsNotice extends BaseStep {
         await this.issueDirectionPage.verifyPageContent();
         await this.issueDirectionPage.confirmSubmission();
 
-        await this.issueDirectionPage.verifyErrorMsg(true,false,false);
+        await this.issueDirectionPage.verifyErrorMsg(true, false, false);
         await this.issueDirectionPage.chooseRecipients('#confidentialityType-confidential');
         await this.issueDirectionPage.confirmSubmission();
-        await this.issueDirectionPage.verifyErrorMsg(false,true,false);
+        await this.issueDirectionPage.verifyErrorMsg(false, true, false);
 
         await this.issueDirectionPage.chooseNoticeType('#generateNotice_Yes');
         await this.issueDirectionPage.confirmSubmission();
-        await this.issueDirectionPage.verifyErrorMsg(false,false,true);
+        await this.issueDirectionPage.verifyErrorMsg(false, false, true);
     }
 }

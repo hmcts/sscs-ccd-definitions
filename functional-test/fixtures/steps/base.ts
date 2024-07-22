@@ -43,6 +43,7 @@ import { UpdateUCBPage } from '../../pages/update.ucb.page';
 import { UpdateSubscriptionPage } from '../../pages/update.subscription.page';
 import { Subscriptions } from '../../pages/tabs/subscriptions';
 import {WriteFinalDecisionPages} from "../../pages/write.final.decision.page";
+import {SendToInterlocPrevalidPage} from "../../pages/send.to.interloc.prevalid.page";
 
 
 export abstract class BaseStep {
@@ -91,6 +92,7 @@ export abstract class BaseStep {
   protected updateSubscriptionPage: UpdateSubscriptionPage;
   protected subscriptionsTab: Subscriptions;
   protected writeFinalDecisionPage : WriteFinalDecisionPages;
+  protected sendToInterlocPrevalidPage : SendToInterlocPrevalidPage;
 
 
    constructor(page: Page) {
@@ -138,6 +140,7 @@ export abstract class BaseStep {
         this.updateSubscriptionPage = new UpdateSubscriptionPage(this.page);
         this.subscriptionsTab = new Subscriptions(this.page);
         this.writeFinalDecisionPage = new WriteFinalDecisionPages(page);
+       this.sendToInterlocPrevalidPage = new SendToInterlocPrevalidPage(page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {

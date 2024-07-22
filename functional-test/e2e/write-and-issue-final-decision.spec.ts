@@ -40,7 +40,7 @@ test.describe('Issue Final Decision - Tax Credit Appeal Type', {tag: '@pipeline'
 
 test.describe('Issue Final Decision - Universal Credit Appeal Type', {tag: '@pipeline'},  async () => {
 
-    test.only("Issue Final Decision - Simple Decision Notice - 'Yes' notice generated",
+    test("Issue Final Decision - Simple Decision Notice - 'Yes' notice generated",
         async ({issueFinalDecisionSteps}) => {
             test.slow();
             let universalCreditCaseId = await createCaseBasedOnCaseType('UC');
