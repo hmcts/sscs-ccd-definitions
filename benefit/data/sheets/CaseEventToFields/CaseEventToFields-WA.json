@@ -1,0 +1,17 @@
+[
+  {
+    "CaseEventID": "postHearingRequest",
+    "CaseFieldID": "sorRequestInTime",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "OPTIONAL",
+    "LiveFrom": "09/03/2023",
+    "PageDisplayOrder": 2,
+    "PageFieldDisplayOrder": 1,
+    "PageID": "Statement_Of_Reasons",
+    "PageLabel": "Statement of Reasons",
+    "FieldShowCondition": "postHearingRequestType=\"DoNotShow\"",
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Yes",
+    "PublishAs": "sorRequestInTime"
+  }
+]
