@@ -169,7 +169,7 @@ export abstract class BaseStep {
     async loginUserWithoutCaseId(user, clearCacheFlag: boolean = false) {
         await this.loginPage.goToLoginPage();
         await this.loginPage.verifySuccessfulLoginForUser(user, clearCacheFlag);
-        await this.homePage.goToCaseDetails;
+        await this.homePage.goToCaseList;
     }
 
     async verifyHistoryTabDetails(state?: string, event?: string, comment?: string) {

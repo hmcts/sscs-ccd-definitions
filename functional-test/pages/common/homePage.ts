@@ -80,10 +80,10 @@ export class HomePage {
             });
     }
 
-    async goToCaseDetails(): Promise<void> {
-        // await this.page.goto(`/cases/case-details/${caseId}`);
+    async goToCaseList(): Promise<void> {
+        //await this.page.goto(`/cases`);
         await this.selectToViewTasksAndCasesIfRequired();
-        //await this.page.getByRole('link', { name: 'Case Details' }).waitFor();
+        await this.page.getByRole('link', { name: 'Case list' }).waitFor();
         await this.page.getByRole('link', { name: 'Case list' }).click();
         await this.delay(3000);
         await expect(this.page.getByText('Filters')).toBeVisible();

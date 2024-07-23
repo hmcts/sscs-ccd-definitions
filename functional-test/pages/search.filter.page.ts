@@ -15,23 +15,17 @@ export class SearchFilterPage {
         this.page = page;
         webAction = new WebAction(this.page);
     }
-       
-    async checkCaseList(): Promise<void> {
-        await expect(this.page.getByText('Your cases')).toBeVisible();
-        await expect(this.page.getByText('Filters')).toBeVisible();
-    }
     
-    async performSearch(): Promise<void> {
+    async performSearch() {
         await this.page.locator('#wb-jurisdiction').selectOption({ label: 'Tribunals' });
-        await this.page.locator('#wb-case-type').selectOption({ label: 'SSCS Case 6.4.9 AAT' });
+        await this.page.locator('#wb-case-type').selectOption({ label: 'SSCS Case 6.4.8-WA-dev AAT' });
         await this.page.locator('#wb-case-state').selectOption({ label: 'Appeal Created' });
         await this.page.locator('#benefitCode').selectOption({ label: '002' });
         await this.page.locator('#issueCode').selectOption({ label: 'DD' });
         await this.page.getByRole('button', { name: 'Apply' }).click();
         await this.page.waitForLoadState();
-        await this.page.pause();
+        await expect(this.page.locator('#search-result-heading__text')).toContainText('Your cases');
         await expect(this.page.locator('#search-result-summary__text')).toContainText('results');
-        await this.page.waitForTimeout;
     }
 
     async validateSearchResults(caseId: number) {
