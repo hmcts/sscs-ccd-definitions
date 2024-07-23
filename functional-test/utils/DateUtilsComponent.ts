@@ -88,6 +88,12 @@ class DateUtilsComponent {
 
   static async getCurrentDay() {
     let currentTime = new Date();
+    let day = currentTime.getDay();
+    return day;
+  }
+
+  static async getCurrentDayDateTime() {
+    let currentTime = new Date();
     let month = currentTime.getMonth() + 1;
     let day = currentTime.getDate();
     let year = currentTime.getFullYear();
