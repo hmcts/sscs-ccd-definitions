@@ -47,6 +47,8 @@ import { ProcessAVPage } from '../../pages/process.av.page';
 import { OtherPartyDetails } from '../../pages/tabs/other.party.details';
 import { updateOtherPartyDataPage } from '../../pages/update.other.party.data.page';
 import { SendCaseToTcwPage } from '../../pages/send.case.to.tcw.page';
+import {WriteFinalDecisionPages} from "../../pages/write.final.decision.page";
+import {SendToInterlocPrevalidPage} from "../../pages/send.to.interloc.prevalid.page";
 
 
 export abstract class BaseStep {
@@ -99,6 +101,9 @@ export abstract class BaseStep {
   protected updateOtherPartyDataPage: updateOtherPartyDataPage;
   protected otherPartyDetailsTab: OtherPartyDetails;
   protected sendCaseToTcwPage: SendCaseToTcwPage;
+  protected writeFinalDecisionPage : WriteFinalDecisionPages;
+  protected sendToInterlocPrevalidPage : SendToInterlocPrevalidPage;
+
 
     constructor(page: Page) {
         this.page = page;
@@ -149,7 +154,9 @@ export abstract class BaseStep {
         this.updateOtherPartyDataPage = new updateOtherPartyDataPage(this.page);
         this.otherPartyDetailsTab = new OtherPartyDetails(this.page);
         this.sendCaseToTcwPage = new SendCaseToTcwPage(this.page);
-    }
+        this.writeFinalDecisionPage = new WriteFinalDecisionPages(page);
+        this.sendToInterlocPrevalidPage = new SendToInterlocPrevalidPage(page);
+   }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
         await this.loginPage.goToLoginPage();
