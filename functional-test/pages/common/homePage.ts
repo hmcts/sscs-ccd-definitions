@@ -80,6 +80,15 @@ export class HomePage {
             });
     }
 
+    async goToCaseDetails(): Promise<void> {
+        // await this.page.goto(`/cases/case-details/${caseId}`);
+        await this.selectToViewTasksAndCasesIfRequired();
+        //await this.page.getByRole('link', { name: 'Case Details' }).waitFor();
+        await this.page.getByRole('link', { name: 'Case list' }).click();
+        await this.delay(3000);
+        await expect(this.page.getByText('Filters')).toBeVisible();
+    }
+
     async chooseEvent(eventName: string): Promise<void> {
         await this.delay(2000);
         await webActions.chooseOptionByLabel(this.nextStepDropDown, eventName);

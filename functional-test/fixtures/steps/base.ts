@@ -49,7 +49,7 @@ import { updateOtherPartyDataPage } from '../../pages/update.other.party.data.pa
 import { SendCaseToTcwPage } from '../../pages/send.case.to.tcw.page';
 import {WriteFinalDecisionPages} from "../../pages/write.final.decision.page";
 import {SendToInterlocPrevalidPage} from "../../pages/send.to.interloc.prevalid.page";
-
+import { SearchFilterPage } from '../../pages/search.filter.page';
 
 export abstract class BaseStep {
 
@@ -102,7 +102,8 @@ export abstract class BaseStep {
   protected otherPartyDetailsTab: OtherPartyDetails;
   protected sendCaseToTcwPage: SendCaseToTcwPage;
   protected writeFinalDecisionPage : WriteFinalDecisionPages;
-  protected sendToInterlocPrevalidPage : SendToInterlocPrevalidPage;
+  protected sendToInterlocPrevalidPage: SendToInterlocPrevalidPage;
+  protected searchFilterPage: SearchFilterPage;
 
 
     constructor(page: Page) {
@@ -156,12 +157,19 @@ export abstract class BaseStep {
         this.sendCaseToTcwPage = new SendCaseToTcwPage(this.page);
         this.writeFinalDecisionPage = new WriteFinalDecisionPages(page);
         this.sendToInterlocPrevalidPage = new SendToInterlocPrevalidPage(page);
+        this.searchFilterPage = new SearchFilterPage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
         await this.loginPage.goToLoginPage();
         await this.loginPage.verifySuccessfulLoginForUser(user, clearCacheFlag);
         await this.homePage.goToHomePage(caseId);
+    }
+
+    async loginUserWithoutCaseId(user, clearCacheFlag: boolean = false) {
+        await this.loginPage.goToLoginPage();
+        await this.loginPage.verifySuccessfulLoginForUser(user, clearCacheFlag);
+        await this.homePage.goToCaseDetails;
     }
 
     async verifyHistoryTabDetails(state?: string, event?: string, comment?: string) {
