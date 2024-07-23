@@ -5,6 +5,7 @@ import logger from '../../../../utils/loggerUtil';
 import upload_response_payload_dwp_022_EC from '../../../data/payload/upload-response/upload-response-dwp-022-CC.json';
 import upload_response_payload_hmrc_053_DQ
     from '../../../data/payload/upload-response/upload-response-hmrc-053-DQ.json';
+import upload_response_dwp_av_002_PIP from '../../../data/payload/upload-response/upload-response-dwp-av-002-PIP.json';
 import action_further_evidence_payload
     from '../../../data/payload/action-further-evidence/action-further-evidence-other.json';
 
@@ -107,6 +108,8 @@ async function performEventOnCaseWithUploadResponse(idamToken: string,
     let upload_response_payload = {};
     if (ftaAuthority === 'dwp') {
         upload_response_payload = upload_response_payload_dwp_022_EC;
+    } else if (ftaAuthority === 'av') {
+        upload_response_payload = upload_response_dwp_av_002_PIP;
     } else if (ftaAuthority === 'hmrc') {
         upload_response_payload = upload_response_payload_hmrc_053_DQ;
     }
