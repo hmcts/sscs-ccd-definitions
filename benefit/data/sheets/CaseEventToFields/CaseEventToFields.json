@@ -364,6 +364,20 @@
   },
   {
     "CaseEventID": "adjournCase",
+    "CaseFieldID": "adjournmentInProgress",
+    "CaseTypeID": "Benefit",
+    "DisplayContext": "READONLY",
+    "LiveFrom": "01/01/2018",
+    "FieldShowCondition": "adjournCaseGenerateNotice=\"DUMMY\"",
+    "PageDisplayOrder": 1,
+    "PageFieldDisplayOrder": 0,
+    "PageID": "typeOfAdjournment",
+    "PageLabel": "Upload or generate a notice",
+    "ShowSummaryChangeOption": "N",
+    "RetainHiddenValue": "Yes"
+  },
+  {
+    "CaseEventID": "adjournCase",
     "CaseFieldID": "adjournCaseGenerateNotice",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
