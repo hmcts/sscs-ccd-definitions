@@ -1,4 +1,4 @@
-import { expect, Page } from '@playwright/test';
+import { Locator, expect, Page } from '@playwright/test';
 import { WebAction } from '../common/web.action';
 import { listenerCount } from 'process';
 import { Browser } from 'puppeteer';
@@ -29,7 +29,8 @@ export class SearchFilterPage {
     }
 
     async validateSearchResults(caseId: number) {
-        const tot = await this.page.locator('ccd - search - result: nth - child(1) > table: nth - child(1) > tbody: nth - child(3) > tr').count();
-        await expect(tot).toEqual(caseId);
+        const locator: Locator = this.page.locator('ccd - search - result: nth - child(1) > table: nth - child(1) > tbody: nth - child(3) > tr');
+        const tot: number = await locator.count();
+        expect(tot).toBe(caseId);
     }
 }
