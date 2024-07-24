@@ -37,7 +37,9 @@ import { ProcessAVEvidence } from '../fixtures/steps/process.av.evidence';
 import { UpdateSubscription } from '../fixtures/steps/update.subscription'
 import { UpdateOtherPartyData } from '../fixtures/steps/update.other.party.data';
 import {IssueDirectionsNotice} from "../fixtures/steps/issue.directions.notice";
-import { WriteFinalDecision } from "../fixtures/steps/write.final.decision";
+import {WriteFinalDecision} from "../fixtures/steps/write.final.decision";
+import {UpdateNotListable} from "../fixtures/steps/update.not.listable";
+import { use } from "chai";
 import { SearchFilter } from '../fixtures/steps/search.filter';
 
 
@@ -81,6 +83,7 @@ type MyStepsFixtures = {
     processAVEvidenceSteps: ProcessAVEvidence
     updateOtherPartyDataSteps: UpdateOtherPartyData
     issueFinalDecisionSteps: WriteFinalDecision
+    updateNotListableSteps: UpdateNotListable
     searchFilterSteps: SearchFilter
 };
 
@@ -240,6 +243,10 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     updateOtherPartyDataSteps: async ({ page }, use) => {
         const updateOtherPartyDataSteps = new UpdateOtherPartyData(page);
         await use(updateOtherPartyDataSteps);
+    },
+    updateNotListableSteps: async ({page}, use)=>{
+        const updateNotListableSteps = new UpdateNotListable(page);
+        await use(updateNotListableSteps);
     },
     searchFilterSteps: async ({ page }, use) => {
         const searchFilterSteps = new SearchFilter(page);

@@ -49,6 +49,8 @@ import { updateOtherPartyDataPage } from '../../pages/update.other.party.data.pa
 import { SendCaseToTcwPage } from '../../pages/send.case.to.tcw.page';
 import {WriteFinalDecisionPages} from "../../pages/write.final.decision.page";
 import {SendToInterlocPrevalidPage} from "../../pages/send.to.interloc.prevalid.page";
+import {NotListablePage} from "../../pages/not.listable.page";
+import { UpdateNotListablePage } from "../../pages/update.not.listable.page";
 import { SearchFilterPage } from '../../pages/search.filter.page';
 
 export abstract class BaseStep {
@@ -102,11 +104,12 @@ export abstract class BaseStep {
   protected otherPartyDetailsTab: OtherPartyDetails;
   protected sendCaseToTcwPage: SendCaseToTcwPage;
   protected writeFinalDecisionPage : WriteFinalDecisionPages;
-  protected sendToInterlocPrevalidPage: SendToInterlocPrevalidPage;
+  protected sendToInterlocPrevalidPage : SendToInterlocPrevalidPage;
+  protected notListablePage: NotListablePage;
+  protected updateNotListablePage: UpdateNotListablePage;
   protected searchFilterPage: SearchFilterPage;
 
-
-    constructor(page: Page) {
+   constructor(page: Page) {
         this.page = page;
         this.loginPage = new LoginPage(this.page);
         this.homePage = new HomePage(this.page);
@@ -157,6 +160,8 @@ export abstract class BaseStep {
         this.sendCaseToTcwPage = new SendCaseToTcwPage(this.page);
         this.writeFinalDecisionPage = new WriteFinalDecisionPages(page);
         this.sendToInterlocPrevalidPage = new SendToInterlocPrevalidPage(page);
+        this.notListablePage = new NotListablePage(this.page);
+        this.updateNotListablePage = new UpdateNotListablePage(this.page);
         this.searchFilterPage = new SearchFilterPage(this.page);
    }
 
