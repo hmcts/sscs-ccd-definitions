@@ -1,7 +1,6 @@
 import {WebAction} from "../common/web.action";
-import {expect, Page} from "@playwright/test";
+import {Page} from "@playwright/test";
 import updateNotListableData from "./content/update.not.listable_en.json";
-import {timeouts} from "../config/config";
 
 let webActions: WebAction;
 
@@ -68,7 +67,7 @@ export class UpdateNotListablePage {
         await this.page.getByText('Continue').click();
     }
 
-    async moveCaseToWithFTA(){
+    async noNewDueDateMoveCaseToWithFTA(){
         await this.page.waitForTimeout(3000);
         await this.page.click('#updateNotListableSetNewDueDate_No');
         await this.page.getByText('Continue').click();
