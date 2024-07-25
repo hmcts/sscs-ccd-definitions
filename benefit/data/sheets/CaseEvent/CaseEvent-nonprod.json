@@ -1,7 +1,7 @@
 [
   {
     "LiveFrom": "23/11/2022",
-    "CaseTypeID": "Benefit-3879",
+    "CaseTypeID": "Benefit",
     "ID": "setHearingRoute",
     "Name": "Set Hearing Route",
     "Description": "Set Hearing Route",
