@@ -18,7 +18,7 @@ export class SearchFilterPage {
     
     async performSearch() {
         await this.page.locator('#wb-jurisdiction').selectOption({ label: 'Tribunals' });
-        await this.page.locator('#wb-case-type').selectOption({ label: 'SSCS Case 6.4.8-WA-dev AAT' });
+        await this.page.locator('#wb-case-type').selectOption({ label: 'SSCS Case 6.4.4-E2E AAT' });
         await this.page.locator('#wb-case-state').selectOption({ label: 'Appeal Created' });
         await this.page.locator('#benefitCode').selectOption({ label: '002' });
         await this.page.locator('#issueCode').selectOption({ label: 'DD' });
