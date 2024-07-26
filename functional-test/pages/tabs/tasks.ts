@@ -194,4 +194,23 @@ export class Tasks {
         await this.page.getByRole('button', { name: tasksTestData.markAsDoneButtonLabel }).click();
         await expect(this.page.locator(`//h2[normalize-space()='${tasksTestData.tasksHeading}']`)).toBeVisible();
     }
+
+    async assignTaskToTcwUser(taskName: string, userEmail: string) {
+        await this.clickAssignTask(taskName);
+        await this.page.getByRole('radio', { name: tasksTestData.legalOpsRole.roleType }).click();
+        await this.page.getByRole('button', { name: 'Continue' }).click();
+        await this.page.locator('#inputSelectPerson').fill(tasksTestData.legalOpsRole.assignToName);
+        await expect(this.page.locator('div.mat-autocomplete-panel.mat-autocomplete-visible')).toBeVisible();
+        await this.page.locator(`//mat-option/span[contains(text(), '${userEmail.toLowerCase()}')]`).click();
+        await expect(this.page.locator('//mat-option')).toBeHidden();
+        await this.page.getByRole('button', { name: 'Continue' }).click();
+        await expect(this.page.locator(`h1.govuk-heading-l:has-text('${tasksTestData.checkYourAnswersHeading}')`)).toBeVisible();
+        await expect(this.page.locator(`//td[normalize-space()='${tasksTestData.legalOpsRole.assignToName}']`)).toBeVisible();
+        await this.page.getByRole('button', { name: tasksTestData.assignTaskButtonLabel }).click();
+
+        await expect(this.page.locator(`//h2[normalize-space()='${tasksTestData.tasksHeading}']`)).toBeVisible();
+        let task = this.page.locator(`//exui-case-task[./*[normalize-space()='${taskName}']]`);
+        await expect(task.getByRole('link', { name: tasksTestData.assignTask })).toBeHidden();
+    }
+
 }
