@@ -80,6 +80,15 @@ export class HomePage {
             });
     }
 
+    async goToCaseList(): Promise<void> {
+        //await this.page.goto(`/cases`);
+        await this.selectToViewTasksAndCasesIfRequired();
+        await this.page.getByRole('link', { name: 'Case list' }).waitFor();
+        await this.page.getByRole('link', { name: 'Case list' }).click();
+        await this.delay(3000);
+        await expect(this.page.getByText('Filters')).toBeVisible();
+    }
+
     async chooseEvent(eventName: string): Promise<void> {
         await this.delay(2000);
         await webActions.chooseOptionByLabel(this.nextStepDropDown, eventName);

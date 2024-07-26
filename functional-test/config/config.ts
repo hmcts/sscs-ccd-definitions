@@ -57,7 +57,7 @@ export const credentials = {
   },
   amTribunalCaseWorker: {
     email: process.env.TEST_AM_TRIBUNAL_CASEWORKER_USERNAME,
-    password: process.env.TEST_AM_TRIBUNAL_CASEWORKER_PASSWORD
+    password: process.env.TEST_AM_TRIBUNAL_CASEWORKER_PASSWORD,
   },
   respondent: {
     email: process.env.RESPONDENT_USERNAME,
@@ -83,6 +83,10 @@ export const credentials = {
     email: process.env.TEST_AM_SUPERUSER_USERNAME,
     password: process.env.TEST_AM_SUPERUSER_PASSWORD,
   },
+  amSeniorTribunalCaseWorkerWithCaseAllocatorRole: {
+    email: process.env.TEST_AM_SENIOR_TRIBUNAL_CASEWORKER_CASE_ALLOCATOR_USERNAME,
+    password: process.env.TEST_AM_SENIOR_TRIBUNAL_CASEWORKER_CASE_ALLOCATOR_PASSWORD,
+  }
 };
 
 export const resources = {

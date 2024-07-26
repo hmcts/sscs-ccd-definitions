@@ -50,7 +50,8 @@ import { SendCaseToTcwPage } from '../../pages/send.case.to.tcw.page';
 import {WriteFinalDecisionPages} from "../../pages/write.final.decision.page";
 import {SendToInterlocPrevalidPage} from "../../pages/send.to.interloc.prevalid.page";
 import {NotListablePage} from "../../pages/not.listable.page";
-import {UpdateNotListablePage} from "../../pages/update.not.listable.page";
+import { UpdateNotListablePage } from "../../pages/update.not.listable.page";
+import { SearchFilterPage } from '../../pages/search.filter.page';
 import { ReissueFurtherEvidencePage } from '../../pages/reissue.further.evidence.page';
 
 export abstract class BaseStep {
@@ -107,6 +108,7 @@ export abstract class BaseStep {
   protected sendToInterlocPrevalidPage : SendToInterlocPrevalidPage;
   protected notListablePage: NotListablePage;
   protected updateNotListablePage: UpdateNotListablePage;
+  protected searchFilterPage: SearchFilterPage;
   protected reissueFurtherEvidencePage: ReissueFurtherEvidencePage;
 
    constructor(page: Page) {
@@ -162,6 +164,7 @@ export abstract class BaseStep {
         this.sendToInterlocPrevalidPage = new SendToInterlocPrevalidPage(page);
         this.notListablePage = new NotListablePage(this.page);
         this.updateNotListablePage = new UpdateNotListablePage(this.page);
+        this.searchFilterPage = new SearchFilterPage(this.page);
         this.reissueFurtherEvidencePage = new ReissueFurtherEvidencePage(this.page);
    }
 
@@ -169,6 +172,12 @@ export abstract class BaseStep {
         await this.loginPage.goToLoginPage();
         await this.loginPage.verifySuccessfulLoginForUser(user, clearCacheFlag);
         await this.homePage.goToHomePage(caseId);
+    }
+
+    async loginUserWithoutCaseId(user, clearCacheFlag: boolean = false) {
+        await this.loginPage.goToLoginPage();
+        await this.loginPage.verifySuccessfulLoginForUser(user, clearCacheFlag);
+        await this.homePage.goToCaseList;
     }
 
     async verifyHistoryTabDetails(state?: string, event?: string, comment?: string) {
