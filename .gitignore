@@ -21,3 +21,7 @@ Change History.json
 e2e-tests/node_modules
 sscs-ccd-e2e-tests/
 dist/
+playwright-report/
+logs/
+test-results
+.vscode/
