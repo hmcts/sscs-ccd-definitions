@@ -35,11 +35,12 @@ export class NotListablePage {
         await webActions.inputField('#notListableDueDate-day', '01');
         await webActions.inputField('#notListableDueDate-month', '02');
         await webActions.inputField('#notListableDueDate-year', '2024');
-        await this.page.getByText('Continue').click()
+
+        await this.page.getByText('Continue').dblclick();
     }
 
     async verifyPastDueDateErrorMessage(){
-        this.page.getByText(updatenotListableData.notListablePastDueDataErrorMessage)
+       await this.page.getByText(updatenotListableData.notListablePastDueDataErrorMessage).isVisible();
     }
 
     async verifyNotListableReasonError(){
@@ -65,7 +66,6 @@ export class NotListablePage {
     async continueEvent(): Promise<void> {
         await this.page.waitForTimeout(3000);
         await this.page.getByText('Continue').click();
-
     }
 
 }

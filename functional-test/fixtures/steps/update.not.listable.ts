@@ -2,8 +2,6 @@ import {BaseStep} from "./base";
 import {Page} from "@playwright/test";
 import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import {credentials} from "../../config/config";
-import updateNotListableData from "../../pages/content/update.not.listable_en.json";
-import eventTestData from "../../pages/content/event.name.event.description_en.json";
 
 
 export class UpdateNotListable extends BaseStep {
@@ -38,15 +36,15 @@ export class UpdateNotListable extends BaseStep {
         let pipCaseId = await createCaseBasedOnCaseType('PIP');
         await this.goToNotListablePage(this.page, pipCaseId);
         await this.notListablePage.verifyPageContent();
-        await this.notListablePage.continueEvent()
-        await this.notListablePage.verifyNotListableReasonError()
+        await this.notListablePage.continueEvent();
+        await this.notListablePage.verifyNotListableReasonError();
 
-        await this.notListablePage.enterNotListableProvideReason()
-        await this.notListablePage.continueEvent()
+        await this.notListablePage.enterNotListableProvideReason();
+        await this.notListablePage.continueEvent();
 
-        await this.notListablePage.enterInvalidDirectionDueDate()
-        await this.notListablePage.confirmSubmission()
-        await this.notListablePage.verifyPastDueDateErrorMessage()
+        await this.notListablePage.enterInvalidDirectionDueDate();
+        await this.updateNotListablePage.continueEvent();
+        await this.notListablePage.verifyPastDueDateErrorMessage();
     }
 
     async performUpdateNotListableDirectionFulfilled(){
@@ -87,11 +85,9 @@ export class UpdateNotListable extends BaseStep {
         //Set interlocutory review option to No
         await this.updateNotListablePage.interlocutoryReviewStateNotRequired()
 
-        //Selecting NO to updating Directions Due Date
-        await this.updateNotListablePage.noNewDueDateRequired()
-
-        //Moving case to With FTA and confirming event success
-        await this.updateNotListablePage.moveCaseToWithFTA();
+        //No new due date required, Moving case to With FTA and confirming event success
+        await this.updateNotListablePage.noNewDueDateMoveCaseToWithFTA();
+        await this.updateNotListablePage.confirmSubmission();
 
         await this.verifyHistoryTabDetails("With FTA", "Update not listable case");
     }
