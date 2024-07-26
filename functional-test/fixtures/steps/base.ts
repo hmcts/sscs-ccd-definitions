@@ -51,6 +51,7 @@ import {WriteFinalDecisionPages} from "../../pages/write.final.decision.page";
 import {SendToInterlocPrevalidPage} from "../../pages/send.to.interloc.prevalid.page";
 import {NotListablePage} from "../../pages/not.listable.page";
 import {UpdateNotListablePage} from "../../pages/update.not.listable.page";
+import { ReissueFurtherEvidencePage } from '../../pages/reissue.further.evidence.page';
 
 export abstract class BaseStep {
 
@@ -106,6 +107,7 @@ export abstract class BaseStep {
   protected sendToInterlocPrevalidPage : SendToInterlocPrevalidPage;
   protected notListablePage: NotListablePage;
   protected updateNotListablePage: UpdateNotListablePage;
+  protected reissueFurtherEvidencePage: ReissueFurtherEvidencePage;
 
    constructor(page: Page) {
         this.page = page;
@@ -160,6 +162,7 @@ export abstract class BaseStep {
         this.sendToInterlocPrevalidPage = new SendToInterlocPrevalidPage(page);
         this.notListablePage = new NotListablePage(this.page);
         this.updateNotListablePage = new UpdateNotListablePage(this.page);
+        this.reissueFurtherEvidencePage = new ReissueFurtherEvidencePage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {

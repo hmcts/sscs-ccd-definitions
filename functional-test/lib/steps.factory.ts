@@ -39,7 +39,8 @@ import { UpdateOtherPartyData } from '../fixtures/steps/update.other.party.data'
 import {IssueDirectionsNotice} from "../fixtures/steps/issue.directions.notice";
 import {WriteFinalDecision} from "../fixtures/steps/write.final.decision";
 import {UpdateNotListable} from "../fixtures/steps/update.not.listable";
-import {use} from "chai";
+import { use } from "chai";
+import { ReissueFurtherEvidence } from '../fixtures/steps/reissue.further.evidence';
 
 
 type MyStepsFixtures = {
@@ -83,6 +84,7 @@ type MyStepsFixtures = {
     updateOtherPartyDataSteps: UpdateOtherPartyData
     issueFinalDecisionSteps: WriteFinalDecision
     updateNotListableSteps: UpdateNotListable
+    reissueFurtherEvidenceSteps: ReissueFurtherEvidence
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -245,6 +247,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     updateNotListableSteps: async ({page}, use)=>{
         const updateNotListableSteps = new UpdateNotListable(page);
         await use(updateNotListableSteps);
+    },
+    reissueFurtherEvidenceSteps: async ({ page }, use) => {
+        const reissueFurtherEvidenceSteps = new ReissueFurtherEvidence(page);
+        await use(reissueFurtherEvidenceSteps);
     }
-
 })
