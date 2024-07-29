@@ -79,7 +79,7 @@ case ${ENV} in
     CCD_STORE_BASE_URL='http://'${DOCKER_HOST_IP}':4451'
     AUTH_PROVIDER_BASE_URL='http://'${DOCKER_HOST_IP}':4502'
     EM_CCD_ORCHESTRATOR_URL="http://rpa-em-ccd-orchestrator:8080"
-    TRIBUNALS_API_URL="http://dockerhost:8008"
+    TRIBUNALS_API_URL="http://dockerhost:8080"
     TYA_NOTIFICATIONS_API_URL="http://dockerhost:8081"
     BULK_SCAN_API_URL="http://dockerhost:8090"
     BULK_SCAN_ORCHESTRATOR_URL="http://dockerhost:8582"
