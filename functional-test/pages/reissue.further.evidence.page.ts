@@ -30,9 +30,6 @@ export class ReissueFurtherEvidencePage {
         await this.page.locator('#originalSender').selectOption('1: appellant');
         await this.page.getByRole('button', { name: 'Add New' }).click(); 
         await this.page.locator('#scannedDocuments_0_fileName').fill(reissueFurtherEvidenceData.reissueFurtherEvidenceFileName);
-        
-
-
 
         await webAction.clickButton("Submit");
         await webAction.clickButton("Submit"); //second Submit to complete the event
