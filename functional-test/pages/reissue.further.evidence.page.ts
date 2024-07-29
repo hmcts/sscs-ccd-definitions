@@ -14,13 +14,13 @@ export class ReissueFurtherEvidencePage {
         webAction = new WebAction(this.page);
     }
 
-    async verifyPageContent() {
-        await webAction.verifyPageLabel('.govuk-caption-l', reissueFurtherEvidenceData.reissueFurtherEvidenceHeading); //Above heading Text
+    async verifyPageContentReissueEvent() {
+        await webAction.verifyPageLabel('.govuk-caption-l', reissueFurtherEvidenceData.reissueFurtherEvidenceHeadingReissue); //Above heading Text
         await webAction.isLinkClickable('Cancel');
     }
 
-    async verifyPageContent2() {
-        await webAction.verifyPageLabel('.govuk-caption-l', reissueFurtherEvidenceData.reissueFurtherEvidenceHeading2); //Above heading Text
+    async verifyPageContentActionEvent() {
+        await webAction.verifyPageLabel('.govuk-caption-l', reissueFurtherEvidenceData.reissueFurtherEvidenceHeadingAction); //Above heading Text
         await webAction.isLinkClickable('Cancel');
     }
 

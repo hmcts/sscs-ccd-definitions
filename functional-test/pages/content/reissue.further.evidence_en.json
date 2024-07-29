@@ -1,6 +1,6 @@
 {
-    "reissueFurtherEvidenceHeading" : "Reissue further evidence",
-    "reissueFurtherEvidenceHeading2": "Action further evidence",
+    "reissueFurtherEvidenceHeadingReissue" : "Reissue further evidence",
+    "reissueFurtherEvidenceHeadingAction": "Action further evidence",
     "reissueFurtherEvidenceFileName": "Test file name"
 
 }

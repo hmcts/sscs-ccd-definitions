@@ -16,7 +16,7 @@ export class ReissueFurtherEvidence extends BaseStep {
     }
 
 
-    async performUploadDocumentFurtherEvidence2(caseId: string, uploadAudioFile?: boolean) {
+    async performUploadDocumentFurtherEvidenceForReissueEvent(caseId: string, uploadAudioFile?: boolean) {
 
             await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
             await this.homePage.reloadPage();
@@ -49,7 +49,7 @@ export class ReissueFurtherEvidence extends BaseStep {
     async performActionEvidence(caseId: string) {
         //selecting the event "Action further evidence"
         await this.goToActionFurtherEvidence(this.page, caseId);
-        await this.reissueFurtherEvidencePage.verifyPageContent2();
+        await this.reissueFurtherEvidencePage.verifyPageContentActionEvent();
         //completing the action further evidence
         await this.actionFurtherEvidencePage.selectFEOption();
         await this.actionFurtherEvidencePage.selectSenderOption(actionFurtherEvidenceTestdata.ftaSender);
@@ -69,7 +69,7 @@ export class ReissueFurtherEvidence extends BaseStep {
     async performReissueFurtherEvidence(caseId: string) {
         // starting the 'Reissue Further Evidence' event
         await this.goToReissueFurtherEvidence(this.page, caseId);
-        await this.reissueFurtherEvidencePage.verifyPageContent();
+        await this.reissueFurtherEvidencePage.verifyPageContentReissueEvent();
 
         await this.reissueFurtherEvidencePage.applyReissueFurtherEvidence();
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
@@ -80,7 +80,7 @@ export class ReissueFurtherEvidence extends BaseStep {
 
         // Verifying History tab + end state
         await this.verifyHistoryTabDetails("Reissue further evidence");
-        //await this.historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
+        await this.historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
         await this.historyTab.verifyPageContentByKeyValue('Event', 'Reissue further evidence');
         await this.historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification');
     }
