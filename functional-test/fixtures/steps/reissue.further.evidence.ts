@@ -83,6 +83,12 @@ export class ReissueFurtherEvidence extends BaseStep {
         await this.historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
         await this.historyTab.verifyPageContentByKeyValue('Event', 'Reissue further evidence');
         await this.historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification');
+
+        await this.homePage.delay(1000); //reloading so we are able to verify 'update case only' in history tab
+        await this.homePage.reloadPage();
+        await this.verifyHistoryTabDetails("Update case only");
+        await this.historyTab.verifyPageContentByKeyValue('Event', 'Update case only');
+        await this.historyTab.verifyPageContentByKeyValue('Comment', 'Update document evidence reissued flags after re-issuing further evidence to DWP');
     }
 
     // Event created to trigger Reissue Further Evidence event from next steps dropdown menu:

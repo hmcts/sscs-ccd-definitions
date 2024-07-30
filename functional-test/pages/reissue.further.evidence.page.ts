@@ -39,8 +39,8 @@ export class ReissueFurtherEvidencePage {
         // Filling Reissue further evidence page
         await this.page.locator('#reissueFurtherEvidenceDocument').selectOption('1: http://dm-store-aat.service.core-compute-aat.in');
         await this.page.locator('#resendToAppellant_Yes').click();
-        await this.page.locator('#resendToRepresentative_Yes').click();
-        await this.page.locator('#resendToDwp_Yes').click();
+        await this.page.locator('#resendToRepresentative_No').click();
+        await this.page.locator('#resendToDwp_No').click();
     
         await webAction.clickButton("Submit");
         await webAction.clickButton("Submit"); //second Submit to complete the event
