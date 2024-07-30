@@ -132,6 +132,15 @@ export class WebAction {
          });
     }
 
+    async checkAnCheckBox(elementValue: string): Promise<void> {
+        await this.page
+         .getByLabel(elementValue)
+         .check()
+         .catch((error) => {
+            logger.error(`Button element is not present: ${error}`);
+         });
+    }
+
     async clickElementById(elementLocator: string): Promise<void> {
         await this.page
          .locator(elementLocator)

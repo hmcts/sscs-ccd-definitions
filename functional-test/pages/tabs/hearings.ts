@@ -34,6 +34,10 @@ export class Hearings {
         await webActions.clickLink('View or edit');
     }
 
+    async clickBackLink() {
+        await webActions.clickElementById('a.govuk-back-link');
+    }
+
     async verifyExpHearingDateIsGenerated(noOfDays: string) {
         const hearingBookedDate = new Date();
         const numberOfDaysToAdd = Number(noOfDays);
@@ -43,30 +47,19 @@ export class Hearings {
         await webActions.verifyTextVisibility(formattedDate);
     }
 
-    // async verifyHearingDetails() {
-    //     await webActions.verifyTextVisibility('Cardiff Social Security And Child Support Tribunal');
-    //     await webActions.verifyTextVisibility('1 Hour');
-    // }
+    async clickCancelLink() {
+        await webActions.verifyTextVisibility('Cancel');
+        await webActions.clickLink('Cancel');
+    }
 
-//     async verifyPageContentNotPresentByKeyValue(fieldLabel: string, fieldValue: string) {
-//         await expect(this.page
-//             .locator(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`).first()).not.toBeVisible();
-//     }
+    async submitCancellationReason() {
+        await webActions.clickElementById('#incompl');
+        await await webActions.clickButton('Continue');
+    }
 
-//     async verifyTitle(fieldLabel: string) {
-//         await expect(this.page
-//             .locator(`//span[normalize-space()="${fieldLabel}"]`)).toBeVisible();
-//     }
-
-//     async verifyTitleNotPresent(fieldLabel: string) {
-//         await expect(this.page
-//             .locator(`//span[normalize-space()="${fieldLabel}"]`)).not.toBeVisible();
-//     }
-
-//     async verifydueDates(reqField: string){
-//         const dueDate = new Date();
-//         dueDate.setDate(new Date().getDate());
-//         let fomattedDueDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(dueDate);
-//         this.verifyPageContentByKeyValue(reqField, fomattedDueDate);
-//     }
+    async verifyCancellationStatusSummary() {
+        await webActions.verifyTextVisibility("CANCELLATION REQUESTED");
+        await webActions.verifyTextVisibility("Substantive");
+        await webActions.verifyTextVisibility("View details");
+    }
  }

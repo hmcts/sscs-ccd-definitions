@@ -39,6 +39,7 @@ export class Hearing extends BaseStep {
 
         await this.hearingsTab.verifyPageContentByKeyValue(hearingTestData.hearingPriorityKey, hearingTestData.hearingPriorityValue);
         await this.hearingsTab.verifyExpHearingDateIsGenerated('31');
+        await this.hearingsTab.clickBackLink();
     }
 
     async verifyHearingIsTriggeredForUCCase() {
@@ -51,5 +52,11 @@ export class Hearing extends BaseStep {
         await this.hearingsTab.verifyPageContentByKeyValue(hearingTestData.hearingPriorityKey, hearingTestData.hearingPriorityValue);
         await this.hearingsTab.verifyPageContentByKeyValue(hearingTestData.hearingAttendanceKey, hearingTestData.hearingAttendanceValue);
         await this.hearingsTab.verifyExpHearingDateIsGenerated('31');
+    }
+
+    async verifyHearingCancellation() {
+        await this.hearingsTab.clickCancelLink();
+        await this.hearingsTab.submitCancellationReason();
+        await this.hearingsTab.verifyCancellationStatusSummary();
     }
 }

@@ -7,10 +7,11 @@ let caseId : string;
 
 test.describe("Create a new hearing for an List assist case", {tag: '@pipeline'}, async() => {
     
-    test("Trigger a new hearing for DLA case", async ({ uploadResponseSteps, hearingSteps }) => {
+    test("Trigger a new hearing & cancellation for DLA case", async ({ uploadResponseSteps, hearingSteps }) => {
         caseId = await createCaseBasedOnCaseType('DLASANDL');
         await uploadResponseSteps.performUploadResponse(caseId, 'dla');
         await hearingSteps.verifyHearingIsTriggered(caseId, 'dla');
+        await hearingSteps.verifyHearingCancellation();
     });
 
     test("Trigger a new hearing for UC case", async ({ uploadResponseSteps, hearingSteps }) => {
@@ -18,7 +19,6 @@ test.describe("Create a new hearing for an List assist case", {tag: '@pipeline'}
         await uploadResponseSteps.performUploadResponseOnAUniversalCredit(caseId);
         await hearingSteps.verifyHearingIsTriggeredForUCCase();
     });
-    
 
     test("Trigger a new hearing for PIP case", async ({ uploadResponseSteps, hearingSteps }) => {
         caseId = await createCaseBasedOnCaseType('PIPREPSANDL');
