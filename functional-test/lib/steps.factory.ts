@@ -41,6 +41,7 @@ import {WriteFinalDecision} from "../fixtures/steps/write.final.decision";
 import {UpdateNotListable} from "../fixtures/steps/update.not.listable";
 import { use } from "chai";
 import { SearchFilter } from '../fixtures/steps/search.filter';
+import { Hearing } from '../fixtures/steps/hearing';
 
 
 type MyStepsFixtures = {
@@ -85,6 +86,7 @@ type MyStepsFixtures = {
     issueFinalDecisionSteps: WriteFinalDecision
     updateNotListableSteps: UpdateNotListable
     searchFilterSteps: SearchFilter
+    hearingSteps: Hearing
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -251,5 +253,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     searchFilterSteps: async ({ page }, use) => {
         const searchFilterSteps = new SearchFilter(page);
         await use(searchFilterSteps);
+    },
+    hearingSteps: async ({ page }, use) => {
+        const hearingSteps = new Hearing(page);
+        await use(hearingSteps);
     }
 })

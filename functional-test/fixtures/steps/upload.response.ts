@@ -98,6 +98,18 @@ export class UploadResponse extends BaseStep {
     }
 
 
+    async performUploadResponse(caseId: string, caseType: string) {
+
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, caseId);
+        if(caseType === 'dla') await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.dlaIssueCode, 'No', undefined, undefined, undefined);
+        if(caseType === 'pip') await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.pipIssueCode, 'No', undefined, undefined, undefined);
+        await this.checkYourAnswersPage.confirmSubmission();
+        await this.homePage.delay(3000);
+        await this.homePage.clickSignOut();
+        await this.homePage.delay(3000);
+    }
+
+
     async performUploadResponseWithoutFurtherInfoOnATaxCredit() {
 
         let taxCaseId = await createCaseBasedOnCaseType("TAX CREDIT");
@@ -120,9 +132,9 @@ export class UploadResponse extends BaseStep {
         // await performAppealDormantOnCase(taxCaseId);
     }
 
-    async performUploadResponseOnAUniversalCredit() {
+    async performUploadResponseOnAUniversalCredit(ucCaseId: string) {
 
-        let ucCaseId = await createCaseBasedOnCaseType("UC");
+        // let ucCaseId = await createCaseBasedOnCaseType("UC");
         await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, ucCaseId);
 
         await this.homePage.chooseEvent('Upload response');

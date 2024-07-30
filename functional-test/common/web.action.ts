@@ -36,6 +36,14 @@ export class WebAction {
             });
     }
 
+    async verifyTotalElements(elementLocator: string, eleCount: number) {
+        await expect(this.page.locator(elementLocator))
+            .toHaveCount(eleCount)
+            .catch((error) => {
+                logger.error(`Assertion failed due to: ${error}`);
+            });
+    }
+
     async verifyTextVisibility(labelText: string) {
         await expect(this.page.getByText(labelText))
             .toBeVisible()
