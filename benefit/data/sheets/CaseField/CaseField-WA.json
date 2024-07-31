@@ -5,5 +5,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "daysToHearing", "Label": "Days to hearing", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "assignedCaseRoles", "Label": "Assigned Case Roles", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "previouslyAssignedCaseRoles", "Label": "Assigned Case Roles", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "24/08/2023", "CaseTypeID": "Benefit", "ID": "issueInterlocDecisionDate", "Label": "Issue interloc decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "24/08/2023", "CaseTypeID": "Benefit", "ID": "issueInterlocDecisionDate", "Label": "Issue interloc decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/06/2019", "CaseTypeID": "Benefit", "ID": "scannedDocumentTypesNew", "Label": "Scanned Document Types", "FieldType": "MultiSelectList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "assignedCaseRolesNew", "Label": "Assigned Case Roles", "FieldType": "MultiSelectList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Benefit", "ID": "previouslyAssignedCaseRolesNew", "Label": "Assigned Case Roles", "FieldType": "MultiSelectList", "SecurityClassification": "PUBLIC"}
 ]

@@ -1,7 +1,7 @@
 [
   {
     "CaseEventID": "actionFurtherEvidence",
-    "CaseFieldID": "scannedDocumentTypes",
+    "CaseFieldID": "scannedDocumentTypesNew",
     "CaseTypeID": "Benefit",
     "DisplayContext": "MANDATORY",
     "LiveFrom": "21/08/2021",
@@ -10,7 +10,8 @@
     "PageID": "1.0",
     "PageLabel": "Handle Further Evidence",
     "FieldShowCondition": "[STATE]=\"DoNotShow\"",
-    "Publish": "Y"
+    "Publish": "Y",
+    "PublishAs": "scannedDocumentTypes"
   },
   {
     "CaseEventID": "manageWelshDocuments",
@@ -166,7 +167,7 @@
   },
   {
     "CaseEventID": "createBundle",
-    "CaseFieldID": "assignedCaseRoles",
+    "CaseFieldID": "assignedCaseRolesNew",
     "CaseTypeID": "Benefit",
     "DisplayContext": "OPTIONAL",
     "FieldShowCondition": "[STATE]=\"DoNotShow\"",
@@ -175,11 +176,12 @@
     "PageFieldDisplayOrder": 2,
     "PageID": "1.0",
     "PageLabel": "Create Bundle",
-    "Publish": "Y"
+    "Publish": "Y",
+    "PublishAs": "assignedCaseRoles"
   },
   {
     "CaseEventID": "newCaseRolesAssigned",
-    "CaseFieldID": "assignedCaseRoles",
+    "CaseFieldID": "assignedCaseRolesNew",
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
     "FieldShowCondition": "[STATE]=\"doNotUse\"",
@@ -188,7 +190,8 @@
     "PageFieldDisplayOrder": 1,
     "PageID": "1.0",
     "PageLabel": "New Case Roles Assigned",
-    "Publish": "Y"
+    "Publish": "Y",
+    "PublishAs": "assignedCaseRoles"
   },
   {
     "CaseEventID": "ftaResponseOverdue",
@@ -376,7 +379,7 @@
   },
   {
     "CaseEventID": "uploadDocumentFurtherEvidence",
-    "CaseFieldID": "scannedDocumentTypes",
+    "CaseFieldID": "scannedDocumentTypesNew",
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
     "LiveFrom": "21/08/2021",
@@ -385,11 +388,12 @@
     "PageID": "1.0",
     "PageLabel": "Document types uploaded",
     "FieldShowCondition": "[STATE]=\"DoNotShow\"",
-    "Publish": "Y"
+    "Publish": "Y",
+    "PublishAs": "scannedDocumentTypes"
   },
   {
     "CaseEventID": "uploadFurtherEvidence",
-    "CaseFieldID": "scannedDocumentTypes",
+    "CaseFieldID": "scannedDocumentTypesNew",
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
     "LiveFrom": "21/08/2021",
@@ -398,11 +402,12 @@
     "PageID": "1.0",
     "PageLabel": "Document types uploaded",
     "FieldShowCondition": "[STATE]=\"DoNotShow\"",
-    "Publish": "Y"
+    "Publish": "Y",
+    "PublishAs": "scannedDocumentTypes"
   },
   {
     "CaseEventID": "dwpUploadResponse",
-    "CaseFieldID": "scannedDocumentTypes",
+    "CaseFieldID": "scannedDocumentTypesNew",
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
     "LiveFrom": "21/08/2021",
@@ -411,11 +416,12 @@
     "PageID": "1.0",
     "PageLabel": "Document types uploaded",
     "FieldShowCondition": "[STATE]=\"DoNotShow\"",
-    "Publish": "Y"
+    "Publish": "Y",
+    "PublishAs": "scannedDocumentTypes"
   },
   {
     "CaseEventID": "dwpSupplementaryResponse",
-    "CaseFieldID": "scannedDocumentTypes",
+    "CaseFieldID": "scannedDocumentTypesNew",
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
     "LiveFrom": "21/08/2021",
@@ -424,11 +430,12 @@
     "PageID": "1.0",
     "PageLabel": "Document types uploaded",
     "FieldShowCondition": "[STATE]=\"DoNotShow\"",
-    "Publish": "Y"
+    "Publish": "Y",
+    "PublishAs": "scannedDocumentTypes"
   },
   {
     "CaseEventID": "uploadDocument",
-    "CaseFieldID": "scannedDocumentTypes",
+    "CaseFieldID": "scannedDocumentTypesNew",
     "CaseTypeID": "Benefit",
     "DisplayContext": "READONLY",
     "LiveFrom": "21/08/2021",
@@ -437,7 +444,8 @@
     "PageID": "1.0",
     "PageLabel": "Document types uploaded",
     "FieldShowCondition": "[STATE]=\"DoNotShow\"",
-    "Publish": "Y"
+    "Publish": "Y",
+    "PublishAs": "scannedDocumentTypes"
   },
   {
     "CaseEventID": "actionPostponementRequest",
