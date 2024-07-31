@@ -74,9 +74,12 @@ export class Hearings {
         await webActions.clearInputField('#durationhours');
         await webActions.typeField('#durationhours', '2');
 
-        //temporary step
+        //To always choose weekdays for hearing dates
+        const today = new Date();
+        const resultDate = dateUtilsComponent.addWeekdays(today, 20);
+        
         await webActions.clearInputField('#earliestHearingDate');
-        await webActions.typeField('#earliestHearingDate', '20');
+        await webActions.typeField('#earliestHearingDate', `${resultDate.getDate()}`);
 
         await webActions.clickButton('Continue');
     }
