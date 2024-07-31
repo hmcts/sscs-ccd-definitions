@@ -11,7 +11,7 @@ test.describe("Create a new hearing for an List assist case", {tag: '@pipeline'}
         caseId = await createCaseBasedOnCaseType('DLASANDL');
         await uploadResponseSteps.performUploadResponse(caseId, 'dla');
         await hearingSteps.verifyHearingIsTriggered(caseId, 'dla');
-        await hearingSteps.verifyHearingCancellation();
+        await hearingSteps.verifyManualHearingCancellation();
     });
 
     test("Trigger a new hearing for UC case", async ({ uploadResponseSteps, hearingSteps }) => {
@@ -20,10 +20,12 @@ test.describe("Create a new hearing for an List assist case", {tag: '@pipeline'}
         await hearingSteps.verifyHearingIsTriggeredForUCCase();
     });
 
-    test("Trigger a new hearing for PIP case", async ({ uploadResponseSteps, hearingSteps }) => {
+    test("Trigger a new hearing for PIP case", async ({ uploadResponseSteps, hearingSteps, voidCaseSteps }) => {
         caseId = await createCaseBasedOnCaseType('PIPREPSANDL');
         await uploadResponseSteps.performUploadResponse(caseId, 'pip');
         await hearingSteps.verifyHearingIsTriggered(caseId, 'pip');
+        await voidCaseSteps.performVoidCase(caseId, false);
+        await hearingSteps.verifyAutoHearingCancellation();
     });
     
 });

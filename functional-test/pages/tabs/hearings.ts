@@ -62,4 +62,10 @@ export class Hearings {
         await webActions.verifyTextVisibility("Substantive");
         await webActions.verifyTextVisibility("View details");
     }
+
+    async verifyCancellationDetails(cancelReason: string) {
+        await webActions.clickLink('View details');
+        await webActions.verifyTextVisibility('Cancellation requested');
+        await webActions.verifyTextVisibility(cancelReason);
+    }
  }

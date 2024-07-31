@@ -54,9 +54,17 @@ export class Hearing extends BaseStep {
         await this.hearingsTab.verifyExpHearingDateIsGenerated('31');
     }
 
-    async verifyHearingCancellation() {
+    async verifyManualHearingCancellation() {
         await this.hearingsTab.clickCancelLink();
         await this.hearingsTab.submitCancellationReason();
         await this.hearingsTab.verifyCancellationStatusSummary();
+        await this.hearingsTab.verifyCancellationDetails("Incomplete Tribunal");
+    }
+
+    async verifyAutoHearingCancellation() {
+        await this.homePage.clickAfterTabBtn();
+        await this.homePage.navigateToTab("Hearings");
+        await this.hearingsTab.verifyCancellationStatusSummary();
+        await this.hearingsTab.verifyCancellationDetails("Other");
     }
 }
