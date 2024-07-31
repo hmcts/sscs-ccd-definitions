@@ -27,5 +27,21 @@ test.describe("Create a new hearing for an List assist case", {tag: '@pipeline'}
         await voidCaseSteps.performVoidCase(caseId, false);
         await hearingSteps.verifyAutoHearingCancellation();
     });
+
+    test("Manually Update an hearing for DLA case", async ({ uploadResponseSteps, hearingSteps }) => {
+        caseId = await createCaseBasedOnCaseType('DLASANDL');
+        await uploadResponseSteps.performUploadResponse(caseId, 'dla');
+        await hearingSteps.verifyHearingIsTriggered(caseId, 'dla');
+        await hearingSteps.updateHearingLengthManually();
+        await hearingSteps.verifyUpdatedHearingStatus();
+    });
+
+    test("Auto Update an hearing for DLA case", async ({ uploadResponseSteps, hearingSteps }) => {
+        caseId = await createCaseBasedOnCaseType('DLASANDL');
+        await uploadResponseSteps.performUploadResponse(caseId, 'dla');
+        await hearingSteps.verifyHearingIsTriggered(caseId, 'dla');
+        await hearingSteps.updateHearingViaEvent();
+        await hearingSteps.verifyUpdatedHearingStatusViaEvent();
+    });
     
 });

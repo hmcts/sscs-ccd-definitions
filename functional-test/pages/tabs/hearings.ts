@@ -54,7 +54,7 @@ export class Hearings {
 
     async submitCancellationReason() {
         await webActions.clickElementById('#incompl');
-        await await webActions.clickButton('Continue');
+        await webActions.clickButton('Continue');
     }
 
     async verifyCancellationStatusSummary() {
@@ -67,5 +67,32 @@ export class Hearings {
         await webActions.clickLink('View details');
         await webActions.verifyTextVisibility('Cancellation requested');
         await webActions.verifyTextVisibility(cancelReason);
+    }
+
+    async updateHearingDuration() {
+        await webActions.clickElementById('#hearingLength');
+        await webActions.clearInputField('#durationhours');
+        await webActions.typeField('#durationhours', '2');
+
+        //temporary step
+        await webActions.clearInputField('#earliestHearingDate');
+        await webActions.typeField('#earliestHearingDate', '20');
+
+        await webActions.clickButton('Continue');
+    }
+
+    async sumitUpdate() {
+        await webActions.clickButton('Submit updated request');
+        await webActions.clickElementById('#adminreq');
+        await webActions.clickButton('Submit change request');
+        await webActions.verifyTextVisibility('Hearing request submitted');
+        await webActions.clickElementById('div.govuk-body a.govuk-link');
+    }
+
+    async verifyUpdateStatusSummary() {
+        await webActions.verifyTextVisibility("UPDATE REQUESTED");
+        await webActions.verifyTextVisibility("Substantive");
+        await webActions.verifyTextVisibility("View or edit");
+        await webActions.isLinkClickable("Cancel");
     }
  }

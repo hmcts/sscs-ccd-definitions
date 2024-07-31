@@ -53,7 +53,7 @@ import {NotListablePage} from "../../pages/not.listable.page";
 import { UpdateNotListablePage } from "../../pages/update.not.listable.page";
 import { SearchFilterPage } from '../../pages/search.filter.page';
 import { Hearings } from '../../pages/tabs/hearings'
-import { Hearing } from './hearing';
+import { ListingRequirementPage } from '../../pages/listing.requirements.page';
 
 export abstract class BaseStep {
 
@@ -111,6 +111,7 @@ export abstract class BaseStep {
   protected updateNotListablePage: UpdateNotListablePage;
   protected searchFilterPage: SearchFilterPage;
   protected hearingsTab: Hearings;
+  protected listingRequirementPage: ListingRequirementPage
 
    constructor(page: Page) {
         this.page = page;
@@ -167,6 +168,7 @@ export abstract class BaseStep {
         this.updateNotListablePage = new UpdateNotListablePage(this.page);
         this.searchFilterPage = new SearchFilterPage(this.page);
         this.hearingsTab = new Hearings(this.page);
+        this.listingRequirementPage = new ListingRequirementPage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
