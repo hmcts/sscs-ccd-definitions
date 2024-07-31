@@ -249,7 +249,7 @@ export class UrgentHearing extends BaseStep {
 
     async verifyFeePaidJudgeCanViewTheUnassignedReviewUrgentHearingRequestTask(caseId: string): Promise<void> {
          
-        // Verify Review Urgent Hearing Request - Judge task is displayed to the Salaried Judge
+        // Verify Review Urgent Hearing Request - Judge task is displayed to the Fee-Paid Judge
          await this.loginUserWithCaseId(credentials.feePaidJudge, false, caseId);
          await this.homePage.navigateToTab('Tasks');
          await this.tasksTab.verifyTaskIsDisplayed(task.name);
@@ -283,7 +283,7 @@ export class UrgentHearing extends BaseStep {
 
     async verifyTcwCanCompleteTheAssignedReviewUrgentHearingRequestTask(caseId: string): Promise<void> {
 
-        // Verify Salaried Judge self assigns the task
+        // Verify Review Urgent Hearing request task is assigned to TCW
         await this.loginUserWithCaseId(credentials.amTribunalCaseWorker, false, caseId);
         await this.homePage.navigateToTab('Tasks');
         await this.tasksTab.verifyPriortiy(task.name, task.priority);
@@ -291,7 +291,7 @@ export class UrgentHearing extends BaseStep {
         await this.tasksTab.verifyManageOptions(task.name, task.assignedManageOptionsForTCW);
         await this.tasksTab.verifyNextStepsOptions(task.name, task.nextStepsOptions);
 
-        // Select Action Further Evidence next step and complete the event
+        // TCW clicks Amend interloc review state next step and completes the event
         await this.tasksTab.clickNextStepLink(task.amendInterlocReviewState.link);
 
         await this.amendInterlocReviewStatePage.verifyPageContent();
@@ -305,7 +305,7 @@ export class UrgentHearing extends BaseStep {
 
     async verifySalariedJudgeCanCompleteTheReviewUrgentHearingRequestTaskManually(caseId: string): Promise<void> {
 
-        // Verify Fee Paid Judge self assigns the task
+        // Verify Salaried Judge self assigns the task
         await this.loginUserWithCaseId(credentials.salariedJudge, false, caseId);
         await this.homePage.navigateToTab('Tasks');
         await this.tasksTab.selfAssignTask(task.name);
