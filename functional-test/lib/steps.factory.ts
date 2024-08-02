@@ -39,13 +39,12 @@ import {UpdateOtherPartyData} from '../fixtures/steps/update.other.party.data';
 import {IssueDirectionsNotice} from "../fixtures/steps/issue.directions.notice";
 import {WriteFinalDecision} from "../fixtures/steps/write.final.decision";
 import {UpdateNotListable} from "../fixtures/steps/update.not.listable";
-import {use} from "chai";
-import {SearchFilter} from '../fixtures/steps/search.filter';
 import {ReissueFurtherEvidence} from '../fixtures/steps/reissue.further.evidence';
 import {Postponement} from "../fixtures/steps/postponement";
 import { SearchFilter } from '../fixtures/steps/search.filter';
 import { Hearing } from '../fixtures/steps/hearing';
 import { PrepareCaseForHearing } from '../fixtures/steps/prepare.case.for.hearing';
+
 
 
 type MyStepsFixtures = {
@@ -266,9 +265,12 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
         const reissueFurtherEvidenceSteps = new ReissueFurtherEvidence(page);
         await use(reissueFurtherEvidenceSteps);
     },
+
     postponementSteps: async ({page}, use) => {
         const postponementSteps = new Postponement(page);
         await use(postponementSteps);
+    },
+
     hearingSteps: async ({ page }, use) => {
         const hearingSteps = new Hearing(page);
         await use(hearingSteps);
