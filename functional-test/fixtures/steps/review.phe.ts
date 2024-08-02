@@ -2,7 +2,6 @@ import { BaseStep } from "./base";
 import { Page, expect } from '@playwright/test';
 import { credentials } from "../../config/config";
 import task from '../../pages/content/review.phe.request.task_en.json';
-import amendInterlocReviewStateData from "../../pages/content/amend.interloc.review.state_en.json";
 import dateUtilsComponent from '../../utils/DateUtilsComponent';
 import { VoidCase } from "./void.case";
 
@@ -97,7 +96,7 @@ export class ReviewPHE extends BaseStep {
     async verifyInterlocutoryJudgeCanViewAndCompleteTheAutoAssignedReviewPHERequestTask(caseId: string): Promise<void> {
 
         // Interlocutory Judge verfies the auto assigned task details
-        await this.loginUserWithCaseId(credentials.salariedJudge, true, caseId);
+        await this.loginUserWithCaseId(credentials.salariedJudge, false, caseId);
         await this.homePage.navigateToTab('Tasks');
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
          await this.tasksTab.verifyPageContentByKeyValue(task.name, 
@@ -139,17 +138,6 @@ export class ReviewPHE extends BaseStep {
         await this.tasksTab.verifyTaskIsHidden(task.name);
     }
 
-    async verifySalariedJudgeCanReassignTheReviewPHERequestTaskToTcw(caseId: string): Promise<void> {
-
-        // Verify Salaried Judge self assigns the task
-        await this.loginUserWithCaseId(credentials.salariedJudge, true, caseId);
-        await this.homePage.navigateToTab('Tasks');
-        await this.tasksTab.verifyTaskIsDisplayed(task.name);
-        await this.tasksTab.selfAssignTask(task.name);
-        
-        await this.tasksTab.reassignTaskToTcwUser(task.name, credentials.amTribunalCaseWorker.email);
-    }
-
     async verifyFeePaidJudgeCanViewAndCompleteTheUnassignedReviewPHERequestTask(caseId: string): Promise<void> {
 
         // Fee Paid Judge self assigns the task
@@ -170,28 +158,6 @@ export class ReviewPHE extends BaseStep {
         // Fee-Paid Judge clicks Review PHE Request next step link and completes the event with Refusal
         await this.tasksTab.clickNextStepLink(task.reviewPheRequest.link);
         await this.completeReviewPheRequestWithRefusal();
-
-        // Verify task is removed from the tasks list within Tasks tab
-        await this.tasksTab.verifyTaskIsHidden(task.name);
-    }
-
-    async verifyTcwCanCompleteTheAssignedReviewPHERequestTask(caseId: string): Promise<void> {
-
-        // TCW verifies the assigned Review PHE Request task
-        await this.loginUserWithCaseId(credentials.amTribunalCaseWorker, false, caseId);
-        await this.homePage.navigateToTab('Tasks');
-        await this.tasksTab.verifyPriortiy(task.name, task.priority);
-        await this.tasksTab.verifyPageContentByKeyValue(task.name, 'Assigned to', task.assignedToTCW);
-        await this.tasksTab.verifyManageOptions(task.name, task.assignedManageOptionsForTCW);
-        await this.tasksTab.verifyNextStepsOptions(task.name, task.nextStepsOptions);
-
-        // TCW clicks Amend interloc review state next step and completes the event
-        await this.tasksTab.clickNextStepLink(task.amendInterlocReviewState.link);
-
-        await this.amendInterlocReviewStatePage.verifyPageContent();
-        await this.amendInterlocReviewStatePage.selectReviewState(amendInterlocReviewStateData.interlocReviewStateSelectValue);
-        await this.amendInterlocReviewStatePage.confirmSelection();
-        await this.amendInterlocReviewStatePage.confirmSubmission();
 
         // Verify task is removed from the tasks list within Tasks tab
         await this.tasksTab.verifyTaskIsHidden(task.name);

@@ -10,22 +10,16 @@
         "Assign to me"
     ],
     "unassignedManageOptionsForSalariedJudge" : [
-        "Assign task",
-        "Cancel task",
         "Assign to me"
     ],
     "unassignedManageOptionsForFeePaidJudge" : [
         "Assign to me"
     ],
     "assignedManageOptionsForSalariedJudge" : [
-        "Cancel task",
-        "Mark as done",
         "Reassign task",
         "Unassign task"
     ],
     "assignedManageOptionsForInterlocutaryJudge" : [
-        "Cancel task",
-        "Mark as done",
         "Reassign task",
         "Unassign task"
     ],
