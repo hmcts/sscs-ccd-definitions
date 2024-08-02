@@ -1,8 +1,6 @@
 import { expect, Page } from '@playwright/test';
 import { HomePage } from '../../pages/common/homePage';
-// import allocateRole from '../content/allocate.role_en.json';
-
-const allocateRole = require("../content/allocate.role_en.json");
+import allocateRole from '../content/allocate.role_en.json';
 
 export class RolesAndAccess {
 
@@ -78,6 +76,38 @@ export class RolesAndAccess {
 
         await expect(this.page.locator(`//h2[normalize-space()='${allocateRole.RolesAndAccessHeading}']`)).toBeVisible();
         await expect(this.page.locator('exui-role-access-section[title=\'Judiciary\'] table')).toBeVisible();
+    }
+
+    async allocateAdminRole(userEmail: string) {
+        let homePage = new HomePage(this.page);
+        homePage.navigateToTab('Roles and acesss')
+
+        await this.page.getByRole('link', { name: allocateRole.adminRole.link }).click();
+        await this.verifyPageTitle(allocateRole.ctscRole.heading);
+        await this.page.getByRole('radio', { name: allocateRole.adminRole.adminCaseworkerLabel }).click();
+        await this.clickContinue();
+
+        await this.verifyPageTitle(allocateRole.ctscRole.chooseHowToAllocateRoleHeading);
+        await this.page.getByRole('radio', { name: allocateRole.adminRole.allocateToAnotherPersonRadioButtonLabel }).click();
+        await this.clickContinue();
+
+        await this.verifyPageTitle(allocateRole.adminRole.findPersonHeading);
+        await this.page.locator('#inputSelectPerson').fill(allocateRole.adminRole.allocateToName);
+        await expect(this.page.locator('div.mat-autocomplete-panel.mat-autocomplete-visible')).toBeVisible();
+        await this.page.locator(`//mat-option/span[contains(text(), '${userEmail.toLowerCase()}')]`).click();
+        await expect(this.page.locator('//mat-option')).toBeHidden();
+        await this.clickContinue();
+
+        await this.verifyPageTitle(allocateRole.adminRole.durationOfRoleHeading);
+        await this.page.getByRole('radio', { name: allocateRole.adminRole.numberOfDaysRadioButtonLabel, exact: true }).click();
+        await this.clickContinue();
+
+        await expect(this.page.locator(`h1.govuk-heading-l:has-text('Check your answers')`)).toBeVisible();
+        await expect(this.page.locator(`dd:has-text('${userEmail.toLowerCase()}')`)).toBeVisible();
+        await this.confirmAllocation();
+
+        await expect(this.page.locator('//h2[normalize-space()=\'Roles and access\']')).toBeVisible();
+        await expect(this.page.locator('exui-role-access-section[title=\'Admin\'] table')).toBeVisible();
     }
 
     async confirmAllocation(): Promise<void> {
