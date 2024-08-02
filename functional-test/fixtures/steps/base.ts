@@ -52,6 +52,8 @@ import {SendToInterlocPrevalidPage} from "../../pages/send.to.interloc.prevalid.
 import {NotListablePage} from "../../pages/not.listable.page";
 import { UpdateNotListablePage } from "../../pages/update.not.listable.page";
 import { SearchFilterPage } from '../../pages/search.filter.page';
+import { Hearings } from '../../pages/tabs/hearings';
+import { ListingRequirementPage } from '../../pages/listing.requirements.page';
 import { ReissueFurtherEvidencePage } from '../../pages/reissue.further.evidence.page';
 
 export abstract class BaseStep {
@@ -109,6 +111,8 @@ export abstract class BaseStep {
   protected notListablePage: NotListablePage;
   protected updateNotListablePage: UpdateNotListablePage;
   protected searchFilterPage: SearchFilterPage;
+  protected hearingsTab: Hearings;
+  protected listingRequirementPage: ListingRequirementPage
   protected reissueFurtherEvidencePage: ReissueFurtherEvidencePage;
 
    constructor(page: Page) {
@@ -165,6 +169,8 @@ export abstract class BaseStep {
         this.notListablePage = new NotListablePage(this.page);
         this.updateNotListablePage = new UpdateNotListablePage(this.page);
         this.searchFilterPage = new SearchFilterPage(this.page);
+        this.hearingsTab = new Hearings(this.page);
+        this.listingRequirementPage = new ListingRequirementPage(this.page);
         this.reissueFurtherEvidencePage = new ReissueFurtherEvidencePage(this.page);
    }
 
