@@ -10,6 +10,7 @@
     "poAttendOption" : "No",
     "ucBenefitCode": "001",
     "ucIssueCode": "WC",
+    "dlaIssueCode": "EI",
     "ucDisputeOption": "No",
     "ucJointPartyOnCase": "No"
 }
