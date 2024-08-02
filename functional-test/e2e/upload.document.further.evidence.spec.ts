@@ -3,7 +3,7 @@ import createCaseBasedOnCaseType from '../api/client/sscs/factory/appeal.type.fa
 import performAppealDormantOnCase from '../api/client/sscs/appeal.event';
 
 
-test.describe.serial('WA - Action Unprocessed Correspondence CTSC task initiation and completion tests', {
+test.describe.serial('WA - Upload document FE - Action Unprocessed Correspondence CTSC task initiation and completion tests', {
     tag: '@work-allocation'
 }, async () => {
 
@@ -46,7 +46,7 @@ test.describe.serial('WA - Action Unprocessed Correspondence CTSC task initiatio
 });
 
 
-test.describe('WA - Action Unprocessed Correspondence CTSC task cancellation', {
+test.describe.serial('WA - Upload document FE - Action Unprocessed Correspondence CTSC task cancellation', {
     tag: '@work-allocation'
 }, async() => {
 

@@ -42,6 +42,7 @@ import {UpdateNotListable} from "../fixtures/steps/update.not.listable";
 import { use } from "chai";
 import { SearchFilter } from '../fixtures/steps/search.filter';
 import { ReissueFurtherEvidence } from '../fixtures/steps/reissue.further.evidence';
+import { PrepareCaseForHearing } from '../fixtures/steps/prepare.case.for.hearing';
 
 
 type MyStepsFixtures = {
@@ -87,6 +88,7 @@ type MyStepsFixtures = {
     updateNotListableSteps: UpdateNotListable
     searchFilterSteps: SearchFilter
     reissueFurtherEvidenceSteps: ReissueFurtherEvidence
+    prepareCaseForHearingSteps: PrepareCaseForHearing
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -257,5 +259,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     reissueFurtherEvidenceSteps: async ({ page }, use) => {
         const reissueFurtherEvidenceSteps = new ReissueFurtherEvidence(page);
         await use(reissueFurtherEvidenceSteps);
+    },
+    prepareCaseForHearingSteps: async ({ page }, use) => {
+        const prepareCaseForHearingSteps = new PrepareCaseForHearing(page);
+        await use(prepareCaseForHearingSteps);
     }
 })

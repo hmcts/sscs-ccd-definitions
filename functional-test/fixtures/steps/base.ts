@@ -53,6 +53,7 @@ import {NotListablePage} from "../../pages/not.listable.page";
 import { UpdateNotListablePage } from "../../pages/update.not.listable.page";
 import { SearchFilterPage } from '../../pages/search.filter.page';
 import { ReissueFurtherEvidencePage } from '../../pages/reissue.further.evidence.page';
+import { PrepareCaseForHearingPage } from '../../pages/prepare.case.for.hearing.page';
 
 export abstract class BaseStep {
 
@@ -110,6 +111,7 @@ export abstract class BaseStep {
   protected updateNotListablePage: UpdateNotListablePage;
   protected searchFilterPage: SearchFilterPage;
   protected reissueFurtherEvidencePage: ReissueFurtherEvidencePage;
+  protected prepareCaseForHearingPage: PrepareCaseForHearingPage;
 
    constructor(page: Page) {
         this.page = page;
@@ -166,6 +168,7 @@ export abstract class BaseStep {
         this.updateNotListablePage = new UpdateNotListablePage(this.page);
         this.searchFilterPage = new SearchFilterPage(this.page);
         this.reissueFurtherEvidencePage = new ReissueFurtherEvidencePage(this.page);
+        this.prepareCaseForHearingPage = new PrepareCaseForHearingPage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
