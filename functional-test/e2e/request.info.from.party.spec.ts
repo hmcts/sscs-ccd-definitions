@@ -38,7 +38,7 @@ test.describe.serial('WA - Review Information Requested CTSC task initiation and
     });
 });
 
-test.describe('WA - Review Information Requested CTSC task automatic cancellation when case is void', {
+test.describe.serial('WA - Review Information Requested CTSC task automatic cancellation when case is void', {
     tag: '@work-allocation'
 }, async() => {
 

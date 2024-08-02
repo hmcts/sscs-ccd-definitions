@@ -86,6 +86,14 @@ export const credentials = {
   amSeniorTribunalCaseWorkerWithCaseAllocatorRole: {
     email: process.env.TEST_AM_SENIOR_TRIBUNAL_CASEWORKER_CASE_ALLOCATOR_USERNAME,
     password: process.env.TEST_AM_SENIOR_TRIBUNAL_CASEWORKER_CASE_ALLOCATOR_PASSWORD,
+  },
+  amRegionalCenterAdmin: {
+    email: process.env.TEST_AM_REGIONAL_CENTER_ADMIN_USERNAME,
+    password: process.env.TEST_AM_REGIONAL_CENTER_ADMIN_PASSWORD,
+  },
+  amRegionalCenterTeamLeader: {
+    email: process.env.TEST_AM_REGIONAL_CENTER_TEAM_LEADER_USERNAME,
+    password: process.env.TEST_AM_REGIONAL_CENTER_TEAM_LEADER_PASSWORD,
   }
 };
 

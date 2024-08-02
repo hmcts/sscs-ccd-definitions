@@ -43,6 +43,9 @@ import {use} from "chai";
 import {SearchFilter} from '../fixtures/steps/search.filter';
 import {ReissueFurtherEvidence} from '../fixtures/steps/reissue.further.evidence';
 import {Postponement} from "../fixtures/steps/postponement";
+import { SearchFilter } from '../fixtures/steps/search.filter';
+import { Hearing } from '../fixtures/steps/hearing';
+import { PrepareCaseForHearing } from '../fixtures/steps/prepare.case.for.hearing';
 
 
 type MyStepsFixtures = {
@@ -87,8 +90,11 @@ type MyStepsFixtures = {
     issueFinalDecisionSteps: WriteFinalDecision
     updateNotListableSteps: UpdateNotListable
     searchFilterSteps: SearchFilter
+    hearingSteps: Hearing
     reissueFurtherEvidenceSteps: ReissueFurtherEvidence
     postponementSteps: Postponement
+    prepareCaseForHearingSteps: PrepareCaseForHearing
+
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -263,5 +269,12 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     postponementSteps: async ({page}, use) => {
         const postponementSteps = new Postponement(page);
         await use(postponementSteps);
+    hearingSteps: async ({ page }, use) => {
+        const hearingSteps = new Hearing(page);
+        await use(hearingSteps);
+    },
+    prepareCaseForHearingSteps: async ({ page }, use) => {
+        const prepareCaseForHearingSteps = new PrepareCaseForHearing(page);
+        await use(prepareCaseForHearingSteps);
     }
 })

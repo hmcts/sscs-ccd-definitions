@@ -26,6 +26,8 @@ export class HomePage {
     readonly audioVideoEvidenceTab: Locator;
     readonly ftaDocumentsTab: Locator;
     readonly otherPartyDetailsTab: Locator;
+    readonly hearingsTab: Locator;
+    readonly afterTabBtn: Locator;
 
 
     constructor(page: Page) {
@@ -49,6 +51,8 @@ export class HomePage {
         this.subscriptionsTab = page.getByRole('tab', { name: 'Subscriptions', exact: true });
         this.ftaDocumentsTab = page.getByRole('tab', { name: 'FTA Documents', exact: true });
         this.otherPartyDetailsTab = page.getByRole('tab', { name: 'Other Party Details', exact: true });
+        this.hearingsTab = page.getByRole('tab', { name: 'Hearings', exact: true })
+        this.afterTabBtn = page.locator('//html/body/exui-root/exui-case-home/div/exui-case-details-home/exui-case-viewer-container/ccd-case-viewer/div/ccd-case-full-access-view/div[2]/div/mat-tab-group/mat-tab-header/button[2]/div');
 
         webActions = new WebAction(this.page);
 
@@ -101,6 +105,10 @@ export class HomePage {
 
     async clickBeforeTabBtn(): Promise<void> {
         await this.beforeTabBtn.click();
+    }
+
+    async clickAfterTabBtn(): Promise<void> {
+        await this.afterTabBtn.click();
     }
 
     async waitForLoadState() {
@@ -192,6 +200,11 @@ export class HomePage {
             }
             case "Other Party Details": {
                 await this.otherPartyDetailsTab.click();
+                break;
+            }
+            case "Hearings": {
+                await expect(this.hearingsTab).toBeVisible();
+                await this.hearingsTab.click();
                 break;
             }
             default: {
