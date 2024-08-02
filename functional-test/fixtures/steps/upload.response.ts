@@ -307,4 +307,15 @@ export class UploadResponse extends BaseStep {
             uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
     }
+
+    async uploadResponseWithoutFurtherInfoAsDwpCaseWorker(caseId: string) {
+
+        // As DWP caseworker upload response with further info
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, caseId);
+        await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.pipIssueCode, 'No');
+
+        await this.checkYourAnswersPage.verifyCYAPageContent("Upload response",
+            uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
+        await this.checkYourAnswersPage.confirmSubmission();
+    }
 }
