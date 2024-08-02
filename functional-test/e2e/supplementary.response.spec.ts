@@ -45,7 +45,7 @@ test.describe.serial('WA - Supplementary Response - Action Unprocessed Correspon
     });
 });
 
-test.describe.serial('WA - Supplementary Response - Action Unprocessed Correspondence CTSC task cancellation', {
+test.describe.serial('WA - Supplementary Response - Action Unprocessed Correspondence CTSC task cancellation tests', {
     tag: '@work-allocation'
 }, async() => {
 

@@ -51,9 +51,8 @@ test.describe.serial('WA - Upload document FE - Action Unprocessed Correspondenc
 }, async() => {
 
     let caseId : string;
-    
+
     test.beforeAll('Create case', async () => {
-        test.slow();
         caseId = await createCaseBasedOnCaseType('PIP');
     });
 
