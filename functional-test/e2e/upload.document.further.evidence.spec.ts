@@ -3,7 +3,7 @@ import createCaseBasedOnCaseType from '../api/client/sscs/factory/appeal.type.fa
 import performAppealDormantOnCase from '../api/client/sscs/appeal.event';
 
 
-test.describe.serial('WA - Action Unprocessed Correspondence CTSC task initiation and completion tests', {
+test.describe.serial('WA - Upload document FE - Action Unprocessed Correspondence CTSC task initiation and completion tests', {
     tag: '@work-allocation'
 }, async () => {
 
@@ -23,7 +23,7 @@ test.describe.serial('WA - Action Unprocessed Correspondence CTSC task initiatio
         uploadDocumentFurtherEvidenceSteps }) => {
 
         test.slow();
-        await uploadDocumentFurtherEvidenceSteps.performUploadDocumentFurtherEvidence(caseId);
+        await uploadDocumentFurtherEvidenceSteps.performUploadDocumentFurtherEvidence(caseId, false);
     });
 
     test('CTSC Admin as allocated case worker, views the Action Unprocessed Correspondence CTSC task', async ({
@@ -46,14 +46,13 @@ test.describe.serial('WA - Action Unprocessed Correspondence CTSC task initiatio
 });
 
 
-test.describe('WA - Action Unprocessed Correspondence CTSC task cancellation', {
+test.describe.serial('WA - Upload document FE - Action Unprocessed Correspondence CTSC task cancellation', {
     tag: '@work-allocation'
 }, async() => {
 
     let caseId : string;
-    
+
     test.beforeAll('Create case', async () => {
-        test.slow();
         caseId = await createCaseBasedOnCaseType('PIP');
     });
 
@@ -107,7 +106,7 @@ test.describe.serial('WA - Review Bi-Lingual Document CTSC task initiation and c
         uploadDocumentFurtherEvidenceSteps }) => {
 
         test.slow();
-        await uploadDocumentFurtherEvidenceSteps.performUploadDocumentFurtherEvidence(caseId);
+        await uploadDocumentFurtherEvidenceSteps.performUploadDocumentFurtherEvidence(caseId, false);
     });
 
     test('As a CTSC Admin, view the Review Bi-Lingual Document CTSC task', async ({
@@ -150,7 +149,7 @@ test.describe.serial('WA - Review Bi-Lingual Document CTSC task cancellation tes
         uploadDocumentFurtherEvidenceSteps }) => {
 
         test.slow();
-        await uploadDocumentFurtherEvidenceSteps.performUploadDocumentFurtherEvidence(caseId);
+        await uploadDocumentFurtherEvidenceSteps.performUploadDocumentFurtherEvidence(caseId, false);
     });
 
     test('CTSC Admin views Review Bi-Lingual Document CTSC task and cancels Welsh translations', async ({

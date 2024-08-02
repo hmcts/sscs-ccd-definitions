@@ -42,60 +42,82 @@ import { ListingRequirements } from '../../pages/tabs/listing.requirements';
 import { UpdateUCBPage } from '../../pages/update.ucb.page';
 import { UpdateSubscriptionPage } from '../../pages/update.subscription.page';
 import { Subscriptions } from '../../pages/tabs/subscriptions';
+import { AudioVideoEvidence } from '../../pages/tabs/audioVideoEvidence';
+import { ProcessAVPage } from '../../pages/process.av.page';
 import { OtherPartyDetails } from '../../pages/tabs/other.party.details';
 import { updateOtherPartyDataPage } from '../../pages/update.other.party.data.page';
 import { SendCaseToTcwPage } from '../../pages/send.case.to.tcw.page';
+import {WriteFinalDecisionPages} from "../../pages/write.final.decision.page";
+import {SendToInterlocPrevalidPage} from "../../pages/send.to.interloc.prevalid.page";
+import {NotListablePage} from "../../pages/not.listable.page";
+import { UpdateNotListablePage } from "../../pages/update.not.listable.page";
+import { SearchFilterPage } from '../../pages/search.filter.page';
+import { Hearings } from '../../pages/tabs/hearings';
+import { ListingRequirementPage } from '../../pages/listing.requirements.page';
+import { ReissueFurtherEvidencePage } from '../../pages/reissue.further.evidence.page';
+import { PrepareCaseForHearingPage } from '../../pages/prepare.case.for.hearing.page';
 
 export abstract class BaseStep {
 
-    readonly page: Page;
-    protected loginPage: LoginPage;
-    protected homePage: HomePage;
-    protected uploadResponsePage: UploadResponsePage;
-    protected checkYourAnswersPage: CheckYourAnswersPage;
-    protected responseReviewedPage: ResponseReviewedPage;
-    protected addNotePage: AddNote;
-    protected notePadTab: NotePad;
-    protected eventNameAndDescriptionPage: EventNameEventDescriptionPage;
-    protected associateCasePage: AssociateCasePage;
-    protected informationReceivedPage: InformationReceivedPage;
-    protected textAreaPage: TextAreaPage;
-    protected historyTab: History;
-    protected appealDetailsTab: AppealDetails;
-    protected summaryTab: Summary;
-    protected tasksTab: Tasks;
-    protected welshTab: Welsh;
-    protected bundlesTab: Bundles;
-    protected createBundlePage: CreateBundlePage;
-    protected requestTimeExtensionPage: RequestTimeExtensionPage;
-    protected actionFurtherEvidencePage: ActionFurtherEvidencePage;
-    protected issueDirectionPage: IssueDirectionPage;
-    protected requestInfoFromPartyPage: RequestInfoFromPartyPage;
-    protected linkACasePage: LinkCasePage;
-    protected provideAppointeeDetailsPage: ProvideAppointeeDetailsPage;
-    protected addHearingPage: AddHearingPage;
-    protected hearingBookedPage: HearingBookedPage;
-    protected uploadRecordingPage: UploadRecordingPage;
-    protected hearingRecordingsTab: HearingRecordings;
-    protected requestRecordingPage: RequestRecordingPage;
-    protected actionRecordingPage: ActionRecordingPage;
-    protected documentsTab: Documents;
-    protected uploadDocumentPage: UploadDocumentPage;
-    protected rolesAndAccessTab: RolesAndAccess;
-    protected supplementaryResponsePage: SupplementaryResponsePage;
-    protected uploadDocumentFurtherEvidencePage: UploadDocumentFurtherEvidencePage;
-    protected updateLanguagePreferencePage: UpdateLanguagePreferencePage;
-    protected amendInterlocReviewStatePage: AmendInterlocReviewStatePage;
-    protected reviewPHEPage: ReviewPHEPage;
-    protected listingRequirementsTab: ListingRequirements;
-    protected updateUCBPage: UpdateUCBPage;
-    protected updateSubscriptionPage: UpdateSubscriptionPage;
-    protected subscriptionsTab: Subscriptions;
-    protected updateOtherPartyDataPage: updateOtherPartyDataPage;
-    protected otherPartyDetailsTab: OtherPartyDetails;
-    protected sendCaseToTcwPage: SendCaseToTcwPage;
+  readonly page : Page;
+  protected loginPage: LoginPage;
+  protected homePage: HomePage;
+  protected uploadResponsePage: UploadResponsePage;
+  protected checkYourAnswersPage: CheckYourAnswersPage;
+  protected responseReviewedPage: ResponseReviewedPage;
+  protected addNotePage: AddNote;
+  protected notePadTab: NotePad;
+  protected eventNameAndDescriptionPage: EventNameEventDescriptionPage;
+  protected associateCasePage: AssociateCasePage;
+  protected informationReceivedPage: InformationReceivedPage;
+  protected textAreaPage: TextAreaPage;
+  protected historyTab: History;
+  protected appealDetailsTab: AppealDetails;
+  protected summaryTab: Summary;
+  protected tasksTab: Tasks;
+  protected welshTab: Welsh;
+  protected bundlesTab: Bundles;
+  protected createBundlePage: CreateBundlePage;
+  protected requestTimeExtensionPage: RequestTimeExtensionPage;
+  protected actionFurtherEvidencePage: ActionFurtherEvidencePage;
+  protected issueDirectionPage: IssueDirectionPage;
+  protected requestInfoFromPartyPage: RequestInfoFromPartyPage;
+  protected linkACasePage: LinkCasePage;
+  protected provideAppointeeDetailsPage: ProvideAppointeeDetailsPage;
+  protected addHearingPage: AddHearingPage;
+  protected hearingBookedPage: HearingBookedPage;
+  protected uploadRecordingPage: UploadRecordingPage;
+  protected hearingRecordingsTab: HearingRecordings;
+  protected requestRecordingPage: RequestRecordingPage;
+  protected actionRecordingPage: ActionRecordingPage;
+  protected documentsTab: Documents;
+  protected uploadDocumentPage: UploadDocumentPage;
+  protected rolesAndAccessTab: RolesAndAccess;
+  protected supplementaryResponsePage: SupplementaryResponsePage;
+  protected uploadDocumentFurtherEvidencePage: UploadDocumentFurtherEvidencePage;
+  protected updateLanguagePreferencePage: UpdateLanguagePreferencePage;
+  protected amendInterlocReviewStatePage: AmendInterlocReviewStatePage;
+  protected reviewPHEPage: ReviewPHEPage;
+  protected listingRequirementsTab: ListingRequirements;
+  protected updateUCBPage: UpdateUCBPage;
+  protected updateSubscriptionPage: UpdateSubscriptionPage;
+  protected subscriptionsTab: Subscriptions;
+  protected avTab: AudioVideoEvidence;
+  protected processAVPage: ProcessAVPage;
+  protected updateOtherPartyDataPage: updateOtherPartyDataPage;
+  protected otherPartyDetailsTab: OtherPartyDetails;
+  protected sendCaseToTcwPage: SendCaseToTcwPage;
+  protected writeFinalDecisionPage : WriteFinalDecisionPages;
+  protected sendToInterlocPrevalidPage : SendToInterlocPrevalidPage;
+  protected notListablePage: NotListablePage;
+  protected updateNotListablePage: UpdateNotListablePage;
+  protected searchFilterPage: SearchFilterPage;
+  protected hearingsTab: Hearings;
+  protected listingRequirementPage: ListingRequirementPage
+  protected reissueFurtherEvidencePage: ReissueFurtherEvidencePage;
+  protected prepareCaseForHearingPage: PrepareCaseForHearingPage;
 
-    constructor(page: Page) {
+   constructor(page: Page) {
         this.page = page;
         this.loginPage = new LoginPage(this.page);
         this.homePage = new HomePage(this.page);
@@ -139,15 +161,32 @@ export abstract class BaseStep {
         this.updateUCBPage = new UpdateUCBPage(this.page);
         this.updateSubscriptionPage = new UpdateSubscriptionPage(this.page);
         this.subscriptionsTab = new Subscriptions(this.page);
+        this.avTab = new AudioVideoEvidence(this.page);
+        this.processAVPage = new ProcessAVPage(this.page);
         this.updateOtherPartyDataPage = new updateOtherPartyDataPage(this.page);
         this.otherPartyDetailsTab = new OtherPartyDetails(this.page);
         this.sendCaseToTcwPage = new SendCaseToTcwPage(this.page);
-    }
+        this.writeFinalDecisionPage = new WriteFinalDecisionPages(page);
+        this.sendToInterlocPrevalidPage = new SendToInterlocPrevalidPage(page);
+        this.notListablePage = new NotListablePage(this.page);
+        this.updateNotListablePage = new UpdateNotListablePage(this.page);
+        this.searchFilterPage = new SearchFilterPage(this.page);
+        this.hearingsTab = new Hearings(this.page);
+        this.listingRequirementPage = new ListingRequirementPage(this.page);
+        this.reissueFurtherEvidencePage = new ReissueFurtherEvidencePage(this.page);
+        this.prepareCaseForHearingPage = new PrepareCaseForHearingPage(this.page);
+   }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
         await this.loginPage.goToLoginPage();
         await this.loginPage.verifySuccessfulLoginForUser(user, clearCacheFlag);
         await this.homePage.goToHomePage(caseId);
+    }
+
+    async loginUserWithoutCaseId(user, clearCacheFlag: boolean = false) {
+        await this.loginPage.goToLoginPage();
+        await this.loginPage.verifySuccessfulLoginForUser(user, clearCacheFlag);
+        await this.homePage.goToCaseList;
     }
 
     async verifyHistoryTabDetails(state?: string, event?: string, comment?: string) {

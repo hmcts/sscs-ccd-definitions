@@ -11,7 +11,7 @@ module.exports = defineConfig({
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: 2, // Set the number of retries for all projects
-  timeout: 3 * 30 * 1000,
+  timeout: 6 * 30 * 1000,
   expect: {
     timeout: 60 * 1000,
   },

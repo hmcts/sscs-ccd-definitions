@@ -15,6 +15,10 @@
 
     "prepostHearingLabel" : "Pre or post hearing?",
     "directionTypeLabel" : "Direction type",
+    "appealToProceedDirectionType" : "Appeal to Proceed",
+    "provideInformationDirectionType" : "Provide information",
+    "allowTimeExtensionDirectionType" : "Allow time extension",
+    "refuseTimeExtensionDirectionType" : "Refuse time extension",
     "sendToAllPartiesLabel": "Send to all parties",
     "selectSpecificRecipientsLabel" : "Select specific recipients",
     "dueDateLabel" : "Due date (Optional)",
