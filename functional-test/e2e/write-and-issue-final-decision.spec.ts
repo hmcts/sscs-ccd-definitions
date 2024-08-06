@@ -11,7 +11,7 @@ test.describe('Issue Final Decision - PIP Appeal Type', {tag: '@pipeline'},  asy
             test.slow();
             let pipCaseId = await createCaseBasedOnCaseType('PIP');
             await issueFinalDecisionSteps.performWriteFinalDecisionForAPIPAppealNoAwardAndNoticeGenerated(pipCaseId);
-            await issueFinalDecisionSteps.performIssueFinalDecisionForAPIPAppeal(pipCaseId);
+            await issueFinalDecisionSteps.performIssueFinalDecisionForAnAppeal();
             await performAppealDormantOnCase(pipCaseId);
         });
 
@@ -20,7 +20,7 @@ test.describe('Issue Final Decision - PIP Appeal Type', {tag: '@pipeline'},  asy
             test.slow();
             let pipCaseId = await createCaseBasedOnCaseType('PIP');
             await issueFinalDecisionSteps.performWriteFinalDecisionForAPIPAppealAwardAndNoticeGenerated(pipCaseId);
-            await issueFinalDecisionSteps.performIssueFinalDecisionForAPIPAppeal(pipCaseId);
+            await issueFinalDecisionSteps.performIssueFinalDecisionForAnAppeal();
             await performAppealDormantOnCase(pipCaseId);
         });
 
@@ -33,7 +33,7 @@ test.describe('Issue Final Decision - Tax Credit Appeal Type', {tag: '@pipeline'
             test.slow();
             let taxCreditCaseId = await createCaseBasedOnCaseType('TAX CREDIT');
             await issueFinalDecisionSteps.performWriteFinalDecisionForATaxCreditAppealAndNoNoticeGenerated(taxCreditCaseId);
-            await issueFinalDecisionSteps.performIssueFinalDecisionForAPIPAppeal(taxCreditCaseId);
+            await issueFinalDecisionSteps.performIssueFinalDecisionForAnAppeal();
             await performAppealDormantOnCase(taxCreditCaseId);
         });
 })
@@ -45,7 +45,30 @@ test.describe('Issue Final Decision - Universal Credit Appeal Type', {tag: '@pip
             test.slow();
             let universalCreditCaseId = await createCaseBasedOnCaseType('UC');
             await issueFinalDecisionSteps.performWriteFinalDecisionForAUniversalCreditAppealAndNoticeGenerated(universalCreditCaseId);
-            await issueFinalDecisionSteps.performIssueFinalDecisionForAPIPAppeal(universalCreditCaseId);
+            await issueFinalDecisionSteps.performIssueFinalDecisionForAnAppeal();
             await performAppealDormantOnCase(universalCreditCaseId);
         });
+})
+
+test.describe('Issue Final Decision - ESA Appeal Type', {tag: '@pipeline'}, async () => {
+
+    test("Issue Final Decision - 'Yes' notice generated - 'No' Award Given",
+        async ({issueFinalDecisionSteps}) => {
+            test.slow();
+            let esaCaseId = await createCaseBasedOnCaseType('ESA');
+            await issueFinalDecisionSteps.performWriteFinalDecisionForAESAAppealNoAwardGivenAndNoticeGenerated(esaCaseId);
+            await issueFinalDecisionSteps.performIssueFinalDecisionForAnAppeal();
+            await issueFinalDecisionSteps.verifyFinalDecisionForAnAppeal();
+    });
+
+    test("Issue Final Decision - 'Yes' notice generated - 'Yes' Award Given", 
+        async ({issueFinalDecisionSteps}) => {
+            test.slow();
+            let esaCaseId = await createCaseBasedOnCaseType('ESA');
+            await issueFinalDecisionSteps.performWriteFinalDecisionForAESAAppealYesAwardGivenAndNoticeGenerated(esaCaseId);
+            await issueFinalDecisionSteps.performIssueFinalDecisionForAnAppeal();
+            await issueFinalDecisionSteps.verifyFinalDecisionForAnAppeal();
+    });
+
+
 })
