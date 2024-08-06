@@ -57,7 +57,7 @@ export class ReviewIncompleteAppealTask extends BaseStep {
         await this.tasksTab.clickNextStepLink(task.requestInformationFromParty.link);
 
         let requestInfoFromParty = new RequestInfoFromParty(this.page)
-        await requestInfoFromParty.performRequestInfoFromPartyEvent();
+        await requestInfoFromParty.completeRequestInfoFromParty();
 
         // Verify task is removed from the tasks list within Tasks tab
         await this.homePage.navigateToTab('Tasks');

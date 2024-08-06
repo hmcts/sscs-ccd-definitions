@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test';
 import { WebAction } from '../common/web.action';
+import { timingSafeEqual } from 'crypto';
 const uploadResponseTestdata = require('../pages/content/upload.response_en.json');
 
 let webActions: WebAction;
@@ -47,6 +48,14 @@ export class UploadResponsePage {
         await webActions.uploadFileUsingAFileChooser('#dwpEditedEvidenceBundleDocument_documentLink', uploadResponseTestdata.testfiletwo);
         await this.page.waitForTimeout(7000);
         await webActions.uploadFileUsingAFileChooser('#appendix12Doc_documentLink', uploadResponseTestdata.testfilethree);
+        await this.page.waitForTimeout(7000);
+    }
+
+    async uploadAVDocs(): Promise<void> {
+        await this.clickAddNewButton();
+        await webActions.uploadFileUsingAFileChooser('#dwpUploadAudioVideoEvidence_0_documentLink', uploadResponseTestdata.testaudiofile);
+        await this.page.waitForTimeout(10000);
+        await webActions.uploadFileUsingAFileChooser('#dwpUploadAudioVideoEvidence_0_rip1Document', uploadResponseTestdata.testfiletwo);
         await this.page.waitForTimeout(7000);
     }
 

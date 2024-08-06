@@ -50,6 +50,12 @@ export class SupplementaryResponse extends BaseStep {
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.homePage.navigateToTab('Tasks');
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
+
+        // CTSC Admin verifies assigned task details
+        await this.tasksTab.verifyPriortiy(task.name, task.priority);
+        await this.tasksTab.verifyPageContentByKeyValue(task.name, 'Assigned to', task.assignedTo);
+        await this.tasksTab.verifyManageOptions(task.name, task.assignedManageOptions);
+        await this.tasksTab.verifyNextStepsOptions(task.name, task.nextStepsOptions);
     }
 
     async verifyCtscAdminAsAllocatedCaseWorkerCanCompleteTheAssignedActionUnprocessedCorrespondenceTask(caseId: string) {
@@ -86,9 +92,6 @@ export class SupplementaryResponse extends BaseStep {
     }
 
     async verifyActionUnprocessedCorrespondenceTaskCanBeCancelledManuallyByAllocatedCtscAdmin(caseId: string) {
-
-        // Dwp user performs Supplementary response event
-        await this.performSupplementaryResponse(caseId);
 
         // Verify CTSC Admin as allocated caseworker can view the automatically assigned Action Unprocessed Correspondence task
         await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);

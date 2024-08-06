@@ -23,14 +23,14 @@ export class AppealDetails {
         const ftaDueDate = new Date();
         ftaDueDate.setDate(new Date().getDate() + 28);
         let formattedDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(ftaDueDate);
-        this.verifyAppealDetailsPageContentByKeyValue('FTA response due date', formattedDate);
+        await this.verifyAppealDetailsPageContentByKeyValue('FTA response due date', formattedDate);
     }
 
     async verifydueDates(reqField: string){
         const dueDate = new Date();
         dueDate.setDate(new Date().getDate());
         let fomattedDueDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(dueDate);
-        this.verifyAppealDetailsPageContentByKeyValue(reqField, fomattedDueDate);
+        await this.verifyAppealDetailsPageContentByKeyValue(reqField, fomattedDueDate);
     }
 
     async verifyAppealDetailsAppointeeDetails(appointeeData) {

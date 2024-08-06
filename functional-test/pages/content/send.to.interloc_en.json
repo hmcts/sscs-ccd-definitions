@@ -1,0 +1,10 @@
+{
+    "sendToInterLocPreValidCaption" : "Send to interloc - pre-valid",
+    "sendToInterLocPageHeading" : "Interloc referral",
+    "sendToInterLocReasonOptionLabel" : "Reason referred to interloc",
+    "sendToInterLocReferalReasonOptionValue" : "Other",
+
+    "appealNotepad" : "Appeal notepad",
+    "enterNoteOptionalLabel" : "Enter note (Optional)",
+    "appealNotepadInput" : "Send to interloc - pre-valid notepad input - Automation"
+}
