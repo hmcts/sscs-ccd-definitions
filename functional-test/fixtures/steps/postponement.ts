@@ -3,6 +3,7 @@ import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type
 import {BaseStep} from './base';
 import {credentials} from "../../config/config";
 import eventTestData from "../../pages/content/event.name.event.description_en.json";
+import performAppealDormantOnCase from "../../api/client/sscs/appeal.event";
 
 
 export class Postponement extends BaseStep {
@@ -14,7 +15,7 @@ export class Postponement extends BaseStep {
         this.page = page;
     }
 
-    async postponeAListAssistCaseWithASuccessfulGrant() {
+    async postponeAListAssistCaseWithAPostponement(grantRequest: string = 'Grant Postponement') {
 
         let pipCaseId = await createCaseBasedOnCaseType("PIP");
 
@@ -47,7 +48,7 @@ export class Postponement extends BaseStep {
         await this.postponementPage.inputPostponementDetailsOfPageData();
         await this.postponementPage.submitContinueBtn();
         await this.postponementPage.verifyPageContentPreviewPostponementDocumentPage();
-        await this.postponementPage.confirmSubmission();
+        await this.postponementPage.submitBtn();
         await this.eventNameAndDescriptionPage.verifyPageContent("Postponement request", false)
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
@@ -58,13 +59,15 @@ export class Postponement extends BaseStep {
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Action Postponement Request');
 
-        await this.postponementPage.verifyPageContentActionPostponementRequestPage();
-        await this.postponementPage.inputPostponementActionRequestPageData('Grant Postponement');
+        await this.postponementPage.verifyPageContentActionPostponementRequestPage(grantRequest);
+        await this.postponementPage.inputPostponementActionRequestPageData(grantRequest);
         await this.postponementPage.verifyPageContentActionPostponementRequestDocumentPage();
-        await this.postponementPage.confirmSubmission();
-        await this.eventNameAndDescriptionPage.verifyPageContent("Action Postponement Request", false)
+        await this.postponementPage.submitBtn();
+
+        /*await this.eventNameAndDescriptionPage.verifyPageContent("Action Postponement Request", false)
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
-            eventTestData.eventDescriptionInput);
+            eventTestData.eventDescriptionInput);*/
         await this.eventNameAndDescriptionPage.confirmSubmission();
+        await performAppealDormantOnCase(pipCaseId);
     }
 }

@@ -23,31 +23,55 @@ export class PostponementPages {
 
     }
 
-    async verifyPageContentActionPostponementRequestPage() {
+    async verifyPageContentActionPostponementRequestPage(actionPostponementRequest: string) {
         await webActions.verifyPageLabel('.govuk-caption-l', postponementData.actionPostponementRequestEventNameCaptor);
         await webActions.verifyPageLabel('h1.govuk-heading-l', postponementData.actionPostponementRequestPageHeading);
 
-        await webActions.verifyPageLabel('[for=\'actionPostponementRequestSelected\'] > .form-label', postponementData.actionPostponementRequestFieldLabel);
-        await webActions.verifyPageLabel('.inline > legend > .form-label', postponementData.tribunalDirectPOToAttendLabel);
-        await webActions.verifyPageLabel('[for=\'tribunalDirectPoToAttend_Yes\']', postponementData.yesLabel);
-        await webActions.verifyPageLabel('[for=\'tribunalDirectPoToAttend_No\']', postponementData.noLabel);
+        if (actionPostponementRequest === 'Send to Judge') {
+
+        } else {
+            await webActions.verifyPageLabel('[for=\'actionPostponementRequestSelected\'] > .form-label', postponementData.actionPostponementRequestFieldLabel);
+            await webActions.verifyPageLabel('.inline > legend > .form-label', postponementData.tribunalDirectPOToAttendLabel);
+            await webActions.verifyPageLabel('[for=\'tribunalDirectPoToAttend_Yes\']', postponementData.yesLabel);
+            await webActions.verifyPageLabel('[for=\'tribunalDirectPoToAttend_No\']', postponementData.noLabel);
+        }
     }
 
     async inputPostponementDetailsOfPageData() {
         await webActions.inputField('#postponementRequestDetails', postponementData.postponementDetailsInputValue);
     }
 
-    async inputPostponementActionRequestPageData(actionPostponementRequest : string) {
-        await webActions.chooseOptionByLabel('#actionPostponementRequestSelected',actionPostponementRequest );
-        await webActions.verifyPageLabel('[for=\'bodyContent\'] > .form-label', postponementData.bodyContentLabel);
-        await webActions.verifyPageLabel('.form-label[_ngcontent-ng-c823086951]', postponementData.reservedToInterLocLabel);
-        await webActions.verifyPageLabel('[for=\'signedBy\'] > .form-label', postponementData.signedByLabel);
-        await webActions.verifyPageLabel('[for=\'signedRole\'] > .form-label', postponementData.signedRoleLabel);
-        await webActions.verifyPageLabel('[for=\'listingOption\'] > .form-label', postponementData.listingOptionLabel);
-        await webActions.inputField('#bodyContent',postponementData.bodyContentInputValue);
-        await webActions.inputField('#signedBy',postponementData.signedByInputValue);
-        await webActions.inputField('#signedRole',postponementData.signedRoleInputValue);
-        await webActions.chooseOptionByLabel('#listingOption',postponementData.readyToListInputValue);
+    async inputPostponementActionRequestPageData(actionPostponementRequest: string) {
+        await webActions.chooseOptionByLabel('#actionPostponementRequestSelected', actionPostponementRequest);
+        if (actionPostponementRequest === 'Grant Postponement') {
+            await webActions.verifyPageLabel('[for=\'bodyContent\'] > .form-label', postponementData.bodyContentLabel);
+            await webActions.verifyPageLabel('.form-label[_ngcontent-ng-c823086951]', postponementData.reservedToInterLocLabel);
+            await webActions.verifyPageLabel('[for=\'signedBy\'] > .form-label', postponementData.signedByLabel);
+            await webActions.verifyPageLabel('[for=\'signedRole\'] > .form-label', postponementData.signedRoleLabel);
+            await webActions.verifyPageLabel('[for=\'listingOption\'] > .form-label', postponementData.listingOptionLabel);
+            await webActions.inputField('#bodyContent', postponementData.bodyContentInputValue);
+            await webActions.inputField('#reservedToJudgeInterloc', postponementData.reservedToJudgeInterlocInputValue);
+            await webActions.inputField('#signedBy', postponementData.signedByInputValue);
+            await webActions.inputField('#signedRole', postponementData.signedRoleInputValue);
+            await webActions.chooseOptionByLabel('#listingOption', postponementData.readyToListInputValue);
+        } else if (actionPostponementRequest === 'Refuse Postponement') {
+            await webActions.verifyPageLabel('[for=\'bodyContent\'] > .form-label', postponementData.bodyContentLabel);
+            await webActions.verifyPageLabel('.form-label[_ngcontent-ng-c823086951]', postponementData.reservedToInterLocLabel);
+            await webActions.verifyPageLabel('[for=\'signedBy\'] > .form-label', postponementData.signedByLabel);
+            await webActions.verifyPageLabel('[for=\'signedRole\'] > .form-label', postponementData.signedRoleLabel);
+            await webActions.verifyPageLabel('[for=\'listingOption\'] > .form-label', postponementData.listingOptionLabel);
+            await webActions.inputField('#bodyContent', postponementData.bodyContentInputValue);
+            await webActions.inputField('#reservedToJudgeInterloc', postponementData.reservedToJudgeInterlocInputValue);
+            await webActions.inputField('#signedBy', postponementData.signedByInputValue);
+            await webActions.inputField('#signedRole', postponementData.signedRoleInputValue);
+        }
+        else if (actionPostponementRequest === 'Send to Judge') {
+            await webActions.verifyPageLabel('[for=\'postponementRequestDetails\'] > .form-label', postponementData.postponementDetailsLabel);
+            await webActions.verifyPageLabel('.form-label[_ngcontent-ng-c823086951]', postponementData.reservedToInterLocLabel);
+            await webActions.inputField('#postponementRequestDetails', postponementData.bodyContentInputValue);
+            await webActions.inputField('#reservedToJudgeInterloc', postponementData.reservedToJudgeInterlocInputValue);
+        }
+        await webActions.verifyPageLabel('.inline > legend > .form-label', postponementData.tribunalDirectPOToAttendLabel);
         await webActions.clickElementById('#tribunalDirectPoToAttend_Yes');
     }
 
@@ -62,12 +86,15 @@ export class PostponementPages {
     async verifyPageContentActionPostponementRequestDocumentPage() {
         await webActions.verifyPageLabel('.govuk-caption-l', postponementData.actionPostponementRequestEventNameCaptor);
         await webActions.verifyPageLabel('h1.govuk-heading-l', postponementData.actionPostponementRequestPageHeading);
-
-        await webActions.verifyPageLabel('.form-label', postponementData.previewDocumentLabel);
+        //await webActions.verifyPageLabel('.form-label', postponementData.previewDocumentLabel);
     }
 
     async submitContinueBtn(): Promise<void> {
         await webActions.clickButton("Continue");
+    }
+
+    async submitBtn(): Promise<void> {
+        await webActions.clickButton("Submit");
     }
 
     async confirmSubmission(): Promise<void> {

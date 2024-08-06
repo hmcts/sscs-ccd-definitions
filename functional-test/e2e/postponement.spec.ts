@@ -7,22 +7,19 @@ let caseId : string;
 
 test.describe("Postponement Request test", {tag: '@pipeline'}, async() => {
 
-   /* test.beforeEach("Case has to be Created", async () => {
-        caseId = await createCaseBasedOnCaseType('PIP');
-        test.setTimeout(240000);
-    });*/
-    
     test(" Hearing Route as Gaps with a Grant Option", async ({ postponementSteps }) => {
-        await postponementSteps.postponeAListAssistCaseWithASuccessfulGrant();
+        test.slow();
+        await postponementSteps.postponeAListAssistCaseWithAPostponement('Grant Postponement');
     });
-    
-   /* test("Refuse - Hearing recording request", async ({ uploadHearingSteps }) => {
-        await uploadHearingSteps.requestAndRefuseAnHearingRecording(caseId);
+
+    test(" Hearing Route as Gaps with a Refuse Option", async ({ postponementSteps }) => {
+        test.slow();
+        await postponementSteps.postponeAListAssistCaseWithAPostponement('Refuse Postponement');
     });
-    
-     test.afterAll("Case has to be set to Dormant",async () => {
-        await performAppealDormantOnCase(caseId);
-     });*/
-    
+
+    test(" Hearing Route as Gaps with a Send to Judge Option", async ({ postponementSteps }) => {
+        test.slow();
+        await postponementSteps.postponeAListAssistCaseWithAPostponement('Send to Judge');
+    });
 });
 
