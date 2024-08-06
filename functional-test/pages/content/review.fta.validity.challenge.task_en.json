@@ -27,7 +27,11 @@
         "Unassign task"
     ],
     "nextStepsOptions": [
-        "Request Information From Party"
+        "Amend interloc review state",
+        "Issue interlocutory decision",
+        "Issue directions notice",
+        "Send to admin",
+        "Send to Judge"
     ],
     "requestInformationFromParty": {
         "link": "Request Information From Party",

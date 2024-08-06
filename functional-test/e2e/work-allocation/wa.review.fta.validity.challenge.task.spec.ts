@@ -9,15 +9,15 @@ test.describe.serial('WA - Review FTA Validity Challenge task initiation, cancel
 
     let caseId: string;
 
-    test.beforeAll("Case with Challenge validity event ran has to be Created", async ({ ReviewFTAValidityChallengeSteps }) => {
+    test.beforeAll("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
-        await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId);
     });
 
-    test("As a TCW with legal-caseworker role, I want to view that the 'Review FTA Validity Challenge' task is created", async ({
+    test("As a TCW with legal-caseworker role, I want to create and view that the 'Review FTA Validity Challenge' task", async ({
         ReviewFTAValidityChallengeSteps }) => {
 
         test.slow();
+        await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId); // create task by running Challenge validity event on the case
         await ReviewFTAValidityChallengeSteps.verifyReviewFTAValidityChallengeTaskisCreated(caseId);
     });
 
@@ -25,41 +25,52 @@ test.describe.serial('WA - Review FTA Validity Challenge task initiation, cancel
         ReviewFTAValidityChallengeSteps }) => {
 
         test.slow();
+        await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId);
         await ReviewFTAValidityChallengeSteps.assignReviewFTAValidityChallengeTask(caseId);
     });
 
-    // test("As a TCW without legal-caseworker role, I want to attempt to assign the 'Review FTA Validity Challenge' task to other user", async ({
-    //     ReviewFTAValidityChallengeSteps }) => {
-
-    //     test.slow();
-    //     await ReviewFTAValidityChallengeSteps.assignReviewFTAValidityChallengeTaskWithoutLegalRole(caseId);
-    // });
-
-    test("As a TCW with legal-caseworker role, I want to cancel the 'Review FTA Validity Challenge' task", async ({
+        // CHECK IN THE UI ONCE WA is back
+    test("As a TCW without legal-caseworker role, I want to attempt to assign the 'Review FTA Validity Challenge' task to other user", async ({
         ReviewFTAValidityChallengeSteps }) => {
 
         test.slow();
-        await ReviewFTAValidityChallengeSteps.cancelReviewFTAValidityChallengeTask(caseId);
+        await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId);
+        await ReviewFTAValidityChallengeSteps.assignReviewFTAValidityChallengeTaskWithoutLegalRole(caseId);
     });
 
-    test("As a TCW with legal-caseworker role, I want to complete the 'Review FTA Validity Challenge' task", async ({
+    test("As a TCW with legal-caseworker role, I want to cancel the 'Review FTA Validity Challenge' task via Cancel link", async ({
         ReviewFTAValidityChallengeSteps }) => {
 
         test.slow();
-        await ReviewFTAValidityChallengeSteps.completeReviewFTAValidityChallengeTask(caseId);
+        await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId);
+        await ReviewFTAValidityChallengeSteps.cancelReviewFTAValidityChallengeTaskByCancelLink(caseId);
+    });
+
+    test("As a TCW with legal-caseworker role, I want to cancel the 'Review FTA Validity Challenge' task via Event completion", async ({
+        ReviewFTAValidityChallengeSteps }) => {
+
+        test.slow();
+        await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId);
+        await ReviewFTAValidityChallengeSteps.cancelReviewFTAValidityChallengeTaskByEvent(caseId);
+    });
+
+    test("As a TCW with legal-caseworker role, I want to complete the 'Review FTA Validity Challenge' task via Mark as done link", async ({
+        ReviewFTAValidityChallengeSteps }) => {
+
+        test.slow();
+        await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId);
+        await ReviewFTAValidityChallengeSteps.completeReviewFTAValidityChallengeTaskByMarkAsDone(caseId);
+    });
+
+    test("As a TCW with legal-caseworker role, I want to complete the 'Review FTA Validity Challenge' task via Event completion", async ({
+        ReviewFTAValidityChallengeSteps }) => {
+
+        test.slow();
+        await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId);
+        await ReviewFTAValidityChallengeSteps.completeReviewFTAValidityChallengeTaskByEvent(caseId);
     });
 
     test.afterAll("Case has to be set to Dormant", async () => {
         await performAppealDormantOnCase(caseId);
     });
 })
-
-
-
-// TCW with legal-caseworker role to check assign functionality
-
-// TCW without legal-caseworker role to check if they can't re-assign to anyone else
-
-// TCW cancel task
-
-// TCW complete task

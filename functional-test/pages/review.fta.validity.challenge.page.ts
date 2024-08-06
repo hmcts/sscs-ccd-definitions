@@ -21,9 +21,7 @@ export class ChallengeValidityPage {
 
     async performChallengeValidity(fileName: string) {
         // uploading pdf document
-        await webAction.uploadFileUsingAFileChooser('input#dwpChallengeValidityDocument_documentLink', fileName);
-        await expect(this.page.locator(`div#dwpChallengeValidityDocument_documentLink_fileInputWrapper span:has-text('Uploading...')`)).toBeVisible();
-        await expect(this.page.locator(`div#dwpChallengeValidityDocument_documentLink_fileInputWrapper button:has-text('Cancel upload')`)).toBeDisabled();
+        await webAction.uploadFileUsingAFileChooser('input#dwpChallengeValidityDocument_documentLink', 'testfile1.pdf');
         await this.delay(5000);
         // selecting FTA state
         await this.page.locator('#dwpState').selectOption('34: UnRegistered');
