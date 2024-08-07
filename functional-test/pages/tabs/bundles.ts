@@ -27,6 +27,11 @@ export class Bundles {
             .locator(`//*[normalize-space()="${fieldLabel}"]/..//span//span[normalize-space()="${fieldValue}"]`).first()).toBeVisible();
     }
 
+    async verifyEditedBundlesTabContentByKeyValueForASpan(fieldLabel: string, fieldValue: string, index: number): Promise<void> {
+        await expect(this.page
+            .locator(`//*[normalize-space()="${fieldLabel}"]/..//span//span[normalize-space()="${fieldValue}"]`).nth(index)).toBeVisible();
+    }
+
     async verifyTableElementByIndex(fieldLabel: string, fieldValue: string, index: number): Promise<void> {
         const locator = this.page.locator(`//*[normalize-space()="${fieldLabel}"]/..//span//*[normalize-space()="${fieldValue}"]`).nth(index);
         await expect(locator).toBeVisible();
