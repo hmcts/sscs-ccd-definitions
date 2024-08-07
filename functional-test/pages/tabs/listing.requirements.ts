@@ -23,6 +23,4 @@ export class ListingRequirements {
         await expect(this.page
             .locator(`//*[normalize-space()="${fieldLabel}"]/..//span//span[normalize-space()="${fieldValue}"]`).first()).not.toBeVisible();
     }
-  
-
 }

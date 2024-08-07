@@ -40,7 +40,7 @@ test("Test to Make an Appeal Dormant", async ({addNoteSteps}) => {
 
 /*test.only("Temporary testing of the JSON Node on Json Node", async ({addNoteSteps}) => {
 
-    fs.readFile('./functional-test/api/data/payload/upload-response/upload-response-dwp-022-EC.json', function read(err, data) {
+    fs.readFile('./functional-test/api/data/payload/upload-response/upload-response-dwp-022-CC.json', function read(err, data) {
         if (err) {
             throw err;
         }
