@@ -70,7 +70,7 @@ export class Postponement extends BaseStep {
         await this.eventNameAndDescriptionPage.confirmSubmission();
         await this.homePage.delay(6000);
         await this.homePage.navigateToTab("History");
-        await this.historyTab.verifyPageContentByKeyValue('End state', 'Ready to list');
+        await this.historyTab.verifyPageContentByKeyValue('End state', 'Hearing');
         await this.historyTab.verifyPageContentByKeyValue('Event', 'Action Postponement Request');
         await this.historyTab.verifyEventCompleted('Action Postponement Request');
         await performAppealDormantOnCase(pipCaseId);
