@@ -1,5 +1,6 @@
 import { expect, Page } from '@playwright/test';
-import { WebAction } from '../../common/web.action'
+import { WebAction } from '../../common/web.action';
+import dateUtilsComponent from '../../utils/DateUtilsComponent';
 
 let webActions: WebAction;
 
@@ -38,9 +39,23 @@ export class Summary {
         expect(text).toContain(fieldValue); // TODO An exact match is not done as there is Text from Upper nodes of the Dom Tree Appearing.
     }
 
+    async verifyAttributeValue(expTitleText: string) {
+        let imgEle = await this.page.locator('//div/markdown/h2/img');
+        let actTitleText = await imgEle.getAttribute('title');
+        
+        expect(actTitleText).toEqual(expTitleText);
+    }
+
     async verifyTitleNotPresent(fieldLabel: string) {
         await expect(this.page
             .locator(`//div/markdown/h2[contains(text(),"${fieldLabel}")]`)).not.toBeVisible();
+    }
+
+    async verifydueDates(reqField: string){
+        const dueDate = new Date();
+        dueDate.setDate(new Date().getDate());
+        let fomattedDueDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(dueDate);
+        await this.verifyPageContentByKeyValue(reqField, fomattedDueDate);
     }
 
     /*async verifyPresenceOfText(fieldValue: string): Promise<void>{

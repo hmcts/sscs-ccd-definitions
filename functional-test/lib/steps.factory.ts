@@ -44,6 +44,7 @@ import { SearchFilter } from '../fixtures/steps/search.filter';
 import { Hearing } from '../fixtures/steps/hearing';
 import { ReissueFurtherEvidence } from '../fixtures/steps/reissue.further.evidence';
 import { PrepareCaseForHearing } from '../fixtures/steps/prepare.case.for.hearing';
+import { EnhancedConfidentiality } from '../fixtures/steps/enhanced.confidentiality';
 
 
 type MyStepsFixtures = {
@@ -91,6 +92,7 @@ type MyStepsFixtures = {
     hearingSteps: Hearing
     reissueFurtherEvidenceSteps: ReissueFurtherEvidence
     prepareCaseForHearingSteps: PrepareCaseForHearing
+    enhancedConfidentialitySteps: EnhancedConfidentiality
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -269,5 +271,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     prepareCaseForHearingSteps: async ({ page }, use) => {
         const prepareCaseForHearingSteps = new PrepareCaseForHearing(page);
         await use(prepareCaseForHearingSteps);
+    },
+    enhancedConfidentialitySteps: async ({ page }, use) => {
+        const enhancedConfidentialitySteps = new EnhancedConfidentiality(page);
+        await use(enhancedConfidentialitySteps);
     }
 })
