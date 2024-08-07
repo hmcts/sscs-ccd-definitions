@@ -2,7 +2,7 @@ import { expect, Page } from '@playwright/test';
 import { WebAction } from '../../common/web.action';
 import dateUtilsComponent from '../../utils/DateUtilsComponent';
 
-let webActions: WebAction;
+let webAction: WebAction;
 
 export class Summary {
 
@@ -10,7 +10,7 @@ export class Summary {
 
     constructor(page: Page) {
         this.page = page;
-        webActions = new WebAction(this.page);
+        webAction = new WebAction(this.page);
     }
 
     async verifyPageContentByKeyValue(fieldLabel: string, fieldValue: string) {
@@ -29,7 +29,7 @@ export class Summary {
     }
 
     async verifyPresenceOfText(fieldValue: string) {
-        await webActions.screenshot();
+        await webAction.screenshot();
         let text = await this.page.locator(`//div/markdown/p[contains(text(),"${fieldValue}")]`).textContent()
         expect(text).toContain(fieldValue); // TODO An exact match is not done as there is Text from Upper nodes of the Dom Tree Appearing.
     }
@@ -49,6 +49,10 @@ export class Summary {
     async verifyTitleNotPresent(fieldLabel: string) {
         await expect(this.page
             .locator(`//div/markdown/h2[contains(text(),"${fieldLabel}")]`)).not.toBeVisible();
+    }
+
+    async verifyTotElemensOnPage(fieldLabel: string, fieldValue: string) {
+        await webAction.verifyTotalElements(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`, 2);
     }
 
     async verifydueDates(reqField: string){

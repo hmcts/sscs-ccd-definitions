@@ -2,6 +2,7 @@
     "eventName": "Action further evidence",
     "eventNameCaptor": "Action further evidence",
     "sender": "Appellant (or Appointee)",
+    "jpSender": "Joint party",
     "ftaSender": "FTA",
     "other" : "Other",
     "urgentDocType": "Urgent hearing request",

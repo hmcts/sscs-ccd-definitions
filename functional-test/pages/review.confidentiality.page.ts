@@ -20,8 +20,13 @@ export class ReviewConfidentialityPage {
     }
 
 
-    async selectGrantConfidentiality() {
+    async selectGrantConfidentialityForAppellant() {
         await webAction.clickElementById('#confidentialityRequestAppellantGrantedOrRefused-grantConfidentialityRequest');
+        await webAction.clickButton('Continue');
+    }
+
+    async selectRefuseConfidentialityForJP() {
+        await webAction.clickElementById('#confidentialityRequestJointPartyGrantedOrRefused-refuseConfidentialityRequest');
         await webAction.clickButton('Continue');
     }
 
