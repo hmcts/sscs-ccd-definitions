@@ -20,6 +20,14 @@ export class ActionFurtherEvidencePage {
         await webActions.chooseOptionByIndex('#furtherEvidenceAction', 2);
     }
 
+    async selectReviewByJudge() {
+        await webActions.chooseOptionByIndex('#furtherEvidenceAction', 5);
+    }
+
+    async selectIssueToAllParties() {
+        await webActions.chooseOptionByIndex('#furtherEvidenceAction', 1);
+    }
+
     async selectSenderOption(optionVal: string) {
         await webActions.chooseOptionByLabel('#originalSender', optionVal);
     }
@@ -30,6 +38,11 @@ export class ActionFurtherEvidencePage {
 
     async uploadDocs(fileName: string): Promise<void> {
         await webActions.uploadFileUsingAFileChooser('#scannedDocuments_0_url', fileName);
+        await this.page.waitForTimeout(7000);
+    }
+
+    async uploadEditedDocs(fileName: string): Promise<void> {
+        await webActions.uploadFileUsingAFileChooser('#scannedDocuments_0_editedUrl', fileName);
         await this.page.waitForTimeout(7000);
     }
 
@@ -68,6 +81,33 @@ export class ActionFurtherEvidencePage {
         await this.enterFileName();
         await this.enterScannedDate();
         await this.selectbundle();
+        await this.confirmSubmission();
+    }
+
+    async submitActionFurtherEvidenceForConfRequest(senderOption: string, docType: string, fileName: string): Promise<void> {
+        await this.verifyPageContent();
+        await this.selectReviewByJudge();
+        await this.selectSenderOption(senderOption);
+
+        await this.clickAddNewButton();
+        await this.selectDocType(docType);
+        await this.uploadDocs(fileName);
+        await this.enterFileName();
+        await this.enterScannedDate();
+        await this.selectbundle();
+        await this.confirmSubmission();
+    }
+
+    async submitActionFurtherEvidenceForRequest(senderOption: string, fileName: string): Promise<void> {
+        await this.verifyPageContent();
+        await this.selectIssueToAllParties();
+        await this.selectSenderOption(senderOption);
+
+        // await this.selectDocType(docType);
+        await this.uploadEditedDocs(fileName);
+        // await this.enterFileName();
+        // await this.enterScannedDate();
+        // await this.selectbundle();
         await this.confirmSubmission();
     }
 
