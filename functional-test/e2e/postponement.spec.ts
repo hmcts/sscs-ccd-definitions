@@ -7,7 +7,7 @@ let caseId : string;
 
 test.describe("Postponement Request test", {tag: '@pipeline'}, async() => {
 
-    test.only("Hearing Route as Gaps with a Grant Option", async ({ postponementSteps }) => {
+    test("Hearing Route as Gaps with a Grant Option", async ({ postponementSteps }) => {
         test.slow();
         await postponementSteps.postponeAListAssistCaseWithAPostponement('Grant Postponement');
     });
