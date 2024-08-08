@@ -33,7 +33,7 @@ export class IssueDirectionsNotice extends BaseStep {
         let responseWriterId: string = await accessId(credentials.dwpResponseWriter);
         await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
             serviceToken.trim(), responseWriterId.trim(),
-            'SSCS', 'Benefit',
+            'SSCS', 'Benefit-3921',
             pipCaseId.trim(), 'dwpUploadResponse', 'dwp');*/
 
         /*logger.info('The value of the response writer : '+credentials.amCaseWorker.email)
@@ -42,7 +42,7 @@ export class IssueDirectionsNotice extends BaseStep {
         let caseWorkerId: string = await accessId(credentials.amCaseWorker);
         await new Promise(f => setTimeout(f, 20000)); //Delay required for the Case to be ready
         await performEventOnCaseForActionFurtherEvidence(caseWorkerToken.trim(),
-            serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit',
+            serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit-3921',
             taxCreditCaseId.trim(), 'uploadDocumentFurtherEvidence');*/
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, pipCaseId);
@@ -87,7 +87,7 @@ export class IssueDirectionsNotice extends BaseStep {
         let responseWriterId: string = await accessId(credentials.hmrcUser);
         await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
             serviceToken.trim(), responseWriterId.trim(),
-            'SSCS', 'Benefit',
+            'SSCS', 'Benefit-3921',
             taxCreditCaseId.trim(), 'dwpUploadResponse', 'hmrc');
 
         /*logger.info('The value of the response writer : '+credentials.amCaseWorker.email)
@@ -96,7 +96,7 @@ export class IssueDirectionsNotice extends BaseStep {
         let caseWorkerId: string = await accessId(credentials.amCaseWorker);
         await new Promise(f => setTimeout(f, 20000)); //Delay required for the Case to be ready
         await performEventOnCaseForActionFurtherEvidence(caseWorkerToken.trim(),
-            serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit',
+            serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit-3921',
             taxCreditCaseId.trim(), 'uploadDocumentFurtherEvidence');*/
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, taxCreditCaseId);
@@ -142,7 +142,7 @@ export class IssueDirectionsNotice extends BaseStep {
         let responseWriterId: string = await accessId(credentials.dwpResponseWriter);
         await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
             serviceToken.trim(), responseWriterId.trim(),
-            'SSCS', 'Benefit',
+            'SSCS', 'Benefit-3921',
             esaCaseId.trim(), 'dwpUploadResponse', 'dwp');
 
         /*logger.info('The value of the response writer : '+credentials.amCaseWorker.email)
@@ -151,7 +151,7 @@ export class IssueDirectionsNotice extends BaseStep {
         let caseWorkerId: string = await accessId(credentials.amCaseWorker);
         await new Promise(f => setTimeout(f, 20000)); //Delay required for the Case to be ready
         await performEventOnCaseForActionFurtherEvidence(caseWorkerToken.trim(),
-            serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit',
+            serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit-3921',
             taxCreditCaseId.trim(), 'uploadDocumentFurtherEvidence');*/
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, esaCaseId);
@@ -195,7 +195,7 @@ export class IssueDirectionsNotice extends BaseStep {
         let responseWriterId: string = await accessId(credentials.dwpResponseWriter);
         await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
             serviceToken.trim(), responseWriterId.trim(),
-            'SSCS', 'Benefit',
+            'SSCS', 'Benefit-3921',
             pipCaseId.trim(), 'dwpUploadResponse', 'dwp');
 
         /*logger.info('The value of the response writer : '+credentials.amCaseWorker.email)
@@ -204,7 +204,7 @@ export class IssueDirectionsNotice extends BaseStep {
         let caseWorkerId: string = await accessId(credentials.amCaseWorker);
         await new Promise(f => setTimeout(f, 20000)); //Delay required for the Case to be ready
         await performEventOnCaseForActionFurtherEvidence(caseWorkerToken.trim(),
-            serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit',
+            serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit-3921',
             taxCreditCaseId.trim(), 'uploadDocumentFurtherEvidence');*/
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, pipCaseId);
@@ -246,7 +246,7 @@ export class IssueDirectionsNotice extends BaseStep {
         let responseWriterId: string = await accessId(credentials.dwpResponseWriter);
         await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
             serviceToken.trim(), responseWriterId.trim(),
-            'SSCS', 'Benefit',
+            'SSCS', 'Benefit-3921',
             pipCaseId.trim(), 'dwpUploadResponse', 'dwp');
 
         /*logger.info('The value of the response writer : '+credentials.amCaseWorker.email)
@@ -255,7 +255,7 @@ export class IssueDirectionsNotice extends BaseStep {
         let caseWorkerId: string = await accessId(credentials.amCaseWorker);
         await new Promise(f => setTimeout(f, 20000)); //Delay required for the Case to be ready
         await performEventOnCaseForActionFurtherEvidence(caseWorkerToken.trim(),
-            serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit',
+            serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit-3921',
             taxCreditCaseId.trim(), 'uploadDocumentFurtherEvidence');*/
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, pipCaseId);
