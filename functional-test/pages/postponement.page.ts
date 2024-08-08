@@ -93,8 +93,8 @@ export class PostponementPages {
         await webActions.clickButton("Continue");
     }
 
-    async submitBtn(): Promise<void> {
-        await webActions.clickButton("Submit");
+    async submitBtn(locator : string = 'Submit'): Promise<void> {
+        await webActions.clickButton(locator);
     }
 
     async confirmSubmission(): Promise<void> {

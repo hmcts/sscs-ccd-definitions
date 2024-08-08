@@ -30,5 +30,7 @@
     "reservedToJudgeInterlocInputValue" : "Reserved to Judge Interloc for Automation Testing - Postponement",
     "signedByInputValue" : "Signing Authority - Postponement",
     "signedRoleInputValue" : "Signed By Authority - Postponement",
-    "previewDocumentLabel" : "Preview Document"
+    "previewDocumentLabel" : "Preview Document",
+
+    "eventSummaryLabel" : "Event summary (optional)"
 }
