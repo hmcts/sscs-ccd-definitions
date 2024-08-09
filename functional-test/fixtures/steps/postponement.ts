@@ -65,20 +65,22 @@ export class Postponement extends BaseStep {
         await this.postponementPage.inputPostponementActionRequestPageData(grantRequest);
         await this.postponementPage.submitBtn();
         await this.postponementPage.verifyPageContentActionPostponementRequestDocumentPage();
-        await this.postponementPage.submitBtn('BUTTON[type="submit"]');
+        await this.postponementPage.submitBtn();
         await this.homePage.delay(2000);
 
         //Could not Verify the Event Name and Description Page as the Event Summary Page Label is defined Differently.
         //await this.eventNameAndDescriptionPage.verifyPageContent("Action Postponement Request", false)
-        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
-            eventTestData.eventDescriptionInput);
-        await this.eventNameAndDescriptionPage.submitBtn();
-        await this.homePage.delay(2000);
-
+        if(grantRequest != 'Send to Judge') {
+            await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+                eventTestData.eventDescriptionInput);
+            await this.eventNameAndDescriptionPage.submitBtn();
+            await this.homePage.delay(2000);
+        }
+        
         await this.homePage.navigateToTab("History");
         //await this.historyTab.verifyPageContentByKeyValue('End state', 'Hearing');
         await this.historyTab.verifyPageContentByKeyValue('Event', 'Action Postponement Request');
         await this.historyTab.verifyEventCompleted('Action Postponement Request');
-        await performAppealDormantOnCase(pipCaseId);
+        //await performAppealDormantOnCase(pipCaseId);
     }
 }
