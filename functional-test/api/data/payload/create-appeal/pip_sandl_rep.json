@@ -1,11 +1,11 @@
 {
   "benefitType": {
-    "description": "PIP",
+    "description": "Personal Independence Payment",
     "code": "PIP"
   },
   "mrn": {
     "dwpIssuingOffice": "DWP PIP (1)",
-    "date": "26-09-2022",
+    "date": "01-01-2021",
     "reasonForBeingLate": "Lost my paperwork"
   },
   "isAppointee": false,
@@ -41,7 +41,7 @@
       "addressLine2": "Off Hairy Park",
       "townCity": "Town",
       "county": "County",
-      "postCode": "CM14 4LQ",
+      "postCode": "CF24 0AD",
       "phoneNumber": "07411999999",
       "emailAddress": "harry.potter@wizards.com"
     }
@@ -64,20 +64,7 @@
     "otherReasons": "Another reason"
   },
   "hearing": {
-    "wantsToAttend": true,
-    "wantsSupport": false,
-    "anythingElse": "Yes, this...",
-    "interpreterLanguageType": "Danish",
-    "signLanguageType": "British",
-    "arrangements": {
-      "languageInterpreter": false,
-      "signLanguageInterpreter": false,
-      "hearingLoop": false,
-      "accessibleHearingRoom": false,
-      "other": false
-    },
-    "scheduleHearing": false,
-    "datesCantAttend": ["10-12-2099", "11-12-2099", "12-12-2099"]
+    "wantsToAttend": false
   },
   "signAndSubmit": {
     "signer": "Joe Bloggs"

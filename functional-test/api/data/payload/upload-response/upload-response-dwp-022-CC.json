@@ -3,7 +3,7 @@
     "mrnDetails": {
       "dwpIssuingOffice": "Child Support",
       "mrnDate": "2024-05-31",
-      "mrnLateReason": "Lost my paperwork",
+      "mrnLateReason": "Lost my papxerwork",
       "mrnMissingReason": null
     },
     "appellant": {
@@ -61,11 +61,10 @@
     "hearingOptions": {
       "wantsToAttend": "Yes",
       "wantsSupport": "Yes",
-      "languageInterpreter": "Yes",
-      "languages": "An interpreter language",
-      "signLanguageType": "A sign language",
+      "languageInterpreter": "No",
+      "languages": null,
+      "signLanguageType": null,
       "arrangements": [
-        "signLanguageInterpreter",
         "hearingLoop"
       ],
       "scheduleHearing": "Yes",
@@ -178,7 +177,7 @@
   },
   "dwpEditedEvidenceReason": null,
   "dwpUploadAudioVideoEvidence": [],
-  "benefitCode": "022",
+  "benefitCode": "002",
   "issueCode": "EC",
   "dwpFurtherInfo": "No",
   "dwpUCB": null,

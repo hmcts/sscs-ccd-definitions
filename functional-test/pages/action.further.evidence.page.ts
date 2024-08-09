@@ -1,5 +1,5 @@
-import {Page} from '@playwright/test';
-import {WebAction} from '../common/web.action';
+import { expect, Page } from '@playwright/test';
+import { WebAction } from '../common/web.action';
 
 let webActions: WebAction;
 
@@ -41,10 +41,12 @@ export class ActionFurtherEvidencePage {
         await webActions.inputField('#scannedDate-day', '21');
         await webActions.inputField('#scannedDate-month', '1');
         await webActions.inputField('#scannedDate-year', '2021');
+        await this.page.locator('#scannedDate').click();
+        await expect(this.page.locator('#scannedDate span.error-message')).toBeHidden();
     }
 
     async selectbundle() {
-        await webActions.clickElementById("#scannedDocuments_0_includeInBundle_Yes");
+        await webActions.clickElementById('label[for=\'scannedDocuments_0_includeInBundle_Yes\']');
     }
 
     async confirmSubmission(): Promise<void> {

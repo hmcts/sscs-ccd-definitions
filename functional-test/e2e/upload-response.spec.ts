@@ -4,7 +4,7 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 let caseId : string;
 
-test.describe('Upload response tests', {tag: '@pipeline'}, async() => {
+test.describe('Upload response tests', {tag: '@master-pipeline'}, async() => {
 
     test("As a caseworker review response submitted with any further info", async ({ uploadResponseSteps }) => {
         test.slow();
@@ -18,11 +18,12 @@ test.describe('Upload response tests', {tag: '@pipeline'}, async() => {
     
     test("As a caseworker review response submitted for an UC case", async({ uploadResponseSteps }) => {
         test.slow();
-        await uploadResponseSteps.performUploadResponseOnAUniversalCredit();
+        let ucCaseId = await createCaseBasedOnCaseType("UC");
+        await uploadResponseSteps.performUploadResponseOnAUniversalCredit(ucCaseId);
     });
 })
 
-test.describe('Upload response tests for PHE workflow', {tag: '@pipeline'}, async() => {
+test.describe('Upload response tests for PHE workflow', {tag: '@master-pipeline'}, async() => {
 
     test.beforeEach("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
@@ -37,7 +38,7 @@ test.describe('Upload response tests for PHE workflow', {tag: '@pipeline'}, asyn
     
 })
 
-test.describe('Upload response tests for UCB workflow', {tag: '@pipeline'}, async() => {
+test.describe('Upload response tests for UCB workflow', {tag: '@master-pipeline'}, async() => {
 
     test.beforeEach("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');

@@ -88,6 +88,12 @@ class DateUtilsComponent {
 
   static async getCurrentDay() {
     let currentTime = new Date();
+    let day = currentTime.getDay();
+    return day;
+  }
+
+  static async getCurrentDayDateTime() {
+    let currentTime = new Date();
     let month = currentTime.getMonth() + 1;
     let day = currentTime.getDate();
     let year = currentTime.getFullYear();
@@ -153,6 +159,22 @@ class DateUtilsComponent {
 
     return weekend;
   }
+
+  static addWeekdays(startDate: Date, days: number): Date {
+    let count = 0;
+    let currentDate = new Date(startDate);
+
+    while (count < days) {
+        currentDate.setDate(currentDate.getDate() + 1);
+        const dayOfWeek = currentDate.getDay();
+        if (dayOfWeek !== 0 && dayOfWeek !== 6) {
+            count++;
+        }
+    }
+
+    return currentDate;
+}
+
 
 }
 

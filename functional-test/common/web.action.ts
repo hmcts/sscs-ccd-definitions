@@ -36,6 +36,14 @@ export class WebAction {
             });
     }
 
+    async verifyTotalElements(elementLocator: string, eleCount: number) {
+        await expect(this.page.locator(elementLocator))
+            .toHaveCount(eleCount)
+            .catch((error) => {
+                logger.error(`Assertion failed due to: ${error}`);
+            });
+    }
+
     async verifyTextVisibility(labelText: string) {
         await expect(this.page.getByText(labelText))
             .toBeVisible()
@@ -121,6 +129,15 @@ export class WebAction {
          .click()
          .catch((error) => {
             logger.error(`Radio button element is not present: ${error}`);
+         });
+    }
+
+    async checkAnCheckBox(elementValue: string): Promise<void> {
+        await this.page
+         .getByLabel(elementValue)
+         .check()
+         .catch((error) => {
+            logger.error(`Button element is not present: ${error}`);
          });
     }
 
