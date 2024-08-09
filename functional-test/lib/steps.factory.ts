@@ -44,6 +44,7 @@ import { SearchFilter } from '../fixtures/steps/search.filter';
 import { Hearing } from '../fixtures/steps/hearing';
 import { ReissueFurtherEvidence } from '../fixtures/steps/reissue.further.evidence';
 import { PrepareCaseForHearing } from '../fixtures/steps/prepare.case.for.hearing';
+import { ReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/review.postponement.request.task'
 
 
 type MyStepsFixtures = {
@@ -91,6 +92,7 @@ type MyStepsFixtures = {
     hearingSteps: Hearing
     reissueFurtherEvidenceSteps: ReissueFurtherEvidence
     prepareCaseForHearingSteps: PrepareCaseForHearing
+    reviewPostponementRequestTaskSteps: ReviewPostponementRequestTask
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({

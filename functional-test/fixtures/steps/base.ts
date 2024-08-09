@@ -56,6 +56,7 @@ import { Hearings } from '../../pages/tabs/hearings';
 import { ListingRequirementPage } from '../../pages/listing.requirements.page';
 import { ReissueFurtherEvidencePage } from '../../pages/reissue.further.evidence.page';
 import { PrepareCaseForHearingPage } from '../../pages/prepare.case.for.hearing.page';
+import { PostponementRequestPage } from '../../pages/postponement.request.page'
 
 export abstract class BaseStep {
 
@@ -116,6 +117,7 @@ export abstract class BaseStep {
   protected listingRequirementPage: ListingRequirementPage
   protected reissueFurtherEvidencePage: ReissueFurtherEvidencePage;
   protected prepareCaseForHearingPage: PrepareCaseForHearingPage;
+  protected postponementRequestPage: PostponementRequestPage;
 
    constructor(page: Page) {
         this.page = page;
@@ -175,6 +177,7 @@ export abstract class BaseStep {
         this.listingRequirementPage = new ListingRequirementPage(this.page);
         this.reissueFurtherEvidencePage = new ReissueFurtherEvidencePage(this.page);
         this.prepareCaseForHearingPage = new PrepareCaseForHearingPage(this.page);
+        this.postponementRequestPage = new PostponementRequestPage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
