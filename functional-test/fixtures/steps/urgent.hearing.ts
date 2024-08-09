@@ -220,7 +220,7 @@ export class UrgentHearing extends BaseStep {
         await this.tasksTab.verifyManageOptions(task.name, task.assignedManageOptionsForSalariedJudge);
         await this.tasksTab.verifyNextStepsOptions(task.name, task.nextStepsOptions);
 
-        // Select Issue directions notice next step and complete the event
+        // Select Send casee to TCW next step and complete the event
         await this.tasksTab.clickNextStepLink(task.sendCaseToTcw.link);
 
         await this.sendCaseToTcwPage.verifyPageContent();

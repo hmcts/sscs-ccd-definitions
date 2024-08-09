@@ -20,6 +20,7 @@ import { RequestTimeExtension } from '../fixtures/steps/request.time.extension';
 import { CreateBundle } from '../fixtures/steps/create.bundle';
 import { UrgentHearing } from '../fixtures/steps/urgent.hearing';
 import { ReviewIncompleteAppealTask } from '../fixtures/steps/work-allocation/review.incomplete.appeal.task';
+import { ReviewNonCompliantAppealTask } from '../fixtures/steps/work-allocation/review.noncompliant.appeal.task';
 import { RequestInfoFromParty } from '../fixtures/steps/request.info.from.party';
 import { Reinstatement } from '../fixtures/steps/reinstatement';
 import { AppealDormant } from '../fixtures/steps/appeal.dormant';
@@ -58,6 +59,7 @@ type MyStepsFixtures = {
     reviewAdminActionTaskSteps: ReviewAdminActionTask
     reviewListingErrorTaskSteps: ReviewListingErrorTask
     reviewIncompleteAppealTaskSteps: ReviewIncompleteAppealTask
+    reviewNonCompliantAppealTaskSteps: ReviewNonCompliantAppealTask
     listingErrorSteps: ListingError
     uploadResponseSteps: UploadResponse
     sendToFTASteps: SendToFTA
@@ -135,6 +137,10 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     reviewIncompleteAppealTaskSteps:async ({ page }, use) => {
         const reviewIncompleteAppealTaskSteps = new ReviewIncompleteAppealTask(page);
         await use(reviewIncompleteAppealTaskSteps);
+    },
+    reviewNonCompliantAppealTaskSteps:async ({ page }, use) => {
+        const reviewNonCompliantAppealTaskSteps = new ReviewNonCompliantAppealTask(page);
+        await use(reviewNonCompliantAppealTaskSteps);
     },
     sendToJudgeSteps:async ({page}, use) => {
         const sendToJudgeSteps = new SendToJudge(page);

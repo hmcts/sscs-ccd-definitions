@@ -1,0 +1,51 @@
+{
+    "name": "Review Non Compliant Appeal - LO",
+    "priority": "low",
+    "assignedToWhenNotAssigned": "Unassigned",
+    "assignedTo": "SSCS cw",
+    "unassignedManageOptions" : [
+        "Assign to me"
+    ],
+    "assignedManageOptions" : [
+        "Reassign task",
+        "Unassign task"
+    ],
+    "unassignedManageOptionsForCaseAllocator": [
+            "Assign task",
+            "Cancel task",
+            "Assign to me"
+    ],
+    "assignedManageOptionsForCaseAllocator" : [
+        "Cancel task",
+        "Mark as done",
+        "Reassign task",
+        "Unassign task"
+    ],
+    "nextStepsOptions": [
+        "Isssue directions notice",
+        "Issue interlocutory decision",
+        "Send to admin",
+        "Send to Judge",
+        "Amend interloc review state"
+    ],
+    "issueDirectionsNotice": {
+        "link": "Issue directions notice",
+        "eventTitle": "Issue directions notice"
+    },
+    "issueInterlocutoryDecision": {
+        "link": "Issue interlocutory decision",
+        "eventTitle": "Issue interlocutory decision"
+    },
+    "sendToAdmin": {
+        "link": "Send to Admin",
+        "eventTitle": "Send to Admin"
+    },
+    "sendToJudge": {
+        "link": "Send to Judge",
+        "eventTitle": "Send to Judge"
+    },
+    "amendInterlocReviewState": {
+        "link": "Amend interloc review state",
+        "eventTitle": "Amend interloc review state"
+    }
+}
