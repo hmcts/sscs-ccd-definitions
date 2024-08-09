@@ -27,8 +27,7 @@ export class LinkCasePage {
     }
 
     async removeLink() {
-        await webAction.clickButton("Remove");
-        await webAction.clickButton("Remove");
+        await webAction.clickButton("//button[.='Remove']");
     }
 
     async verifyCaseCannotLinkToItself() {

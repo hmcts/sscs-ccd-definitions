@@ -96,9 +96,9 @@ export class WebAction {
 
     async clickButton(elementLocator: string): Promise<void> {
         await this.page.waitForLoadState('domcontentloaded');
-        await this.page.getByRole('button', { name: elementLocator}).waitFor(); 
+        await this.page.getByRole('button', { name: elementLocator}).waitFor();
         await this.page
-         .getByRole('button', { name: elementLocator})
+         .getByRole('button', { name: elementLocator, exact : true})
          .click({force: true})
          .catch((error) => {
             logger.error(`Button element is not present: ${error}`);

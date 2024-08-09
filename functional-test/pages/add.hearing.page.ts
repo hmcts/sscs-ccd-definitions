@@ -15,7 +15,7 @@ export class AddHearingPage {
         webActions = new WebAction(this.page);
     }
 
-    async submitHearing(): Promise<void> {
+    async submitHearing(hearingState : string = 'Hearing is Completed'): Promise<void> {
         await webActions.verifyPageLabel('h1.govuk-heading-l', 'Add hearing details');
         await webActions.clickButton('Add new');
         await webActions.inputField('#hearings_0_venue_name', 'Fox court');
@@ -57,7 +57,7 @@ export class AddHearingPage {
 
         
         await webActions.inputField('#hearings_0_versionNumber', '123');
-        await webActions.chooseOptionByLabel('#hearings_0_hearingStatus', 'Hearing is Completed');
+        await webActions.chooseOptionByLabel('#hearings_0_hearingStatus', hearingState);
 
         await webActions.inputField('#start-day', '20');
         await webActions.inputField('#start-month', '2');

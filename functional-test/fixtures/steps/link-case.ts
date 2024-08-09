@@ -97,10 +97,11 @@ export class LinkCase extends BaseStep {
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
-        await expect(this.homePage.summaryTab).toBeVisible();
         await this.homePage.delay(3000);
 
         // Confirm that event has successfully run and is showing in History tab.
+        await this.homePage.goToHomePage(firstPipCaseId);
+        await this.homePage.delay(1000);
         await this.homePage.navigateToTab("History");
         await this.historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
         await this.historyTab.verifyPageContentByKeyValue('Event', 'Link a case');

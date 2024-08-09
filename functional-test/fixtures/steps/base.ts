@@ -55,8 +55,10 @@ import { SearchFilterPage } from '../../pages/search.filter.page';
 import { Hearings } from '../../pages/tabs/hearings';
 import { ListingRequirementPage } from '../../pages/listing.requirements.page';
 import { ReissueFurtherEvidencePage } from '../../pages/reissue.further.evidence.page';
+import { PostponementPages } from "../../pages/postponement.page";
 import { PrepareCaseForHearingPage } from '../../pages/prepare.case.for.hearing.page';
 import { ReviewConfidentialityPage } from '../../pages/review.confidentiality.page'
+
 
 export abstract class BaseStep {
 
@@ -116,8 +118,10 @@ export abstract class BaseStep {
   protected hearingsTab: Hearings;
   protected listingRequirementPage: ListingRequirementPage
   protected reissueFurtherEvidencePage: ReissueFurtherEvidencePage;
+  protected postponementPage : PostponementPages;
   protected prepareCaseForHearingPage: PrepareCaseForHearingPage;
   protected reviewConfidentialityPage: ReviewConfidentialityPage;
+
 
    constructor(page: Page) {
         this.page = page;
@@ -176,6 +180,7 @@ export abstract class BaseStep {
         this.hearingsTab = new Hearings(this.page);
         this.listingRequirementPage = new ListingRequirementPage(this.page);
         this.reissueFurtherEvidencePage = new ReissueFurtherEvidencePage(this.page);
+        this.postponementPage = new PostponementPages(this.page);
         this.prepareCaseForHearingPage = new PrepareCaseForHearingPage(this.page);
         this.reviewConfidentialityPage = new ReviewConfidentialityPage(this.page);
    }
