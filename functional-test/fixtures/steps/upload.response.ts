@@ -98,6 +98,18 @@ export class UploadResponse extends BaseStep {
     }
 
 
+    async performUploadResponse(caseId: string, caseType: string) {
+
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, caseId);
+        if(caseType === 'dla') await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.dlaIssueCode, 'No', undefined, undefined, undefined);
+        if(caseType === 'pip') await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.pipIssueCode, 'No', undefined, undefined, undefined);
+        await this.checkYourAnswersPage.confirmSubmission();
+        await this.homePage.delay(3000);
+        await this.homePage.clickSignOut();
+        await this.homePage.delay(3000);
+    }
+
+
     async performUploadResponseWithoutFurtherInfoOnATaxCredit() {
 
         let taxCaseId = await createCaseBasedOnCaseType("TAX CREDIT");
@@ -120,9 +132,9 @@ export class UploadResponse extends BaseStep {
         // await performAppealDormantOnCase(taxCaseId);
     }
 
-    async performUploadResponseOnAUniversalCredit() {
+    async performUploadResponseOnAUniversalCredit(ucCaseId: string) {
 
-        let ucCaseId = await createCaseBasedOnCaseType("UC");
+        // let ucCaseId = await createCaseBasedOnCaseType("UC");
         await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, ucCaseId);
 
         await this.homePage.chooseEvent('Upload response');
@@ -152,6 +164,52 @@ export class UploadResponse extends BaseStep {
         await this.homePage.clickSignOut();
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, ucCaseId);
+        await this.homePage.delay(1000);
+        await this.homePage.navigateToTab("History");
+
+        for (const linkName of this.presetLinks) {
+            await this.verifyHistoryTabLink(linkName);
+        }
+        await this.homePage.navigateToTab("Summary");
+        await this.summaryTab.verifyPresenceOfText("Ready to list");
+        // await performAppealDormantOnCase(ucCaseId);
+
+    }
+
+
+    async performUploadResponseOnAUniversalCreditWithJP(ucCaseId: string) {
+
+        // let ucCaseId = await createCaseBasedOnCaseType("UC");
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, ucCaseId);
+
+        await this.homePage.chooseEvent('Upload response');
+        await this.homePage.delay(4000);
+        await this.uploadResponsePage.verifyPageContent();
+        await this.uploadResponsePage.uploadDocs();
+        await this.uploadResponsePage.chooseAssistOption('No');
+        await this.uploadResponsePage.continueSubmission();
+
+        await this.uploadResponsePage.selectElementDisputed('childElement');
+        await this.uploadResponsePage.continueSubmission();
+
+        await this.uploadResponsePage.clickAddNewButton();
+        await this.uploadResponsePage.selectUcIssueCode(uploadResponseTestdata.ucIssueCode);
+        await this.homePage.delay(2000);
+        await this.uploadResponsePage.continueSubmission();
+
+        await this.uploadResponsePage.chooseDisputeOption(uploadResponseTestdata.ucDisputeOption);
+        await this.homePage.delay(2000);
+        await this.uploadResponsePage.continueSubmission();
+
+        await this.uploadResponsePage.isJPOnTheCase(uploadResponseTestdata.ucJointPartyOnCase_Yes);
+        await this.uploadResponsePage.continueSubmission();
+        await this.uploadResponsePage.enterJPDetails();
+        await this.checkYourAnswersPage.confirmSubmission();
+
+        await this.homePage.clickSignOut();
+
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, ucCaseId);
+        await this.homePage.reloadPage();
         await this.homePage.delay(1000);
         await this.homePage.navigateToTab("History");
 
@@ -290,6 +348,17 @@ export class UploadResponse extends BaseStep {
         // As DWP caseworker upload response with further info
         await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, caseId);
         await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.pipIssueCode, 'Yes');
+
+        await this.checkYourAnswersPage.verifyCYAPageContent("Upload response",
+            uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
+        await this.checkYourAnswersPage.confirmSubmission();
+    }
+
+    async uploadResponseWithoutFurtherInfoAsDwpCaseWorker(caseId: string) {
+
+        // As DWP caseworker upload response with further info
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, caseId);
+        await this.stepsHelper.uploadResponseHelper(uploadResponseTestdata.pipIssueCode, 'No');
 
         await this.checkYourAnswersPage.verifyCYAPageContent("Upload response",
             uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
