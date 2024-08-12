@@ -7,9 +7,9 @@
     "name": "Review FTA validity challenge - LO",
     "priority": "low",
     "assignedToWhenNotAssigned": "Unassigned",
-    "assignedTo": "SSCS ctscadmin",
+    "assignedTo": "SSCS cw",
     "unassignedManageOptions": [
-        "Assign task"
+        "Assign to me"
     ],
     "assignedManageOptions": [
         "Reassign task",
@@ -32,9 +32,5 @@
         "Issue directions notice",
         "Send to admin",
         "Send to Judge"
-    ],
-    "requestInformationFromParty": {
-        "link": "Request Information From Party",
-        "eventTitle": "Request information"
-    }
+    ]
 }
