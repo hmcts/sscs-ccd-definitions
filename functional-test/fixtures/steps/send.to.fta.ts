@@ -24,7 +24,7 @@ export class SendToFTA extends BaseStep {
         await new Promise(f => setTimeout(f, 3000)); //Delay required for the Case to be ready
         await performEventOnCaseWithUploadResponse(ftaResponseWriterBearerToken.trim(),
             serviceToken.trim(), ftaResponseWriter.trim(),
-            'SSCS','Benefit',
+            'SSCS','Benefit-3921',
             caseId.trim(),'dwpUploadResponse','dwp');
 
         await this.loginUserWithCaseId(credentials.amSuperUser, false, caseId);
