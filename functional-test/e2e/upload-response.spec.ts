@@ -52,7 +52,7 @@ test.describe('Upload response tests for UCB workflow', {tag: '@pipeline'}, asyn
 })
 
 
-test.describe.serial('Error scenarios', {tag: '@pipeline'}, async () => {
+test.describe.serial('Error scenarios', async () => {
 
     test("Verify Upload response error scenario", async({ uploadResponseSteps }) => {
         test.slow();
