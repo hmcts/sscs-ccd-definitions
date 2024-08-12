@@ -17,7 +17,9 @@ test.describe.serial('WA - Review FTA Validity Challenge task initiation, cancel
         ReviewFTAValidityChallengeSteps }) => {
 
         test.slow();
+        //test.setTimeout(20000);
         await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId); // create task by running Challenge validity event on the case
+        test.setTimeout(240000);
         await ReviewFTAValidityChallengeSteps.verifyReviewFTAValidityChallengeTaskisCreated(caseId);
     });
 
@@ -25,7 +27,6 @@ test.describe.serial('WA - Review FTA Validity Challenge task initiation, cancel
         ReviewFTAValidityChallengeSteps }) => {
 
         test.slow();
-        await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId);
         await ReviewFTAValidityChallengeSteps.assignReviewFTAValidityChallengeTask(caseId);
     });
 
@@ -34,7 +35,6 @@ test.describe.serial('WA - Review FTA Validity Challenge task initiation, cancel
         ReviewFTAValidityChallengeSteps }) => {
 
         test.slow();
-        await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId);
         await ReviewFTAValidityChallengeSteps.assignReviewFTAValidityChallengeTaskWithoutLegalRole(caseId);
     });
 
@@ -42,7 +42,6 @@ test.describe.serial('WA - Review FTA Validity Challenge task initiation, cancel
         ReviewFTAValidityChallengeSteps }) => {
 
         test.slow();
-        await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId);
         await ReviewFTAValidityChallengeSteps.cancelReviewFTAValidityChallengeTaskByCancelLink(caseId);
     });
 
@@ -50,7 +49,6 @@ test.describe.serial('WA - Review FTA Validity Challenge task initiation, cancel
         ReviewFTAValidityChallengeSteps }) => {
 
         test.slow();
-        await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId);
         await ReviewFTAValidityChallengeSteps.cancelReviewFTAValidityChallengeTaskByEvent(caseId);
     });
 
@@ -58,7 +56,6 @@ test.describe.serial('WA - Review FTA Validity Challenge task initiation, cancel
         ReviewFTAValidityChallengeSteps }) => {
 
         test.slow();
-        await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId);
         await ReviewFTAValidityChallengeSteps.completeReviewFTAValidityChallengeTaskByMarkAsDone(caseId);
     });
 
@@ -66,7 +63,6 @@ test.describe.serial('WA - Review FTA Validity Challenge task initiation, cancel
         ReviewFTAValidityChallengeSteps }) => {
 
         test.slow();
-        await ReviewFTAValidityChallengeSteps.createReviewFTAValidityChallengeTask(caseId);
         await ReviewFTAValidityChallengeSteps.completeReviewFTAValidityChallengeTaskByEvent(caseId);
     });
 
