@@ -128,6 +128,10 @@ export class HomePage {
         }
     }
 
+    async finishLoadingThePage() {
+        await expect(this.page.locator('.spinner-container')).toBeDisabled({timeout:4000});
+    }
+
     async navigateToTab(tabName : string): Promise<void> {
         switch(tabName) {
             case "Notepad": {
