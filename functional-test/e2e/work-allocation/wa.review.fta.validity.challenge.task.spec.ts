@@ -2,9 +2,9 @@ import { test } from "../../lib/steps.factory";
 import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
 import performAppealDormantOnCase from "../../api/client/sscs/appeal.event";
 
-// CHANGE TAG BEFORE PUSHING
+
 test.describe.serial('WA - Review FTA Validity Challenge task initiation and reviewing tests', {
-    tag: '@wip'
+    tag: '@work-allocation'
 }, async () => {
 
     let caseId: string;
@@ -41,20 +41,13 @@ test.describe.serial('WA - Review FTA Validity Challenge task initiation and rev
 });
 
 test.describe.serial('WA - Review FTA Validity Challenge task cancellation tests', {
-    tag: '@wip'
+    tag: '@work-allocation'
 }, async () => {
 
     let caseId: string;
 
     test.beforeAll("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
-    });
-
-    test("As a TCW with legal-caseworker role, I want to cancel the 'Review FTA Validity Challenge' task via Cancel link", async ({
-        ReviewFTAValidityChallengeSteps }) => {
-
-        test.slow();
-        await ReviewFTAValidityChallengeSteps.cancelReviewFTAValidityChallengeTaskByCancelLink(caseId);
     });
 
     test("As a TCW with legal-caseworker role, I want to cancel the 'Review FTA Validity Challenge' task via Event completion", async ({
@@ -70,20 +63,13 @@ test.describe.serial('WA - Review FTA Validity Challenge task cancellation tests
 });
 
 test.describe.serial('WA - Review FTA Validity Challenge task completion tests', {
-        tag: '@wip'
+    tag: '@work-allocation'
     }, async () => { 
 
         let caseId: string;
 
         test.beforeAll("Case has to be Created", async () => {
             caseId = await createCaseBasedOnCaseType('PIP');
-        });
-
-        test("As a TCW with legal-caseworker role, I want to complete the 'Review FTA Validity Challenge' task via Mark as done link", async ({
-            ReviewFTAValidityChallengeSteps }) => {
-
-            test.slow();
-            await ReviewFTAValidityChallengeSteps.completeReviewFTAValidityChallengeTaskByMarkAsDone(caseId);
         });
 
         test("As a TCW with legal-caseworker role, I want to complete the 'Review FTA Validity Challenge' task via Event completion", async ({

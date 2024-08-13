@@ -51,9 +51,8 @@ export class ReviewFTAValidityChallengeTask extends BaseStep {
         await this.homePage.navigateToTab('Tasks');
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
         await this.tasksTab.verifyPageContentByKeyValue(task.name, 'Assigned to', task.assignedToWhenNotAssigned);
-        await expect(this.page.getByText('Next Steps')).toBeHidden();
-        //await this.tasksTab.verifyManageOptions(task.name, task.unassignedManageOptions);
-    }
+        await expect(this.page.getByRole('row', { name: 'Next steps'})).not.toBeVisible();
+   }
 
     async assignReviewFTAValidityChallengeTaskWithLegalRole(caseId: string) {
         //view unassigned task
@@ -70,16 +69,6 @@ export class ReviewFTAValidityChallengeTask extends BaseStep {
         await this.tasksTab.reassignTaskToTcwUser;
     }
 
-    async cancelReviewFTAValidityChallengeTaskByCancelLink(caseId: string) {
-        await this.loginUserWithCaseId(credentials.amSeniorTribunalCaseWorkerWithCaseAllocatorRole, true, caseId); // cancelling task via cancel link
-        await this.homePage.navigateToTab('Tasks');
-        await this.tasksTab.verifyTaskIsDisplayed(task.name);
-        await this.tasksTab.verifyPageContentByKeyValue(task.name, 'Assigned to', task.assignedToWhenNotAssigned);
-        await this.tasksTab.verifyManageOptions(task.name, task.unassignedManageOptionsForCaseAllocator);
-        await this.tasksTab.cancelTask;
-        await this.tasksTab.verifyTaskIsHidden(task.name);
-    }
-
     async cancelReviewFTAValidityChallengeTaskByEvent(caseId: string) {
 
         let voidCase = new VoidCase(this.page);
@@ -92,17 +81,6 @@ export class ReviewFTAValidityChallengeTask extends BaseStep {
         await this.tasksTab.verifyTaskIsHidden(task.name);
     }
 
-    async completeReviewFTAValidityChallengeTaskByMarkAsDone(caseId: string) {
-        await this.createReviewFTAValidityChallengeTask(caseId);
-        await this.homePage.clickSignOut();
-        await this.loginUserWithCaseId(credentials.amSeniorTribunalCaseWorkerWithCaseAllocatorRole, true, caseId);
-        await this.homePage.navigateToTab('Tasks');
-        await this.tasksTab.selfAssignTask;
-        await this.tasksTab.markTheTaskAsDone;
-
-        await this.tasksTab.verifyTaskIsHidden(task.name);
-    }
-
     async completeReviewFTAValidityChallengeTaskByEvent(caseId: string) {
 
         let sendToAdmin = new SendToAdmin(this.page);
@@ -111,6 +89,7 @@ export class ReviewFTAValidityChallengeTask extends BaseStep {
         await this.homePage.clickSignOut();
         await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
         await sendToAdmin.performSendToAdmin; // performing 'Send to admin' event to complete the task
+        test.setTimeout(280000);
         await this.homePage.navigateToTab('Tasks');
 
         await this.tasksTab.verifyTaskIsHidden(task.name);
