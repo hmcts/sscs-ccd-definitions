@@ -6,5 +6,15 @@
 
     "appealNotepad" : "Appeal notepad",
     "enterNoteOptionalLabel" : "Enter note (Optional)",
-    "appealNotepadInput" : "Send to interloc - pre-valid notepad input - Automation"
+    "appealNotepadInput" : "Send to interloc - pre-valid notepad input - Automation",
+
+    "sendToInterlocHeading" : "Send to interloc",
+
+    "sendToInterlocPrePostHearingFieldLabel" : "Pre or post hearing?",
+    "sendToInterlocCaseReviewFieldLabel" : "Select who should review this case",
+    "sendToInterlocReasonReferredFieldLabel" : "Reason referred to interloc",
+
+    "sendToInterlocHearingSelectValue": "Pre Hearing",
+    "sendToInterlocCaseReviewSelectValue": "Review by TCW",
+    "sendToInterlocReasonReferredValue": "Advice on how to proceed"
 }

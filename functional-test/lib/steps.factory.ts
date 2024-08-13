@@ -46,8 +46,8 @@ import { Hearing } from '../fixtures/steps/hearing';
 import { PrepareCaseForHearing } from '../fixtures/steps/prepare.case.for.hearing';
 import { EnhancedConfidentiality } from '../fixtures/steps/enhanced.confidentiality';
 import { use } from "chai";
-
-
+import { SendToInterloc } from '../fixtures/steps/send.to.interloc';
+import { ReferredByAdmin } from '../fixtures/steps/referred.by.admin';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -96,6 +96,8 @@ type MyStepsFixtures = {
     postponementSteps: Postponement
     prepareCaseForHearingSteps: PrepareCaseForHearing
     enhancedConfidentialitySteps: EnhancedConfidentiality
+    sendToInterlocSteps: SendToInterloc
+    referredByAdminSteps: ReferredByAdmin
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -267,12 +269,10 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
         const reissueFurtherEvidenceSteps = new ReissueFurtherEvidence(page);
         await use(reissueFurtherEvidenceSteps);
     },
-
     postponementSteps: async ({page}, use) => {
         const postponementSteps = new Postponement(page);
         await use(postponementSteps);
     },
-
     hearingSteps: async ({ page }, use) => {
         const hearingSteps = new Hearing(page);
         await use(hearingSteps);
@@ -284,5 +284,13 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     enhancedConfidentialitySteps: async ({ page }, use) => {
         const enhancedConfidentialitySteps = new EnhancedConfidentiality(page);
         await use(enhancedConfidentialitySteps);
+    },
+    sendToInterlocSteps:async ({page}, use) => {
+        const sendToInterlocSteps = new SendToInterloc(page);
+        await use(sendToInterlocSteps);
+    },
+    referredByAdminSteps:async ({page}, use) => {
+        const ReferredByAdminSteps = new ReferredByAdmin(page);
+        await use(ReferredByAdminSteps);
     }
 })
