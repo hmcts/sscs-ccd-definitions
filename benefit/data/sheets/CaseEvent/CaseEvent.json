@@ -630,6 +630,7 @@
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_TRIBUNALS_API_URL}/ccdAboutToSubmit",
     "ShowSummary": "Y",
     "ShowEventNotes": "N"
   },
@@ -3200,6 +3201,16 @@
     "ID": "dwpCaseMigration",
     "Name": "Migrate case for DWP",
     "DisplayOrder": 10005,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public"
+  },
+  {
+    "LiveFrom": "17/05/2024",
+    "CaseTypeID": "Benefit",
+    "ID": "caseManagementLocationMigration",
+    "Name": "Migrate case for CML",
+    "DisplayOrder": 10006,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public"
