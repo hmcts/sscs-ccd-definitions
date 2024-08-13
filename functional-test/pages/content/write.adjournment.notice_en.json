@@ -1,0 +1,87 @@
+{
+    "writeAdjournmentNoticeEventNameCaptor": "Write adjournment notice",
+    "uploadOrGenerateANoticeEventNamePageHeading": "Upload or generate a notice",
+    "generateNoticeLabel": "Generate notice?",
+    "yesLabel" : "Yes",
+    "noLabel" : "No",
+
+    "arePanelMembersExcludedEventNamePageHeading": "Are panel members excluded?",
+    "arePanelMembersExcludedLabel": "Are panel members excluded?",
+    "reservedLabel" : "Reserved",
+
+    "allowedRefusedPageHeading": "Allowed or refused",
+    "isTheAppealLabel" : "Is the appeal allowed or refused?",
+    "allowedLabel" : "Allowed",
+    "refusedLabel" : "Refused",
+
+    "panelMembersPageHeading": "Panel members",
+    "nameOfDisabilityQualifiedPanelMemberDQPMLabel":"Name of the Disability Qualified Panel Member (DQPM) (Optional)",
+    "nameOfMedicallyQualifiedPanelMemberMQPMLabel" : "Name of the Medically Qualified Panel Member (MQPM) (Optional)",
+    "nameOfDisabilityQualifiedPanelMemberDQPMWithoutOptionalLabel":"Name of the Disability Qualified Panel Member (DQPM)",
+    "nameOfMedicallyQualifiedPanelMemberMQPMWithoutOptionalLabel" : "Name of the Medically Qualified Panel Member (MQPM)",
+    "otherLabel": "Other (Optional)",
+    "otherWithoutOptionalLabel": "Other",
+    "nameOfDisabilityQualifiedPanelMemberInput" : "Panel Member - Judge",
+    "nameOfMedicallyQualifiedPanelMemberInput" : "Panel Member - Doctor",
+    "otherPanelMemberInput" : "Panel Member - Clerk",
+
+    "typeOfHearingPageHeading": "Type of hearing",
+    "whatTypeOfHearingWasHeld" : "What type of hearing was held?",
+    "faceToFaceLabel" : "Face to face",
+    "telephoneLabel" : "Telephone",
+    "videoLabel" : "Video",
+    "paperLabel" : "Paper",
+
+    "canThisCaseBeListedRightAwayPageHeading": "Can case be listed right away?",
+    "canThisCaseBeListedRightAwayLabel": "Can case be listed right away?",
+
+    "areYouMakingDirectionsToPartiesPageHeading" : "Are you making directions to the parties?",
+    "areYouMakingDirectionsToPartiesLabel" : "Are you making directions to the parties?",
+
+    "nextHearingFormatPageHeading": "Next hearing format",
+    "confirmTheFormatOfTheNextHearingLabel" : "Confirm the format of the next hearing",
+
+    "tribunalDirectPOToAttendPageHeading": "Tribunal Direct PO to Attend",
+    "tribunalDirectPOToAttendLabel" : "Tribunal direct PO to attend? (Optional)",
+
+    "nextHearingVenuePageHeading": "Next hearing venue",
+    "whereShouldNextHearingBeListedLabel" : "Where should the next hearing be listed?",
+    "somewhereElseLabel" : "Somewhere else",
+    "sameVenueLabel" : "Same venue",
+    "specifyTheVenue" : "Specify the venue",
+
+    "howLongShouldTheNextHearingBeListedForPageHeading": "How long should the next hearing be listed for?",
+    "howLongShouldTheNextHearingBeListedForLabel" : "How long should the next hearing be listed for?",
+    "nonStandardTimeSlotLabel" : "Non standard time slot",
+    "standardTimeSlotLabel" : "Standard time slot",
+    "durationLengthLabel" : "Duration length",
+    "minutesOrSessionsLabel" : "Minutes or sessions",
+    "durationLengthInput" : "1",
+    "minutesOrSessionsInput" : "Session(s)",
+
+
+    "directionsDueDatePageHeading" : "Directions due date",
+    "directionsDueDateLabel" : "Directions due date",
+    "28DaysLabel" : "28 days",
+    "21DaysLabel" : "21 days",
+    "14DaysLabel" : "14 days",
+
+
+    "languageInterpreterPageHeading": "Language interpreter",
+    "isAnInterpreterRequiredForHearingLabel" : "Is an interpreter required for the hearing? (Optional)",
+    "whatLanguageDoTheyNeedToSpeakLabel" : "What language do they need to speak? (Optional)",
+
+    "whenShouldNextHearingBePageHeading": "When should the next hearing be?",
+    "whenShouldNextHearingBeLabel": "When should the next hearing be?",
+    "dateToBeFixedLabel" : "Date to be fixed",
+    "firstAvailableDateAfterLabel" : "First available date after",
+    "firstAvailableDateLabel" : "First available date",
+    "listFirstOnTheSessionLabel" : "List first on the session",
+    "provideTimeLabel" : "Provide time (Optional)",
+    "PMLabel" : "PM",
+    "AMLabel" : "AM",
+
+    "previewAdjournmentPageHeading" : "Preview Adjournment",
+    "previewAdjournmentLabel" : "Preview Adjournment",
+    "allDocumentsMustBePDFFormatted" : "All documents must be PDF formatted"
+}

@@ -45,6 +45,7 @@ import { Hearing } from '../fixtures/steps/hearing';
 import { ReissueFurtherEvidence } from '../fixtures/steps/reissue.further.evidence';
 import { PrepareCaseForHearing } from '../fixtures/steps/prepare.case.for.hearing';
 import { EnhancedConfidentiality } from '../fixtures/steps/enhanced.confidentiality';
+import {WriteAndIssueAdjournmentNotice} from "../fixtures/steps/write.issue.adjourment.notice";
 
 
 type MyStepsFixtures = {
@@ -93,6 +94,7 @@ type MyStepsFixtures = {
     reissueFurtherEvidenceSteps: ReissueFurtherEvidence
     prepareCaseForHearingSteps: PrepareCaseForHearing
     enhancedConfidentialitySteps: EnhancedConfidentiality
+    writeAndIssueAdjournmentNoticeSteps: WriteAndIssueAdjournmentNotice
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -275,5 +277,9 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     enhancedConfidentialitySteps: async ({ page }, use) => {
         const enhancedConfidentialitySteps = new EnhancedConfidentiality(page);
         await use(enhancedConfidentialitySteps);
+    },
+    writeAndIssueAdjournmentNoticeSteps: async ({ page }, use) => {
+        const writeAndIssueAdjournmentNoticeSteps = new WriteAndIssueAdjournmentNotice(page);
+        await use(writeAndIssueAdjournmentNoticeSteps);
     }
 })
