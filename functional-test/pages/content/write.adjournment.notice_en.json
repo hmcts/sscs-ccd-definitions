@@ -43,12 +43,14 @@
 
     "tribunalDirectPOToAttendPageHeading": "Tribunal Direct PO to Attend",
     "tribunalDirectPOToAttendLabel" : "Tribunal direct PO to attend? (Optional)",
+    "tribunalDirectPOToAttendWithoutOptionalLabel" : "Tribunal direct PO to attend?",
 
     "nextHearingVenuePageHeading": "Next hearing venue",
     "whereShouldNextHearingBeListedLabel" : "Where should the next hearing be listed?",
     "somewhereElseLabel" : "Somewhere else",
     "sameVenueLabel" : "Same venue",
     "specifyTheVenue" : "Specify the venue",
+    "hearingVenueSelectedInput" : "Cardiff Civil Justice Centre, 2 Park Street, Cardiff, South Wales, CF10 1ET",
 
     "howLongShouldTheNextHearingBeListedForPageHeading": "How long should the next hearing be listed for?",
     "howLongShouldTheNextHearingBeListedForLabel" : "How long should the next hearing be listed for?",
@@ -59,17 +61,17 @@
     "durationLengthInput" : "1",
     "minutesOrSessionsInput" : "Session(s)",
 
+    "languageInterpreterPageHeading": "Language interpreter",
+    "isAnInterpreterRequiredForHearingLabel" : "Is an interpreter required for the hearing? (Optional)",
+    "isAnInterpreterRequiredForHearingWithoutOptionalLabel" : "Is an interpreter required for the hearing?",
+    "whatLanguageDoTheyNeedToSpeakLabel" : "What language do they need to speak? (Optional)",
+    "whatLanguageDoTheyNeedToSpeakWithoutOptionalLabel" : "What language do they need to speak?",
+    "languageOptionInput" : "Telugu",
 
     "directionsDueDatePageHeading" : "Directions due date",
     "directionsDueDateLabel" : "Directions due date",
-    "28DaysLabel" : "28 days",
     "21DaysLabel" : "21 days",
     "14DaysLabel" : "14 days",
-
-
-    "languageInterpreterPageHeading": "Language interpreter",
-    "isAnInterpreterRequiredForHearingLabel" : "Is an interpreter required for the hearing? (Optional)",
-    "whatLanguageDoTheyNeedToSpeakLabel" : "What language do they need to speak? (Optional)",
 
     "whenShouldNextHearingBePageHeading": "When should the next hearing be?",
     "whenShouldNextHearingBeLabel": "When should the next hearing be?",
@@ -78,10 +80,31 @@
     "firstAvailableDateLabel" : "First available date",
     "listFirstOnTheSessionLabel" : "List first on the session",
     "provideTimeLabel" : "Provide time (Optional)",
+    "provideDateOrPeriodLabel" : "Provide date or period?",
+    "providePeriodLabel" : "Provide period",
+    "provideDateLabel" : "Provide date",
+    "dayLabel" : "Day",
+    "monthLabel" : "Month",
+    "yearLabel" : "Year",
     "PMLabel" : "PM",
     "AMLabel" : "AM",
+    "90DaysLabel" : "90 days",
+    "42DaysLabel" : "42 days",
+    "28DaysLabel" : "28 days",
+
+    "reasonsForAdjournmentPageHeading" : "Reasons for adjournment",
+    "reasonsForAdjournmentLabel" : "Reasons for adjournment",
+    "reasonsForAdjournmentInput" : "Reasons for adjournment - Automation Testing",
+
+    "additionalDirectionsPageHeading" : "Additional directions",
+    "additionalDirectionsLabel" : "Additional directions",
+    "additionalDirectionsInput" : "Additional directions - Automation Testing",
 
     "previewAdjournmentPageHeading" : "Preview Adjournment",
     "previewAdjournmentLabel" : "Preview Adjournment",
-    "allDocumentsMustBePDFFormatted" : "All documents must be PDF formatted"
+    "allDocumentsMustBePDFFormatted" : "All documents must be PDF formatted",
+
+    "checkYourAnswersPageHeading" : "Write adjournment notice",
+    "checkYourAnswersSectionHeading" : "Check your answers",
+    "checkTheInformationBelowCarefullyLabel" : "Check the information below carefully."
 }

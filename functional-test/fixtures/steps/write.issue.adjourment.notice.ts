@@ -89,8 +89,30 @@ export class WriteAndIssueAdjournmentNotice extends BaseStep {
         await this.writeAndIssueAdjournmentNotificationPage.submitContinueBtn();
         await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
 
+        await this.writeAndIssueAdjournmentNotificationPage.verifyLanguageInterpreterPage();
+        await this.writeAndIssueAdjournmentNotificationPage.inputLanguageInterpreterPageData();
+        await this.writeAndIssueAdjournmentNotificationPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
 
+        await this.writeAndIssueAdjournmentNotificationPage.verifyWhenShouldNextHearingBePage();
+        await this.writeAndIssueAdjournmentNotificationPage.inputWhenShouldNextHearingBePageData();
+        await this.writeAndIssueAdjournmentNotificationPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
 
+        await this.writeAndIssueAdjournmentNotificationPage.verifyReasonForAdjustmentPage();
+        await this.writeAndIssueAdjournmentNotificationPage.inputReasonForAdjustmentPageData();
+        await this.writeAndIssueAdjournmentNotificationPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
 
+        await this.writeAndIssueAdjournmentNotificationPage.verifyAdditionalDirectionsPage();
+        await this.writeAndIssueAdjournmentNotificationPage.inputAdditionalDirectionsPageData();
+        await this.writeAndIssueAdjournmentNotificationPage.submitContinueBtn();
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+
+        await this.writeAndIssueAdjournmentNotificationPage.verifyPreviewDocumentPage();
+        await this.writeAndIssueAdjournmentNotificationPage.submitContinueBtn();
+
+        //Check Your Answers Page
+        await this.writeAndIssueAdjournmentNotificationPage.verifyPageContentForCheckYourAnswersPage();
     }
 }
