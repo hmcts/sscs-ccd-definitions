@@ -294,5 +294,9 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     referredByAdminSteps:async ({page}, use) => {
         const ReferredByAdminSteps = new ReferredByAdmin(page);
         await use(ReferredByAdminSteps);
+    },
+    reviewPostponementRequestTaskSteps: async ({ page }, use) => {
+        const ReviewPostponementRequestTaskSteps = new ReviewPostponementRequestTask(page);
+        await use(ReviewPostponementRequestTaskSteps);
     }
 })
