@@ -39,6 +39,14 @@ import { Hearing } from '../fixtures/steps/hearing';
 import { PrepareCaseForHearing } from '../fixtures/steps/prepare.case.for.hearing';
 import { EnhancedConfidentiality } from '../fixtures/steps/enhanced.confidentiality';
 import { use } from "chai";
+import {AccessibilitySteps} from "../fixtures/steps/accessibilitySteps";
+import {AssociateCase} from "../fixtures/steps/associate-case";
+import {EvidenceReminder} from "../fixtures/steps/evidence.reminder";
+import {InformationReceived} from "../fixtures/steps/information.received";
+import {SendToAdmin} from "../fixtures/steps/send.to.admin";
+import {ReviewAdminActionTask} from "../fixtures/steps/work-allocation/review.admin.action.task";
+import {SendToJudge} from "../fixtures/steps/send.to.judge";
+import {UploadResponse} from "../fixtures/steps/upload.response";
 
 
 
@@ -89,6 +97,7 @@ type MyStepsFixtures = {
     postponementSteps: Postponement
     prepareCaseForHearingSteps: PrepareCaseForHearing
     enhancedConfidentialitySteps: EnhancedConfidentiality
+    accessibilitySteps: AccessibilitySteps
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -277,5 +286,9 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     enhancedConfidentialitySteps: async ({ page }, use) => {
         const enhancedConfidentialitySteps = new EnhancedConfidentiality(page);
         await use(enhancedConfidentialitySteps);
+    },
+    accessibilitySteps: async ({ page }, use) => {
+        const accessibilitySteps = new AccessibilitySteps(page);
+        await use(accessibilitySteps);
     }
 })
