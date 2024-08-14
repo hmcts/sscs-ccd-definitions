@@ -308,9 +308,8 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     referredByJudgeSteps:async ({page}, use) => {
         const ReferredByJudgeSteps = new ReferredByJudge(page);
         await use(ReferredByJudgeSteps);
-
     },
     accessibilitySteps: async ({ page }, use) => {
         const accessibilitySteps = new AccessibilitySteps(page);
         await use(accessibilitySteps);
-})
+}
