@@ -312,4 +312,5 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     accessibilitySteps: async ({ page }, use) => {
         const accessibilitySteps = new AccessibilitySteps(page);
         await use(accessibilitySteps);
-}
+    }
+})
