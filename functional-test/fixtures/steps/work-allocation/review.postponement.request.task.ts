@@ -32,7 +32,6 @@ export class ReviewPostponementRequestTask extends BaseStep {
         await this.homePage.delay(3000);
         await this.homePage.chooseEvent('Hearing booked');
         await this.hearingBookedPage.submitHearingBooked();
-        //await this.homePage.clickSignOut();
 
         // Postponement Request
         await this.homePage.delay(2000);
@@ -58,7 +57,7 @@ export class ReviewPostponementRequestTask extends BaseStep {
         await this.homePage.clickSignOut();
     }
   
-    async checkPostponementRequestTaskManageOptions(caseId: string) { 
+    async checkPostponementRequestTaskManageOptions(caseId: string) {
         // verify if task is created
         await this.loginUserWithCaseId(credentials.amTribunalCaseWorker, false, caseId);
         test.setTimeout(850000);
@@ -90,65 +89,69 @@ export class ReviewPostponementRequestTask extends BaseStep {
         await this.tasksTab.verifyManageOptions(task.name, task.assignedManageOptions);
         await this.tasksTab.verifyNextStepsOptions(task.name, task.nextStepsOptionsTCW);
         await this.tasksTab.reassignTaskToTcwUser;
-     }
-
-    async cancelByEventReviewPostponementTask(caseId: string) { 
-
-        let voidCase = new VoidCase(this.page);
-
-        await this.createPostponementRequestTask(caseId);
-        //await this.homePage.clickSignOut();
-        //await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
-        await voidCase.performVoidCase; // performing 'Void case' event to cancel the task
-        await this.homePage.delay(8000);
-        await this.tasksTab.verifyTaskIsHidden(task.name);
-    }
-
-    async completeByEventReviewPostponementTask(caseId: string, grantRequest: string = 'Grant Postponement') { 
-
-        let sendToAdmin = new SendToAdmin(this.page);
-
-        await this.createPostponementRequestTask(caseId);
-        //await this.homePage.clickSignOut();
-        //await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
-
-        //await sendToAdmin.performSendToAdmin; // performing 'Send to admin' event to complete the task
-
-        await this.loginUserWithCaseId(credentials.caseWorker, false, caseId);
-        test.setTimeout(400000);
-        await this.homePage.navigateToTab('Tasks');
-        await this.tasksTab.verifyTaskIsDisplayed(task.name); //making sure task is there before attempting to complete it
-        await this.homePage.delay(2000);
-        //await this.homePage.reloadPage();
-        await this.homePage.delay(2000);
-        await this.homePage.reloadPage();
-        await this.homePage.chooseEvent('Action Postponement Request');
-
-        await this.postponementPage.verifyPageContentActionPostponementRequestPage(grantRequest);
-        await this.postponementPage.inputPostponementActionRequestPageData(grantRequest);
-        await this.postponementPage.submitBtn();
-        await this.postponementPage.verifyPageContentActionPostponementRequestDocumentPage();
-        await this.postponementPage.submitBtn();
-        await this.homePage.delay(2000);
-
-        //Could not Verify the Event Name and Description Page as the Event Summary Page Label is defined Differently.
-        //await this.eventNameAndDescriptionPage.verifyPageContent("Action Postponement Request", false)
-        if (grantRequest != 'Send to Judge') {
-            await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
-                eventTestData.eventDescriptionInput);
-            await this.eventNameAndDescriptionPage.submitBtn();
-            await this.homePage.delay(2000);
-        }
-
-        await this.homePage.navigateToTab("History");
-        await this.historyTab.verifyPageContentByKeyValue('Event', 'Postponement Granted');
-        //await this.historyTab.verifyEventCompleted('Action Postponement Request');
-        //await performAppealDormantOnCase(pipCaseId);
-
-
-        await this.homePage.delay(8000);
-        await this.homePage.navigateToTab('Tasks');
-
-        await this.tasksTab.verifyTaskIsHidden(task.name);
     }
 }
+
+// COMPLETION and CANCELLATION scenarios are on HOLD since a bug was found where the completed/cancelled task doesn't disappear 
+// from the case, issue raise on SSCSSI-369  
+    
+//     async cancelByEventReviewPostponementTask(caseId: string) { 
+
+//         let voidCase = new VoidCase(this.page);
+
+//         await this.createPostponementRequestTask(caseId);
+//         //await this.homePage.clickSignOut();
+//         //await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
+//         await voidCase.performVoidCase; // performing 'Void case' event to cancel the task
+//         await this.homePage.delay(8000);
+//         await this.tasksTab.verifyTaskIsHidden(task.name);
+//     }
+
+//     async completeByEventReviewPostponementTask(caseId: string, grantRequest: string = 'Grant Postponement') { 
+
+//         let sendToAdmin = new SendToAdmin(this.page);
+
+//         await this.createPostponementRequestTask(caseId);
+//         //await this.homePage.clickSignOut();
+//         //await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
+
+//         //await sendToAdmin.performSendToAdmin; // performing 'Send to admin' event to complete the task
+
+//         await this.loginUserWithCaseId(credentials.caseWorker, false, caseId);
+//         test.setTimeout(400000);
+//         await this.homePage.navigateToTab('Tasks');
+//         await this.tasksTab.verifyTaskIsDisplayed(task.name); //making sure task is there before attempting to complete it
+//         await this.homePage.delay(2000);
+//         //await this.homePage.reloadPage();
+//         await this.homePage.delay(2000);
+//         await this.homePage.reloadPage();
+//         await this.homePage.chooseEvent('Action Postponement Request');
+
+//         await this.postponementPage.verifyPageContentActionPostponementRequestPage(grantRequest);
+//         await this.postponementPage.inputPostponementActionRequestPageData(grantRequest);
+//         await this.postponementPage.submitBtn();
+//         await this.postponementPage.verifyPageContentActionPostponementRequestDocumentPage();
+//         await this.postponementPage.submitBtn();
+//         await this.homePage.delay(2000);
+
+//         //Could not Verify the Event Name and Description Page as the Event Summary Page Label is defined Differently.
+//         //await this.eventNameAndDescriptionPage.verifyPageContent("Action Postponement Request", false)
+//         if (grantRequest != 'Send to Judge') {
+//             await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+//                 eventTestData.eventDescriptionInput);
+//             await this.eventNameAndDescriptionPage.submitBtn();
+//             await this.homePage.delay(2000);
+//         }
+
+//         await this.homePage.navigateToTab("History");
+//         await this.historyTab.verifyPageContentByKeyValue('Event', 'Postponement Granted');
+//         //await this.historyTab.verifyEventCompleted('Action Postponement Request');
+//         //await performAppealDormantOnCase(pipCaseId);
+
+
+//         await this.homePage.delay(8000);
+//         await this.homePage.navigateToTab('Tasks');
+
+//         await this.tasksTab.verifyTaskIsHidden(task.name);
+//     }
+// }

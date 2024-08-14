@@ -3,9 +3,8 @@ import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type
 import performAppealDormantOnCase from "../../api/client/sscs/appeal.event";
 
 
-//CHANGE TAGS BEFORE PUSHING
 test.describe.serial('WA - Review postponement request - TCW task initiation and reviewing tests', {
-    tag: '@DONE'
+    tag: '@work-allocation'
 }, async () => {
 
     let caseId: string;
@@ -36,51 +35,54 @@ test.describe.serial('WA - Review postponement request - TCW task initiation and
         await reviewPostponementRequestTaskSteps.assignReviewPostponementTask(caseId);
     })
 
-    // test.afterAll("Case has to be set to Dormant", async () => {
-    //     await performAppealDormantOnCase(caseId);
-    // });
-})
-
-test.describe.serial('WA - Review postponement request - TCW task cancellation tests', {
-    tag: '@define'
-}, async () => {
-
-    let caseId: string;
-
-    test.beforeAll("Create case", async () => {
-        caseId = await createCaseBasedOnCaseType('PIP');
+    test.afterAll("Case has to be set to Dormant", async () => {
+        await performAppealDormantOnCase(caseId);
     });
-
-    test("TCW with Legal-caseworker role, cancel 'Review postponement request' task via event", async ({
-        reviewPostponementRequestTaskSteps }) => {
-
-        test.slow();
-        await reviewPostponementRequestTaskSteps.cancelByEventReviewPostponementTask(caseId);
-    })
-
-    // test.afterAll("Case has to be set to Dormant", async () => {
-    //     await performAppealDormantOnCase(caseId);
-    // });
 })
 
-test.describe.serial('WA - Review postponement request - TCW task completion tests', {
-    tag: '@wip'
-}, async () => {
+// COMPLETION and CANCELLATION scenarios are on HOLD since a bug was found where the completed/cancelled task doesn't disappear 
+// from the case, issue raise on SSCSSI-369
 
-    let caseId: string;
+// test.describe.serial('WA - Review postponement request - TCW task cancellation tests', {
+//     tag: '@wip'
+// }, async () => {
 
-    test.beforeAll("Create case", async () => {
-        caseId = await createCaseBasedOnCaseType('PIP');
-    });
+//     let caseId: string;
 
-    test("TCW with Legal-caseworker role, completes 'Review postponement request' task via event", async ({
-        reviewPostponementRequestTaskSteps }) => {
+//     test.beforeAll("Create case", async () => {
+//         caseId = await createCaseBasedOnCaseType('PIP');
+//     });
 
-        test.slow();
-        await reviewPostponementRequestTaskSteps.completeByEventReviewPostponementTask(caseId);
-    })
+//     test("TCW with Legal-caseworker role, cancel 'Review postponement request' task via event", async ({
+//         reviewPostponementRequestTaskSteps }) => {
 
-    // test.afterAll("Case has to be set to Dormant", async () => {
-    //     await performAppealDormantOnCase(caseId);
-    // });
-})
+//         test.slow();
+//         await reviewPostponementRequestTaskSteps.cancelByEventReviewPostponementTask(caseId);
+//     })
+
+//     test.afterAll("Case has to be set to Dormant", async () => {
+//         await performAppealDormantOnCase(caseId);
+//     });
+// })
+
+// test.describe.serial('WA - Review postponement request - TCW task completion tests', {
+//     tag: '@wip'
+// }, async () => {
+
+//     let caseId: string;
+
+//     test.beforeAll("Create case", async () => {
+//         caseId = await createCaseBasedOnCaseType('PIP');
+//     });
+
+//     test("TCW with Legal-caseworker role, completes 'Review postponement request' task via event", async ({
+//         reviewPostponementRequestTaskSteps }) => {
+
+//         test.slow();
+//         await reviewPostponementRequestTaskSteps.completeByEventReviewPostponementTask(caseId);
+//     })
+
+//     test.afterAll("Case has to be set to Dormant", async () => {
+//         await performAppealDormantOnCase(caseId);
+//     });
+// })
