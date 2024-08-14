@@ -39,6 +39,10 @@ import { Hearing } from '../fixtures/steps/hearing';
 import { PrepareCaseForHearing } from '../fixtures/steps/prepare.case.for.hearing';
 import { EnhancedConfidentiality } from '../fixtures/steps/enhanced.confidentiality';
 import { use } from "chai";
+import { SendToInterloc } from '../fixtures/steps/send.to.interloc';
+import { ReferredByAdmin } from '../fixtures/steps/referred.by.admin';
+import { SendCaseToTcw } from '../fixtures/steps/send.case.to.tcw';
+import { ReferredByJudge } from '../fixtures/steps/referred.by.judge';
 import {AccessibilitySteps} from "../fixtures/steps/accessibilitySteps";
 import {AssociateCase} from "../fixtures/steps/associate-case";
 import {EvidenceReminder} from "../fixtures/steps/evidence.reminder";
@@ -47,8 +51,6 @@ import {SendToAdmin} from "../fixtures/steps/send.to.admin";
 import {ReviewAdminActionTask} from "../fixtures/steps/work-allocation/review.admin.action.task";
 import {SendToJudge} from "../fixtures/steps/send.to.judge";
 import {UploadResponse} from "../fixtures/steps/upload.response";
-
-
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -97,7 +99,12 @@ type MyStepsFixtures = {
     postponementSteps: Postponement
     prepareCaseForHearingSteps: PrepareCaseForHearing
     enhancedConfidentialitySteps: EnhancedConfidentiality
+    sendToInterlocSteps: SendToInterloc
+    referredByAdminSteps: ReferredByAdmin
+    sendCaseToTcwSteps: SendCaseToTcw
+    referredByJudgeSteps: ReferredByJudge
     accessibilitySteps: AccessibilitySteps
+
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -269,12 +276,10 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
         const reissueFurtherEvidenceSteps = new ReissueFurtherEvidence(page);
         await use(reissueFurtherEvidenceSteps);
     },
-
     postponementSteps: async ({page}, use) => {
         const postponementSteps = new Postponement(page);
         await use(postponementSteps);
     },
-
     hearingSteps: async ({ page }, use) => {
         const hearingSteps = new Hearing(page);
         await use(hearingSteps);
@@ -287,8 +292,25 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
         const enhancedConfidentialitySteps = new EnhancedConfidentiality(page);
         await use(enhancedConfidentialitySteps);
     },
+
+    sendToInterlocSteps:async ({page}, use) => {
+        const sendToInterlocSteps = new SendToInterloc(page);
+        await use(sendToInterlocSteps);
+    },
+    referredByAdminSteps:async ({page}, use) => {
+        const ReferredByAdminSteps = new ReferredByAdmin(page);
+        await use(ReferredByAdminSteps);
+    },
+    sendCaseToTcwSteps:async ({page}, use) => {
+        const sendCaseToTcwSteps = new SendCaseToTcw(page);
+        await use(sendCaseToTcwSteps);
+    },
+    referredByJudgeSteps:async ({page}, use) => {
+        const ReferredByJudgeSteps = new ReferredByJudge(page);
+        await use(ReferredByJudgeSteps);
+
+    },
     accessibilitySteps: async ({ page }, use) => {
         const accessibilitySteps = new AccessibilitySteps(page);
         await use(accessibilitySteps);
-    }
 })
