@@ -48,6 +48,8 @@ import { EnhancedConfidentiality } from '../fixtures/steps/enhanced.confidential
 import { use } from "chai";
 import { SendToInterloc } from '../fixtures/steps/send.to.interloc';
 import { ReferredByAdmin } from '../fixtures/steps/referred.by.admin';
+import { SendCaseToTcw } from '../fixtures/steps/send.case.to.tcw';
+import { ReferredByJudge } from '../fixtures/steps/referred.by.judge';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -98,6 +100,8 @@ type MyStepsFixtures = {
     enhancedConfidentialitySteps: EnhancedConfidentiality
     sendToInterlocSteps: SendToInterloc
     referredByAdminSteps: ReferredByAdmin
+    sendCaseToTcwSteps: SendCaseToTcw
+    referredByJudgeSteps: ReferredByJudge
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -292,5 +296,13 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     referredByAdminSteps:async ({page}, use) => {
         const ReferredByAdminSteps = new ReferredByAdmin(page);
         await use(ReferredByAdminSteps);
+    },
+    sendCaseToTcwSteps:async ({page}, use) => {
+        const sendCaseToTcwSteps = new SendCaseToTcw(page);
+        await use(sendCaseToTcwSteps);
+    },
+    referredByJudgeSteps:async ({page}, use) => {
+        const ReferredByJudgeSteps = new ReferredByJudge(page);
+        await use(ReferredByJudgeSteps);
     }
 })
