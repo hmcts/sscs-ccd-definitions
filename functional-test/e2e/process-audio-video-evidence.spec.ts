@@ -34,7 +34,7 @@ test.describe("Process audio/video evidence test", {tag: "@pipeline"}, async() =
     
 
      test.afterAll("Case has to be set to Dormant",async () => {
-        // await performAppealDormantOnCase(caseId);
+        await performAppealDormantOnCase(caseId);
      });
 });
 
@@ -53,7 +53,7 @@ test.describe.serial('WA - Manual Process Audio/Video Evidence task completion t
     });
 
     test.afterAll("Case has to be set to Dormant",async () => {
-        //  await performAppealDormantOnCase(caseId);
+         await performAppealDormantOnCase(caseId);
     });
 });
 
@@ -77,7 +77,7 @@ test.describe.serial('WA - Process Audio/Video Evidence task iniation and comple
     });
 
     test.afterAll("Case has to be set to Dormant",async () => {
-        //  await performAppealDormantOnCase(caseId);
+         await performAppealDormantOnCase(caseId);
     });
 });
 
@@ -96,6 +96,6 @@ test.describe.serial('WA - Process Audio/Video Evidence task automatic cancellat
     });
 
     test.afterAll("Case has to be set to Dormant", async () => {
-        // await performAppealDormantOnCase(caseId);
+        await performAppealDormantOnCase(caseId);
     });
 });
