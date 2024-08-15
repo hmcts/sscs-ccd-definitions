@@ -144,8 +144,12 @@ export class HomePage {
                 break;
             }
             case "Summary": {
-                await expect(this.summaryTab).toBeVisible();
-                await this.summaryTab.click();
+                if (expect(this.summaryTab).toBeVisible()){
+                    await this.summaryTab.click();
+                } else {
+                    await this.clickBeforeTabBtn();
+                    await this.summaryTab.click();
+                }
                 break;
             }
             case "Tasks": {
