@@ -128,6 +128,10 @@ export class HomePage {
         }
     }
 
+    async finishLoadingThePage() {
+        await expect(this.page.locator('.spinner-container')).toBeDisabled({timeout:4000});
+    }
+
     async navigateToTab(tabName : string): Promise<void> {
         switch(tabName) {
             case "Notepad": {
@@ -140,8 +144,12 @@ export class HomePage {
                 break;
             }
             case "Summary": {
-                await expect(this.summaryTab).toBeVisible();
-                await this.summaryTab.click();
+                if (expect(this.summaryTab).toBeVisible()){
+                    await this.summaryTab.click();
+                } else {
+                    await this.clickBeforeTabBtn();
+                    await this.summaryTab.click();
+                }
                 break;
             }
             case "Tasks": {
