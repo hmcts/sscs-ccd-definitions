@@ -5,6 +5,7 @@ import { credentials } from '../../../config/config';
 import { VoidCase } from '../void.case';
 import issueDirectionTestdata from "../../../pages/content/issue.direction_en.json";
 import eventTestData from "../../../pages/content/event.name.event.description_en.json";
+import { SendToAdmin } from '../send.to.admin';
 
 
 export class ReviewNonCompliantAppealTask extends BaseStep {
@@ -49,23 +50,11 @@ export class ReviewNonCompliantAppealTask extends BaseStep {
         await this.tasksTab.verifyManageOptions(task.name, task.assignedManageOptions);
         await this.tasksTab.verifyNextStepsOptions(task.name, task.nextStepsOptions);
 
-        // Select Issue directions notice step and complete the event
-        await this.tasksTab.clickNextStepLink(task.issueDirectionsNotice.link);
+        // Select send to admin next step and complete the event
+        await this.tasksTab.clickNextStepLink(task.sendToAdmin.link);
 
-        await this.issueDirectionPage.verifyPageContent();
-        await this.issueDirectionPage.populatePreHearingAppealToProceed(
-            issueDirectionTestdata.preHearingType,
-            'Appeal to Proceed',
-            issueDirectionTestdata.docTitle);
-
-        await this.eventNameAndDescriptionPage.verifyPageContent("Issue directions notice",
-            true, "Direction type");
-        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
-            eventTestData.eventDescriptionInput);
-        await this.eventNameAndDescriptionPage.confirmSubmission();
-        await expect(this.homePage.summaryTab).toBeVisible();
-        await this.homePage.delay(3000);
-        await this.verifyHistoryTabDetails("Issue directions notice");
+        let sendToAdmin = new SendToAdmin(this.page)
+        await sendToAdmin.comepleteSendToAdmin();
 
         // Verify task is removed from the tasks list within Tasks tab
         await this.homePage.navigateToTab('Tasks');
