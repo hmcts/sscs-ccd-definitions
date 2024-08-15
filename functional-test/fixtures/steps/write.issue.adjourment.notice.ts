@@ -12,6 +12,7 @@ import issueDirectionTestdata from "../../pages/content/issue.direction_en.json"
 import actionFurtherEvidenceTestdata from '../../pages/content/action.further.evidence_en.json';
 import logger from "../../utils/loggerUtil";
 import performAppealDormantOnCase from "../../api/client/sscs/appeal.event";
+import eventTestData from "../../pages/content/event.name.event.description_en.json";
 
 export class WriteAndIssueAdjournmentNotice extends BaseStep {
 
@@ -109,10 +110,32 @@ export class WriteAndIssueAdjournmentNotice extends BaseStep {
         await this.writeAndIssueAdjournmentNotificationPage.submitContinueBtn();
         await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
 
-        await this.writeAndIssueAdjournmentNotificationPage.verifyPreviewDocumentPage();
+        await this.writeAndIssueAdjournmentNotificationPage.verifyPreviewDocumentPage(true);
         await this.writeAndIssueAdjournmentNotificationPage.submitContinueBtn();
 
         //Check Your Answers Page
         await this.writeAndIssueAdjournmentNotificationPage.verifyPageContentForCheckYourAnswersPage();
+        await this.writeAndIssueAdjournmentNotificationPage.submit();
+        await this.verifyHistoryTabDetails("Write adjournment notice");
+    }
+
+    async performIssueAdjournmentForAnAppeal() {
+        await this.homePage.chooseEvent("Issue adjournment notice");
+        await this.writeAndIssueAdjournmentNotificationPage.verifyPreviewDocumentPage(false);
+        await this.writeAndIssueAdjournmentNotificationPage.confirmSubmission();
+        await this.eventNameAndDescriptionPage.verifyPageContent("Issue adjournment notice",
+            false);
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
+        await this.verifyHistoryTabDetails("Issue adjournment notice");
+    }
+
+    async verifyOverrideListingRequirementsForAnAppeal() {
+        await this.homePage.navigateToTab("Listing Requirements");
+        await this.homePage.delay(1000);
+        await this.listingRequirementsTab.verifyDefaultListingValuesTabVisible();
+        await this.listingRequirementsTab.verifyOverridesListingValuesTabVisible();
+        await this.listingRequirementsTab.verifyOverridesListingValues();
     }
 }

@@ -1,5 +1,6 @@
 {
     "writeAdjournmentNoticeEventNameCaptor": "Write adjournment notice",
+    "issueAdjournmentNoticeEventNameCaptor": "Issue adjournment notice",
     "uploadOrGenerateANoticeEventNamePageHeading": "Upload or generate a notice",
     "generateNoticeLabel": "Generate notice?",
     "yesLabel" : "Yes",
@@ -80,6 +81,7 @@
     "firstAvailableDateLabel" : "First available date",
     "listFirstOnTheSessionLabel" : "List first on the session",
     "provideTimeLabel" : "Provide time (Optional)",
+    "provideTimeWithoutOptionalLabel" : "Provide time",
     "provideDateOrPeriodLabel" : "Provide date or period?",
     "providePeriodLabel" : "Provide period",
     "provideDateLabel" : "Provide date",
@@ -101,10 +103,13 @@
     "additionalDirectionsInput" : "Additional directions - Automation Testing",
 
     "previewAdjournmentPageHeading" : "Preview Adjournment",
+    "previewAdjournmentPageHeadingNotice" : "Preview Adjournment Notice",
     "previewAdjournmentLabel" : "Preview Adjournment",
     "allDocumentsMustBePDFFormatted" : "All documents must be PDF formatted",
 
     "checkYourAnswersPageHeading" : "Write adjournment notice",
     "checkYourAnswersSectionHeading" : "Check your answers",
-    "checkTheInformationBelowCarefullyLabel" : "Check the information below carefully."
+    "checkTheInformationBelowCarefullyLabel" : "Check the information below carefully.",
+
+    "previewAdjournmentNoticePageHeading" : "Preview Adjournment Notice"
 }

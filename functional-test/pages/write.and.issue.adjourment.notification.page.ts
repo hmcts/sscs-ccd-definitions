@@ -199,13 +199,19 @@ export class WriteAndIssueAdjourmentNotificationPage {
 
     async inputAdditionalDirectionsPageData() {
         await webActions.clickButton('Add new');
-        await webActions.inputField('#adjournCaseAdditionalDirections_value',writeAdjournmentNoticeData.reasonsForAdjournmentInput);
+        await webActions.inputField('#adjournCaseAdditionalDirections_value',writeAdjournmentNoticeData.additionalDirectionsInput);
     }
 
-    async verifyPreviewDocumentPage() {
-        await webActions.verifyPageLabel('.govuk-caption-l', writeAdjournmentNoticeData.writeAdjournmentNoticeEventNameCaptor);
-        await webActions.verifyPageLabel('h1.govuk-heading-l', writeAdjournmentNoticeData.previewAdjournmentPageHeading);
-        await webActions.verifyPageLabel('h1.govuk-heading-l', writeAdjournmentNoticeData.previewAdjournmentLabel);
+    async verifyPreviewDocumentPage(writeAdjournmentNotification = true) {
+        if (writeAdjournmentNotification === true) {
+            await webActions.verifyPageLabel('.govuk-caption-l', writeAdjournmentNoticeData.writeAdjournmentNoticeEventNameCaptor);
+            await webActions.verifyPageLabel('h1.govuk-heading-l', writeAdjournmentNoticeData.previewAdjournmentPageHeading);
+        } else {
+            await webActions.verifyPageLabel('.govuk-caption-l', writeAdjournmentNoticeData.issueAdjournmentNoticeEventNameCaptor);
+            await webActions.verifyPageLabel('h1.govuk-heading-l', writeAdjournmentNoticeData.previewAdjournmentPageHeadingNotice);
+        }
+        await webActions.verifyPageLabel('.form-label', writeAdjournmentNoticeData.previewAdjournmentLabel);
+        await webActions.verifyPageLabel('.form-hint', writeAdjournmentNoticeData.allDocumentsMustBePDFFormatted);
     }
 
     async verifyPageContentForCheckYourAnswersPage() {
@@ -253,6 +259,27 @@ export class WriteAndIssueAdjourmentNotificationPage {
         await webActions.verifyPageLabel('.form-table tr:nth-of-type(13) > .valign-top > .text-16',writeAdjournmentNoticeData.whatLanguageDoTheyNeedToSpeakWithoutOptionalLabel);
         await webActions.verifyPageLabel('.form-table tr:nth-of-type(13) > .form-cell .text-16',writeAdjournmentNoticeData.languageOptionInput);
 
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(14) > .valign-top > .text-16',writeAdjournmentNoticeData.whenShouldNextHearingBeLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(14) > .form-cell .text-16',writeAdjournmentNoticeData.firstAvailableDateAfterLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(15) > .valign-top > .text-16',writeAdjournmentNoticeData.provideDateOrPeriodLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(15) > .form-cell .text-16',writeAdjournmentNoticeData.providePeriodLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(16) > .valign-top > .text-16',writeAdjournmentNoticeData.providePeriodLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(16) > .form-cell .text-16',writeAdjournmentNoticeData["90DaysLabel"]);
+
+        await webActions.verifyPageLabel('td[_ngcontent-ng-c4245273148]',writeAdjournmentNoticeData.listFirstOnTheSessionLabel);
+        await webActions.verifyPageLabel('tbody[_ngcontent-ng-c3159966179] > tr:nth-of-type(2) > #complex-panel-simple-field-label > .text-16',writeAdjournmentNoticeData.provideTimeWithoutOptionalLabel);
+        await webActions.verifyPageLabel('tbody[_ngcontent-ng-c3159966179] ccd-read-fixed-radio-list-field > .text-16',writeAdjournmentNoticeData.AMLabel);
+
+        /*await webActions.verifyPageLabel('.form-table tr:nth-of-type(17) > .valign-top > .text-16',writeAdjournmentNoticeData.reasonsForAdjournmentLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(17) > .form-cell .text-16',writeAdjournmentNoticeData.reasonsForAdjournmentInput);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(18) > .valign-top > .text-16',writeAdjournmentNoticeData.additionalDirectionsLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(18) > .form-cell .text-16',writeAdjournmentNoticeData.additionalDirectionsInput);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(19) > .valign-top > .text-16',writeAdjournmentNoticeData.previewAdjournmentLabel);
+        */
     }
 
         async chooseAllowedOrRefused(optionVal: string) {
@@ -261,6 +288,10 @@ export class WriteAndIssueAdjourmentNotificationPage {
 
     async submitContinueBtn(): Promise<void> {
         await webActions.clickButton("Continue");
+    }
+
+    async submit(): Promise<void> {
+        await webActions.clickButton("Submit");
     }
 
     async confirmSubmission(): Promise<void> {
