@@ -71,4 +71,9 @@ export class History {
         let text = await this.page.locator(`//div/markdown/h2[contains(text(),"${fieldValue}")]`).textContent()
         expect(text).toContain(fieldValue); // TODO An exact match is not done as there is Text from Upper nodes of the Dom Tree Appearing.
     }
+
+    async verifyStateOfTheAppeal (expectedState) {
+        webActions.verifyPageLabel("[aria-live='polite'] > tr:nth-of-type(3) > th > .text-16","End state");
+        webActions.verifyPageLabel("[aria-live='polite'] > tr:nth-of-type(3) > td > .text-16",expectedState);
+    }
 }

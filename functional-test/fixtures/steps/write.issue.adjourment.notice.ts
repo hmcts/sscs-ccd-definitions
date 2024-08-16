@@ -24,7 +24,7 @@ export class WriteAndIssueAdjournmentNotice extends BaseStep {
         this.page = page;
     }
 
-    async performWriteAndIssueAdjournmentAdjournmentNotice(pipCaseId) {
+    async performAnUploadResponseOnTheCase(pipCaseId) {
 
         await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
@@ -35,9 +35,24 @@ export class WriteAndIssueAdjournmentNotice extends BaseStep {
             serviceToken.trim(), responseWriterId.trim(),
             'SSCS', 'Benefit',
             pipCaseId.trim(), 'dwpUploadResponse', 'dwp');
+    }
 
-        await this.loginUserWithCaseId(credentials.caseWorker, false, pipCaseId);
-        //await this.homePage.reloadPage();
+    async performLoginAndNavigateToCase(user, pipCaseId) {
+        await this.loginUserWithCaseId(user, false, pipCaseId);
+    }
+
+    async performNavigateToHistoryTab() {
+        await this.homePage.navigateToTab("Hearings");
+    }
+
+    async signOut() {
+        await this.homePage.signOut()
+    }
+
+
+    async performWriteAndIssueAdjournmentAdjournmentNotice(pipCaseId) {
+
+        await this.homePage.reloadPage();
         await this.homePage.chooseEvent("Write adjournment notice");
 
         //Generate Content Page
@@ -116,6 +131,7 @@ export class WriteAndIssueAdjournmentNotice extends BaseStep {
         //Check Your Answers Page
         await this.writeAndIssueAdjournmentNotificationPage.verifyPageContentForCheckYourAnswersPage();
         await this.writeAndIssueAdjournmentNotificationPage.submit();
+        await this.historyTab.verifyStateOfTheAppeal('Ready to list');
         await this.verifyHistoryTabDetails("Write adjournment notice");
     }
 
@@ -128,6 +144,7 @@ export class WriteAndIssueAdjournmentNotice extends BaseStep {
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
+        await this.historyTab.verifyStateOfTheAppeal('Ready to list');
         await this.verifyHistoryTabDetails("Issue adjournment notice");
     }
 

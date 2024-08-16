@@ -33,6 +33,12 @@ export const credentials = {
     password:
       process.env.HEARING_CENTRE_ADMIN_PASSWORD,
   },
+  hmcCaseOfficer : {
+    email:
+    process.env.TEST_HMC_CASEOFFICER_USERNAME,
+    password:
+    process.env.TEST_HMC_CASEOFFICER_PASSWORD,
+  },
   hearingCentreTeamLead: {
     email:
       process.env.HEARING_CENTRE_TEAM_LEAD_USERNAME,
