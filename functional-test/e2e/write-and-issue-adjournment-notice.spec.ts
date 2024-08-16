@@ -8,7 +8,7 @@ let caseId: string;
 
 test.describe('Write and Issue Adjournment Notice', {tag: '@pipeline'}, async () => {
 
-    test.only("Write and Issue Adjournment Notice",
+    test("Write and Issue Adjournment Notice",
         async ({writeAndIssueAdjournmentNoticeSteps, hearingSteps}) => {
             test.slow();
             let pipCaseId = await createCaseBasedOnCaseType('PIP');
