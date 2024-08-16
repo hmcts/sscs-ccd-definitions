@@ -2,8 +2,8 @@ import path from "path";
 
 export const urls = {
 
-  tribunalsApiUri: process.env.TRIBUNALS_API_URL || '',
-  xuiUrl: process.env.SSCS_XUI_URL || '',
+  tribunalsApiUri: process.env.TEST_E2E_URL_WEB || '',
+  xuiUrl: process.env.TEST_E2E_API_URI ||'' ,
   idamUrl : process.env.IDAM_URL || 'https://idam-api.aat.platform.hmcts.net',
   s2sUrl : process.env.S2S_URL || 'http://rpe-service-auth-provider-aat.service.core-compute-aat.internal',
   ccdApiUrl : process.env.CCD_API_URL || 'http://ccd-data-store-api-aat.service.core-compute-aat.internal'
