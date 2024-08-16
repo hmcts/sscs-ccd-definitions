@@ -8,7 +8,7 @@ properties([
                 string(name: 'NIGHTLY_TAG', defaultValue: '--cucumberOpts.tags=@nightly-test', description: 'Tag for nightly build'),
                 string(name: 'PREVIEW_TAG', defaultValue: '--cucumberOpts.tags=@preview-test', description: 'Tag for preview build')
         ]),
-        pipelineTriggers([cron('H(40-50) */1 * * *')])
+        pipelineTriggers([cron('0 9-16 * * 6')])
 ])
 
 @Library("Infrastructure")
