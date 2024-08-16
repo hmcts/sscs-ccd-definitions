@@ -50,7 +50,7 @@ export class WriteAndIssueAdjournmentNotice extends BaseStep {
     }
 
 
-    async performWriteAndIssueAdjournmentAdjournmentNotice(pipCaseId) {
+    async performWriteAdjournmentNotice() {
 
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent("Write adjournment notice");
@@ -131,8 +131,8 @@ export class WriteAndIssueAdjournmentNotice extends BaseStep {
         //Check Your Answers Page
         await this.writeAndIssueAdjournmentNotificationPage.verifyPageContentForCheckYourAnswersPage();
         await this.writeAndIssueAdjournmentNotificationPage.submit();
-        await this.historyTab.verifyStateOfTheAppeal('Ready to list');
         await this.verifyHistoryTabDetails("Write adjournment notice");
+        await this.historyTab.verifyStateOfTheAppeal('Ready to list');
     }
 
     async performIssueAdjournmentForAnAppeal() {
@@ -144,8 +144,8 @@ export class WriteAndIssueAdjournmentNotice extends BaseStep {
         await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
-        await this.historyTab.verifyStateOfTheAppeal('Ready to list');
         await this.verifyHistoryTabDetails("Issue adjournment notice");
+        await this.historyTab.verifyStateOfTheAppeal('Ready to list');
     }
 
     async verifyOverrideListingRequirementsForAnAppeal() {
@@ -154,5 +154,11 @@ export class WriteAndIssueAdjournmentNotice extends BaseStep {
         await this.listingRequirementsTab.verifyDefaultListingValuesTabVisible();
         await this.listingRequirementsTab.verifyOverridesListingValuesTabVisible();
         await this.listingRequirementsTab.verifyOverridesListingValues();
+    }
+
+    async verifyHearingsTabForTheActiveHearing() {
+        await this.homePage.navigateToTab("Hearings");
+        await this.hearingsTab.verifyHearingStatusSummary();
+        await this.hearingsTab.clickHearingDetails();
     }
 }

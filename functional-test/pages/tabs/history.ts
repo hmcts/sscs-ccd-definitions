@@ -1,7 +1,7 @@
 import {expect, Page} from '@playwright/test';
 import {WebAction} from '../../common/web.action'
-import { HomePage } from '../common/homePage';
-import { threadId } from 'worker_threads';
+import {HomePage} from '../common/homePage';
+import {threadId} from 'worker_threads';
 import {Locator} from "puppeteer";
 
 
@@ -30,13 +30,13 @@ export class History {
         let eleLink = this.page.locator(`//a[normalize-space()="${fieldLink}"]`);
         let ele = this.page.locator(`//*[normalize-space()="${fieldLabel}"]/../td[normalize-space()="${fieldValue}"]`);
 
-        for(let i=0; i >=30; i++) {
-            
-            if(!eleLink.isVisible()) {
+        for (let i = 0; i >= 30; i++) {
+
+            if (!eleLink.isVisible()) {
                 await this.homePage.navigateToTab("History");
                 await this.homePage.delay(1000);
                 console.log(`I am inside a loop ${i}`);
-                return i++;       
+                return i++;
             } else {
                 await eleLink.click();
                 await expect(ele).toBeVisible();
@@ -48,7 +48,7 @@ export class History {
 
     async verifyHistoryPageEventLink(fieldLabel: string) {
         let linkElement = this.page.locator(`//a[normalize-space()="${fieldLabel}"]`);
-        for(let i= 0; i<=30; i++) {
+        for (let i = 0; i <= 30; i++) {
             let visibilityFlag = await linkElement.isVisible();
             if (!visibilityFlag) {
                 await this.homePage.delay(1000);
@@ -64,7 +64,7 @@ export class History {
     }
 
     async verifyEventCompleted(linkText: string) {
-        await expect(this.page.getByRole('link', { name: linkText }).first()).toBeVisible();
+        await expect(this.page.getByRole('link', {name: linkText}).first()).toBeVisible();
     }
 
     async verifyPresenceOfTitle(fieldValue: string) {
@@ -72,8 +72,8 @@ export class History {
         expect(text).toContain(fieldValue); // TODO An exact match is not done as there is Text from Upper nodes of the Dom Tree Appearing.
     }
 
-    async verifyStateOfTheAppeal (expectedState) {
-        webActions.verifyPageLabel("[aria-live='polite'] > tr:nth-of-type(3) > th > .text-16","End state");
-        webActions.verifyPageLabel("[aria-live='polite'] > tr:nth-of-type(3) > td > .text-16",expectedState);
+    async verifyStateOfTheAppeal(expectedState: string) {
+        await webActions.verifyPageLabel("//span[.='End state']", "End state");
+        await webActions.verifyPageLabel("//span[.='"+expectedState+"']", expectedState);
     }
 }

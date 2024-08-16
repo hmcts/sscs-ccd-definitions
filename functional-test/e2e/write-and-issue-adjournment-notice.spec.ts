@@ -18,9 +18,10 @@ test.describe('Write and Issue Adjournment Notice', {tag: '@pipeline'}, async ()
             await hearingSteps.verifyManualHearingCancellation();
             await writeAndIssueAdjournmentNoticeSteps.signOut();
             await writeAndIssueAdjournmentNoticeSteps.performLoginAndNavigateToCase(credentials.caseWorker, pipCaseId);
-            await writeAndIssueAdjournmentNoticeSteps.performWriteAndIssueAdjournmentAdjournmentNotice(pipCaseId);
+            await writeAndIssueAdjournmentNoticeSteps.performWriteAdjournmentNotice();
             await writeAndIssueAdjournmentNoticeSteps.performIssueAdjournmentForAnAppeal();
             await writeAndIssueAdjournmentNoticeSteps.verifyOverrideListingRequirementsForAnAppeal();
+            await writeAndIssueAdjournmentNoticeSteps.verifyHearingsTabForTheActiveHearing();
             //await performAppealDormantOnCase(pipCaseId);
         });
 
