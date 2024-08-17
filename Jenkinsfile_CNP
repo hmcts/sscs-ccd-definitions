@@ -7,8 +7,7 @@ properties([
                 string(name: 'NUM_TESTS_IN_PARALLEL', defaultValue: '50', description: 'The number of tests to run in parallel'),
                 string(name: 'NIGHTLY_TAG', defaultValue: '--cucumberOpts.tags=@nightly-test', description: 'Tag for nightly build'),
                 string(name: 'PREVIEW_TAG', defaultValue: '--cucumberOpts.tags=@preview-test', description: 'Tag for preview build')
-        ]),
-        pipelineTriggers([cron('H(10-20) H(10-16)/1 * * 6')])
+        ])
 ])
 
 @Library("Infrastructure")
