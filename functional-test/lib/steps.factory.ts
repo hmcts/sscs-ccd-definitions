@@ -46,9 +46,11 @@ import { Hearing } from '../fixtures/steps/hearing';
 import { PrepareCaseForHearing } from '../fixtures/steps/prepare.case.for.hearing';
 import { EnhancedConfidentiality } from '../fixtures/steps/enhanced.confidentiality';
 import { use } from "chai";
-import { ReviewFTAValidityChallengeTask } from '../fixtures/steps/work-allocation/review.fta.validity.challenge.task'
-
-
+import { SendToInterloc } from '../fixtures/steps/send.to.interloc';
+import { ReferredByAdmin } from '../fixtures/steps/referred.by.admin';
+import { SendCaseToTcw } from '../fixtures/steps/send.case.to.tcw';
+import { ReferredByJudge } from '../fixtures/steps/referred.by.judge';
+import { ReviewFTAValidityChallengeTask } from '../fixtures/steps/work-allocation/review.fta.validity.challenge.task';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -97,6 +99,10 @@ type MyStepsFixtures = {
     postponementSteps: Postponement
     prepareCaseForHearingSteps: PrepareCaseForHearing
     enhancedConfidentialitySteps: EnhancedConfidentiality
+    sendToInterlocSteps: SendToInterloc
+    referredByAdminSteps: ReferredByAdmin
+    sendCaseToTcwSteps: SendCaseToTcw
+    referredByJudgeSteps: ReferredByJudge
     ReviewFTAValidityChallengeSteps: ReviewFTAValidityChallengeTask
 };
 
@@ -284,6 +290,22 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     enhancedConfidentialitySteps: async ({ page }, use) => {
         const enhancedConfidentialitySteps = new EnhancedConfidentiality(page);
         await use(enhancedConfidentialitySteps);
+    },
+    sendToInterlocSteps:async ({page}, use) => {
+        const sendToInterlocSteps = new SendToInterloc(page);
+        await use(sendToInterlocSteps);
+    },
+    referredByAdminSteps:async ({page}, use) => {
+        const ReferredByAdminSteps = new ReferredByAdmin(page);
+        await use(ReferredByAdminSteps);
+    },
+    sendCaseToTcwSteps:async ({page}, use) => {
+        const sendCaseToTcwSteps = new SendCaseToTcw(page);
+        await use(sendCaseToTcwSteps);
+    },
+    referredByJudgeSteps:async ({page}, use) => {
+        const ReferredByJudgeSteps = new ReferredByJudge(page);
+        await use(ReferredByJudgeSteps);
     },
     ReviewFTAValidityChallengeSteps: async ({ page }, use) => {
         const ReviewFTAValidityChallengeSteps = new ReviewFTAValidityChallengeTask(page);
