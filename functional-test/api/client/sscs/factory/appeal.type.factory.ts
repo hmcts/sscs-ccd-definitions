@@ -13,6 +13,8 @@ import ucSandLVideoPayload from '../../../data/payload/create-appeal//uc_sandl_v
 import piprepFtoFSandLPayload from '../../../data/payload/create-appeal/pip_sandl_rep_ftof.json';
 import piprepSandLPayload from '../../../data/payload/create-appeal/pip_sandl_rep.json';
 import pipIncompleteAppealPayload from '../../../data/payload/create-appeal/pip_incomplete_appeal.json';
+import pipNonCompliantAppealPayload from '../../../data/payload/create-appeal/pip_non_compliant_appeal.json';
+import { StringUtilsComponent } from '../../../../utils/StringUtilsComponent';
 
 async function createCaseBasedOnCaseType(caseType: string) {
     let apiContext;
@@ -47,10 +49,18 @@ async function createCaseBasedOnCaseType(caseType: string) {
                                                 ? piprepSandLPayload
                                                 : caseType == "PIPINCOMPLETE"
                                                     ? pipIncompleteAppealPayload
-                                                    : new Error("Unsupported case type");
+                                                    : caseType == "PIPNONCOMPLIANT"
+                                                        ? pipNonCompliantAppealPayload
+                                                        : new Error("Unsupported case type");
 
-    let apiUrl = caseType.toLowerCase()
-        .includes('incomplete') ? `${urls.tribunalsApiUri}/appeals` : `${urls.tribunalsApiUri}/api/appeals`;
+    let caseTypeLower = caseType.toLowerCase();
+    let apiUrl = (caseTypeLower.includes('incomplete') || caseTypeLower.includes('noncompliant'))
+        ? `${urls.tribunalsApiUri}/appeals` 
+        : `${urls.tribunalsApiUri}/api/appeals`;
+
+    if(caseTypeLower.includes('noncompliant')) {
+        dataPayload.appellant.nino = StringUtilsComponent.getRandomNINumber();
+    }
 
     const response = await apiContext.post(apiUrl, {
         data: dataPayload

@@ -125,7 +125,20 @@ export class UpdateNotListable extends BaseStep {
     }
 
     async performUpdateNotListableDirectionNotFulfilledJudge(){
-        await this.performNotListableEvent();
+        let pipCaseId = await createCaseBasedOnCaseType('PIP');
+        //Trigger Not listable event:
+        await this.goToNotListablePage(this.page, pipCaseId);
+        await this.notListablePage.verifyPageContent(); //Verifying Heading and Caption for event
+        //inserting data and verifying said data during the event
+        await this.notListablePage.enterNotListableProvideReason();
+        await this.notListablePage.continueEvent();
+
+        await this.notListablePage.enterValidDirectionDueDate();
+        await this.notListablePage.continueEvent();
+
+        await this.notListablePage.confirmSubmission();
+       // verifying that event has submitted successfully and details are showing in Summary and History Tabs
+       await this.verifyHistoryTabDetails("Not listable","Not listable")
         //Trigger Update not listable case event
         await this.homePage.chooseEvent("Update not listable case");
         await this.updateNotListablePage.requirementsNotFulfilled();
@@ -141,6 +154,37 @@ export class UpdateNotListable extends BaseStep {
     private async goToNotListablePage(page: Page, caseId: string) {
         await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
         await this.homePage.chooseEvent("Not listable");
+    }
+
+    async performUpdateNotListableDirectionNotFulfilledAbateTCW(caseId: string){
+        
+        //Trigger Not listable event:
+        await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
+        await this.homePage.chooseEvent("Not listable");
+        await this.notListablePage.verifyPageContent(); //Verifying Heading and Caption for event
+
+        //inserting data and verifying said data during the event
+        await this.notListablePage.enterNotListableProvideReason();
+        await this.notListablePage.continueEvent();
+
+        await this.notListablePage.enterValidDirectionDueDate();
+        await this.notListablePage.continueEvent();
+
+        await this.notListablePage.confirmSubmission();
+       
+        // verifying that event has submitted successfully and details are showing in Summary and History Tabs
+       await this.verifyHistoryTabDetails("Not listable","Not listable")
+
+        //Trigger Update not listable case event
+        await this.homePage.chooseEvent("Update not listable case");
+        await this.updateNotListablePage.requirementsNotFulfilled();
+
+        //Set interlocutory review option to Yes TCW to review.
+        await this.updateNotListablePage.interlocutoryReviewRequiredTCW()
+
+        await this.updateNotListablePage.confirmSubmission()
+
+        await this.verifyHistoryTabDetails("Not listable", "Update not listable case");
     }
 
 }
