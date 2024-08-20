@@ -173,8 +173,12 @@ export class HomePage {
                 break;
             }
             case "Bundles": {
-                await expect(this.bundlesTab).toBeVisible();
-                await this.bundlesTab.click();
+                if (expect(this.bundlesTab).toBeVisible()) {
+                    await this.bundlesTab.click();
+                } else {
+                    await this.clickBeforeTabBtn();
+                    await this.bundlesTab.click();
+                }
                 break;
             }
             case "Hearing Recordings": {
