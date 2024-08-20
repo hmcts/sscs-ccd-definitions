@@ -24,7 +24,6 @@
     "test:accessibility": "yarn install && npx playwright test --config functional-test/playwright.config.ts --project chromium --reporter=html --grep @accessibility"
   },
   "dependencies": {
-    "@axe-core/playwright": "^4.9.1",
     "@cucumber/cucumber": "^9.5.0",
     "@hmcts/nodejs-healthcheck": "^1.8.0",
     "@hmcts/properties-volume": "^1.1.0",
@@ -35,7 +34,8 @@
     "json5": "^2.2.3",
     "node-cache": "^5.1.2",
     "puppeteer": "^22.0.0",
-    "winston": "^3.13.0"
+    "winston": "^3.13.0",
+    "@axe-core/playwright": "^4.9.1"
   },
   "devDependencies": {
     "@faker-js/faker": "7.2.0",
