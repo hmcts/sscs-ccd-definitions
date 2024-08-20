@@ -16,5 +16,6 @@
 
     "sendToInterlocHearingSelectValue": "Pre Hearing",
     "sendToInterlocCaseReviewSelectValue": "Review by TCW",
-    "sendToInterlocReasonReferredValue": "Advice on how to proceed"
+    "sendToInterlocReasonReferredValue": "Advice on how to proceed",
+    "sendToInterlocReasonReferredValue2": "Over 300 pages"
 }
