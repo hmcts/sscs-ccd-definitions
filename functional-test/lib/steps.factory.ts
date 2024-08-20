@@ -53,6 +53,7 @@ import { SendCaseToTcw } from '../fixtures/steps/send.case.to.tcw';
 import { ReferredByJudge } from '../fixtures/steps/referred.by.judge';
 import { ReferredToInterloc } from '../fixtures/steps/referred.to.interloc';
 import { FtaNotProvidedAppointeeDetails } from '../fixtures/steps/fta.not.provided.appointee.details';
+import { ReviewFTAValidityChallengeTask } from '../fixtures/steps/work-allocation/review.fta.validity.challenge.task';
 import { ReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/review.postponement.request.task';
 
 type MyStepsFixtures = {
@@ -109,6 +110,7 @@ type MyStepsFixtures = {
     referredByJudgeSteps: ReferredByJudge
     referredToInterlocSteps: ReferredToInterloc
     ftaNotProvidedAppointeeDetailsSteps: FtaNotProvidedAppointeeDetails
+    ReviewFTAValidityChallengeSteps: ReviewFTAValidityChallengeTask
     reviewPostponementRequestTaskSteps: ReviewPostponementRequestTask
 };
 
@@ -324,6 +326,10 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     ftaNotProvidedAppointeeDetailsSteps:async ({page}, use) => {
         const ftaNotProvidedAppointeeDetailsSteps = new FtaNotProvidedAppointeeDetails(page);
         await use(ftaNotProvidedAppointeeDetailsSteps);
+    },
+    ReviewFTAValidityChallengeSteps: async ({ page }, use) => {
+        const ReviewFTAValidityChallengeSteps = new ReviewFTAValidityChallengeTask(page);
+        await use(ReviewFTAValidityChallengeSteps);
     },
     reviewPostponementRequestTaskSteps: async ({ page }, use) => {
         const ReviewPostponementRequestTaskSteps = new ReviewPostponementRequestTask(page);
