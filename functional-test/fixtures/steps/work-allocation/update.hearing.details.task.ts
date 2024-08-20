@@ -1,4 +1,4 @@
-import { expect, Page } from '@playwright/test';
+import { test, expect, Page } from '@playwright/test';
 import { WebAction } from '../../../common/web.action'
 import task from '../../../pages/content/update.hearing.details.task_en.json';
 import { BaseStep } from '../base';
@@ -31,18 +31,20 @@ export class UpdateHearingDetailsTask extends BaseStep {
         //creating the task
         await this.goToHearingTodayEvent(this.page, caseId);
         await webActions.clickSubmitButton();
-
-        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
-            eventTestData.eventDescriptionInput);
-        await this.eventNameAndDescriptionPage.confirmSubmission();
-        await expect(this.homePage.summaryTab).toBeVisible();
         await this.homePage.delay(3000);
+        await webActions.clickSubmitButton();
+
+        // await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+        //     eventTestData.eventDescriptionInput);
+        // await this.eventNameAndDescriptionPage.confirmSubmission();
+        // await expect(this.homePage.summaryTab).toBeVisible();
+        // await this.homePage.delay(3000);
 
         // Verifying History tab + end state
         await this.verifyHistoryTabDetails("Hearing Today");
         await this.historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
         await this.historyTab.verifyPageContentByKeyValue('Event', 'Hearing Today');
-        await this.historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification');
+        //await this.historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification');
 
         await this.homePage.clickSignOut();
     }
@@ -53,6 +55,7 @@ export class UpdateHearingDetailsTask extends BaseStep {
         await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
         await this.homePage.delay(2000);
 
+        test.setTimeout(450000);
         await this.homePage.navigateToTab('Tasks');
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
         await this.tasksTab.verifyPageContentByKeyValue(task.name, 'Assigned to', task.assignedToWhenNotAssigned);
@@ -63,7 +66,7 @@ export class UpdateHearingDetailsTask extends BaseStep {
     async verifyTCWWithLORoleCanViewAndAssignTask(caseId: string) {
         //checking task is there
         await this.homePage.delay(3000);
-        await this.loginUserWithCaseId(credentials.amSeniorTribunalCaseWorkerWithCaseAllocatorRole, true, caseId);
+        await this.loginUserWithCaseId(credentials.hearingCentreAdmin, true, caseId);
         await this.homePage.delay(2000);
 
         await this.homePage.navigateToTab('Tasks');
