@@ -13,6 +13,7 @@ import {RequestTimeExtension} from '../fixtures/steps/request.time.extension';
 import {CreateBundle} from '../fixtures/steps/create.bundle';
 import {UrgentHearing} from '../fixtures/steps/urgent.hearing';
 import {ReviewIncompleteAppealTask} from '../fixtures/steps/work-allocation/review.incomplete.appeal.task';
+import { ReviewNonCompliantAppealTask } from '../fixtures/steps/work-allocation/review.noncompliant.appeal.task';
 import {RequestInfoFromParty} from '../fixtures/steps/request.info.from.party';
 import {Reinstatement} from '../fixtures/steps/reinstatement';
 import {AppealDormant} from '../fixtures/steps/appeal.dormant';
@@ -51,6 +52,9 @@ import {SendToAdmin} from "../fixtures/steps/send.to.admin";
 import {ReviewAdminActionTask} from "../fixtures/steps/work-allocation/review.admin.action.task";
 import {SendToJudge} from "../fixtures/steps/send.to.judge";
 import {UploadResponse} from "../fixtures/steps/upload.response";
+import { ReferredToInterloc } from '../fixtures/steps/referred.to.interloc';
+import { FtaNotProvidedAppointeeDetails } from '../fixtures/steps/fta.not.provided.appointee.details';
+import { ReviewFTAValidityChallengeTask } from '../fixtures/steps/work-allocation/review.fta.validity.challenge.task';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -63,6 +67,7 @@ type MyStepsFixtures = {
     reviewAdminActionTaskSteps: ReviewAdminActionTask
     reviewListingErrorTaskSteps: ReviewListingErrorTask
     reviewIncompleteAppealTaskSteps: ReviewIncompleteAppealTask
+    reviewNonCompliantAppealTaskSteps: ReviewNonCompliantAppealTask
     listingErrorSteps: ListingError
     uploadResponseSteps: UploadResponse
     sendToFTASteps: SendToFTA
@@ -103,8 +108,10 @@ type MyStepsFixtures = {
     referredByAdminSteps: ReferredByAdmin
     sendCaseToTcwSteps: SendCaseToTcw
     referredByJudgeSteps: ReferredByJudge
+    referredToInterlocSteps: ReferredToInterloc
+    ftaNotProvidedAppointeeDetailsSteps: FtaNotProvidedAppointeeDetails
+    ReviewFTAValidityChallengeSteps: ReviewFTAValidityChallengeTask
     accessibilitySteps: AccessibilitySteps
-
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -148,7 +155,11 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
         const reviewIncompleteAppealTaskSteps = new ReviewIncompleteAppealTask(page);
         await use(reviewIncompleteAppealTaskSteps);
     },
-    sendToJudgeSteps: async ({page}, use) => {
+    reviewNonCompliantAppealTaskSteps:async ({ page }, use) => {
+        const reviewNonCompliantAppealTaskSteps = new ReviewNonCompliantAppealTask(page);
+        await use(reviewNonCompliantAppealTaskSteps);
+    },
+    sendToJudgeSteps:async ({page}, use) => {
         const sendToJudgeSteps = new SendToJudge(page);
         await use(sendToJudgeSteps);
     },
@@ -308,6 +319,18 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     referredByJudgeSteps:async ({page}, use) => {
         const ReferredByJudgeSteps = new ReferredByJudge(page);
         await use(ReferredByJudgeSteps);
+    },
+    referredToInterlocSteps:async ({page}, use) => {
+        const referredToInterlocSteps = new ReferredToInterloc(page);
+        await use(referredToInterlocSteps);
+    },
+    ftaNotProvidedAppointeeDetailsSteps:async ({page}, use) => {
+        const ftaNotProvidedAppointeeDetailsSteps = new FtaNotProvidedAppointeeDetails(page);
+        await use(ftaNotProvidedAppointeeDetailsSteps);
+    },
+    ReviewFTAValidityChallengeSteps: async ({ page }, use) => {
+        const ReviewFTAValidityChallengeSteps = new ReviewFTAValidityChallengeTask(page);
+        await use(ReviewFTAValidityChallengeSteps);
     },
     accessibilitySteps: async ({ page }, use) => {
         const accessibilitySteps = new AccessibilitySteps(page);
