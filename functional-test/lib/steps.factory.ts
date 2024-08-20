@@ -55,6 +55,7 @@ import {UploadResponse} from "../fixtures/steps/upload.response";
 import { ReferredToInterloc } from '../fixtures/steps/referred.to.interloc';
 import { FtaNotProvidedAppointeeDetails } from '../fixtures/steps/fta.not.provided.appointee.details';
 import { ReviewFTAValidityChallengeTask } from '../fixtures/steps/work-allocation/review.fta.validity.challenge.task';
+import { ReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/review.postponement.request.task';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -111,6 +112,7 @@ type MyStepsFixtures = {
     referredToInterlocSteps: ReferredToInterloc
     ftaNotProvidedAppointeeDetailsSteps: FtaNotProvidedAppointeeDetails
     ReviewFTAValidityChallengeSteps: ReviewFTAValidityChallengeTask
+    reviewPostponementRequestTaskSteps: ReviewPostponementRequestTask
     accessibilitySteps: AccessibilitySteps
 };
 
@@ -332,6 +334,10 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
         const ReviewFTAValidityChallengeSteps = new ReviewFTAValidityChallengeTask(page);
         await use(ReviewFTAValidityChallengeSteps);
     },
+    reviewPostponementRequestTaskSteps: async ({ page }, use) => {
+        const ReviewPostponementRequestTaskSteps = new ReviewPostponementRequestTask(page);
+        await use(ReviewPostponementRequestTaskSteps);
+    },  
     accessibilitySteps: async ({ page }, use) => {
         const accessibilitySteps = new AccessibilitySteps(page);
         await use(accessibilitySteps);

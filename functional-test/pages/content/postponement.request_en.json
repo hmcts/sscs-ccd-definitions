@@ -1,0 +1,41 @@
+{
+    "postponementRequestHeading" : "Postponement request",
+    "postponementRequestDetails" : "We would like to delay the hearing, since the Judge cannot attend this day.",
+    "postponementRequestEventName" : "Postponement request",
+
+    "eventHeading": "Postponement Request",
+    "name": "Review postponement request - LO",
+    "priority": "urgent",
+    "assignedToWhenNotAssigned": "Unassigned",
+    "assignedTo": "SSCS cw",
+    "unassignedManageOptions": [
+        "Assign to me"
+    ],
+    "assignedManageOptions": [
+        "Cancel task",
+        "Reassign task",
+        "Unassign task"
+    ],
+    "unassignedManageOptionsForCaseAllocator": [
+        "Assign task",
+        "Cancel task",
+        "Assign to me"
+    ],
+    "assignedManageOptionsForCaseAllocator": [
+        "Cancel task",
+        "Mark as done",
+        "Reassign task",
+        "Unassign task"
+    ],
+    "nextStepsOptions": [
+        "Amend interloc review state",
+        "Issue interlocutory decision",
+        "Issue directions notice",
+        "Send to admin",
+        "Send to Judge",
+        "Action Postponement Request"
+    ],
+    "nextStepsOptionsTCW": [
+        "Action Postponement Request"
+    ]
+}
