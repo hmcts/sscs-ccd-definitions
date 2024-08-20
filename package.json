@@ -24,6 +24,7 @@
     "test:accessibility": "yarn install && npx playwright test --config functional-test/playwright.config.ts --project chromium --reporter=html --grep @accessibility"
   },
   "dependencies": {
+    "@axe-core/playwright": "^4.9.1",
     "@cucumber/cucumber": "^9.5.0",
     "@hmcts/nodejs-healthcheck": "^1.8.0",
     "@hmcts/properties-volume": "^1.1.0",
