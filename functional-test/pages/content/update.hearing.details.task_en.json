@@ -7,6 +7,8 @@
         "Assign to me"
     ],
     "assignedManageOptions": [
+        "Cancel task",
+        "Mark as done",
         "Reassign task",
         "Unassign task"
     ],

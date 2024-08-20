@@ -34,18 +34,11 @@ export class UpdateHearingDetailsTask extends BaseStep {
         await this.homePage.delay(3000);
         await webActions.clickSubmitButton();
 
-        // await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
-        //     eventTestData.eventDescriptionInput);
-        // await this.eventNameAndDescriptionPage.confirmSubmission();
-        // await expect(this.homePage.summaryTab).toBeVisible();
-        // await this.homePage.delay(3000);
-
         // Verifying History tab + end state
         await this.verifyHistoryTabDetails("Hearing Today");
         await this.historyTab.verifyPageContentByKeyValue('End state', 'With FTA');
         await this.historyTab.verifyPageContentByKeyValue('Event', 'Hearing Today');
-        //await this.historyTab.verifyPageContentByKeyValue('Comment', 'Event Description for Automation Verification');
-
+       
         await this.homePage.clickSignOut();
     }
 
@@ -55,7 +48,7 @@ export class UpdateHearingDetailsTask extends BaseStep {
         await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
         await this.homePage.delay(2000);
 
-        test.setTimeout(450000);
+        test.setTimeout(250000);
         await this.homePage.navigateToTab('Tasks');
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
         await this.tasksTab.verifyPageContentByKeyValue(task.name, 'Assigned to', task.assignedToWhenNotAssigned);
@@ -72,8 +65,8 @@ export class UpdateHearingDetailsTask extends BaseStep {
         await this.homePage.navigateToTab('Tasks');
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
         await this.tasksTab.verifyPageContentByKeyValue(task.name, 'Assigned to', task.assignedToWhenNotAssigned);
-        await this.tasksTab.assignTaskToAdminUser(task.name, credentials.hearingCentreTeamLead.email);
-
+        await this.tasksTab.selfAssignTask(task.name);
+    
         await this.tasksTab.verifyTaskIsDisplayed(task.name);
         await this.tasksTab.verifyPageContentByKeyValue(task.name, 'Assigned to', task.assignedTo);
         await this.tasksTab.verifyManageOptions(task.name, task.assignedManageOptions);
