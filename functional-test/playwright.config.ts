@@ -17,11 +17,7 @@ module.exports = defineConfig({
   },
 
   /* Opt out of parallel tests on CI. */
-<<<<<<< HEAD
   workers: 6,
-=======
-  workers: 4,
->>>>>>> automation-test-release-3
   // workers: 20,
   reporter: [["html", { open: 'never',
     outputDir: 'playwright-report',
