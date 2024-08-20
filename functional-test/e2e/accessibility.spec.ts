@@ -1,6 +1,5 @@
 import {test} from "../lib/steps.factory";
 import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.factory";
-import accessibility from "../helpers/accessibility";
 
 let firstCaseId: string;
 let secondCaseId: string;
