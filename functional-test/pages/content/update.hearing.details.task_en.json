@@ -1,0 +1,21 @@
+{
+    "name": "Update Hearing Details - RPC",
+    "priority": "high",
+    "assignedToWhenNotAssigned": "Unassigned",
+    "assignedTo": "SSCS regionleader",
+    "unassignedManageOptions": [
+        "Assign to me"
+    ],
+    "assignedManageOptions": [
+        "Reassign task",
+        "Unassign task"
+    ],
+    "unassignedManageOptionsForCaseAllocator": [
+        "Assign task",
+        "Cancel task",
+        "Assign to me"
+    ],
+    "nextStepsOptions": [
+        "Hearing tab"
+    ]
+}

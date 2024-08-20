@@ -48,6 +48,7 @@ import { EnhancedConfidentiality } from '../fixtures/steps/enhanced.confidential
 import { use } from "chai";
 import { SendToInterloc } from '../fixtures/steps/send.to.interloc';
 import { ReferredByAdmin } from '../fixtures/steps/referred.by.admin';
+import { UpdateHearingDetailsTask } from '../fixtures/steps/work-allocation/update.hearing.details.task';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -98,6 +99,7 @@ type MyStepsFixtures = {
     enhancedConfidentialitySteps: EnhancedConfidentiality
     sendToInterlocSteps: SendToInterloc
     referredByAdminSteps: ReferredByAdmin
+    updateHearingDetailsSteps: UpdateHearingDetailsTask
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -292,5 +294,9 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     referredByAdminSteps:async ({page}, use) => {
         const ReferredByAdminSteps = new ReferredByAdmin(page);
         await use(ReferredByAdminSteps);
+    },
+    updateHearingDetailsSteps: async ({ page }, use) => {
+        const updateHearingDetailsSteps = new UpdateHearingDetailsTask(page);
+        await use(updateHearingDetailsSteps);
     }
 })
