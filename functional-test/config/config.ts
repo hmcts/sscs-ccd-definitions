@@ -2,8 +2,10 @@ import path from "path";
 
 export const urls = {
 
-  tribunalsApiUri: process.env.TEST_E2E_API_URI || '',
-  xuiUrl: process.env.TEST_E2E_URL_WEB ||'' ,
+  tribunalsApiUri: process.env.TEST_E2E_API_URI || 'https://sscs-tribunals-api-pr-3891.preview.platform.hmcts.net',
+  xuiUrl: process.env.TEST_E2E_URL_WEB || 'https://xui-sscs-tribunals-api-pr-3891.preview.platform.hmcts.net/' ,
+  // tribunalsApiUri: process.env.TEST_E2E_API_URI || 'http://sscs-tribunals-api-aat.service.core-compute-aat.internal',
+  // xuiUrl: process.env.TEST_E2E_URL_WEB || 'https://manage-case.aat.platform.hmcts.net',
   idamUrl : process.env.IDAM_URL || 'https://idam-api.aat.platform.hmcts.net',
   s2sUrl : process.env.S2S_URL || 'http://rpe-service-auth-provider-aat.service.core-compute-aat.internal',
   ccdApiUrl : process.env.CCD_API_URL || 'http://ccd-data-store-api-aat.service.core-compute-aat.internal'

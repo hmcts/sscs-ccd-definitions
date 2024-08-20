@@ -46,6 +46,8 @@ export class UploadResponse extends BaseStep {
         for (const linkName of this.presetLinks) {
             await this.verifyHistoryTabLink(linkName);
         }
+
+        await this.homePage.delay(3000);
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Ready to list");
         // await performAppealDormantOnCase(pipCaseId);
@@ -58,9 +60,10 @@ export class UploadResponse extends BaseStep {
 
         await this.checkYourAnswersPage.verifyCYAPageContentWithPHE("Upload response", uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
+        await this.homePage.clickSignOut();
 
         await this.homePage.delay(3000);
-        await this.loginUserWithCaseId(credentials.amCaseWorker,true, caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker,false, caseId);
     
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Ready to list");
@@ -76,9 +79,10 @@ export class UploadResponse extends BaseStep {
 
         await this.checkYourAnswersPage.verifyCYAPageContentWithUCB("Upload response", uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
+        await this.homePage.clickSignOut();
 
         await this.homePage.delay(3000);
-        await this.loginUserWithCaseId(credentials.amCaseWorker,true, caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker,false, caseId);
 
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Ready to list");

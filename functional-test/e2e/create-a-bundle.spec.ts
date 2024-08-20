@@ -8,7 +8,7 @@ test.beforeAll("Case has to be Created", async () => {
     caseId = await createCaseBasedOnCaseType('PIP');
 });
 
-test("As a caseworker create a bundle", {tag: '@wip-test'}, async ({createBundleSteps}) => {
+test("As a caseworker create a bundle", async ({createBundleSteps}) => {
     test.slow();
     await createBundleSteps.performUploadBundleResponse(caseId);
 });
