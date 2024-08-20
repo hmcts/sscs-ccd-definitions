@@ -5,7 +5,7 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 let caseId : string;
 
 
-test.describe("Create a new hearing for an List assist case", {tag: '@pipeline'}, async() => {
+test.describe("Create a new hearing for an List assist case", {tag: '@master-pipeline'}, async() => {
     
     test("Trigger a new hearing & cancellation for DLA case", {tag: '@wip-test'}, async ({ uploadResponseSteps, hearingSteps }) => {
         caseId = await createCaseBasedOnCaseType('DLASANDL');

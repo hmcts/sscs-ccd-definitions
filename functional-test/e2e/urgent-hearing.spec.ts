@@ -3,7 +3,7 @@ import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.fa
 import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 
-test.describe("Urgent hearing test", {tag: '@pipeline'}, async() => {
+test.describe("Urgent hearing test", {tag: '@master-pipeline'}, async() => {
 
     let caseId : string;
 

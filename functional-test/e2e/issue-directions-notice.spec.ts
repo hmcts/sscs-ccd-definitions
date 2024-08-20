@@ -4,9 +4,9 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 let caseId: string;
 
-test.describe("Issue direction test", {tag: '@pipeline'}, async() => {
+test.describe("Issue direction test", {tag: '@master-pipeline'}, async() => {
 
-    test("Issue Direction Notice - Pre Hearing - Normal Tax Credit Application - Appeal to Proceed",
+    test("Issue Direction Notice - Pre Hearing - Normal Tax Credit Application - Appeal to Proceed", 
         async ({issueDirectionsNoticeSteps}) => {
             test.slow();
             await issueDirectionsNoticeSteps.performIssueDirectionNoticePreHearingAppealToProceed();
