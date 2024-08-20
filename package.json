@@ -11,8 +11,8 @@
     "test": "NODE_PATH=. mocha test/unit/definitions/**/*.js",
     "sonar-scan": "node_modules/sonar-scanner/bin/sonar-scanner",
     "test:preview": "echo preview test infra is wip",
-    "test:aat": "cd sscs-ccd-e2e-tests && yarn install && yarn test:fullfunctional",
-    "test:functional": "ENVIRONMENT=${ENVIRONMENT} ./bin/run-functional-tests.sh",
+    "test:aat": "echo skip decomissioned protractor test",
+    "test:functional": "echo skip decomissioned protractor test",
     "test:functional-headless": "yarn playwright install && npx playwright test --config functional-test/playwright.config.ts --project chromium --reporter=html --grep-invert @work-allocation",
     "test:functional-head": "yarn playwright install && npx playwright test --config functional-test/playwright.config.ts --project chromium --headed --reporter=html --grep-invert @work-allocation",
     "start": "node index.js",
@@ -28,7 +28,7 @@
     "@cucumber/cucumber": "^9.5.0",
     "@hmcts/nodejs-healthcheck": "^1.8.0",
     "@hmcts/properties-volume": "^1.1.0",
-    "codeceptjs": "^3.6.3",
+    "codeceptjs": "^3.6.5",
     "config": "^3.3.9",
     "eslint-plugin-codeceptjs": "^1.3.0",
     "express": "^4.19.2",
@@ -59,10 +59,11 @@
     "typescript": "^5.3.3"
   },
   "resolutions": {
-    "semver": "^7.5.4",
+    "axios": "^1.7.4",
     "braces": "^3.0.3",
-    "tar": "^6.2.1",
-    "phin": "^3.7.1"
+    "phin": "^3.7.1",
+    "semver": "^7.5.4",
+    "tar": "^6.2.1"
   },
   "packageManager": "yarn@3.5.0"
 }
