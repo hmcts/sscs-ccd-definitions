@@ -50,6 +50,7 @@ import { SendToInterloc } from '../fixtures/steps/send.to.interloc';
 import { ReferredByAdmin } from '../fixtures/steps/referred.by.admin';
 import { SendCaseToTcw } from '../fixtures/steps/send.case.to.tcw';
 import { ReferredByJudge } from '../fixtures/steps/referred.by.judge';
+import { ReferredToInterloc } from '../fixtures/steps/referred.to.interloc';
 import { FtaNotProvidedAppointeeDetails } from '../fixtures/steps/fta.not.provided.appointee.details';
 
 type MyStepsFixtures = {
@@ -103,6 +104,7 @@ type MyStepsFixtures = {
     referredByAdminSteps: ReferredByAdmin
     sendCaseToTcwSteps: SendCaseToTcw
     referredByJudgeSteps: ReferredByJudge
+    referredToInterlocSteps: ReferredToInterloc
     ftaNotProvidedAppointeeDetailsSteps: FtaNotProvidedAppointeeDetails
 };
 
@@ -306,6 +308,10 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     referredByJudgeSteps:async ({page}, use) => {
         const ReferredByJudgeSteps = new ReferredByJudge(page);
         await use(ReferredByJudgeSteps);
+    },
+    referredToInterlocSteps:async ({page}, use) => {
+        const referredToInterlocSteps = new ReferredToInterloc(page);
+        await use(referredToInterlocSteps);
     },
     ftaNotProvidedAppointeeDetailsSteps:async ({page}, use) => {
         const ftaNotProvidedAppointeeDetailsSteps = new FtaNotProvidedAppointeeDetails(page);
