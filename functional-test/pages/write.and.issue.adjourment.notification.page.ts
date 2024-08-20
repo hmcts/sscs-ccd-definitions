@@ -22,8 +22,12 @@ export class WriteAndIssueAdjourmentNotificationPage {
         await webActions.verifyPageLabel('span.form-label', writeAdjournmentNoticeData.generateNoticeLabel);
     }
 
-    async inputUploadOrGenerateContentPageData() {
-        await webActions.clickElementById('#adjournCaseGenerateNotice_Yes');
+    async inputUploadOrGenerateContentPageData(generateContentFlag : boolean = true) {
+        if (generateContentFlag) {
+            await webActions.clickElementById('#adjournCaseGenerateNotice_Yes');
+        } else {
+            await webActions.clickElementById('#adjournCaseGenerateNotice_No');
+        }
     }
 
     async verifyArePanelMembersExcludedPage() {
@@ -52,6 +56,38 @@ export class WriteAndIssueAdjourmentNotificationPage {
         await webActions.inputField('[field_id=\'adjournCasePanelMember2\'] .mat-autocomplete-trigger', writeAdjournmentNoticeData.nameOfMedicallyQualifiedPanelMemberInput);
         await webActions.inputField('[field_id=\'adjournCasePanelMember3\'] .mat-autocomplete-trigger', writeAdjournmentNoticeData.otherPanelMemberInput);
     }
+
+    async verifyAreYouMakingDirectionsToThePartiesPage() {
+        await webActions.verifyPageLabel('.govuk-caption-l', writeAdjournmentNoticeData.writeAdjournmentNoticeEventNameCaptor);
+        await webActions.verifyPageLabel('h1.govuk-heading-l', writeAdjournmentNoticeData.areYouMakingDirectionsToPartiesPageHeading);
+        await webActions.verifyPageLabel('span.form-label', writeAdjournmentNoticeData.areYouMakingDirectionsToPartiesLabel);
+        await webActions.verifyPageLabel('[for=\'adjournCaseAreDirectionsBeingMadeToParties_Yes\']', writeAdjournmentNoticeData.yesLabel);
+        await webActions.verifyPageLabel('[for=\'adjournCaseAreDirectionsBeingMadeToParties_No\']', writeAdjournmentNoticeData.noLabel);
+    }
+
+    async inputAreYouMakingDirectionsToThePartiesPageData(directionToPartiesFlag : boolean = true) {
+        if (directionToPartiesFlag === true) {
+            await webActions.clickElementById('#adjournCaseAreDirectionsBeingMadeToParties_Yes');
+        } else {
+            await webActions.clickElementById('#adjournCaseAreDirectionsBeingMadeToParties_No');
+        }
+    }
+
+
+    async verifyDirectionsDueDatePage() {
+        await webActions.verifyPageLabel('.govuk-caption-l', writeAdjournmentNoticeData.writeAdjournmentNoticeEventNameCaptor);
+        await webActions.verifyPageLabel('h1.govuk-heading-l', writeAdjournmentNoticeData.directionsDueDatePageHeading);
+        await webActions.verifyPageLabel('[for=\'adjournCaseDirectionsDueDateDaysOffset\'] > .form-label', writeAdjournmentNoticeData.directionsDueDateLabel);
+        await webActions.verifyPageLabel('[for=\'adjournCaseDirectionsDueDateDaysOffset-0\']', writeAdjournmentNoticeData.otherWithoutOptionalLabel);
+        await webActions.verifyPageLabel('[for=\'adjournCaseDirectionsDueDateDaysOffset-28\']', writeAdjournmentNoticeData["28DaysLabel"]);
+        await webActions.verifyPageLabel('[for=\'adjournCaseDirectionsDueDateDaysOffset-21\']', writeAdjournmentNoticeData["21DaysLabel"]);
+        await webActions.verifyPageLabel('[for=\'adjournCaseDirectionsDueDateDaysOffset-14\']', writeAdjournmentNoticeData["14DaysLabel"]);
+    }
+
+    async inputDirectionsDueDatePageData() {
+        await webActions.clickElementById('#adjournCaseDirectionsDueDateDaysOffset div:nth-of-type(2) > .form-control');
+    }
+
 
     async verifyTypeOfHearingPage() {
         await webActions.verifyPageLabel('.govuk-caption-l', writeAdjournmentNoticeData.writeAdjournmentNoticeEventNameCaptor);
@@ -214,6 +250,10 @@ export class WriteAndIssueAdjourmentNotificationPage {
         await webActions.verifyPageLabel('.form-hint', writeAdjournmentNoticeData.allDocumentsMustBePDFFormatted);
     }
 
+    async inputPreviewDocumentPageData() {
+        await webActions.uploadFileUsingAFileChooser('#adjournCasePreviewDocument', writeAdjournmentNoticeData.previewAdjournmentLabelFileInput);
+    }
+
     async verifyPageContentForCheckYourAnswersPage() {
 
         await webActions.verifyPageLabel('h1.govuk-heading-l', writeAdjournmentNoticeData.checkYourAnswersPageHeading);
@@ -271,6 +311,78 @@ export class WriteAndIssueAdjourmentNotificationPage {
         await webActions.verifyPageLabel('td[_ngcontent-ng-c4245273148]',writeAdjournmentNoticeData.listFirstOnTheSessionLabel);
         await webActions.verifyPageLabel('tbody[_ngcontent-ng-c3159966179] > tr:nth-of-type(2) > #complex-panel-simple-field-label > .text-16',writeAdjournmentNoticeData.provideTimeWithoutOptionalLabel);
         await webActions.verifyPageLabel('tbody[_ngcontent-ng-c3159966179] ccd-read-fixed-radio-list-field > .text-16',writeAdjournmentNoticeData.AMLabel);
+    }
+
+    async verifyPageContentForCheckYourAnswersPageNoGenerateNotice(directionsFlag : boolean = false) {
+
+        //The below commented values are not getting picked up by the test.
+        //await webActions.verifyPageLabel('h1.govuk-heading-l', writeAdjournmentNoticeData.previewAdjournmentPageHeading);
+        //await webActions.verifyPageLabel('.heading-h2', writeAdjournmentNoticeData.checkYourAnswersSectionHeading);
+        //await webActions.verifyPageLabel('.check-your-answers > [_ngcontent-ng-c645309043] > .text-16', writeAdjournmentNoticeData.checkTheInformationBelowCarefullyLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(1) > .valign-top > .text-16',writeAdjournmentNoticeData.generateNoticeLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(1) > .form-cell .text-16',writeAdjournmentNoticeData.noLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(2) > .valign-top > .text-16',writeAdjournmentNoticeData.arePanelMembersExcludedLabel);
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(2) > .form-cell .text-16',writeAdjournmentNoticeData.yesLabel);
+
+        await webActions.verifyPageLabel('.form-table tr:nth-of-type(3) > .valign-top > .text-16',writeAdjournmentNoticeData.areYouMakingDirectionsToPartiesLabel);
+        if (!directionsFlag) {
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(3) > .form-cell .text-16',writeAdjournmentNoticeData.noLabel);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(4) > .valign-top > .text-16',writeAdjournmentNoticeData.confirmTheFormatOfTheNextHearingLabel);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(4) > .form-cell .text-16',writeAdjournmentNoticeData.faceToFaceLabel);
+
+        } else {
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(3) > .form-cell .text-16',writeAdjournmentNoticeData.yesLabel);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(4) > .valign-top > .text-16',writeAdjournmentNoticeData.directionsDueDateLabel);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(4) > .form-cell .text-16',writeAdjournmentNoticeData["28DaysLabel"]);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(5) > .valign-top > .text-16',writeAdjournmentNoticeData.confirmTheFormatOfTheNextHearingLabel);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(5) > .form-cell .text-16',writeAdjournmentNoticeData.faceToFaceLabel);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(6) > .valign-top > .text-16',writeAdjournmentNoticeData.whereShouldNextHearingBeListedLabel);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(6) > .form-cell .text-16',writeAdjournmentNoticeData.somewhereElseLabel);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(7) > .valign-top > .text-16',writeAdjournmentNoticeData.specifyTheVenue);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(7) > .form-cell .text-16',writeAdjournmentNoticeData.hearingVenueSelectedInput);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(8) > .valign-top > .text-16',writeAdjournmentNoticeData.tribunalDirectPOToAttendWithoutOptionalLabel);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(8) > .form-cell .text-16',writeAdjournmentNoticeData.yesLabel);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(9) > .valign-top > .text-16',writeAdjournmentNoticeData.howLongShouldTheNextHearingBeListedForLabel);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(9) > .form-cell .text-16',writeAdjournmentNoticeData.nonStandardTimeSlotLabel);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(10) > .valign-top > .text-16',writeAdjournmentNoticeData.durationLengthLabel);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(10) > .form-cell .text-16',writeAdjournmentNoticeData.durationLengthInput);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(11) > .valign-top > .text-16',writeAdjournmentNoticeData.minutesOrSessionsLabel);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(11) > .form-cell .text-16',writeAdjournmentNoticeData.minutesOrSessionsInput);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(12) > .valign-top > .text-16',writeAdjournmentNoticeData.isAnInterpreterRequiredForHearingWithoutOptionalLabel);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(12) > .form-cell .text-16',writeAdjournmentNoticeData.yesLabel);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(13) > .valign-top > .text-16',writeAdjournmentNoticeData.whatLanguageDoTheyNeedToSpeakWithoutOptionalLabel);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(13) > .form-cell .text-16',writeAdjournmentNoticeData.languageOptionInput);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(14) > .valign-top > .text-16',writeAdjournmentNoticeData.whenShouldNextHearingBeLabel);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(14) > .form-cell .text-16',writeAdjournmentNoticeData.firstAvailableDateAfterLabel);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(15) > .valign-top > .text-16',writeAdjournmentNoticeData.provideDateOrPeriodLabel);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(15) > .form-cell .text-16',writeAdjournmentNoticeData.providePeriodLabel);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(16) > .valign-top > .text-16',writeAdjournmentNoticeData.providePeriodLabel);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(16) > .form-cell .text-16',writeAdjournmentNoticeData["90DaysLabel"]);
+        }
+
+
+        /*
+
+        await webActions.verifyPageLabel('td[_ngcontent-ng-c4245273148]',writeAdjournmentNoticeData.listFirstOnTheSessionLabel);
+        await webActions.verifyPageLabel('tbody[_ngcontent-ng-c3159966179] > tr:nth-of-type(2) > #complex-panel-simple-field-label > .text-16',writeAdjournmentNoticeData.provideTimeWithoutOptionalLabel);
+        await webActions.verifyPageLabel('tbody[_ngcontent-ng-c3159966179] ccd-read-fixed-radio-list-field > .text-16',writeAdjournmentNoticeData.AMLabel);*/
 
         /*await webActions.verifyPageLabel('.form-table tr:nth-of-type(17) > .valign-top > .text-16',writeAdjournmentNoticeData.reasonsForAdjournmentLabel);
         await webActions.verifyPageLabel('.form-table tr:nth-of-type(17) > .form-cell .text-16',writeAdjournmentNoticeData.reasonsForAdjournmentInput);

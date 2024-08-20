@@ -26,6 +26,9 @@
     "nameOfMedicallyQualifiedPanelMemberInput" : "Panel Member - Doctor",
     "otherPanelMemberInput" : "Panel Member - Clerk",
 
+    "areYouMakingDirectionsToThePartiesPageHeading" : "Are you making directions to the parties?",
+    "areYouMakingDirectionsToThePartiesLabel" : "Are you making directions to the parties?",
+
     "typeOfHearingPageHeading": "Type of hearing",
     "whatTypeOfHearingWasHeld" : "What type of hearing was held?",
     "faceToFaceLabel" : "Face to face",
@@ -71,6 +74,7 @@
 
     "directionsDueDatePageHeading" : "Directions due date",
     "directionsDueDateLabel" : "Directions due date",
+    "28DaysLabel" : "28 days",
     "21DaysLabel" : "21 days",
     "14DaysLabel" : "14 days",
 
@@ -106,6 +110,7 @@
     "previewAdjournmentPageHeadingNotice" : "Preview Adjournment Notice",
     "previewAdjournmentLabel" : "Preview Adjournment",
     "allDocumentsMustBePDFFormatted" : "All documents must be PDF formatted",
+    "previewAdjournmentLabelFileInput" : "testfile1.pdf",
 
     "checkYourAnswersPageHeading" : "Write adjournment notice",
     "checkYourAnswersSectionHeading" : "Check your answers",
