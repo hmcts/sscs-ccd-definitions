@@ -53,7 +53,7 @@ esac
 
 if [[ ${ENV} == "local" ]]; then
     EM_CCD_ORCHESTRATOR_URL="http://host.docker.internal:4623"
-    TRIBUNALS_API_URL="http://host.docker.internal:8080"
+    TRIBUNALS_API_URL="http://host.docker.internal:8008"
     TYA_NOTIFICATIONS_API_URL="http://host.docker.internal:8081"
     BULK_SCAN_API_URL="http://host.docker.internal:8090"
     BULK_SCAN_ORCHESTRATOR_URL="http://host.docker.internal:8099"

@@ -57,8 +57,9 @@ import { ListingRequirementPage } from '../../pages/listing.requirements.page';
 import { ReissueFurtherEvidencePage } from '../../pages/reissue.further.evidence.page';
 import { PostponementPages } from "../../pages/postponement.page";
 import { PrepareCaseForHearingPage } from '../../pages/prepare.case.for.hearing.page';
-import { ReviewConfidentialityPage } from '../../pages/review.confidentiality.page';
-import { ChallengeValidityPage } from '../../pages/review.fta.validity.challenge.page'
+import { ReviewConfidentialityPage } from '../../pages/review.confidentiality.page'
+import { SendToJudgePage } from '../../pages/send.to.judge.page';
+import { ChallengeValidityPage } from '../../pages/review.fta.validity.challenge.page';
 
 
 export abstract class BaseStep {
@@ -113,6 +114,7 @@ export abstract class BaseStep {
   protected sendCaseToTcwPage: SendCaseToTcwPage;
   protected writeFinalDecisionPage : WriteFinalDecisionPages;
   protected sendToInterlocPrevalidPage : SendToInterlocPrevalidPage;
+  protected sendToJudgePage: SendToJudgePage;
   protected notListablePage: NotListablePage;
   protected updateNotListablePage: UpdateNotListablePage;
   protected searchFilterPage: SearchFilterPage;
@@ -175,6 +177,7 @@ export abstract class BaseStep {
         this.sendCaseToTcwPage = new SendCaseToTcwPage(this.page);
         this.writeFinalDecisionPage = new WriteFinalDecisionPages(page);
         this.sendToInterlocPrevalidPage = new SendToInterlocPrevalidPage(page);
+        this.sendToJudgePage = new SendToJudgePage(this.page);
         this.notListablePage = new NotListablePage(this.page);
         this.updateNotListablePage = new UpdateNotListablePage(this.page);
         this.searchFilterPage = new SearchFilterPage(this.page);
