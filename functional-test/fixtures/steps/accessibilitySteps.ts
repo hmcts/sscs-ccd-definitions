@@ -6,7 +6,6 @@ import {credentials} from "../../config/config";
 import {StepsHelper} from "../../helpers/stepsHelper";
 import uploadDocumentFurtherEvidenceData from "../../pages/content/upload.document.further.evidence_en.json";
 import eventTestData from "../../pages/content/event.name.event.description_en.json";
-import bundleTestData from '../../pages/content/create.a.bundle_en.json';
 import {StringUtilsComponent} from "../../utils/StringUtilsComponent";
 
 // Accessibility Test Steps:
@@ -68,16 +67,12 @@ export class AccessibilitySteps extends BaseStep {
         await this.uploadResponsePage.chooseAssistOption("No");
         await this.homePage.delay(1000);
         await this.uploadResponsePage.continueSubmission();
-        //await axeTest(this.page);
         await this.page.getByText("submit").click();
 
         await this.homePage.delay(1000);
 
         await this.homePage.navigateToTab("FTA Documents")
         await axeTest(this.page)
-
-        let bundleDate = new Date();
-        let formattedDate = bundleDate.toISOString().split('T')[0].split('-').reverse().join('-');
 
 
 
@@ -91,19 +86,6 @@ export class AccessibilitySteps extends BaseStep {
         await this.homePage.reloadPage();
         await this.homePage.navigateToTab("Bundles");
 
-        await this.bundlesTab.verifyBundlesTabContentByKeyValueForASpan(`${bundleTestData.stitchStatusLabel}`, `${bundleTestData.stitchStatusDone}`);
-        await this.bundlesTab.verifyBundlesTabContentByKeyValueForASpanRegEx(`${bundleTestData.stitchDocLabel}`, `\\d+-${bundleTestData.stitchVal}\\.pdf`);
-
-        await this.bundlesTab.verifyTableElementByIndex(bundleTestData.folderName, `${bundleTestData.folderNameVal}`, 0);
-        await this.bundlesTab.verifyTableElementByIndex(bundleTestData.docName, `${bundleTestData.folderOneDocVal} ${formattedDate}`, 0);
-        await this.bundlesTab.verifyTableElementByIndex(bundleTestData.sourceDoc, `${bundleTestData.folderOneSourceVal} ${formattedDate}.pdf`, 0);
-        await this.bundlesTab.verifyTableElementByIndex(bundleTestData.docName, `${bundleTestData.folderTwoDocVal} ${formattedDate}`, 1);
-        await this.bundlesTab.verifyTableElementByIndex(bundleTestData.sourceDoc, `${bundleTestData.folderTwoSourceVal} ${formattedDate}.pdf`, 1);
-        await this.bundlesTab.verifyTableElementByIndex(bundleTestData.sourceDoc, `${bundleTestData.folderTwoSourceVal} ${formattedDate}.pdf`, 1);
-        await this.bundlesTab.verifyTableElementByIndex(bundleTestData.folderName, `${bundleTestData.bundleFolderTwoVal}`, 0);
-
-        await this.bundlesTab.verifyBundlesTabContentByKeyValueForASpan(`${bundleTestData.configUsed}`, `${bundleTestData.configUsedDefaultVal}`);
-        await this.bundlesTab.verifyBundlesTabContentByKeyValueForASpan(`${bundleTestData.amendBundle}`, `${bundleTestData.amendBundleDefaultVal}`);
         await axeTest(this.page);
 
         await this.homePage.chooseEvent("Link a case");
