@@ -89,7 +89,7 @@ export class IssueDirectionsNotice extends BaseStep {
     async performIssueDirectionNoticePreHearingAppealToProceed() {
 
         let taxCreditCaseId = await createCaseBasedOnCaseType('TAX CREDIT');
-        await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
+        await new Promise(f => setTimeout(f, 30000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : ' + credentials.hmrcUser.email)
         let responseWriterToken: string = await accessToken(credentials.hmrcUser);
         let serviceToken: string = await getSSCSServiceToken();
@@ -145,7 +145,7 @@ export class IssueDirectionsNotice extends BaseStep {
 
         //let esaCaseId = await createCaseBasedOnCaseType('ESA');
         let esaCaseId = await createCaseBasedOnCaseType('PIP');
-        await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
+        await new Promise(f => setTimeout(f, 30000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
         let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
         let serviceToken: string = await getSSCSServiceToken();
@@ -199,7 +199,7 @@ export class IssueDirectionsNotice extends BaseStep {
 
         //let pipCaseId = await createCaseBasedOnCaseType('DLASANDL');
         let pipCaseId = await createCaseBasedOnCaseType('PIP');
-        await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
+        await new Promise(f => setTimeout(f, 30000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
         let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
         let serviceToken: string = await getSSCSServiceToken();
@@ -251,7 +251,7 @@ export class IssueDirectionsNotice extends BaseStep {
     async performIssueDirectionErrorMessages() {
         //let pipCaseId = await createCaseBasedOnCaseType('DLASANDL');
         let pipCaseId = await createCaseBasedOnCaseType('PIP');
-        await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
+        await new Promise(f => setTimeout(f, 30000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
        let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
         let serviceToken: string = await getSSCSServiceToken();
