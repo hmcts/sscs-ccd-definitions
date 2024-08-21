@@ -25,7 +25,7 @@ test.describe('Write and Issue Adjournment Notice', {tag: '@pipeline'}, async ()
             //await performAppealDormantOnCase(pipCaseId);
         });
 
-        test("Write and Issue Adjournment Notice With Generate Notice not Generate and Directions Not Issued",
+        test.only("Write and Issue Adjournment Notice With Generate Notice not Generate and Directions Not Issued",
             async ({writeAndIssueAdjournmentNoticeSteps, hearingSteps}) => {
                     test.slow();
                     let pipCaseId = await createCaseBasedOnCaseType('PIP');
@@ -42,7 +42,7 @@ test.describe('Write and Issue Adjournment Notice', {tag: '@pipeline'}, async ()
                     //await performAppealDormantOnCase(pipCaseId);
             });
 
-    test.only("Write and Issue Adjournment Notice With Generate Notice not Generate and Directions Issued",
+    test("Write and Issue Adjournment Notice With Generate Notice not Generate and Directions Issued",
         async ({writeAndIssueAdjournmentNoticeSteps, hearingSteps}) => {
             test.slow();
             let pipCaseId = await createCaseBasedOnCaseType('PIP');
@@ -55,7 +55,7 @@ test.describe('Write and Issue Adjournment Notice', {tag: '@pipeline'}, async ()
             await writeAndIssueAdjournmentNoticeSteps.performWriteAdjournmentNoticeForGenerateNoticeAndYesIssueDirections();
             await writeAndIssueAdjournmentNoticeSteps.performIssueAdjournmentForAnAppeal(true);
             await writeAndIssueAdjournmentNoticeSteps.verifyOverrideListingRequirementsForAnAppeal();
-            //await writeAndIssueAdjournmentNoticeSteps.verifyHearingsTabForTheActiveHearing();
+            await writeAndIssueAdjournmentNoticeSteps.verifyHearingsTabForACancellationStatusHearing();
             //await performAppealDormantOnCase(pipCaseId);
         });
 

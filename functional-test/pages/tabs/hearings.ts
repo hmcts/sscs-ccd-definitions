@@ -30,6 +30,11 @@ export class Hearings {
         await webActions.isLinkClickable("Cancel");
     }
 
+    async verifyCancelledHearingStatusSummary() {
+        await webActions.verifyTextVisibility("CANCELLED");
+        await webActions.verifyElementVisibility("//a[.='View details']");
+    }
+
     async clickHearingDetails() {
         await webActions.clickLink('View or edit');
     }

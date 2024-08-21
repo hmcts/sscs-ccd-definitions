@@ -313,7 +313,7 @@ export class WriteAndIssueAdjournmentNotice extends BaseStep {
         await this.writeAndIssueAdjournmentNotificationPage.inputPreviewDocumentPageData();
         await new Promise(f => setTimeout(f, 3000)); //Delay required for the Case to be ready
         await this.writeAndIssueAdjournmentNotificationPage.submitContinueBtn();
-        await new Promise(f => setTimeout(f, 3000)); //Delay required for the Case to be ready
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
 
         await this.writeAndIssueAdjournmentNotificationPage.verifyPageContentForCheckYourAnswersPageNoGenerateNotice(true);
         await this.writeAndIssueAdjournmentNotificationPage.submit();
@@ -332,6 +332,12 @@ export class WriteAndIssueAdjournmentNotice extends BaseStep {
     async verifyHearingsTabForTheActiveHearing() {
         await this.homePage.navigateToTab("Hearings");
         await this.hearingsTab.verifyHearingStatusSummary();
+        await this.hearingsTab.clickHearingDetails();
+    }
+
+    async verifyHearingsTabForACancellationStatusHearing() {
+        await this.homePage.navigateToTab("Hearings");
+        await this.hearingsTab.verifyCancellationStatusSummary();
         await this.hearingsTab.clickHearingDetails();
     }
 }
