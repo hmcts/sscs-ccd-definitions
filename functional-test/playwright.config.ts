@@ -17,7 +17,7 @@ module.exports = defineConfig({
   },
 
   /* Opt out of parallel tests on CI. */
-  workers: 6,
+  workers: 4,
   // workers: 20,
   reporter: [["html", { open: 'never',
     outputDir: 'playwright-report',
