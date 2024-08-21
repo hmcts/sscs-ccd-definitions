@@ -12,7 +12,7 @@ test.describe("Enhanced confidentiality test", {tag: '@pipeline'}, async() => {
         test.setTimeout(360000);
     });
     
-    test("Grant - Confidentiality request & verify bundle with redacted file", async ({ uploadResponseSteps, enhancedConfidentialitySteps, createBundleSteps }) => {
+    test("Grant - Confidentiality request & verify bundle with redacted file", {tag: '@preview-pipeline'}, async ({ uploadResponseSteps, enhancedConfidentialitySteps, createBundleSteps }) => {
         await uploadResponseSteps.performUploadResponseOnAUniversalCreditWithJP(caseId);
         await enhancedConfidentialitySteps.requestForConfidentiality();
         await enhancedConfidentialitySteps.grantConfidentialityForAppellant(caseId);

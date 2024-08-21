@@ -119,7 +119,7 @@ export class HomePage {
             await webActions.chooseOptionByLabel(this.caseTypeDropdown, optionToSelect);
         } else if(environment == 'aat') {
 
-            const optionToSelect = await this.page.locator('option', { hasText: `SSCS dev ${aatDefVersion.TAG}` }).textContent();
+            const optionToSelect = await this.page.locator('option', { hasText: `SSCS Case ${aatDefVersion.TAG} AAT` }).textContent();
             console.log(`case type dropdown value is ###### ${optionToSelect}`);
             await webActions.chooseOptionByLabel(this.caseTypeDropdown, optionToSelect);
         } else {

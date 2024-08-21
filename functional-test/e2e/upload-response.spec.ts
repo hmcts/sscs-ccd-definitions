@@ -4,7 +4,7 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 let caseId : string;
 
-test.describe('Upload response tests', {tag: '@master-pipeline'}, async() => {
+test.describe('Upload response tests', {tag: '@preview-pipeline'}, async() => {
 
     test("As a caseworker review response submitted with any further info", async ({ uploadResponseSteps }) => {
         test.slow();
