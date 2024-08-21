@@ -55,6 +55,7 @@ import { ReferredToInterloc } from '../fixtures/steps/referred.to.interloc';
 import { FtaNotProvidedAppointeeDetails } from '../fixtures/steps/fta.not.provided.appointee.details';
 import { ReviewFTAValidityChallengeTask } from '../fixtures/steps/work-allocation/review.fta.validity.challenge.task';
 import { ReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/review.postponement.request.task';
+import { UpdateHearingDetailsTask } from '../fixtures/steps/work-allocation/update.hearing.details.task';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -112,6 +113,7 @@ type MyStepsFixtures = {
     ftaNotProvidedAppointeeDetailsSteps: FtaNotProvidedAppointeeDetails
     ReviewFTAValidityChallengeSteps: ReviewFTAValidityChallengeTask
     reviewPostponementRequestTaskSteps: ReviewPostponementRequestTask
+    updateHearingDetailsSteps: UpdateHearingDetailsTask
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -334,5 +336,9 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     reviewPostponementRequestTaskSteps: async ({ page }, use) => {
         const ReviewPostponementRequestTaskSteps = new ReviewPostponementRequestTask(page);
         await use(ReviewPostponementRequestTaskSteps);
+    },
+    updateHearingDetailsSteps: async ({ page }, use) => {
+        const updateHearingDetailsSteps = new UpdateHearingDetailsTask(page);
+        await use(updateHearingDetailsSteps);
     }
 })
