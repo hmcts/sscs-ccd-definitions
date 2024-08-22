@@ -1,15 +1,20 @@
 import path from "path";
+const fs = require('fs');
+const yaml = require('js-yaml');
 
 export const urls = {
 
   tribunalsApiUri: process.env.TEST_E2E_API_URI || '',
-  xuiUrl: process.env.TEST_E2E_URL_WEB || '' ,
-  // tribunalsApiUri: process.env.TEST_E2E_API_URI || 'http://sscs-tribunals-api-aat.service.core-compute-aat.internal',
-  // xuiUrl: process.env.TEST_E2E_URL_WEB || 'https://manage-case.aat.platform.hmcts.net',
+  xuiUrl: process.env.TEST_E2E_URL_WEB || '',
   idamUrl : process.env.IDAM_URL || 'https://idam-api.aat.platform.hmcts.net',
   s2sUrl : process.env.S2S_URL || 'http://rpe-service-auth-provider-aat.service.core-compute-aat.internal',
   ccdApiUrl : process.env.CCD_API_URL || 'http://ccd-data-store-api-aat.service.core-compute-aat.internal'
 };
+
+export const environment = {
+  name: process.env.ENVIRONMENT ?? '',
+  aatDefVersion: yaml.load(fs.readFileSync('./benefit/VERSION.yaml', 'utf8'))
+}
 
 export const credentials = {
   caseWorker: {

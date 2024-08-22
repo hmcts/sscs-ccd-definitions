@@ -1,6 +1,7 @@
 import { expect, Locator, Page } from '@playwright/test';
 import { WebAction } from '../../common/web.action';
 import logger from '../../utils/loggerUtil';
+import { environment } from "../../config/config";
 
 const fs = require('fs');
 const yaml = require('js-yaml');
@@ -91,11 +92,8 @@ export class HomePage {
         await expect(this.page.getByText('Filters')).toBeVisible();
         console.log(`url of the page is ######## ${this.page.url()}`);
         const expUrl = this.page.url();
-
-        const environment: string = process.env.ENVIRONMENT ?? ''
-        const aatDefVersion = yaml.load(fs.readFileSync('./benefit/VERSION.yaml', 'utf8'));
         
-        if(environment == 'preview') {
+        if(environment.name == 'preview') {
             
             let matches = expUrl.match(/(\d+)/);
             let PrNo = matches[0];
@@ -104,9 +102,9 @@ export class HomePage {
             const optionToSelect = await this.page.locator('option', { hasText: PrNo }).textContent();
             console.log(`case type dropdown value is ###### ${optionToSelect}`);
             await webActions.chooseOptionByLabel(this.caseTypeDropdown, optionToSelect);
-        } else if(environment == 'aat') {
+        } else if(environment.name == 'aat') {
 
-            const optionToSelect = await this.page.locator('option', { hasText: `SSCS Case ${aatDefVersion.TAG} AAT` }).textContent();
+            const optionToSelect = await this.page.locator('option', { hasText: `SSCS Case ${environment.aatDefVersion.TAG} AAT` }).textContent();
             console.log(`case type dropdown value is ###### ${optionToSelect}`);
             await webActions.chooseOptionByLabel(this.caseTypeDropdown, optionToSelect);
         } else {
