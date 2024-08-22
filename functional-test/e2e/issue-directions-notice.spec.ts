@@ -6,13 +6,7 @@ let caseId: string;
 
 test.describe("Issue direction test", {tag: '@pipeline'}, async() => {
 
-    test("Issue Direction Notice - Invalid PIP Case - Pre Hearing - Appeal to Proceed",
-    async ({issueDirectionsNoticeSteps}) => {
-        test.slow();
-        await issueDirectionsNoticeSteps.performIssueDirectionNoticeIncompleteApplicationPreHearingAppealToProceed();
-    });
-
-    test("Issue Direction Notice - Pre Hearing - Normal Tax Credit Application - Appeal to Proceed",
+    test("Issue Direction Notice - Pre Hearing - Normal Tax Credit Application - Appeal to Proceed", 
         async ({issueDirectionsNoticeSteps}) => {
             test.slow();
             await issueDirectionsNoticeSteps.performIssueDirectionNoticePreHearingAppealToProceed();
@@ -34,6 +28,12 @@ test.describe("Issue direction test", {tag: '@pipeline'}, async() => {
         async ({issueDirectionsNoticeSteps}) => {
             test.slow();
             await issueDirectionsNoticeSteps.performIssueDirectionErrorMessages();
+        });
+
+    test("Issue Direction Notice - Invalid PIP Case - Pre Hearing - Appeal to Proceed",
+        async ({issueDirectionsNoticeSteps}) => {
+            test.slow();
+            await issueDirectionsNoticeSteps.performIssueDirectionNoticeIncompleteApplicationPreHearingAppealToProceed();
         });
 });
 
