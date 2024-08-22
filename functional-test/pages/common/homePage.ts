@@ -81,18 +81,6 @@ export class HomePage {
     }
 
     async goToHomePage(caseId: string): Promise<void> {
-        // await this.page.goto(`/cases/case-details/${caseId}`);
-        // await this.selectToViewTasksAndCasesIfRequired();
-        // await webActions.inputField('#caseReference', caseId);
-        // await this.delay(1000);
-        // await webActions.clickFindButton();
-        // await this.delay(3000);
-        // await expect(this.summaryTab)
-        //     .toBeVisible()
-        //     .catch((error) => {
-        //         logger.error(`Element to verify assertion is not present: ${error}`);
-        //     });
-
         await this.findAndNavigateToCase(caseId);
     }
 
@@ -106,8 +94,7 @@ export class HomePage {
 
         const environment: string = process.env.ENVIRONMENT ?? ''
         const aatDefVersion = yaml.load(fs.readFileSync('./benefit/VERSION.yaml', 'utf8'));
-        console.log(`################################ ${aatDefVersion.TAG}`);
-
+        
         if(environment == 'preview') {
             
             let matches = expUrl.match(/(\d+)/);
