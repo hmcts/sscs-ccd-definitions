@@ -327,11 +327,19 @@ export class WriteAndIssueAdjourmentNotificationPage {
         await webActions.verifyPageLabel('.form-table tr:nth-of-type(2) > .form-cell .text-16',writeAdjournmentNoticeData.yesLabel);
 
         await webActions.verifyPageLabel('.form-table tr:nth-of-type(3) > .valign-top > .text-16',writeAdjournmentNoticeData.areYouMakingDirectionsToPartiesLabel);
+
         if (!directionsFlag) {
             await webActions.verifyPageLabel('.form-table tr:nth-of-type(3) > .form-cell .text-16',writeAdjournmentNoticeData.noLabel);
 
             await webActions.verifyPageLabel('.form-table tr:nth-of-type(4) > .valign-top > .text-16',writeAdjournmentNoticeData.confirmTheFormatOfTheNextHearingLabel);
             await webActions.verifyPageLabel('.form-table tr:nth-of-type(4) > .form-cell .text-16',writeAdjournmentNoticeData.faceToFaceLabel);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(5) > .valign-top > .text-16',writeAdjournmentNoticeData.whereShouldNextHearingBeListedLabel);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(5) > .form-cell .text-16',writeAdjournmentNoticeData.somewhereElseLabel);
+
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(6) > .valign-top > .text-16',writeAdjournmentNoticeData.specifyTheVenue);
+            await webActions.verifyPageLabel('.form-table tr:nth-of-type(6) > .form-cell .text-16',writeAdjournmentNoticeData.hearingVenueSelectedInput);
+
 
         } else {
 
