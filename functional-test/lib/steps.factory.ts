@@ -56,6 +56,7 @@ import { FtaNotProvidedAppointeeDetails } from '../fixtures/steps/fta.not.provid
 import { ReviewFTAValidityChallengeTask } from '../fixtures/steps/work-allocation/review.fta.validity.challenge.task';
 import { ReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/review.postponement.request.task';
 import { UpdateHearingDetailsTask } from '../fixtures/steps/work-allocation/update.hearing.details.task';
+import { JudgeReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/judge.review.postponement.request.task';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -114,6 +115,7 @@ type MyStepsFixtures = {
     ReviewFTAValidityChallengeSteps: ReviewFTAValidityChallengeTask
     reviewPostponementRequestTaskSteps: ReviewPostponementRequestTask
     updateHearingDetailsSteps: UpdateHearingDetailsTask
+    judgeReviewPostponementRequestTaskSteps: JudgeReviewPostponementRequestTask
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -340,5 +342,9 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     updateHearingDetailsSteps: async ({ page }, use) => {
         const updateHearingDetailsSteps = new UpdateHearingDetailsTask(page);
         await use(updateHearingDetailsSteps);
-    }
+    },
+    judgeReviewPostponementRequestTaskSteps: async ({ page }, use) => {
+        const judgeReviewPostponementRequestTaskSteps = new JudgeReviewPostponementRequestTask(page);
+        await use(judgeReviewPostponementRequestTaskSteps);
+    },
 })
