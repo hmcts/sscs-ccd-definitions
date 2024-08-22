@@ -18,7 +18,8 @@ test.describe('Upload response tests', {tag: '@pipeline'}, async() => {
     
     test("As a caseworker review response submitted for an UC case", async({ uploadResponseSteps }) => {
         test.slow();
-        await uploadResponseSteps.performUploadResponseOnAUniversalCredit();
+        let ucCaseId = await createCaseBasedOnCaseType("UC");
+        await uploadResponseSteps.performUploadResponseOnAUniversalCredit(ucCaseId);
     });
 })
 
