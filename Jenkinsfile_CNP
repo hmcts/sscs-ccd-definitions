@@ -97,7 +97,7 @@ withPipeline("nodejs", product, component) {
                 if(params.INCLUDE_HEARINGS_TEST == 'No'){
                     yarnBuilder.yarn('test:preview')
                 } else {
-                    yarnBuilder.yarn('test:preview-incl-hearings')
+                    yarnBuilder.yarn('test:preview-hearings')
                 }
             } finally {
                 publishHTML([
