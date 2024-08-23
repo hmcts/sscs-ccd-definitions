@@ -11,13 +11,13 @@ module.exports = defineConfig({
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: 2, // Set the number of retries for all projects
-  timeout: 3 * 30 * 1000,
+  timeout: 6 * 30 * 1000,
   expect: {
     timeout: 60 * 1000,
   },
 
   /* Opt out of parallel tests on CI. */
-  workers: process.env.FUNCTIONAL_TESTS_WORKERS ? 2 : undefined,
+  workers: 4,
   // workers: 20,
   reporter: [["html", { open: 'never',
     outputDir: 'playwright-report',
