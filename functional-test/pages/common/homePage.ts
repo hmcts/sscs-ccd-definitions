@@ -85,6 +85,12 @@ export class HomePage {
         await this.findAndNavigateToCase(caseId);
     }
 
+    async searchCaseWithAATDef() {
+        const optionToSelect = await this.page.locator('option', { hasText: `SSCS Case ${environment.aatDefVersion.TAG} AAT` }).textContent();
+        console.log(`case type dropdown value is ###### ${optionToSelect}`);
+        await webActions.chooseOptionByLabel(this.caseTypeDropdown, optionToSelect);
+    }
+
     async findAndNavigateToCase(caseId: string): Promise<void> {
         await this.page.getByRole('link', { name: 'Find case' }).waitFor();
         await this.page.getByRole('link', { name: 'Find case' }).click();
@@ -95,18 +101,21 @@ export class HomePage {
         
         if(environment.name == 'preview') {
             
-            let matches = expUrl.match(/(\d+)/);
-            let PrNo = matches[0];
-            console.log(`PR number on url is ###### ${PrNo}`);
+            if(environment.hearingsEnabled == 'Yes') {
+                let matches = expUrl.match(/(\d+)/);
+                let PrNo = matches[0];
+                console.log(`PR number on url is ###### ${PrNo}`);
 
-            const optionToSelect = await this.page.locator('option', { hasText: PrNo }).textContent();
-            console.log(`case type dropdown value is ###### ${optionToSelect}`);
-            await webActions.chooseOptionByLabel(this.caseTypeDropdown, optionToSelect);
+                const optionToSelect = await this.page.locator('option', { hasText: PrNo }).textContent();
+                console.log(`case type dropdown value is ###### ${optionToSelect}`);
+                await webActions.chooseOptionByLabel(this.caseTypeDropdown, optionToSelect);
+            } else {
+                await this.searchCaseWithAATDef();
+            }
+            
         } else if(environment.name == 'aat') {
 
-            const optionToSelect = await this.page.locator('option', { hasText: `SSCS Case ${environment.aatDefVersion.TAG} AAT` }).textContent();
-            console.log(`case type dropdown value is ###### ${optionToSelect}`);
-            await webActions.chooseOptionByLabel(this.caseTypeDropdown, optionToSelect);
+            await this.searchCaseWithAATDef();
         } else {
             logger.info('No environment variable is set');
         }
