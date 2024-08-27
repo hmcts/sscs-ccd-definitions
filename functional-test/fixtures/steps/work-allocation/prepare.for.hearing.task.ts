@@ -5,6 +5,8 @@ import task from '../../../pages/content/prepare.for.hearing.task_en.json';
 import eventTestData from "../../../pages/content/event.name.event.description_en.json";
 import issueDirectionTestdata from "../../../pages/content/issue.direction_en.json";
 import { VoidCase } from "./../void.case";
+import { StepsHelper } from "../../../helpers/stepsHelper";
+
 
 export class PrepareForHearingTask extends BaseStep {
 
@@ -16,7 +18,8 @@ export class PrepareForHearingTask extends BaseStep {
         this.page = page;
     }
 
-    //COMMENTING the allocation to hearing judge as the users don't match between preview and aat, to avoid failing
+    //COMMENTING Code commented out as the hearing judge credentials from confluence not matching to preview enviroment credentials
+
     // async allocateCaseToHearingJudge(caseId: string) {
 
     //     // CTSC Admin with case allocator role allocates case to Interlocutory Judge
@@ -28,7 +31,9 @@ export class PrepareForHearingTask extends BaseStep {
     // }
 
     async createPrepareForHearingTask(caseId) {
+        await this.homePage.clickSignOut();
         await this.loginUserWithCaseId(credentials.amSuperUser, false, caseId);
+        await this.homePage.delay(2000);
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent('Add a hearing');
         await this.addHearingPage.submitHearing('Hearing has been Listed');
@@ -40,10 +45,9 @@ export class PrepareForHearingTask extends BaseStep {
         await this.createBundlePage.confirmSubmission();
         await expect(this.homePage.summaryTab).toBeVisible();
 
-        await this.homePage.delay(15000);
+        await this.homePage.delay(25000);
         await this.homePage.reloadPage();
-        await this.homePage.navigateToTab("Bundles");
-
+        // Bundle check already done in previous step
         await this.homePage.navigateToTab("History");
         await this.verifyHistoryTabDetails("Response received", "Stitching bundle complete");
     }
@@ -72,6 +76,7 @@ export class PrepareForHearingTask extends BaseStep {
 
     async completesTask(caseId) { 
         //  Hearing Judge self assigns the task
+        await this.homePage.clickSignOut();
         await this.loginUserWithCaseId(credentials.salariedJudge, false, caseId);
         test.setTimeout(250000);
         await this.tasksTab.selfAssignTask(task.name);
@@ -81,11 +86,11 @@ export class PrepareForHearingTask extends BaseStep {
 
         // Issue direction to complete the task
         await this.homePage.navigateToTab('Tasks');
+        test.setTimeout(250000);
         await this.tasksTab.verifyTaskIsDisplayed(task.name); //making sure task is there before attempting to complete it
         await this.homePage.delay(2000);
-       //await this.homePage.clickSignOut();
-        
-        //await this.loginUserWithCaseId(credentials.judge, false, caseId);
+       
+        //performing Issue direction to complete task
         await new Promise(f => setTimeout(f, 12000)); //Delay required for the Case to be ready
         await this.homePage.reloadPage();
         await this.homePage.chooseEvent("Issue directions notice");
