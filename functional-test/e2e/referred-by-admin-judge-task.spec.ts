@@ -5,7 +5,9 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 let caseId : string;
 
-// Test inactive as the interlocutory judge credentials from confluence not matching to preview enviroment credentials
+// Test commented out as the interlocutory judge credentials from confluence not matching to preview enviroment credentials
+
+
 // test.describe.serial('WA - Referred by Admin - Judge task initiation and completion tests by Interlocutory Judge', {tag: '@work-allocation'}, async() => {
 
 //     let caseId : string;
