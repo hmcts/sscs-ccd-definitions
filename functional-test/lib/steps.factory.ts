@@ -56,6 +56,8 @@ import { FtaNotProvidedAppointeeDetails } from '../fixtures/steps/fta.not.provid
 import { ReviewFTAValidityChallengeTask } from '../fixtures/steps/work-allocation/review.fta.validity.challenge.task';
 import { ReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/review.postponement.request.task';
 import { UpdateHearingDetailsTask } from '../fixtures/steps/work-allocation/update.hearing.details.task';
+import { ReferredByAdminJudgeTask } from '../fixtures/steps/referred.by.admin.judge.task';
+import { ReferredToInterlocJudgeTask } from '../fixtures/steps/referred.to.interloc.judge.task';
 import { PrepareForHearingTask } from '../fixtures/steps/work-allocation/prepare.for.hearing.task';
 
 type MyStepsFixtures = {
@@ -115,6 +117,8 @@ type MyStepsFixtures = {
     ReviewFTAValidityChallengeSteps: ReviewFTAValidityChallengeTask
     reviewPostponementRequestTaskSteps: ReviewPostponementRequestTask
     updateHearingDetailsSteps: UpdateHearingDetailsTask
+    referredByAdminJudgeTaskSteps: ReferredByAdminJudgeTask
+    referredToInterlocJudgeTaskSteps: ReferredToInterlocJudgeTask
     prepareForHearingTaskSteps: PrepareForHearingTask
 };
 
@@ -343,8 +347,16 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
         const updateHearingDetailsSteps = new UpdateHearingDetailsTask(page);
         await use(updateHearingDetailsSteps);
     },
+    referredByAdminJudgeTaskSteps:async ({page}, use) => {
+        const referredByAdminJudgeTaskSteps = new ReferredByAdminJudgeTask(page);
+        await use(referredByAdminJudgeTaskSteps);
+    },
+    referredToInterlocJudgeTaskSteps:async ({page}, use) => {
+        const referredToInterlocJudgeTaskSteps = new ReferredToInterlocJudgeTask(page);
+        await use(referredToInterlocJudgeTaskSteps);
+    },
     prepareForHearingTaskSteps: async ({ page }, use) => {
         const prepareForHearingTaskSteps = new PrepareForHearingTask(page);
         await use(prepareForHearingTaskSteps);
-    },
+    }
 })
