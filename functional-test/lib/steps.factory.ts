@@ -32,9 +32,18 @@ import { SupplementaryResponse } from '../fixtures/steps/supplementary.response'
 import { UploadDocumentFurtherEvidence } from '../fixtures/steps/upload.document.further.evidence';
 import { UpdateLanguagePreference } from '../fixtures/steps/update.language.preference';
 import { ReviewPHE } from '../fixtures/steps/review.phe';
-import { IssueDirectionsNotice } from "../fixtures/steps/issue.directions.notice";
 import { UpdateUCB } from "../fixtures/steps/update.ucb";
+import { ProcessAVEvidence } from '../fixtures/steps/process.av.evidence';
 import { UpdateSubscription } from '../fixtures/steps/update.subscription'
+import { UpdateOtherPartyData } from '../fixtures/steps/update.other.party.data';
+import {IssueDirectionsNotice} from "../fixtures/steps/issue.directions.notice";
+import {WriteFinalDecision} from "../fixtures/steps/write.final.decision";
+import {UpdateNotListable} from "../fixtures/steps/update.not.listable";
+import { use } from "chai";
+import { SearchFilter } from '../fixtures/steps/search.filter';
+import { Hearing } from '../fixtures/steps/hearing';
+import { ReissueFurtherEvidence } from '../fixtures/steps/reissue.further.evidence';
+import { PrepareCaseForHearing } from '../fixtures/steps/prepare.case.for.hearing';
 
 
 type MyStepsFixtures = {
@@ -74,6 +83,14 @@ type MyStepsFixtures = {
     issueDirectionsNoticeSteps: IssueDirectionsNotice
     updateUCBSteps: UpdateUCB
     updateSubscriptionSteps: UpdateSubscription
+    processAVEvidenceSteps: ProcessAVEvidence
+    updateOtherPartyDataSteps: UpdateOtherPartyData
+    issueFinalDecisionSteps: WriteFinalDecision
+    updateNotListableSteps: UpdateNotListable
+    searchFilterSteps: SearchFilter
+    hearingSteps: Hearing
+    reissueFurtherEvidenceSteps: ReissueFurtherEvidence
+    prepareCaseForHearingSteps: PrepareCaseForHearing
 };
 
 export const test =  stepsFactory.extend<MyStepsFixtures>({
@@ -220,5 +237,37 @@ export const test =  stepsFactory.extend<MyStepsFixtures>({
     updateSubscriptionSteps: async ({ page }, use) => {
         const updateSubscriptionSteps = new UpdateSubscription(page);
         await use(updateSubscriptionSteps);
+    },
+    issueFinalDecisionSteps:async ({ page }, use) => {
+        const issueFinalDecisionSteps = new WriteFinalDecision(page);
+        await use(issueFinalDecisionSteps);
+    },
+    processAVEvidenceSteps: async ({ page }, use) => {
+        const processAVEvidenceSteps = new ProcessAVEvidence(page);
+        await use(processAVEvidenceSteps);
+    },
+    updateOtherPartyDataSteps: async ({ page }, use) => {
+        const updateOtherPartyDataSteps = new UpdateOtherPartyData(page);
+        await use(updateOtherPartyDataSteps);
+    },
+    updateNotListableSteps: async ({page}, use)=>{
+        const updateNotListableSteps = new UpdateNotListable(page);
+        await use(updateNotListableSteps);
+    },
+    searchFilterSteps: async ({ page }, use) => {
+        const searchFilterSteps = new SearchFilter(page);
+        await use(searchFilterSteps);
+    },
+    hearingSteps: async ({ page }, use) => {
+        const hearingSteps = new Hearing(page);
+        await use(hearingSteps);
+    },
+    reissueFurtherEvidenceSteps: async ({ page }, use) => {
+        const reissueFurtherEvidenceSteps = new ReissueFurtherEvidence(page);
+        await use(reissueFurtherEvidenceSteps);
+    },
+    prepareCaseForHearingSteps: async ({ page }, use) => {
+        const prepareCaseForHearingSteps = new PrepareCaseForHearing(page);
+        await use(prepareCaseForHearingSteps);
     }
 })

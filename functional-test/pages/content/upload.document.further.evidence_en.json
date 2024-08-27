@@ -6,5 +6,6 @@
     "testfileone" : "testfile1.pdf",
     "testfiletwo" : "testfile2.pdf",
     "testfilethree" : "testfile3.pdf",
+    "testaudiofile" : "test_av.mp3",
     "fileName" : "Test file"
 }

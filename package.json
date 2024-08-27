@@ -20,13 +20,13 @@
     "test:a11y": "echo test:a11y",
     "highLevelDataSetup": "echo 'bash bin/before-data-setup-step.sh benefit $1 && ./gradlew highLevelDataSetup --args=$1 && sh bin/after-data-setup-step.sh' > ./temp.sh && sh ./temp.sh",
     "test:smoke": "echo no tests run at this step",
-    "test:jenkins": "PLAYWRIGHT_HTML_REPORT=playwright-report PW_TEST_HTML_REPORT_OPEN=never yarn playwright install && npx playwright test --config functional-test/playwright.config.ts --project chromium --reporter=html --grep-invert @work-allocation --grep @pipeline"
+    "test:jenkins": "PLAYWRIGHT_HTML_REPORT=playwright-report PW_TEST_HTML_REPORT_OPEN=never yarn playwright install && npx playwright test --config functional-test/playwright.config.ts --project chromium --reporter=html --grep-invert @work-allocation --grep @master-pipeline"
   },
   "dependencies": {
     "@cucumber/cucumber": "^9.5.0",
     "@hmcts/nodejs-healthcheck": "^1.8.0",
     "@hmcts/properties-volume": "^1.1.0",
-    "codeceptjs": "^3.6.3",
+    "codeceptjs": "^3.6.5",
     "config": "^3.3.9",
     "eslint-plugin-codeceptjs": "^1.3.0",
     "express": "^4.19.2",
@@ -57,10 +57,11 @@
     "typescript": "^5.3.3"
   },
   "resolutions": {
-    "semver": "^7.5.4",
+    "axios": "^1.7.4",
     "braces": "^3.0.3",
-    "tar": "^6.2.1",
-    "phin": "^3.7.1"
+    "phin": "^3.7.1",
+    "semver": "^7.5.4",
+    "tar": "^6.2.1"
   },
   "packageManager": "yarn@3.5.0"
 }
