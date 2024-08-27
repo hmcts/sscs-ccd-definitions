@@ -58,6 +58,7 @@ import { ReviewPostponementRequestTask } from '../fixtures/steps/work-allocation
 import { UpdateHearingDetailsTask } from '../fixtures/steps/work-allocation/update.hearing.details.task';
 import { ReferredByAdminJudgeTask } from '../fixtures/steps/referred.by.admin.judge.task';
 import { ReferredToInterlocJudgeTask } from '../fixtures/steps/referred.to.interloc.judge.task';
+import { JudgeReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/judge.review.postponement.request.task';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -118,6 +119,7 @@ type MyStepsFixtures = {
     updateHearingDetailsSteps: UpdateHearingDetailsTask
     referredByAdminJudgeTaskSteps: ReferredByAdminJudgeTask
     referredToInterlocJudgeTaskSteps: ReferredToInterlocJudgeTask
+    judgeReviewPostponementRequestTaskSteps: JudgeReviewPostponementRequestTask
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -352,5 +354,9 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     referredToInterlocJudgeTaskSteps:async ({page}, use) => {
         const referredToInterlocJudgeTaskSteps = new ReferredToInterlocJudgeTask(page);
         await use(referredToInterlocJudgeTaskSteps);
+    },
+    judgeReviewPostponementRequestTaskSteps: async ({ page }, use) => {
+        const judgeReviewPostponementRequestTaskSteps = new JudgeReviewPostponementRequestTask(page);
+        await use(judgeReviewPostponementRequestTaskSteps);
     }
 })

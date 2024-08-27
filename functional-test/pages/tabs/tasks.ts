@@ -97,6 +97,11 @@ export class Tasks {
             .locator(`//exui-case-task[./*[normalize-space()='${taskName}']]//a[normalize-space()='${tasksTestData.reassignTask}']`)).click();
     }
 
+    async clickUnassignTask(taskName: string) {
+        await (this.page
+            .locator(`//exui-case-task[./*[normalize-space()='${taskName}']]//a[normalize-space()='${tasksTestData.unassignTask}']`)).click();
+    }
+
     async verifyPageContentByKeyValue(taskName: string, fieldLabel: string, fieldValue: string) {
         await expect(this.page
             .locator(`//exui-case-task[./*[normalize-space()='${taskName}']]//*[normalize-space()='${fieldLabel}']/../dd[normalize-space()="${fieldValue}"]`)).toBeVisible();
