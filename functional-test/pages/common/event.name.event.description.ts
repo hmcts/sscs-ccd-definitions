@@ -19,7 +19,7 @@ export class EventNameEventDescriptionPage {
         await webActions.verifyPageLabel('.govuk-heading-l', headingValue); //Heading Text
         if (checkYourAnswersFlag) {
             await webActions.verifyPageLabel('.heading-h2', eventTestData.eventSummarycheckYourAnswersHeading); //Check your answers Text.
-            await webActions.verifyPageLabel('.check-your-answers > .text-16', eventTestData.eventSummaryCheckTheInformationText);
+            await webActions.verifyPageLabel('.check-your-answers h2.heading-h2 + span', eventTestData.eventSummaryCheckTheInformationText);
             await webActions.verifyPageLabel('.case-field-label > .text-16', key);
             if (typeof (value) === 'undefined') {
             } else {
@@ -40,6 +40,10 @@ export class EventNameEventDescriptionPage {
         await this.delay(3000);
         await webActions.clickSubmitButton();
         await this.delay(3000);
+    }
+
+    async submitBtn(): Promise<void> {
+        await webActions.clickButton("Submit");
     }
 
     async delay(ms: number) {

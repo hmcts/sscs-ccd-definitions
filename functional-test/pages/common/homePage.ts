@@ -23,6 +23,11 @@ export class HomePage {
     readonly documentsTab: Locator;
     readonly listingRequirementsTab: Locator;
     readonly subscriptionsTab: Locator;
+    readonly audioVideoEvidenceTab: Locator;
+    readonly ftaDocumentsTab: Locator;
+    readonly otherPartyDetailsTab: Locator;
+    readonly hearingsTab: Locator;
+    readonly afterTabBtn: Locator;
 
 
     constructor(page: Page) {
@@ -41,8 +46,13 @@ export class HomePage {
         this.hearingRecordingsTab = page.getByRole('tab', { name: 'Hearing Recordings', exact: true });
         this.documentsTab = page.getByRole('tab', { name: 'Documents', exact: true });
         this.listingRequirementsTab = page.getByRole('tab', { name: 'Listing Requirements', exact: true });
+        this.audioVideoEvidenceTab = page.getByRole('tab', { name: 'Audio/Video evidence', exact: true });
         this.beforeTabBtn = page.locator('//html/body/exui-root/exui-case-home/div/exui-case-details-home/exui-case-viewer-container/ccd-case-viewer/div/ccd-case-full-access-view/div[2]/div/mat-tab-group/mat-tab-header/button[1]/div');
         this.subscriptionsTab = page.getByRole('tab', { name: 'Subscriptions', exact: true });
+        this.ftaDocumentsTab = page.getByRole('tab', { name: 'FTA Documents', exact: true });
+        this.otherPartyDetailsTab = page.getByRole('tab', { name: 'Other Party Details', exact: true });
+        this.hearingsTab = page.getByRole('tab', { name: 'Hearings', exact: true })
+        this.afterTabBtn = page.locator('//html/body/exui-root/exui-case-home/div/exui-case-details-home/exui-case-viewer-container/ccd-case-viewer/div/ccd-case-full-access-view/div[2]/div/mat-tab-group/mat-tab-header/button[2]/div');
 
         webActions = new WebAction(this.page);
 
@@ -62,6 +72,7 @@ export class HomePage {
 
     async goToHomePage(caseId: string): Promise<void> {
         // await this.page.goto(`/cases/case-details/${caseId}`);
+        await this.selectToViewTasksAndCasesIfRequired();
         await webActions.inputField('#caseReference', caseId);
         await this.delay(1000);
         await webActions.clickFindButton();
@@ -71,6 +82,15 @@ export class HomePage {
             .catch((error) => {
                 logger.error(`Element to verify assertion is not present: ${error}`);
             });
+    }
+
+    async goToCaseList(): Promise<void> {
+        //await this.page.goto(`/cases`);
+        await this.selectToViewTasksAndCasesIfRequired();
+        await this.page.getByRole('link', { name: 'Case list' }).waitFor();
+        await this.page.getByRole('link', { name: 'Case list' }).click();
+        await this.delay(3000);
+        await expect(this.page.getByText('Filters')).toBeVisible();
     }
 
     async chooseEvent(eventName: string): Promise<void> {
@@ -87,6 +107,10 @@ export class HomePage {
         await this.beforeTabBtn.click();
     }
 
+    async clickAfterTabBtn(): Promise<void> {
+        await this.afterTabBtn.click();
+    }
+
     async waitForLoadState() {
         await this.page.waitForLoadState('networkidle');
     }
@@ -95,6 +119,18 @@ export class HomePage {
         await webActions.clickElementById('li a.hmcts-header__navigation-link');
     }
 
+    async selectToViewTasksAndCasesIfRequired() {
+        expect(await this.page.locator('h1').count()).toBeGreaterThanOrEqual(1);
+        let headerText = await this.page.locator('h1').first().textContent();
+        if(headerText.toLowerCase().includes('work access')) {
+            await this.page.getByRole('radio', { name: 'View tasks and cases' }).click();
+            await this.page.getByRole('button', { name: 'Continue' }).click();
+        }
+    }
+
+    async finishLoadingThePage() {
+        await expect(this.page.locator('.spinner-container')).toBeDisabled({timeout:4000});
+    }
 
     async navigateToTab(tabName : string): Promise<void> {
         switch(tabName) {
@@ -108,8 +144,12 @@ export class HomePage {
                 break;
             }
             case "Summary": {
-                await expect(this.summaryTab).toBeVisible();
-                await this.summaryTab.click();
+                if (expect(this.summaryTab).toBeVisible()){
+                    await this.summaryTab.click();
+                } else {
+                    await this.clickBeforeTabBtn();
+                    await this.summaryTab.click();
+                }
                 break;
             }
             case "Tasks": {
@@ -152,8 +192,27 @@ export class HomePage {
                 await this.listingRequirementsTab.click();
                 break;
             }
+            case "Audio/Video Evidence": {
+                await expect(this.audioVideoEvidenceTab).toBeVisible();
+                await this.audioVideoEvidenceTab.click();
+                break;
+            }
+            case "FTA Documents": {
+                await expect(this.ftaDocumentsTab).toBeVisible();
+                await this.ftaDocumentsTab.click();
+                break;
+            }
             case "Subscriptions": {
                 await this.subscriptionsTab.click();
+                break;
+            }
+            case "Other Party Details": {
+                await this.otherPartyDetailsTab.click();
+                break;
+            }
+            case "Hearings": {
+                await expect(this.hearingsTab).toBeVisible();
+                await this.hearingsTab.click();
                 break;
             }
             default: {

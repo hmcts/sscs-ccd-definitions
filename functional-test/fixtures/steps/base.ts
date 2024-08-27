@@ -36,11 +36,32 @@ import { SupplementaryResponsePage } from "../../pages/supplementary.response.pa
 import { UploadDocumentFurtherEvidencePage } from '../../pages/upload.document.further.evidence.page';
 import { UpdateLanguagePreferencePage } from '../../pages/update.language.preference.page';
 import { Welsh } from '../../pages/tabs/welsh';
+import { AmendInterlocReviewStatePage } from '../../pages/amend.interloc.review.state.page';
 import { ReviewPHEPage } from '../../pages/review.phe.page';
 import { ListingRequirements } from '../../pages/tabs/listing.requirements';
 import { UpdateUCBPage } from '../../pages/update.ucb.page';
 import { UpdateSubscriptionPage } from '../../pages/update.subscription.page';
 import { Subscriptions } from '../../pages/tabs/subscriptions';
+import { AudioVideoEvidence } from '../../pages/tabs/audioVideoEvidence';
+import { ProcessAVPage } from '../../pages/process.av.page';
+import { OtherPartyDetails } from '../../pages/tabs/other.party.details';
+import { updateOtherPartyDataPage } from '../../pages/update.other.party.data.page';
+import { SendCaseToTcwPage } from '../../pages/send.case.to.tcw.page';
+import {WriteFinalDecisionPages} from "../../pages/write.final.decision.page";
+import {SendToInterlocPrevalidPage} from "../../pages/send.to.interloc.prevalid.page";
+import {NotListablePage} from "../../pages/not.listable.page";
+import { UpdateNotListablePage } from "../../pages/update.not.listable.page";
+import { SearchFilterPage } from '../../pages/search.filter.page';
+import { Hearings } from '../../pages/tabs/hearings';
+import { ListingRequirementPage } from '../../pages/listing.requirements.page';
+import { ReissueFurtherEvidencePage } from '../../pages/reissue.further.evidence.page';
+import { PostponementPages } from "../../pages/postponement.page";
+import { PrepareCaseForHearingPage } from '../../pages/prepare.case.for.hearing.page';
+import { ReviewConfidentialityPage } from '../../pages/review.confidentiality.page'
+import { SendToJudgePage } from '../../pages/send.to.judge.page';
+import { ChallengeValidityPage } from '../../pages/review.fta.validity.challenge.page';
+import { PostponementRequestPage } from '../../pages/postponement.request.page';
+
 
 export abstract class BaseStep {
 
@@ -81,11 +102,31 @@ export abstract class BaseStep {
   protected supplementaryResponsePage: SupplementaryResponsePage;
   protected uploadDocumentFurtherEvidencePage: UploadDocumentFurtherEvidencePage;
   protected updateLanguagePreferencePage: UpdateLanguagePreferencePage;
+  protected amendInterlocReviewStatePage: AmendInterlocReviewStatePage;
   protected reviewPHEPage: ReviewPHEPage;
   protected listingRequirementsTab: ListingRequirements;
   protected updateUCBPage: UpdateUCBPage;
   protected updateSubscriptionPage: UpdateSubscriptionPage;
   protected subscriptionsTab: Subscriptions;
+  protected avTab: AudioVideoEvidence;
+  protected processAVPage: ProcessAVPage;
+  protected updateOtherPartyDataPage: updateOtherPartyDataPage;
+  protected otherPartyDetailsTab: OtherPartyDetails;
+  protected sendCaseToTcwPage: SendCaseToTcwPage;
+  protected writeFinalDecisionPage : WriteFinalDecisionPages;
+  protected sendToInterlocPrevalidPage : SendToInterlocPrevalidPage;
+  protected sendToJudgePage: SendToJudgePage;
+  protected notListablePage: NotListablePage;
+  protected updateNotListablePage: UpdateNotListablePage;
+  protected searchFilterPage: SearchFilterPage;
+  protected hearingsTab: Hearings;
+  protected listingRequirementPage: ListingRequirementPage
+  protected reissueFurtherEvidencePage: ReissueFurtherEvidencePage;
+  protected postponementPage : PostponementPages;
+  protected prepareCaseForHearingPage: PrepareCaseForHearingPage;
+  protected reviewConfidentialityPage: ReviewConfidentialityPage;
+  protected challengeValidityPage: ChallengeValidityPage;
+  protected postponementRequestPage: PostponementRequestPage;
 
    constructor(page: Page) {
         this.page = page;
@@ -125,17 +166,43 @@ export abstract class BaseStep {
         this.supplementaryResponsePage = new SupplementaryResponsePage(this.page);
         this.uploadDocumentFurtherEvidencePage = new UploadDocumentFurtherEvidencePage(this.page);
         this.updateLanguagePreferencePage = new UpdateLanguagePreferencePage(this.page);
+        this.amendInterlocReviewStatePage = new AmendInterlocReviewStatePage(this.page);
         this.reviewPHEPage = new ReviewPHEPage(this.page);
         this.listingRequirementsTab = new ListingRequirements(this.page);
         this.updateUCBPage = new UpdateUCBPage(this.page);
         this.updateSubscriptionPage = new UpdateSubscriptionPage(this.page);
         this.subscriptionsTab = new Subscriptions(this.page);
+        this.avTab = new AudioVideoEvidence(this.page);
+        this.processAVPage = new ProcessAVPage(this.page);
+        this.updateOtherPartyDataPage = new updateOtherPartyDataPage(this.page);
+        this.otherPartyDetailsTab = new OtherPartyDetails(this.page);
+        this.sendCaseToTcwPage = new SendCaseToTcwPage(this.page);
+        this.writeFinalDecisionPage = new WriteFinalDecisionPages(page);
+        this.sendToInterlocPrevalidPage = new SendToInterlocPrevalidPage(page);
+        this.sendToJudgePage = new SendToJudgePage(this.page);
+        this.notListablePage = new NotListablePage(this.page);
+        this.updateNotListablePage = new UpdateNotListablePage(this.page);
+        this.searchFilterPage = new SearchFilterPage(this.page);
+        this.hearingsTab = new Hearings(this.page);
+        this.listingRequirementPage = new ListingRequirementPage(this.page);
+        this.reissueFurtherEvidencePage = new ReissueFurtherEvidencePage(this.page);
+        this.postponementPage = new PostponementPages(this.page);
+        this.prepareCaseForHearingPage = new PrepareCaseForHearingPage(this.page);
+        this.reviewConfidentialityPage = new ReviewConfidentialityPage(this.page);
+        this.challengeValidityPage = new ChallengeValidityPage(this.page);
+        this.postponementRequestPage = new PostponementRequestPage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
         await this.loginPage.goToLoginPage();
         await this.loginPage.verifySuccessfulLoginForUser(user, clearCacheFlag);
         await this.homePage.goToHomePage(caseId);
+    }
+
+    async loginUserWithoutCaseId(user, clearCacheFlag: boolean = false) {
+        await this.loginPage.goToLoginPage();
+        await this.loginPage.verifySuccessfulLoginForUser(user, clearCacheFlag);
+        await this.homePage.goToCaseList;
     }
 
     async verifyHistoryTabDetails(state?: string, event?: string, comment?: string) {
@@ -149,5 +216,9 @@ export abstract class BaseStep {
 
     async verifyHistoryTabLink(linkLabel: string) {
         await this.historyTab.verifyHistoryPageEventLink(linkLabel);
+    }
+    async verifyOtherPartyDetails(state?: string, event?: string, comment?: string) {
+        await this.homePage.navigateToTab("Other Party Details");
+        await this.homePage.delay(1000);
     }
 }
