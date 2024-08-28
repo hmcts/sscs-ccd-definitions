@@ -61,6 +61,7 @@ import { ReferredToInterlocJudgeTask } from '../fixtures/steps/referred.to.inter
 import { JudgeReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/judge.review.postponement.request.task';
 import { PrepareForHearingTask } from '../fixtures/steps/work-allocation/prepare.for.hearing.task';
 import { ReferredByTcwJudgeTask } from '../fixtures/steps/referred.by.tcw.judge.task';
+import { FtaNotProvidedAppointeeDetailsJudgeTask } from '../fixtures/steps/fta.not.provided.appointee.details.judge.task';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -124,6 +125,7 @@ type MyStepsFixtures = {
     judgeReviewPostponementRequestTaskSteps: JudgeReviewPostponementRequestTask
     prepareForHearingTaskSteps: PrepareForHearingTask
     referredByTcwJudgeTaskSteps: ReferredByTcwJudgeTask
+    ftaNotProvidedAppointeeDetailsJudgeTaskSteps: FtaNotProvidedAppointeeDetailsJudgeTask
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -370,5 +372,9 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     referredByTcwJudgeTaskSteps:async ({page}, use) => {
         const referredByTcwJudgeTaskSteps = new ReferredByTcwJudgeTask(page);
         await use(referredByTcwJudgeTaskSteps);
+    },
+    ftaNotProvidedAppointeeDetailsJudgeTaskSteps:async ({page}, use) => {
+        const ftaNotProvidedAppointeeDetailsJudgeTaskSteps = new FtaNotProvidedAppointeeDetailsJudgeTask(page);
+        await use(ftaNotProvidedAppointeeDetailsJudgeTaskSteps);
     }
 })
