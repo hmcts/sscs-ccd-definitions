@@ -60,6 +60,7 @@ import { ReferredByAdminJudgeTask } from '../fixtures/steps/referred.by.admin.ju
 import { ReferredToInterlocJudgeTask } from '../fixtures/steps/referred.to.interloc.judge.task';
 import { JudgeReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/judge.review.postponement.request.task';
 import { PrepareForHearingTask } from '../fixtures/steps/work-allocation/prepare.for.hearing.task';
+import { ReferredByTcwJudgeTask } from '../fixtures/steps/referred.by.tcw.judge.task';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -122,6 +123,7 @@ type MyStepsFixtures = {
     referredToInterlocJudgeTaskSteps: ReferredToInterlocJudgeTask
     judgeReviewPostponementRequestTaskSteps: JudgeReviewPostponementRequestTask
     prepareForHearingTaskSteps: PrepareForHearingTask
+    referredByTcwJudgeTaskSteps: ReferredByTcwJudgeTask
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -364,5 +366,9 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     prepareForHearingTaskSteps: async ({ page }, use) => {
         const prepareForHearingTaskSteps = new PrepareForHearingTask(page);
         await use(prepareForHearingTaskSteps);
+    },
+    referredByTcwJudgeTaskSteps:async ({page}, use) => {
+        const referredByTcwJudgeTaskSteps = new ReferredByTcwJudgeTask(page);
+        await use(referredByTcwJudgeTaskSteps);
     }
 })
