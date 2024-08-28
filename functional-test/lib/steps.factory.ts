@@ -59,6 +59,7 @@ import { UpdateHearingDetailsTask } from '../fixtures/steps/work-allocation/upda
 import { ReferredByAdminJudgeTask } from '../fixtures/steps/referred.by.admin.judge.task';
 import { ReferredToInterlocJudgeTask } from '../fixtures/steps/referred.to.interloc.judge.task';
 import { JudgeReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/judge.review.postponement.request.task';
+import { PrepareForHearingTask } from '../fixtures/steps/work-allocation/prepare.for.hearing.task';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -120,6 +121,7 @@ type MyStepsFixtures = {
     referredByAdminJudgeTaskSteps: ReferredByAdminJudgeTask
     referredToInterlocJudgeTaskSteps: ReferredToInterlocJudgeTask
     judgeReviewPostponementRequestTaskSteps: JudgeReviewPostponementRequestTask
+    prepareForHearingTaskSteps: PrepareForHearingTask
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -358,5 +360,9 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     judgeReviewPostponementRequestTaskSteps: async ({ page }, use) => {
         const judgeReviewPostponementRequestTaskSteps = new JudgeReviewPostponementRequestTask(page);
         await use(judgeReviewPostponementRequestTaskSteps);
+    },
+    prepareForHearingTaskSteps: async ({ page }, use) => {
+        const prepareForHearingTaskSteps = new PrepareForHearingTask(page);
+        await use(prepareForHearingTaskSteps);
     }
 })
