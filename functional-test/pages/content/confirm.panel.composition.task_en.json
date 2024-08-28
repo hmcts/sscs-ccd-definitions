@@ -1,0 +1,27 @@
+{
+    "name": "Confirm Panel Composotion - Judge",
+    "priority": "low",
+    "assignedToWhenNotAssigned": "Unassigned",
+    "assignedTo": "SSCS cw",
+    "unassignedManageOptions": [
+        "Assign to me"
+    ],
+    "assignedManageOptions": [
+        "Reassign task",
+        "Unassign task"
+    ],
+    "unassignedManageOptionsForCaseAllocator": [
+        "Assign task",
+        "Cancel task",
+        "Assign to me"
+    ],
+    "assignedManageOptionsForCaseAllocator": [
+        "Cancel task",
+        "Mark as done",
+        "Reassign task",
+        "Unassign task"
+    ],
+    "nextStepsOptions": [
+        "Confirm Panel Composition"
+    ]
+}

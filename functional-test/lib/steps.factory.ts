@@ -62,6 +62,7 @@ import { JudgeReviewPostponementRequestTask } from '../fixtures/steps/work-alloc
 import { PrepareForHearingTask } from '../fixtures/steps/work-allocation/prepare.for.hearing.task';
 import { ReferredByTcwJudgeTask } from '../fixtures/steps/referred.by.tcw.judge.task';
 import { FtaNotProvidedAppointeeDetailsJudgeTask } from '../fixtures/steps/fta.not.provided.appointee.details.judge.task';
+import { ConfirmPanelCompositionTask } from '../fixtures/steps/work-allocation/confirm.panel.composition.task';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -126,6 +127,7 @@ type MyStepsFixtures = {
     prepareForHearingTaskSteps: PrepareForHearingTask
     referredByTcwJudgeTaskSteps: ReferredByTcwJudgeTask
     ftaNotProvidedAppointeeDetailsJudgeTaskSteps: FtaNotProvidedAppointeeDetailsJudgeTask
+    confirmPanelCompositionTaskSteps: ConfirmPanelCompositionTask
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -376,5 +378,9 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     ftaNotProvidedAppointeeDetailsJudgeTaskSteps:async ({page}, use) => {
         const ftaNotProvidedAppointeeDetailsJudgeTaskSteps = new FtaNotProvidedAppointeeDetailsJudgeTask(page);
         await use(ftaNotProvidedAppointeeDetailsJudgeTaskSteps);
+    },
+    confirmPanelCompositionTaskSteps: async ({ page }, use) => {
+        const confirmPanelCompositionTaskSteps = new ConfirmPanelCompositionTask(page);
+        await use(confirmPanelCompositionTaskSteps);
     }
 })
