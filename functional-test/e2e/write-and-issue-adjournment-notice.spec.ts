@@ -25,7 +25,7 @@ test.describe('Write and Issue Adjournment Notice', {tag: '@pipeline'}, async ()
             await performAppealDormantOnCase(pipCaseId);
         });
 
-        test.only("Write and Issue Adjournment Notice With Generate Notice not Generate and Directions Not Issued",
+        test("Write and Issue Adjournment Notice With Generate Notice not Generate and Directions Not Issued",
             async ({writeAndIssueAdjournmentNoticeSteps, hearingSteps}) => {
                     test.slow();
                     let pipCaseId = await createCaseBasedOnCaseType('PIP');

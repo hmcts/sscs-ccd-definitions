@@ -3,6 +3,7 @@ import {credentials} from "../config/config"
 import {accessToken, getSSCSServiceToken, accessId, getIDAMUserID} from "../api/client/idam/idam.service";
 import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.factory";
 import {
+    performEventOnCaseForActionFurtherEvidence,
     performEventOnCaseWithEmptyBody,
     performEventOnCaseWithUploadResponse
 } from "../api/client/sscs/factory/appeal.update.factory";
@@ -10,19 +11,27 @@ import logger from "../utils/loggerUtil";
 //var event_token: string = JSON.parse(response_document).push({hello: 'value'});
 import fs from 'fs';
 
-test("Test to Make an Appeal Dormant", async ({addNoteSteps}) => {
+test.only("Test to Test API Working....", async () => {
 
-    let childSupportCaseId = await createCaseBasedOnCaseType("CHILDSUPPORT");
+    let pipCaseId = await createCaseBasedOnCaseType('PIP');
+    await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
+    logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
+    let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
+    let serviceToken: string = await getSSCSServiceToken();
+    let responseWriterId: string = await accessId(credentials.dwpResponseWriter);
+    await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
+        serviceToken.trim(), responseWriterId.trim(),
+        'SSCS', 'Benefit',
+        pipCaseId.trim(), 'dwpUploadResponse', 'dwp');
 
-    let judgeToken: string = await accessToken(credentials.dwpResponseWriter);
-    let serviceTokenForJudge: string = await getSSCSServiceToken();
-    let judgeUserId: string = await accessId(credentials.dwpResponseWriter);
-    await new Promise(f => setTimeout(f, 3000)); //Delay required for the Case to be ready
-
-    await performEventOnCaseWithUploadResponse(judgeToken.trim(),
-        serviceTokenForJudge.trim(), judgeUserId.trim(),
-        'SSCS','Benefit',
-        childSupportCaseId.trim(),'dwpUploadResponse','dwp');
+    logger.info('The value of the response writer : '+credentials.amCaseWorker.email)
+       let caseWorkerToken: string = await accessToken(credentials.amCaseWorker);
+       let serviceTokenForCaseWorker: string = await getSSCSServiceToken();
+       let caseWorkerId: string = await accessId(credentials.amCaseWorker);
+       await new Promise(f => setTimeout(f, 20000)); //Delay required for the Case to be ready
+       await performEventOnCaseForActionFurtherEvidence(caseWorkerToken.trim(),
+           serviceTokenForCaseWorker.trim(),caseWorkerId.trim(),'SSCS','Benefit',
+           pipCaseId.trim(), 'uploadDocumentFurtherEvidence');
 
 
    /* let token: string = await accessToken(credentials.amSuperUser);
