@@ -19,7 +19,7 @@ test.describe.serial('WA - Write Decision - Judge task initiation and completion
     });
 
     test.afterAll("Case has to be set to Dormant",async () => {
-        //  await performAppealDormantOnCase(caseId);
+         await performAppealDormantOnCase(caseId);
     });
 });
 
@@ -39,6 +39,6 @@ test.describe.serial('Write Decision - Judge task automatic cancellation when ca
     });
 
     test.afterAll("Case has to be set to Dormant", async () => {
-        // await performAppealDormantOnCase(caseId);
+        await performAppealDormantOnCase(caseId);
     });
 });
