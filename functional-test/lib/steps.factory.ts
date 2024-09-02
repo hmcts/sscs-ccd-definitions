@@ -63,6 +63,7 @@ import { PrepareForHearingTask } from '../fixtures/steps/work-allocation/prepare
 import { ReferredByTcwJudgeTask } from '../fixtures/steps/referred.by.tcw.judge.task';
 import { FtaNotProvidedAppointeeDetailsJudgeTask } from '../fixtures/steps/fta.not.provided.appointee.details.judge.task';
 import { ReviewConfidentialityRequestTask } from '../fixtures/steps/work-allocation/review.confidentiality.request.task';
+import { WriteDecisionJudgeTask } from '../fixtures/steps/work-allocation/write.decision.judge.task';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -128,6 +129,7 @@ type MyStepsFixtures = {
     referredByTcwJudgeTaskSteps: ReferredByTcwJudgeTask
     ftaNotProvidedAppointeeDetailsJudgeTaskSteps: FtaNotProvidedAppointeeDetailsJudgeTask
     reviewConfidentialityRequestTaskSteps: ReviewConfidentialityRequestTask
+    writeDecisionJudgeTaskSteps: WriteDecisionJudgeTask
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -382,5 +384,9 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     reviewConfidentialityRequestTaskSteps:async ({page}, use) => {
         const reviewConfidentialityRequestTaskSteps = new ReviewConfidentialityRequestTask(page);
         await use(reviewConfidentialityRequestTaskSteps);
+    },
+    writeDecisionJudgeTaskSteps:async ({page}, use) => {
+        const writeDecisionJudgeTaskSteps = new WriteDecisionJudgeTask(page);
+        await use(writeDecisionJudgeTaskSteps);
     }
 })
