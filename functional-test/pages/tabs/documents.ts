@@ -55,6 +55,4 @@ export class Documents {
         await webActions.verifyTextVisibility(value);
 
     }
-
-    //verifyTextVisibility
 }

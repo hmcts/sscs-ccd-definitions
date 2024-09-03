@@ -150,6 +150,9 @@ export class UrgentHearing extends BaseStep {
         await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
         await this.homePage.navigateToTab("Appeal Details");
         await this.appealDetailsTab.verifyAppealDetailsPageContentDoesNotExistByKeyValue('Urgent hearing outcome', 'Refused');
+
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+        await this.homePage.navigateToTab("History");
         await this.historyTab.verifyPageContentDoesNotExistByKeyValue('Interlocutory review state', 'N/A');
 
         await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
