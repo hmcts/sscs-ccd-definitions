@@ -7,7 +7,7 @@ FROM hmctspublic.azurecr.io/ccd/definition-importer:latest as runtime
 ARG exclude=nonprod
 ENV EXCLUSION=*-$exclude.json,*-shuttered.json
 
-RUN apk add --no-cache curl jq zip unzip git
+# --- RUN apk add --no-cache curl jq zip unzip git
 COPY --from=base . .
 COPY ./data /data
 COPY ./data/ccd-template.xlsx /opt/ccd-definition-processor/data
