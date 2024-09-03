@@ -7,6 +7,11 @@ import amendInterlocReviewStateData from "../../pages/content/amend.interloc.rev
 import dateUtilsComponent from '../../utils/DateUtilsComponent';
 import { SendToAdmin } from "./send.to.admin";
 import { VoidCase } from "./void.case";
+import createCaseBasedOnCaseType from "../../api/client/sscs/factory/appeal.type.factory";
+import logger from "../../utils/loggerUtil";
+import {accessId, accessToken, getSSCSServiceToken} from "../../api/client/idam/idam.service";
+import {performEventOnCaseWithUploadResponse} from "../../api/client/sscs/factory/appeal.update.factory";
+import eventTestData from "../../pages/content/event.name.event.description_en.json";
 
 const actionFurtherEvidenceTestdata = require('../../pages/content/action.further.evidence_en.json');
 const issueDirectionTestdata = require('../../pages/content/issue.direction_en.json');
@@ -103,6 +108,74 @@ export class UrgentHearing extends BaseStep {
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Urgent hearing outcome', 'Refused');
         await this.verifyHistoryTabDetails('With FTA', 'Issue directions notice');
         await this.historyTab.verifyPageContentByKeyValue('Interlocutory review state', 'N/A');
+    }
+
+    async requestAnUrgentHearingForAWelshCase() {
+
+        let welshPipCaseId : string = await createCaseBasedOnCaseType('WELSHPIP');
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, welshPipCaseId);
+        await this.homePage.reloadPage();
+
+        //The below Steps is required as a Welsh Case is assumed to have it's creation document to
+        // be translated and thus an auto stop for Send to FTA till that happens
+        await this.homePage.chooseEvent("Welsh - cancel translations");
+        await this.eventNameAndDescriptionPage.verifyPageContent("Welsh - cancel translations");
+        await this.eventNameAndDescriptionPage.confirmSubmission();
+
+        await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
+
+        /*logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
+        let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
+        let serviceToken: string = await getSSCSServiceToken();
+        let responseWriterId: string = await accessId(credentials.dwpResponseWriter);
+        await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
+            serviceToken.trim(), responseWriterId.trim(),
+            'SSCS', 'Benefit',
+            welshPipCaseId.trim(), 'dwpUploadResponse', 'dwp');*/
+
+        await this.homePage.chooseEvent(actionFurtherEvidenceTestdata.eventName);
+        await this.actionFurtherEvidencePage.submitActionFurtherEvidence(
+            actionFurtherEvidenceTestdata.sender,
+            actionFurtherEvidenceTestdata.urgentDocType,
+            actionFurtherEvidenceTestdata.testfileone
+        );
+        await this.eventNameAndDescriptionPage.verifyPageContent(actionFurtherEvidenceTestdata.eventName);
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
+
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+        await this.summaryTab.verifyPageContentByKeyValueDoesNotExist('Urgent case', 'No');
+
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+        await this.homePage.navigateToTab("Appeal Details");
+        await this.appealDetailsTab.verifyAppealDetailsPageContentDoesNotExistByKeyValue('Urgent hearing outcome', 'Refused');
+        await this.historyTab.verifyPageContentDoesNotExistByKeyValue('Interlocutory review state', 'N/A');
+
+        await new Promise(f => setTimeout(f, 1000)); //Delay required for the Case to be ready
+        await this.homePage.navigateToTab("Documents");
+        await this.documentsTab.verifyFieldVisible("Evidence issued");
+        await this.documentsTab.verifyFieldVisible("Yes");
+        await this.documentsTab.verifyFieldVisible("Bundle addition");
+        await this.documentsTab.verifyFieldVisible("Translation status");
+        await this.documentsTab.verifyFieldVisible("Translation Required");
+
+        await this.homePage.chooseEvent("Welsh - request translations");
+        await this.eventNameAndDescriptionPage.verifyPageContent("Welsh - request translations");
+        await this.eventNameAndDescriptionPage.inputData(eventTestData.eventSummaryInput,
+            eventTestData.eventDescriptionInput);
+        await this.eventNameAndDescriptionPage.confirmSubmission();
+
+        await new Promise(f => setTimeout(f, 5000)); //Delay required for the Case to be ready
+        await this.homePage.navigateToTab("Documents");
+        await this.documentsTab.verifyFieldVisible("Evidence issued");
+        await this.documentsTab.verifyFieldVisible("Yes");
+        await this.documentsTab.verifyFieldVisible("Bundle addition");
+        await this.documentsTab.verifyFieldVisible("Translation status");
+        await this.documentsTab.verifyFieldVisible("Translation Requested");
+        //TODO - Further Verification that the Urgent Hearing Fields and the Interloculary State
+        // should be verified post the Fix for SSCSCI-1013
+
     }
 
     async uploadEncryptedFiles(caseId: string) {

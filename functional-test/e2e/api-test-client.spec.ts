@@ -10,7 +10,7 @@ import logger from "../utils/loggerUtil";
 //var event_token: string = JSON.parse(response_document).push({hello: 'value'});
 import fs from 'fs';
 
-test.only("Test to Test API Working....", async () => {
+test("Test to Test API Working....", async () => {
 
     let pipCaseId = await createCaseBasedOnCaseType('PIP');
     await new Promise(f => setTimeout(f, 10000)); //Delay required for the Case to be ready
