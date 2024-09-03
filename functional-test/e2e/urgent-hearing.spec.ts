@@ -21,7 +21,7 @@ test.describe("Urgent hearing test", async() => {
         await urgentHearingSteps.requestAndRefuseAnUrgentHearing(caseId);
     });
 
-    test.only("Welsh - Urgent hearing request", async ({ urgentHearingSteps }) => {
+    test("Welsh - Urgent hearing request", async ({ urgentHearingSteps }) => {
         test.slow();
         await urgentHearingSteps.requestAnUrgentHearingForAWelshCase();
     });
