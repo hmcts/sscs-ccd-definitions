@@ -20,6 +20,11 @@ test.describe("Urgent hearing test", async() => {
         test.slow();
         await urgentHearingSteps.requestAndRefuseAnUrgentHearing(caseId);
     });
+
+    test("Welsh - Urgent hearing request", async ({ urgentHearingSteps }) => {
+        test.slow();
+        await urgentHearingSteps.requestAnUrgentHearingForAWelshCase();
+    });
     
     test("Error scenario - Upload encrypted file in Action further evidence event", async({ urgentHearingSteps }) => {
         test.slow();

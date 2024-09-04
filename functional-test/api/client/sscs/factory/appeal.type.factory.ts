@@ -3,6 +3,7 @@ import { request } from '@playwright/test';
 import { urls } from '../../../../config/config';
 import logger from '../../../../utils/loggerUtil';
 import pipPayload from '../../../data/payload/create-appeal/pip_sya.json';
+import pipPayloadWelsh from '../../../data/payload/create-appeal/pip_sya_welsh.json';
 import ucPayload from '../../../data/payload/create-appeal/uc_sya.json';
 import esaPayload from '../../../data/payload/create-appeal/esa_sya.json';
 import childSupportPayload from '../../../data/payload/create-appeal/child_support_sya.json';
@@ -51,7 +52,9 @@ async function createCaseBasedOnCaseType(caseType: string) {
                                                     ? pipIncompleteAppealPayload
                                                     : caseType == "PIPNONCOMPLIANT"
                                                         ? pipNonCompliantAppealPayload
-                                                        : new Error("Unsupported case type");
+                                                        : caseType == "WELSHPIP"
+                                                            ? pipPayloadWelsh
+                                                            : new Error("Unsupported case type");
 
     let caseTypeLower = caseType.toLowerCase();
     let apiUrl = (caseTypeLower.includes('incomplete') || caseTypeLower.includes('noncompliant'))
