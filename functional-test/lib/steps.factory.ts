@@ -63,6 +63,7 @@ import { PrepareForHearingTask } from '../fixtures/steps/work-allocation/prepare
 import { ReferredByTcwJudgeTask } from '../fixtures/steps/referred.by.tcw.judge.task';
 import { FtaNotProvidedAppointeeDetailsJudgeTask } from '../fixtures/steps/fta.not.provided.appointee.details.judge.task';
 import { ReviewConfidentialityRequestTask } from '../fixtures/steps/work-allocation/review.confidentiality.request.task';
+import {SendToValid} from "../fixtures/steps/send.to.valid";
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -70,6 +71,7 @@ type MyStepsFixtures = {
     confirmCaseLapsedSteps: ConfirmCaseLapsed
     evidenceReminderSteps: EvidenceReminder
     informationReceivedSteps: InformationReceived
+    sendToValidSteps: SendToValid
     sendToAdminSteps: SendToAdmin
     sendToJudgeSteps: SendToJudge
     reviewAdminActionTaskSteps: ReviewAdminActionTask
@@ -154,6 +156,10 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     sendToAdminSteps: async ({page}, use) => {
         const sendToAdminSteps = new SendToAdmin(page);
         await use(sendToAdminSteps);
+    },
+    sendToValidSteps: async ({page}, use) => {
+        const sendToValidSteps = new SendToValid(page);
+        await use(sendToValidSteps);
     },
     readyToListSteps: async ({page}, use) => {
         const readyToListSteps = new ReadyToList(page);
