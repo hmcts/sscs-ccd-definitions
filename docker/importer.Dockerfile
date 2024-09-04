@@ -2,7 +2,7 @@
 FROM hmctspublic.azurecr.io/ccd/definition-processor:latest as base
 
 # ----        Runtime image         ----
-FROM hmctspublic.azurecr.io/ccd/definition-importer:latest as runtime
+FROM hmctspublic.azurecr.io/ccd/definition-importer:db1m7r6 as runtime
 # ---- To build non prod version image, pass --build-arg exclude=prod
 ARG exclude=nonprod
 ENV EXCLUSION=*-$exclude.json,*-shuttered.json
