@@ -6,7 +6,7 @@ test.beforeAll("Case has to be Created",async () => {
     caseId = await createCaseBasedOnCaseType('PIP');
 });
 
-test.only("Send to valid", async ({ sendToValidSteps }) => {
+test("Send to valid", async ({ sendToValidSteps }) => {
     await sendToValidSteps.performSendToValid(caseId)
 });
 
