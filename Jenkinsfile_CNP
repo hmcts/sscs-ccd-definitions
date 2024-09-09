@@ -106,7 +106,7 @@ withPipeline("nodejs", product, component) {
 
         stage('Playwright tests') {
             try{
-                if(params.INCLUDE_HEARINGS_TEST == 'No'){
+                if(params.HEARINGS_LABEL_ENABLED == 'No'){
                     yarnBuilder.yarn('test:preview')
                 } else {
                     yarnBuilder.yarn('test:preview-hearings')

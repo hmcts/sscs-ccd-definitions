@@ -91,6 +91,12 @@ export class HomePage {
         await webActions.chooseOptionByLabel(this.caseTypeDropdown, optionToSelect);
     }
 
+    async searchCaseWithPreviewDef() {
+        const optionToSelect = await this.page.locator('option', { hasText: `nonProd PROD` }).textContent();
+        console.log(`case type dropdown value is ###### ${optionToSelect}`);
+        await webActions.chooseOptionByLabel(this.caseTypeDropdown, optionToSelect);
+    }
+
     async findAndNavigateToCase(caseId: string): Promise<void> {
         await this.page.getByRole('link', { name: 'Find case' }).waitFor();
         await this.page.getByRole('link', { name: 'Find case' }).click();
@@ -110,7 +116,7 @@ export class HomePage {
                 console.log(`case type dropdown value is ###### ${optionToSelect}`);
                 await webActions.chooseOptionByLabel(this.caseTypeDropdown, optionToSelect);
             } else {
-                await this.searchCaseWithAATDef();
+                await this.searchCaseWithPreviewDef();
             }
             
         } else if(environment.name == 'aat') {
