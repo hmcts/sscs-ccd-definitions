@@ -1,8 +1,10 @@
 # ---- Base image - order important ----
 FROM hmctspublic.azurecr.io/ccd/definition-processor:latest as base
+#Installing curl to avoid package conflict with upstream outdated image.
+RUN apk add --no-cache curl
 
 # ----        Runtime image         ----
-FROM hmctspublic.azurecr.io/ccd/definition-importer:db1m7r6 as runtime
+FROM hmctspublic.azurecr.io/ccd/definition-importer:latest as runtime
 # ---- To build non prod version image, pass --build-arg exclude=prod
 ARG exclude=nonprod
 ENV EXCLUSION=*-$exclude.json,*-shuttered.json
