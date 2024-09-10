@@ -53,7 +53,7 @@ export class IssueDirectionPage {
     async populateSpecificRecipients() {
         await webActions.clickElementById("#sendDirectionNoticeToFTA_Yes");
         await webActions.clickElementById("#sendDirectionNoticeToRepresentative_No");
-        await webActions.clickElementById("#sendDirectionNoticeToOtherParty_Yes");
+        // await webActions.clickElementById("#sendDirectionNoticeToOtherParty_Yes");
         await webActions.clickElementById("#sendDirectionNoticeToAppellantOrAppointee_No");
     }
 
