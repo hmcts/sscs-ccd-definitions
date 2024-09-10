@@ -21,7 +21,7 @@ test.describe("Hearing upload test", {tag: '@preview-pipeline'}, async() => {
     });
     
      test.afterAll("Case has to be set to Dormant",async () => {
-        await performAppealDormantOnCase(caseId);
+        // await performAppealDormantOnCase(caseId);
      });
     
 });
