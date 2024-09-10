@@ -56,6 +56,14 @@ import { ReferredToInterloc } from '../fixtures/steps/referred.to.interloc';
 import { FtaNotProvidedAppointeeDetails } from '../fixtures/steps/fta.not.provided.appointee.details';
 import { ReviewFTAValidityChallengeTask } from '../fixtures/steps/work-allocation/review.fta.validity.challenge.task';
 import { ReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/review.postponement.request.task';
+import { UpdateHearingDetailsTask } from '../fixtures/steps/work-allocation/update.hearing.details.task';
+import { ReferredByAdminJudgeTask } from '../fixtures/steps/referred.by.admin.judge.task';
+import { ReferredToInterlocJudgeTask } from '../fixtures/steps/referred.to.interloc.judge.task';
+import { JudgeReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/judge.review.postponement.request.task';
+import { PrepareForHearingTask } from '../fixtures/steps/work-allocation/prepare.for.hearing.task';
+import { ReferredByTcwJudgeTask } from '../fixtures/steps/referred.by.tcw.judge.task';
+import { FtaNotProvidedAppointeeDetailsJudgeTask } from '../fixtures/steps/fta.not.provided.appointee.details.judge.task';
+import { ReviewConfidentialityRequestTask } from '../fixtures/steps/work-allocation/review.confidentiality.request.task';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -113,7 +121,16 @@ type MyStepsFixtures = {
     ftaNotProvidedAppointeeDetailsSteps: FtaNotProvidedAppointeeDetails
     ReviewFTAValidityChallengeSteps: ReviewFTAValidityChallengeTask
     reviewPostponementRequestTaskSteps: ReviewPostponementRequestTask
+    updateHearingDetailsSteps: UpdateHearingDetailsTask
+    referredByAdminJudgeTaskSteps: ReferredByAdminJudgeTask
+    referredToInterlocJudgeTaskSteps: ReferredToInterlocJudgeTask
+    judgeReviewPostponementRequestTaskSteps: JudgeReviewPostponementRequestTask
+    prepareForHearingTaskSteps: PrepareForHearingTask
+    referredByTcwJudgeTaskSteps: ReferredByTcwJudgeTask
+    ftaNotProvidedAppointeeDetailsJudgeTaskSteps: FtaNotProvidedAppointeeDetailsJudgeTask
+    reviewConfidentialityRequestTaskSteps: ReviewConfidentialityRequestTask
     accessibilitySteps: AccessibilitySteps
+
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -337,6 +354,38 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     reviewPostponementRequestTaskSteps: async ({ page }, use) => {
         const ReviewPostponementRequestTaskSteps = new ReviewPostponementRequestTask(page);
         await use(ReviewPostponementRequestTaskSteps);
+    },
+    updateHearingDetailsSteps: async ({ page }, use) => {
+        const updateHearingDetailsSteps = new UpdateHearingDetailsTask(page);
+        await use(updateHearingDetailsSteps);
+    },
+    referredByAdminJudgeTaskSteps:async ({page}, use) => {
+        const referredByAdminJudgeTaskSteps = new ReferredByAdminJudgeTask(page);
+        await use(referredByAdminJudgeTaskSteps);
+    },
+    referredToInterlocJudgeTaskSteps:async ({page}, use) => {
+        const referredToInterlocJudgeTaskSteps = new ReferredToInterlocJudgeTask(page);
+        await use(referredToInterlocJudgeTaskSteps);
+    },
+    judgeReviewPostponementRequestTaskSteps: async ({ page }, use) => {
+        const judgeReviewPostponementRequestTaskSteps = new JudgeReviewPostponementRequestTask(page);
+        await use(judgeReviewPostponementRequestTaskSteps);
+    },
+    prepareForHearingTaskSteps: async ({ page }, use) => {
+        const prepareForHearingTaskSteps = new PrepareForHearingTask(page);
+        await use(prepareForHearingTaskSteps);
+    },
+    referredByTcwJudgeTaskSteps:async ({page}, use) => {
+        const referredByTcwJudgeTaskSteps = new ReferredByTcwJudgeTask(page);
+        await use(referredByTcwJudgeTaskSteps);
+    },
+    ftaNotProvidedAppointeeDetailsJudgeTaskSteps:async ({page}, use) => {
+        const ftaNotProvidedAppointeeDetailsJudgeTaskSteps = new FtaNotProvidedAppointeeDetailsJudgeTask(page);
+        await use(ftaNotProvidedAppointeeDetailsJudgeTaskSteps);
+    },
+    reviewConfidentialityRequestTaskSteps:async ({page}, use) => {
+        const reviewConfidentialityRequestTaskSteps = new ReviewConfidentialityRequestTask(page);
+        await use(reviewConfidentialityRequestTaskSteps);
     },  
     accessibilitySteps: async ({ page }, use) => {
         const accessibilitySteps = new AccessibilitySteps(page);

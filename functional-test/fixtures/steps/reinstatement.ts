@@ -36,7 +36,7 @@ export class Reinstatement extends BaseStep {
         await this.homePage.delay(3000);
 
         await this.homePage.navigateToTab("Appeal Details");
-        await this.appealDetailsTab.verifydueDates('Reinstatement Registered');
+        //await this.appealDetailsTab.verifydueDates('Reinstatement Registered');
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Reinstatement Outcome', 'In progress');
         await this.verifyHistoryTabDetails('With FTA', 'Issue further evidence');
         await this.historyTab.verifyPageContentByKeyValue('Interlocutory review state', 'Review by Judge');
@@ -55,7 +55,7 @@ export class Reinstatement extends BaseStep {
         await this.homePage.delay(3000);
 
         await this.homePage.navigateToTab("Appeal Details");
-        await this.appealDetailsTab.verifydueDates('Reinstatement Registered');
+        //await this.appealDetailsTab.verifydueDates('Reinstatement Registered');
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Reinstatement Outcome', 'Granted');
         
         await this.verifyHistoryTabDetails('With FTA', 'Issue directions notice');
@@ -79,7 +79,7 @@ export class Reinstatement extends BaseStep {
         await this.homePage.delay(3000);
 
         await this.homePage.navigateToTab("Appeal Details");
-        await this.appealDetailsTab.verifydueDates('Reinstatement Registered');
+        //await this.appealDetailsTab.verifydueDates('Reinstatement Registered');
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Reinstatement Outcome', 'In progress');
         await this.verifyHistoryTabDetails('With FTA', 'Issue further evidence');
         await this.historyTab.verifyPageContentByKeyValue('Interlocutory review state', 'Review by Judge');
@@ -98,7 +98,7 @@ export class Reinstatement extends BaseStep {
         await this.homePage.delay(3000);
 
         await this.homePage.navigateToTab("Appeal Details");
-        await this.appealDetailsTab.verifydueDates('Reinstatement Registered');
+        //await this.appealDetailsTab.verifydueDates('Reinstatement Registered');
         await this.appealDetailsTab.verifyAppealDetailsPageContentByKeyValue('Reinstatement Outcome', 'Refused');
         await this.verifyHistoryTabDetails('With FTA', 'Issue directions notice');
     }

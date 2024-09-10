@@ -23,7 +23,7 @@ test.describe.serial('WA - Abate(TCW) FTA not Provided Appointee Details task in
     });
 
     test.afterAll("Case has to be set to Dormant",async () => {
-        //  await performAppealDormantOnCase(caseId);
+         await performAppealDormantOnCase(caseId);
     });
 });
 
@@ -53,7 +53,7 @@ test.describe.serial('WA - Abate(TCW) FTA not Provided Appointee Details task co
     });
 
     test.afterAll("Case has to be set to Dormant",async () => {
-        //  await performAppealDormantOnCase(caseId);
+         await performAppealDormantOnCase(caseId);
     });
 });
 
@@ -75,7 +75,7 @@ test.describe.serial('WA - Abate(TCW) FTA not Provided Appointee Details task au
     });
 
     test.afterAll("Case has to be set to Dormant", async () => {
-        // await performAppealDormantOnCase(caseId);
+        await performAppealDormantOnCase(caseId);
     });
 });
 

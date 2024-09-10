@@ -115,6 +115,7 @@ withPipeline("nodejs", product, component) {
             }
         }
 
+
         stage('Playwright tests') {
             try{
                 yarnBuilder.yarn('test:jenkins')

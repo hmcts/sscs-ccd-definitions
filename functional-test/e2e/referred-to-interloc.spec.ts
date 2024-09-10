@@ -14,7 +14,7 @@ test.describe.serial('WA - Referred to Interloc task initiation', {tag: '@work-a
     test("Allocate case to legal ops role and perform Send to interloc event", async ({ sendToInterlocSteps , referredToInterlocSteps }) => {
         
         await referredToInterlocSteps.allocateCaseToLegalOpsRole(caseId);
-        await sendToInterlocSteps.performSendToInterlocReferralReason(caseId);
+        await sendToInterlocSteps.performSendToInterlocReferralReasonOver300Pages(caseId);
     });
 
     test("As a TCW can view the auto assigned Referred to Interloc task", async ({ referredToInterlocSteps }) => {
@@ -35,7 +35,7 @@ test.describe.serial('WA - Referred to Interloc task completion tests', {tag: '@
 
     test("Allocate case to legal ops role and perform Send to interloc event", async ({ sendToInterlocSteps }) => {
         
-        await sendToInterlocSteps.performSendToInterlocReferralReason(caseId);
+        await sendToInterlocSteps.performSendToInterlocReferralReasonOver300Pages(caseId);
     });
 
     test("As a TCW with case allocator role, assign Referred to Interloc task to another TCW", async ({
@@ -69,7 +69,7 @@ test.describe.serial('WA - Referred to Interloc task automatic cancellation when
 
     test("Review Referred to Interloc task is cancelled automatically when case is void", async ({ sendToInterlocSteps , referredToInterlocSteps }) => {
         
-        await sendToInterlocSteps.performSendToInterlocReferralReason(caseId);
+        await sendToInterlocSteps.performSendToInterlocReferralReasonOver300Pages(caseId);
         test.slow();
         await referredToInterlocSteps.verifyReferredToInterlocTaskIsCancelledAutomaticallyWhenTheCaseIsVoid(caseId);
     });

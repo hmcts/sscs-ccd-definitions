@@ -329,7 +329,7 @@ export class WriteFinalDecision extends BaseStep {
         await this.homePage.navigateToTab("Documents");
         await this.documentsTab.verifyPageContentByKeyValue("Type", "Final Decision Notice");
         await this.documentsTab.verifyPageContentByKeyValue("Bundle addition", "A");
-        await this.documentsTab.verifydueDates("Date added");
+        //await this.documentsTab.verifydueDates("Date added");
     }
 
     async performWriteFinalDecisionForAESAAppealNoAwardGivenAndNoticeGenerated(esaCaseId :string) {

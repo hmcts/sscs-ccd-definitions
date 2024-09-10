@@ -1,0 +1,19 @@
+{
+    "name": "Prepare For Hearing - Judge",
+    "priority": "low",
+    "assignedToWhenNotAssigned": "Unassigned",
+    "assignedTo": "Ms Angelica Ross",
+    "unassignedManageOptionsForCaseAllocator": [
+        "Assign task",
+        "Cancel task"
+    ],
+    "assignedManageOptionsForJudge": [
+        "Cancel task",
+        "Mark as done",
+        "Reassign task",
+        "Unassign task"
+    ],
+    "nextStepsOptions": [
+        "View hearing bundle"
+    ]
+}
