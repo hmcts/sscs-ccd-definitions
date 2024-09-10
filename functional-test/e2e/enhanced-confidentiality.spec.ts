@@ -5,14 +5,14 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 let caseId : string;
 
 
-test.describe("Enhanced confidentiality test", {tag: '@preview-pipeline'}, async() => {
+test.describe("Enhanced confidentiality test", async() => {
 
     test.beforeEach("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('UC');
         test.setTimeout(360000);
     });
     
-    test("Grant - Confidentiality request & verify bundle with redacted file", async ({ uploadResponseSteps, enhancedConfidentialitySteps, createBundleSteps }) => {
+    test("Grant - Confidentiality request & verify bundle with redacted file", {tag:'@hearings-enabled-test'}, async ({ uploadResponseSteps, enhancedConfidentialitySteps, createBundleSteps }) => {
         await uploadResponseSteps.performUploadResponseOnAUniversalCreditWithJP(caseId);
         await enhancedConfidentialitySteps.requestForConfidentiality();
         await enhancedConfidentialitySteps.grantConfidentialityForAppellant(caseId);
@@ -23,7 +23,7 @@ test.describe("Enhanced confidentiality test", {tag: '@preview-pipeline'}, async
         await createBundleSteps.triggerBundleForConfidentialCase();
     });
 
-    test("Refuse - confidentiality request for a party on a case", async({ uploadResponseSteps, enhancedConfidentialitySteps }) => {
+    test("Refuse - confidentiality request for a party on a case", {tag: '@preview-pipeline'}, async({ uploadResponseSteps, enhancedConfidentialitySteps }) => {
         await uploadResponseSteps.performUploadResponseOnAUniversalCreditWithJP(caseId);
         await enhancedConfidentialitySteps.requestForConfidentiality();
         await enhancedConfidentialitySteps.requestConfidentialityForJP();
