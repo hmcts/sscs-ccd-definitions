@@ -91,13 +91,13 @@ export class IssueDirectionsNotice extends BaseStep {
         let taxCreditCaseId = await createCaseBasedOnCaseType('TAX CREDIT');
         await new Promise(f => setTimeout(f, 30000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : ' + credentials.hmrcUser.email)
-        let responseWriterToken: string = await accessToken(credentials.hmrcUser);
+        /* let responseWriterToken: string = await accessToken(credentials.hmrcUser);
         let serviceToken: string = await getSSCSServiceToken();
         let responseWriterId: string = await accessId(credentials.hmrcUser);
         await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
             serviceToken.trim(), responseWriterId.trim(),
             'SSCS', 'Benefit',
-            taxCreditCaseId.trim(), 'dwpUploadResponse', 'hmrc');
+            taxCreditCaseId.trim(), 'dwpUploadResponse', 'hmrc'); */
 
         /*logger.info('The value of the response writer : '+credentials.amCaseWorker.email)
         let caseWorkerToken: string = await accessToken(credentials.amCaseWorker);
@@ -147,13 +147,13 @@ export class IssueDirectionsNotice extends BaseStep {
         let esaCaseId = await createCaseBasedOnCaseType('PIP');
         await new Promise(f => setTimeout(f, 30000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
-        let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
+        /*let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
         let serviceToken: string = await getSSCSServiceToken();
         let responseWriterId: string = await accessId(credentials.dwpResponseWriter);
         await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
             serviceToken.trim(), responseWriterId.trim(),
             'SSCS', 'Benefit',
-            esaCaseId.trim(), 'dwpUploadResponse', 'dwp');
+            esaCaseId.trim(), 'dwpUploadResponse', 'dwp');*/
 
         /*logger.info('The value of the response writer : '+credentials.amCaseWorker.email)
         let caseWorkerToken: string = await accessToken(credentials.amCaseWorker);
@@ -201,13 +201,13 @@ export class IssueDirectionsNotice extends BaseStep {
         let pipCaseId = await createCaseBasedOnCaseType('PIP');
         await new Promise(f => setTimeout(f, 30000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
-        let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
+        /*let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
         let serviceToken: string = await getSSCSServiceToken();
         let responseWriterId: string = await accessId(credentials.dwpResponseWriter);
         await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
             serviceToken.trim(), responseWriterId.trim(),
             'SSCS', 'Benefit',
-            pipCaseId.trim(), 'dwpUploadResponse', 'dwp');
+            pipCaseId.trim(), 'dwpUploadResponse', 'dwp');*/
 
         /*logger.info('The value of the response writer : '+credentials.amCaseWorker.email)
         let caseWorkerToken: string = await accessToken(credentials.amCaseWorker);
@@ -253,13 +253,13 @@ export class IssueDirectionsNotice extends BaseStep {
         let pipCaseId = await createCaseBasedOnCaseType('PIP');
         await new Promise(f => setTimeout(f, 30000)); //Delay required for the Case to be ready
         logger.info('The value of the response writer : ' + credentials.dwpResponseWriter.email)
-       let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
+        /*let responseWriterToken: string = await accessToken(credentials.dwpResponseWriter);
         let serviceToken: string = await getSSCSServiceToken();
         let responseWriterId: string = await accessId(credentials.dwpResponseWriter);
         await performEventOnCaseWithUploadResponse(responseWriterToken.trim(),
             serviceToken.trim(), responseWriterId.trim(),
             'SSCS', 'Benefit',
-            pipCaseId.trim(), 'dwpUploadResponse', 'dwp');
+            pipCaseId.trim(), 'dwpUploadResponse', 'dwp');*/
 
         /*logger.info('The value of the response writer : '+credentials.amCaseWorker.email)
         let caseWorkerToken: string = await accessToken(credentials.amCaseWorker);
