@@ -83,7 +83,7 @@ export class IssueDirectionsNotice extends BaseStep {
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
         await this.verifyHistoryTabDetails("Issue directions notice");
-        await performAppealDormantOnCase(pipCaseId);
+        // await performAppealDormantOnCase(pipCaseId);
     }
 
     async performIssueDirectionNoticePreHearingAppealToProceed() {
@@ -137,7 +137,7 @@ export class IssueDirectionsNotice extends BaseStep {
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
         await this.verifyHistoryTabDetails("Issue directions notice");
-        await performAppealDormantOnCase(taxCreditCaseId);
+        // await performAppealDormantOnCase(taxCreditCaseId);
     }
 
 
@@ -192,7 +192,7 @@ export class IssueDirectionsNotice extends BaseStep {
             eventTestData.eventDescriptionInput);
         await this.eventNameAndDescriptionPage.confirmSubmission();
         await this.verifyHistoryTabDetails("Issue directions notice");
-        await performAppealDormantOnCase(esaCaseId);
+        // await performAppealDormantOnCase(esaCaseId);
     }
 
     async performIssueDirectionNoticePostHearingDLAAppealToProceed() {

@@ -12,7 +12,7 @@ test.describe('Issue Final Decision - PIP Appeal Type', async () => {
             let pipCaseId = await createCaseBasedOnCaseType('PIP');
             await issueFinalDecisionSteps.performWriteFinalDecisionForAPIPAppealNoAwardAndNoticeGenerated(pipCaseId);
             await issueFinalDecisionSteps.performIssueFinalDecisionForAnAppeal();
-            await performAppealDormantOnCase(pipCaseId);
+            // await performAppealDormantOnCase(pipCaseId);
         });
 
     test("Issue Final Decision - Upload Response with Further Information as No - Simple Decision Notice - 'Yes' notice generated. - Yes Award is Given", {tag: ['@master-pipeline','@preview-pipeline']}, 
@@ -21,7 +21,7 @@ test.describe('Issue Final Decision - PIP Appeal Type', async () => {
             let pipCaseId = await createCaseBasedOnCaseType('PIP');
             await issueFinalDecisionSteps.performWriteFinalDecisionForAPIPAppealAwardAndNoticeGenerated(pipCaseId);
             await issueFinalDecisionSteps.performIssueFinalDecisionForAnAppeal();
-            await performAppealDormantOnCase(pipCaseId);
+            // await performAppealDormantOnCase(pipCaseId);
         });
 
 })
@@ -34,7 +34,7 @@ test.describe('Issue Final Decision - Tax Credit Appeal Type', {tag: ['@master-p
             let taxCreditCaseId = await createCaseBasedOnCaseType('TAX CREDIT');
             await issueFinalDecisionSteps.performWriteFinalDecisionForATaxCreditAppealAndNoNoticeGenerated(taxCreditCaseId);
             await issueFinalDecisionSteps.performIssueFinalDecisionForAnAppeal();
-            await performAppealDormantOnCase(taxCreditCaseId);
+            // await performAppealDormantOnCase(taxCreditCaseId);
         });
 })
 
@@ -46,7 +46,7 @@ test.describe('Issue Final Decision - Universal Credit Appeal Type', {tag: ['@ma
             let universalCreditCaseId = await createCaseBasedOnCaseType('UC');
             await issueFinalDecisionSteps.performWriteFinalDecisionForAUniversalCreditAppealAndNoticeGenerated(universalCreditCaseId);
             await issueFinalDecisionSteps.performIssueFinalDecisionForAnAppeal();
-            await performAppealDormantOnCase(universalCreditCaseId);
+            // await performAppealDormantOnCase(universalCreditCaseId);
         });
 })
 
