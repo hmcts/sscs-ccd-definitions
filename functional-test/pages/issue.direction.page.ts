@@ -172,8 +172,8 @@ export class IssueDirectionPage {
         await this.verifySpecificRecipients();
         await this.populateSpecificRecipients();
         await this.chooseNoticeType('#generateNotice_No');
-        await this.enterDirectionDueDate();
         await this.enterNoticeContent(false);
+        await this.enterDirectionDueDate();
         await this.confirmSubmission();
     }
 }
