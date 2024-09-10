@@ -36,13 +36,6 @@ export class Documents {
             .locator(`//span[normalize-space()="${fieldLabel}"]`)).not.toBeVisible();
     }
 
-    // async verifydueDates(reqField: string){
-    //     const dueDate = new Date();
-    //     dueDate.setDate(new Date().getDate());
-    //     let fomattedDueDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(dueDate);
-    //     this.verifyPageContentByKeyValue(reqField, fomattedDueDate);
-    // }
-
     async verifydueDates(reqField: string){
         const dueDate = new Date();
         dueDate.setDate(new Date().getDate());
