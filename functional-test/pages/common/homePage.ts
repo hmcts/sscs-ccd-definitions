@@ -152,10 +152,10 @@ export class HomePage {
     }
 
     async chooseEvent(eventName: string): Promise<void> {
-        await this.delay(2000);
+        await this.delay(3000);
         await webActions.chooseOptionByLabel(this.nextStepDropDown, eventName);
         await expect(this.page.getByRole('button', { name: 'Go', exact: true })).toBeEnabled();
-        await this.delay(2000);
+        await this.delay(5000);
         await webActions.clickSubmitButton();
         // await webActions.clickNextStepButton(this.submitNextStepButton);
         // await webActions.clickGoButton('Go');
