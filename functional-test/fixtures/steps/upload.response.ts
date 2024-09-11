@@ -210,7 +210,7 @@ export class UploadResponse extends BaseStep {
         await this.uploadResponsePage.enterJPDetails();
         await this.checkYourAnswersPage.confirmSubmission();
 
-        await this.homePage.clickSignOut();
+        await this.homePage.signOut();
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, ucCaseId);
         await this.homePage.reloadPage();
