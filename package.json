@@ -62,7 +62,9 @@
     "phin": "^3.7.1",
     "semver": "^7.5.4",
     "tar": "^6.2.1",
-    "micromatch": "^4.0.8"
+    "micromatch": "^4.0.8",
+    "send": "^0.19.0",
+    "serve-static": "^1.16.0"
   },
   "packageManager": "yarn@3.5.0"
 }
