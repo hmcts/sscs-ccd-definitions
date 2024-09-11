@@ -205,3 +205,28 @@ and judge.json file presented below:
       }
     ]
 located in AuthorisationCaseField directory that corresponds the XLS tab name.
+
+# Run Security Scan locally
+
+You need `jq` installed
+
+Download `yarn-audit-with-suppressions.sh` and `prettyPrintAudit.sh` from https://github.com/hmcts/cnp-jenkins-library
+to project root folder
+
+```bash
+curl -OL https://raw.githubusercontent.com/hmcts/cnp-jenkins-library/master/resources/uk/gov/hmcts/pipeline/yarn/yarn-audit-with-suppressions.sh
+curl -OL https://raw.githubusercontent.com/hmcts/cnp-jenkins-library/master/resources/uk/gov/hmcts/pipeline/yarn/prettyPrintAudit.sh
+```
+
+Make both files executable
+
+```bash
+chmod +x ./yarn-audit-with-suppressions.sh
+chmod +x ./prettyPrintAudit.sh
+```
+
+Run `yarn-audit-with-suppressions.sh`
+
+```bash
+./yarn-audit-with-suppressions.sh
+```
