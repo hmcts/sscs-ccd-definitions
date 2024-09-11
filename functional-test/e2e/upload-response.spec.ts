@@ -23,7 +23,7 @@ test.describe('Upload response tests', {tag: '@preview-pipeline'}, async() => {
     });
 })
 
-test.describe('Upload response tests for PHE workflow', {tag: '@master-pipeline'}, async() => {
+test.describe('Upload response tests for PHE workflow', async() => {
 
     test.beforeEach("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
@@ -38,7 +38,7 @@ test.describe('Upload response tests for PHE workflow', {tag: '@master-pipeline'
     
 })
 
-test.describe('Upload response tests for UCB workflow', {tag: '@master-pipeline'}, async() => {
+test.describe('Upload response tests for UCB workflow', async() => {
 
     test.beforeEach("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
