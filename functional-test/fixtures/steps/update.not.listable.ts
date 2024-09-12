@@ -125,20 +125,7 @@ export class UpdateNotListable extends BaseStep {
     }
 
     async performUpdateNotListableDirectionNotFulfilledJudge(){
-        let pipCaseId = await createCaseBasedOnCaseType('PIP');
-        //Trigger Not listable event:
-        await this.goToNotListablePage(this.page, pipCaseId);
-        await this.notListablePage.verifyPageContent(); //Verifying Heading and Caption for event
-        //inserting data and verifying said data during the event
-        await this.notListablePage.enterNotListableProvideReason();
-        await this.notListablePage.continueEvent();
-
-        await this.notListablePage.enterValidDirectionDueDate();
-        await this.notListablePage.continueEvent();
-
-        await this.notListablePage.confirmSubmission();
-       // verifying that event has submitted successfully and details are showing in Summary and History Tabs
-       await this.verifyHistoryTabDetails("Not listable","Not listable")
+        await this.performNotListableEvent();
         //Trigger Update not listable case event
         await this.homePage.chooseEvent("Update not listable case");
         await this.updateNotListablePage.requirementsNotFulfilled();

@@ -235,4 +235,5 @@ export class Tasks {
         let task = this.page.locator(`//exui-case-task[./*[normalize-space()='${taskName}']]`);
         await expect(task.getByRole('link', { name: tasksTestData.assignTask })).toBeHidden();
     }
+
 }

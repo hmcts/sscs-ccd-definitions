@@ -2,7 +2,6 @@ import {expect, Page} from '@playwright/test';
 import {WebAction} from '../../common/web.action'
 import { HomePage } from '../common/homePage';
 import { threadId } from 'worker_threads';
-import {Locator} from "puppeteer";
 
 
 let webActions: WebAction;

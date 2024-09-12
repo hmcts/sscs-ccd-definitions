@@ -94,6 +94,16 @@ export class WebAction {
          });
     }
 
+    async clickApplyFilterButton(): Promise<void> {
+        await this.page.waitForLoadState('domcontentloaded');
+        await this.page
+         .locator("//button[@title='Apply filter']")
+         .click()
+         .catch((error) => {
+            logger.error(`Button element is not present: ${error}`);
+         });
+    }
+
     async clickButton(elementLocator: string): Promise<void> {
         await this.page.waitForLoadState('domcontentloaded');
         await this.page.getByRole('button', { name: elementLocator}).waitFor();
@@ -145,6 +155,15 @@ export class WebAction {
         await this.page
          .locator(elementLocator)
          .click()
+         .catch((error) => {
+            logger.error(`Radio button element is not present: ${error}`);
+         });
+    }
+
+    async clickElementWithForce(elementLocator: string): Promise<void> {
+        await this.page
+         .locator(elementLocator)
+         .click({force: true})
          .catch((error) => {
             logger.error(`Radio button element is not present: ${error}`);
          });

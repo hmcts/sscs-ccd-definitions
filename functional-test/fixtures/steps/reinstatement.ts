@@ -147,7 +147,6 @@ export class Reinstatement extends BaseStep {
     }
 
     async verifyFeePaidJudgeCanViewTheUnassignedReviewReinstatementRequestTask(caseId: string): Promise<void> {
-
         // Verify Review Reinstatement Request - Judge task is displayed to the Fee-Paid Judge
          await this.loginUserWithCaseId(credentials.feePaidJudge, false, caseId);
          await this.homePage.navigateToTab('Tasks');

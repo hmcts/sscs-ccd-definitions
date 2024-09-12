@@ -4,6 +4,8 @@ import dateUtilsComponent from '../../utils/DateUtilsComponent';
 
 
 let webActions: WebAction;
+const currentDate: Date = new Date();
+const currentMonth: number = currentDate.getMonth();   
 
 export class Documents {
 
@@ -37,8 +39,15 @@ export class Documents {
     async verifydueDates(reqField: string){
         const dueDate = new Date();
         dueDate.setDate(new Date().getDate());
-        let fomattedDueDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(dueDate);
-        this.verifyPageContentByKeyValue(reqField, fomattedDueDate);
+        let formattedDueDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(dueDate);
+
+        //Java has replaced the short of September for 'en-GB' locale to be 'Sept' which is failing our tests, this regex is a workaround for that
+        if(currentMonth === 8){
+            formattedDueDate = formattedDueDate.replace(/\bSept\b/, "Sep");
+        } 
+
+        console.log(`New formatted date is ####### ${formattedDueDate}`);
+        await this.verifyPageContentByKeyValue(reqField, formattedDueDate);
     }
 
     async verifyFieldValueNotPresent(locator: string) {
