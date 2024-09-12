@@ -78,7 +78,7 @@ export class HomePage {
     }
 
     async signOut(): Promise<void> {
-        await webActions.clickElementWithForce("//a[contains(.,'Sign out')]");
+        await webActions.clickElementById("//a[contains(.,'Sign out')]");
     }
 
     async goToHomePage(caseId: string): Promise<void> {
