@@ -110,6 +110,38 @@ export class RolesAndAccess {
         await expect(this.page.locator('exui-role-access-section[title=\'Admin\'] table')).toBeVisible();
     }
 
+    async allocateLegalOpsRole(userEmail: string) : Promise<void> {
+        let homePage = new HomePage(this.page);
+        homePage.navigateToTab('Roles and acesss')
+
+        await this.page.getByRole('link', { name: allocateRole.legalOpsRole.link }).click();
+        await this.verifyPageTitle(allocateRole.legalOpsRole.heading);
+        await this.page.getByRole('radio', { name: allocateRole.legalOpsRole.legalOpsCaseworkerLabel }).click();
+        await this.clickContinue();
+
+        await this.verifyPageTitle(allocateRole.legalOpsRole.chooseHowToAllocateRoleHeading);
+        await this.page.getByRole('radio', { name: allocateRole.legalOpsRole.allocateToAnotherPersonRadioButtonLabel }).click();
+        await this.clickContinue();
+
+        await this.verifyPageTitle(allocateRole.legalOpsRole.findPersonHeading);
+        await this.page.locator('#inputSelectPerson').fill(allocateRole.legalOpsRole.allocateToName);
+        await expect(this.page.locator('div.mat-autocomplete-panel.mat-autocomplete-visible')).toBeVisible();
+        await this.page.locator(`//mat-option/span[contains(text(), '${userEmail.toLowerCase()}')]`).click();
+        await expect(this.page.locator('//mat-option')).toBeHidden();
+        await this.clickContinue();
+
+        await this.verifyPageTitle(allocateRole.legalOpsRole.durationOfRoleHeading);
+        await this.page.getByRole('radio', { name: allocateRole.legalOpsRole.numberOfDaysRadioButtonLabel, exact: true }).click();
+        await this.clickContinue();
+
+        await expect(this.page.locator(`h1.govuk-heading-l:has-text('Check your answers')`)).toBeVisible();
+        await expect(this.page.locator(`dd:has-text('${userEmail.toLowerCase()}')`)).toBeVisible();
+        await this.confirmAllocation();
+
+        await expect(this.page.locator(`//h2[normalize-space()='${allocateRole.RolesAndAccessHeading}']`)).toBeVisible();
+        await expect(this.page.locator('exui-role-access-section[title=\'Legal Ops\'] table')).toBeVisible();
+    }
+
     async confirmAllocation(): Promise<void> {
         await this.page.getByRole('button', { name: 'Confirm allocation' }).click();
     }

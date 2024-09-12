@@ -3,7 +3,7 @@ import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.fa
 import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 
-test.describe("Urgent hearing test", {tag: '@pipeline'}, async() => {
+test.describe("Urgent hearing test", {tag: '@preview-pipeline'}, async() => {
 
     let caseId : string;
 
@@ -27,7 +27,7 @@ test.describe("Urgent hearing test", {tag: '@pipeline'}, async() => {
     });
     
      test.afterAll("Case has to be set to Dormant",async () => {
-        await performAppealDormantOnCase(caseId);
+        // await performAppealDormantOnCase(caseId);
      });
 });
 
