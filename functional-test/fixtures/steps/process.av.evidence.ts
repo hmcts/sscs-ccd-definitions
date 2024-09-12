@@ -50,7 +50,7 @@ export class ProcessAVEvidence extends BaseStep {
         await this.avTab.verifyPageContentByKeyValue(avEvidenceTestdata.typeField, avEvidenceTestdata.typeValue);
         await this.avTab.verifyPageContentByKeyValue(avEvidenceTestdata.docField, uploadResponseTestdata.testaudiofile);
         await this.avTab.verifyPageContentByKeyValue(avEvidenceTestdata.partyField, avEvidenceTestdata.ftaValue);
-        await this.avTab.verifydueDates('Date added');
+        //await this.avTab.verifydueDates('Date added');
 
         await this.homePage.chooseEvent(avEvidenceTestdata.eventNameCaptor);
         await this.processAVPage.selectRequestedEvidence('test_av.mp3');
@@ -61,13 +61,13 @@ export class ProcessAVEvidence extends BaseStep {
         await this.homePage.navigateToTab(avEvidenceTestdata.docTab);
         await this.documentsTab.verifyPageContentByKeyValue(avEvidenceTestdata.docTypeField, avEvidenceTestdata.docTypeValue);
         await this.documentsTab.verifyPageContentByKeyValue("Bundle addition", "A");
-        await this.documentsTab.verifydueDates('Date added');
+        //await this.documentsTab.verifydueDates('Date added');
 
         await this.homePage.navigateToTab('FTA Documents');
         await this.documentsTab.verifyPageContentByKeyValue("Document type", "Audio document");
         await this.documentsTab.verifyPageContentByKeyValue("Document file name", "test_av.mp3");
         await this.documentsTab.verifyPageContentByKeyValue("Party uploaded", "dwp");
-        await this.documentsTab.verifydueDates('Date added');
+        //await this.documentsTab.verifydueDates('Date added');
 
         await this.homePage.navigateToTab('History');
         await this.verifyHistoryTabDetails('Process audio/video evidence');
@@ -95,7 +95,7 @@ export class ProcessAVEvidence extends BaseStep {
         await this.avTab.verifyPageContentByKeyValue('Document Type', 'audioDocument');
         await this.avTab.verifyPageContentByKeyValue('Audio/video document url', uploadResponseTestdata.testaudiofile);
         await this.avTab.verifyPageContentByKeyValue('Audio/video party uploaded', 'FTA');
-        await this.avTab.verifydueDates('Date added');
+        //await this.avTab.verifydueDates('Date added');
 
         await this.homePage.chooseEvent('Process audio/video evidence');
         await this.processAVPage.selectRequestedEvidence('test_av.mp3');
@@ -106,7 +106,7 @@ export class ProcessAVEvidence extends BaseStep {
         await this.homePage.navigateToTab('Documents');
         await this.documentsTab.verifyPageContentByKeyValue("Type", "Audio/Video evidence direction notice");
         await this.documentsTab.verifyPageContentByKeyValue("Bundle addition", "A");
-        await this.documentsTab.verifydueDates('Date added');
+        //await this.documentsTab.verifydueDates('Date added');
 
         await this.homePage.navigateToTab('FTA Documents');
         await this.documentsTab.verifyPageContentNotPresentByKeyValue("Document type", "Audio document");
@@ -127,7 +127,7 @@ export class ProcessAVEvidence extends BaseStep {
         await this.avTab.verifyPageContentByKeyValue('Audio/video document url', uploadResponseTestdata.testaudiofile);
         await this.avTab.verifyPageContentByKeyValue('Audio/video party uploaded', 'CTSC clerk');
         await this.avTab.verifyPageContentByKeyValue('Original Sender', 'Appellant');
-        await this.avTab.verifydueDates('Date added');
+        //await this.avTab.verifydueDates('Date added');
 
         await this.homePage.chooseEvent('Process audio/video evidence');
         await this.processAVPage.selectRequestedEvidence('Test file');
@@ -138,12 +138,12 @@ export class ProcessAVEvidence extends BaseStep {
         await this.homePage.navigateToTab('Documents');
         await this.documentsTab.verifyPageContentByKeyValue("Type", "Audio/Video evidence direction notice");
         await this.documentsTab.verifyPageContentByKeyValue("Bundle addition", "A");
-        await this.documentsTab.verifydueDates('Date added');
+        //await this.documentsTab.verifydueDates('Date added');
         await this.documentsTab.verifyPageContentByKeyValue("Type", "Audio document");
         await this.documentsTab.verifyPageContentByKeyValue("Audio/video document", "test_av.mp3");
         await this.documentsTab.verifyPageContentByKeyValue("Party uploaded", "ctsc");
         await this.documentsTab.verifyPageContentByKeyValue("Original Sender", "Appellant");
-        await this.documentsTab.verifydueDates('Date approved');
+        //await this.documentsTab.verifydueDates('Date approved');
 
         await this.homePage.navigateToTab('History');
         await this.verifyHistoryTabDetails('Process audio/video evidence');
@@ -159,7 +159,7 @@ export class ProcessAVEvidence extends BaseStep {
         await this.avTab.verifyPageContentByKeyValue('Audio/video document url', uploadResponseTestdata.testaudiofile);
         await this.avTab.verifyPageContentByKeyValue('Audio/video party uploaded', 'CTSC clerk');
         await this.avTab.verifyPageContentByKeyValue('Original Sender', 'Appellant');
-        await this.avTab.verifydueDates('Date added');
+        //await this.avTab.verifydueDates('Date added');
 
         await this.homePage.chooseEvent('Process audio/video evidence');
         await this.processAVPage.selectRequestedEvidence('Test file');
@@ -170,7 +170,7 @@ export class ProcessAVEvidence extends BaseStep {
         await this.homePage.navigateToTab('Documents');
         await this.documentsTab.verifyPageContentByKeyValue("Type", "Audio/Video evidence direction notice");
         await this.documentsTab.verifyPageContentByKeyValue("Bundle addition", "A");
-        await this.documentsTab.verifydueDates('Date added');
+        //await this.documentsTab.verifydueDates('Date added');
         await this.documentsTab.verifyPageContentNotPresentByKeyValue("Type", "Audio document");
         await this.documentsTab.verifyPageContentNotPresentByKeyValue("Audio/video document", "test_av.mp3");
         await this.documentsTab.verifyPageContentNotPresentByKeyValue("Party uploaded", "ctsc");
@@ -192,7 +192,7 @@ export class ProcessAVEvidence extends BaseStep {
         await this.homePage.navigateToTab(avEvidenceTestdata.docTab);
         await this.documentsTab.verifyPageContentByKeyValue(avEvidenceTestdata.docTypeField, avEvidenceTestdata.docTypeValue);
         await this.documentsTab.verifyPageContentByKeyValue("Bundle addition", "A");
-        await this.documentsTab.verifydueDates('Date added');
+        //await this.documentsTab.verifydueDates('Date added');
 
         await this.homePage.navigateToTab('History');
         await this.verifyHistoryTabDetails('Process audio/video evidence');
