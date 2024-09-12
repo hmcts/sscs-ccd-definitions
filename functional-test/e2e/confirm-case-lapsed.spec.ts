@@ -5,7 +5,7 @@ let caseId : string;
 test.beforeAll("Case has to be Created",async () => {
     caseId = await createCaseBasedOnCaseType('CHILDSUPPORT');
 });
-test("Test that the Case can be lapsed", {tag: '@pipeline'}, async ({ confirmCaseLapsedSteps }) => {
+test("Test that the Case can be lapsed", async ({ confirmCaseLapsedSteps }) => {
     await confirmCaseLapsedSteps.performConfirmCaseLapsed(caseId);
 });
 
