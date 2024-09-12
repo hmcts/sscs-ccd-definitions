@@ -31,6 +31,7 @@ export class LoginPage {
 
     async verifySuccessfulLoginForUser(user, clearCacheFlag?: boolean): Promise<void> {
         if(clearCacheFlag) await this.page.context().clearCookies();
+        await webActions.verifyElementVisibility('#username');
         await webActions.inputField('#username', user.email);
         await webActions.inputField('#password', user.password);
         await webActions.clickButton('Sign in');

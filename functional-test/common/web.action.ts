@@ -160,6 +160,15 @@ export class WebAction {
          });
     }
 
+    async clickElementWithForce(elementLocator: string): Promise<void> {
+        await this.page
+         .locator(elementLocator)
+         .click({force: true})
+         .catch((error) => {
+            logger.error(`Radio button element is not present: ${error}`);
+         });
+    }
+
     async clickLink(elementLocator: string): Promise<void> {
         await this.page
             .getByRole('link', { name: elementLocator})
