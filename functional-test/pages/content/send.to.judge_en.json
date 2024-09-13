@@ -6,5 +6,6 @@
     "sendToJudgeReviewStateFieldLabel" : "Interlocutory review state",
     "sendToJudgeInput" : "Automation testing of the Send to Judge Event",
     "sendToJudgePrePostHearingSelectValue" : "Pre Hearing",
-    "sendToJudgeReviewStateSelectValue" : "Awaiting Information"
+    "sendToJudgeReviewStateSelectValueAwaitingInformation" : "Awaiting Information",
+    "sendToJudgeReviewStateSelectValueReviewByJudge" : "Review by Judge"
 }
