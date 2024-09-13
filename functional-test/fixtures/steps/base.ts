@@ -59,8 +59,6 @@ import { PostponementPages } from "../../pages/postponement.page";
 import { PrepareCaseForHearingPage } from '../../pages/prepare.case.for.hearing.page';
 import { ReviewConfidentialityPage } from '../../pages/review.confidentiality.page'
 import { SendToJudgePage } from '../../pages/send.to.judge.page';
-import { ChallengeValidityPage } from '../../pages/review.fta.validity.challenge.page';
-import { PostponementRequestPage } from '../../pages/postponement.request.page';
 
 
 export abstract class BaseStep {
@@ -125,8 +123,6 @@ export abstract class BaseStep {
   protected postponementPage : PostponementPages;
   protected prepareCaseForHearingPage: PrepareCaseForHearingPage;
   protected reviewConfidentialityPage: ReviewConfidentialityPage;
-  protected challengeValidityPage: ChallengeValidityPage;
-  protected postponementRequestPage: PostponementRequestPage;
 
    constructor(page: Page) {
         this.page = page;
@@ -189,8 +185,6 @@ export abstract class BaseStep {
         this.postponementPage = new PostponementPages(this.page);
         this.prepareCaseForHearingPage = new PrepareCaseForHearingPage(this.page);
         this.reviewConfidentialityPage = new ReviewConfidentialityPage(this.page);
-        this.challengeValidityPage = new ChallengeValidityPage(this.page);
-        this.postponementRequestPage = new PostponementRequestPage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {
