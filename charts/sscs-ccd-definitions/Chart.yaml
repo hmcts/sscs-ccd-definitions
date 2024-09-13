@@ -6,3 +6,69 @@ dependencies:
   - name: nodejs
     version: 3.1.0
     repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+  - name: postgresql
+    version: 1.0.2
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    condition: postgresql.enabled
+  - name: java
+    version: 5.2.1
+    repository: https://hmctspublic.azurecr.io/helm/v1/repo/
+    condition: java.enabled
+  - name: job
+    version: 2.1.1
+    repository: https://hmctspublic.azurecr.io/helm/v1/repo/
+    condition: job.enabled
+  - name: xui-webapp
+    version: 1.0.18
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    condition: xui-webapp.enabled
+  - name: sscs-tribunals-api
+    version: 0.0.152
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    condition: sscs-tribunals-api.enabled
+  - name: sscs-tya-notif
+    version: 0.0.54
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    condition: sscs-tya-notif.enabled
+  - name: ccd
+    version: 9.2.0
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    condition: ccd.enabled
+    tags:
+      - sscs-ccd-idam-pr
+  - name: sscs-tribunals-frontend
+    version: 0.2.44
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    condition: sscs-tribunals-frontend.enabled
+  - name: redis
+    version: 17.17.1
+    repository: "https://charts.bitnami.com/bitnami"
+    condition: redis.enabled
+  - name: em-ccdorc
+    version: 2.0.25
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    condition: em-ccdorc.enabled
+  - name: ccd-case-document-am-api
+    version: 1.7.14
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    condition: ccd-case-document-am-api.enabled
+  - name: sscs-hearings-api
+    version: 0.0.39
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    condition: sscs-hearings-api.enabled
+  - name: servicebus
+    version: 1.0.6
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    condition: servicebus.enabled
+  - name: aac-manage-case-assignment
+    version: ~0.2.16
+    repository: https://hmctspublic.azurecr.io/helm/v1/repo/
+    condition: aac-manage-case-assignment.enabled
+  - name: am-org-role-mapping-service
+    version: 0.0.68
+    repository: https://hmctspublic.azurecr.io/helm/v1/repo/
+    condition: am-org-role-mapping-service.enabled
+  - name: ccd-def-cleanup
+    version: ~9.0.3
+    repository: 'https://hmctspublic.azurecr.io/helm/v1/repo/'
+    condition: ccd-def-cleanup.enabled
