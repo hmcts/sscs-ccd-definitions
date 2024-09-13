@@ -4,6 +4,8 @@ import dateUtilsComponent from '../../utils/DateUtilsComponent';
 
 
 let webActions: WebAction;
+const currentDate: Date = new Date();
+const currentMonth: number = currentDate.getMonth();   
 
 export class AppealDetails {
 
@@ -19,11 +21,6 @@ export class AppealDetails {
             .locator(`//*[normalize-space()="${fieldLabel}"]/../td[normalize-space()="${fieldValue}"]`)).toBeVisible();
     }
 
-    async verifyAppealDetailsPageContentDoesNotExistByKeyValue(fieldLabel: string, fieldValue: string): Promise<void> {
-        await expect(this.page
-            .locator(`//*[normalize-space()="${fieldLabel}"]/../td[normalize-space()="${fieldValue}"]`)).toHaveCount(0);
-    }
-
     async verifyFTADueDateOnAppealDetails() {
         const ftaDueDate = new Date();
         ftaDueDate.setDate(new Date().getDate() + 28);
@@ -34,8 +31,15 @@ export class AppealDetails {
     async verifydueDates(reqField: string){
         const dueDate = new Date();
         dueDate.setDate(new Date().getDate());
-        let fomattedDueDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(dueDate);
-        await this.verifyAppealDetailsPageContentByKeyValue(reqField, fomattedDueDate);
+        let formattedDueDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(dueDate);
+
+        //Java has replaced the short of September for 'en-GB' locale to be 'Sept' which is failing our tests, this regex is a workaround for that
+        if(currentMonth === 8){
+            formattedDueDate = formattedDueDate.replace(/\bSept\b/, "Sep");
+        } 
+
+        console.log(`New formatted date is ####### ${formattedDueDate}`);
+        await this.verifyAppealDetailsPageContentByKeyValue(reqField, formattedDueDate);
     }
 
     async verifyAppealDetailsAppointeeDetails(appointeeData) {

@@ -3,6 +3,8 @@ import { WebAction } from '../../common/web.action';
 import dateUtilsComponent from '../../utils/DateUtilsComponent';
 
 let webAction: WebAction;
+const currentDate: Date = new Date();
+const currentMonth: number = currentDate.getMonth();
 
 export class Summary {
 
@@ -16,11 +18,6 @@ export class Summary {
     async verifyPageContentByKeyValue(fieldLabel: string, fieldValue: string) {
         await expect(this.page
             .locator(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`)).toBeVisible();
-    }
-
-    async verifyPageContentByKeyValueDoesNotExist(fieldLabel: string, fieldValue: string) {
-        await expect(this.page
-            .locator(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`)).toHaveCount(0);
     }
 
     async verifyFieldHiddenInPageContent(fieldLabel: string) {
@@ -63,8 +60,18 @@ export class Summary {
     async verifydueDates(reqField: string){
         const dueDate = new Date();
         dueDate.setDate(new Date().getDate());
-        let fomattedDueDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(dueDate);
-        await this.verifyPageContentByKeyValue(reqField, fomattedDueDate);
+        let formattedDueDate = dateUtilsComponent.formatDateToSpecifiedDateShortFormat(dueDate);
+
+        //Java has replaced the short of September for 'en-GB' locale to be 'Sept' which is failing our tests, this regex is a workaround for that
+        if(currentMonth === 8){
+            formattedDueDate = formattedDueDate.replace(/\bSept\b/, "Sep");
+        } 
+
+        console.log(`New formatted date is ####### ${formattedDueDate}`);
+        await this.verifyPageContentByKeyValue(reqField, formattedDueDate);
     }
 
+    /*async verifyPresenceOfText(fieldValue: string): Promise<void>{
+        await webActions.verifyTextVisibility(fieldValue);
+    }*/
 }

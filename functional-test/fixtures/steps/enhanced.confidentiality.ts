@@ -49,7 +49,9 @@ export class EnhancedConfidentiality extends BaseStep {
     }
 
     async grantConfidentialityForAppellant(caseId: string) {
-        await this.homePage.clickSignOut();
+        await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
+        await this.homePage.signOut();
+        await new Promise(f => setTimeout(f, 3000)); //Delay required for the Case to be ready
         await this.loginUserWithCaseId(credentials.judge, false, caseId);
         await this.homePage.chooseEvent(reviewConfidentialityTestdata.eventNameCaptor);
         await this.reviewConfidentialityPage.verifyPageContentForReviewConfPage();
@@ -58,7 +60,9 @@ export class EnhancedConfidentiality extends BaseStep {
     }
 
     async confidentialityDecisionForParties(caseId: string) {
-        await this.homePage.clickSignOut();
+        await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
+        await this.homePage.signOut();
+        await new Promise(f => setTimeout(f, 3000)); //Delay required for the Case to be ready
         await this.loginUserWithCaseId(credentials.judge, false, caseId);
         await this.homePage.chooseEvent(reviewConfidentialityTestdata.eventNameCaptor);
         await this.reviewConfidentialityPage.verifyPageContentForReviewConfPage();
@@ -72,14 +76,18 @@ export class EnhancedConfidentiality extends BaseStep {
         await this.summaryTab.verifyAttributeValue('Is case confidential? Yes');
         await this.summaryTab.verifyPageContentByKeyValue('Request outcome', 'Granted');
         await this.summaryTab.verifydueDates('Request date');
-        await this.homePage.clickSignOut();
+        await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
+        await this.homePage.signOut();
+        await new Promise(f => setTimeout(f, 3000)); //Delay required for the Case to be ready
     }
 
     async verifyConfidentialityFlagForMultipleParties() {
         await this.summaryTab.verifyAttributeValue('Is case confidential? Yes');
         await this.summaryTab.verifyPageContentByKeyValue('Request outcome', 'Granted');
         await this.summaryTab.verifyPageContentByKeyValue('Request outcome', 'Refused');
-        await this.homePage.clickSignOut();
+        await new Promise(f => setTimeout(f, 2000)); //Delay required for the Case to be ready
+        await this.homePage.signOut();
+        await new Promise(f => setTimeout(f, 3000)); //Delay required for the Case to be ready
     }
 
     async uploadSupplementaryCorrespondence(caseId: string) {

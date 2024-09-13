@@ -78,38 +78,6 @@ export class RolesAndAccess {
         await expect(this.page.locator('exui-role-access-section[title=\'Judiciary\'] table')).toBeVisible();
     }
 
-    async allocateHearingJudge(userEmail: string): Promise<void> {
-        let homePage = new HomePage(this.page);
-        homePage.navigateToTab('Roles and acesss')
-
-        await this.page.getByRole('link', { name: allocateRole.judicialRoleHearingJudge.link }).click();
-        await this.verifyPageTitle(allocateRole.judicialRoleHearingJudge.heading);
-        await this.page.getByLabel('Hearing Judge', { exact: true }).click();
-        await this.clickContinue();
-
-        await this.verifyPageTitle(allocateRole.judicialRole.chooseHowToAllocateRoleHeading);
-        await this.page.getByRole('radio', { name: allocateRole.judicialRoleHearingJudge.allocateToAnotherPersonRadioButtonLabel }).click();
-        await this.clickContinue();
-
-        await this.verifyPageTitle(allocateRole.judicialRoleHearingJudge.findPersonHeading);
-        await this.page.locator('#inputSelectPerson').fill(allocateRole.judicialRoleHearingJudge.allocateToName.salariedJudge);
-        await expect(this.page.locator('div.mat-autocomplete-panel.mat-autocomplete-visible')).toBeVisible();
-        await this.page.locator(`//mat-option/span[contains(text(), '${userEmail.toLowerCase()}')]`).click();
-        await expect(this.page.locator('//mat-option')).toBeHidden();
-        await this.clickContinue();
-
-        await this.verifyPageTitle(allocateRole.judicialRoleHearingJudge.durationOfRoleHeading);
-        await this.page.getByRole('radio', { name: allocateRole.judicialRoleHearingJudge.numberOfDaysRadioButtonLabel, exact: true }).click();
-        await this.clickContinue();
-
-        await expect(this.page.locator(`h1.govuk-heading-l:has-text('${allocateRole.judicialRoleHearingJudge.cyaHeading}')`)).toBeVisible();
-        await expect(this.page.locator(`dd:has-text('${userEmail.toLowerCase()}')`)).toBeVisible();
-        await this.confirmAllocation();
-
-        await expect(this.page.locator(`//h2[normalize-space()='${allocateRole.RolesAndAccessHeading}']`)).toBeVisible();
-        await expect(this.page.locator('exui-role-access-section[title=\'Judiciary\'] table')).toBeVisible();
-    }
-
     async allocateAdminRole(userEmail: string) {
         let homePage = new HomePage(this.page);
         homePage.navigateToTab('Roles and acesss')
