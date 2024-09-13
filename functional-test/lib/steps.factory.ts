@@ -5,11 +5,9 @@ import {EvidenceReminder} from '../fixtures/steps/evidence.reminder';
 import {AssociateCase} from '../fixtures/steps/associate-case';
 import {SendToAdmin} from '../fixtures/steps/send.to.admin';
 import {InformationReceived} from '../fixtures/steps/information.received';
-import {ReviewAdminActionTask} from '../fixtures/steps/work-allocation/review.admin.action.task'
 import {SendToJudge} from '../fixtures/steps/send.to.judge';
 import {UploadResponse} from '../fixtures/steps/upload.response';
 import {ListingError} from "../fixtures/steps/listing.error";
-import {ReviewListingErrorTask} from '../fixtures/steps/work-allocation/review.listing.error.task'
 import {SendToDormant} from '../fixtures/steps/send.to.dormant';
 import {VoidCase} from '../fixtures/steps/void.case';
 import {StrikeOutCase} from '../fixtures/steps/strike.out.case';
@@ -19,8 +17,6 @@ import {AppealWithdrawn} from '../fixtures/steps/appeal.withdrawn';
 import {RequestTimeExtension} from '../fixtures/steps/request.time.extension';
 import {CreateBundle} from '../fixtures/steps/create.bundle';
 import {UrgentHearing} from '../fixtures/steps/urgent.hearing';
-import {ReviewIncompleteAppealTask} from '../fixtures/steps/work-allocation/review.incomplete.appeal.task';
-import { ReviewNonCompliantAppealTask } from '../fixtures/steps/work-allocation/review.noncompliant.appeal.task';
 import {RequestInfoFromParty} from '../fixtures/steps/request.info.from.party';
 import {Reinstatement} from '../fixtures/steps/reinstatement';
 import {AppealDormant} from '../fixtures/steps/appeal.dormant';
@@ -28,7 +24,6 @@ import {ProvideAppointeeDetails} from '../fixtures/steps/provide.appointee.detai
 import {UploadHearing} from "../fixtures/steps/upload.hearing";
 import {DeathOfAnAppelant} from "../fixtures/steps/death.of.an.appelant";
 import {LinkCase} from "../fixtures/steps/link-case";
-import {ReviewBFDateTask} from '../fixtures/steps/work-allocation/review.bf.date.task';
 import {SupplementaryResponse} from '../fixtures/steps/supplementary.response';
 import {UploadDocumentFurtherEvidence} from '../fixtures/steps/upload.document.further.evidence';
 import {UpdateLanguagePreference} from '../fixtures/steps/update.language.preference';
@@ -46,23 +41,10 @@ import { SearchFilter } from '../fixtures/steps/search.filter';
 import { Hearing } from '../fixtures/steps/hearing';
 import { PrepareCaseForHearing } from '../fixtures/steps/prepare.case.for.hearing';
 import { EnhancedConfidentiality } from '../fixtures/steps/enhanced.confidentiality';
-import { use } from "chai";
 import { SendToInterloc } from '../fixtures/steps/send.to.interloc';
 import { ReferredByAdmin } from '../fixtures/steps/referred.by.admin';
 import { SendCaseToTcw } from '../fixtures/steps/send.case.to.tcw';
 import { ReferredByJudge } from '../fixtures/steps/referred.by.judge';
-import { ReferredToInterloc } from '../fixtures/steps/referred.to.interloc';
-import { FtaNotProvidedAppointeeDetails } from '../fixtures/steps/fta.not.provided.appointee.details';
-import { ReviewFTAValidityChallengeTask } from '../fixtures/steps/work-allocation/review.fta.validity.challenge.task';
-import { ReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/review.postponement.request.task';
-import { UpdateHearingDetailsTask } from '../fixtures/steps/work-allocation/update.hearing.details.task';
-import { ReferredByAdminJudgeTask } from '../fixtures/steps/referred.by.admin.judge.task';
-import { ReferredToInterlocJudgeTask } from '../fixtures/steps/referred.to.interloc.judge.task';
-import { JudgeReviewPostponementRequestTask } from '../fixtures/steps/work-allocation/judge.review.postponement.request.task';
-import { PrepareForHearingTask } from '../fixtures/steps/work-allocation/prepare.for.hearing.task';
-import { ReferredByTcwJudgeTask } from '../fixtures/steps/referred.by.tcw.judge.task';
-import { FtaNotProvidedAppointeeDetailsJudgeTask } from '../fixtures/steps/fta.not.provided.appointee.details.judge.task';
-import { ReviewConfidentialityRequestTask } from '../fixtures/steps/work-allocation/review.confidentiality.request.task';
 
 type MyStepsFixtures = {
     addNoteSteps: Note
@@ -72,10 +54,6 @@ type MyStepsFixtures = {
     informationReceivedSteps: InformationReceived
     sendToAdminSteps: SendToAdmin
     sendToJudgeSteps: SendToJudge
-    reviewAdminActionTaskSteps: ReviewAdminActionTask
-    reviewListingErrorTaskSteps: ReviewListingErrorTask
-    reviewIncompleteAppealTaskSteps: ReviewIncompleteAppealTask
-    reviewNonCompliantAppealTaskSteps: ReviewNonCompliantAppealTask
     listingErrorSteps: ListingError
     uploadResponseSteps: UploadResponse
     sendToFTASteps: SendToFTA
@@ -94,7 +72,6 @@ type MyStepsFixtures = {
     linkACaseSteps: LinkCase
     provideAppointeeDetailsSteps: ProvideAppointeeDetails
     uploadHearingSteps: UploadHearing
-    reviewBFDateTaskSteps: ReviewBFDateTask
     supplementaryResponseSteps: SupplementaryResponse
     uploadDocumentFurtherEvidenceSteps: UploadDocumentFurtherEvidence
     updateLanguagePreferenceSteps: UpdateLanguagePreference
@@ -116,18 +93,6 @@ type MyStepsFixtures = {
     referredByAdminSteps: ReferredByAdmin
     sendCaseToTcwSteps: SendCaseToTcw
     referredByJudgeSteps: ReferredByJudge
-    referredToInterlocSteps: ReferredToInterloc
-    ftaNotProvidedAppointeeDetailsSteps: FtaNotProvidedAppointeeDetails
-    ReviewFTAValidityChallengeSteps: ReviewFTAValidityChallengeTask
-    reviewPostponementRequestTaskSteps: ReviewPostponementRequestTask
-    updateHearingDetailsSteps: UpdateHearingDetailsTask
-    referredByAdminJudgeTaskSteps: ReferredByAdminJudgeTask
-    referredToInterlocJudgeTaskSteps: ReferredToInterlocJudgeTask
-    judgeReviewPostponementRequestTaskSteps: JudgeReviewPostponementRequestTask
-    prepareForHearingTaskSteps: PrepareForHearingTask
-    referredByTcwJudgeTaskSteps: ReferredByTcwJudgeTask
-    ftaNotProvidedAppointeeDetailsJudgeTaskSteps: FtaNotProvidedAppointeeDetailsJudgeTask
-    reviewConfidentialityRequestTaskSteps: ReviewConfidentialityRequestTask
 };
 
 export const test = stepsFactory.extend<MyStepsFixtures>({
@@ -158,22 +123,6 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     readyToListSteps: async ({page}, use) => {
         const readyToListSteps = new ReadyToList(page);
         await use(readyToListSteps);
-    },
-    reviewAdminActionTaskSteps: async ({page}, use) => {
-        const reviewAdminActionTaskSteps = new ReviewAdminActionTask(page);
-        await use(reviewAdminActionTaskSteps);
-    },
-    reviewListingErrorTaskSteps: async ({page}, use) => {
-        const reviewListingErrorTaskSteps = new ReviewListingErrorTask(page);
-        await use(reviewListingErrorTaskSteps);
-    },
-    reviewIncompleteAppealTaskSteps: async ({page}, use) => {
-        const reviewIncompleteAppealTaskSteps = new ReviewIncompleteAppealTask(page);
-        await use(reviewIncompleteAppealTaskSteps);
-    },
-    reviewNonCompliantAppealTaskSteps:async ({ page }, use) => {
-        const reviewNonCompliantAppealTaskSteps = new ReviewNonCompliantAppealTask(page);
-        await use(reviewNonCompliantAppealTaskSteps);
     },
     sendToJudgeSteps:async ({page}, use) => {
         const sendToJudgeSteps = new SendToJudge(page);
@@ -250,10 +199,6 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     requestInfoFromPartySteps: async ({page}, use) => {
         const requestInfoFromPartySteps = new RequestInfoFromParty(page);
         await use(requestInfoFromPartySteps);
-    },
-    reviewBFDateTaskSteps: async ({page}, use) => {
-        const reviewBFDateTaskSteps = new ReviewBFDateTask(page);
-        await use(reviewBFDateTaskSteps);
     },
     supplementaryResponseSteps: async ({page}, use) => {
         const supplementaryResponseSteps = new SupplementaryResponse(page);
@@ -334,53 +279,5 @@ export const test = stepsFactory.extend<MyStepsFixtures>({
     referredByJudgeSteps:async ({page}, use) => {
         const ReferredByJudgeSteps = new ReferredByJudge(page);
         await use(ReferredByJudgeSteps);
-    },
-    referredToInterlocSteps:async ({page}, use) => {
-        const referredToInterlocSteps = new ReferredToInterloc(page);
-        await use(referredToInterlocSteps);
-    },
-    ftaNotProvidedAppointeeDetailsSteps:async ({page}, use) => {
-        const ftaNotProvidedAppointeeDetailsSteps = new FtaNotProvidedAppointeeDetails(page);
-        await use(ftaNotProvidedAppointeeDetailsSteps);
-    },
-    ReviewFTAValidityChallengeSteps: async ({ page }, use) => {
-        const ReviewFTAValidityChallengeSteps = new ReviewFTAValidityChallengeTask(page);
-        await use(ReviewFTAValidityChallengeSteps);
-    },
-    reviewPostponementRequestTaskSteps: async ({ page }, use) => {
-        const ReviewPostponementRequestTaskSteps = new ReviewPostponementRequestTask(page);
-        await use(ReviewPostponementRequestTaskSteps);
-    },
-    updateHearingDetailsSteps: async ({ page }, use) => {
-        const updateHearingDetailsSteps = new UpdateHearingDetailsTask(page);
-        await use(updateHearingDetailsSteps);
-    },
-    referredByAdminJudgeTaskSteps:async ({page}, use) => {
-        const referredByAdminJudgeTaskSteps = new ReferredByAdminJudgeTask(page);
-        await use(referredByAdminJudgeTaskSteps);
-    },
-    referredToInterlocJudgeTaskSteps:async ({page}, use) => {
-        const referredToInterlocJudgeTaskSteps = new ReferredToInterlocJudgeTask(page);
-        await use(referredToInterlocJudgeTaskSteps);
-    },
-    judgeReviewPostponementRequestTaskSteps: async ({ page }, use) => {
-        const judgeReviewPostponementRequestTaskSteps = new JudgeReviewPostponementRequestTask(page);
-        await use(judgeReviewPostponementRequestTaskSteps);
-    },
-    prepareForHearingTaskSteps: async ({ page }, use) => {
-        const prepareForHearingTaskSteps = new PrepareForHearingTask(page);
-        await use(prepareForHearingTaskSteps);
-    },
-    referredByTcwJudgeTaskSteps:async ({page}, use) => {
-        const referredByTcwJudgeTaskSteps = new ReferredByTcwJudgeTask(page);
-        await use(referredByTcwJudgeTaskSteps);
-    },
-    ftaNotProvidedAppointeeDetailsJudgeTaskSteps:async ({page}, use) => {
-        const ftaNotProvidedAppointeeDetailsJudgeTaskSteps = new FtaNotProvidedAppointeeDetailsJudgeTask(page);
-        await use(ftaNotProvidedAppointeeDetailsJudgeTaskSteps);
-    },
-    reviewConfidentialityRequestTaskSteps:async ({page}, use) => {
-        const reviewConfidentialityRequestTaskSteps = new ReviewConfidentialityRequestTask(page);
-        await use(reviewConfidentialityRequestTaskSteps);
     }
 })
