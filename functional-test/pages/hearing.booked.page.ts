@@ -13,7 +13,8 @@ export class HearingBookedPage {
     }
 
     async submitHearingBooked(): Promise<void> {
+        await webActions.delay(5000);
         await webActions.verifyPageLabel('h1.govuk-heading-l', 'Hearing booked');
-        await webActions.clickSubmitButton();
+        await webActions.clickButton('Submit');
     }
 }
