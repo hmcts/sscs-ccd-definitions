@@ -4,7 +4,7 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 let caseId : string;
 
-test.describe("Death of appellant test", {tag: '@pipeline'}, async() => {
+test.describe("Death of appellant test", {tag: '@nightly-pipeline'}, async() => {
 
     test("Death of an Appellant without an Appointee", async ({ deathOfAppellant }) => {
         await deathOfAppellant.performDeathOfAnAppellantWithoutAnApointee();
