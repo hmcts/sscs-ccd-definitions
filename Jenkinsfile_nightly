@@ -81,7 +81,7 @@ withNightlyPipeline("nodejs", product, component) {
     }
 
 
-    afterSuccess('smoketest:aat') {
+     afterSuccess('build') {
 
         stage('Playwright tests') {
             try{
