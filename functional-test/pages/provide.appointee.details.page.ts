@@ -50,22 +50,22 @@ export class ProvideAppointeeDetailsPage {
         await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_contact_mobile\'] > .form-label', appointeeData.mobileNumberTextFieldLabel);
         await webAction.verifyPageLabel('[for=\'appeal_appellant_appointee_contact_email\'] > .form-label', appointeeData.contactEmailTextFieldLabel);
 
-        await webAction.typeField('#appeal_appellant_appointee_name_title', appointeeData.nameTitleValue);
-        await webAction.typeField('#appeal_appellant_appointee_name_firstName', appointeeData.firstNameValue);
-        await webAction.typeField('#appeal_appellant_appointee_name_lastName', appointeeData.lastNameValue);
+        await webAction.inputField('#appeal_appellant_appointee_name_title', appointeeData.nameTitleValue);
+        await webAction.inputField('#appeal_appellant_appointee_name_firstName', appointeeData.firstNameValue);
+        await webAction.inputField('#appeal_appellant_appointee_name_lastName', appointeeData.lastNameValue);
         await webAction.typeField('#appeal_appellant_appointee_identity_identity #dob-day', appointeeData.dobDayValue);
         await webAction.typeField('#appeal_appellant_appointee_identity_identity #dob-month', appointeeData.dobMonthValue);
         await webAction.typeField('#appeal_appellant_appointee_identity_identity #dob-year', appointeeData.dobYearValue);
-        await webAction.typeField('#appeal_appellant_appointee_identity_nino', appointeeData.ninoValue);
+        await webAction.inputField('#appeal_appellant_appointee_identity_nino', appointeeData.ninoValue);
 
-        await webAction.typeField('#appeal_appellant_appointee_address_address ccd-field-write:nth-of-type(1) .form-control', appointeeData.streetAddressValue1);
-        await webAction.typeField('#appeal_appellant_appointee_address_address ccd-field-write:nth-of-type(2) .form-control', appointeeData.streetAddressValue2);
-        await webAction.typeField("#appeal_appellant_appointee_address_town", appointeeData.townValue);
-        await webAction.typeField('#appeal_appellant_appointee_address_county', appointeeData.countyValue);
-        await webAction.typeField('#appeal_appellant_appointee_address_postcode', appointeeData.postcodeValue);
-        await webAction.typeField('#appeal_appellant_appointee_contact_phone', appointeeData.phoneValue);
-        await webAction.typeField('#appeal_appellant_appointee_contact_mobile', appointeeData.mobileValue); 
-        await webAction.typeField('#appeal_appellant_appointee_contact_email', appointeeData.emailValue);
+        await webAction.inputField('#appeal_appellant_appointee_address_address ccd-field-write:nth-of-type(1) .form-control', appointeeData.streetAddressValue1);
+        await webAction.inputField('#appeal_appellant_appointee_address_address ccd-field-write:nth-of-type(2) .form-control', appointeeData.streetAddressValue2);
+        await webAction.inputField("#appeal_appellant_appointee_address_town", appointeeData.townValue);
+        await webAction.inputField('#appeal_appellant_appointee_address_county', appointeeData.countyValue);
+        await webAction.inputField('#appeal_appellant_appointee_address_postcode', appointeeData.postcodeValue);
+        await webAction.inputField('#appeal_appellant_appointee_contact_phone', appointeeData.phoneValue);
+        await webAction.inputField('#appeal_appellant_appointee_contact_mobile', appointeeData.mobileValue); 
+        await webAction.inputField('#appeal_appellant_appointee_contact_email', appointeeData.emailValue);
     }
 
     async chooseAssistOption(optionVal: string): Promise<void> {
