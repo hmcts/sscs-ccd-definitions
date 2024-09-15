@@ -59,12 +59,19 @@ export class ProvideAppointeeDetailsPage {
         await webAction.typeField('#appeal_appellant_appointee_identity_nino', appointeeData.ninoValue);
 
         await webAction.typeField('#appeal_appellant_appointee_address_address ccd-field-write:nth-of-type(1) .form-control', appointeeData.streetAddressValue1);
+        await webAction.delay(2000);
         await webAction.typeField('#appeal_appellant_appointee_address_address ccd-field-write:nth-of-type(2) .form-control', appointeeData.streetAddressValue2);
+        await webAction.delay(2000);
         await webAction.typeField("#appeal_appellant_appointee_address_town", appointeeData.townValue);
+        await webAction.delay(2000);
         await webAction.typeField('#appeal_appellant_appointee_address_county', appointeeData.countyValue);
+        await webAction.delay(2000);
         await webAction.typeField('#appeal_appellant_appointee_address_postcode', appointeeData.postcodeValue);
+        await webAction.delay(2000);
         await webAction.typeField('#appeal_appellant_appointee_contact_phone', appointeeData.phoneValue);
+        await webAction.delay(2000);
         await webAction.typeField('#appeal_appellant_appointee_contact_mobile', appointeeData.mobileValue);
+        await webAction.delay(2000);
         await webAction.typeField('#appeal_appellant_appointee_contact_email', appointeeData.emailValue);
     }
 
