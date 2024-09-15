@@ -10,7 +10,7 @@ test.describe("Death of appellant test", async() => {
         await deathOfAppellant.performDeathOfAnAppellantWithoutAnApointee();
     });
     
-    test("Death of an Appellant with an Appointee", async ({ deathOfAppellant }) => {
+    test("Death of an Appellant with an Appointee",{tag: '@nightly-pipeline'}, async ({ deathOfAppellant }) => {
         await deathOfAppellant.performDeathOfAnAppellantWithAnAppointee();
     });
     
