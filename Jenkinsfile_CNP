@@ -10,6 +10,9 @@ properties([
 
 @Library("Infrastructure")
 
+import uk.gov.hmcts.contino.AppPipelineDsl
+import uk.gov.hmcts.contino.GithubAPI
+
 def product = "sscs"
 def component = "ccd-definitions"
 
@@ -66,6 +69,7 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 def branchesToSync = ['demo', 'ithc', 'perftest']
 
 withPipeline("nodejs", product, component) {
+  def githubApi = new GithubAPI(this)
   loadVaultSecrets(secrets)
   syncBranchesWithMaster(branchesToSync)
     onPR{
