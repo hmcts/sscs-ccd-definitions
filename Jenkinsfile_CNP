@@ -140,7 +140,6 @@ withPipeline("nodejs", product, component) {
         }
             
     }
-}
 
     afterSuccess('smoketest:aat') {
 
@@ -213,4 +212,6 @@ withPipeline("nodejs", product, component) {
     }
 
   println """done!""".stripIndent()
+
+
 }
