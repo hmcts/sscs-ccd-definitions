@@ -10,7 +10,6 @@ properties([
 
 @Library("Infrastructure")
 
-import uk.gov.hmcts.contino.AppPipelineDsl
 import uk.gov.hmcts.contino.GithubAPI
 
 def product = "sscs"
