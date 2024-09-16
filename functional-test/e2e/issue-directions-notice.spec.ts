@@ -4,15 +4,17 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 let caseId: string;
 
-test.describe("Issue direction test", {tag: '@pipeline'}, async() => {
+test.describe("Issue direction test", async() => {
 
-    test("Issue Direction Notice - Pre Hearing - Normal Tax Credit Application - Appeal to Proceed", 
+    test("Issue Direction Notice - Pre Hearing - Normal Tax Credit Application - Appeal to Proceed",
+       {tag: '@preview-pipeline'},
         async ({issueDirectionsNoticeSteps}) => {
             test.slow();
             await issueDirectionsNoticeSteps.performIssueDirectionNoticePreHearingAppealToProceed();
         });
 
     test("Issue Direction Notice - Post Hearing - Employment Support Application - Provide Information",
+        {tag: '@preview-pipeline'},
         async ({issueDirectionsNoticeSteps}) => {
             test.slow();
             await issueDirectionsNoticeSteps.performIssueDirectionNoticePostHearingESAAppealToProceed();
@@ -25,6 +27,7 @@ test.describe("Issue direction test", {tag: '@pipeline'}, async() => {
         });
 
     test("Issue Direction Notice - Error Messages Test",
+        {tag: '@preview-pipeline'},
         async ({issueDirectionsNoticeSteps}) => {
             test.slow();
             await issueDirectionsNoticeSteps.performIssueDirectionErrorMessages();

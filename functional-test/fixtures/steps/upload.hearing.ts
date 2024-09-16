@@ -27,7 +27,8 @@ export class UploadHearing extends BaseStep {
         await this.homePage.delay(3000);
         await this.homePage.chooseEvent('Hearing booked');
         await this.hearingBookedPage.submitHearingBooked();
-        await this.homePage.clickSignOut();
+        await this.homePage.signOut();
+        await new Promise(f => setTimeout(f, 3000)); //Delay required for the Case to be ready
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.homePage.delay(60000); // wait for case update to happen
@@ -40,13 +41,15 @@ export class UploadHearing extends BaseStep {
         await this.hearingRecordingsTab.verifyPageContentByKeyValue(hearingRecordingTestData.hearingTypeKey, hearingRecordingTestData.hearingTypeValue);
         await this.hearingRecordingsTab.verifyPageContentByKeyValue(hearingRecordingTestData.hearingIDKey, hearingRecordingTestData.hearingIDValue);
         await this.hearingRecordingsTab.verifyPageContentByKeyValue(hearingRecordingTestData.hearingVenueKey, hearingRecordingTestData.hearingVenueValue);
-        await this.homePage.clickSignOut();
+        await this.homePage.signOut();
+        await new Promise(f => setTimeout(f, 3000)); //Delay required for the Case to be ready
 
         await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, caseId);
         await this.homePage.chooseEvent('FTA Request hearing recording');
         await this.requestRecordingPage.selectRecordingForRequest();
         await this.eventNameAndDescriptionPage.confirmSubmission();
-        await this.homePage.clickSignOut();
+        await this.homePage.signOut();
+        await new Promise(f => setTimeout(f, 3000)); //Delay required for the Case to be ready
         
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
@@ -78,7 +81,8 @@ export class UploadHearing extends BaseStep {
         await this.homePage.delay(3000);
         await this.homePage.chooseEvent('Hearing booked');
         await this.hearingBookedPage.submitHearingBooked();
-        await this.homePage.clickSignOut();
+        await this.homePage.signOut();
+        await new Promise(f => setTimeout(f, 3000)); //Delay required for the Case to be ready
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.homePage.delay(60000); // wait for case update to happen

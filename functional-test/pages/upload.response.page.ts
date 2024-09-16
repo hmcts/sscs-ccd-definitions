@@ -27,9 +27,9 @@ export class UploadResponsePage {
 
     async uploadDocs(): Promise<void> {
         await webActions.uploadFileUsingAFileChooser('#dwpResponseDocument_documentLink', uploadResponseTestdata.testfileone);
-        await this.page.waitForTimeout(7000);
+        await this.page.waitForTimeout(9000);
         await webActions.uploadFileUsingAFileChooser('#dwpAT38Document_documentLink', uploadResponseTestdata.testfiletwo);
-        await this.page.waitForTimeout(7000);
+        await this.page.waitForTimeout(9000);
         await webActions.uploadFileUsingAFileChooser('#dwpEvidenceBundleDocument_documentLink', uploadResponseTestdata.testfilethree);
         await this.page.waitForTimeout(7000);
     }
@@ -105,6 +105,20 @@ export class UploadResponsePage {
     async isJPOnTheCase(optionVal: string):Promise<void> {
         await webActions.verifyPageLabel('h1.govuk-heading-l', 'Joint party'); //Heading Text
         await webActions.clickElementById(`#jointParty_${optionVal}`);
+    }
+
+    async enterJPDetails() {
+        await webActions.chooseOptionByLabel('#jointPartyName_title', 'Mr');
+        await webActions.typeField('#jointPartyName_firstName', "fname");
+        await webActions.typeField('#jointPartyName_lastName', "lname");
+        await webActions.clickButton('Continue');
+        await webActions.typeField('#dob-day', '20');
+        await webActions.typeField('#dob-month', '5');
+        await webActions.typeField('#dob-year', '2004');
+        await webActions.typeField('#jointPartyIdentity_nino', 'SK112233A');
+        await webActions.clickButton('Continue');
+        await webActions.clickElementById('#jointPartyAddressSameAsAppellant_Yes');
+        await webActions.clickButton('Continue');
     }
 
     async continueSubmission(): Promise<void> {
