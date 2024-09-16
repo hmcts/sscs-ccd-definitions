@@ -10,6 +10,8 @@ properties([
 
 @Library("Infrastructure")
 
+import uk.gov.hmcts.contino.GithubAPI
+
 def product = "sscs"
 def component = "ccd-definitions"
 
@@ -66,6 +68,7 @@ static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
 def branchesToSync = ['demo', 'ithc', 'perftest']
 
 withPipeline("nodejs", product, component) {
+  def githubApi = new GithubAPI(this)
   loadVaultSecrets(secrets)
   syncBranchesWithMaster(branchesToSync)
     onPR{
@@ -99,30 +102,36 @@ withPipeline("nodejs", product, component) {
         
     }
 
-     afterSuccess('smoketest:preview') {
+    afterSuccess('smoketest:preview') {
         env.TEST_E2E_URL_WEB = params.URL_TO_TEST
         env.TEST_E2E_URL_GATEWAY = params.CCD_GATEWAY_URL
         env.TEST_E2E_API_URI = params.TRIBUNALS_API_URI
 
-        stage('Playwright tests') {
-            try{
-                if(params.HEARINGS_LABEL_ENABLED == 'No'){
-                    yarnBuilder.yarn('test:preview')
-                } else {
-                    yarnBuilder.yarn('test:preview-hearings')
-                }
-            } finally {
-                publishHTML([
-                    allowMissing: true,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: "playwright-report",
-                    reportFiles: 'index.html',
-                    reportName: 'SSCS E2E Test Report'
+         stage('Playwright tests') {
+
+             if(githubApi.getLabelsbyPattern(env.BRANCH_NAME, "dependencies")) {
+                 echo "Don't run functional test"
+              } else {
+                  try{
+                    if(params.HEARINGS_LABEL_ENABLED == 'No'){
+                        yarnBuilder.yarn('test:preview')
+                    } else {
+                        yarnBuilder.yarn('test:preview-hearings')
+                    }
+                } finally {
+                    publishHTML([
+                        allowMissing: true,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true,
+                        reportDir: "playwright-report",
+                        reportFiles: 'index.html',
+                        reportName: 'SSCS E2E Test Report'
             ])
-            steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'playwright-report/**/*'
-            }
+                steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'playwright-report/**/*'
+                }
+              }
         }
+            
     }
 
     afterSuccess('smoketest:aat') {
@@ -196,4 +205,6 @@ withPipeline("nodejs", product, component) {
     }
 
   println """done!""".stripIndent()
+
+
 }
