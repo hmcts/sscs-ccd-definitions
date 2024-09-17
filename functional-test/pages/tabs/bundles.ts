@@ -2,7 +2,6 @@ import {expect, Page} from '@playwright/test';
 import {WebAction} from '../../common/web.action'
 import { HomePage } from '../common/homePage';
 import { threadId } from 'worker_threads';
-import {Locator} from "puppeteer";
 
 
 let webActions: WebAction;
@@ -25,6 +24,11 @@ export class Bundles {
     async verifyBundlesTabContentByKeyValueForASpan(fieldLabel: string, fieldValue: string): Promise<void> {
         await expect(this.page
             .locator(`//*[normalize-space()="${fieldLabel}"]/..//span//span[normalize-space()="${fieldValue}"]`).first()).toBeVisible();
+    }
+
+    async verifyEditedBundlesTabContentByKeyValueForASpan(fieldLabel: string, fieldValue: string, index: number): Promise<void> {
+        await expect(this.page
+            .locator(`//*[normalize-space()="${fieldLabel}"]/..//span//span[normalize-space()="${fieldValue}"]`).nth(index)).toBeVisible();
     }
 
     async verifyTableElementByIndex(fieldLabel: string, fieldValue: string, index: number): Promise<void> {

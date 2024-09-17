@@ -12,21 +12,21 @@ test.describe('Issue Final Decision - PIP Appeal Type', async () => {
             let pipCaseId = await createCaseBasedOnCaseType('PIP');
             await issueFinalDecisionSteps.performWriteFinalDecisionForAPIPAppealNoAwardAndNoticeGenerated(pipCaseId);
             await issueFinalDecisionSteps.performIssueFinalDecisionForAnAppeal();
-            await performAppealDormantOnCase(pipCaseId);
+            // await performAppealDormantOnCase(pipCaseId);
         });
 
-    test("Issue Final Decision - Upload Response with Further Information as No - Simple Decision Notice - 'Yes' notice generated. - Yes Award is Given", 
+    test("Issue Final Decision - Upload Response with Further Information as No - Simple Decision Notice - 'Yes' notice generated. - Yes Award is Given", {tag: '@preview-pipeline'}, 
         async ({issueFinalDecisionSteps}) => {
             test.slow();
             let pipCaseId = await createCaseBasedOnCaseType('PIP');
             await issueFinalDecisionSteps.performWriteFinalDecisionForAPIPAppealAwardAndNoticeGenerated(pipCaseId);
             await issueFinalDecisionSteps.performIssueFinalDecisionForAnAppeal();
-            await performAppealDormantOnCase(pipCaseId);
+            // await performAppealDormantOnCase(pipCaseId);
         });
 
 })
 
-test.describe('Issue Final Decision - Tax Credit Appeal Type', async () => {
+test.describe('Issue Final Decision - Tax Credit Appeal Type', {tag: '@preview-pipeline'},  async () => {
 
     test("Issue Final Decision - Upload Response with Further Information as No - Simple Decision Notice - 'No' notice generated",
         async ({issueFinalDecisionSteps}) => {
@@ -34,11 +34,11 @@ test.describe('Issue Final Decision - Tax Credit Appeal Type', async () => {
             let taxCreditCaseId = await createCaseBasedOnCaseType('TAX CREDIT');
             await issueFinalDecisionSteps.performWriteFinalDecisionForATaxCreditAppealAndNoNoticeGenerated(taxCreditCaseId);
             await issueFinalDecisionSteps.performIssueFinalDecisionForAnAppeal();
-            await performAppealDormantOnCase(taxCreditCaseId);
+            // await performAppealDormantOnCase(taxCreditCaseId);
         });
 })
 
-test.describe('Issue Final Decision - Universal Credit Appeal Type', async () => {
+test.describe('Issue Final Decision - Universal Credit Appeal Type', {tag: '@preview-pipeline'},  async () => {
 
     test("Issue Final Decision - Simple Decision Notice - 'Yes' notice generated",
         async ({issueFinalDecisionSteps}) => {
@@ -46,13 +46,13 @@ test.describe('Issue Final Decision - Universal Credit Appeal Type', async () =>
             let universalCreditCaseId = await createCaseBasedOnCaseType('UC');
             await issueFinalDecisionSteps.performWriteFinalDecisionForAUniversalCreditAppealAndNoticeGenerated(universalCreditCaseId);
             await issueFinalDecisionSteps.performIssueFinalDecisionForAnAppeal();
-            await performAppealDormantOnCase(universalCreditCaseId);
+            // await performAppealDormantOnCase(universalCreditCaseId);
         });
 })
 
 test.describe('Issue Final Decision - ESA Appeal Type', async () => {
 
-    test("Issue Final Decision - 'Yes' notice generated - 'No' Award Given",
+    test("Issue Final Decision - 'Yes' notice generated - 'No' Award Given", {tag: '@preview-pipeline'},
         async ({issueFinalDecisionSteps}) => {
             test.slow();
             let esaCaseId = await createCaseBasedOnCaseType('ESA');

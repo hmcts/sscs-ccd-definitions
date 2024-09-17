@@ -17,5 +17,6 @@
     "folderTwoSourceVal": "FTA evidence received on",
     "bundleFolderTwoVal": "Further additions",
     "stitchStatusDone": "DONE",
-    "stitchVal": "SscsBundle"
+    "stitchVal": "SscsBundle",
+    "editedStitchVal": "EditedSscsBundle"
 }

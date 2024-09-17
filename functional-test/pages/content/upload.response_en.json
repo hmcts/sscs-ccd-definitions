@@ -12,5 +12,6 @@
     "ucIssueCode": "WC",
     "dlaIssueCode": "EI",
     "ucDisputeOption": "No",
-    "ucJointPartyOnCase": "No"
+    "ucJointPartyOnCase": "No",
+    "ucJointPartyOnCase_Yes": "Yes"
 }

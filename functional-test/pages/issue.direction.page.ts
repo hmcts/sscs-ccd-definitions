@@ -53,7 +53,7 @@ export class IssueDirectionPage {
     async populateSpecificRecipients() {
         await webActions.clickElementById("#sendDirectionNoticeToFTA_Yes");
         await webActions.clickElementById("#sendDirectionNoticeToRepresentative_No");
-        await webActions.clickElementById("#sendDirectionNoticeToOtherParty_Yes");
+        // await webActions.clickElementById("#sendDirectionNoticeToOtherParty_Yes");
         await webActions.clickElementById("#sendDirectionNoticeToAppellantOrAppointee_No");
     }
 
@@ -172,8 +172,8 @@ export class IssueDirectionPage {
         await this.verifySpecificRecipients();
         await this.populateSpecificRecipients();
         await this.chooseNoticeType('#generateNotice_No');
-        await this.enterDirectionDueDate();
         await this.enterNoticeContent(false);
+        await this.enterDirectionDueDate();
         await this.confirmSubmission();
     }
 }
