@@ -4,7 +4,7 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 let caseId : string;
 
-test.describe('Upload response tests', {tag: '@preview-pipeline'}, async() => {
+test.describe('Upload response tests', {tag: ['@preview-pipeline', '@nightly-pipeline']}, async() => {
 
     test("As a caseworker review response submitted with any further info", async ({ uploadResponseSteps }) => {
         test.slow();
@@ -23,7 +23,7 @@ test.describe('Upload response tests', {tag: '@preview-pipeline'}, async() => {
     });
 })
 
-test.describe('Upload response tests for PHE workflow', async() => {
+test.describe('Upload response tests for PHE workflow', { tag: '@nightly-pipeline' }, async() => {
 
     test.beforeEach("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
@@ -38,7 +38,7 @@ test.describe('Upload response tests for PHE workflow', async() => {
     
 })
 
-test.describe('Upload response tests for UCB workflow', async() => {
+test.describe('Upload response tests for UCB workflow', { tag: '@nightly-pipeline' }, async() => {
 
     test.beforeEach("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
@@ -53,7 +53,7 @@ test.describe('Upload response tests for UCB workflow', async() => {
 })
 
 
-test.describe.serial('Error scenarios', async () => {
+test.describe.serial('Error scenarios', { tag: '@nightly-pipeline' }, async () => {
 
     test("Verify Upload response error scenario", async({ uploadResponseSteps }) => {
         test.slow();

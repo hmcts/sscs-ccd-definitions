@@ -6,7 +6,7 @@ let caseId: string;
 test.beforeAll("Case has to be Created", async () => {
     caseId = await createCaseBasedOnCaseType('PIP');
 });
-test("As a caseworker withdraw an appeal", {tag: '@pipeline'}, async ({appealWithdrawnSteps}) => {
+test("As a caseworker withdraw an appeal", {tag: '@nightly-pipeline'}, async ({appealWithdrawnSteps}) => {
     await appealWithdrawnSteps.performAppealWithdrawn(caseId);
 });
 

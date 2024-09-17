@@ -20,16 +20,16 @@ export class SendToJudgePage {
         await webAction.verifyPageLabel('label[for=\'interlocReviewState\']', sendToJudgeData.sendToJudgeReviewStateFieldLabel);
     }
 
-    async selectHearingType(): Promise<void> {
-        await webAction.chooseOptionByLabel('#prePostHearing', sendToJudgeData.sendToJudgePrePostHearingSelectValue);
+    async selectHearingType(hearingtype: string): Promise<void> {
+        await webAction.chooseOptionByLabel('#prePostHearing', hearingtype);
     }
 
-    async inputData(): Promise<void> {
-        await webAction.inputField('#tempNoteDetail', sendToJudgeData.sendToJudgeInput);
+    async inputData(input: string): Promise<void> {
+        await webAction.inputField('#tempNoteDetail', input);
     }
 
-    async selectInterlocutoryReviewState(): Promise<void> {
-        await webAction.chooseOptionByLabel('#interlocReviewState', sendToJudgeData.sendToJudgeReviewStateSelectValue);
+    async selectInterlocutoryReviewState(reviewState: string): Promise<void> {
+        await webAction.chooseOptionByLabel('#interlocReviewState', reviewState);
     }
 
     async confirmSubmission(): Promise<void> {
