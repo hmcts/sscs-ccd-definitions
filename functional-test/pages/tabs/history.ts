@@ -23,6 +23,11 @@ export class History {
             .locator(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`)).toBeVisible();
     }
 
+    async verifyPageContentDoesNotExistByKeyValue(fieldLabel: string, fieldValue: string) {
+        await expect(this.page
+            .locator(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`)).toHaveCount(0);
+    }
+
 
     async verifyHistoryPageContentByKeyValue(fieldLink: string, fieldLabel: string, fieldValue: string) {
         // await expect(this.page
