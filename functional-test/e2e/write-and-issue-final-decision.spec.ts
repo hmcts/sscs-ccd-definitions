@@ -4,7 +4,7 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 let caseId: string;
 
-test.describe('Issue Final Decision - PIP Appeal Type', async () => {
+test.describe('Issue Final Decision - PIP Appeal Type', {tag: '@nightly-pipeline'}, async () => {
 
     test("Issue Final Decision - Upload Response with Further Information as No - Simple Decision Notice - 'Yes' notice generated. - No Award Given",
         async ({issueFinalDecisionSteps}) => {
@@ -26,7 +26,7 @@ test.describe('Issue Final Decision - PIP Appeal Type', async () => {
 
 })
 
-test.describe('Issue Final Decision - Tax Credit Appeal Type', {tag: '@preview-pipeline'},  async () => {
+test.describe('Issue Final Decision - Tax Credit Appeal Type', {tag: ['@preview-pipeline', '@nightly-pipeline']},  async () => {
 
     test("Issue Final Decision - Upload Response with Further Information as No - Simple Decision Notice - 'No' notice generated",
         async ({issueFinalDecisionSteps}) => {
@@ -38,7 +38,7 @@ test.describe('Issue Final Decision - Tax Credit Appeal Type', {tag: '@preview-p
         });
 })
 
-test.describe('Issue Final Decision - Universal Credit Appeal Type', {tag: '@preview-pipeline'},  async () => {
+test.describe('Issue Final Decision - Universal Credit Appeal Type', {tag: ['@preview-pipeline', '@nightly-pipeline']},  async () => {
 
     test("Issue Final Decision - Simple Decision Notice - 'Yes' notice generated",
         async ({issueFinalDecisionSteps}) => {
@@ -50,7 +50,7 @@ test.describe('Issue Final Decision - Universal Credit Appeal Type', {tag: '@pre
         });
 })
 
-test.describe('Issue Final Decision - ESA Appeal Type', async () => {
+test.describe('Issue Final Decision - ESA Appeal Type', {tag: '@nightly-pipeline'}, async () => {
 
     test("Issue Final Decision - 'Yes' notice generated - 'No' Award Given", {tag: '@preview-pipeline'},
         async ({issueFinalDecisionSteps}) => {

@@ -49,4 +49,19 @@ export class Documents {
         console.log(`New formatted date is ####### ${formattedDueDate}`);
         await this.verifyPageContentByKeyValue(reqField, formattedDueDate);
     }
+
+    async verifyFieldValueNotPresent(locator: string) {
+        await expect(this.page.locator(locator)).not.toBeVisible();
+
+    }
+
+    async verifyFieldValue(locator: string, value: string) {
+        await webActions.verifyPageLabel(locator, value);
+
+    }
+
+    async verifyFieldVisible(value: string) {
+        await webActions.verifyTextVisibility(value);
+
+    }
 }

@@ -1,6 +1,5 @@
 import { test } from "../lib/steps.factory";
 import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.factory";
-import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
 let caseId : string;
 
@@ -23,7 +22,7 @@ test.describe("Enhanced confidentiality test", async() => {
         await createBundleSteps.triggerBundleForConfidentialCase();
     });
 
-    test("Refuse - confidentiality request for a party on a case", {tag: '@preview-pipeline'}, async({ uploadResponseSteps, enhancedConfidentialitySteps }) => {
+    test("Refuse - confidentiality request for a party on a case", {tag: ['@preview-pipeline', '@nightly-pipeline']}, async({ uploadResponseSteps, enhancedConfidentialitySteps }) => {
         await uploadResponseSteps.performUploadResponseOnAUniversalCreditWithJP(caseId);
         await enhancedConfidentialitySteps.requestForConfidentiality();
         await enhancedConfidentialitySteps.requestConfidentialityForJP();
