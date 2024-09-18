@@ -1,11 +1,6 @@
 import { test } from "../lib/steps.factory";
-import createCaseBasedOnCaseType from "../api/client/sscs/factory/appeal.type.factory";
-import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 
-let caseId : string;
-
-
-test.describe("Postponement Request test", {tag: '@preview-pipeline'}, async() => {
+test.describe("Postponement Request test", {tag: ['@preview-pipeline', '@nightly-pipeline']}, async() => {
 
     test("Hearing Route as LA with a Grant Option", async ({ postponementSteps }) => {
         test.slow();

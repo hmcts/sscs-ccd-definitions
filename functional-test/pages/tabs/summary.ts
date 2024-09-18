@@ -20,6 +20,11 @@ export class Summary {
             .locator(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`)).toBeVisible();
     }
 
+    async verifyPageContentByKeyValueDoesNotExist(fieldLabel: string, fieldValue: string) {
+        await expect(this.page
+            .locator(`//*[normalize-space()="${fieldLabel}"]/../..//td[normalize-space()="${fieldValue}"]`)).toHaveCount(0);
+    }
+
     async verifyFieldHiddenInPageContent(fieldLabel: string) {
         await expect(this.page
             .locator(`//*[normalize-space()="${fieldLabel}"]`)).toBeHidden();

@@ -21,6 +21,11 @@ export class AppealDetails {
             .locator(`//*[normalize-space()="${fieldLabel}"]/../td[normalize-space()="${fieldValue}"]`)).toBeVisible();
     }
 
+    async verifyAppealDetailsPageContentDoesNotExistByKeyValue(fieldLabel: string, fieldValue: string): Promise<void> {
+        await expect(this.page
+            .locator(`//*[normalize-space()="${fieldLabel}"]/../td[normalize-space()="${fieldValue}"]`)).toHaveCount(0);
+    }
+
     async verifyFTADueDateOnAppealDetails() {
         const ftaDueDate = new Date();
         ftaDueDate.setDate(new Date().getDate() + 28);
