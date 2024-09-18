@@ -87,7 +87,6 @@ export class UploadResponse extends BaseStep {
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Ready to list");
         
-        await this.page.locator('button.mat-tab-header-pagination-after').click();
         await this.homePage.navigateToTab("Listing Requirements");
         await this.listingRequirementsTab.verifyContentByKeyValueForASpan(ucbTestData.ucbFieldLabel, ucbTestData.ucbFieldValue_Yes);
     }
