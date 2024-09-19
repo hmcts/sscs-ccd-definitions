@@ -28,15 +28,12 @@ export class NotListablePage {
         await webActions.typeField('#notListableDueDate-day', '21');
         await webActions.typeField('#notListableDueDate-month', '12');
         await webActions.typeField('#notListableDueDate-year', '2025');
-        // await this.page.getByText('Continue').click();
     }
 
     async enterInvalidDirectionDueDate() {
         await webActions.typeField('#notListableDueDate-day', '01');
         await webActions.typeField('#notListableDueDate-month', '02');
         await webActions.typeField('#notListableDueDate-year', '2024');
-
-        // await this.page.getByText('Continue').dblclick();
     }
 
     async verifyPastDueDateErrorMessage(){
