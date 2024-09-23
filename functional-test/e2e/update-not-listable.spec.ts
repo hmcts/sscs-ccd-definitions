@@ -41,7 +41,7 @@ test.describe("Update Not listable tests", {tag: '@nightly-pipeline'}, async() =
         await updateNotListableSteps.performUpdateNotListableDirectionNotFulfilledTCW()
     })
 
-    test("Update Not listable test - Directions not fulfilled - Interlocutory Review (Judge)",async({updateNotListableSteps})=> {
+    test("Update Not listable test - Directions not fulfilled - Interlocutory Review (Judge)", async({updateNotListableSteps})=> {
         test.slow();
         await updateNotListableSteps.performUpdateNotListableDirectionNotFulfilledJudge()
     })
