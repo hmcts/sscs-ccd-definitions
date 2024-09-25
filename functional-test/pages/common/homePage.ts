@@ -1,6 +1,10 @@
 import { expect, Locator, Page } from '@playwright/test';
 import { WebAction } from '../../common/web.action';
 import logger from '../../utils/loggerUtil';
+import { environment } from "../../config/config";
+
+const fs = require('fs');
+const yaml = require('js-yaml');
 
 let webActions: WebAction;
 
@@ -28,12 +32,15 @@ export class HomePage {
     readonly otherPartyDetailsTab: Locator;
     readonly hearingsTab: Locator;
     readonly afterTabBtn: Locator;
+    readonly caseTypeDropdown: string;
+    readonly caseRefInputField: string;
+    readonly searchResultsField: string;
 
 
     constructor(page: Page) {
         this.page = page;
         this.notePadTab = page.locator('//div[contains(text(), "Notepad")]');
-        this.summaryTab = page.locator('//div[contains(text(), "Summary")]');
+        this.summaryTab = page.getByRole('tab', { name: 'Summary', exact: true });
         this.historyTab = page.getByRole('tab', { name: 'History', exact: true });
         this.tasksTab = page.getByRole('tab', { name: 'Tasks', exact: true });
         this.welshTab = page.getByRole('tab', { name: 'Welsh', exact: true });
@@ -53,6 +60,10 @@ export class HomePage {
         this.otherPartyDetailsTab = page.getByRole('tab', { name: 'Other Party Details', exact: true });
         this.hearingsTab = page.getByRole('tab', { name: 'Hearings', exact: true })
         this.afterTabBtn = page.locator('//html/body/exui-root/exui-case-home/div/exui-case-details-home/exui-case-viewer-container/ccd-case-viewer/div/ccd-case-full-access-view/div[2]/div/mat-tab-group/mat-tab-header/button[2]/div');
+        this.caseTypeDropdown = '#s-case-type';
+        this.caseRefInputField = '//*[@id="[CASE_REFERENCE]"]';
+        this.searchResultsField = '#search-result > table > tbody > tr > td:nth-child(1) >';
+
 
         webActions = new WebAction(this.page);
 
@@ -71,11 +82,58 @@ export class HomePage {
     }
 
     async goToHomePage(caseId: string): Promise<void> {
-        // await this.page.goto(`/cases/case-details/${caseId}`);
-        await this.selectToViewTasksAndCasesIfRequired();
-        await webActions.inputField('#caseReference', caseId);
-        await this.delay(1000);
-        await webActions.clickFindButton();
+        await this.findAndNavigateToCase(caseId);
+    }
+
+    async searchCaseWithAATDef() {
+        const optionToSelect = await this.page.locator('option', { hasText: `SSCS Case ${environment.aatDefVersion.TAG} AAT` }).textContent();
+        console.log(`case type dropdown value is ###### ${optionToSelect}`);
+        await webActions.chooseOptionByLabel(this.caseTypeDropdown, optionToSelect);
+    }
+
+    async searchCaseWithPreviewDef() {
+        const optionToSelect = await this.page.locator('option', { hasText: `nonProd PROD` }).textContent();
+        console.log(`case type dropdown value is ###### ${optionToSelect}`);
+        await webActions.chooseOptionByLabel(this.caseTypeDropdown, optionToSelect);
+    }
+
+    async findAndNavigateToCase(caseId: string): Promise<void> {
+        await this.page.getByRole('link', { name: 'Find case' }).waitFor();
+        await this.page.getByRole('link', { name: 'Find case' }).click();
+        await this.delay(3000);
+        await expect(this.page.getByText('Filters')).toBeVisible();
+        console.log(`url of the page is ######## ${this.page.url()}`);
+        const expUrl = this.page.url();
+        
+        if(environment.name == 'preview') {
+            
+            if(environment.hearingsEnabled == 'Yes') {
+                let matches = expUrl.match(/(\d+)/);
+                let PrNo = matches[0];
+                console.log(`PR number on url is ###### ${PrNo}`);
+
+                const optionToSelect = await this.page.locator('option', { hasText: PrNo }).textContent();
+                console.log(`case type dropdown value is ###### ${optionToSelect}`);
+                await webActions.chooseOptionByLabel(this.caseTypeDropdown, optionToSelect);
+            } else {
+                await this.searchCaseWithPreviewDef();
+            }
+            
+        } else if(environment.name == 'aat') {
+
+            await this.searchCaseWithAATDef();
+        } else {
+            logger.info('No environment variable is set');
+        }
+
+        await webActions.inputField(this.caseRefInputField, caseId);
+        await webActions.clickApplyFilterButton();
+
+        await this.delay(3000);
+        await webActions.verifyTotalElements(`#search-result > table > tbody > tr > td:nth-child(1) > a[href='/cases/case-details/${caseId}']`, 1);
+        await webActions.verifyElementVisibility(`#search-result > table > tbody > tr > td:nth-child(1) > a[href='/cases/case-details/${caseId}']`);
+        await webActions.clickElementById(`#search-result > table > tbody > tr > td:nth-child(1) > a[href='/cases/case-details/${caseId}']`);
+
         await this.delay(3000);
         await expect(this.summaryTab)
             .toBeVisible()
@@ -94,10 +152,10 @@ export class HomePage {
     }
 
     async chooseEvent(eventName: string): Promise<void> {
-        await this.delay(2000);
+        await this.delay(3000);
         await webActions.chooseOptionByLabel(this.nextStepDropDown, eventName);
         await expect(this.page.getByRole('button', { name: 'Go', exact: true })).toBeEnabled();
-        await this.delay(2000);
+        await this.delay(5000);
         await webActions.clickSubmitButton();
         // await webActions.clickNextStepButton(this.submitNextStepButton);
         // await webActions.clickGoButton('Go');
@@ -128,6 +186,10 @@ export class HomePage {
         }
     }
 
+    async finishLoadingThePage() {
+        await expect(this.page.locator('.spinner-container')).toBeDisabled({timeout:4000});
+    }
+
     async navigateToTab(tabName : string): Promise<void> {
         switch(tabName) {
             case "Notepad": {
@@ -140,8 +202,12 @@ export class HomePage {
                 break;
             }
             case "Summary": {
-                await expect(this.summaryTab).toBeVisible();
-                await this.summaryTab.click();
+                if (expect(this.summaryTab).toBeVisible()){
+                    await this.summaryTab.click();
+                } else {
+                    await this.clickBeforeTabBtn();
+                    await this.summaryTab.click();
+                }
                 break;
             }
             case "Tasks": {

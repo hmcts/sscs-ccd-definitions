@@ -55,7 +55,11 @@ import { SearchFilterPage } from '../../pages/search.filter.page';
 import { Hearings } from '../../pages/tabs/hearings';
 import { ListingRequirementPage } from '../../pages/listing.requirements.page';
 import { ReissueFurtherEvidencePage } from '../../pages/reissue.further.evidence.page';
+import { PostponementPages } from "../../pages/postponement.page";
 import { PrepareCaseForHearingPage } from '../../pages/prepare.case.for.hearing.page';
+import { ReviewConfidentialityPage } from '../../pages/review.confidentiality.page'
+import { SendToJudgePage } from '../../pages/send.to.judge.page';
+
 
 export abstract class BaseStep {
 
@@ -109,13 +113,16 @@ export abstract class BaseStep {
   protected sendCaseToTcwPage: SendCaseToTcwPage;
   protected writeFinalDecisionPage : WriteFinalDecisionPages;
   protected sendToInterlocPrevalidPage : SendToInterlocPrevalidPage;
+  protected sendToJudgePage: SendToJudgePage;
   protected notListablePage: NotListablePage;
   protected updateNotListablePage: UpdateNotListablePage;
   protected searchFilterPage: SearchFilterPage;
   protected hearingsTab: Hearings;
   protected listingRequirementPage: ListingRequirementPage
   protected reissueFurtherEvidencePage: ReissueFurtherEvidencePage;
+  protected postponementPage : PostponementPages;
   protected prepareCaseForHearingPage: PrepareCaseForHearingPage;
+  protected reviewConfidentialityPage: ReviewConfidentialityPage;
 
    constructor(page: Page) {
         this.page = page;
@@ -168,13 +175,16 @@ export abstract class BaseStep {
         this.sendCaseToTcwPage = new SendCaseToTcwPage(this.page);
         this.writeFinalDecisionPage = new WriteFinalDecisionPages(page);
         this.sendToInterlocPrevalidPage = new SendToInterlocPrevalidPage(page);
+        this.sendToJudgePage = new SendToJudgePage(this.page);
         this.notListablePage = new NotListablePage(this.page);
         this.updateNotListablePage = new UpdateNotListablePage(this.page);
         this.searchFilterPage = new SearchFilterPage(this.page);
         this.hearingsTab = new Hearings(this.page);
         this.listingRequirementPage = new ListingRequirementPage(this.page);
         this.reissueFurtherEvidencePage = new ReissueFurtherEvidencePage(this.page);
+        this.postponementPage = new PostponementPages(this.page);
         this.prepareCaseForHearingPage = new PrepareCaseForHearingPage(this.page);
+        this.reviewConfidentialityPage = new ReviewConfidentialityPage(this.page);
    }
 
     async loginUserWithCaseId(user, clearCacheFlag: boolean = false, caseId?: string) {

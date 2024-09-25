@@ -46,6 +46,8 @@ export class UploadResponse extends BaseStep {
         for (const linkName of this.presetLinks) {
             await this.verifyHistoryTabLink(linkName);
         }
+
+        await this.homePage.delay(3000);
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Ready to list");
         // await performAppealDormantOnCase(pipCaseId);
@@ -58,9 +60,10 @@ export class UploadResponse extends BaseStep {
 
         await this.checkYourAnswersPage.verifyCYAPageContentWithPHE("Upload response", uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
+        await this.homePage.clickSignOut();
 
         await this.homePage.delay(3000);
-        await this.loginUserWithCaseId(credentials.amCaseWorker,true, caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker,false, caseId);
     
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Ready to list");
@@ -76,9 +79,10 @@ export class UploadResponse extends BaseStep {
 
         await this.checkYourAnswersPage.verifyCYAPageContentWithUCB("Upload response", uploadResponseTestdata.pipBenefitCode, uploadResponseTestdata.pipIssueCode);
         await this.checkYourAnswersPage.confirmSubmission();
+        await this.homePage.clickSignOut();
 
         await this.homePage.delay(3000);
-        await this.loginUserWithCaseId(credentials.amCaseWorker,true, caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker,false, caseId);
 
         await this.homePage.navigateToTab("Summary");
         await this.summaryTab.verifyPresenceOfText("Ready to list");
@@ -164,6 +168,53 @@ export class UploadResponse extends BaseStep {
         await this.homePage.clickSignOut();
 
         await this.loginUserWithCaseId(credentials.amCaseWorker, false, ucCaseId);
+        await this.homePage.delay(1000);
+        await this.homePage.navigateToTab("History");
+
+        for (const linkName of this.presetLinks) {
+            await this.verifyHistoryTabLink(linkName);
+        }
+        await this.homePage.navigateToTab("Summary");
+        await this.summaryTab.verifyPresenceOfText("Ready to list");
+        // await performAppealDormantOnCase(ucCaseId);
+
+    }
+
+
+    async performUploadResponseOnAUniversalCreditWithJP(ucCaseId: string) {
+
+        // let ucCaseId = await createCaseBasedOnCaseType("UC");
+        await this.loginUserWithCaseId(credentials.dwpResponseWriter, false, ucCaseId);
+
+        await this.homePage.chooseEvent('Upload response');
+        await this.homePage.delay(4000);
+        await this.uploadResponsePage.verifyPageContent();
+        await this.uploadResponsePage.uploadDocs();
+        await this.uploadResponsePage.chooseAssistOption('No');
+        await this.uploadResponsePage.continueSubmission();
+
+        await this.uploadResponsePage.selectElementDisputed('childElement');
+        await this.uploadResponsePage.continueSubmission();
+
+        await this.uploadResponsePage.clickAddNewButton();
+        await this.uploadResponsePage.selectUcIssueCode(uploadResponseTestdata.ucIssueCode);
+        await this.homePage.delay(2000);
+        await this.uploadResponsePage.continueSubmission();
+
+        await this.uploadResponsePage.chooseDisputeOption(uploadResponseTestdata.ucDisputeOption);
+        await this.homePage.delay(2000);
+        await this.uploadResponsePage.continueSubmission();
+
+        await this.uploadResponsePage.isJPOnTheCase(uploadResponseTestdata.ucJointPartyOnCase_Yes);
+        await this.uploadResponsePage.continueSubmission();
+        await this.uploadResponsePage.enterJPDetails();
+        await this.checkYourAnswersPage.confirmSubmission();
+
+        await this.homePage.signOut();
+        await new Promise(f => setTimeout(f, 3000)); //Delay required for the Case to be ready
+
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, ucCaseId);
+        await this.homePage.reloadPage();
         await this.homePage.delay(1000);
         await this.homePage.navigateToTab("History");
 

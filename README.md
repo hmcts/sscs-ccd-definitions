@@ -81,18 +81,16 @@ Filename structure is as follows: [major version].[minor version].[minor fix]_[e
 
 ## QA process
 
-- Test the AAT version locally to make sure it doesn't break and change works as expected 
-- If the change on Prod is different (e.g. if there is a <tab-name>-<feature_name>-prod.json> change), then also test the Prod version locally
+### Running Functional UI tests against Preview env on a Pipeline
+* If a PR is created with following label - "pr-values:ccd" then set the below environment values on your Preview pipeline by clicking on "Build parameters" and trigger the build :-
+  - URL_TO_TEST = 'https://xui-sscs-tribunals-api-pr-(PR-NO).preview.platform.hmcts.net'
+  - TRIBUNALS_API_URI = 'https://sscs-tribunals-api-pr-(PR-NO).preview.platform.hmcts.net'
+  - HEARINGS_LABEL_ENABLED = 'No'
 
-After PO sign off:
-- Upload AAT version onto AAT
-- Run Tribunals pipeline to ensure no failures
-- Run E2E test pipeline to ensure no failures
-
-If all ok, create a ticket to get definition uploaded to Prod
-
-*Note*: CRUD access can be changed in a future version to allow new features to be used, once all code is in-place
-
+* If a PR is created with following label - "pr-values:ccd", "enable_hearings" then set the below environment values on your Preview pipeline by clicking on "Build parameters" and trigger the build :-
+  - URL_TO_TEST = 'https://xui-sscs-tribunals-api-pr-(PR-NO).preview.platform.hmcts.net'
+  - TRIBUNALS_API_URI = 'https://sscs-tribunals-api-pr-(PR-NO).preview.platform.hmcts.net'
+  - HEARINGS_LABEL_ENABLED = 'Yes'
 
 ## Load a CCD definition to your local environment
 
@@ -207,3 +205,28 @@ and judge.json file presented below:
       }
     ]
 located in AuthorisationCaseField directory that corresponds the XLS tab name.
+
+# Run Security Scan locally
+
+You need `jq` installed
+
+Download `yarn-audit-with-suppressions.sh` and `prettyPrintAudit.sh` from https://github.com/hmcts/cnp-jenkins-library
+to project root folder
+
+```bash
+curl -OL https://raw.githubusercontent.com/hmcts/cnp-jenkins-library/master/resources/uk/gov/hmcts/pipeline/yarn/yarn-audit-with-suppressions.sh
+curl -OL https://raw.githubusercontent.com/hmcts/cnp-jenkins-library/master/resources/uk/gov/hmcts/pipeline/yarn/prettyPrintAudit.sh
+```
+
+Make both files executable
+
+```bash
+chmod +x ./yarn-audit-with-suppressions.sh
+chmod +x ./prettyPrintAudit.sh
+```
+
+Run `yarn-audit-with-suppressions.sh`
+
+```bash
+./yarn-audit-with-suppressions.sh
+```

@@ -1,5 +1,7 @@
 # ---- Base image - order important ----
 FROM hmctspublic.azurecr.io/ccd/definition-processor:latest as base
+#Installing curl to avoid package conflict with upstream outdated image.
+RUN apk add --no-cache curl
 
 # ----        Runtime image         ----
 FROM hmctspublic.azurecr.io/ccd/definition-importer:latest as runtime
