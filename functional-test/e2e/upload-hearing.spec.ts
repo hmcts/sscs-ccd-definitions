@@ -5,7 +5,7 @@ import performAppealDormantOnCase from "../api/client/sscs/appeal.event";
 let caseId : string;
 
 
-test.describe("Hearing upload test", {tag: '@pipeline'}, async() => {
+test.describe("Hearing upload test", {tag: ['@preview-pipeline', '@nightly-pipeline']}, async() => {
 
     test.beforeEach("Case has to be Created", async () => {
         caseId = await createCaseBasedOnCaseType('PIP');
@@ -21,7 +21,7 @@ test.describe("Hearing upload test", {tag: '@pipeline'}, async() => {
     });
     
      test.afterAll("Case has to be set to Dormant",async () => {
-        await performAppealDormantOnCase(caseId);
+        // await performAppealDormantOnCase(caseId);
      });
     
 });

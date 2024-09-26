@@ -190,10 +190,12 @@ export class WriteFinalDecisionPages {
         await webActions.verifyPageLabel('.govuk-caption-l', writeFinalDecisionData.eventNameCaptor);
         await webActions.verifyPageLabel('h1.govuk-heading-l', writeFinalDecisionData.reasonsForDecisionPageHeading);
         await webActions.clickButton("Add new");
+        await webActions.delay(1000);
     }
 
     async inputPageContentForReasonForDecisionPageData() {
-        await webActions.typeField("#writeFinalDecisionReasons_value", writeFinalDecisionData.reasonsForDecisionInput)
+        await webActions.inputField("#writeFinalDecisionReasons_value", writeFinalDecisionData.reasonsForDecisionInput);
+        await webActions.delay(3000);
     }
 
     async verifyPageContentForAnythingElseDecisionPage() {

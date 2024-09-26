@@ -2,7 +2,7 @@ import {test} from "../lib/steps.factory";
 
 
 
-test.describe("Update Not listable tests", {tag: '@pipeline'}, async() => {
+test.describe("Update Not listable tests", {tag: '@nightly-pipeline'}, async() => {
 
     //Happy Path Test
     test("Not listable test - Set case to Not listable", async ({updateNotListableSteps}) => {
@@ -41,7 +41,7 @@ test.describe("Update Not listable tests", {tag: '@pipeline'}, async() => {
         await updateNotListableSteps.performUpdateNotListableDirectionNotFulfilledTCW()
     })
 
-    test("Update Not listable test - Directions not fulfilled - Interlocutory Review (Judge)",async({updateNotListableSteps})=> {
+    test("Update Not listable test - Directions not fulfilled - Interlocutory Review (Judge)", async({updateNotListableSteps})=> {
         test.slow();
         await updateNotListableSteps.performUpdateNotListableDirectionNotFulfilledJudge()
     })

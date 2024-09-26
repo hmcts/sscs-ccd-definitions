@@ -66,7 +66,7 @@ export class DeathOfAnAppelant extends BaseStep {
         await this.appealDetailsTab.verifyAppealDetailsAppointeeDetails(appointeeDetailsData);
         await  deathOfAppellantPage.signOut();
 
-        await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.verifyHistoryTabLink('Death of appellant');
         await performAppealDormantOnCase(caseId);
     }

@@ -6,7 +6,7 @@ test.beforeAll("Case has to be Created",async () => {
     caseId = await createCaseBasedOnCaseType('PIP');
 });
 
-test("Test Listing Error Event sets case state to Listing Error", async ({listingErrorSteps}) => {
+test("Test Listing Error Event sets case state to Listing Error", {tag: '@nightly-pipeline'}, async ({listingErrorSteps}) => {
     await listingErrorSteps.performListingErrorEvent(caseId);
 
 });
