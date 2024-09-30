@@ -139,7 +139,7 @@ export class UpdateNotListable extends BaseStep {
     }
 
     private async goToNotListablePage(page: Page, caseId: string) {
-        await this.loginUserWithCaseId(credentials.amCaseWorker, true, caseId);
+        await this.loginUserWithCaseId(credentials.amCaseWorker, false, caseId);
         await this.homePage.chooseEvent("Not listable");
     }
 
