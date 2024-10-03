@@ -1423,10 +1423,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@faker-js/faker@npm:7.2.0":
-  version: 7.2.0
-  resolution: "@faker-js/faker@npm:7.2.0"
-  checksum: 550d5bc4ae3b8764903aa67101aa0a3f48189332c633605850c70fb16ee25e44a00ab3ce73fa30a3b346c92e7c509bd4f1a2709bdcf2abaa4cdf28bd2990a455
+"@faker-js/faker@npm:9.0.3":
+  version: 9.0.3
+  resolution: "@faker-js/faker@npm:9.0.3"
+  checksum: 69e8af494117ec845de3ca740af105560fffffa4daa83ee0efc49026b0e44420b866987d664108957d49951fc5170adcbd4595770f91df1e18d776da32ddff8e
   languageName: node
   linkType: hard
 
@@ -10061,7 +10061,7 @@ __metadata:
   resolution: "sscs-ccd-definitions@workspace:."
   dependencies:
     "@cucumber/cucumber": ^9.5.0
-    "@faker-js/faker": 7.2.0
+    "@faker-js/faker": 9.0.3
     "@hmcts/eslint-config": ^1.4.0
     "@hmcts/nodejs-healthcheck": ^1.8.0
     "@hmcts/properties-volume": ^1.1.0
