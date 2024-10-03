@@ -42,7 +42,7 @@
     "@playwright/test": "^1.41.1",
     "@types/node": "^20.11.6",
     "chai": "^4.3.8",
-    "eslint": "^8.48.0",
+    "eslint": "^9.0.0",
     "eslint-plugin-mocha": "^10.1.0",
     "husky": "^9.0.0",
     "lodash": "^4.17.21",
