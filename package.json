@@ -41,7 +41,7 @@
     "@hmcts/eslint-config": "^1.4.0",
     "@playwright/test": "^1.41.1",
     "@types/node": "^20.11.6",
-    "chai": "^4.3.8",
+    "chai": "^5.0.0",
     "eslint": "^8.48.0",
     "eslint-plugin-mocha": "^10.1.0",
     "husky": "^9.0.0",
