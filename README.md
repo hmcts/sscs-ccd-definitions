@@ -82,6 +82,7 @@ Filename structure is as follows: [major version].[minor version].[minor fix]_[e
 ## QA process
 
 ### Running Functional UI tests against Preview env on a Pipeline
+
 * If a PR is created with following label - "pr-values:ccd" then set the below environment values on your Preview pipeline by clicking on "Build parameters" and trigger the build :-
   - URL_TO_TEST = 'https://xui-sscs-tribunals-api-pr-(PR-NO).preview.platform.hmcts.net'
   - TRIBUNALS_API_URI = 'https://sscs-tribunals-api-pr-(PR-NO).preview.platform.hmcts.net'
